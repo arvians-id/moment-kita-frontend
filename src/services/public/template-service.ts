@@ -1,5 +1,6 @@
+import { mockTemplateCatalog } from "@/data/mocks/template-catalog";
 import { mockTemplates } from "@/data/mocks/templates";
-import type { TemplateDetail, TemplateSummary } from "@/types";
+import type { CatalogTemplate, TemplateDetail, TemplateSummary } from "@/types";
 
 export async function getTemplates(): Promise<TemplateSummary[]> {
   return mockTemplates.map((template) => ({
@@ -25,4 +26,8 @@ export async function getTemplateByKey(
         features: [...template.features],
       }
     : null;
+}
+
+export async function getTemplateCatalog(): Promise<CatalogTemplate[]> {
+  return mockTemplateCatalog.map((item) => ({ ...item }));
 }

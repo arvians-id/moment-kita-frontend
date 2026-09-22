@@ -1,12 +1,13 @@
 import { TemplatesPage } from "@/components/marketing/pages/templates-page";
-import { getTemplates } from "@/services/public/template-service";
+import { getTemplateCatalog } from "@/services/public/template-service";
 
 export const metadata = {
   title: "Invitation Templates",
-  description: "Explore Moment Kita digital wedding invitation templates.",
+  description:
+    "Browse the Moment Kita archive of curated digital invitation suites and artisan printed stationery editions.",
 };
 
 export default async function Page() {
-  const templates = await getTemplates();
-  return <TemplatesPage templates={templates} />;
+  const catalog = await getTemplateCatalog();
+  return <TemplatesPage catalog={catalog} />;
 }

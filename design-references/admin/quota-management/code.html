@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&amp;family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-tertiary-fixed-variant":"#753224","surface-bright":"#fcf9f3","secondary-container":"#ffad91","on-background":"#1c1c18","inverse-surface":"#31312d","on-primary-container":"#858383","surface-container-low":"#f6f3ed","tertiary-container":"#3c0801","on-error-container":"#93000a","surface-dim":"#dcdad4","tertiary":"#000000","background":"#fcf9f3","secondary-fixed":"#ffdbcf","secondary":"#8c4d37","surface":"#fcf9f3","surface-container-high":"#ebe8e2","error-container":"#ffdad6","surface-container-highest":"#e5e2dc","primary-fixed-dim":"#c8c6c5","surface-tint":"#5f5e5e","primary":"#000000","on-secondary":"#ffffff","on-secondary-container":"#7a3e29","on-error":"#ffffff","tertiary-fixed":"#ffdad3","tertiary-fixed-dim":"#ffb4a4","primary-fixed":"#e5e2e1","primary-container":"#1c1b1b","inverse-on-surface":"#f3f0ea","on-surface-variant":"#444748","on-primary":"#ffffff","on-tertiary-fixed":"#3c0801","on-primary-fixed":"#1c1b1b","on-surface":"#1c1c18","surface-container-lowest":"#ffffff","on-tertiary-container":"#c06d5b","surface-container":"#f0eee8","on-primary-fixed-variant":"#474746","outline-variant":"#c4c7c7","on-secondary-fixed":"#380d00","on-secondary-fixed-variant":"#703722","surface-variant":"#e5e2dc","on-tertiary":"#ffffff","secondary-fixed-dim":"#ffb59c","outline":"#747878","error":"#ba1a1a","inverse-primary":"#c8c6c5"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-xl":"3rem","space-md":"1rem",gutter:"2rem",margin:"3.5rem","gutter-mobile":"1rem","space-sm":"0.5rem","space-xs":"0.25rem","margin-mobile":"1.25rem","space-lg":"1.75rem"},fontFamily:{"body-lg":["Plus Jakarta Sans"],"headline-xl":["Playfair Display"],"headline-xl-mobile":["Playfair Display"],"display-hero-mobile":["Playfair Display"],"headline-lg-mobile":["Playfair Display"],"quote-editorial":["Playfair Display"],"label-caps":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"headline-sm":["Playfair Display"],"headline-lg":["Playfair Display"],"body-sm":["Plus Jakarta Sans"],"headline-md":["Playfair Display"],kicker:["Plus Jakarta Sans"],"display-hero":["Playfair Display"]},fontSize:{"body-lg":["18px",{lineHeight:"30px",letterSpacing:"-0.01em",fontWeight:"400"}],"headline-xl":["56px",{lineHeight:"64px",letterSpacing:"-0.02em",fontWeight:"400"}],"headline-xl-mobile":["36px",{lineHeight:"42px",letterSpacing:"-0.01em",fontWeight:"400"}],"display-hero-mobile":["44px",{lineHeight:"48px",letterSpacing:"-0.02em",fontWeight:"400"}],"headline-lg-mobile":["28px",{lineHeight:"34px",letterSpacing:"0em",fontWeight:"400"}],"quote-editorial":["24px",{lineHeight:"36px",letterSpacing:"0em",fontWeight:"400"}],"label-caps":["12px",{lineHeight:"16px",letterSpacing:"0.12em",fontWeight:"600"}],"body-md":["15px",{lineHeight:"24px",letterSpacing:"0em",fontWeight:"400"}],"headline-sm":["22px",{lineHeight:"30px",letterSpacing:"0em",fontWeight:"600"}],"headline-lg":["40px",{lineHeight:"48px",letterSpacing:"-0.015em",fontWeight:"400"}],"body-sm":["13px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"400"}],"headline-md":["28px",{lineHeight:"36px",letterSpacing:"-0.01em",fontWeight:"500"}],kicker:["11px",{lineHeight:"16px",letterSpacing:"0.2em",fontWeight:"600"}],"display-hero":["84px",{lineHeight:"92px",letterSpacing:"-0.03em",fontWeight:"400"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col flex-1 overflow-y-auto"><div class="h-20 px-space-lg flex items-center gap-space-sm bg-surface-container-low"><img alt="Brand logo. - Primary color: #1a1a1a
+- Font: playfairDisplay
+- Mode: light
+- Roundness: rounded-lg
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WRqdm6LQrsNtDYQH6alJWMkWfk8mr7SPqKl8gfl7AvBd40Jje4RrE22TykoB2RppbfnyAF2up2zNsWoEEOAzFuAN1npFQei0jfZqImhociqxHqkWuTOiZPCxGJmPYqxbPvy5Rx2weYo7U8hJdkx9NPou6jBCa_GrhtbmoggtyXUo9t6RX7e69grmpegVwtyw9hYyP4hsJ3T_vZnPOwt4eaQH75GZeWtOjhkaQqGZoTZVpuFOyuLFBC"/><div class="flex flex-col ml-space-xs"><span class="font-headline-sm text-headline-sm leading-none text-on-surface tracking-tight">Moment Kita</span><span class="font-kicker text-kicker uppercase tracking-widest text-secondary mt-1">Studio Admin</span></div></div><nav class="px-space-md py-space-sm space-y-space-md" data-active-classes="bg-surface-container-highest text-primary font-semibold shadow-[0_1px_4px_rgba(46,38,33,0.04)]"><div class="space-y-space-xs"><span class="px-space-sm font-kicker text-kicker uppercase tracking-widest text-on-surface-variant/70">Overview</span><div class="mt-1 space-y-0.5"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant font-body-sm text-body-sm hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[19px]">dashboard</span><span>Dashboard</span></a></div></div><div class="space-y-space-xs"><span class="px-space-sm font-kicker text-kicker uppercase tracking-widest text-on-surface-variant/70">Management</span><div class="mt-1 space-y-0.5"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant font-body-sm text-body-sm hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="customers" href="#"><span class="material-symbols-outlined text-[19px]">group</span><span>Customers</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant font-body-sm text-body-sm hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="invitations" href="#"><span class="material-symbols-outlined text-[19px]">mark_email_read</span><span>Invitations</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant font-body-sm text-body-sm hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="templates" href="#"><span class="material-symbols-outlined text-[19px]">design_services</span><span>Templates</span></a></div></div><div class="space-y-space-xs"><span class="px-space-sm font-kicker text-kicker uppercase tracking-widest text-on-surface-variant/70">Commerce</span><div class="mt-1 space-y-0.5"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant font-body-sm text-body-sm hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="transactions" href="#"><span class="material-symbols-outlined text-[19px]">receipt_long</span><span>Transactions</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant font-body-sm text-body-sm hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="packages-quota" href="#"><span class="material-symbols-outlined text-[19px]">inventory_2</span><span>Packages &amp; Quota</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant font-body-sm text-body-sm hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="printed-orders" href="#"><span class="material-symbols-outlined text-[19px]">print</span><span>Printed Orders</span></a></div></div><div class="space-y-space-xs"><span class="px-space-sm font-kicker text-kicker uppercase tracking-widest text-on-surface-variant/70">Operations</span><div class="mt-1 space-y-0.5"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant font-body-sm text-body-sm hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="notifications" href="#"><span class="material-symbols-outlined text-[19px]">notifications</span><span>Notifications</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant font-body-sm text-body-sm hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="audit-logs" href="#"><span class="material-symbols-outlined text-[19px]">history_edu</span><span>Audit Logs</span></a></div></div><div class="space-y-space-xs"><span class="px-space-sm font-kicker text-kicker uppercase tracking-widest text-on-surface-variant/70">System</span><div class="mt-1 space-y-0.5"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant font-body-sm text-body-sm hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="settings" href="#"><span class="material-symbols-outlined text-[19px]">settings</span><span>Settings</span></a></div></div></nav></div><div class="p-space-md bg-surface-container-high/40"><div class="flex items-center justify-between p-space-sm rounded bg-surface-container-lowest shadow-[0_1px_4px_rgba(46,38,33,0.04)]"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-full bg-secondary flex items-center justify-center"><span class="material-symbols-outlined text-on-secondary text-[20px]">verified_user</span></div><div class="flex flex-col"><span class="font-label-caps text-label-caps text-on-surface font-semibold">Admin Atelier</span><span class="font-body-sm text-[11px] leading-tight text-on-surface-variant">Superuser Role</span></div></div><a class="p-1 text-on-surface-variant hover:text-secondary transition-colors" data-path="admin-profile" href="#" title="View Profile"><span class="material-symbols-outlined text-[20px]">more_vert</span></a></div></div></aside><div class="pl-72 min-h-screen flex flex-col bg-surface"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/85 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)] px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="Brand logo. - Primary color: #1a1a1a
+- Font: playfairDisplay
+- Mode: light
+- Roundness: rounded-lg
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WRqdm6LQrsNtDYQH6alJWMkWfk8mr7SPqKl8gfl7AvBd40Jje4RrE22TykoB2RppbfnyAF2up2zNsWoEEOAzFuAN1npFQei0jfZqImhociqxHqkWuTOiZPCxGJmPYqxbPvy5Rx2weYo7U8hJdkx9NPou6jBCa_GrhtbmoggtyXUo9t6RX7e69grmpegVwtyw9hYyP4hsJ3T_vZnPOwt4eaQH75GZeWtOjhkaQqGZoTZVpuFOyuLFBC"/><nav class="hidden sm:flex items-center gap-2"><span class="font-kicker text-kicker uppercase text-on-surface-variant">Commerce</span><span class="material-symbols-outlined text-outline text-[14px]">chevron_right</span><span class="font-label-caps text-label-caps uppercase text-secondary font-semibold">Packages &amp; Quota</span></nav></div><div class="flex items-center gap-space-md"><div class="relative hidden md:flex items-center"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[18px]">search</span><input class="w-64 pl-9 pr-3 py-1.5 bg-surface-container-low rounded font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant/70 focus:outline-none focus:bg-surface-container focus:ring-0" placeholder="Search tiers, quotas, SKUs..." type="search"/></div><button class="flex items-center gap-1.5 px-3 py-1.5 bg-surface-container-low rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" type="button"><span class="material-symbols-outlined text-[18px]">calendar_today</span><span class="hidden lg:inline">This Fiscal Quarter</span></button><button class="relative p-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded transition-colors" title="Notifications" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-secondary"></span></button><button class="flex items-center gap-1 px-4 py-2 bg-primary text-on-primary hover:bg-secondary transition-colors font-label-caps text-label-caps uppercase tracking-wider rounded-none" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>Create Package</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="w-full pt-20 px-space-lg py-space-lg flex-1 bg-surface"><div class="flex flex-col w-full space-y-space-xl">
+<!-- Page Header & Administrative Meta -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div class="space-y-space-xs max-w-3xl">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-kicker text-kicker uppercase tracking-widest">
+<span>Commerce</span>
+<span class="text-outline-variant">/</span>
+<span class="text-secondary font-semibold">Packages &amp; Quota</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Packages &amp; Quota Management</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Manage commercial wedding suite tiers, invitation duration allowances, template licensing entitlements, and monitor client quota balance ledger operations.
+      </p>
+</div>
+<div class="flex items-center gap-space-sm self-start lg:self-end">
+<button class="flex items-center gap-1.5 px-space-md py-2.5 bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-colors font-label-caps text-label-caps uppercase tracking-wider rounded-none" onclick="document.getElementById('quick-adjustment-drawer').scrollIntoView({ behavior: 'smooth' })" type="button">
+<span class="material-symbols-outlined text-[17px] text-secondary">exposure</span>
+<span>Adjust Customer Quota</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-md py-2.5 bg-primary hover:bg-secondary text-on-primary transition-colors font-label-caps text-label-caps uppercase tracking-wider rounded-none shadow-sm" type="button">
+<span class="material-symbols-outlined text-[17px]">add</span>
+<span>+ Create Package</span>
+</button>
+</div>
+</div>
+<!-- AREA 1: COMMERCIAL PACKAGES DEFINITIONS & CATALOG -->
+<section class="space-y-space-lg">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm bg-surface-container-low p-space-md">
+<div class="space-y-1">
+<div class="flex items-center gap-space-sm">
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest font-semibold">01 — Commercial Package Catalog</span>
+<span class="inline-flex items-center px-2 py-0.5 bg-secondary-fixed text-on-secondary-fixed font-label-caps text-[11px] font-semibold">4 Active Tiers</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Commercial packaging rules, pricing, live duration windows, and architectural template entitlements.
+        </p>
+</div>
+<!-- Currency Switcher & Add Tier -->
+<div class="flex items-center gap-space-md">
+<div class="inline-flex items-center p-0.5 bg-surface-container-highest">
+<button class="px-3 py-1 bg-surface-container-lowest text-on-surface font-label-caps text-[11px] shadow-sm font-semibold transition-all" id="curr-usd" type="button">USD ($)</button>
+<button class="px-3 py-1 text-on-surface-variant hover:text-on-surface font-label-caps text-[11px] transition-all" id="curr-idr" type="button">IDR (Rp)</button>
+</div>
+<button class="flex items-center gap-1 px-3 py-1.5 bg-primary text-on-primary hover:bg-secondary transition-colors font-label-caps text-label-caps uppercase rounded-none" type="button">
+<span class="material-symbols-outlined text-[16px]">add_circle</span>
+<span>New Tier</span>
+</button>
+</div>
+</div>
+<!-- Package Grid: 4 Atelier Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Package 1: Grand Atelier Heirloom -->
+<div class="flex flex-col justify-between bg-surface-container-lowest p-space-lg shadow-sm hover:shadow-md transition-shadow relative">
+<div class="space-y-space-md">
+<div class="flex items-start justify-between gap-2">
+<span class="px-2 py-0.5 bg-secondary-fixed text-on-secondary-fixed font-label-caps text-[10px] uppercase font-semibold">
+              Flagship Couture • Dual Channel
+            </span>
+<span class="flex items-center gap-1 font-label-caps text-[11px] text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-emerald-600 inline-block"></span> Active
+            </span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Grand Atelier Heirloom</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Dual-channel digital suite with bespoke physical salon printing.</p>
+</div>
+<div class="p-space-sm bg-surface-container-low space-y-0.5">
+<div class="font-headline-lg text-headline-lg text-on-surface leading-none price-display" data-idr="Rp 45.820.000" data-usd="$2,900">$2,900</div>
+<div class="font-kicker text-kicker uppercase text-on-surface-variant/80 tracking-widest price-sub" data-idr="~USD $2,900 / couple" data-usd="~IDR 45.820.000 / couple">~IDR 45.820.000 / couple</div>
+</div>
+<!-- Specifications -->
+<div class="space-y-space-sm pt-1">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary mt-0.5">inventory</span>
+<div class="text-body-sm text-on-surface">
+<span class="font-semibold">3 Suite Deployments</span>
+<span class="block text-on-surface-variant text-[12px]">Master + 2 Companion editions</span>
+</div>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary mt-0.5">timelapse</span>
+<div class="text-body-sm text-on-surface">
+<span class="font-semibold">365 Days Live Hosting</span>
+<span class="block text-on-surface-variant text-[12px]">Lifetime cold archive preservation</span>
+</div>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary mt-0.5">auto_awesome</span>
+<div class="text-body-sm text-on-surface">
+<span class="font-semibold">All 14 Architectures</span>
+<span class="block text-on-surface-variant text-[12px]">Chantilly, Concierge, Kyoto + Bespoke custom CSS</span>
+</div>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary mt-0.5">print</span>
+<div class="text-body-sm text-on-surface">
+<span class="font-semibold text-secondary">Physical Print Companion</span>
+<span class="block text-on-surface-variant text-[12px]">250 sets 600 GSM Cotton + Blind Deboss</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-md mt-space-md bg-surface-container-low -mx-space-lg -mb-space-lg p-space-md space-y-space-sm">
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-on-surface-variant">Active Couples</span>
+<span class="font-semibold text-on-surface font-label-caps text-label-caps">142 Couples</span>
+</div>
+<div class="flex items-center justify-between pt-1 gap-space-xs">
+<button class="flex-1 py-1.5 bg-primary text-on-primary text-label-caps text-[11px] uppercase tracking-wider hover:bg-secondary transition-colors" type="button">Edit Config</button>
+<button class="px-2.5 py-1.5 bg-surface-container-high text-on-surface text-label-caps text-[11px] uppercase hover:bg-surface-container-highest transition-colors" type="button">Deactivate</button>
+<button class="px-1.5 py-1.5 text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-[18px]">more_vert</span></button>
+</div>
+</div>
+</div>
+<!-- Package 2: Bespoke Duo -->
+<div class="flex flex-col justify-between bg-surface-container-lowest p-space-lg shadow-sm hover:shadow-md transition-shadow relative">
+<div class="space-y-space-md">
+<div class="flex items-start justify-between gap-2">
+<span class="px-2 py-0.5 bg-surface-container-highest text-on-surface font-label-caps text-[10px] uppercase font-semibold">
+              Most Popular • Hybrid
+            </span>
+<span class="flex items-center gap-1 font-label-caps text-[11px] text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-emerald-600 inline-block"></span> Active
+            </span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Bespoke Duo (Digital + Print)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Balanced prestige tier pairing high-touch web RSVP with stationery.</p>
+</div>
+<div class="p-space-sm bg-surface-container-low space-y-0.5">
+<div class="font-headline-lg text-headline-lg text-on-surface leading-none price-display" data-idr="Rp 25.900.000" data-usd="$1,650">$1,650</div>
+<div class="font-kicker text-kicker uppercase text-on-surface-variant/80 tracking-widest price-sub" data-idr="~USD $1,650 / couple" data-usd="~IDR 25.900.000 / couple">~IDR 25.900.000 / couple</div>
+</div>
+<!-- Specifications -->
+<div class="space-y-space-sm pt-1">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary mt-0.5">inventory</span>
+<div class="text-body-sm text-on-surface">
+<span class="font-semibold">2 Suite Deployments</span>
+<span class="block text-on-surface-variant text-[12px]">Main suite + Private ceremony VIP desk</span>
+</div>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary mt-0.5">timelapse</span>
+<div class="text-body-sm text-on-surface">
+<span class="font-semibold">180 Days Live Hosting</span>
+<span class="block text-on-surface-variant text-[12px]">60-day post-event digital album preservation</span>
+</div>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary mt-0.5">auto_awesome</span>
+<div class="text-body-sm text-on-surface">
+<span class="font-semibold">10 Architectures</span>
+<span class="block text-on-surface-variant text-[12px]">Chantilly, Kyoto, Aura, Botanique &amp; 6 others</span>
+</div>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary mt-0.5">print</span>
+<div class="text-body-sm text-on-surface">
+<span class="font-semibold text-secondary">Physical Print Companion</span>
+<span class="block text-on-surface-variant text-[12px]">100 sets Letterpress deckle edge</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-md mt-space-md bg-surface-container-low -mx-space-lg -mb-space-lg p-space-md space-y-space-sm">
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-on-surface-variant">Active Couples</span>
+<span class="font-semibold text-on-surface font-label-caps text-label-caps">524 Couples</span>
+</div>
+<div class="flex items-center justify-between pt-1 gap-space-xs">
+<button class="flex-1 py-1.5 bg-primary text-on-primary text-label-caps text-[11px] uppercase tracking-wider hover:bg-secondary transition-colors" type="button">Edit Config</button>
+<button class="px-2.5 py-1.5 bg-surface-container-high text-on-surface text-label-caps text-[11px] uppercase hover:bg-surface-container-highest transition-colors" type="button">Deactivate</button>
+<button class="px-1.5 py-1.5 text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-[18px]">more_vert</span></button>
+</div>
+</div>
+</div>
+<!-- Package 3: Signature Digital Suite -->
+<div class="flex flex-col justify-between bg-surface-container-lowest p-space-lg shadow-sm hover:shadow-md transition-shadow relative">
+<div class="space-y-space-md">
+<div class="flex items-start justify-between gap-2">
+<span class="px-2 py-0.5 bg-surface-container-highest text-on-surface-variant font-label-caps text-[10px] uppercase font-semibold">
+              Digital Only
+            </span>
+<span class="flex items-center gap-1 font-label-caps text-[11px] text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-emerald-600 inline-block"></span> Active
+            </span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Signature Digital Suite</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Streamlined bespoke URL suite with instant WhatsApp guest integration.</p>
+</div>
+<div class="p-space-sm bg-surface-container-low space-y-0.5">
+<div class="font-headline-lg text-headline-lg text-on-surface leading-none price-display" data-idr="Rp 13.400.000" data-usd="$850">$850</div>
+<div class="font-kicker text-kicker uppercase text-on-surface-variant/80 tracking-widest price-sub" data-idr="~USD $850 / couple" data-usd="~IDR 13.400.000 / couple">~IDR 13.400.000 / couple</div>
+</div>
+<!-- Specifications -->
+<div class="space-y-space-sm pt-1">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary mt-0.5">inventory</span>
+<div class="text-body-sm text-on-surface">
+<span class="font-semibold">1 Suite Deployment</span>
+<span class="block text-on-surface-variant text-[12px]">Standard vanity URL (e.g. momentkita.id/maya-dimas)</span>
+</div>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary mt-0.5">timelapse</span>
+<div class="text-body-sm text-on-surface">
+<span class="font-semibold">90 Days Live Hosting</span>
+<span class="block text-on-surface-variant text-[12px]">Standard RSVP tracking &amp; automated reminders</span>
+</div>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary mt-0.5">auto_awesome</span>
+<div class="text-body-sm text-on-surface">
+<span class="font-semibold">5 Standard Architectures</span>
+<span class="block text-on-surface-variant text-[12px]">Botanique, Sora, Minimalist Modern, Velvet &amp; Line</span>
+</div>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant/70 mt-0.5">print_disabled</span>
+<div class="text-body-sm text-on-surface-variant">
+<span class="font-medium">Optional Add-on</span>
+<span class="block text-[12px]">Order physical runs post-launch</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-md mt-space-md bg-surface-container-low -mx-space-lg -mb-space-lg p-space-md space-y-space-sm">
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-on-surface-variant">Active Couples</span>
+<span class="font-semibold text-on-surface font-label-caps text-label-caps">486 Couples</span>
+</div>
+<div class="flex items-center justify-between pt-1 gap-space-xs">
+<button class="flex-1 py-1.5 bg-primary text-on-primary text-label-caps text-[11px] uppercase tracking-wider hover:bg-secondary transition-colors" type="button">Edit Config</button>
+<button class="px-2.5 py-1.5 bg-surface-container-high text-on-surface text-label-caps text-[11px] uppercase hover:bg-surface-container-highest transition-colors" type="button">Deactivate</button>
+<button class="px-1.5 py-1.5 text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-[18px]">more_vert</span></button>
+</div>
+</div>
+</div>
+<!-- Package 4: Single Trial Starter -->
+<div class="flex flex-col justify-between bg-surface-container-lowest p-space-lg shadow-sm hover:shadow-md transition-shadow relative opacity-90">
+<div class="space-y-space-md">
+<div class="flex items-start justify-between gap-2">
+<span class="px-2 py-0.5 bg-surface-container-highest text-on-surface-variant font-label-caps text-[10px] uppercase font-semibold">
+              Entry Tier
+            </span>
+<span class="flex items-center gap-1 font-label-caps text-[11px] text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-amber-600 inline-block"></span> Paused
+            </span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Single Trial Starter</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Watermarked sandbox environment for wedding planners and early drafts.</p>
+</div>
+<div class="p-space-sm bg-surface-container-low space-y-0.5">
+<div class="font-headline-lg text-headline-lg text-on-surface leading-none price-display" data-idr="Rp 4.500.000" data-usd="$290">$290</div>
+<div class="font-kicker text-kicker uppercase text-on-surface-variant/80 tracking-widest price-sub" data-idr="~USD $290 / couple" data-usd="~IDR 4.500.000 / couple">~IDR 4.500.000 / couple</div>
+</div>
+<!-- Specifications -->
+<div class="space-y-space-sm pt-1">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary mt-0.5">inventory</span>
+<div class="text-body-sm text-on-surface">
+<span class="font-semibold">1 Trial Suite</span>
+<span class="block text-on-surface-variant text-[12px]">Watermarked trial, draft only until upgraded</span>
+</div>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary mt-0.5">timelapse</span>
+<div class="text-body-sm text-on-surface">
+<span class="font-semibold">30 Days Proofing Window</span>
+<span class="block text-on-surface-variant text-[12px]">Auto-expires without commercial upgrade</span>
+</div>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary mt-0.5">auto_awesome</span>
+<div class="text-body-sm text-on-surface">
+<span class="font-semibold">3 Entry Architectures</span>
+<span class="block text-on-surface-variant text-[12px]">Essential templates only</span>
+</div>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant/60 mt-0.5">block</span>
+<div class="text-body-sm text-on-surface-variant">
+<span class="font-medium">Not Included</span>
+<span class="block text-[12px]">Physical proof available via concierge</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-md mt-space-md bg-surface-container-low -mx-space-lg -mb-space-lg p-space-md space-y-space-sm">
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-on-surface-variant">Restricted Couples</span>
+<span class="font-semibold text-on-surface font-label-caps text-label-caps">68 Couples</span>
+</div>
+<div class="flex items-center justify-between pt-1 gap-space-xs">
+<button class="flex-1 py-1.5 bg-surface-container-highest text-on-surface text-label-caps text-[11px] uppercase tracking-wider hover:bg-surface-container-high transition-colors" type="button">Edit Config</button>
+<button class="px-2.5 py-1.5 bg-primary text-on-primary text-label-caps text-[11px] uppercase hover:bg-secondary transition-colors" type="button">Activate</button>
+<button class="px-1.5 py-1.5 text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-[18px]">more_vert</span></button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- AREA 2: QUOTA OPERATIONS & BALANCE LEDGER -->
+<section class="space-y-space-lg pt-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm bg-surface-container-low p-space-md">
+<div class="space-y-1">
+<div class="flex items-center gap-space-sm">
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest font-semibold">02 — Quota Operations &amp; Balance Ledger</span>
+<span class="inline-flex items-center px-2 py-0.5 bg-surface-container-highest text-on-surface font-label-caps text-[11px] font-semibold">Real-time Multi-tenant Sync</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Track allocated suite credits, redemption status across active couples, and administrative manual balance overrides.
+        </p>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center gap-1.5 font-label-caps text-[11px] text-on-surface-variant bg-surface-container-lowest px-2.5 py-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse"></span>
+          Ledger Node Sync: OK (Latency 18ms)
+        </span>
+</div>
+</div>
+<!-- 4 Quota Summary Metric Tiles -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Metric 1 -->
+<div class="bg-surface-container-lowest p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="font-kicker text-kicker uppercase tracking-widest text-on-surface-variant">Total Quota Sold</span>
+<div class="font-headline-lg text-headline-lg text-on-surface leading-tight">2,684 <span class="font-body-sm text-body-sm text-on-surface-variant">Suites</span></div>
+</div>
+<div class="w-10 h-10 bg-secondary-fixed/50 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-[22px]">shopping_bag</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant bg-surface-container-low -mx-space-lg -mb-space-lg px-space-lg py-2">
+<span>+148 this month</span>
+<span class="font-semibold text-secondary">84 transactions</span>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="bg-surface-container-lowest p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="font-kicker text-kicker uppercase tracking-widest text-on-surface-variant">Quota Redeemed / Used</span>
+<div class="font-headline-lg text-headline-lg text-on-surface leading-tight">2,190 <span class="font-body-sm text-body-sm text-on-surface-variant">Suites</span></div>
+</div>
+<div class="w-10 h-10 bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface text-[22px]">task_alt</span>
+</div>
+</div>
+<div class="mt-space-sm space-y-1">
+<div class="flex justify-between text-body-sm font-label-caps text-[11px] text-on-surface-variant">
+<span>Utilization Rate</span>
+<span class="text-on-surface font-semibold">81.6%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high overflow-hidden">
+<div class="h-full bg-secondary" style="width: 81.6%"></div>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant bg-surface-container-low -mx-space-lg -mb-space-lg px-space-lg py-2">
+<span>Active live events</span>
+<span class="text-on-surface font-medium">1,152 couples</span>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="bg-surface-container-lowest p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="font-kicker text-kicker uppercase tracking-widest text-on-surface-variant">Remaining Customer Quota</span>
+<div class="font-headline-lg text-headline-lg text-on-surface leading-tight">494 <span class="font-body-sm text-body-sm text-on-surface-variant">Suites</span></div>
+</div>
+<div class="w-10 h-10 bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-[22px]">hourglass_top</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant bg-surface-container-low -mx-space-lg -mb-space-lg px-space-lg py-2">
+<span>Unpublished ready</span>
+<span class="px-2 py-0.5 bg-surface-container-highest font-label-caps text-[10px] text-on-surface font-semibold">Liability: $142,300</span>
+</div>
+</div>
+<!-- Metric 4 -->
+<div class="bg-surface-container-lowest p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="font-kicker text-kicker uppercase tracking-widest text-on-surface-variant">Manual Adjustments (30d)</span>
+<div class="font-headline-lg text-headline-lg text-on-surface leading-tight">28 <span class="font-body-sm text-body-sm text-on-surface-variant">Changes</span></div>
+</div>
+<div class="w-10 h-10 bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface text-[22px]">history_edu</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant bg-surface-container-low -mx-space-lg -mb-space-lg px-space-lg py-2">
+<span>+19 added, -9 revoked</span>
+<span class="px-2 py-0.5 bg-secondary-fixed text-on-secondary-fixed font-label-caps text-[10px] font-semibold">100% Superuser Audited</span>
+</div>
+</div>
+</div>
+<!-- Search, Filters, and Quota Override Bar -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm space-y-space-sm">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<!-- Left: Search & Filters -->
+<div class="flex flex-wrap items-center gap-space-sm flex-1">
+<!-- Search -->
+<div class="relative min-w-[260px] flex-1">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-on-surface-variant text-[18px]">search</span>
+<input class="w-full pl-9 pr-3 py-2 bg-surface-container-low font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant/70 focus:outline-none focus:bg-surface-container focus:ring-0 rounded-none" placeholder="Search customer name, email, or audit ref..." type="search"/>
+</div>
+<!-- Filter: Change Type -->
+<div class="relative">
+<select class="appearance-none bg-surface-container-low pl-3 pr-8 py-2 font-body-sm text-body-sm text-on-surface focus:outline-none rounded-none cursor-pointer">
+<option>All Changes (+ / −)</option>
+<option>Credit Inflow (+)</option>
+<option>Credit Outflow (−)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-[16px] pointer-events-none text-on-surface-variant">expand_more</span>
+</div>
+<!-- Filter: Reason -->
+<div class="relative">
+<select class="appearance-none bg-surface-container-low pl-3 pr-8 py-2 font-body-sm text-body-sm text-on-surface focus:outline-none rounded-none cursor-pointer">
+<option>All Reasons</option>
+<option>Manual Compensation</option>
+<option>Package Upgrade</option>
+<option>VIP Goodwill Allocation</option>
+<option>Trial Expiration</option>
+<option>Void Reversal</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-[16px] pointer-events-none text-on-surface-variant">expand_more</span>
+</div>
+<!-- Filter: Source -->
+<div class="relative">
+<select class="appearance-none bg-surface-container-low pl-3 pr-8 py-2 font-body-sm text-body-sm text-on-surface focus:outline-none rounded-none cursor-pointer">
+<option>All Sources</option>
+<option>Admin Manual Override</option>
+<option>Stripe Checkout Webhook</option>
+<option>Concierge Desk</option>
+<option>System Auto-expire</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-[16px] pointer-events-none text-on-surface-variant">expand_more</span>
+</div>
+<!-- Date Picker -->
+<button class="flex items-center gap-1.5 px-3 py-2 bg-surface-container-low text-on-surface font-body-sm text-body-sm hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">calendar_today</span>
+<span>Last 30 Days</span>
+</button>
+</div>
+<!-- Right: Manual Override Primary Trigger -->
+<button class="flex items-center justify-center gap-2 px-4 py-2 bg-primary text-on-primary hover:bg-secondary font-label-caps text-label-caps uppercase tracking-wider transition-colors rounded-none whitespace-nowrap shadow-sm" onclick="document.getElementById('quick-adjustment-drawer').classList.toggle('hidden')" type="button">
+<span class="material-symbols-outlined text-[18px]">add_moderator</span>
+<span>Manual Quota Override</span>
+</button>
+</div>
+</div>
+<!-- Main Layout: Ledger Table + Side Quick Action Helper -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-md items-start">
+<!-- Ledger Table (xl:col-span-8 or 9) -->
+<div class="xl:col-span-8 overflow-hidden bg-surface-container-lowest shadow-sm">
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-caps text-[11px] uppercase tracking-wider">
+<th class="py-3.5 px-space-md">Customer</th>
+<th class="py-3.5 px-space-sm text-center">Change</th>
+<th class="py-3.5 px-space-md">Reason &amp; Description</th>
+<th class="py-3.5 px-space-sm">Source</th>
+<th class="py-3.5 px-space-sm">Authorized By</th>
+<th class="py-3.5 px-space-sm">Date &amp; Time</th>
+<th class="py-3.5 px-space-md text-right">Audit Ref</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high/60">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center font-headline-sm text-on-secondary-fixed text-[13px]">
+                      AP
+                    </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-semibold text-on-surface">Ayu Prameswari</span>
+<span class="px-1.5 py-0.2 bg-secondary text-on-secondary font-label-caps text-[9px] uppercase">VIP</span>
+</div>
+<span class="text-[12px] text-on-surface-variant">ayu.prameswari@outlook.com</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-sm text-center">
+<span class="inline-flex items-center px-2 py-0.5 bg-emerald-100 text-emerald-800 font-label-caps text-[11px] font-bold">
+                    +1
+                  </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-medium text-on-surface block">Manual compensation — postponed reception</span>
+<span class="text-[12px] text-on-surface-variant">Bali grand ballroom rescheduled to Q4 2026</span>
+</td>
+<td class="py-3.5 px-space-sm">
+<span class="inline-flex items-center gap-1 text-[12px] text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">shield_person</span>
+                    Admin Override
+                  </span>
+</td>
+<td class="py-3.5 px-space-sm">
+<div class="flex items-center gap-1.5">
+<div class="w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center text-[10px] font-bold">RM</div>
+<span class="text-[12px] text-on-surface">Rina Maharani</span>
+</div>
+</td>
+<td class="py-3.5 px-space-sm text-[12px] text-on-surface-variant whitespace-nowrap">
+                  12 Sep 2026 • 14:22 WIB
+                </td>
+<td class="py-3.5 px-space-md text-right">
+<button class="font-mono text-[11px] text-secondary hover:underline cursor-pointer inline-flex items-center gap-1" type="button">
+<span>#QTA-8921</span>
+<span class="material-symbols-outlined text-[13px]">open_in_new</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center font-headline-sm text-on-surface text-[13px]">
+                      DR
+                    </div>
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Dimas Raka Raditya</span>
+<span class="text-[12px] text-on-surface-variant">dimas.raditya@gmail.com</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-sm text-center">
+<span class="inline-flex items-center px-2 py-0.5 bg-emerald-100 text-emerald-800 font-label-caps text-[11px] font-bold">
+                    +2
+                  </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-medium text-on-surface block">Bespoke Duo checkout package purchase</span>
+<span class="text-[12px] text-on-surface-variant">Order #ORD-77402 auto-entitlement provisioning</span>
+</td>
+<td class="py-3.5 px-space-sm">
+<span class="inline-flex items-center gap-1 text-[12px] text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+                    Stripe Webhook
+                  </span>
+</td>
+<td class="py-3.5 px-space-sm">
+<div class="flex items-center gap-1.5">
+<div class="w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center text-[10px] font-bold">SY</div>
+<span class="text-[12px] text-on-surface-variant">System Gateway</span>
+</div>
+</td>
+<td class="py-3.5 px-space-sm text-[12px] text-on-surface-variant whitespace-nowrap">
+                  12 Sep 2026 • 11:08 WIB
+                </td>
+<td class="py-3.5 px-space-md text-right">
+<button class="font-mono text-[11px] text-secondary hover:underline cursor-pointer inline-flex items-center gap-1" type="button">
+<span>#QTA-8920</span>
+<span class="material-symbols-outlined text-[13px]">open_in_new</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center font-headline-sm text-on-secondary-fixed text-[13px]">
+                      SJ
+                    </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-semibold text-on-surface">Sarah Jenkins</span>
+<span class="px-1.5 py-0.2 bg-secondary text-on-secondary font-label-caps text-[9px] uppercase">VIP</span>
+</div>
+<span class="text-[12px] text-on-surface-variant">sarah.j@atelier-paris.fr</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-sm text-center">
+<span class="inline-flex items-center px-2 py-0.5 bg-emerald-100 text-emerald-800 font-label-caps text-[11px] font-bold">
+                    +3
+                  </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-medium text-on-surface block">Grand Atelier Heirloom tier allocation</span>
+<span class="text-[12px] text-on-surface-variant">Entitlement: Master Suite + 2 Companion Editions</span>
+</td>
+<td class="py-3.5 px-space-sm">
+<span class="inline-flex items-center gap-1 text-[12px] text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">support_agent</span>
+                    Concierge Desk
+                  </span>
+</td>
+<td class="py-3.5 px-space-sm">
+<div class="flex items-center gap-1.5">
+<div class="w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center text-[10px] font-bold">DS</div>
+<span class="text-[12px] text-on-surface">Dimas Superuser</span>
+</div>
+</td>
+<td class="py-3.5 px-space-sm text-[12px] text-on-surface-variant whitespace-nowrap">
+                  11 Sep 2026 • 19:40 WIB
+                </td>
+<td class="py-3.5 px-space-md text-right">
+<button class="font-mono text-[11px] text-secondary hover:underline cursor-pointer inline-flex items-center gap-1" type="button">
+<span>#QTA-8919</span>
+<span class="material-symbols-outlined text-[13px]">open_in_new</span>
+</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center font-headline-sm text-on-surface text-[13px]">
+                      HG
+                    </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-semibold text-on-surface">Bpk. Hendra Gunawan</span>
+<span class="px-1.5 py-0.2 bg-secondary text-on-secondary font-label-caps text-[9px] uppercase">VIP</span>
+</div>
+<span class="text-[12px] text-on-surface-variant">hendra.gunawan@familyoffice.co.id</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-sm text-center">
+<span class="inline-flex items-center px-2 py-0.5 bg-emerald-100 text-emerald-800 font-label-caps text-[11px] font-bold">
+                    +1
+                  </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-medium text-on-surface block">VIP goodwill courtesy allocation</span>
+<span class="text-[12px] text-on-surface-variant">Granted complimentary private dinner edition</span>
+</td>
+<td class="py-3.5 px-space-sm">
+<span class="inline-flex items-center gap-1 text-[12px] text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">shield_person</span>
+                    Admin Override
+                  </span>
+</td>
+<td class="py-3.5 px-space-sm">
+<div class="flex items-center gap-1.5">
+<div class="w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center text-[10px] font-bold">RM</div>
+<span class="text-[12px] text-on-surface">Rina Maharani</span>
+</div>
+</td>
+<td class="py-3.5 px-space-sm text-[12px] text-on-surface-variant whitespace-nowrap">
+                  11 Sep 2026 • 15:15 WIB
+                </td>
+<td class="py-3.5 px-space-md text-right">
+<button class="font-mono text-[11px] text-secondary hover:underline cursor-pointer inline-flex items-center gap-1" type="button">
+<span>#QTA-8918</span>
+<span class="material-symbols-outlined text-[13px]">open_in_new</span>
+</button>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center font-headline-sm text-on-surface text-[13px]">
+                      ML
+                    </div>
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Maya Lin</span>
+<span class="text-[12px] text-on-surface-variant">mayalin.studio@gmail.com</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-sm text-center">
+<span class="inline-flex items-center px-2 py-0.5 bg-rose-100 text-rose-800 font-label-caps text-[11px] font-bold">
+                    −1
+                  </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-medium text-on-surface block">Trial expired unredeemed</span>
+<span class="text-[12px] text-on-surface-variant">30-day proofing window passed without activation</span>
+</td>
+<td class="py-3.5 px-space-sm">
+<span class="inline-flex items-center gap-1 text-[12px] text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+                    Auto Worker
+                  </span>
+</td>
+<td class="py-3.5 px-space-sm">
+<div class="flex items-center gap-1.5">
+<div class="w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center text-[10px] font-bold">SD</div>
+<span class="text-[12px] text-on-surface-variant">System Daemon</span>
+</div>
+</td>
+<td class="py-3.5 px-space-sm text-[12px] text-on-surface-variant whitespace-nowrap">
+                  10 Sep 2026 • 00:01 WIB
+                </td>
+<td class="py-3.5 px-space-md text-right">
+<button class="font-mono text-[11px] text-secondary hover:underline cursor-pointer inline-flex items-center gap-1" type="button">
+<span>#QTA-8917</span>
+<span class="material-symbols-outlined text-[13px]">open_in_new</span>
+</button>
+</td>
+</tr>
+<!-- Row 6 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center font-headline-sm text-on-surface text-[13px]">
+                      CN
+                    </div>
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Clarissa Novianty</span>
+<span class="text-[12px] text-on-surface-variant">clarissa.n@designhaus.id</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-sm text-center">
+<span class="inline-flex items-center px-2 py-0.5 bg-emerald-100 text-emerald-800 font-label-caps text-[11px] font-bold">
+                    +1
+                  </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-medium text-on-surface block">Package upgrade: Signature to Heirloom</span>
+<span class="text-[12px] text-on-surface-variant">Added companion edition tier credit</span>
+</td>
+<td class="py-3.5 px-space-sm">
+<span class="inline-flex items-center gap-1 text-[12px] text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+                    Stripe Webhook
+                  </span>
+</td>
+<td class="py-3.5 px-space-sm">
+<div class="flex items-center gap-1.5">
+<div class="w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center text-[10px] font-bold">SY</div>
+<span class="text-[12px] text-on-surface-variant">System Gateway</span>
+</div>
+</td>
+<td class="py-3.5 px-space-sm text-[12px] text-on-surface-variant whitespace-nowrap">
+                  09 Sep 2026 • 18:34 WIB
+                </td>
+<td class="py-3.5 px-space-md text-right">
+<button class="font-mono text-[11px] text-secondary hover:underline cursor-pointer inline-flex items-center gap-1" type="button">
+<span>#QTA-8916</span>
+<span class="material-symbols-outlined text-[13px]">open_in_new</span>
+</button>
+</td>
+</tr>
+<!-- Row 7 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center font-headline-sm text-on-surface text-[13px]">
+                      FF
+                    </div>
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Fauzan &amp; Farah</span>
+<span class="text-[12px] text-on-surface-variant">fauzan.farah@wedding.co</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-sm text-center">
+<span class="inline-flex items-center px-2 py-0.5 bg-rose-100 text-rose-800 font-label-caps text-[11px] font-bold">
+                    −1
+                  </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-medium text-on-surface block">Duplicate credit void reversal</span>
+<span class="text-[12px] text-on-surface-variant">Reverted anomalous checkout retry idempotency duplicate</span>
+</td>
+<td class="py-3.5 px-space-sm">
+<span class="inline-flex items-center gap-1 text-[12px] text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">shield_person</span>
+                    Admin Override
+                  </span>
+</td>
+<td class="py-3.5 px-space-sm">
+<div class="flex items-center gap-1.5">
+<div class="w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center text-[10px] font-bold">DS</div>
+<span class="text-[12px] text-on-surface">Dimas Superuser</span>
+</div>
+</td>
+<td class="py-3.5 px-space-sm text-[12px] text-on-surface-variant whitespace-nowrap">
+                  09 Sep 2026 • 10:12 WIB
+                </td>
+<td class="py-3.5 px-space-md text-right">
+<button class="font-mono text-[11px] text-secondary hover:underline cursor-pointer inline-flex items-center gap-1" type="button">
+<span>#QTA-8915</span>
+<span class="material-symbols-outlined text-[13px]">open_in_new</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Ledger Pagination & Row Summary -->
+<div class="p-space-md bg-surface-container-low flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+            Showing <strong class="text-on-surface font-semibold">1–7</strong> of <strong class="text-on-surface font-semibold">284</strong> Ledger Events
+          </span>
+<div class="flex items-center gap-1">
+<button class="px-3 py-1.5 bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-label-caps text-[11px] uppercase transition-colors" type="button">Previous</button>
+<button class="px-3 py-1.5 bg-primary text-on-primary font-label-caps text-[11px] uppercase" type="button">1</button>
+<button class="px-3 py-1.5 bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-label-caps text-[11px] uppercase transition-colors" type="button">2</button>
+<button class="px-3 py-1.5 bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-label-caps text-[11px] uppercase transition-colors" type="button">3</button>
+<span class="px-1 text-on-surface-variant">...</span>
+<button class="px-3 py-1.5 bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-label-caps text-[11px] uppercase transition-colors" type="button">41</button>
+<button class="px-3 py-1.5 bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-label-caps text-[11px] uppercase transition-colors" type="button">Next</button>
+</div>
+</div>
+</div>
+<!-- Docked Quick Manual Adjustment Helper (xl:col-span-4) -->
+<div class="xl:col-span-4 bg-surface-container-lowest p-space-lg shadow-sm space-y-space-md sticky top-24" id="quick-adjustment-drawer">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">tune</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Quick Manual Adjustment</h3>
+</div>
+<span class="px-2 py-0.5 bg-secondary-fixed text-on-secondary-fixed font-label-caps text-[10px] uppercase font-semibold">Superuser</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Perform immediate credit allocation or debit directly to a client's active multi-tenant ledger. Every transaction generates an immutable audit record.
+        </p>
+<form class="space-y-space-md pt-2" onsubmit="event.preventDefault(); alert('Quota ledger adjustment applied successfully. Audit hash #QTA-' + Math.floor(1000 + Math.random() * 9000) + ' created.');">
+<!-- Select Customer -->
+<div class="space-y-1">
+<label class="block font-label-caps text-label-caps uppercase text-on-surface">Select Customer</label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface-container-low px-3 py-2.5 font-body-sm text-body-sm text-on-surface focus:outline-none rounded-none cursor-pointer">
+<option value="">Choose active couple / client account...</option>
+<option selected="">Ayu Prameswari (ayu.prameswari@outlook.com) • [VIP]</option>
+<option>Dimas Raka Raditya (dimas.raditya@gmail.com)</option>
+<option>Sarah Jenkins (sarah.j@atelier-paris.fr) • [VIP]</option>
+<option>Bpk. Hendra Gunawan (hendra.gunawan@familyoffice.co.id)</option>
+<option>Maya Lin (mayalin.studio@gmail.com)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 text-[18px] pointer-events-none text-on-surface-variant">expand_more</span>
+</div>
+</div>
+<!-- Adjustment Value -->
+<div class="space-y-1">
+<label class="block font-label-caps text-label-caps uppercase text-on-surface">Adjustment Quota</label>
+<div class="grid grid-cols-4 gap-2">
+<button class="py-2 bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-caps text-[12px] font-bold transition-colors" onclick="document.getElementById('quota-val').value = '+1'" type="button">+1 Suite</button>
+<button class="py-2 bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-caps text-[12px] font-bold transition-colors" onclick="document.getElementById('quota-val').value = '+2'" type="button">+2 Suites</button>
+<button class="py-2 bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-caps text-[12px] font-bold transition-colors" onclick="document.getElementById('quota-val').value = '-1'" type="button">-1 Suite</button>
+<input class="w-full text-center py-2 bg-surface-container-low font-body-sm text-body-sm text-on-surface focus:outline-none font-bold" id="quota-val" type="text" value="+1"/>
+</div>
+</div>
+<!-- Reason Category -->
+<div class="space-y-1">
+<label class="block font-label-caps text-label-caps uppercase text-on-surface">Adjustment Reason</label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface-container-low px-3 py-2.5 font-body-sm text-body-sm text-on-surface focus:outline-none rounded-none cursor-pointer">
+<option>Manual Compensation — Date Postponement</option>
+<option>VIP Goodwill Courtesy Allocation</option>
+<option>Concierge Service Upgrade</option>
+<option>Technical Error Recovery</option>
+<option>Unredeemed Trial Revocation</option>
+<option>Billing Dispute Settlement</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 text-[18px] pointer-events-none text-on-surface-variant">expand_more</span>
+</div>
+</div>
+<!-- Audit Note (Mandatory) -->
+<div class="space-y-1">
+<label class="block font-label-caps text-label-caps uppercase text-on-surface">Mandatory Audit Note</label>
+<textarea class="w-full p-3 bg-surface-container-low font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant/70 focus:outline-none rounded-none resize-none" placeholder="Detail the business justification, WhatsApp conversation ID, or event circumstance..." required="" rows="3">Couple postponed Bali ceremony to Q4 2026 due to venue renovation; approving 1 extension suite as authorized by atelier manager.</textarea>
+</div>
+<!-- Confirmation Checkbox -->
+<div class="flex items-start gap-2 pt-1">
+<input class="mt-1 accent-secondary" id="confirm-audit" required="" type="checkbox"/>
+<label class="text-on-surface-variant text-[12px] leading-snug" for="confirm-audit">
+              I verify this override adheres to Moment Kita commercial guidelines. Transaction will be cryptographically hashed to ledger.
+            </label>
+</div>
+<!-- Submit Action -->
+<button class="w-full py-3 bg-primary hover:bg-secondary text-on-primary font-label-caps text-label-caps uppercase tracking-wider transition-colors rounded-none shadow-sm flex items-center justify-center gap-2" type="submit">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Commit Quota Adjustment</span>
+</button>
+</form>
+<!-- Current Client Quota Preview Helper -->
+<div class="p-space-sm bg-surface-container-low space-y-1 text-[12px]">
+<div class="flex justify-between text-on-surface-variant">
+<span>Ayu Prameswari Current Balance:</span>
+<span class="font-bold text-on-surface">2 Suites Remaining</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>After this transaction:</span>
+<span class="font-bold text-secondary">3 Suites Remaining</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Currency Switcher Client Logic -->
+<script>
+    (function() {
+      const btnUsd = document.getElementById('curr-usd');
+      const btnIdr = document.getElementById('curr-idr');
+      const priceDisplays = document.querySelectorAll('.price-display');
+      const priceSubs = document.querySelectorAll('.price-sub');
+
+      if (!btnUsd || !btnIdr) return;
+
+      btnUsd.addEventListener('click', function() {
+        btnUsd.classList.add('bg-surface-container-lowest', 'text-on-surface', 'font-semibold', 'shadow-sm');
+        btnUsd.classList.remove('text-on-surface-variant');
+        btnIdr.classList.remove('bg-surface-container-lowest', 'text-on-surface', 'font-semibold', 'shadow-sm');
+        btnIdr.classList.add('text-on-surface-variant');
+
+        priceDisplays.forEach(el => {
+          el.textContent = el.getAttribute('data-usd');
+        });
+        priceSubs.forEach(el => {
+          el.textContent = el.getAttribute('data-usd');
+        });
+      });
+
+      btnIdr.addEventListener('click', function() {
+        btnIdr.classList.add('bg-surface-container-lowest', 'text-on-surface', 'font-semibold', 'shadow-sm');
+        btnIdr.classList.remove('text-on-surface-variant');
+        btnUsd.classList.remove('bg-surface-container-lowest', 'text-on-surface', 'font-semibold', 'shadow-sm');
+        btnUsd.classList.add('text-on-surface-variant');
+
+        priceDisplays.forEach(el => {
+          el.textContent = el.getAttribute('data-idr');
+        });
+        priceSubs.forEach(el => {
+          el.textContent = el.getAttribute('data-idr');
+        });
+      });
+    })();
+  </script>
+</div></main></div></body></html>

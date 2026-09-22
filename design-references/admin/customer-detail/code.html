@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container":"#f0eee8","tertiary-fixed-dim":"#ffb4a4","secondary-container":"#ffad91","secondary-fixed":"#ffdbcf","tertiary-container":"#3c0801","outline-variant":"#c4c7c7","inverse-primary":"#c8c6c5","surface-bright":"#fcf9f3","secondary-fixed-dim":"#ffb59c","on-secondary":"#ffffff","secondary":"#8c4d37","outline":"#747878","tertiary":"#000000","on-secondary-fixed":"#380d00","primary-fixed-dim":"#c8c6c5","on-tertiary-fixed-variant":"#753224","error":"#ba1a1a","on-primary-fixed":"#1c1b1b","on-tertiary-fixed":"#3c0801","on-tertiary-container":"#c06d5b","background":"#fcf9f3","on-error-container":"#93000a","on-primary":"#ffffff","inverse-on-surface":"#f3f0ea","surface-container-lowest":"#ffffff","primary-container":"#1c1b1b","primary-fixed":"#e5e2e1","surface":"#fcf9f3","on-primary-fixed-variant":"#474746","surface-container-highest":"#e5e2dc","error-container":"#ffdad6","surface-container-low":"#f6f3ed","on-tertiary":"#ffffff","surface-dim":"#dcdad4","surface-variant":"#e5e2dc","surface-tint":"#5f5e5e","on-surface-variant":"#444748","on-primary-container":"#858383","on-error":"#ffffff","on-secondary-container":"#7a3e29","inverse-surface":"#31312d","tertiary-fixed":"#ffdad3","on-surface":"#1c1c18","surface-container-high":"#ebe8e2","primary":"#000000","on-background":"#1c1c18","on-secondary-fixed-variant":"#703722"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"margin-mobile":"1.25rem","space-sm":"0.5rem",margin:"3.5rem","space-xl":"3rem","space-xs":"0.25rem","space-lg":"1.75rem","gutter-mobile":"1rem",gutter:"2rem","space-md":"1rem"},fontFamily:{"body-md":["Plus Jakarta Sans"],"label-caps":["Plus Jakarta Sans"],"headline-lg-mobile":["Playfair Display"],"display-hero":["Playfair Display"],"headline-sm":["Playfair Display"],kicker:["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-md":["Playfair Display"],"headline-lg":["Playfair Display"],"quote-editorial":["Playfair Display"],"body-sm":["Plus Jakarta Sans"],"headline-xl-mobile":["Playfair Display"],"display-hero-mobile":["Playfair Display"],"headline-xl":["Playfair Display"]},fontSize:{"body-md":["15px",{lineHeight:"24px",letterSpacing:"0em",fontWeight:"400"}],"label-caps":["12px",{lineHeight:"16px",letterSpacing:"0.12em",fontWeight:"600"}],"headline-lg-mobile":["28px",{lineHeight:"34px",letterSpacing:"0em",fontWeight:"400"}],"display-hero":["84px",{lineHeight:"92px",letterSpacing:"-0.03em",fontWeight:"400"}],"headline-sm":["22px",{lineHeight:"30px",letterSpacing:"0em",fontWeight:"600"}],kicker:["11px",{lineHeight:"16px",letterSpacing:"0.2em",fontWeight:"600"}],"body-lg":["18px",{lineHeight:"30px",letterSpacing:"-0.01em",fontWeight:"400"}],"headline-md":["28px",{lineHeight:"36px",letterSpacing:"-0.01em",fontWeight:"500"}],"headline-lg":["40px",{lineHeight:"48px",letterSpacing:"-0.015em",fontWeight:"400"}],"quote-editorial":["24px",{lineHeight:"36px",letterSpacing:"0em",fontWeight:"400"}],"body-sm":["13px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"400"}],"headline-xl-mobile":["36px",{lineHeight:"42px",letterSpacing:"-0.01em",fontWeight:"400"}],"display-hero-mobile":["44px",{lineHeight:"48px",letterSpacing:"-0.02em",fontWeight:"400"}],"headline-xl":["56px",{lineHeight:"64px",letterSpacing:"-0.02em",fontWeight:"400"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)] hidden lg:flex"><div class="flex flex-col flex-1 overflow-y-auto"><div class="px-space-lg pt-space-lg pb-space-md flex items-start justify-between"><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-primary tracking-tight">Moment Kita</span><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span></div><span class="font-kicker text-kicker uppercase text-secondary tracking-widest mt-space-xs">Studio Admin / Console v2.4</span></div><button aria-label="Collapse sidebar" class="p-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">dock_to_left</span></button></div><div class="px-space-lg py-space-xs"><div class="h-[1px] w-full bg-outline-variant/30"></div></div><nav class="flex-1 px-space-md py-space-sm space-y-space-md" data-active-classes="bg-primary-container text-on-primary font-body-sm text-body-sm"><div class="space-y-space-xs"><div class="px-space-md py-1 font-kicker text-kicker uppercase text-on-surface-variant tracking-widest">Overview</div><div class="space-y-0.5"><a class="flex items-center justify-between px-space-md py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="font-body-sm text-body-sm">Dashboard</span></a></div></div><div class="space-y-space-xs"><div class="px-space-md py-1 font-kicker text-kicker uppercase text-on-surface-variant tracking-widest">Management</div><div class="space-y-0.5"><a class="flex items-center justify-between px-space-md py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="customers" href="#"><span class="font-body-sm text-body-sm font-medium">Customers</span><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span></a><a class="flex items-center justify-between px-space-md py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="invitations" href="#"><span class="font-body-sm text-body-sm">Invitations</span></a><a class="flex items-center justify-between px-space-md py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="templates" href="#"><span class="font-body-sm text-body-sm">Templates</span></a></div></div><div class="space-y-space-xs"><div class="px-space-md py-1 font-kicker text-kicker uppercase text-on-surface-variant tracking-widest">Commerce</div><div class="space-y-0.5"><a class="flex items-center justify-between px-space-md py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="transactions" href="#"><span class="font-body-sm text-body-sm">Transactions</span></a><a class="flex items-center justify-between px-space-md py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="packages-quota" href="#"><span class="font-body-sm text-body-sm">Packages &amp; Quota</span></a><a class="flex items-center justify-between px-space-md py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="printed-orders" href="#"><span class="font-body-sm text-body-sm">Printed Orders</span></a></div></div><div class="space-y-space-xs"><div class="px-space-md py-1 font-kicker text-kicker uppercase text-on-surface-variant tracking-widest">Operations</div><div class="space-y-0.5"><a class="flex items-center justify-between px-space-md py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="notifications" href="#"><span class="font-body-sm text-body-sm">Notifications</span><span class="px-1.5 py-0.5 bg-secondary-fixed text-on-secondary-fixed font-kicker text-kicker">3</span></a><a class="flex items-center justify-between px-space-md py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="audit-logs" href="#"><span class="font-body-sm text-body-sm">Audit Logs</span></a></div></div><div class="space-y-space-xs"><div class="px-space-md py-1 font-kicker text-kicker uppercase text-on-surface-variant tracking-widest">System</div><div class="space-y-0.5"><a class="flex items-center justify-between px-space-md py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="font-body-sm text-body-sm">Settings</span></a></div></div></nav></div><div class="p-space-md bg-surface-container/60"><div class="flex items-center justify-between p-space-sm bg-surface-container-lowest shadow-[0_1px_4px_rgba(0,0,0,0.03)]"><div class="flex items-center gap-space-sm min-w-0"><div class="relative flex-shrink-0"><div class="w-9 h-9 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-secondary ring-2 ring-surface-container-lowest"></span></div><div class="flex flex-col min-w-0"><span class="font-body-sm text-body-sm font-semibold text-on-surface truncate">Atelier Admin</span><span class="font-kicker text-kicker text-on-surface-variant truncate uppercase">Superuser</span></div></div><a aria-label="Sign out" class="p-1.5 text-on-surface-variant hover:text-secondary transition-colors" data-path="logout" href="#"><span class="material-symbols-outlined text-[20px]">logout</span></a></div></div></aside><div class="lg:pl-72"><header class="fixed top-0 left-0 lg:left-72 right-0 h-20 bg-surface/90 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-full h-full px-space-md lg:px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><button aria-label="Open menu" class="lg:hidden p-2 text-on-surface hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[24px]">menu</span></button><nav aria-label="Breadcrumb" class="hidden xl:flex items-center gap-space-xs text-on-surface-variant font-kicker text-kicker uppercase tracking-widest"><span class="hover:text-on-surface transition-colors">Management</span><span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span><span class="text-primary font-semibold">Customers</span></nav><div class="hidden sm:flex items-center bg-surface-container-low px-space-md py-2 text-on-surface-variant w-72"><span class="material-symbols-outlined text-[18px] text-outline mr-space-xs">search</span><input class="w-full bg-transparent border-0 p-0 font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none" placeholder="Search guests, ceremonies..." type="text"/><kbd class="font-kicker text-kicker px-1.5 py-0.5 bg-surface-container text-on-surface-variant tracking-wider uppercase">Cmd+K</kbd></div></div><div class="flex items-center gap-space-sm lg:gap-space-md"><div class="hidden md:flex items-center gap-space-xs px-space-md py-2 bg-surface-container-low text-on-surface font-body-sm text-body-sm"><span class="material-symbols-outlined text-[18px] text-secondary">calendar_today</span><span>Oct 1 – Oct 31, 2025</span><span class="material-symbols-outlined text-[16px] text-outline ml-1">expand_more</span></div><div class="relative"><button aria-label="View notifications" class="p-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-secondary"></span></button></div><button class="hidden sm:inline-flex items-center gap-space-xs bg-primary text-on-primary px-space-md py-2 font-label-caps text-label-caps uppercase transition-colors hover:bg-secondary" type="button"><span class="material-symbols-outlined text-[16px]">add</span><span>Create Invitation</span></button><div class="flex items-center gap-space-xs pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span class="material-symbols-outlined text-[16px] text-on-surface-variant hidden sm:inline-block">expand_more</span></div></div></div></header><main class="relative pt-20 w-full min-h-screen bg-background"><div class="flex flex-col w-full">
+<!-- Subtle Editorial Ambient Anchor -->
+<div class="w-full px-space-md lg:px-margin py-space-lg space-y-space-xl max-w-[1440px] mx-auto">
+<!-- Top Client Breadcrumb & Status Overline -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-kicker text-kicker tracking-widest uppercase">
+<span>MANAGEMENT</span>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<span>CUSTOMERS</span>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<span class="text-secondary font-semibold">AYU PRAMESWARI</span>
+<span class="px-2 py-0.5 bg-surface-container font-mono text-[10px] text-on-surface-variant ml-2">ID: MK-CUST-8842</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-high text-on-surface font-label-caps text-label-caps uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+          Managed Customer — Atelier WhatsApp Liaison
+        </span>
+</div>
+</div>
+<!-- MAIN CLIENT HERO CARD -->
+<section class="bg-surface-container-lowest p-space-lg lg:p-space-xl shadow-sm relative overflow-hidden">
+<!-- Faint Gold/Terracotta Accent Thread -->
+<div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-secondary via-secondary-container to-transparent"></div>
+<div class="flex flex-col lg:flex-row lg:items-start justify-between gap-space-lg">
+<!-- Left: Monogram + Core Dossier -->
+<div class="flex flex-col sm:flex-row items-start gap-space-lg">
+<!-- Monogram Badge -->
+<div class="relative flex-shrink-0">
+<div class="w-20 h-20 bg-surface-container flex items-center justify-center text-secondary shadow-inner">
+<span class="font-headline-md text-headline-md tracking-tight font-serif">AP</span>
+</div>
+<div class="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<!-- Identity Details -->
+<div class="space-y-space-xs">
+<div class="flex flex-wrap items-center gap-space-xs">
+<h1 class="font-headline-md text-headline-md text-primary font-medium tracking-tight">Ayu Prameswari</h1>
+<span class="px-2 py-0.5 bg-secondary-fixed text-on-secondary-fixed font-kicker text-kicker uppercase">Managed VIP</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 bg-surface-container text-on-surface font-kicker text-kicker uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Active Client
+              </span>
+</div>
+<p class="font-quote-editorial text-quote-editorial text-on-surface-variant italic">
+              Ayu &amp; Dimas — Bali Cliff Sanctuary &amp; Jakarta Akad
+            </p>
+<div class="pt-space-xs flex flex-wrap items-center gap-y-2 gap-x-space-lg text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-1.5 group cursor-pointer hover:text-secondary transition-colors" onclick="navigator.clipboard?.writeText('ayu.prameswari@heritage-indonesia.com')">
+<span class="material-symbols-outlined text-[16px] text-outline">mail</span>
+<span class="font-medium text-on-surface">ayu.prameswari@heritage-indonesia.com</span>
+<span class="material-symbols-outlined text-[14px] opacity-0 group-hover:opacity-100 transition-opacity">content_copy</span>
+</div>
+<div class="flex items-center gap-1.5 group cursor-pointer hover:text-secondary transition-colors" onclick="navigator.clipboard?.writeText('+6281288992341')">
+<span class="material-symbols-outlined text-[16px] text-secondary">chat</span>
+<span class="font-medium text-on-surface">+62 812-8899-2341</span>
+<span class="px-1.5 py-0.2 bg-surface-container font-kicker text-[10px] uppercase text-secondary">WITA +1</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">concierge</span>
+<span>Liaison: <strong class="font-medium text-on-surface">Rina (Atelier Jakarta)</strong></span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">calendar_month</span>
+<span>Joined May 14, 2024 (17 mos active)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Primary Actions Toolbar -->
+<div class="flex flex-wrap lg:flex-col xl:flex-row items-center gap-space-xs pt-space-xs lg:pt-0">
+<a class="inline-flex items-center gap-space-xs bg-surface-container-high hover:bg-surface-container text-on-surface px-space-md py-2.5 font-label-caps text-label-caps uppercase transition-colors" href="https://wa.me/6281288992341" target="_blank">
+<span class="material-symbols-outlined text-[16px] text-secondary">forum</span>
+<span>WhatsApp Thread</span>
+</a>
+<button class="inline-flex items-center gap-space-xs bg-surface-container-low hover:bg-surface-container text-on-surface px-space-md py-2.5 font-label-caps text-label-caps uppercase transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Adjust Quota</span>
+</button>
+<button class="inline-flex items-center gap-space-xs bg-surface-container-low hover:bg-surface-container text-on-surface px-space-md py-2.5 font-label-caps text-label-caps uppercase transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+<span>Edit Profile</span>
+</button>
+<button class="inline-flex items-center gap-space-xs bg-primary text-on-primary hover:bg-secondary px-space-lg py-2.5 font-label-caps text-label-caps uppercase transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Create Invitation</span>
+</button>
+<button aria-label="More Options" class="p-2.5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+</div>
+</section>
+<!-- METRIC SUMMARY TILES (4 Column Minimal Bento) -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Metric 1: Quota Status -->
+<div class="bg-surface-container-lowest p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant font-kicker text-kicker uppercase tracking-widest pb-space-sm">
+<span>Remaining Quota</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">confirmation_number</span>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-primary font-serif">3</span>
+<span class="font-body-md text-body-md text-on-surface-variant">/ 5 Credits</span>
+</div>
+<!-- Tactile custom progress track -->
+<div class="w-full bg-surface-container h-1.5 mt-space-xs overflow-hidden">
+<div class="bg-secondary h-full" style="width: 60%;"></div>
+</div>
+</div>
+<div class="pt-space-sm flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>2 Provisioned Suites</span>
+<span class="text-secondary font-medium">+2 Available</span>
+</div>
+</div>
+<!-- Metric 2: Lifetime Value -->
+<div class="bg-surface-container-lowest p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant font-kicker text-kicker uppercase tracking-widest pb-space-sm">
+<span>Lifetime Spend</span>
+<span class="material-symbols-outlined text-[18px] text-outline">payments</span>
+</div>
+<div>
+<div class="font-headline-lg text-headline-lg text-primary font-serif">$2,850<span class="text-headline-sm font-sans font-normal text-on-surface-variant">.00</span></div>
+<p class="font-kicker text-kicker uppercase text-secondary tracking-wider mt-space-xs">Approx. IDR 44.500.000</p>
+</div>
+<div class="pt-space-sm flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>3 Transactions</span>
+<span>AOV $950</span>
+</div>
+</div>
+<!-- Metric 3: Total Suites -->
+<div class="bg-surface-container-lowest p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant font-kicker text-kicker uppercase tracking-widest pb-space-sm">
+<span>Invitation Suites</span>
+<span class="material-symbols-outlined text-[18px] text-outline">mark_email_read</span>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-primary font-serif">2</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Suites Active</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">1 Published • 1 In Customization</p>
+</div>
+<div class="pt-space-sm flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Digital &amp; Physical Deck</span>
+<span class="text-secondary font-medium">Bespoke Duo</span>
+</div>
+</div>
+<!-- Metric 4: RSVPs -->
+<div class="bg-surface-container-lowest p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant font-kicker text-kicker uppercase tracking-widest pb-space-sm">
+<span>RSVP Intake</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">group_add</span>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-primary font-serif">482</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Confirmed</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">94.5% Attending Rate across events</p>
+</div>
+<div class="pt-space-sm flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Uluwatu: 342 Confirmed</span>
+<span class="text-secondary font-medium">38 Dietary Alert</span>
+</div>
+</div>
+</section>
+<!-- EDITORIAL NAVIGATION TABS -->
+<nav aria-label="Client Tabs" class="flex items-center gap-space-md overflow-x-auto pb-space-xs bg-surface-container-low px-space-md py-space-sm shadow-sm">
+<button class="px-space-md py-2 bg-surface-container-lowest text-primary font-label-caps text-label-caps uppercase shadow-sm flex items-center gap-2" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Overview &amp; Dossier</span>
+</button>
+<button class="px-space-md py-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-caps text-label-caps uppercase transition-colors" type="button">
+<span>Invitations (2)</span>
+</button>
+<button class="px-space-md py-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-caps text-label-caps uppercase transition-colors" type="button">
+<span>Transactions &amp; Invoices (3)</span>
+</button>
+<button class="px-space-md py-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-caps text-label-caps uppercase transition-colors" type="button">
+<span>Quota Ledger (5)</span>
+</button>
+<button class="px-space-md py-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-caps text-label-caps uppercase transition-colors" type="button">
+<span>Activity &amp; Audit (12)</span>
+</button>
+<button class="px-space-md py-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-caps text-label-caps uppercase transition-colors" type="button">
+<span>Concierge Vault &amp; Files</span>
+</button>
+</nav>
+<!-- SECTION 1: INVITATION SUITES OWNED -->
+<section class="space-y-space-md">
+<div class="flex items-end justify-between">
+<div>
+<span class="font-kicker text-kicker uppercase tracking-widest text-secondary">01 — Celebration Suites</span>
+<h2 class="font-headline-sm text-headline-sm text-primary font-serif">Customer Invitation Roster</h2>
+</div>
+<button class="text-on-surface-variant hover:text-secondary font-label-caps text-label-caps uppercase flex items-center gap-1 transition-colors" type="button">
+<span>Browse Template Archive</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+<!-- CARD 1: LIVE SUITE (Uluwatu) -->
+<article class="bg-surface-container-lowest shadow-sm flex flex-col justify-between overflow-hidden group">
+<div class="p-space-lg space-y-space-md">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 bg-surface-container font-kicker text-kicker uppercase text-secondary">Suite #MK-SUITE-402</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 bg-secondary-fixed text-on-secondary-fixed font-kicker text-kicker uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Published &amp; Live
+                  </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-serif group-hover:text-secondary transition-colors">
+                  Ayu &amp; Dimas — The Cliffside Vows at Uluwatu
+                </h3>
+</div>
+<!-- Template Badge Pill -->
+<span class="px-2.5 py-1 bg-surface-container-low text-on-surface-variant font-label-caps text-label-caps uppercase text-right">
+                Château de Chantilly
+              </span>
+</div>
+<!-- Visual Preview Strip with Asymmetric Card & Photo -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm p-space-sm bg-surface-container-low">
+<div class="sm:col-span-1 h-32 relative overflow-hidden bg-surface-dim">
+<img class="w-full h-full object-cover" data-alt="Luxury wedding invitation stationery card handcrafted with deckle edges and warm copper foil typography on heavy off-white cotton stock, bathed in soft afternoon sun" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_UZHhUhXTb_QMQ6-sXkrZLXvRfoQj0YCLOiehQXxHzkzmsLAruA3W4Mw8LpvrEZyyLRZk_3q2bANueGFt96-5J-ZoJaQyp6-Cuh9nPujbo3zg6mp7aHxiinoUevagX4F_zRofCicKCyhHLsjJiLudeyJlF8aQEuUW9P0AG_KiLUgjBgVRkCSvvqopmwLWmwqpNvDJp1_JgZgKfiYMWLGvhZtNH_FPKu7DGLOCIyDj2d7dm1QeiCk"/>
+<div class="absolute inset-0 bg-primary/10"></div>
+<span class="absolute bottom-1 left-1.5 font-kicker text-[10px] uppercase text-surface-container-lowest tracking-wider">600 GSM Cotton</span>
+</div>
+<div class="sm:col-span-2 flex flex-col justify-between text-body-sm font-body-sm py-1">
+<div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">location_on</span>
+<span>Uluwatu, Bali • December 28, 2025</span>
+</div>
+<div class="mt-2 flex items-center gap-2 bg-surface-container px-2 py-1">
+<span class="material-symbols-outlined text-[16px] text-outline">link</span>
+<span class="font-mono text-[12px] text-on-surface truncate">momentkita.com/c/ayu-dimas</span>
+<button aria-label="Copy invitation link" class="ml-auto text-on-surface-variant hover:text-primary" type="button">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+<button aria-label="View QR code" class="text-on-surface-variant hover:text-primary" type="button">
+<span class="material-symbols-outlined text-[16px]">qr_code_2</span>
+</button>
+</div>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-2">
+<span class="px-1.5 py-0.5 bg-surface-container-lowest text-on-surface-variant font-kicker text-[10px] uppercase">Audio Score</span>
+<span class="px-1.5 py-0.5 bg-surface-container-lowest text-on-surface-variant font-kicker text-[10px] uppercase">BCA &amp; Mandiri Registry</span>
+<span class="px-1.5 py-0.5 bg-surface-container-lowest text-on-surface-variant font-kicker text-[10px] uppercase">Dresscode Moodboard</span>
+<span class="px-1.5 py-0.5 bg-surface-container-lowest text-on-surface-variant font-kicker text-[10px] uppercase">WhatsApp Dispatch</span>
+</div>
+</div>
+</div>
+<!-- RSVP Progress Mini-Ledger -->
+<div class="space-y-1.5 bg-surface-container-low/60 p-space-sm">
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="text-on-surface-variant">RSVP Confirmation Intake</span>
+<span class="font-medium text-on-surface"><strong>342</strong> / 360 Guests Responded (95%)</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 overflow-hidden">
+<div class="bg-secondary h-full" style="width: 95%;"></div>
+</div>
+<div class="flex items-center justify-between font-kicker text-[10px] uppercase text-on-surface-variant pt-1">
+<span>280 Attending Confirmed</span>
+<span>62 Regrets Received</span>
+<span>18 Pending Follow-up</span>
+</div>
+</div>
+</div>
+<!-- Card Actions Footer -->
+<div class="px-space-lg py-space-sm bg-surface-container-low flex items-center justify-between">
+<span class="font-kicker text-kicker uppercase text-on-surface-variant">Last deployed: Oct 21, 2025</span>
+<div class="flex items-center gap-space-xs">
+<a class="px-space-md py-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-caps text-label-caps uppercase transition-colors" href="#">
+                Preview Live
+              </a>
+<button class="px-space-md py-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-caps text-label-caps uppercase transition-colors" type="button">
+                Guestlist &amp; RSVPs
+              </button>
+<button class="px-space-md py-1.5 bg-primary text-on-primary hover:bg-secondary font-label-caps text-label-caps uppercase transition-colors" type="button">
+                Open Studio Editor
+              </button>
+</div>
+</div>
+</article>
+<!-- CARD 2: DRAFT SUITE (Jakarta Akad) -->
+<article class="bg-surface-container-lowest shadow-sm flex flex-col justify-between overflow-hidden group">
+<div class="p-space-lg space-y-space-md">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 bg-surface-container font-kicker text-kicker uppercase text-secondary">Suite #MK-SUITE-419</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 bg-surface-container-high text-on-surface font-kicker text-kicker uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span> Draft • Customizing Proof
+                  </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-serif group-hover:text-secondary transition-colors">
+                  Ayu &amp; Dimas — Intimate Akad &amp; Traditional Tea Ceremony
+                </h3>
+</div>
+<!-- Template Badge Pill -->
+<span class="px-2.5 py-1 bg-surface-container-low text-on-surface-variant font-label-caps text-label-caps uppercase text-right">
+                Kyoto Whisper
+              </span>
+</div>
+<!-- Visual Preview Strip with Asymmetric Card & Photo -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm p-space-sm bg-surface-container-low">
+<div class="sm:col-span-1 h-32 relative overflow-hidden bg-surface-dim">
+<img class="w-full h-full object-cover" data-alt="Minimalist dark charcoal Japanese handmade washi stationery suite featuring delicate metallic gold leaf foil accents and refined Japanese calligraphy typography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzKV5uGdge8oDBmOEebohqeo22tfUh7ekDNB4ImrgZ455JRpooctti5bKautvgxjZJyXm-DzaoYyLVFh85XIXa92VtPvXA5zwBF1WlbFV9ta_1oF2MyP9K0YiGy0kpk4AxKDo0Zr_hyoOjIaLeLY0ktNAkLg4nXIhl69SFwrlNYkv9N378jqLSFmTdG0H0XPE2rlodh44fE4sW2xuGdQ89FOGODL35Gaj_O-qzUem91SVwBmPn-g0"/>
+<div class="absolute inset-0 bg-primary/20"></div>
+<span class="absolute bottom-1 left-1.5 font-kicker text-[10px] uppercase text-surface-container-lowest tracking-wider">Noir &amp; Gold Leaf</span>
+</div>
+<div class="sm:col-span-2 flex flex-col justify-between text-body-sm font-body-sm py-1">
+<div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">location_on</span>
+<span>The Dharmawangsa, Jakarta • December 20, 2025</span>
+</div>
+<div class="mt-2 flex items-center gap-2 bg-surface-container/70 px-2 py-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-outline">lock</span>
+<span class="font-mono text-[12px] italic">Staging proof URL (Private)</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-2">
+<span class="px-1.5 py-0.5 bg-surface-container-lowest text-on-surface-variant font-kicker text-[10px] uppercase">Bilingual (ID/EN)</span>
+<span class="px-1.5 py-0.5 bg-surface-container-lowest text-on-surface-variant font-kicker text-[10px] uppercase">VIP Seat Assignment</span>
+<span class="px-1.5 py-0.5 bg-surface-container-lowest text-on-surface-variant font-kicker text-[10px] uppercase">No Physical Print</span>
+</div>
+</div>
+</div>
+<!-- RSVP Progress Mini-Ledger Placeholder -->
+<div class="space-y-1.5 bg-surface-container-low/60 p-space-sm">
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="text-on-surface-variant">Intended Guest Cap</span>
+<span class="font-medium text-on-surface">120 Expected Dignitaries</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 overflow-hidden">
+<div class="bg-outline-variant h-full" style="width: 0%;"></div>
+</div>
+<div class="flex items-center justify-between font-kicker text-[10px] uppercase text-on-surface-variant pt-1">
+<span>Unpublished Draft</span>
+<span>Awaiting Client Font Approval</span>
+</div>
+</div>
+</div>
+<!-- Card Actions Footer -->
+<div class="px-space-lg py-space-sm bg-surface-container-low flex items-center justify-between">
+<span class="font-kicker text-kicker uppercase text-on-surface-variant">Created: Sep 02, 2025</span>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-caps text-label-caps uppercase transition-colors" type="button">
+                Preview Proof
+              </button>
+<button class="px-space-md py-1.5 bg-primary text-on-primary hover:bg-secondary font-label-caps text-label-caps uppercase transition-colors" type="button">
+                Resume Editing
+              </button>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- SECTION 2: COMMERCIAL & QUOTA LEDGER -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- LEFT 7 COLS: Quota Ledger Table -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-space-lg shadow-sm flex flex-col justify-between">
+<div class="space-y-space-md">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-kicker text-kicker uppercase tracking-widest text-secondary">02 — Quota Balance</span>
+<h3 class="font-headline-sm text-headline-sm text-primary font-serif">Credit Allocation Ledger</h3>
+</div>
+<button class="inline-flex items-center gap-1 px-3 py-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-caps text-label-caps uppercase transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">add_circle</span>
+<span>Manual Adjustment</span>
+</button>
+</div>
+<!-- Ledger Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-kicker text-kicker uppercase tracking-wider">
+<th class="py-2.5 px-3 font-semibold">Timestamp</th>
+<th class="py-2.5 px-3 font-semibold">Activity &amp; Purpose</th>
+<th class="py-2.5 px-3 font-semibold text-center">Delta</th>
+<th class="py-2.5 px-3 font-semibold text-center">Balance</th>
+<th class="py-2.5 px-3 font-semibold">Reference</th>
+<th class="py-2.5 px-3 font-semibold text-right">Operator</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-transparent">
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-3 whitespace-nowrap text-on-surface font-mono text-[12px]">
+                    Oct 18, 2025 <span class="text-on-surface-variant text-[11px]">14:20</span>
+</td>
+<td class="py-3 px-3">
+<span class="font-medium text-on-surface">Package Purchase</span>
+<span class="block text-on-surface-variant text-[12px]">Bespoke Duo Suite Upgrade</span>
+</td>
+<td class="py-3 px-3 text-center">
+<span class="inline-block px-2 py-0.5 bg-secondary-fixed text-on-secondary-fixed font-kicker text-kicker font-bold">+2 Quota</span>
+</td>
+<td class="py-3 px-3 text-center font-serif font-bold text-on-surface">3</td>
+<td class="py-3 px-3 text-on-surface-variant font-mono text-[12px]">#MK-INV-9921</td>
+<td class="py-3 px-3 text-right text-on-surface-variant text-[12px]">Stripe Webhook</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-3 whitespace-nowrap text-on-surface font-mono text-[12px]">
+                    Sep 02, 2025 <span class="text-on-surface-variant text-[11px]">10:15</span>
+</td>
+<td class="py-3 px-3">
+<span class="font-medium text-on-surface">Invitation Provisioned</span>
+<span class="block text-on-surface-variant text-[12px]">Suite #MK-SUITE-402 (Uluwatu)</span>
+</td>
+<td class="py-3 px-3 text-center">
+<span class="inline-block px-2 py-0.5 bg-surface-container-highest text-on-surface font-kicker text-kicker">-1 Quota</span>
+</td>
+<td class="py-3 px-3 text-center font-serif font-bold text-on-surface">1</td>
+<td class="py-3 px-3 text-on-surface-variant font-mono text-[12px]">Self-Provision</td>
+<td class="py-3 px-3 text-right text-on-surface-variant text-[12px]">Client Portal</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-3 whitespace-nowrap text-on-surface font-mono text-[12px]">
+                    Aug 12, 2025 <span class="text-on-surface-variant text-[11px]">16:45</span>
+</td>
+<td class="py-3 px-3">
+<span class="font-medium text-on-surface">Admin Courtesy Grant</span>
+<span class="block text-on-surface-variant text-[12px]">Bridal Shower Courtesy Event</span>
+</td>
+<td class="py-3 px-3 text-center">
+<span class="inline-block px-2 py-0.5 bg-secondary-fixed text-on-secondary-fixed font-kicker text-kicker font-bold">+1 Quota</span>
+</td>
+<td class="py-3 px-3 text-center font-serif font-bold text-on-surface">2</td>
+<td class="py-3 px-3 text-on-surface-variant font-mono text-[12px]">CR-GIFT-88</td>
+<td class="py-3 px-3 text-right text-on-surface-variant text-[12px]">Sarah J. (Admin)</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-3 whitespace-nowrap text-on-surface font-mono text-[12px]">
+                    May 14, 2025 <span class="text-on-surface-variant text-[11px]">09:30</span>
+</td>
+<td class="py-3 px-3">
+<span class="font-medium text-on-surface">Initial Tier Purchase</span>
+<span class="block text-on-surface-variant text-[12px]">Signature Single Suite</span>
+</td>
+<td class="py-3 px-3 text-center">
+<span class="inline-block px-2 py-0.5 bg-secondary-fixed text-on-secondary-fixed font-kicker text-kicker font-bold">+1 Quota</span>
+</td>
+<td class="py-3 px-3 text-center font-serif font-bold text-on-surface">1</td>
+<td class="py-3 px-3 text-on-surface-variant font-mono text-[12px]">#MK-INV-7714</td>
+<td class="py-3 px-3 text-right text-on-surface-variant text-[12px]">Manual Wire</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="pt-space-md flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Showing 4 recorded ledger transactions</span>
+<button class="text-secondary hover:underline font-label-caps text-label-caps uppercase flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Export Full Quota Audit (CSV)</span>
+</button>
+</div>
+</div>
+<!-- RIGHT 5 COLS: Transactions & Invoices -->
+<div class="lg:col-span-5 bg-surface-container-lowest p-space-lg shadow-sm flex flex-col justify-between">
+<div class="space-y-space-md">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-kicker text-kicker uppercase tracking-widest text-secondary">03 — Billing &amp; Receipts</span>
+<h3 class="font-headline-sm text-headline-sm text-primary font-serif">Invoices &amp; Receipts</h3>
+</div>
+<span class="px-2 py-0.5 bg-surface-container font-kicker text-kicker uppercase text-on-surface-variant">3 Invoices Paid</span>
+</div>
+<!-- Transaction List -->
+<div class="space-y-space-xs">
+<!-- TX 1 -->
+<div class="p-space-sm bg-surface-container-low hover:bg-surface-container transition-colors flex items-center justify-between">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-[18px] text-primary font-serif">$1,650.00</span>
+<span class="px-1.5 py-0.5 bg-secondary-fixed text-on-secondary-fixed font-kicker text-[10px] uppercase">Paid</span>
+</div>
+<p class="font-body-sm text-body-sm font-medium text-on-surface">Bespoke Duo Suite + 100 Letterpress Keepsakes</p>
+<div class="flex items-center gap-2 text-[11px] text-on-surface-variant font-mono">
+<span>Oct 18, 2025</span>
+<span>•</span>
+<span>Stripe (ending 4242)</span>
+</div>
+</div>
+<button aria-label="Download Invoice" class="p-2 text-on-surface-variant hover:text-secondary hover:bg-surface-container-lowest transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+</div>
+<!-- TX 2 -->
+<div class="p-space-sm bg-surface-container-low hover:bg-surface-container transition-colors flex items-center justify-between">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-[18px] text-primary font-serif">$850.00</span>
+<span class="px-1.5 py-0.5 bg-secondary-fixed text-on-secondary-fixed font-kicker text-[10px] uppercase">Paid</span>
+</div>
+<p class="font-body-sm text-body-sm font-medium text-on-surface">Signature Digital Invitation Suite</p>
+<div class="flex items-center gap-2 text-[11px] text-on-surface-variant font-mono">
+<span>May 14, 2025</span>
+<span>•</span>
+<span>BCA Virtual Account</span>
+</div>
+</div>
+<button aria-label="Download Invoice" class="p-2 text-on-surface-variant hover:text-secondary hover:bg-surface-container-lowest transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+</div>
+<!-- TX 3 -->
+<div class="p-space-sm bg-surface-container-low hover:bg-surface-container transition-colors flex items-center justify-between">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-[18px] text-primary font-serif">$350.00</span>
+<span class="px-1.5 py-0.5 bg-secondary-fixed text-on-secondary-fixed font-kicker text-[10px] uppercase">Paid</span>
+</div>
+<p class="font-body-sm text-body-sm font-medium text-on-surface">500 Custom WhatsApp Dispatch Credits</p>
+<div class="flex items-center gap-2 text-[11px] text-on-surface-variant font-mono">
+<span>Jun 20, 2025</span>
+<span>•</span>
+<span>QRIS Instant Settlement</span>
+</div>
+</div>
+<button aria-label="Download Invoice" class="p-2 text-on-surface-variant hover:text-secondary hover:bg-surface-container-lowest transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+</div>
+</div>
+</div>
+<div class="pt-space-md flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tax invoices generated automatically</span>
+<button class="text-primary hover:text-secondary font-label-caps text-label-caps uppercase transition-colors" type="button">
+            View All Billing History →
+          </button>
+</div>
+</div>
+</section>
+<!-- SECTION 3: CLIENT DOSSIER & ACTIVITY TIMELINE (Split Bottom Section) -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- LEFT 6 COLS: Internal Concierge Liaison Notes -->
+<div class="lg:col-span-6 bg-surface-container-lowest p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-kicker text-kicker uppercase tracking-widest text-secondary">04 — Atelier Private Notes</span>
+<h3 class="font-headline-sm text-headline-sm text-primary font-serif">Concierge Handover Notes</h3>
+</div>
+<span class="material-symbols-outlined text-[20px] text-secondary">lock</span>
+</div>
+<!-- Pinned Note Card -->
+<div class="p-space-md bg-surface-container-low relative">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-kicker text-[10px]">
+                RK
+              </div>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Rina Concierge</span>
+<span class="px-1.5 py-0.2 bg-secondary-fixed text-on-secondary-fixed font-kicker text-[10px] uppercase">Senior Liaison</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">Yesterday • 11:30 AM</span>
+</div>
+<p class="font-quote-editorial text-[17px] leading-relaxed text-on-surface">
+            “Client prefers communications strictly via WhatsApp during evening hours (19:00 - 21:00 WITA). Physical letterpress paper proof sample #3 (600gsm Wild Cotton in Champagne Ochre with hand-torn deckled edging) was delivered via JNE Express to the family Dharmawangsa estate. Awaiting final envelope monogram stamp clearance from Ibu Ayu.”
+          </p>
+<div class="pt-space-sm flex items-center gap-space-md text-[12px] text-on-surface-variant font-mono">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">local_shipping</span> JNE #8829-1092-441
+            </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">inventory_2</span> Sample Box #3 Sent
+            </span>
+</div>
+</div>
+<!-- Add Confidential Note Input -->
+<div class="space-y-space-xs pt-space-xs">
+<label class="font-kicker text-kicker uppercase tracking-wider text-on-surface-variant block" for="concierge-note-field">Append Confidential Atelier Log</label>
+<div class="relative">
+<textarea class="w-full bg-surface-container-low p-space-sm font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container transition-colors resize-none" id="concierge-note-field" placeholder="Type notes regarding client requests, guest RSVP exceptions, calligraphy revisions, or custom domain preferences..." rows="3"></textarea>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<button aria-label="Attach File" class="p-1.5 hover:text-on-surface hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">attach_file</span>
+</button>
+<button aria-label="Mention Team Member" class="p-1.5 hover:text-on-surface hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">alternate_email</span>
+</button>
+<span class="text-[11px]">Visible to Atelier Staff Only</span>
+</div>
+<button class="bg-primary text-on-primary hover:bg-secondary px-space-md py-1.5 font-label-caps text-label-caps uppercase transition-colors" type="button">
+              Post Note
+            </button>
+</div>
+</div>
+</div>
+<!-- RIGHT 6 COLS: Activity & Audit Trail -->
+<div class="lg:col-span-6 bg-surface-container-lowest p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-kicker text-kicker uppercase tracking-widest text-secondary">05 — System Audit Stream</span>
+<h3 class="font-headline-sm text-headline-sm text-primary font-serif">Customer Activity Timeline</h3>
+</div>
+<span class="px-2 py-0.5 bg-surface-container font-kicker text-kicker uppercase text-on-surface-variant">Live Sync Active</span>
+</div>
+<!-- Timeline Items -->
+<div class="relative pl-6 space-y-space-md before:absolute before:left-2 before:top-2 before:bottom-2 before:w-[1px] before:bg-surface-container-high">
+<!-- Item 1 -->
+<div class="relative">
+<span class="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<div class="space-y-0.5">
+<div class="flex items-baseline justify-between">
+<p class="font-body-sm text-body-sm font-semibold text-on-surface">Client previewed live RSVP dashboard via mobile device</p>
+<span class="font-kicker text-[10px] uppercase text-on-surface-variant">Today • 11:05 AM</span>
+</div>
+<p class="font-body-sm text-[13px] text-on-surface-variant">Session IP: 180.252.164.12 (Jakarta, Telkomsel Mobile • iOS Safari 17.4)</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="relative">
+<span class="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-outline"></span>
+<div class="space-y-0.5">
+<div class="flex items-baseline justify-between">
+<p class="font-body-sm text-body-sm font-semibold text-on-surface">Payment verified for $1,650.00 via Stripe Webhook</p>
+<span class="font-kicker text-[10px] uppercase text-on-surface-variant">Oct 18 • 14:20</span>
+</div>
+<p class="font-body-sm text-[13px] text-on-surface-variant">Payment Intent: pi_3M19028XJ91 • Bespoke Duo Suite + 100 Letterpress Keepsakes</p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="relative">
+<span class="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-secondary-container"></span>
+<div class="space-y-0.5">
+<div class="flex items-baseline justify-between">
+<p class="font-body-sm text-body-sm font-semibold text-on-surface">System added +2 invitation credits to account quota</p>
+<span class="font-kicker text-[10px] uppercase text-on-surface-variant">Oct 18 • 14:21</span>
+</div>
+<p class="font-body-sm text-[13px] text-on-surface-variant">Ledger record created automatically with balance increased from 1 to 3</p>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="relative">
+<span class="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-outline"></span>
+<div class="space-y-0.5">
+<div class="flex items-baseline justify-between">
+<p class="font-body-sm text-body-sm font-semibold text-on-surface">Guest capacity adjusted from 300 to 360</p>
+<span class="font-kicker text-[10px] uppercase text-on-surface-variant">Oct 12 • 09:40</span>
+</div>
+<p class="font-body-sm text-[13px] text-on-surface-variant">Executed by Admin Sarah J. upon direct WhatsApp request from client</p>
+</div>
+</div>
+</div>
+<div class="pt-space-xs text-right">
+<a class="text-secondary hover:underline font-label-caps text-label-caps uppercase" href="#">
+            Expand Complete Historical Audit (24 records) →
+          </a>
+</div>
+</div>
+</section>
+<!-- FOOTER ARCHIVAL SIGN-OFF -->
+<footer class="pt-space-md pb-space-lg flex flex-col sm:flex-row items-center justify-between text-on-surface-variant font-kicker text-kicker uppercase tracking-widest text-[11px]">
+<div>Moment Kita Atelier Admin CMS • Client Dossier Engine v2.4</div>
+<div class="flex items-center gap-space-sm mt-2 sm:mt-0">
+<span>Confidential Client Record</span>
+<span>•</span>
+<span>Strict Privacy Enforced</span>
+</div>
+</footer>
+</div>
+</div></main></div></body></html>

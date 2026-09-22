@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-error-container": "#93000a", "on-secondary-fixed": "#380d00", "inverse-primary": "#c8c6c5", "outline": "#747878", "error-container": "#ffdad6", "inverse-surface": "#31312d", "on-primary-container": "#858383", "on-primary": "#ffffff", "primary-container": "#1c1b1b", "primary-fixed": "#e5e2e1", "tertiary-fixed": "#ffdad3", "on-secondary": "#ffffff", "background": "#fcf9f3", "surface-container-low": "#f6f3ed", "tertiary": "#000000", "on-tertiary-fixed-variant": "#753224", "surface-container": "#f0eee8", "error": "#ba1a1a", "on-primary-fixed-variant": "#474746", "tertiary-fixed-dim": "#ffb4a4", "on-tertiary": "#ffffff", "surface-container-lowest": "#ffffff", "secondary-container": "#ffad91", "surface-variant": "#e5e2dc", "secondary": "#8c4d37", "primary-fixed-dim": "#c8c6c5", "surface-tint": "#5f5e5e", "surface-bright": "#fcf9f3", "on-error": "#ffffff", "surface-dim": "#dcdad4", "outline-variant": "#c4c7c7", "surface": "#fcf9f3", "on-primary-fixed": "#1c1b1b", "tertiary-container": "#3c0801", "on-tertiary-fixed": "#3c0801", "on-surface-variant": "#444748", "primary": "#000000", "on-tertiary-container": "#c06d5b", "inverse-on-surface": "#f3f0ea", "on-secondary-fixed-variant": "#703722", "on-background": "#1c1c18", "secondary-fixed": "#ffdbcf", "surface-container-highest": "#e5e2dc", "on-secondary-container": "#7a3e29", "on-surface": "#1c1c18", "secondary-fixed-dim": "#ffb59c", "surface-container-high": "#ebe8e2" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "margin-mobile": "1.25rem", "gutter-mobile": "1rem", "space-xl": "3rem", "space-md": "1rem", "gutter": "2rem", "margin": "3.5rem", "space-xs": "0.25rem", "space-lg": "1.75rem" }, "fontFamily": { "headline-lg-mobile": ["Playfair Display"], "label-caps": ["Plus Jakarta Sans"], "display-hero-mobile": ["Playfair Display"], "quote-editorial": ["Playfair Display"], "headline-lg": ["Playfair Display"], "body-sm": ["Plus Jakarta Sans"], "headline-md": ["Playfair Display"], "body-lg": ["Plus Jakarta Sans"], "display-hero": ["Playfair Display"], "body-md": ["Plus Jakarta Sans"], "headline-xl": ["Playfair Display"], "headline-xl-mobile": ["Playfair Display"], "headline-sm": ["Playfair Display"], "kicker": ["Plus Jakarta Sans"] }, "fontSize": { "headline-lg-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "0em", "fontWeight": "400" }], "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.12em", "fontWeight": "600" }], "display-hero-mobile": ["44px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "400" }], "quote-editorial": ["24px", { "lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "400" }], "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "body-lg": ["18px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "display-hero": ["84px", { "lineHeight": "92px", "letterSpacing": "-0.03em", "fontWeight": "400" }], "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "400" }], "headline-xl-mobile": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "headline-sm": ["22px", { "lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "600" }], "kicker": ["11px", { "lineHeight": "16px", "letterSpacing": "0.2em", "fontWeight": "600" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="px-space-lg pt-space-lg pb-space-md flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 bg-primary flex items-center justify-center text-on-primary font-headline-sm text-headline-sm">M</div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-primary leading-none">Moment Kita</span><span class="font-kicker text-kicker uppercase tracking-widest text-secondary mt-1">L'Atelier Nuance</span></div></div><span class="font-label-caps text-label-caps px-space-xs py-0.5 bg-surface-container-high text-on-surface-variant">v2.4</span></div><div class="px-space-md py-space-xs"><div class="h-px bg-surface-variant w-full"></div></div><nav class="flex-1 px-space-md py-space-sm space-y-space-md overflow-y-auto" data-active-classes="bg-surface-container-high text-primary font-medium"><div class="space-y-space-xs"><div class="px-space-sm font-kicker text-kicker uppercase text-on-surface-variant">Overview</div><a class="flex items-center px-space-sm py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all gap-space-sm font-body-sm text-body-sm" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[18px]">space_dashboard</span><span>Dashboard</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-kicker text-kicker uppercase text-on-surface-variant">Management</div><a class="flex items-center px-space-sm py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all gap-space-sm font-body-sm text-body-sm" data-path="customers" href="#"><span class="material-symbols-outlined text-[18px]">group</span><span>Customers</span></a><a aria-current="page" class="flex items-center justify-between px-space-sm py-2 transition-all gap-space-sm bg-surface-container-high text-primary font-medium" data-path="invitations" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">mark_email_read</span><span>Invitations</span></div><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span></a><a class="flex items-center px-space-sm py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all gap-space-sm font-body-sm text-body-sm" data-path="templates" href="#"><span class="material-symbols-outlined text-[18px]">style</span><span>Templates</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-kicker text-kicker uppercase text-on-surface-variant">Commerce</div><a class="flex items-center px-space-sm py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all gap-space-sm font-body-sm text-body-sm" data-path="transactions" href="#"><span class="material-symbols-outlined text-[18px]">payments</span><span>Transactions</span></a><a class="flex items-center px-space-sm py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all gap-space-sm font-body-sm text-body-sm" data-path="packages-quota" href="#"><span class="material-symbols-outlined text-[18px]">inventory_2</span><span>Packages &amp; Quota</span></a><a class="flex items-center px-space-sm py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all gap-space-sm font-body-sm text-body-sm" data-path="printed-orders" href="#"><span class="material-symbols-outlined text-[18px]">print</span><span>Printed Orders</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-kicker text-kicker uppercase text-on-surface-variant">Operations</div><a class="flex items-center px-space-sm py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all gap-space-sm font-body-sm text-body-sm" data-path="notifications" href="#"><span class="material-symbols-outlined text-[18px]">notifications_none</span><span>Notifications</span></a><a class="flex items-center px-space-sm py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all gap-space-sm font-body-sm text-body-sm" data-path="audit-logs" href="#"><span class="material-symbols-outlined text-[18px]">history_edu</span><span>Audit Logs</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-kicker text-kicker uppercase text-on-surface-variant">System</div><a class="flex items-center px-space-sm py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all gap-space-sm font-body-sm text-body-sm" data-path="settings" href="#"><span class="material-symbols-outlined text-[18px]">settings</span><span>Settings</span></a></div></nav></div><div class="p-space-md"><div class="p-space-sm bg-surface-container flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[16px]">person</span></div><div class="flex flex-col"><span class="font-label-caps text-label-caps text-on-surface">Atelier Admin</span><span class="font-kicker text-kicker text-secondary uppercase">Superuser</span></div></div><button aria-label="Switch profile" class="text-on-surface-variant hover:text-on-surface"><span class="material-symbols-outlined text-[18px]">unfold_more</span></button></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/90 backdrop-blur-xl z-40 px-space-lg flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-1"><div class="flex items-center gap-space-xs font-label-caps text-label-caps text-on-surface-variant tracking-wider uppercase"><span>Management</span><span class="text-surface-variant">/</span><span>Invitations</span><span class="text-surface-variant">/</span><span class="text-on-surface font-semibold">Raka &amp; Ayu</span><span class="text-on-surface-variant text-[10px]">(#MK-INV-77402)</span><span class="text-surface-variant">/</span><span class="text-secondary">Guest &amp; RSVP Dispatch</span></div><div class="flex items-center gap-space-sm"><div class="flex items-center gap-1.5 px-2 py-0.5 bg-surface-container-low text-on-surface"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span><span class="font-kicker text-kicker text-on-surface-variant tracking-wider uppercase">Live Webhook Sync: 24ms • Redis Cache OK</span></div></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center w-64"><span class="material-symbols-outlined absolute left-2.5 text-[18px] text-on-surface-variant pointer-events-none">search</span><input class="w-full pl-8 pr-3 py-1.5 bg-surface-container-low text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest transition-colors" placeholder="Search guests, token, table..." type="text"/></div><div class="h-6 w-px bg-surface-variant"></div><button aria-label="Notifications" class="relative p-1.5 text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-secondary"></span></button><button class="px-space-md py-2 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-caps text-label-caps uppercase transition-colors">Export Guests</button><button class="px-space-md py-2 bg-primary hover:bg-secondary text-on-primary font-label-caps text-label-caps uppercase transition-colors">+ Add Guest</button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-20 w-full bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Dossier Header & Context Strip -->
+<section class="w-full px-space-lg pt-space-lg pb-space-md bg-surface-container-lowest">
+<div class="flex flex-col xl:flex-row xl:items-end justify-between gap-space-md">
+<!-- Title & Event Metadata -->
+<div class="flex flex-col max-w-4xl">
+<div class="flex items-center gap-space-xs mb-1">
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest">Client File MK-2026-RA</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Grand Ballroom Mulia Suite</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Raka &amp; Ayu — Guests &amp; RSVP Operations</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+          Bespoke Duo (Digital + 100 Letterpress Sets) • Wedding Date: 12 October 2026 • Grand Ballroom Hotel Mulia Senayan, Jakarta • Custom Slug: 
+          <a class="text-secondary hover:underline underline-offset-4 font-medium" href="#">momentkita.id/raka-ayu</a>
+</p>
+<!-- Meta Dossier Tags -->
+<div class="flex flex-wrap items-center gap-space-xs mt-space-sm">
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface font-label-caps text-[11px] tracking-wider uppercase">Tier: Bespoke Duo Hybrid</span>
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-label-caps text-[11px] tracking-wider uppercase">Suite: Château de Chantilly (v2.4)</span>
+<span class="flex items-center gap-1.5 px-2 py-0.5 bg-surface-container-low text-secondary font-label-caps text-[11px] tracking-wider uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Public RSVP: Open
+          </span>
+<span class="px-2 py-0.5 bg-surface-container-low text-on-surface-variant font-label-caps text-[11px] tracking-wider uppercase">Sync: Live Webhook (24ms)</span>
+</div>
+</div>
+<!-- Quick Contextual Action Cluster -->
+<div class="flex flex-wrap items-center gap-2 self-start xl:self-end">
+<a class="inline-flex items-center gap-1.5 px-3 py-2 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-caps text-label-caps uppercase transition-colors" href="#">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Open Public Link</span>
+</a>
+<button class="inline-flex items-center gap-1.5 px-3 py-2 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-caps text-label-caps uppercase transition-colors" id="btn-import-open">
+<span class="material-symbols-outlined text-[16px]">upload_file</span>
+<span>Import CSV</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3 py-2 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-caps text-label-caps uppercase transition-colors" onclick="downloadDossier()">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>Export Dossier</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3 py-2 bg-surface-container hover:bg-secondary hover:text-on-secondary text-secondary font-label-caps text-label-caps uppercase transition-colors" onclick="triggerBulkReminder()">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+<span>Bulk Reminder</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-4 py-2 bg-primary hover:bg-secondary text-on-primary font-label-caps text-label-caps uppercase transition-colors shadow-sm" onclick="toggleModal('modal-add-guest')">
+<span class="material-symbols-outlined text-[16px]">person_add</span>
+<span>+ Add Guest</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Metric Architecture (6 Bespoke Operational Gauges) -->
+<section class="px-space-lg pt-space-md pb-space-sm bg-surface">
+<div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-3">
+<!-- 01: Total Invited -->
+<div class="p-space-sm bg-surface-container-lowest shadow-sm flex flex-col justify-between min-h-[110px]">
+<div class="flex items-center justify-between">
+<span class="font-kicker text-kicker uppercase text-on-surface-variant">01 • Total Invited</span>
+<span class="material-symbols-outlined text-outline text-[18px]">group</span>
+</div>
+<div class="mt-2">
+<div class="font-headline-md text-headline-md text-primary leading-none">428</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant mt-1">Across 210 guest tokens</p>
+</div>
+</div>
+<!-- 02: RSVP Rate -->
+<div class="p-space-sm bg-surface-container-lowest shadow-sm flex flex-col justify-between min-h-[110px]">
+<div class="flex items-center justify-between">
+<span class="font-kicker text-kicker uppercase text-on-surface-variant">02 • Response Velocity</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">query_stats</span>
+</div>
+<div class="mt-2">
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-md text-headline-md text-primary leading-none">342</span>
+<span class="font-label-caps text-label-caps text-secondary font-bold">79.9%</span>
+</div>
+<div class="w-full bg-surface-container h-1 mt-2 overflow-hidden">
+<div class="bg-secondary h-full" style="width: 79.9%;"></div>
+</div>
+</div>
+</div>
+<!-- 03: Attending -->
+<div class="p-space-sm bg-surface-container-lowest shadow-sm flex flex-col justify-between min-h-[110px]">
+<div class="flex items-center justify-between">
+<span class="font-kicker text-kicker uppercase text-on-surface-variant">03 • Attending</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+</div>
+<div class="mt-2">
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-md text-headline-md text-primary leading-none">284</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">66.4%</span>
+</div>
+<p class="font-body-sm text-[12px] text-secondary mt-1">162 primary links</p>
+</div>
+</div>
+<!-- 04: Regrets -->
+<div class="p-space-sm bg-surface-container-lowest shadow-sm flex flex-col justify-between min-h-[110px]">
+<div class="flex items-center justify-between">
+<span class="font-kicker text-kicker uppercase text-on-surface-variant">04 • Regrets</span>
+<span class="material-symbols-outlined text-outline text-[18px]">cancel</span>
+</div>
+<div class="mt-2">
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-md text-headline-md text-primary leading-none">58</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">13.5%</span>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant mt-1">29 couples/single</p>
+</div>
+</div>
+<!-- 05: Awaiting Reply -->
+<div class="p-space-sm bg-surface-container-lowest shadow-sm flex flex-col justify-between min-h-[110px]">
+<div class="flex items-center justify-between">
+<span class="font-kicker text-kicker uppercase text-on-surface-variant">05 • Pending Reply</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">hourglass_top</span>
+</div>
+<div class="mt-2">
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-md text-headline-md text-primary leading-none">86</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">20.1%</span>
+</div>
+<p class="font-body-sm text-[12px] text-secondary mt-1">48 unopened / 38 seen</p>
+</div>
+</div>
+<!-- 06: Confirmed Pax / Venue Quota -->
+<div class="p-space-sm bg-surface-container-high shadow-sm flex flex-col justify-between min-h-[110px]">
+<div class="flex items-center justify-between">
+<span class="font-kicker text-kicker uppercase text-primary">06 • Confirmed Pax</span>
+<span class="px-1.5 py-0.5 bg-primary text-on-primary font-kicker text-[10px] uppercase">Cap 400</span>
+</div>
+<div class="mt-2">
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-md text-headline-md text-primary leading-none">362</span>
+<span class="font-label-caps text-label-caps text-secondary font-bold">90.5%</span>
+</div>
+<div class="w-full bg-surface-variant h-1 mt-2 overflow-hidden">
+<div class="bg-primary h-full" style="width: 90.5%;"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Editorial Split Workspace: Filter Bar + Operational Grid + Companion Intelligence -->
+<section class="px-space-lg py-space-md w-full">
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-md">
+<!-- Main Content (Columns 1 to 9): Controls & Table -->
+<div class="xl:col-span-9 flex flex-col space-y-space-sm">
+<!-- Filter Bar & Segment Chips Container -->
+<div class="p-space-sm bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm">
+<!-- Segment Tabs -->
+<div class="flex items-center justify-between flex-wrap gap-2 pb-space-xs">
+<div class="flex items-center gap-1.5 overflow-x-auto pb-1 max-w-full">
+<button class="filter-tab px-3 py-1.5 bg-primary text-on-primary font-label-caps text-[11px] uppercase transition-all" onclick="setFilter('all', this)">All (428)</button>
+<button class="filter-tab px-3 py-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-caps text-[11px] uppercase transition-all" onclick="setFilter('attending', this)">Attending (284)</button>
+<button class="filter-tab px-3 py-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-caps text-[11px] uppercase transition-all" onclick="setFilter('pending', this)">Pending (86)</button>
+<button class="filter-tab px-3 py-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-caps text-[11px] uppercase transition-all" onclick="setFilter('regrets', this)">Regrets (58)</button>
+<button class="filter-tab px-3 py-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-caps text-[11px] uppercase transition-all" onclick="setFilter('vip', this)">VIP Only (42)</button>
+<button class="filter-tab px-3 py-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-caps text-[11px] uppercase transition-all" onclick="setFilter('dietary', this)">Dietary Flagged (18)</button>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-kicker text-kicker uppercase text-on-surface-variant">Displaying 1–7 of 210 Links</span>
+</div>
+</div>
+<!-- Deep Filters Row -->
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2">
+<!-- Search Input -->
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-2.5 text-[18px] text-outline pointer-events-none">search</span>
+<input class="w-full pl-8 pr-3 py-2 bg-surface-container-low text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:bg-surface transition-colors" id="guest-search" oninput="filterTable()" placeholder="Search guest name, phone, table..." type="text"/>
+</div>
+<!-- Group Filter -->
+<div class="relative">
+<select class="w-full px-3 py-2 bg-surface-container-low text-on-surface font-body-sm text-body-sm appearance-none focus:outline-none cursor-pointer" id="filter-group" onchange="filterTable()">
+<option value="">All Groups (VIP, Keluarga, ITB...)</option>
+<option value="VIP Keluarga">VIP Keluarga Inti</option>
+<option value="Sahabat Pengantin">Sahabat / Bridal Party</option>
+<option value="Corporate VVIP">Corporate &amp; Colleagues</option>
+<option value="Parents' Circle">Parents' VVIP Circle</option>
+<option value="Overseas">Overseas Guests</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-[18px] text-outline pointer-events-none">arrow_drop_down</span>
+</div>
+<!-- Session Filter -->
+<div class="relative">
+<select class="w-full px-3 py-2 bg-surface-container-low text-on-surface font-body-sm text-body-sm appearance-none focus:outline-none cursor-pointer" id="filter-session" onchange="filterTable()">
+<option value="">All Sessions (Holy Matrimony &amp; Gala)</option>
+<option value="Holy Matrimony &amp; Gala">Holy Matrimony &amp; Gala Dinner</option>
+<option value="Gala Only">Gala Dinner Only</option>
+<option value="Virtual">Virtual Live Stream Only</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-[18px] text-outline pointer-events-none">expand_more</span>
+</div>
+<!-- Table Allocation Filter -->
+<div class="relative">
+<select class="w-full px-3 py-2 bg-surface-container-low text-on-surface font-body-sm text-body-sm appearance-none focus:outline-none cursor-pointer" id="filter-table" onchange="filterTable()">
+<option value="">All Tables (01–24 &amp; Unassigned)</option>
+<option value="Table 01">Table 01 (Royal Family)</option>
+<option value="Table 02">Table 02 (Bridal Cohort)</option>
+<option value="Table 08">Table 08 (Board of Directors)</option>
+<option value="Table 14">Table 14 (Diplomatic &amp; Int'l)</option>
+<option value="Unassigned">Unassigned Seating</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-[18px] text-outline pointer-events-none">room_service</span>
+</div>
+</div>
+<!-- Bulk Selected Actions Bar (Toggled on Selection) -->
+<div class="hidden p-space-xs px-space-sm bg-primary text-on-primary flex items-center justify-between transition-all" id="bulk-bar">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-caps text-label-caps text-on-primary uppercase" id="selected-count">3 Selected</span>
+<span class="text-on-primary-container">|</span>
+<button class="px-2 py-1 bg-surface-container-low/20 hover:bg-surface-container-low/30 text-on-primary font-label-caps text-[11px] uppercase" onclick="bulkMarkStatus('Attending')">Mark Attending</button>
+<button class="px-2 py-1 bg-surface-container-low/20 hover:bg-surface-container-low/30 text-on-primary font-label-caps text-[11px] uppercase flex items-center gap-1" onclick="bulkResendWhatsApp()">
+<span class="material-symbols-outlined text-[14px]">send</span> Resend WhatsApp
+              </button>
+<button class="px-2 py-1 bg-surface-container-low/20 hover:bg-surface-container-low/30 text-on-primary font-label-caps text-[11px] uppercase" onclick="bulkAssignTableModal()">Assign Table</button>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-2 py-1 hover:bg-error hover:text-on-error font-label-caps text-[11px] uppercase transition-colors" onclick="bulkDelete()">Delete Selected</button>
+<button class="text-on-primary-container hover:text-on-primary text-[14px]" onclick="clearSelection()"><span class="material-symbols-outlined">close</span></button>
+</div>
+</div>
+</div>
+<!-- High-Density Luxury Guest Dossier Table -->
+<div class="bg-surface-container-lowest shadow-sm overflow-x-auto">
+<table class="w-full text-left border-collapse min-w-[1040px]" id="guests-table">
+<thead>
+<tr class="bg-surface-container text-on-surface font-label-caps text-[11px] tracking-wider uppercase">
+<th class="py-3 px-3 w-10 text-center">
+<input class="w-3.5 h-3.5 accent-primary cursor-pointer" id="check-all" onchange="toggleSelectAll(this)" type="checkbox"/>
+</th>
+<th class="py-3 px-3">Guest &amp; Contact Dossier</th>
+<th class="py-3 px-3">Category</th>
+<th class="py-3 px-2 text-center">Alloc.</th>
+<th class="py-3 px-3">RSVP Status</th>
+<th class="py-3 px-3">Confirmed / Diet</th>
+<th class="py-3 px-3">Custom Link &amp; Check-In</th>
+<th class="py-3 px-3">Updated</th>
+<th class="py-3 px-3 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface font-body-sm text-body-sm">
+<!-- Guest Row 1 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors guest-row" data-group="VIP Keluarga" data-status="attending" data-vip="true">
+<td class="py-3 px-3 text-center">
+<input class="row-checkbox w-3.5 h-3.5 accent-primary cursor-pointer" onchange="onRowCheck()" type="checkbox"/>
+</td>
+<td class="py-3 px-3">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 bg-surface-container flex items-center justify-center font-headline-sm text-[14px] text-primary">A</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-medium text-primary">Dr. Raden Mas Arya &amp; Partner</span>
+<span class="px-1.5 py-0.2 bg-secondary text-on-secondary font-kicker text-[9px] uppercase tracking-wider">VIP</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant text-[12px] mt-0.5">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[13px] text-secondary">chat</span>+62 812-9988-1120</span>
+<span>•</span>
+<span>arya.rm@firm.co.id</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface font-label-caps text-[10px] uppercase">VIP Keluarga</span>
+</td>
+<td class="py-3 px-2 text-center font-medium">2 Pax</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 bg-surface-container text-on-surface font-label-caps text-[10px] uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Attending
+                  </span>
+</td>
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-medium text-primary">2 Pax (Table 01)</span>
+<span class="text-[11px] text-secondary tracking-tight">1x Halal, 1x Pescatarian</span>
+</div>
+</td>
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<div class="flex items-center gap-1 font-mono text-[11px] text-on-surface-variant">
+<span>.../raka-ayu?to=dr-arya</span>
+<button class="hover:text-primary" onclick="copySnippet('https://momentkita.id/raka-ayu?to=dr-arya')"><span class="material-symbols-outlined text-[14px]">content_copy</span></button>
+</div>
+<span class="text-[11px] text-secondary flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[12px]">qr_code_2</span> Checked In (18:42 WIB)
+                    </span>
+</div>
+</td>
+<td class="py-3 px-3 text-[11px] text-on-surface-variant">
+<div>Today 14:22</div>
+<div class="text-[10px] text-outline">Webhook (WA)</div>
+</td>
+<td class="py-3 px-3 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 hover:bg-surface-container text-on-surface-variant hover:text-primary" onclick="openEditDrawer('Dr. Raden Mas Arya', '2', '+62 812-9988-1120', 'VIP Keluarga')" title="Edit Dossier">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+</button>
+<button class="p-1 hover:bg-surface-container text-on-surface-variant hover:text-secondary" onclick="openOverrideModal('Dr. Raden Mas Arya')" title="Override RSVP">
+<span class="material-symbols-outlined text-[16px]">how_to_reg</span>
+</button>
+<button class="p-1 hover:bg-surface-container text-on-surface-variant hover:text-primary" onclick="openMenu(event)">
+<span class="material-symbols-outlined text-[16px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Guest Row 2 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors guest-row bg-surface-container-low/20" data-group="Sahabat Pengantin" data-status="attending" data-vip="false">
+<td class="py-3 px-3 text-center">
+<input class="row-checkbox w-3.5 h-3.5 accent-primary cursor-pointer" onchange="onRowCheck()" type="checkbox"/>
+</td>
+<td class="py-3 px-3">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 bg-surface-container flex items-center justify-center font-headline-sm text-[14px] text-primary">C</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-medium text-primary">Clarissa Novianty &amp; Family</span>
+<span class="px-1.5 py-0.2 bg-surface-container-high text-on-surface font-kicker text-[9px] uppercase tracking-wider">Bridal Cohort</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant text-[12px] mt-0.5">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[13px] text-secondary">chat</span>+62 811-304-998</span>
+<span>•</span>
+<span>novianty.c@studio.id</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-label-caps text-[10px] uppercase">Sahabat Pengantin</span>
+</td>
+<td class="py-3 px-2 text-center font-medium">4 Pax</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 bg-surface-container text-on-surface font-label-caps text-[10px] uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Attending
+                  </span>
+</td>
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-medium text-primary">4 Pax (Table 02)</span>
+<span class="text-[11px] text-outline">Standard Menu (All Halal)</span>
+</div>
+</td>
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<div class="flex items-center gap-1 font-mono text-[11px] text-on-surface-variant">
+<span>.../raka-ayu?to=clarissa-fam</span>
+<button class="hover:text-primary" onclick="copySnippet('https://momentkita.id/raka-ayu?to=clarissa-fam')"><span class="material-symbols-outlined text-[14px]">content_copy</span></button>
+</div>
+<span class="text-[11px] text-outline flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[12px]">schedule</span> Not Checked In
+                    </span>
+</div>
+</td>
+<td class="py-3 px-3 text-[11px] text-on-surface-variant">
+<div>Yesterday 19:10</div>
+<div class="text-[10px] text-outline">Digital Suite Web</div>
+</td>
+<td class="py-3 px-3 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 hover:bg-surface-container text-on-surface-variant hover:text-primary" onclick="openEditDrawer('Clarissa Novianty', '4', '+62 811-304-998', 'Sahabat Pengantin')"><span class="material-symbols-outlined text-[16px]">edit</span></button>
+<button class="p-1 hover:bg-surface-container text-on-surface-variant hover:text-secondary" onclick="openOverrideModal('Clarissa Novianty')"><span class="material-symbols-outlined text-[16px]">how_to_reg</span></button>
+<button class="p-1 hover:bg-surface-container text-on-surface-variant hover:text-primary" onclick="openMenu(event)"><span class="material-symbols-outlined text-[16px]">more_vert</span></button>
+</div>
+</td>
+</tr>
+<!-- Guest Row 3 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors guest-row" data-dietary="true" data-group="Corporate VVIP" data-status="attending" data-vip="true">
+<td class="py-3 px-3 text-center">
+<input class="row-checkbox w-3.5 h-3.5 accent-primary cursor-pointer" onchange="onRowCheck()" type="checkbox"/>
+</td>
+<td class="py-3 px-3">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 bg-surface-container flex items-center justify-center font-headline-sm text-[14px] text-primary">H</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-medium text-primary">Bpk. Hendra Gunawan, S.E.</span>
+<span class="px-1.5 py-0.2 bg-secondary text-on-secondary font-kicker text-[9px] uppercase tracking-wider">VVIP</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant text-[12px] mt-0.5">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[13px] text-secondary">chat</span>+62 818-0909-333</span>
+<span>•</span>
+<span>h.gunawan@bankmega.co.id</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface font-label-caps text-[10px] uppercase">Corporate VVIP</span>
+</td>
+<td class="py-3 px-2 text-center font-medium">2 Pax</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 bg-surface-container text-on-surface font-label-caps text-[10px] uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Attending
+                  </span>
+</td>
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-medium text-primary">2 Pax (Table 08)</span>
+<span class="text-[11px] text-secondary font-medium">Flag: Shellfish Allergy (Severe)</span>
+</div>
+</td>
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<div class="flex items-center gap-1 font-mono text-[11px] text-on-surface-variant">
+<span>.../raka-ayu?to=hendra-g</span>
+<button class="hover:text-primary" onclick="copySnippet('https://momentkita.id/raka-ayu?to=hendra-g')"><span class="material-symbols-outlined text-[14px]">content_copy</span></button>
+</div>
+<span class="text-[11px] text-outline flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[12px]">schedule</span> Not Checked In
+                    </span>
+</div>
+</td>
+<td class="py-3 px-3 text-[11px] text-on-surface-variant">
+<div>11 Oct, 11:04</div>
+<div class="text-[10px] text-outline">Letterpress RSVP Card</div>
+</td>
+<td class="py-3 px-3 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 hover:bg-surface-container text-on-surface-variant hover:text-primary" onclick="openEditDrawer('Bpk. Hendra Gunawan', '2', '+62 818-0909-333', 'Corporate VVIP')"><span class="material-symbols-outlined text-[16px]">edit</span></button>
+<button class="p-1 hover:bg-surface-container text-on-surface-variant hover:text-secondary" onclick="openOverrideModal('Bpk. Hendra Gunawan')"><span class="material-symbols-outlined text-[16px]">how_to_reg</span></button>
+<button class="p-1 hover:bg-surface-container text-on-surface-variant hover:text-primary" onclick="openMenu(event)"><span class="material-symbols-outlined text-[16px]">more_vert</span></button>
+</div>
+</td>
+</tr>
+<!-- Guest Row 4: Pending (Opened) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors guest-row bg-surface-container-low/20" data-group="Sahabat Pengantin" data-status="pending" data-vip="false">
+<td class="py-3 px-3 text-center">
+<input class="row-checkbox w-3.5 h-3.5 accent-primary cursor-pointer" onchange="onRowCheck()" type="checkbox"/>
+</td>
+<td class="py-3 px-3">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 bg-surface-container flex items-center justify-center font-headline-sm text-[14px] text-primary">N</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-medium text-primary">Natasha Romanoff</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant text-[12px] mt-0.5">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[13px] text-secondary">chat</span>+62 856-1122-899</span>
+<span>•</span>
+<span>natasha.r@arch.org</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-label-caps text-[10px] uppercase">Sahabat Pengantin</span>
+</td>
+<td class="py-3 px-2 text-center font-medium">1 Pax</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 bg-secondary/15 text-secondary font-label-caps text-[10px] uppercase">
+<span class="material-symbols-outlined text-[13px]">visibility</span> Pending (Viewed)
+                  </span>
+</td>
+<td class="py-3 px-3 text-on-surface-variant text-[12px] italic">
+                  — Awaiting Choice
+                </td>
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<div class="flex items-center gap-1 font-mono text-[11px] text-on-surface-variant">
+<span>.../raka-ayu?to=natasha</span>
+<button class="hover:text-primary" onclick="copySnippet('https://momentkita.id/raka-ayu?to=natasha')"><span class="material-symbols-outlined text-[14px]">content_copy</span></button>
+</div>
+<span class="text-[11px] text-outline flex items-center gap-1 mt-0.5">Opened 3 times • No RSVP</span>
+</div>
+</td>
+<td class="py-3 px-3 text-[11px] text-on-surface-variant">
+<div>Today 09:30</div>
+<div class="text-[10px] text-outline">View Log</div>
+</td>
+<td class="py-3 px-3 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 hover:bg-surface-container text-secondary" onclick="sendQuickReminder('Natasha Romanoff', '+62 856-1122-899')" title="Ping via WhatsApp"><span class="material-symbols-outlined text-[16px]">forward_to_inbox</span></button>
+<button class="p-1 hover:bg-surface-container text-on-surface-variant hover:text-secondary" onclick="openOverrideModal('Natasha Romanoff')"><span class="material-symbols-outlined text-[16px]">how_to_reg</span></button>
+<button class="p-1 hover:bg-surface-container text-on-surface-variant hover:text-primary" onclick="openMenu(event)"><span class="material-symbols-outlined text-[16px]">more_vert</span></button>
+</div>
+</td>
+</tr>
+<!-- Guest Row 5: Pending (Unopened) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors guest-row" data-group="Parents' Circle" data-status="pending" data-vip="false">
+<td class="py-3 px-3 text-center">
+<input class="row-checkbox w-3.5 h-3.5 accent-primary cursor-pointer" onchange="onRowCheck()" type="checkbox"/>
+</td>
+<td class="py-3 px-3">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 bg-surface-container flex items-center justify-center font-headline-sm text-[14px] text-primary">D</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-medium text-primary">Dimas Setiawan &amp; Partner</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant text-[12px] mt-0.5">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[13px] text-secondary">chat</span>+62 877-2234-880</span>
+<span>•</span>
+<span>dimas.setiawan@mitra.com</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-label-caps text-[10px] uppercase">Parents' Circle</span>
+</td>
+<td class="py-3 px-2 text-center font-medium">2 Pax</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 bg-surface-container-low text-on-surface-variant font-label-caps text-[10px] uppercase">
+<span class="material-symbols-outlined text-[13px]">schedule</span> Pending (Unsent)
+                  </span>
+</td>
+<td class="py-3 px-3 text-on-surface-variant text-[12px] italic">
+                  — Unconfirmed
+                </td>
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<div class="flex items-center gap-1 font-mono text-[11px] text-on-surface-variant">
+<span>.../raka-ayu?to=dimas-s</span>
+<button class="hover:text-primary" onclick="copySnippet('https://momentkita.id/raka-ayu?to=dimas-s')"><span class="material-symbols-outlined text-[14px]">content_copy</span></button>
+</div>
+<span class="text-[11px] text-outline flex items-center gap-1 mt-0.5">Invite Link Generated</span>
+</div>
+</td>
+<td class="py-3 px-3 text-[11px] text-on-surface-variant">
+<div>10 Oct, 08:00</div>
+<div class="text-[10px] text-outline">Import Batch #4</div>
+</td>
+<td class="py-3 px-3 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 hover:bg-surface-container text-secondary" onclick="sendQuickReminder('Dimas Setiawan', '+62 877-2234-880')" title="Dispatch WhatsApp Invite"><span class="material-symbols-outlined text-[16px]">send</span></button>
+<button class="p-1 hover:bg-surface-container text-on-surface-variant hover:text-secondary" onclick="openOverrideModal('Dimas Setiawan')"><span class="material-symbols-outlined text-[16px]">how_to_reg</span></button>
+<button class="p-1 hover:bg-surface-container text-on-surface-variant hover:text-primary" onclick="openMenu(event)"><span class="material-symbols-outlined text-[16px]">more_vert</span></button>
+</div>
+</td>
+</tr>
+<!-- Guest Row 6: Regrets (Not Attending) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors guest-row bg-surface-container-low/20" data-group="Overseas" data-status="regrets" data-vip="false">
+<td class="py-3 px-3 text-center">
+<input class="row-checkbox w-3.5 h-3.5 accent-primary cursor-pointer" onchange="onRowCheck()" type="checkbox"/>
+</td>
+<td class="py-3 px-3">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 bg-surface-container flex items-center justify-center font-headline-sm text-[14px] text-primary">S</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-medium text-on-surface-variant line-through">Sarah Jenkins &amp; Liam</span>
+<span class="px-1.5 py-0.2 bg-surface-container-high text-on-surface-variant font-kicker text-[9px] uppercase tracking-wider">London, UK</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant text-[12px] mt-0.5">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[13px] text-secondary">chat</span>+44 7911 123456</span>
+<span>•</span>
+<span>sarah.j@monograph.co.uk</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-label-caps text-[10px] uppercase">Overseas</span>
+</td>
+<td class="py-3 px-2 text-center text-outline">2 Pax</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 bg-surface-container-high text-on-surface-variant font-label-caps text-[10px] uppercase">
+<span class="material-symbols-outlined text-[13px]">close</span> Regrets (Unable)
+                  </span>
+</td>
+<td class="py-3 px-3 text-on-surface-variant text-[12px]">
+<span>0 Pax Confirmed</span>
+<div class="text-[10px] text-outline">Wishes: "Sending love from UK!"</div>
+</td>
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<div class="flex items-center gap-1 font-mono text-[11px] text-on-surface-variant">
+<span>.../raka-ayu?to=sarah-liam</span>
+<button class="hover:text-primary" onclick="copySnippet('https://momentkita.id/raka-ayu?to=sarah-liam')"><span class="material-symbols-outlined text-[14px]">content_copy</span></button>
+</div>
+<span class="text-[11px] text-secondary flex items-center gap-1 mt-0.5">Sent Virtual Gift Card</span>
+</div>
+</td>
+<td class="py-3 px-3 text-[11px] text-on-surface-variant">
+<div>09 Oct, 22:15</div>
+<div class="text-[10px] text-outline">Digital Suite Form</div>
+</td>
+<td class="py-3 px-3 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 hover:bg-surface-container text-on-surface-variant hover:text-primary" onclick="openEditDrawer('Sarah Jenkins', '2', '+44 7911 123456', 'Overseas')"><span class="material-symbols-outlined text-[16px]">edit</span></button>
+<button class="p-1 hover:bg-surface-container text-on-surface-variant hover:text-secondary" onclick="openOverrideModal('Sarah Jenkins')"><span class="material-symbols-outlined text-[16px]">how_to_reg</span></button>
+<button class="p-1 hover:bg-surface-container text-on-surface-variant hover:text-primary" onclick="openMenu(event)"><span class="material-symbols-outlined text-[16px]">more_vert</span></button>
+</div>
+</td>
+</tr>
+<!-- Guest Row 7: Dietary Flagged -->
+<tr class="hover:bg-surface-container-low/60 transition-colors guest-row" data-dietary="true" data-group="Corporate VVIP" data-status="attending" data-vip="false">
+<td class="py-3 px-3 text-center">
+<input class="row-checkbox w-3.5 h-3.5 accent-primary cursor-pointer" onchange="onRowCheck()" type="checkbox"/>
+</td>
+<td class="py-3 px-3">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 bg-surface-container flex items-center justify-center font-headline-sm text-[14px] text-primary">T</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-medium text-primary">Tan Sri David Lim</span>
+<span class="px-1.5 py-0.2 bg-surface-container-high text-on-surface font-kicker text-[9px] uppercase tracking-wider">Honorary</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant text-[12px] mt-0.5">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[13px] text-secondary">chat</span>+60 12-445-9801</span>
+<span>•</span>
+<span>david.lim@berhad.my</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface font-label-caps text-[10px] uppercase">Corporate VVIP</span>
+</td>
+<td class="py-3 px-2 text-center font-medium">1 Pax</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 bg-surface-container text-on-surface font-label-caps text-[10px] uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Attending
+                  </span>
+</td>
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-medium text-primary">1 Pax (Table 14)</span>
+<span class="text-[11px] text-secondary font-medium">Flag: Strict Vegan / Gluten-Free</span>
+</div>
+</td>
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<div class="flex items-center gap-1 font-mono text-[11px] text-on-surface-variant">
+<span>.../raka-ayu?to=tan-sri-david</span>
+<button class="hover:text-primary" onclick="copySnippet('https://momentkita.id/raka-ayu?to=tan-sri-david')"><span class="material-symbols-outlined text-[14px]">content_copy</span></button>
+</div>
+<span class="text-[11px] text-outline flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[12px]">schedule</span> Not Checked In
+                    </span>
+</div>
+</td>
+<td class="py-3 px-3 text-[11px] text-on-surface-variant">
+<div>Yesterday 16:50</div>
+<div class="text-[10px] text-outline">Digital Suite Form</div>
+</td>
+<td class="py-3 px-3 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 hover:bg-surface-container text-on-surface-variant hover:text-primary" onclick="openEditDrawer('Tan Sri David Lim', '1', '+60 12-445-9801', 'Corporate VVIP')"><span class="material-symbols-outlined text-[16px]">edit</span></button>
+<button class="p-1 hover:bg-surface-container text-on-surface-variant hover:text-secondary" onclick="openOverrideModal('Tan Sri David Lim')"><span class="material-symbols-outlined text-[16px]">how_to_reg</span></button>
+<button class="p-1 hover:bg-surface-container text-on-surface-variant hover:text-primary" onclick="openMenu(event)"><span class="material-symbols-outlined text-[16px]">more_vert</span></button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Table Footer Pagination Strip -->
+<div class="px-space-md py-3 bg-surface-container flex flex-col sm:flex-row items-center justify-between gap-2 text-on-surface-variant font-body-sm text-[12px]">
+<div class="flex items-center gap-2">
+<span>Showing 1 to 7 of 210 invitation links</span>
+<span>•</span>
+<span class="text-secondary font-medium">362 / 400 Pax Allocated (90.5%)</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="px-2 py-1 bg-surface-container-lowest text-on-surface-variant disabled:opacity-40" disabled=""><span class="material-symbols-outlined text-[16px]">chevron_left</span></button>
+<button class="px-2.5 py-1 bg-primary text-on-primary font-medium">1</button>
+<button class="px-2.5 py-1 bg-surface-container-lowest text-on-surface hover:bg-surface-container-high transition-colors">2</button>
+<button class="px-2.5 py-1 bg-surface-container-lowest text-on-surface hover:bg-surface-container-high transition-colors">3</button>
+<span class="px-1 text-outline">...</span>
+<button class="px-2.5 py-1 bg-surface-container-lowest text-on-surface hover:bg-surface-container-high transition-colors">30</button>
+<button class="px-2 py-1 bg-surface-container-lowest text-on-surface hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[16px]">chevron_right</span></button>
+</div>
+</div>
+</div>
+<!-- Inline Live Webhook & Dispatch Feed (Audit Log Accent) -->
+<div class="p-space-sm bg-surface-container-lowest shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-space-sm text-[12px]">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-caps text-label-caps uppercase text-primary">Live RSVP Sync Stream</span>
+<span class="text-outline">•</span>
+<span class="text-on-surface-variant">Last ping: <strong class="text-on-surface">Dr. Raden Mas Arya</strong> marked Attending with 2 Pax from WhatsApp Webhook (24ms latency).</span>
+</div>
+<div class="flex items-center gap-3">
+<button class="inline-flex items-center gap-1 text-secondary hover:underline font-label-caps text-[11px] uppercase" onclick="refreshSync()">
+<span class="material-symbols-outlined text-[14px]">refresh</span> Force Redis Flush
+            </button>
+</div>
+</div>
+</div>
+<!-- Operational Companion Panel (Columns 10 to 12) -->
+<div class="xl:col-span-3 flex flex-col space-y-space-md">
+<!-- Widget 1: RSVP Breakdown by Event Session -->
+<div class="p-space-md bg-surface-container-lowest shadow-sm flex flex-col">
+<div class="flex items-center justify-between mb-space-sm">
+<h3 class="font-headline-sm text-[18px] text-primary">Session Allocations</h3>
+<span class="font-kicker text-kicker uppercase text-secondary">3 Events</span>
+</div>
+<div class="space-y-space-sm">
+<!-- Holy Matrimony -->
+<div class="flex flex-col">
+<div class="flex items-center justify-between text-body-sm text-[13px] mb-1">
+<span class="font-medium text-primary">Pemberkatan (Matrimony)</span>
+<span class="text-secondary font-semibold">120 / 150 Pax</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 overflow-hidden">
+<div class="bg-secondary h-full" style="width: 80%;"></div>
+</div>
+<span class="text-[11px] text-outline mt-1">St. Theresia Church • 09:30 WIB</span>
+</div>
+<!-- Resepsi (Gala Dinner) -->
+<div class="flex flex-col pt-2">
+<div class="flex items-center justify-between text-body-sm text-[13px] mb-1">
+<span class="font-medium text-primary">Gala Dinner (Resepsi)</span>
+<span class="text-primary font-semibold">362 / 400 Pax</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 overflow-hidden">
+<div class="bg-primary h-full" style="width: 90.5%;"></div>
+</div>
+<span class="text-[11px] text-outline mt-1">Grand Ballroom Mulia • 19:00 WIB</span>
+</div>
+<!-- VIP Afterparty -->
+<div class="flex flex-col pt-2">
+<div class="flex items-center justify-between text-body-sm text-[13px] mb-1">
+<span class="font-medium text-primary">VIP Afterparty</span>
+<span class="text-secondary font-semibold">48 / 60 Pax</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 overflow-hidden">
+<div class="bg-secondary h-full" style="width: 80%;"></div>
+</div>
+<span class="text-[11px] text-outline mt-1">Cascade Lounge • 22:30 WIB</span>
+</div>
+</div>
+</div>
+<!-- Widget 2: Catering & Dietary Intelligence -->
+<div class="p-space-md bg-surface-container-lowest shadow-sm flex flex-col">
+<div class="flex items-center justify-between mb-space-sm">
+<h3 class="font-headline-sm text-[18px] text-primary">Dietary Intelligence</h3>
+<span class="px-2 py-0.5 bg-surface-container text-secondary font-label-caps text-[10px] uppercase">18 Flags</span>
+</div>
+<div class="space-y-2.5">
+<div class="p-2.5 bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">restaurant</span>
+<span class="font-body-sm text-[13px] text-on-surface font-medium">Halal Certified Preparation</span>
+</div>
+<span class="font-label-caps text-[12px] text-primary font-bold">210 Pax</span>
+</div>
+<div class="p-2.5 bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">spa</span>
+<span class="font-body-sm text-[13px] text-on-surface font-medium">Vegetarian / Vegan</span>
+</div>
+<span class="font-label-caps text-[12px] text-primary font-bold">12 Pax</span>
+</div>
+<div class="p-2.5 bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">set_meal</span>
+<span class="font-body-sm text-[13px] text-on-surface font-medium">Seafood / Shellfish Allergy</span>
+</div>
+<span class="font-label-caps text-[12px] text-secondary font-bold">6 Pax</span>
+</div>
+<div class="p-2.5 bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">child_care</span>
+<span class="font-body-sm text-[13px] text-on-surface font-medium">Kids Bento Allocation</span>
+</div>
+<span class="font-label-caps text-[12px] text-primary font-bold">8 Pax</span>
+</div>
+</div>
+<button class="mt-space-sm w-full py-2 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-caps text-[11px] uppercase transition-colors flex items-center justify-center gap-1" onclick="downloadDietaryChefReport()">
+<span class="material-symbols-outlined text-[15px]">description</span>
+<span>Download Mulia Banquet Sheet</span>
+</button>
+</div>
+<!-- Widget 3: Quick Physical Letterpress Check -->
+<div class="p-space-md bg-surface-container-high shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-1.5 mb-1">
+<span class="material-symbols-outlined text-secondary text-[18px]">markunread_mailbox</span>
+<span class="font-kicker text-kicker uppercase text-secondary">L'Atelier Print Atelier</span>
+</div>
+<h4 class="font-headline-sm text-[16px] text-primary">Physical Escort &amp; Deboss Sync</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant mt-1">
+              100 physical blind-debossed suite sets dispatched. 64 RSVP slips digitized via QR returns.
+            </p>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between">
+<span class="font-label-caps text-[11px] text-primary uppercase">Escort Cards: 64% Printed</span>
+<button class="px-2.5 py-1.5 bg-primary hover:bg-secondary text-on-primary font-label-caps text-[10px] uppercase transition-colors" onclick="printEscortCards()">
+              Print Batch PDF
+            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- MODAL: + Add Single Guest / Token -->
+<div class="fixed inset-0 z-50 hidden bg-primary/40 backdrop-blur-sm flex items-center justify-center p-4" id="modal-add-guest">
+<div class="bg-surface-container-lowest max-w-lg w-full p-space-lg shadow-xl flex flex-col space-y-space-md relative">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-kicker text-kicker uppercase text-secondary">New Dossier Entry</span>
+<h3 class="font-headline-md text-headline-md text-primary">Add Wedding Guest</h3>
+</div>
+<button class="text-on-surface-variant hover:text-primary" onclick="toggleModal('modal-add-guest')">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<form class="space-y-space-sm" id="form-new-guest" onsubmit="handleNewGuestSubmit(event)">
+<div>
+<label class="block font-label-caps text-label-caps uppercase text-on-surface-variant mb-1">Guest Full Name / Salutation *</label>
+<input class="w-full px-3 py-2 bg-surface-container-low text-on-surface text-body-md focus:bg-surface focus:outline-none" placeholder="e.g. Bpk. Prof. Dr. Bambang Sudiro, M.Sc." required="" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div>
+<label class="block font-label-caps text-label-caps uppercase text-on-surface-variant mb-1">WhatsApp Phone *</label>
+<input class="w-full px-3 py-2 bg-surface-container-low text-on-surface text-body-md focus:bg-surface focus:outline-none" placeholder="+62 812-xxxx-xxxx" required="" type="tel"/>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps uppercase text-on-surface-variant mb-1">Max Pax Allocation *</label>
+<input class="w-full px-3 py-2 bg-surface-container-low text-on-surface text-body-md focus:bg-surface focus:outline-none" max="10" min="1" required="" type="number" value="2"/>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div>
+<label class="block font-label-caps text-label-caps uppercase text-on-surface-variant mb-1">Guest Group Category</label>
+<select class="w-full px-3 py-2 bg-surface-container-low text-on-surface text-body-sm focus:outline-none">
+<option>VIP Keluarga</option>
+<option>Sahabat Pengantin</option>
+<option>Corporate VVIP</option>
+<option>Parents' Circle</option>
+<option>Alumni ITB</option>
+<option>Overseas</option>
+</select>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps uppercase text-on-surface-variant mb-1">Session Scope</label>
+<select class="w-full px-3 py-2 bg-surface-container-low text-on-surface text-body-sm focus:outline-none">
+<option>Holy Matrimony &amp; Gala Dinner</option>
+<option>Gala Dinner Only</option>
+<option>Virtual Live Stream Only</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps uppercase text-on-surface-variant mb-1">Custom Link Slug Suffix (Optional)</label>
+<div class="flex items-center bg-surface-container-low px-3 py-2 text-on-surface-variant font-mono text-body-sm">
+<span>momentkita.id/raka-ayu?to=</span>
+<input class="bg-transparent text-primary flex-1 focus:outline-none ml-1 font-mono" placeholder="auto-slug" type="text"/>
+</div>
+</div>
+<div class="flex items-center justify-end gap-2 pt-space-xs">
+<button class="px-4 py-2 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-caps text-label-caps uppercase" onclick="toggleModal('modal-add-guest')" type="button">Cancel</button>
+<button class="px-5 py-2 bg-primary hover:bg-secondary text-on-primary font-label-caps text-label-caps uppercase transition-colors" type="submit">Create Guest Token</button>
+</div>
+</form>
+</div>
+</div>
+<!-- MODAL: Quick RSVP Override -->
+<div class="fixed inset-0 z-50 hidden bg-primary/40 backdrop-blur-sm flex items-center justify-center p-4" id="modal-override-rsvp">
+<div class="bg-surface-container-lowest max-w-md w-full p-space-lg shadow-xl flex flex-col space-y-space-md relative">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-kicker text-kicker uppercase text-secondary">Manual Override</span>
+<h3 class="font-headline-md text-headline-md text-primary" id="override-guest-title">Update RSVP</h3>
+</div>
+<button class="text-on-surface-variant hover:text-primary" onclick="toggleModal('modal-override-rsvp')">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="space-y-space-sm text-body-sm">
+<div>
+<label class="block font-label-caps text-label-caps uppercase text-on-surface-variant mb-1">Attendance Decision</label>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2.5 px-3 bg-primary text-on-primary font-label-caps text-[11px] uppercase flex items-center justify-center gap-1.5" id="btn-choice-attending" onclick="selectRsvpDecision('attending')" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span> Attending
+            </button>
+<button class="py-2.5 px-3 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-caps text-[11px] uppercase flex items-center justify-center gap-1.5" id="btn-choice-regrets" onclick="selectRsvpDecision('regrets')" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span> Regrets
+            </button>
+</div>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps uppercase text-on-surface-variant mb-1">Confirmed Pax Count</label>
+<input class="w-full px-3 py-2 bg-surface-container-low text-on-surface text-body-md focus:outline-none" id="override-pax" max="6" min="0" type="number" value="2"/>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps uppercase text-on-surface-variant mb-1">Dietary Special Notes</label>
+<input class="w-full px-3 py-2 bg-surface-container-low text-on-surface text-body-md focus:outline-none" id="override-diet" placeholder="e.g. 1x Pescatarian, strictly no peanuts" type="text"/>
+</div>
+<div class="flex items-center justify-end gap-2 pt-2">
+<button class="px-4 py-2 bg-surface-container text-on-surface font-label-caps text-label-caps uppercase" onclick="toggleModal('modal-override-rsvp')" type="button">Cancel</button>
+<button class="px-4 py-2 bg-secondary text-on-secondary font-label-caps text-label-caps uppercase" onclick="saveRsvpOverride()" type="button">Save Overridden RSVP</button>
+</div>
+</div>
+</div>
+</div>
+<!-- DRAWER: Edit Guest Dossier (Slide-over) -->
+<div class="fixed inset-y-0 right-0 z-50 w-full max-w-md bg-surface-container-lowest shadow-2xl p-space-lg transform translate-x-full transition-transform duration-300 flex flex-col justify-between" id="drawer-edit-guest">
+<div class="flex flex-col space-y-space-md">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-kicker text-kicker uppercase text-secondary">Atelier Guest Dossier</span>
+<h3 class="font-headline-md text-headline-md text-primary" id="drawer-guest-name">Guest Detail</h3>
+</div>
+<button class="text-on-surface-variant hover:text-primary" onclick="closeEditDrawer()">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="space-y-space-sm">
+<div>
+<label class="block font-label-caps text-label-caps uppercase text-on-surface-variant mb-1">Full Name</label>
+<input class="w-full px-3 py-2 bg-surface-container-low text-on-surface text-body-sm focus:outline-none" id="drawer-name-input" type="text"/>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps uppercase text-on-surface-variant mb-1">WhatsApp Telephone</label>
+<input class="w-full px-3 py-2 bg-surface-container-low text-on-surface text-body-sm focus:outline-none" id="drawer-phone-input" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<div>
+<label class="block font-label-caps text-label-caps uppercase text-on-surface-variant mb-1">Allocation (Pax)</label>
+<input class="w-full px-3 py-2 bg-surface-container-low text-on-surface text-body-sm focus:outline-none" id="drawer-pax-input" type="number"/>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps uppercase text-on-surface-variant mb-1">Table Assignment</label>
+<input class="w-full px-3 py-2 bg-surface-container-low text-on-surface text-body-sm focus:outline-none" type="text" value="Table 01"/>
+</div>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps uppercase text-on-surface-variant mb-1">Category Group</label>
+<input class="w-full px-3 py-2 bg-surface-container-low text-on-surface text-body-sm focus:outline-none" id="drawer-group-input" type="text"/>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-md border-t-0">
+<button class="text-error hover:underline font-label-caps text-[11px] uppercase" onclick="deleteSingleGuest()">Archive Guest</button>
+<div class="flex items-center gap-2">
+<button class="px-3 py-2 bg-surface-container text-on-surface font-label-caps text-label-caps uppercase" onclick="closeEditDrawer()">Cancel</button>
+<button class="px-4 py-2 bg-primary text-on-primary hover:bg-secondary font-label-caps text-label-caps uppercase transition-colors" onclick="closeEditDrawer()">Update File</button>
+</div>
+</div>
+</div>
+<!-- Toast Notification Box -->
+<div class="fixed bottom-6 right-6 z-50 hidden px-4 py-3 bg-primary text-on-primary shadow-xl font-label-caps text-[12px] uppercase tracking-wider flex items-center gap-2" id="toast">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span id="toast-message">Action executed successfully</span>
+</div>
+</div>
+<script>
+  // Filter and Search Micro-Interactions
+  function setFilter(type, btn) {
+    document.querySelectorAll('.filter-tab').forEach(b => {
+      b.classList.remove('bg-primary', 'text-on-primary');
+      b.classList.add('bg-surface-container', 'text-on-surface');
+    });
+    btn.classList.remove('bg-surface-container', 'text-on-surface');
+    btn.classList.add('bg-primary', 'text-on-primary');
+
+    const rows = document.querySelectorAll('.guest-row');
+    rows.forEach(r => {
+      if (type === 'all') {
+        r.style.display = '';
+      } else if (type === 'attending') {
+        r.style.display = r.dataset.status === 'attending' ? '' : 'none';
+      } else if (type === 'pending') {
+        r.style.display = r.dataset.status === 'pending' ? '' : 'none';
+      } else if (type === 'regrets') {
+        r.style.display = r.dataset.status === 'regrets' ? '' : 'none';
+      } else if (type === 'vip') {
+        r.style.display = r.dataset.vip === 'true' ? '' : 'none';
+      } else if (type === 'dietary') {
+        r.style.display = r.dataset.dietary === 'true' ? '' : 'none';
+      }
+    });
+  }
+
+  function filterTable() {
+    const q = document.getElementById('guest-search').value.toLowerCase();
+    const grp = document.getElementById('filter-group').value.toLowerCase();
+    const rows = document.querySelectorAll('.guest-row');
+
+    rows.forEach(r => {
+      const text = r.innerText.toLowerCase();
+      const matchText = text.includes(q);
+      const matchGroup = !grp || (r.dataset.group && r.dataset.group.toLowerCase().includes(grp));
+      r.style.display = (matchText && matchGroup) ? '' : 'none';
+    });
+  }
+
+  // Row Selection & Bulk Actions
+  function toggleSelectAll(master) {
+    const boxes = document.querySelectorAll('.row-checkbox');
+    boxes.forEach(cb => cb.checked = master.checked);
+    onRowCheck();
+  }
+
+  function onRowCheck() {
+    const checked = document.querySelectorAll('.row-checkbox:checked');
+    const bulkBar = document.getElementById('bulk-bar');
+    const counter = document.getElementById('selected-count');
+    if (checked.length > 0) {
+      bulkBar.classList.remove('hidden');
+      counter.innerText = checked.length + ' Selected';
+    } else {
+      bulkBar.classList.add('hidden');
+    }
+  }
+
+  function clearSelection() {
+    document.querySelectorAll('.row-checkbox').forEach(cb => cb.checked = false);
+    document.getElementById('check-all').checked = false;
+    onRowCheck();
+  }
+
+  function bulkMarkStatus(status) {
+    showToast(`Bulk marked selected guests as ${status}`);
+    clearSelection();
+  }
+
+  function bulkResendWhatsApp() {
+    showToast("Dispatched WhatsApp reminders to selected numbers");
+    clearSelection();
+  }
+
+  function bulkAssignTableModal() {
+    showToast("Opened Seating Assignment for selected guests");
+  }
+
+  function bulkDelete() {
+    if (confirm("Remove selected guest records from Raka & Ayu's dossier?")) {
+      showToast("Selected guests removed");
+      clearSelection();
+    }
+  }
+
+  // Modal helpers
+  function toggleModal(id) {
+    const el = document.getElementById(id);
+    el.classList.toggle('hidden');
+  }
+
+  function handleNewGuestSubmit(e) {
+    e.preventDefault();
+    toggleModal('modal-add-guest');
+    showToast("New guest token generated & dispatched");
+  }
+
+  // RSVP Override
+  let currentOverrideGuest = '';
+  function openOverrideModal(guestName) {
+    currentOverrideGuest = guestName;
+    document.getElementById('override-guest-title').innerText = guestName;
+    toggleModal('modal-override-rsvp');
+  }
+
+  function selectRsvpDecision(decision) {
+    const btnAttending = document.getElementById('btn-choice-attending');
+    const btnRegrets = document.getElementById('btn-choice-regrets');
+    if (decision === 'attending') {
+      btnAttending.className = 'py-2.5 px-3 bg-primary text-on-primary font-label-caps text-[11px] uppercase flex items-center justify-center gap-1.5';
+      btnRegrets.className = 'py-2.5 px-3 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-caps text-[11px] uppercase flex items-center justify-center gap-1.5';
+    } else {
+      btnRegrets.className = 'py-2.5 px-3 bg-primary text-on-primary font-label-caps text-[11px] uppercase flex items-center justify-center gap-1.5';
+      btnAttending.className = 'py-2.5 px-3 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-caps text-[11px] uppercase flex items-center justify-center gap-1.5';
+    }
+  }
+
+  function saveRsvpOverride() {
+    toggleModal('modal-override-rsvp');
+    showToast(`RSVP status updated manually for ${currentOverrideGuest}`);
+  }
+
+  // Edit Drawer
+  function openEditDrawer(name, pax, phone, group) {
+    document.getElementById('drawer-guest-name').innerText = name;
+    document.getElementById('drawer-name-input').value = name;
+    document.getElementById('drawer-phone-input').value = phone;
+    document.getElementById('drawer-pax-input').value = pax;
+    document.getElementById('drawer-group-input').value = group;
+    document.getElementById('drawer-edit-guest').classList.remove('translate-x-full');
+  }
+
+  function closeEditDrawer() {
+    document.getElementById('drawer-edit-guest').classList.add('translate-x-full');
+  }
+
+  function deleteSingleGuest() {
+    if (confirm("Archive this guest file?")) {
+      closeEditDrawer();
+      showToast("Guest record moved to archive");
+    }
+  }
+
+  // General Actions
+  function copySnippet(text) {
+    navigator.clipboard.writeText(text);
+    showToast("Guest URL copied to clipboard");
+  }
+
+  function sendQuickReminder(name, phone) {
+    showToast(`Dispatched bespoke WhatsApp message to ${name}`);
+  }
+
+  function triggerBulkReminder() {
+    showToast("Dispatched scheduled WhatsApp reminders to 86 pending guests");
+  }
+
+  function downloadDossier() {
+    showToast("Generating comprehensive guest roster (.xlsx / .csv)...");
+  }
+
+  function downloadDietaryChefReport() {
+    showToast("Exporting Mulia Banquet dietary manifest...");
+  }
+
+  function printEscortCards() {
+    showToast("Generating 300 DPI Letterpress Escort Print Sheet...");
+  }
+
+  function refreshSync() {
+    showToast("Redis cache flushed. Synced latest RSVPs via Webhook (18ms).");
+  }
+
+  function openMenu(e) {
+    e.stopPropagation();
+    showToast("Options: WhatsApp Invite • Escort Tag • Archive");
+  }
+
+  function showToast(message) {
+    const t = document.getElementById('toast');
+    const msg = document.getElementById('toast-message');
+    msg.innerText = message;
+    t.classList.remove('hidden');
+    setTimeout(() => {
+      t.classList.add('hidden');
+    }, 3200);
+  }
+</script></main></div></body></html>

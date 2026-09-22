@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-primary-container":"#858383","on-error-container":"#93000a","on-error":"#ffffff","on-secondary-fixed":"#380d00","on-background":"#1c1c18","on-surface":"#1c1c18","tertiary":"#000000","surface-bright":"#fcf9f3","tertiary-fixed-dim":"#ffb4a4","inverse-surface":"#31312d","on-tertiary-fixed-variant":"#753224","outline-variant":"#c4c7c7","on-secondary":"#ffffff","tertiary-fixed":"#ffdad3","on-surface-variant":"#444748","primary-container":"#1c1b1b","surface-container-lowest":"#ffffff","secondary-container":"#ffad91","secondary-fixed":"#ffdbcf","secondary-fixed-dim":"#ffb59c","on-primary-fixed":"#1c1b1b","on-primary":"#ffffff","surface-container-high":"#ebe8e2","surface":"#fcf9f3","surface-variant":"#e5e2dc","outline":"#747878","primary":"#000000","on-tertiary-container":"#c06d5b","primary-fixed-dim":"#c8c6c5","on-tertiary-fixed":"#3c0801","error":"#ba1a1a","surface-container-low":"#f6f3ed","inverse-primary":"#c8c6c5","error-container":"#ffdad6","background":"#fcf9f3","primary-fixed":"#e5e2e1","surface-container":"#f0eee8","tertiary-container":"#3c0801","surface-tint":"#5f5e5e","on-tertiary":"#ffffff","surface-dim":"#dcdad4","surface-container-highest":"#e5e2dc","inverse-on-surface":"#f3f0ea","on-primary-fixed-variant":"#474746","secondary":"#8c4d37","on-secondary-container":"#7a3e29","on-secondary-fixed-variant":"#703722"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"gutter":"2rem","space-xl":"3rem","space-sm":"0.5rem","margin":"3.5rem","space-lg":"1.75rem","space-xs":"0.25rem","space-md":"1rem","gutter-mobile":"1rem","margin-mobile":"1.25rem"},fontFamily:{"kicker":["Plus Jakarta Sans"],"headline-md":["Playfair Display"],"display-hero":["Playfair Display"],"headline-sm":["Playfair Display"],"body-md":["Plus Jakarta Sans"],"label-caps":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"headline-xl-mobile":["Playfair Display"],"headline-xl":["Playfair Display"],"headline-lg-mobile":["Playfair Display"],"quote-editorial":["Playfair Display"],"display-hero-mobile":["Playfair Display"],"headline-lg":["Playfair Display"]},fontSize:{"kicker":["11px",{lineHeight:"16px",letterSpacing:"0.2em",fontWeight:"600"}],"headline-md":["28px",{lineHeight:"36px",letterSpacing:"-0.01em",fontWeight:"500"}],"display-hero":["84px",{lineHeight:"92px",letterSpacing:"-0.03em",fontWeight:"400"}],"headline-sm":["22px",{lineHeight:"30px",letterSpacing:"0em",fontWeight:"600"}],"body-md":["15px",{lineHeight:"24px",letterSpacing:"0em",fontWeight:"400"}],"label-caps":["12px",{lineHeight:"16px",letterSpacing:"0.12em",fontWeight:"600"}],"body-lg":["18px",{lineHeight:"30px",letterSpacing:"-0.01em",fontWeight:"400"}],"body-sm":["13px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"400"}],"headline-xl-mobile":["36px",{lineHeight:"42px",letterSpacing:"-0.01em",fontWeight:"400"}],"headline-xl":["56px",{lineHeight:"64px",letterSpacing:"-0.02em",fontWeight:"400"}],"headline-lg-mobile":["28px",{lineHeight:"34px",letterSpacing:"0em",fontWeight:"400"}],"quote-editorial":["24px",{lineHeight:"36px",letterSpacing:"0em",fontWeight:"400"}],"display-hero-mobile":["44px",{lineHeight:"48px",letterSpacing:"-0.02em",fontWeight:"400"}],"headline-lg":["40px",{lineHeight:"48px",letterSpacing:"-0.015em",fontWeight:"400"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-6 px-5"><div class="flex flex-col gap-6"><div class="flex items-center gap-3 px-2"><div class="w-9 h-9 rounded-full bg-primary flex items-center justify-center"><span class="font-headline-sm text-headline-sm text-on-primary italic">M</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface leading-none">Moment Kita</span><span class="font-kicker text-kicker uppercase text-secondary tracking-widest mt-1">Atelier Client Suite</span></div></div><div class="flex flex-col gap-5 pt-2"><div class="flex flex-col gap-1"><span class="font-kicker text-kicker uppercase text-on-surface-variant px-3 mb-1 tracking-wider">Overview</span><nav class="flex flex-col gap-0.5" data-active-classes="bg-surface-container-highest text-on-surface font-medium"><a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[19px]">space_dashboard</span><span class="font-body-sm text-body-sm">Dashboard</span></a></nav></div><div class="flex flex-col gap-1"><span class="font-kicker text-kicker uppercase text-on-surface-variant px-3 mb-1 tracking-wider">Wedding</span><nav class="flex flex-col gap-0.5" data-active-classes="bg-surface-container-highest text-on-surface font-medium"><a class="flex items-center gap-3 px-3 py-2 transition-colors text-on-surface-variant" data-path="my-invitations" href="#"><span class="material-symbols-outlined text-[19px]">mail</span><span class="font-body-sm text-body-sm">My Invitations</span></a></nav></div><div class="flex flex-col gap-1"><span class="font-kicker text-kicker uppercase text-on-surface-variant px-3 mb-1 tracking-wider">Account</span><nav class="flex flex-col gap-0.5" data-active-classes="bg-surface-container-highest text-on-surface font-medium"><a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="transactions" href="#"><span class="material-symbols-outlined text-[19px]">receipt_long</span><span class="font-body-sm text-body-sm">Transactions</span></a><a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="notifications" href="#"><span class="material-symbols-outlined text-[19px]">notifications</span><span class="font-body-sm text-body-sm">Notifications</span></a><a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[19px]">settings</span><span class="font-body-sm text-body-sm">Settings</span></a></nav></div></div></div><div class="flex flex-col gap-3"><div class="bg-surface-container p-4"><div class="flex items-center justify-between mb-1.5"><span class="font-kicker text-kicker uppercase text-secondary">Tier</span><span class="material-symbols-outlined text-secondary text-[16px]">hotel_class</span></div><p class="font-body-sm text-body-sm font-semibold text-on-surface leading-snug">Signature Suite</p><p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">1 Invitation Quota Remaining</p></div><div class="flex items-center gap-3 px-2 py-1"><div class="w-9 h-9 rounded-full bg-secondary flex items-center justify-center text-on-secondary font-label-caps text-label-caps">WS</div><div class="flex flex-col"><span class="font-body-sm text-body-sm font-medium text-on-surface leading-tight">Widdy &amp; Sarah</span><span class="font-kicker text-kicker uppercase text-on-surface-variant leading-none mt-0.5">Couple Account</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40"><div class="h-16 w-full px-8 flex items-center justify-between"><div class="flex items-center gap-4"><img alt="Brand logo. - Primary color: #1a1a1a
+- Font: playfairDisplay
+- Mode: light
+- Roundness: rounded-lg
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WRqdm6LQrsNtDYQH6alJWMkWfk8mr7SPqKl8gfl7AvBd40Jje4RrE22TykoB2RppbfnyAF2up2zNsWoEEOAzFuAN1npFQei0jfZqImhociqxHqkWuTOiZPCxGJmPYqxbPvy5Rx2weYo7U8hJdkx9NPou6jBCa_GrhtbmoggtyXUo9t6RX7e69grmpegVwtyw9hYyP4hsJ3T_vZnPOwt4eaQH75GZeWtOjhkaQqGZoTZVpuFOyuLFBC"/><div class="flex items-center gap-2"><span class="font-body-sm text-body-sm text-on-surface-variant">Atelier Workspace</span><span class="font-body-sm text-body-sm text-on-surface-variant">/</span><span class="font-headline-sm text-headline-sm text-on-surface font-medium">Widdy &amp; Sarah Wedding</span></div></div><div class="flex items-center gap-5"><button class="h-9 px-4 bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-1.5 hover:bg-secondary hover:text-on-secondary transition-colors"><span class="material-symbols-outlined text-[16px]">add</span><span>New Invitation</span></button><button class="relative flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-0 right-0 w-2 h-2 rounded-full bg-secondary"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<!-- Top Utility Context & Atelier Assurance -->
+<div class="w-full px-8 pt-8 pb-6 flex flex-col gap-6 max-w-7xl mx-auto">
+<!-- Breadcrumb & Status Monogram -->
+<div class="flex flex-wrap items-center justify-between gap-4">
+<div class="flex items-center gap-2">
+<a class="font-kicker text-kicker uppercase text-on-surface-variant hover:text-secondary transition-colors tracking-widest" href="#">My Invitations</a>
+<span class="text-on-surface-variant/40 font-body-sm">/</span>
+<a class="font-kicker text-kicker uppercase text-on-surface-variant hover:text-secondary transition-colors tracking-widest" href="#">Raka &amp; Ayu — The Parisian Winter Suite</a>
+<span class="text-on-surface-variant/40 font-body-sm">/</span>
+<a class="font-kicker text-kicker uppercase text-on-surface-variant hover:text-secondary transition-colors tracking-widest" href="#">Guests</a>
+<span class="text-on-surface-variant/40 font-body-sm">/</span>
+<span class="font-kicker text-kicker uppercase text-secondary font-medium tracking-widest">Batch Import</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-2 px-3 py-1.5 bg-surface-container rounded-full shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-kicker text-kicker uppercase text-on-surface tracking-wider">Atelier Concierge Active</span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1.5 bg-surface-container-high rounded-full">
+<span class="material-symbols-outlined text-[15px] text-secondary">verified</span>
+<span class="font-kicker text-kicker uppercase text-on-surface-variant tracking-wider">Live Verification Engine</span>
+</div>
+</div>
+</div>
+<!-- Editorial Header & Actions -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-4">
+<div class="max-w-3xl flex flex-col gap-2">
+<a class="inline-flex items-center gap-1.5 text-on-surface-variant hover:text-secondary transition-colors font-label-caps text-label-caps uppercase tracking-wider mb-1 w-fit" href="#">
+<span class="material-symbols-outlined text-[16px]">arrow_back</span>
+<span>Back to Guest Directory</span>
+</a>
+<h1 class="font-headline-xl text-headline-xl text-on-surface leading-tight font-normal">
+          Import Wedding Guests <span class="italic font-light text-secondary">&amp; Circles</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant font-light mt-1">
+          Effortlessly curate your guest list from Excel or CSV into your bespoke wedding directory with automatic vanity link generation, gentle duplicate resolution, and personalized seating quotas.
+        </p>
+</div>
+<div class="flex flex-col items-start md:items-end gap-2 flex-shrink-0">
+<button class="flex items-center gap-2 px-5 py-3 bg-surface-container-low hover:bg-surface-container transition-colors shadow-sm text-on-surface font-label-caps text-label-caps uppercase tracking-wider">
+<span class="material-symbols-outlined text-[18px] text-secondary">download_for_offline</span>
+<span>Download Luxury Excel Template (.xlsx)</span>
+</button>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-right">
+          Pre-formatted with guest circles, table allocations &amp; WhatsApp quotas
+        </span>
+</div>
+</div>
+<!-- Guided Process Stepper (High-Craft Editorial Flow) -->
+<div class="w-full bg-surface-container-low p-6 rounded-lg shadow-sm">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 relative">
+<!-- Step 1: Upload (Completed) -->
+<div class="flex items-center gap-3.5">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest text-secondary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-kicker text-kicker uppercase text-secondary">Step 01 • Finished</span>
+<span class="font-body-md text-body-md font-medium text-on-surface">Upload Spreadsheet</span>
+</div>
+</div>
+<!-- Step 2: Review (Active) -->
+<div class="flex items-center gap-3.5 bg-surface-container-lowest p-3 rounded-lg shadow-sm">
+<div class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-label-caps text-label-caps font-semibold flex-shrink-0">
+            02
+          </div>
+<div class="flex flex-col">
+<span class="font-kicker text-kicker uppercase text-secondary">Step 02 • Active</span>
+<span class="font-body-md text-body-md font-medium text-on-surface">Review &amp; Validate</span>
+</div>
+</div>
+<!-- Step 3: Duplicate Matching -->
+<div class="flex items-center gap-3.5 opacity-70">
+<div class="w-8 h-8 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center font-label-caps text-label-caps flex-shrink-0">
+            03
+          </div>
+<div class="flex flex-col">
+<span class="font-kicker text-kicker uppercase text-on-surface-variant">Step 03</span>
+<span class="font-body-md text-body-md font-medium text-on-surface">Duplicate Matching</span>
+</div>
+</div>
+<!-- Step 4: Dispatch -->
+<div class="flex items-center gap-3.5 opacity-70">
+<div class="w-8 h-8 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center font-label-caps text-label-caps flex-shrink-0">
+            04
+          </div>
+<div class="flex flex-col">
+<span class="font-kicker text-kicker uppercase text-on-surface-variant">Step 04</span>
+<span class="font-body-md text-body-md font-medium text-on-surface">Confirm &amp; Dispatch</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Health Telemetry Strip & Active File Card -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+<!-- File Metadata Card -->
+<div class="lg:col-span-5 bg-surface-container-lowest p-6 rounded-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest">Source Document</span>
+<span class="inline-flex items-center gap-1 font-body-sm text-body-sm text-secondary bg-secondary-fixed/50 px-2.5 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[14px]">format_image_left</span> Fully Encrypted
+            </span>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 bg-surface-container flex items-center justify-center rounded-lg flex-shrink-0">
+<span class="material-symbols-outlined text-[26px] text-secondary">table_view</span>
+</div>
+<div class="flex flex-col min-w-0">
+<p class="font-headline-sm text-headline-sm text-on-surface truncate font-medium">the-daniswara-wedding-guestlist-v2.xlsx</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">44.8 KB • 248 total records identified • Excel 2024</p>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 mt-6 pt-4 bg-surface-container-low/50 px-4 py-3 rounded-lg">
+<button class="font-label-caps text-label-caps uppercase text-on-surface hover:text-secondary flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px]">swap_horiz</span>
+<span>Replace File</span>
+</button>
+<span class="text-on-surface-variant/30">|</span>
+<button class="font-label-caps text-label-caps uppercase text-on-surface hover:text-secondary flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+<span>Re-scan Schema</span>
+</button>
+</div>
+</div>
+<!-- Telemetry Gauges -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-6 rounded-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-4">
+<span class="font-kicker text-kicker uppercase text-on-surface-variant tracking-widest">Health &amp; Integrity Breakdown</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">248 of 248 Processed</span>
+</div>
+<!-- Telemetry Numbers -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+<div class="p-3.5 bg-surface-container-low rounded-lg flex flex-col">
+<div class="flex items-center justify-between mb-1">
+<span class="w-2 h-2 rounded-full bg-surface-tint"></span>
+<span class="font-label-caps text-label-caps text-on-surface-variant font-medium">94.8%</span>
+</div>
+<span class="font-headline-md text-headline-md text-on-surface leading-tight">235</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Valid &amp; Ready</span>
+</div>
+<div class="p-3.5 bg-secondary-fixed/30 rounded-lg flex flex-col">
+<div class="flex items-center justify-between mb-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-caps text-label-caps text-secondary font-medium">Needs Attention</span>
+</div>
+<span class="font-headline-md text-headline-md text-secondary leading-tight">10</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Fixable Inline</span>
+</div>
+<div class="p-3.5 bg-surface-container-high rounded-lg flex flex-col">
+<div class="flex items-center justify-between mb-1">
+<span class="w-2 h-2 rounded-full bg-on-surface-variant"></span>
+<span class="font-label-caps text-label-caps text-on-surface-variant font-medium">Overlaps</span>
+</div>
+<span class="font-headline-md text-headline-md text-on-surface leading-tight">3</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Existing Matches</span>
+</div>
+<div class="p-3.5 bg-surface-container-low rounded-lg flex flex-col">
+<div class="flex items-center justify-between mb-1">
+<span class="w-2 h-2 rounded-full bg-on-surface-variant/40"></span>
+<span class="font-label-caps text-label-caps text-on-surface-variant font-medium">Clean</span>
+</div>
+<span class="font-headline-md text-headline-md text-on-surface leading-tight">0</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Critical Failures</span>
+</div>
+</div>
+<!-- Visual Multi-segment Progress Bar -->
+<div class="w-full mt-5">
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden flex">
+<div class="bg-surface-tint h-full" style="width: 94.7%"></div>
+<div class="bg-secondary h-full" style="width: 4.1%"></div>
+<div class="bg-on-surface-variant h-full" style="width: 1.2%"></div>
+</div>
+<div class="flex items-center justify-between mt-2 font-body-sm text-body-sm text-on-surface-variant">
+<span>235 Clean invitations</span>
+<span>13 Handled via Atelier Smart Guard</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Editorial Gentle Reassurance Banner -->
+<div class="w-full bg-secondary-fixed/40 p-4 rounded-lg flex items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">auto_fix_high</span>
+</div>
+<p class="font-body-md text-body-md text-on-secondary-fixed">
+<strong>10 rows require your gentle review.</strong> You can correct typos or missing phone numbers inline right here, or simply skip them. There is no need to edit or re-upload your raw spreadsheet.
+        </p>
+</div>
+<button class="font-label-caps text-label-caps uppercase text-secondary hover:text-on-secondary-fixed font-semibold tracking-wider whitespace-nowrap">
+        Quick-Resolve All Optional →
+      </button>
+</div>
+<!-- Filter Pills / View State Switcher -->
+<div class="flex flex-wrap items-center justify-between gap-4 pt-2">
+<div class="flex items-center gap-1.5 p-1 bg-surface-container rounded-lg">
+<button class="px-4 py-2 bg-surface-container-lowest text-on-surface shadow-sm rounded font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-2">
+<span>Needs Review</span>
+<span class="px-1.5 py-0.5 bg-secondary text-on-secondary text-[10px] rounded-full">10</span>
+</button>
+<button class="px-4 py-2 hover:bg-surface-container-lowest/60 text-on-surface-variant transition-colors rounded font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-2">
+<span>Duplicates Found</span>
+<span class="px-1.5 py-0.5 bg-surface-container-high text-on-surface-variant text-[10px] rounded-full">3</span>
+</button>
+<button class="px-4 py-2 hover:bg-surface-container-lowest/60 text-on-surface-variant transition-colors rounded font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-2">
+<span>Valid &amp; Ready</span>
+<span class="px-1.5 py-0.5 bg-surface-container-high text-on-surface-variant text-[10px] rounded-full">235</span>
+</button>
+<button class="px-4 py-2 hover:bg-surface-container-lowest/60 text-on-surface-variant transition-colors rounded font-label-caps text-label-caps uppercase tracking-wider">
+<span>All 248 Rows</span>
+</button>
+</div>
+<div class="flex items-center gap-3">
+<div class="relative">
+<input class="bg-surface-container-lowest pl-9 pr-4 py-2 text-on-surface font-body-sm text-body-sm rounded-lg shadow-sm focus:outline-none placeholder:text-on-surface-variant/60 w-64" placeholder="Search parsed guests..." type="text"/>
+<span class="material-symbols-outlined absolute left-2.5 top-2.5 text-on-surface-variant text-[18px]">search</span>
+</div>
+<button class="p-2 bg-surface-container-lowest hover:bg-surface-container rounded-lg text-on-surface transition-colors shadow-sm" title="Filter columns">
+<span class="material-symbols-outlined text-[19px]">tune</span>
+</button>
+</div>
+</div>
+<!-- Section 02: Interactive Inline Data Correction & Review Panel -->
+<div class="bg-surface-container-lowest rounded-lg shadow-sm overflow-hidden flex flex-col">
+<!-- Table Header -->
+<div class="grid grid-cols-12 gap-3 px-6 py-3.5 bg-surface-container-low font-kicker text-kicker uppercase text-on-surface-variant tracking-wider">
+<div class="col-span-1">Row</div>
+<div class="col-span-3">Guest / Entourage Name</div>
+<div class="col-span-2">Wedding Circle</div>
+<div class="col-span-1 text-center">Seat Pax</div>
+<div class="col-span-3">WhatsApp Phone</div>
+<div class="col-span-2 text-right">Inline Resolution</div>
+</div>
+<!-- Sample Row 1: Row 12 (Format Warning Resolved) -->
+<div class="grid grid-cols-12 gap-3 px-6 py-4 items-center bg-surface-container-lowest hover:bg-surface-container-low/40 transition-colors">
+<div class="col-span-1 font-body-sm text-body-sm text-on-surface-variant font-mono">#012</div>
+<div class="col-span-3 flex flex-col">
+<span class="font-body-md text-body-md font-medium text-on-surface">Dimas Prasetyo</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">dimas.prasetyo@atelier.id</span>
+</div>
+<div class="col-span-2">
+<span class="px-2.5 py-1 bg-surface-container-high rounded text-on-surface font-label-caps text-label-caps uppercase">Groomsmen</span>
+</div>
+<div class="col-span-1 text-center font-body-md text-body-md font-medium text-on-surface">
+          2 Pax
+        </div>
+<div class="col-span-3 flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-body-sm text-body-sm text-on-surface font-mono">+62 813-4412-8901</span>
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+</div>
+<span class="text-[11px] text-on-surface-variant font-body-sm">Standardized E.164 country code</span>
+</div>
+<div class="col-span-2 flex items-center justify-end gap-2">
+<span class="px-2.5 py-1 bg-secondary-fixed/50 text-secondary rounded font-label-caps text-label-caps uppercase">Auto-Formatted</span>
+<button class="p-1 hover:bg-surface-container rounded text-on-surface-variant transition-colors" title="Edit row">
+<span class="material-symbols-outlined text-[17px]">edit</span>
+</button>
+</div>
+</div>
+<!-- Sample Row 2: Row 48 (Missing WhatsApp - Optional) -->
+<div class="grid grid-cols-12 gap-3 px-6 py-4 items-center bg-surface-container-low/30 hover:bg-surface-container-low/60 transition-colors">
+<div class="col-span-1 font-body-sm text-body-sm text-on-surface-variant font-mono">#048</div>
+<div class="col-span-3 flex flex-col">
+<span class="font-body-md text-body-md font-medium text-on-surface">Bunda Rini &amp; Keluarga</span>
+<span class="font-body-sm text-body-sm text-secondary">No digital dispatch channel set</span>
+</div>
+<div class="col-span-2">
+<span class="px-2.5 py-1 bg-surface-container-high rounded text-on-surface font-label-caps text-label-caps uppercase">Family (Bride)</span>
+</div>
+<div class="col-span-1 text-center font-body-md text-body-md font-medium text-on-surface">
+          4 Pax
+        </div>
+<div class="col-span-3">
+<div class="relative w-full max-w-[210px]">
+<input class="w-full bg-surface-container-lowest px-2.5 py-1.5 rounded text-on-surface font-body-sm text-body-sm shadow-sm focus:outline-none placeholder:text-on-surface-variant/40" placeholder="+62 8..." type="text"/>
+<span class="text-[11px] text-on-surface-variant font-body-sm block mt-0.5">Optional: can send paper envelope</span>
+</div>
+</div>
+<div class="col-span-2 flex items-center justify-end gap-2">
+<button class="px-3 py-1.5 bg-primary text-on-primary hover:bg-secondary transition-colors font-label-caps text-label-caps uppercase shadow-sm">Save</button>
+<button class="px-3 py-1.5 bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors font-label-caps text-label-caps uppercase">Keep Blank</button>
+</div>
+</div>
+<!-- Sample Row 3: Row 104 (Missing Name - Required Alert) -->
+<div class="grid grid-cols-12 gap-3 px-6 py-4 items-center bg-secondary-fixed/20 hover:bg-secondary-fixed/30 transition-colors">
+<div class="col-span-1 font-body-sm text-body-sm text-secondary font-mono font-medium">#104</div>
+<div class="col-span-3 flex flex-col">
+<input class="w-full bg-surface-container-lowest px-2.5 py-1.5 rounded text-on-surface font-body-md text-body-md font-medium shadow-sm focus:outline-none" type="text" value="Dr. Hendra Wijaya"/>
+<span class="text-[11px] text-secondary font-body-sm mt-0.5">Guest Name was missing in cell C104</span>
+</div>
+<div class="col-span-2">
+<select class="w-full bg-surface-container-lowest px-2 py-1.5 rounded text-on-surface font-label-caps text-label-caps uppercase shadow-sm focus:outline-none">
+<option>VIP Guests</option>
+<option>Family (Groom)</option>
+<option>Colleagues</option>
+</select>
+</div>
+<div class="col-span-1 text-center">
+<input class="w-12 bg-surface-container-lowest px-1.5 py-1.5 text-center rounded text-on-surface font-body-md text-body-md font-medium shadow-sm focus:outline-none" max="10" min="1" type="number" value="2"/>
+</div>
+<div class="col-span-3">
+<span class="font-body-sm text-body-sm text-on-surface font-mono">+62 811-987-1234</span>
+</div>
+<div class="col-span-2 flex items-center justify-end gap-2">
+<button class="px-3 py-1.5 bg-secondary text-on-secondary hover:bg-primary transition-colors font-label-caps text-label-caps uppercase shadow-sm">Save Row</button>
+<button class="px-2.5 py-1.5 hover:bg-surface-container rounded text-on-surface-variant hover:text-error transition-colors font-label-caps text-label-caps uppercase" title="Skip this entry">Skip</button>
+</div>
+</div>
+<!-- Sample Row 4: Row 182 (Seat Pax Zero Adjusted) -->
+<div class="grid grid-cols-12 gap-3 px-6 py-4 items-center bg-surface-container-lowest hover:bg-surface-container-low/40 transition-colors">
+<div class="col-span-1 font-body-sm text-body-sm text-on-surface-variant font-mono">#182</div>
+<div class="col-span-3 flex flex-col">
+<span class="font-body-md text-body-md font-medium text-on-surface">Keluarga Besar Oom Haris</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">haris.daniswara@gmail.com</span>
+</div>
+<div class="col-span-2">
+<span class="px-2.5 py-1 bg-surface-container-high rounded text-on-surface font-label-caps text-label-caps uppercase">Family (Groom)</span>
+</div>
+<div class="col-span-1">
+<!-- Stepper Counter -->
+<div class="flex items-center justify-center bg-surface-container rounded px-1.5 py-1">
+<button class="w-5 h-5 flex items-center justify-center text-on-surface hover:text-secondary font-bold text-xs" onclick="const el=document.getElementById('pax182'); el.innerText=Math.max(1, parseInt(el.innerText)-1);">-</button>
+<span class="px-2 font-body-sm text-body-sm font-semibold text-on-surface" id="pax182">2</span>
+<button class="w-5 h-5 flex items-center justify-center text-on-surface hover:text-secondary font-bold text-xs" onclick="const el=document.getElementById('pax182'); el.innerText=parseInt(el.innerText)+1;">+</button>
+</div>
+</div>
+<div class="col-span-3 flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-mono">+62 812-9011-3321</span>
+<span class="text-[11px] text-secondary font-body-sm">Pax adjusted from original "0"</span>
+</div>
+<div class="col-span-2 flex items-center justify-end gap-2">
+<button class="px-3 py-1.5 bg-primary text-on-primary hover:bg-secondary transition-colors font-label-caps text-label-caps uppercase shadow-sm">Confirm 2 Pax</button>
+<button class="p-1 hover:bg-surface-container rounded text-on-surface-variant transition-colors" title="More options">
+<span class="material-symbols-outlined text-[17px]">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Section 03: Smart Duplicate Resolution Module -->
+<div class="w-full bg-surface-container-low p-8 rounded-lg shadow-sm flex flex-col gap-6 mt-4">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest">Section 03 • Reconciliation</span>
+<span class="px-2 py-0.5 bg-secondary-fixed text-secondary font-label-caps text-label-caps rounded-full">3 Overlaps</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-normal">Duplicate Detection &amp; Conflict Rules</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+            We discovered 3 guests already existing in your active RSVP guest directory. Select your preferred merge strategy.
+          </p>
+</div>
+<!-- Global Strategy Selector -->
+<div class="flex items-center gap-4 bg-surface-container-lowest p-2 rounded-lg shadow-sm">
+<label class="flex items-center gap-2 px-3 py-1.5 cursor-pointer rounded hover:bg-surface-container">
+<input class="accent-secondary" name="dupStrategy" type="radio"/>
+<span class="font-body-sm text-body-sm text-on-surface">Skip Imported (Keep Existing)</span>
+</label>
+<label class="flex items-center gap-2 px-3 py-1.5 cursor-pointer bg-surface-container rounded">
+<input checked="" class="accent-secondary" name="dupStrategy" type="radio"/>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Update &amp; Merge New Attributes</span>
+</label>
+</div>
+</div>
+<!-- Side-by-Side Comparison Dossier Card -->
+<div class="bg-surface-container-lowest rounded-lg p-6 shadow-sm flex flex-col gap-5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-7 h-7 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary font-bold text-xs">
+              01
+            </div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium">Sarah Jenkins &amp; Partner</span>
+<span class="font-kicker text-kicker uppercase text-on-surface-variant bg-surface-container px-2 py-0.5 rounded">Exact Match via Phone</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-4 py-2 bg-primary text-on-primary hover:bg-secondary transition-colors font-label-caps text-label-caps uppercase shadow-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px]">check</span>
+<span>Update With Spreadsheet</span>
+</button>
+<button class="px-4 py-2 bg-surface-container hover:bg-surface-container-high transition-colors font-label-caps text-label-caps uppercase text-on-surface">
+              Skip This Row
+            </button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Existing Record -->
+<div class="bg-surface-container-low p-4 rounded-lg flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-kicker text-kicker uppercase text-on-surface-variant tracking-wider">Current Directory Record</span>
+<span class="text-xs text-on-surface-variant font-mono">ID: MK-88219</span>
+</div>
+<div class="grid grid-cols-2 gap-2 font-body-sm text-body-sm">
+<div>
+<span class="text-on-surface-variant text-xs block">Full Name</span>
+<span class="font-medium text-on-surface">Sarah Jenkins &amp; Partner</span>
+</div>
+<div>
+<span class="text-on-surface-variant text-xs block">Circle Tag</span>
+<span class="font-medium text-on-surface">Close Friends</span>
+</div>
+<div>
+<span class="text-on-surface-variant text-xs block">Seat Allocation</span>
+<span class="font-medium text-on-surface">2 Pax (Table Unassigned)</span>
+</div>
+<div>
+<span class="text-on-surface-variant text-xs block">WhatsApp</span>
+<span class="font-mono text-on-surface">+44 7911 123456</span>
+</div>
+</div>
+</div>
+<!-- Imported Spreadsheet Record -->
+<div class="bg-secondary-fixed/20 p-4 rounded-lg flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-kicker text-kicker uppercase text-secondary tracking-wider font-semibold">Incoming Spreadsheet Row #84</span>
+<span class="text-xs font-semibold text-secondary">Enriched Data Detected</span>
+</div>
+<div class="grid grid-cols-2 gap-2 font-body-sm text-body-sm">
+<div>
+<span class="text-on-surface-variant text-xs block">Full Name</span>
+<span class="font-medium text-on-surface">Sarah Jenkins &amp; Partner</span>
+</div>
+<div>
+<span class="text-on-surface-variant text-xs block">Circle Tag</span>
+<span class="font-medium text-on-surface">Close Friends</span>
+</div>
+<div>
+<span class="text-on-surface-variant text-xs block">Seat Allocation</span>
+<span class="font-medium text-secondary font-semibold">2 Pax (VIP Table 04 Note appended)</span>
+</div>
+<div>
+<span class="text-on-surface-variant text-xs block">WhatsApp</span>
+<span class="font-mono text-on-surface">+44 7911 123456</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Subtle Concierge Note -->
+<div class="flex items-center justify-between text-on-surface-variant pt-1 font-body-sm text-body-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary">info</span>
+<span>Remaining 2 duplicate conflicts match the global default ("Update Existing &amp; Merge").</span>
+</div>
+<button class="font-label-caps text-label-caps uppercase text-secondary hover:underline">
+          Review other 2 conflicts individually →
+        </button>
+</div>
+</div>
+<!-- Assurance & Security Details -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 py-4">
+<div class="flex items-start gap-3 p-4 bg-surface-container-low rounded-lg">
+<span class="material-symbols-outlined text-secondary text-[24px]">lock_reset</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface text-[17px] font-medium">Reversible at Any Time</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Every import batch creates an automatic snapshot. You can undo or rollback with a single click.</span>
+</div>
+</div>
+<div class="flex items-start gap-3 p-4 bg-surface-container-low rounded-lg">
+<span class="material-symbols-outlined text-secondary text-[24px]">link</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface text-[17px] font-medium">Instant Vanity Links</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Unique guest tokens (`momentkita.id/to/sarah-jenkins`) are reserved and debossed dynamically.</span>
+</div>
+</div>
+<div class="flex items-start gap-3 p-4 bg-surface-container-low rounded-lg">
+<span class="material-symbols-outlined text-secondary text-[24px]">contact_support</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface text-[17px] font-medium">Atelier WhatsApp Desk</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Have an unusual file format? Tap Concierge to let our specialists format your list complimentary.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Confirmation & Execution Sticky Bottom Dock -->
+<div class="sticky bottom-0 left-0 right-0 z-40 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_-8px_24px_rgba(0,0,0,0.06)] py-4 px-8 mt-8">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+<!-- Left: Telemetry Digest -->
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-on-secondary flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">groups</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold text-[19px]">Ready to import 238 Guests</span>
+<span class="px-2 py-0.5 bg-surface-container-high rounded-full font-label-caps text-label-caps text-on-surface-variant uppercase">3 Merged</span>
+<span class="px-2 py-0.5 bg-surface-container-high rounded-full font-label-caps text-label-caps text-on-surface-variant uppercase">10 Skipped</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+            Final suite directory will increase from 125 to <strong>363 registered guests</strong>.
+          </span>
+</div>
+</div>
+<!-- Right: Action Buttons -->
+<div class="flex items-center gap-4">
+<button class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-on-surface transition-colors px-4 py-2.5">
+          Cancel &amp; Discard
+        </button>
+<button class="font-label-caps text-label-caps uppercase text-secondary hover:text-on-surface transition-colors px-3 py-2.5 flex items-center gap-1.5" title="Export report of any skipped rows">
+<span class="material-symbols-outlined text-[17px]">receipt_long</span>
+<span>Download Skipped Log</span>
+</button>
+<button class="h-12 px-8 bg-secondary hover:bg-primary text-on-secondary transition-all font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-2 shadow-md hover:shadow-lg active:scale-95" id="importSubmitBtn" onclick="handleImportSuccess()">
+<span>Import 238 Guests Now</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function handleImportSuccess() {
+    const btn = document.getElementById('importSubmitBtn');
+    if (btn) {
+      btn.innerHTML = `<span class="material-symbols-outlined animate-spin text-[18px]">progress_activity</span><span>Dispatching to Atelier...</span>`;
+      btn.classList.add('opacity-90', 'pointer-events-none');
+      setTimeout(() => {
+        btn.innerHTML = `<span class="material-symbols-outlined text-[18px]">check_circle</span><span>238 Guests Integrated</span>`;
+        btn.classList.remove('bg-secondary');
+        btn.classList.add('bg-primary');
+      }, 1400);
+    }
+  }
+</script></main></div></body></html>

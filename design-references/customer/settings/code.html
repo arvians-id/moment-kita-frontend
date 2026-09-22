@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&amp;family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-highest":"#e5e2dc","tertiary-fixed":"#ffdad3","surface-bright":"#fcf9f3","on-secondary":"#ffffff","on-tertiary-fixed-variant":"#753224","secondary-fixed":"#ffdbcf","on-primary":"#ffffff","surface-container-lowest":"#ffffff","secondary-fixed-dim":"#ffb59c","inverse-on-surface":"#f3f0ea","on-primary-fixed-variant":"#474746","primary":"#000000","inverse-primary":"#c8c6c5","secondary":"#8c4d37","tertiary-fixed-dim":"#ffb4a4","on-primary-fixed":"#1c1b1b","error":"#ba1a1a","on-surface-variant":"#444748","error-container":"#ffdad6","surface-dim":"#dcdad4","on-error-container":"#93000a","on-surface":"#1c1c18","tertiary":"#000000","outline-variant":"#c4c7c7","on-secondary-fixed-variant":"#703722","primary-fixed":"#e5e2e1","primary-fixed-dim":"#c8c6c5","outline":"#747878","on-tertiary-container":"#c06d5b","surface":"#fcf9f3","on-secondary-container":"#7a3e29","surface-container-high":"#ebe8e2","surface-variant":"#e5e2dc","surface-container-low":"#f6f3ed","secondary-container":"#ffad91","on-error":"#ffffff","on-tertiary":"#ffffff","inverse-surface":"#31312d","background":"#fcf9f3","on-primary-container":"#858383","on-secondary-fixed":"#380d00","tertiary-container":"#3c0801","primary-container":"#1c1b1b","on-tertiary-fixed":"#3c0801","surface-tint":"#5f5e5e","surface-container":"#f0eee8","on-background":"#1c1c18"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-xl":"3rem",gutter:"2rem","space-xs":"0.25rem","space-lg":"1.75rem","gutter-mobile":"1rem",margin:"3.5rem","space-sm":"0.5rem","margin-mobile":"1.25rem","space-md":"1rem"},fontFamily:{"headline-md":["Playfair Display"],"body-lg":["Plus Jakarta Sans"],"headline-sm":["Playfair Display"],"label-caps":["Plus Jakarta Sans"],"headline-xl-mobile":["Playfair Display"],"headline-lg":["Playfair Display"],"headline-lg-mobile":["Playfair Display"],kicker:["Plus Jakarta Sans"],"display-hero":["Playfair Display"],"body-sm":["Plus Jakarta Sans"],"quote-editorial":["Playfair Display"],"headline-xl":["Playfair Display"],"display-hero-mobile":["Playfair Display"],"body-md":["Plus Jakarta Sans"]},fontSize:{"headline-md":["28px",{lineHeight:"36px",letterSpacing:"-0.01em",fontWeight:"500"}],"body-lg":["18px",{lineHeight:"30px",letterSpacing:"-0.01em",fontWeight:"400"}],"headline-sm":["22px",{lineHeight:"30px",letterSpacing:"0em",fontWeight:"600"}],"label-caps":["12px",{lineHeight:"16px",letterSpacing:"0.12em",fontWeight:"600"}],"headline-xl-mobile":["36px",{lineHeight:"42px",letterSpacing:"-0.01em",fontWeight:"400"}],"headline-lg":["40px",{lineHeight:"48px",letterSpacing:"-0.015em",fontWeight:"400"}],"headline-lg-mobile":["28px",{lineHeight:"34px",letterSpacing:"0em",fontWeight:"400"}],kicker:["11px",{lineHeight:"16px",letterSpacing:"0.2em",fontWeight:"600"}],"display-hero":["84px",{lineHeight:"92px",letterSpacing:"-0.03em",fontWeight:"400"}],"body-sm":["13px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"400"}],"quote-editorial":["24px",{lineHeight:"36px",letterSpacing:"0em",fontWeight:"400"}],"headline-xl":["56px",{lineHeight:"64px",letterSpacing:"-0.02em",fontWeight:"400"}],"display-hero-mobile":["44px",{lineHeight:"48px",letterSpacing:"-0.02em",fontWeight:"400"}],"body-md":["15px",{lineHeight:"24px",letterSpacing:"0em",fontWeight:"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col h-full overflow-y-auto"><div class="px-6 pt-6 pb-4"><div class="flex items-center gap-3"><div class="w-9 h-9 rounded-full bg-secondary flex items-center justify-center text-on-secondary shadow-sm"><span class="material-symbols-outlined text-[20px]">history_edu</span></div><div><span class="block font-headline-sm text-headline-sm tracking-tight text-primary leading-none">Moment Kita</span><span class="block font-kicker text-kicker uppercase text-secondary tracking-widest mt-1">L'Atelier Nuance</span></div></div></div><div class="px-4 py-2"><div class="bg-surface-container px-3 py-2.5 rounded-lg flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.02)]"><div class="flex items-center gap-2.5"><div class="w-6 h-6 rounded-full bg-secondary-fixed flex items-center justify-center"><span class="material-symbols-outlined text-secondary text-[14px]">auto_awesome</span></div><div class="leading-tight"><p class="font-kicker text-kicker uppercase text-secondary font-semibold">Suite Active</p><p class="font-body-sm text-body-sm font-medium text-on-surface truncate max-w-[120px]">Raka &amp; Ayu</p></div></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">unfold_more</span></div></div><nav class="flex-1 px-4 py-3 space-y-6" data-active-classes="bg-surface-container-highest text-secondary font-medium shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="space-y-1"><p class="px-3 font-kicker text-kicker uppercase text-on-surface-variant tracking-wider">Overview</p><a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[18px]">dashboard</span><span class="font-body-sm text-body-sm">Dashboard</span></a></div><div class="space-y-1"><p class="px-3 font-kicker text-kicker uppercase text-on-surface-variant tracking-wider">Wedding</p><a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="my-invitations" href="#"><span class="material-symbols-outlined text-[18px]">style</span><span class="font-body-sm text-body-sm">My Invitations</span></a></div><div class="space-y-1.5"><div class="px-3 flex items-center justify-between"><p class="font-kicker text-kicker uppercase text-on-surface-variant tracking-wider">Current Workspace</p><span class="material-symbols-outlined text-[14px] text-on-surface-variant">expand_more</span></div><div class="mx-1 p-2.5 rounded-lg bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.03)] mb-2"><div class="flex items-center justify-between mb-1"><span class="font-headline-sm text-headline-sm text-[15px] font-semibold text-primary leading-snug">Raka &amp; Ayu</span><span class="bg-secondary-fixed text-on-secondary-fixed-variant font-label-caps text-[10px] px-1.5 py-0.5 rounded tracking-widest font-semibold">PUBLISHED</span></div><p class="font-kicker text-kicker text-on-surface-variant">BESPOKE SUITE ARCHIVE</p></div><div class="space-y-0.5 pl-2"><a class="flex items-center gap-3 px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="overview" href="#"><span class="material-symbols-outlined text-[18px]">view_quilt</span><span class="font-body-sm text-body-sm">Overview</span></a><a class="flex items-center gap-3 px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="edit-invitation-studio" href="#"><span class="material-symbols-outlined text-[18px]">draw</span><span class="font-body-sm text-body-sm">Edit Invitation (Studio)</span></a><a class="flex items-center gap-3 px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="guests" href="#"><span class="material-symbols-outlined text-[18px]">group</span><span class="font-body-sm text-body-sm">Guests</span></a><a class="flex items-center gap-3 px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="rsvp" href="#"><span class="material-symbols-outlined text-[18px]">event_available</span><span class="font-body-sm text-body-sm">RSVP</span></a><a class="flex items-center gap-3 px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="wishes" href="#"><span class="material-symbols-outlined text-[18px]">favorite</span><span class="font-body-sm text-body-sm">Wishes</span></a><a class="flex items-center gap-3 px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="digital-gift" href="#"><span class="material-symbols-outlined text-[18px]">redeem</span><span class="font-body-sm text-body-sm">Digital Gift</span></a><a class="flex items-center gap-3 px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="version-history" href="#"><span class="material-symbols-outlined text-[18px]">restore</span><span class="font-body-sm text-body-sm">Version History</span></a></div></div><div class="space-y-1"><p class="px-3 font-kicker text-kicker uppercase text-on-surface-variant tracking-wider">Account</p><a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="transactions" href="#"><span class="material-symbols-outlined text-[18px]">receipt_long</span><span class="font-body-sm text-body-sm">Transactions</span></a><a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="notifications" href="#"><span class="material-symbols-outlined text-[18px]">notifications</span><span class="font-body-sm text-body-sm">Notifications</span></a><a aria-current="page" class="flex items-center gap-3 px-3 py-2 rounded-lg transition-colors bg-surface-container-highest text-secondary font-medium shadow-[0_1px_8px_rgba(0,0,0,0.03)]" data-path="settings" href="#"><span class="material-symbols-outlined text-[18px]">settings</span><span class="font-body-sm text-body-sm">Settings</span></a></div></nav><div class="p-4 mt-auto"><div class="bg-surface-container p-3.5 rounded-xl shadow-[0_1px_8px_rgba(0,0,0,0.02)] space-y-2"><div class="flex items-center justify-between"><span class="font-kicker text-kicker uppercase text-secondary font-semibold">Tier Status</span><span class="font-label-caps text-label-caps bg-surface-container-highest px-2 py-0.5 rounded text-on-surface-variant">1 Left</span></div><div><p class="font-headline-sm text-headline-sm text-[14px] text-primary">Signature Suite</p><p class="font-body-sm text-[11px] text-on-surface-variant leading-relaxed">WS — Widdy &amp; Sarah / Ayu &amp; Raka Daniswara</p></div><div class="pt-1 flex items-center justify-between text-on-surface-variant"><span class="font-kicker text-kicker uppercase text-secondary font-medium">Couple Workspace</span><span class="material-symbols-outlined text-[14px]">verified</span></div></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-8 flex items-center justify-between gap-4"><div class="flex items-center gap-3"><div class="bg-surface-container px-3 py-1.5 rounded-lg flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-[16px]">domain</span><span class="font-body-sm text-body-sm font-medium text-on-surface">Moment Kita Atelier Client Suite</span><span class="material-symbols-outlined text-on-surface-variant text-[16px]">expand_more</span></div></div><div class="flex items-center gap-4"><button class="bg-primary text-on-primary hover:bg-secondary font-label-caps text-label-caps px-4 py-2 rounded-lg flex items-center gap-2 transition-colors shadow-sm" type="button"><span class="material-symbols-outlined text-[16px]">add</span><span>New Invitation</span></button><div class="relative flex items-center justify-center"><button class="w-9 h-9 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span></button><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-secondary ring-2 ring-surface"></span></div><div class="h-6 w-px bg-outline-variant/30"></div><div class="flex items-center gap-3"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden md:block leading-tight text-left"><p class="font-body-sm text-body-sm font-medium text-on-surface">Widdy Arfiansyah</p><p class="font-kicker text-kicker text-on-surface-variant uppercase">Couple Account</p></div></div></div></div></header><main class="relative pt-16 bg-background w-full min-h-screen"><div class="flex flex-col w-full">
+<div class="w-full max-w-[1440px] mx-auto px-6 lg:px-12 py-8 space-y-10">
+<!-- 1. Breadcrumb & Security Reassurance Ribbon -->
+<div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+<div class="flex items-center gap-2">
+<span class="font-kicker text-kicker uppercase text-on-surface-variant">Account</span>
+<span class="font-body-sm text-body-sm text-outline-variant">/</span>
+<span class="font-label-caps text-label-caps text-secondary font-semibold uppercase tracking-wider">Settings &amp; Preferences</span>
+</div>
+<div class="flex flex-wrap items-center gap-2.5">
+<div class="flex items-center gap-1.5 px-2.5 py-1 bg-surface-container rounded-full shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-kicker text-kicker uppercase text-on-surface-variant tracking-wider">Session Encrypted</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 bg-surface-container rounded-full shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-secondary">verified_user</span>
+<span class="font-kicker text-kicker uppercase text-on-surface-variant tracking-wider">Indonesian PDP Compliant</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 bg-surface-container rounded-full shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-secondary">lock_reset</span>
+<span class="font-kicker text-kicker uppercase text-on-surface-variant tracking-wider">Auto-Guard Active</span>
+</div>
+</div>
+</div>
+<!-- 2. Page Header & Studio Dispatch Notice -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<div class="lg:col-span-7 space-y-2">
+<div class="flex items-center gap-2 text-secondary">
+<span class="material-symbols-outlined text-[16px]">settings_account_box</span>
+<span class="font-kicker text-kicker uppercase tracking-widest font-semibold">Atelier Account Suite — Personal Settings</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Settings</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+          Manage your personal identity, atelier authentication credentials, and customer notification preferences across active suites.
+        </p>
+</div>
+<div class="lg:col-span-5">
+<div class="bg-surface-container-low p-5 rounded-xl shadow-sm space-y-3 relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-secondary-fixed opacity-40 blur-xl pointer-events-none"></div>
+<div class="flex items-start gap-3.5">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center shrink-0 text-secondary">
+<span class="material-symbols-outlined text-[20px]">style</span>
+</div>
+<div class="space-y-1">
+<p class="font-headline-sm text-[16px] text-primary leading-snug">Looking for wedding details?</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Guest lists, RSVP triggers, background songs, and digital envelope accounts are tailored directly in the active wedding workspace.
+              </p>
+</div>
+</div>
+<div class="pt-1 flex justify-end">
+<a class="inline-flex items-center gap-1.5 font-label-caps text-label-caps text-secondary font-semibold hover:text-primary transition-colors group" href="#">
+<span>Manage Raka &amp; Ayu in Studio</span>
+<span class="material-symbols-outlined text-[14px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- 3. Dual Column Layout: Left Sticky Profile & Tabs, Right Deep Panels -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+<!-- Left Rail: Segmented Navigation & Monogram Profile Summary -->
+<div class="lg:col-span-4 space-y-6 lg:sticky lg:top-24">
+<!-- Segmented Tab Navigation -->
+<nav class="bg-surface-container-low p-2 rounded-xl shadow-sm space-y-1" id="settings-tab-list">
+<button class="w-full flex items-center justify-between p-3 rounded-lg bg-surface-container-highest text-secondary shadow-sm transition-all text-left" id="nav-tab-profile" onclick="switchSettingsTab('tab-profile')" type="button">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[18px]">person</span>
+</div>
+<div class="leading-tight">
+<p class="font-body-sm text-body-sm font-semibold text-primary">Profile Details</p>
+<p class="font-kicker text-kicker text-on-surface-variant">Personal info &amp; contact</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-3 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all text-left" id="nav-tab-security" onclick="switchSettingsTab('tab-security')" type="button">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant shrink-0">
+<span class="material-symbols-outlined text-[18px]">shield</span>
+</div>
+<div class="leading-tight">
+<p class="font-body-sm text-body-sm font-semibold text-on-surface">Account &amp; Security</p>
+<p class="font-kicker text-kicker text-on-surface-variant">Credentials &amp; active session</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-3 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all text-left" id="nav-tab-notifications" onclick="switchSettingsTab('tab-notifications')" type="button">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant shrink-0">
+<span class="material-symbols-outlined text-[18px]">notifications</span>
+</div>
+<div class="leading-tight">
+<p class="font-body-sm text-body-sm font-semibold text-on-surface">Notification Preferences</p>
+<p class="font-kicker text-kicker text-on-surface-variant">In-app &amp; email dispatch</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</nav>
+<!-- Monogram Profile Summary Card -->
+<div class="bg-surface-container-low p-6 rounded-xl shadow-sm space-y-6">
+<div class="flex items-center gap-4">
+<div class="relative w-16 h-16 rounded-full overflow-hidden shadow-sm shrink-0 bg-surface-container-high flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Portrait photograph of Widdy Arfiansyah in refined linen attire with soft natural morning light in an architectural atelier studio with subtle warm beige shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5MXz8BJalbglwYMvHwrtBPA61Jie2CAsqsujk4waWV1-yQkCdDj9WOempG4u-XLSVqbKTc8UWcPgX3vhNJzZyPrjZu8qYLnfpowWZNmKRxWhykbQezcErpKBDASMwSnuMAk3JIaWksjVa0pICrehsHrmles71hwo6HUkkJYSNEp-Gfn5BTB2soNuvhPkaF7pbr8Ji_gyVDDg_o9-ym02xInaWwddo_HHvC9bZHTSiCvS_glIvnnw"/>
+</div>
+<div class="leading-tight min-w-0">
+<div class="flex items-center gap-1.5">
+<p class="font-headline-sm text-[18px] text-primary truncate font-semibold">Widdy Arfiansyah</p>
+<span class="material-symbols-outlined text-secondary text-[16px]">verified</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">widdy@example.com</p>
+<div class="pt-1.5">
+<span class="inline-block px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-caps text-[10px] tracking-widest font-semibold">
+                  SIGNATURE SUITE
+                </span>
+</div>
+</div>
+</div>
+<div class="space-y-2.5 pt-2">
+<div class="flex items-center justify-between font-body-sm text-body-sm py-1">
+<span class="text-on-surface-variant">Member Since</span>
+<span class="font-medium text-primary">September 2026</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm py-1">
+<span class="text-on-surface-variant">Primary Suite</span>
+<span class="font-medium text-primary">Raka &amp; Ayu</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm py-1">
+<span class="text-on-surface-variant">Account ID</span>
+<span class="font-kicker text-kicker uppercase text-secondary font-mono">MK-ID-88421</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm py-1">
+<span class="text-on-surface-variant">Status</span>
+<span class="inline-flex items-center gap-1 text-secondary font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Verified Customer
+              </span>
+</div>
+</div>
+<!-- Atelier Archival Monogram Visual -->
+<div class="p-3 bg-surface-container rounded-lg flex items-center gap-3">
+<div class="w-7 h-7 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[15px]">token</span>
+</div>
+<p class="font-kicker text-kicker uppercase text-on-surface-variant leading-relaxed">
+              Bespoke typography and seal privileges active for 2 invitations.
+            </p>
+</div>
+</div>
+</div>
+<!-- Right Main Workspace -->
+<div class="lg:col-span-8 space-y-10">
+<!-- ==================== SECTION A: PROFILE ==================== -->
+<section class="space-y-6" id="section-profile">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest font-semibold">01 — Atelier Identity</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary">Personal Profile</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Personal details used on customer invoices, reservation credentials, and live studio collaboration.
+            </p>
+</div>
+<!-- Profile Photo Uploader Box -->
+<div class="bg-surface-container-low p-6 rounded-xl shadow-sm space-y-4">
+<p class="font-label-caps text-label-caps text-primary uppercase tracking-wider">Atelier Portrait</p>
+<div class="flex flex-col sm:flex-row sm:items-center gap-6">
+<div class="relative w-24 h-24 rounded-full overflow-hidden bg-surface-container-high shadow-md shrink-0">
+<img class="w-full h-full object-cover" data-alt="High quality studio headshot of Widdy Arfiansyah with neutral background, sharp soft lighting, warm editorial ivory tone" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8J36bJnWx5A6YbTtL-SoFANIK6IOKZ2Cpo-RJSYnRKCjXh9z6OG70y4yElYNfTe9OImaIawH5JBv44_w_AamhTelV_qmcRR97smxXJwj6wzi9QbQzN_QvU9dJvEYV-LUz422u1_3AOYO0TvSeMgVZoyjb5hF-jc6kNA5YhFpepSP5UjguM3nRNX27TTy0rRdGdCdtisIAiVBgl04AJ4CISnx24HTulfWGjCG5N8u-44Wwy8725Dc"/>
+<button class="absolute inset-0 bg-primary/40 opacity-0 hover:opacity-100 transition-opacity flex items-center justify-center text-white" type="button">
+<span class="material-symbols-outlined text-[20px]">photo_camera</span>
+</button>
+</div>
+<div class="space-y-3">
+<div class="flex flex-wrap items-center gap-3">
+<button class="px-4 py-2 bg-secondary text-on-secondary hover:bg-primary font-label-caps text-label-caps rounded-lg transition-colors shadow-sm flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[16px]">upload</span>
+<span>Upload New Photo</span>
+</button>
+<button class="px-4 py-2 bg-surface-container text-on-surface hover:bg-surface-container-high font-label-caps text-label-caps rounded-lg transition-colors" type="button">
+                    Remove Photo
+                  </button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-normal">
+                  Recommended: Square JPG or PNG, at least 400×400px. Appears across your Atelier collaboration workspace and invoice headers.
+                </p>
+</div>
+</div>
+</div>
+<!-- Form Fields -->
+<div class="bg-surface-container-low p-6 rounded-xl shadow-sm space-y-6">
+<div class="space-y-4">
+<!-- Full Name Field -->
+<div class="space-y-1.5">
+<label class="block font-label-caps text-label-caps uppercase text-primary tracking-wider" for="fullName">
+                  Full Name
+                </label>
+<input class="w-full px-4 py-2.5 bg-surface-container-lowest rounded-lg font-body-md text-body-md text-primary focus:outline-none focus:bg-surface-bright shadow-sm transition-colors" id="fullName" placeholder="e.g. Widdy Arfiansyah" type="text" value="Widdy Arfiansyah"/>
+<p class="font-kicker text-kicker text-on-surface-variant">Your full name as displayed on customer account receipts and suite ownership records.</p>
+</div>
+<!-- Email Address Field with Intentional Modal Trigger -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between">
+<label class="block font-label-caps text-label-caps uppercase text-primary tracking-wider" for="userEmail">
+                    Primary Atelier Email
+                  </label>
+<span class="inline-flex items-center gap-1 font-kicker text-kicker text-secondary font-semibold uppercase">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                    Verified Primary
+                  </span>
+</div>
+<div class="flex flex-col sm:flex-row gap-2.5">
+<input class="flex-1 px-4 py-2.5 bg-surface-container rounded-lg font-body-md text-body-md text-on-surface cursor-not-allowed select-none shadow-sm" id="userEmail" readonly="" type="email" value="widdy@example.com"/>
+<button class="px-4 py-2.5 bg-surface-container-highest hover:bg-surface-container text-primary font-label-caps text-label-caps rounded-lg transition-colors shrink-0 flex items-center justify-center gap-1.5 shadow-sm" onclick="toggleEmailModal(true)" type="button">
+<span class="material-symbols-outlined text-[16px]">mail</span>
+<span>Change Email</span>
+</button>
+</div>
+<p class="font-kicker text-kicker text-on-surface-variant">Email is strictly used to authenticate into Moment Kita and receive high-priority wedding receipts.</p>
+</div>
+<!-- Indonesian Phone / WhatsApp Number -->
+<div class="space-y-1.5">
+<label class="block font-label-caps text-label-caps uppercase text-primary tracking-wider" for="phoneNumber">
+                  WhatsApp / Contact Phone
+                </label>
+<div class="flex gap-2">
+<div class="px-3.5 py-2.5 bg-surface-container-highest rounded-lg font-body-md text-body-md font-medium text-primary flex items-center gap-1.5 select-none shrink-0 shadow-sm">
+<span class="font-kicker text-kicker text-secondary font-bold">ID</span>
+<span>+62</span>
+</div>
+<input class="flex-1 px-4 py-2.5 bg-surface-container-lowest rounded-lg font-body-md text-body-md text-primary focus:outline-none focus:bg-surface-bright shadow-sm transition-colors" id="phoneNumber" placeholder="812 3456 7890" type="tel" value="822 1234 5678"/>
+</div>
+<p class="font-kicker text-kicker text-on-surface-variant">
+                  Standard Indonesian mobile format (no leading 0 required). Used for urgent RSVP threshold digests and billing verifications via WhatsApp Concierge.
+                </p>
+</div>
+<!-- Preferred Language / Regional Atelier Setting -->
+<div class="space-y-1.5 pt-1">
+<label class="block font-label-caps text-label-caps uppercase text-primary tracking-wider">
+                  Customer Locale &amp; Regional Currency
+                </label>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div class="p-3 bg-surface-container-lowest rounded-lg shadow-sm flex items-center justify-between">
+<div>
+<p class="font-body-sm text-body-sm font-medium text-primary">Bahasa Indonesia &amp; English</p>
+<p class="font-kicker text-kicker text-on-surface-variant">Bilingual Customer Experience</p>
+</div>
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+</div>
+<div class="p-3 bg-surface-container-lowest rounded-lg shadow-sm flex items-center justify-between">
+<div>
+<p class="font-body-sm text-body-sm font-medium text-primary">Indonesian Rupiah (IDR — Rp)</p>
+<p class="font-kicker text-kicker text-on-surface-variant">Standard Indonesian Gateway</p>
+</div>
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Save Bar for Profile -->
+<div class="pt-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex items-center gap-2 text-secondary">
+<span class="material-symbols-outlined text-[18px]">cloud_done</span>
+<span class="font-kicker text-kicker uppercase tracking-wider font-semibold">All changes saved to personal cloud</span>
+</div>
+<button class="px-6 py-2.5 bg-primary hover:bg-secondary text-on-primary font-label-caps text-label-caps rounded-lg transition-colors shadow-sm flex items-center justify-center gap-2" onclick="simulateProfileSave(this)" type="button">
+<span class="material-symbols-outlined text-[16px]">save</span>
+<span>Save Profile</span>
+</button>
+</div>
+</div>
+</section>
+<!-- ==================== SECTION B: ACCOUNT & SECURITY ==================== -->
+<section class="space-y-6 pt-4" id="section-security">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest font-semibold">02 — Security &amp; Keys</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary">Account &amp; Security</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Manage your Atelier login authentication, password safety protocols, and currently authorized client sessions.
+            </p>
+</div>
+<!-- Authentication Method Card -->
+<div class="bg-surface-container-low p-6 rounded-xl shadow-sm space-y-4">
+<div class="flex items-start justify-between gap-4">
+<div class="flex items-start gap-3.5">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary shrink-0 shadow-sm">
+<!-- Google G Monogram -->
+<svg class="w-5 h-5" viewbox="0 0 24 24">
+<path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
+<path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path>
+<path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"></path>
+<path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"></path>
+</svg>
+</div>
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<p class="font-headline-sm text-[16px] text-primary">Google OAuth Connected</p>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-secondary font-label-caps text-[10px] uppercase font-semibold">Active</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Authenticated through <span class="font-medium text-primary">widdy@gmail.com</span>. You can also establish a direct Atelier password below for multi-channel backup.
+                  </p>
+</div>
+</div>
+<button class="px-3.5 py-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-caps text-label-caps rounded-lg transition-colors shrink-0" type="button">
+                Manage
+              </button>
+</div>
+</div>
+<!-- Password Management & Inline Card -->
+<div class="bg-surface-container-low p-6 rounded-xl shadow-sm space-y-5">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-1">
+<div class="space-y-1">
+<p class="font-label-caps text-label-caps text-primary uppercase tracking-wider">Atelier Password</p>
+<div class="flex items-center gap-3">
+<span class="font-mono text-primary font-bold text-lg tracking-widest">••••••••••••••</span>
+<span class="font-kicker text-kicker text-on-surface-variant">Updated on 12 Sep 2026</span>
+</div>
+</div>
+<button class="px-4 py-2 bg-secondary text-on-secondary hover:bg-primary font-label-caps text-label-caps rounded-lg transition-colors shadow-sm flex items-center justify-center gap-2 self-start sm:self-auto" id="btn-toggle-password" onclick="togglePasswordForm()" type="button">
+<span class="material-symbols-outlined text-[16px]">key</span>
+<span>Change Password</span>
+</button>
+</div>
+<!-- Expandable Password Form -->
+<div class="hidden pt-4 space-y-4 bg-surface-container p-5 rounded-lg" id="password-form-drawer">
+<p class="font-headline-sm text-[16px] text-primary">Set New Atelier Password</p>
+<div class="space-y-3">
+<div class="space-y-1">
+<label class="block font-label-caps text-label-caps uppercase text-on-surface-variant">Current Password</label>
+<div class="relative">
+<input class="w-full px-4 py-2 bg-surface-container-lowest rounded-lg font-body-sm text-body-sm text-primary pr-10 focus:outline-none shadow-sm" id="currentPass" placeholder="Enter current password" type="password"/>
+<button class="absolute right-3 top-2.5 text-on-surface-variant hover:text-primary" onclick="togglePasswordVisibility('currentPass', this)" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div class="space-y-1">
+<label class="block font-label-caps text-label-caps uppercase text-on-surface-variant">New Password</label>
+<div class="relative">
+<input class="w-full px-4 py-2 bg-surface-container-lowest rounded-lg font-body-sm text-body-sm text-primary pr-10 focus:outline-none shadow-sm" id="newPass" placeholder="Minimum 8 characters" type="password"/>
+<button class="absolute right-3 top-2.5 text-on-surface-variant hover:text-primary" onclick="togglePasswordVisibility('newPass', this)" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</button>
+</div>
+</div>
+<div class="space-y-1">
+<label class="block font-label-caps text-label-caps uppercase text-on-surface-variant">Confirm New Password</label>
+<input class="w-full px-4 py-2 bg-surface-container-lowest rounded-lg font-body-sm text-body-sm text-primary focus:outline-none shadow-sm" id="confirmPass" placeholder="Re-type new password" type="password"/>
+</div>
+</div>
+<!-- Password Quality Rules -->
+<div class="p-3 bg-surface-container-lowest rounded-lg space-y-1.5 shadow-sm">
+<p class="font-kicker text-kicker uppercase text-secondary font-semibold">Security Requirement</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+<span class="flex items-center gap-1.5 font-body-sm text-[12px] text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-secondary">check</span> At least 8 characters
+                    </span>
+<span class="flex items-center gap-1.5 font-body-sm text-[12px] text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-secondary">check</span> Includes letters &amp; numerals
+                    </span>
+</div>
+</div>
+<div class="pt-2 flex items-center justify-end gap-3">
+<button class="px-4 py-2 bg-surface-container-highest hover:bg-surface-dim font-label-caps text-label-caps rounded-lg transition-colors" onclick="togglePasswordForm()" type="button">
+                    Cancel
+                  </button>
+<button class="px-5 py-2 bg-secondary hover:bg-primary text-on-secondary font-label-caps text-label-caps rounded-lg transition-colors shadow-sm" onclick="handlePasswordSubmit()" type="button">
+                    Update Password
+                  </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Active Sessions & Device Security -->
+<div class="bg-surface-container-low p-6 rounded-xl shadow-sm space-y-5">
+<div class="flex items-center justify-between">
+<div>
+<p class="font-label-caps text-label-caps text-primary uppercase tracking-wider">Active Device Sessions</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Devices currently authenticated to Moment Kita with your credentials.</p>
+</div>
+<span class="material-symbols-outlined text-secondary text-[20px]">devices</span>
+</div>
+<div class="space-y-3">
+<!-- Current Active Session -->
+<div class="p-4 bg-surface-container rounded-lg flex items-center justify-between gap-4 shadow-sm">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[20px]">laptop_mac</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<p class="font-body-sm text-body-sm font-semibold text-primary">MacBook Pro (Chrome 128)</p>
+<span class="px-2 py-0.2 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-caps text-[9px] uppercase font-bold tracking-wider">THIS DEVICE</span>
+</div>
+<p class="font-kicker text-kicker text-on-surface-variant">Jakarta, Indonesia • IP 182.1.24.12 • Active Now</p>
+</div>
+</div>
+<div class="w-2.5 h-2.5 rounded-full bg-secondary"></div>
+</div>
+<!-- Secondary Mobile Session -->
+<div class="p-4 bg-surface-container-lowest rounded-lg flex items-center justify-between gap-4 shadow-sm">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant shrink-0">
+<span class="material-symbols-outlined text-[20px]">phone_iphone</span>
+</div>
+<div>
+<p class="font-body-sm text-body-sm font-medium text-primary">iPhone 15 Pro (Safari Mobile)</p>
+<p class="font-kicker text-kicker text-on-surface-variant">Bandung, Indonesia • Last seen yesterday at 21:40 WIB</p>
+</div>
+</div>
+<span class="font-kicker text-kicker text-on-surface-variant">Valid</span>
+</div>
+</div>
+<!-- Reassuring Sign Out of Others CTA -->
+<div class="pt-2 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+                If you suspect unauthorized access or used a public computer, you can invalidate all sessions except this active one.
+              </p>
+<button class="px-4 py-2 bg-surface-container-highest hover:bg-surface-container text-primary font-label-caps text-label-caps rounded-lg transition-colors shadow-sm shrink-0" onclick="alert('All other remote devices have been securely signed out.')" type="button">
+                Sign Out Other Devices
+              </button>
+</div>
+</div>
+</section>
+<!-- ==================== SECTION C: NOTIFICATION PREFERENCES ==================== -->
+<section class="space-y-6 pt-4" id="section-notifications">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest font-semibold">03 — Communications</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary">Notification Preferences</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Specify how your celebration milestones, guest confirmations, and accounting receipts reach you.
+            </p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl shadow-sm space-y-6">
+<!-- Channel Legend Header -->
+<div class="flex items-center justify-between pb-3">
+<span class="font-label-caps text-label-caps uppercase text-primary tracking-wider">Dispatch Channels</span>
+<div class="flex items-center gap-8 sm:gap-12 pr-2">
+<span class="font-label-caps text-label-caps uppercase text-secondary font-semibold w-12 text-center">In-App</span>
+<span class="font-label-caps text-label-caps uppercase text-secondary font-semibold w-12 text-center">Email</span>
+</div>
+</div>
+<!-- Group 1: Wedding & Invitation Milestones -->
+<div class="space-y-3">
+<p class="font-kicker text-kicker uppercase text-on-surface-variant tracking-wider font-semibold">
+                Suite Milestones &amp; Archival Status
+              </p>
+<!-- Item 1.1 -->
+<div class="p-3.5 bg-surface-container-lowest rounded-lg shadow-sm flex items-center justify-between gap-4">
+<div class="space-y-0.5">
+<p class="font-body-sm text-body-sm font-medium text-primary">Invitation Published &amp; Status Changes</p>
+<p class="font-kicker text-kicker text-on-surface-variant">Alert when live link is activated, suspended, or finalized.</p>
+</div>
+<div class="flex items-center gap-8 sm:gap-12 shrink-0 pr-1">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</div>
+</div>
+<!-- Item 1.2 -->
+<div class="p-3.5 bg-surface-container-lowest rounded-lg shadow-sm flex items-center justify-between gap-4">
+<div class="space-y-0.5">
+<p class="font-body-sm text-body-sm font-medium text-primary">Invitation Expiration Buffer (14-Day Notice)</p>
+<p class="font-kicker text-kicker text-on-surface-variant">Essential reminders before active domain archiving begins.</p>
+</div>
+<div class="flex items-center gap-8 sm:gap-12 shrink-0 pr-1">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</div>
+</div>
+</div>
+<!-- Group 2: Guests & RSVP Activity -->
+<div class="space-y-3 pt-2">
+<p class="font-kicker text-kicker uppercase text-on-surface-variant tracking-wider font-semibold">
+                Guests &amp; RSVP Confirmation Activity
+              </p>
+<!-- Item 2.1 -->
+<div class="p-3.5 bg-surface-container-lowest rounded-lg shadow-sm flex items-center justify-between gap-4">
+<div class="space-y-0.5">
+<p class="font-body-sm text-body-sm font-medium text-primary">RSVP Milestone Digests (Every 10 Responses)</p>
+<p class="font-kicker text-kicker text-on-surface-variant">Batch summaries to avoid individual notification fatigue.</p>
+</div>
+<div class="flex items-center gap-8 sm:gap-12 shrink-0 pr-1">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</div>
+</div>
+<!-- Item 2.2 -->
+<div class="p-3.5 bg-surface-container-lowest rounded-lg shadow-sm flex items-center justify-between gap-4">
+<div class="space-y-0.5">
+<p class="font-body-sm text-body-sm font-medium text-primary">Guest Spreadsheet Import Results</p>
+<p class="font-kicker text-kicker text-on-surface-variant">Diagnostics when bulk CSV/Excel guest lists are processed.</p>
+</div>
+<div class="flex items-center gap-8 sm:gap-12 shrink-0 pr-1">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</div>
+</div>
+</div>
+<!-- Group 3: Wishes & Blessings -->
+<div class="space-y-3 pt-2">
+<p class="font-kicker text-kicker uppercase text-on-surface-variant tracking-wider font-semibold">
+                Wishes &amp; Guest Blessings
+              </p>
+<!-- Item 3.1 -->
+<div class="p-3.5 bg-surface-container-lowest rounded-lg shadow-sm flex items-center justify-between gap-4">
+<div class="space-y-0.5">
+<p class="font-body-sm text-body-sm font-medium text-primary">New Blessings Requiring Moderation</p>
+<p class="font-kicker text-kicker text-on-surface-variant">Kept In-App by default to prevent repetitive email pings.</p>
+</div>
+<div class="flex items-center gap-8 sm:gap-12 shrink-0 pr-1">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</div>
+</div>
+</div>
+<!-- Group 4: Payments & Commercial Entitlements -->
+<div class="space-y-3 pt-2">
+<p class="font-kicker text-kicker uppercase text-on-surface-variant tracking-wider font-semibold">
+                Billing, Payments &amp; Invoices
+              </p>
+<!-- Item 4.1 -->
+<div class="p-3.5 bg-surface-container-lowest rounded-lg shadow-sm flex items-center justify-between gap-4">
+<div class="space-y-0.5">
+<p class="font-body-sm text-body-sm font-medium text-primary">Payment Confirmation &amp; Tax Invoices</p>
+<p class="font-kicker text-kicker text-on-surface-variant">Receipts and Indonesian tax documents (always active by default for statutory records).</p>
+</div>
+<div class="flex items-center gap-8 sm:gap-12 shrink-0 pr-1">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" disabled="" type="checkbox"/>
+<div class="w-9 h-5 bg-secondary peer-focus:outline-none rounded-full peer after:content-[''] after:absolute after:top-[2px] after:right-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 opacity-80 cursor-not-allowed"></div>
+</label>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" disabled="" type="checkbox"/>
+<div class="w-9 h-5 bg-secondary peer-focus:outline-none rounded-full peer after:content-[''] after:absolute after:top-[2px] after:right-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 opacity-80 cursor-not-allowed"></div>
+</label>
+</div>
+</div>
+</div>
+<!-- Save Bar for Preferences -->
+<div class="pt-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-secondary">tune</span>
+<span class="font-kicker text-kicker uppercase tracking-wider">Instant dispatch synchronization active</span>
+</div>
+<button class="px-6 py-2.5 bg-secondary hover:bg-primary text-on-secondary font-label-caps text-label-caps rounded-lg transition-colors shadow-sm flex items-center justify-center gap-2" onclick="simulateNotifSave(this)" type="button">
+<span class="material-symbols-outlined text-[16px]">done_all</span>
+<span>Save Notification Preferences</span>
+</button>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- Editorial Footer Atelier Colophon -->
+<div class="pt-10 pb-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary">history_edu</span>
+<span class="font-kicker text-kicker uppercase tracking-wider">Moment Kita — L'Atelier Nuance Platform</span>
+</div>
+<p class="font-kicker text-kicker text-on-surface-variant">
+        Account Session ID: MK-JKT-AUTH-2026-X9 • Server Time: WIB (UTC+7)
+      </p>
+</div>
+</div>
+<!-- Change Email Intentional Modal -->
+<div class="fixed inset-0 bg-primary/40 backdrop-blur-sm z-50 hidden items-center justify-center p-4" id="email-modal">
+<div class="bg-surface-container-lowest max-w-md w-full rounded-xl shadow-xl p-6 space-y-5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">forward_to_inbox</span>
+</div>
+<p class="font-headline-sm text-[18px] text-primary">Change Primary Email</p>
+</div>
+<button class="text-on-surface-variant hover:text-primary" onclick="toggleEmailModal(false)" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+        For your security, a 6-digit confirmation pin will be sent to your new email before updating your login credentials.
+      </p>
+<div class="space-y-3">
+<div class="space-y-1">
+<label class="block font-label-caps text-label-caps uppercase text-primary tracking-wider">New Email Address</label>
+<input class="w-full px-4 py-2.5 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-primary focus:outline-none shadow-sm" id="newEmailInput" placeholder="e.g. widdy.wedding@domain.com" type="email"/>
+</div>
+<div class="space-y-1">
+<label class="block font-label-caps text-label-caps uppercase text-primary tracking-wider">Confirm Atelier Password</label>
+<input class="w-full px-4 py-2.5 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-primary focus:outline-none shadow-sm" placeholder="Enter password to verify" type="password"/>
+</div>
+</div>
+<div class="flex items-center justify-end gap-3 pt-2">
+<button class="px-4 py-2 bg-surface-container-highest text-primary font-label-caps text-label-caps rounded-lg hover:bg-surface-container transition-colors" onclick="toggleEmailModal(false)" type="button">
+          Cancel
+        </button>
+<button class="px-5 py-2 bg-secondary text-on-secondary hover:bg-primary font-label-caps text-label-caps rounded-lg transition-colors shadow-sm" onclick="handleSendEmailVerification()" type="button">
+          Send Verification PIN
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function switchSettingsTab(tabId) {
+    const tabs = ['tab-profile', 'tab-security', 'tab-notifications'];
+    tabs.forEach(t => {
+      const navBtn = document.getElementById('nav-' + t);
+      if (navBtn) {
+        if (t === tabId) {
+          navBtn.className = "w-full flex items-center justify-between p-3 rounded-lg bg-surface-container-highest text-secondary shadow-sm transition-all text-left";
+          const iconContainer = navBtn.querySelector('.rounded-lg');
+          if (iconContainer) {
+            iconContainer.className = "w-8 h-8 rounded-lg bg-surface flex items-center justify-center text-secondary shrink-0";
+          }
+        } else {
+          navBtn.className = "w-full flex items-center justify-between p-3 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all text-left";
+          const iconContainer = navBtn.querySelector('.rounded-lg');
+          if (iconContainer) {
+            iconContainer.className = "w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant shrink-0";
+          }
+        }
+      }
+    });
+
+    let targetElId = 'section-profile';
+    if (tabId === 'tab-security') targetElId = 'section-security';
+    if (tabId === 'tab-notifications') targetElId = 'section-notifications';
+
+    const targetEl = document.getElementById(targetElId);
+    if (targetEl) {
+      targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  function togglePasswordForm() {
+    const drawer = document.getElementById('password-form-drawer');
+    const btn = document.getElementById('btn-toggle-password');
+    if (drawer) {
+      if (drawer.classList.contains('hidden')) {
+        drawer.classList.remove('hidden');
+        if (btn) btn.innerHTML = '<span class="material-symbols-outlined text-[16px]">close</span><span>Cancel</span>';
+      } else {
+        drawer.classList.add('hidden');
+        if (btn) btn.innerHTML = '<span class="material-symbols-outlined text-[16px]">key</span><span>Change Password</span>';
+      }
+    }
+  }
+
+  function togglePasswordVisibility(inputId, btn) {
+    const input = document.getElementById(inputId);
+    if (!input) return;
+    const icon = btn.querySelector('.material-symbols-outlined');
+    if (input.type === 'password') {
+      input.type = 'text';
+      if (icon) icon.textContent = 'visibility_off';
+    } else {
+      input.type = 'password';
+      if (icon) icon.textContent = 'visibility';
+    }
+  }
+
+  function handlePasswordSubmit() {
+    const newPass = document.getElementById('newPass');
+    const confirmPass = document.getElementById('confirmPass');
+    if (!newPass.value || newPass.value.length < 8) {
+      alert('Password must be at least 8 characters long.');
+      return;
+    }
+    if (newPass.value !== confirmPass.value) {
+      alert('Passwords do not match. Please verify again.');
+      return;
+    }
+    alert('Atelier password updated successfully.');
+    togglePasswordForm();
+  }
+
+  function toggleEmailModal(show) {
+    const modal = document.getElementById('email-modal');
+    if (!modal) return;
+    if (show) {
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    } else {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+  }
+
+  function handleSendEmailVerification() {
+    const newEmail = document.getElementById('newEmailInput').value;
+    if (!newEmail || !newEmail.includes('@')) {
+      alert('Please provide a valid email address.');
+      return;
+    }
+    alert('Verification PIN dispatched to: ' + newEmail + '. Please check your inbox.');
+    toggleEmailModal(false);
+  }
+
+  function simulateProfileSave(btn) {
+    const origHtml = btn.innerHTML;
+    btn.innerHTML = '<span class="material-symbols-outlined text-[16px] animate-spin">sync</span><span>Saving...</span>';
+    setTimeout(() => {
+      btn.innerHTML = '<span class="material-symbols-outlined text-[16px]">check</span><span>Saved</span>';
+      setTimeout(() => {
+        btn.innerHTML = origHtml;
+      }, 2000);
+    }, 700);
+  }
+
+  function simulateNotifSave(btn) {
+    const origHtml = btn.innerHTML;
+    btn.innerHTML = '<span class="material-symbols-outlined text-[16px] animate-spin">sync</span><span>Updating...</span>';
+    setTimeout(() => {
+      btn.innerHTML = '<span class="material-symbols-outlined text-[16px]">check</span><span>Preferences Saved</span>';
+      setTimeout(() => {
+        btn.innerHTML = origHtml;
+      }, 2000);
+    }, 600);
+  }
+</script></main></div></body></html>

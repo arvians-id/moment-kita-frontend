@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "surface-variant": "#e5e2dc",
+          "error-container": "#ffdad6",
+          "on-primary-fixed": "#1c1b1b",
+          "on-primary-fixed-variant": "#474746",
+          "surface-container-lowest": "#ffffff",
+          "on-error-container": "#93000a",
+          "outline": "#747878",
+          "tertiary-fixed": "#ffdad3",
+          "on-primary": "#ffffff",
+          "primary": "#000000",
+          "surface-bright": "#fcf9f3",
+          "error": "#ba1a1a",
+          "inverse-surface": "#31312d",
+          "on-secondary-container": "#7a3e29",
+          "on-surface": "#1c1c18",
+          "secondary-fixed": "#ffdbcf",
+          "secondary-container": "#ffad91",
+          "on-error": "#ffffff",
+          "on-background": "#1c1c18",
+          "surface-tint": "#5f5e5e",
+          "on-tertiary-fixed": "#3c0801",
+          "surface-container-high": "#ebe8e2",
+          "on-surface-variant": "#444748",
+          "secondary": "#8c4d37",
+          "primary-fixed": "#e5e2e1",
+          "on-tertiary": "#ffffff",
+          "secondary-fixed-dim": "#ffb59c",
+          "tertiary-fixed-dim": "#ffb4a4",
+          "on-secondary": "#ffffff",
+          "surface-container": "#f0eee8",
+          "surface-container-highest": "#e5e2dc",
+          "on-primary-container": "#858383",
+          "surface-container-low": "#f6f3ed",
+          "inverse-on-surface": "#f3f0ea",
+          "surface-dim": "#dcdad4",
+          "background": "#fcf9f3",
+          "on-tertiary-container": "#c06d5b",
+          "tertiary": "#000000",
+          "outline-variant": "#c4c7c7",
+          "primary-fixed-dim": "#c8c6c5",
+          "on-secondary-fixed-variant": "#703722",
+          "on-tertiary-fixed-variant": "#753224",
+          "primary-container": "#1c1b1b",
+          "on-secondary-fixed": "#380d00",
+          "inverse-primary": "#c8c6c5",
+          "tertiary-container": "#3c0801",
+          "surface": "#fcf9f3"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-xs": "0.25rem",
+          "margin-mobile": "1.25rem",
+          "gutter": "2rem",
+          "space-xl": "3rem",
+          "margin": "3.5rem",
+          "gutter-mobile": "1rem",
+          "space-sm": "0.5rem",
+          "space-lg": "1.75rem",
+          "space-md": "1rem"
+        },
+        "fontFamily": {
+          "display-hero": [
+            "Playfair Display"
+          ],
+          "display-hero-mobile": [
+            "Playfair Display"
+          ],
+          "label-caps": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-xl-mobile": [
+            "Playfair Display"
+          ],
+          "body-md": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-sm": [
+            "Playfair Display"
+          ],
+          "kicker": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg": [
+            "Playfair Display"
+          ],
+          "headline-xl": [
+            "Playfair Display"
+          ],
+          "body-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-md": [
+            "Playfair Display"
+          ],
+          "headline-lg-mobile": [
+            "Playfair Display"
+          ],
+          "body-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "quote-editorial": [
+            "Playfair Display"
+          ]
+        },
+        "fontSize": {
+          "display-hero": [
+            "84px",
+            {
+              "lineHeight": "92px",
+              "letterSpacing": "-0.03em",
+              "fontWeight": "400"
+            }
+          ],
+          "display-hero-mobile": [
+            "44px",
+            {
+              "lineHeight": "48px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-caps": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.12em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-xl-mobile": [
+            "36px",
+            {
+              "lineHeight": "42px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-md": [
+            "15px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-sm": [
+            "22px",
+            {
+              "lineHeight": "30px",
+              "letterSpacing": "0em",
+              "fontWeight": "600"
+            }
+          ],
+          "kicker": [
+            "11px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.2em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg": [
+            "40px",
+            {
+              "lineHeight": "48px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-xl": [
+            "56px",
+            {
+              "lineHeight": "64px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-lg": [
+            "18px",
+            {
+              "lineHeight": "30px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-md": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-lg-mobile": [
+            "28px",
+            {
+              "lineHeight": "34px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-sm": [
+            "13px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "quote-editorial": [
+            "24px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-low z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-20 px-space-md flex items-center gap-space-sm bg-surface-container-low"><img alt="Brand logo. - Primary color: #1a1a1a
+- Font: playfairDisplay
+- Mode: light
+- Roundness: rounded-lg
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WRqdm6LQrsNtDYQH6alJWMkWfk8mr7SPqKl8gfl7AvBd40Jje4RrE22TykoB2RppbfnyAF2up2zNsWoEEOAzFuAN1npFQei0jfZqImhociqxHqkWuTOiZPCxGJmPYqxbPvy5Rx2weYo7U8hJdkx9NPou6jBCa_GrhtbmoggtyXUo9t6RX7e69grmpegVwtyw9hYyP4hsJ3T_vZnPOwt4eaQH75GZeWtOjhkaQqGZoTZVpuFOyuLFBC"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">Moment Kita</span><span class="font-kicker text-kicker text-secondary uppercase mt-space-xs">Studio Admin v2.4</span></div></div><div class="px-space-md py-space-sm"><nav class="space-y-space-md" data-active-classes="bg-secondary-container text-on-secondary-container font-semibold"><div class="space-y-space-xs"><p class="font-kicker text-kicker text-on-surface-variant uppercase px-space-sm py-space-xs">Overview</p><a class="flex items-center justify-between px-space-sm py-space-xs text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="dashboard" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">dashboard</span><span>Dashboard</span></div></a></div><div class="space-y-space-xs"><p class="font-kicker text-kicker text-on-surface-variant uppercase px-space-sm py-space-xs">Management</p><a class="flex items-center justify-between px-space-sm py-space-xs text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="customers" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">group</span><span>Customers</span></div></a><a class="flex items-center justify-between px-space-sm py-space-xs text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="invitations" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">mail</span><span>Invitations</span></div></a><a class="flex items-center justify-between px-space-sm py-space-xs text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="templates" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">style</span><span>Templates</span></div></a></div><div class="space-y-space-xs"><p class="font-kicker text-kicker text-secondary uppercase px-space-sm py-space-xs">Commerce</p><a class="flex items-center justify-between px-space-sm py-space-xs text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="transactions" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">receipt_long</span><span>Transactions</span></div><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span></a><a class="flex items-center justify-between px-space-sm py-space-xs text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="packages" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">inventory_2</span><span>Packages &amp; Quota</span></div></a><a class="flex items-center justify-between px-space-sm py-space-xs text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="printed-orders" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">print</span><span>Printed Orders</span></div></a></div><div class="space-y-space-xs"><p class="font-kicker text-kicker text-on-surface-variant uppercase px-space-sm py-space-xs">Operations</p><a class="flex items-center justify-between px-space-sm py-space-xs text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="notifications" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">notifications</span><span>Notifications</span></div><span class="px-space-xs py-0.5 bg-secondary-container text-on-secondary-container font-label-caps text-label-caps">3</span></a><a class="flex items-center justify-between px-space-sm py-space-xs text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="audit-logs" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">history</span><span>Audit Logs</span></div></a></div><div class="space-y-space-xs"><p class="font-kicker text-kicker text-on-surface-variant uppercase px-space-sm py-space-xs">System</p><a class="flex items-center justify-between px-space-sm py-space-xs text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="settings" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">settings</span><span>Settings</span></div></a></div></nav></div></div><div class="p-space-md m-space-sm bg-surface-container-high"><div class="flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="relative"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span class="absolute bottom-0 right-0 w-2 h-2 rounded-full bg-secondary"></span></div><div class="flex flex-col"><span class="font-label-caps text-label-caps text-on-surface">Atelier Admin</span><span class="font-kicker text-kicker text-on-surface-variant">SUPERUSER</span></div></div><div class="flex items-center gap-space-xs"><a class="text-on-surface-variant hover:text-on-surface p-space-xs transition-colors" href="#"><span class="material-symbols-outlined text-[16px]">logout</span></a></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/90 backdrop-blur-xl z-40 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs font-label-caps text-label-caps text-on-surface-variant"><span class="hover:text-on-surface transition-colors">COMMERCE</span><span class="text-outline-variant">/</span><span class="text-on-surface font-semibold">TRANSACTIONS</span></div><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-outline-variant text-[18px]">search</span><input class="pl-9 pr-space-md py-space-xs w-80 bg-surface-container text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm focus:outline-none" placeholder="Search transactions, invoice ID, client, or hash (CMD+K)" type="text"/></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container text-on-surface font-body-sm text-body-sm"><span class="material-symbols-outlined text-[16px] text-on-surface-variant">calendar_today</span><span>Oct 1 – Oct 31, 2025</span></div><button class="relative p-space-xs text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 bg-secondary rounded-full"></span></button><button class="px-space-md py-space-xs bg-surface-container-high text-on-surface hover:bg-surface-variant transition-colors font-label-caps text-label-caps" type="button">Export Ledger</button><button class="px-space-md py-space-xs bg-primary text-on-primary hover:bg-secondary transition-colors font-label-caps text-label-caps flex items-center gap-space-xs" type="button"><span class="material-symbols-outlined text-[16px]">add</span><span>Record Manual Payment</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="w-full pt-20 px-space-lg pb-space-xl bg-background"><div class="flex flex-col w-full">
+<!-- Toast / Flash Banner -->
+<div class="mb-space-lg p-space-sm bg-surface-container-high rounded flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
+<span class="font-kicker text-kicker uppercase text-secondary">Ledger Verification Desk</span>
+<span class="text-outline-variant">•</span>
+<p class="font-body-sm text-body-sm text-on-surface truncate">
+        Automated OCR engine matched receipt <span class="font-semibold text-on-surface">#TRF-BCA-982104-JKT</span> at 99.4% confidence. Awaiting final human authorization.
+      </p>
+</div>
+<div class="flex items-center gap-space-xs shrink-0">
+<span class="font-label-caps text-label-caps text-on-surface-variant">Hold Window Expires: <span class="text-secondary font-semibold">05h 42m</span></span>
+</div>
+</div>
+<!-- Primary Page Header / Dossier Overview -->
+<div class="mb-space-xl flex flex-col xl:flex-row xl:items-end justify-between gap-space-lg">
+<div class="flex flex-col space-y-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-kicker text-kicker text-secondary uppercase">Commerce / Dossier #TX-98419</span>
+<span class="text-outline-variant">/</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">INV-2025-0839</span>
+<button class="flex items-center gap-0.5 px-1.5 py-0.5 bg-surface-container text-on-surface-variant hover:text-on-surface text-body-sm transition-colors rounded" id="copyTxBtn">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span class="font-kicker text-kicker uppercase">Copy</span>
+</button>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Escrow Ledger Record</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+        Bespoke digital package entitlement and physical letterpress companion escrow settlement for <span class="italic text-on-surface font-quote-editorial">Sarah Jenkins &amp; Liam</span>.
+      </p>
+</div>
+<!-- Right Summary Metrics & CTAs -->
+<div class="flex flex-wrap items-center gap-space-md">
+<div class="p-space-md bg-surface-container-low rounded shadow-sm flex flex-col min-w-[220px]">
+<div class="flex items-center justify-between">
+<span class="font-kicker text-kicker uppercase text-on-surface-variant">Settlement Due</span>
+<span class="flex items-center gap-1.5 px-space-xs py-0.5 bg-secondary-container text-on-secondary-container font-label-caps text-label-caps rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+            Pending Signoff
+          </span>
+</div>
+<div class="mt-space-xs flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-on-surface font-normal">$2,900.00</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">USD</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">≈ IDR 45,820,000 (PPN 11% inc.)</span>
+</div>
+<div class="flex flex-col sm:flex-row items-stretch gap-space-xs">
+<button class="px-space-lg py-space-md bg-primary text-on-primary hover:bg-secondary transition-colors font-label-caps text-label-caps flex items-center justify-center gap-space-xs rounded" id="triggerModalBtn">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>Confirm Manual Payment</span>
+</button>
+<div class="flex items-center gap-space-xs">
+<button class="p-space-md bg-surface-container-high text-on-surface hover:bg-surface-variant transition-colors rounded flex items-center justify-center" title="Download Tax Invoice">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</button>
+<button class="p-space-md bg-surface-container-high text-on-surface hover:bg-surface-variant transition-colors rounded flex items-center justify-center" title="Resend Instructions">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+<button class="p-space-md bg-surface-container-high text-error hover:bg-error-container transition-colors rounded flex items-center justify-center" title="Reverse or Cancel">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 2-Column Architectural Operational Grid -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-xl items-start">
+<!-- LEFT COLUMN (8 Columns desktop) -->
+<div class="xl:col-span-8 flex flex-col space-y-space-xl">
+<!-- SECTION 1: Product / Package Order Dossier -->
+<section class="bg-surface-container-lowest p-space-lg rounded shadow-sm flex flex-col">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-md gap-space-sm">
+<div>
+<span class="font-kicker text-kicker uppercase text-secondary">01 — Entitlement &amp; Specification</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mt-0.5">Grand Atelier Heirloom Suite</h2>
+</div>
+<span class="font-label-caps text-label-caps px-space-sm py-1 bg-surface-container text-on-surface-variant uppercase tracking-wider rounded">
+            Couture Tier • Dual Channel
+          </span>
+</div>
+<!-- Ledger Line Items Table -->
+<div class="mt-space-md flex flex-col">
+<!-- Table Header -->
+<div class="grid grid-cols-12 py-space-xs px-space-sm bg-surface-container-low font-kicker text-kicker text-on-surface-variant uppercase">
+<span class="col-span-7">Line Description &amp; Craft Details</span>
+<span class="col-span-2 text-center">Batch / Quota</span>
+<span class="col-span-3 text-right">Escrow Val.</span>
+</div>
+<!-- Row 1 -->
+<div class="grid grid-cols-12 py-space-md px-space-sm items-center bg-surface-container-lowest">
+<div class="col-span-7 flex flex-col pr-space-sm">
+<span class="font-body-md text-body-md font-medium text-on-surface">Digital Invitation Suite Engine (Master Key)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Arch Chantilly Template FR-v2.4 • Interactive RSVP, Custom Audio &amp; Edge Vault</span>
+</div>
+<div class="col-span-2 text-center font-body-sm text-body-sm text-on-surface-variant">1 Suite License</div>
+<div class="col-span-3 text-right font-body-md text-body-md font-medium text-on-surface">$1,450.00</div>
+</div>
+<!-- Row 2 -->
+<div class="grid grid-cols-12 py-space-md px-space-sm items-center bg-surface-container-low">
+<div class="col-span-7 flex flex-col pr-space-sm">
+<span class="font-body-md text-body-md font-medium text-on-surface">Letterpress Heirloom Companion (Print Dispatch)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">250 Physical Sets • 600 GSM 100% Cotton Rag • Blind Deboss + Rose Gold Foil Finish</span>
+</div>
+<div class="col-span-2 text-center font-body-sm text-body-sm text-on-surface-variant">250 sets</div>
+<div class="col-span-3 text-right font-body-md text-body-md font-medium text-on-surface">$1,450.00</div>
+</div>
+<!-- Row 3: Complementary Add-ons -->
+<div class="grid grid-cols-12 py-space-md px-space-sm items-center bg-surface-container-lowest">
+<div class="col-span-7 flex flex-col pr-space-sm">
+<span class="font-body-md text-body-md font-medium text-on-surface">Vanity Root Domain &amp; SSL Provisioning</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">`sarahandliam.momentkita.com` + Custom DNS bind allocation</span>
+</div>
+<div class="col-span-2 text-center font-body-sm text-body-sm text-on-surface-variant">365 Days</div>
+<div class="col-span-3 text-right font-label-caps text-label-caps text-secondary uppercase">Included</div>
+</div>
+<!-- Row 4: Gateway Processing Fee -->
+<div class="grid grid-cols-12 py-space-md px-space-sm items-center bg-surface-container-low">
+<div class="col-span-7 flex flex-col pr-space-sm">
+<span class="font-body-md text-body-md font-medium text-on-surface">Payment Gateway Interchange &amp; Virtual Escrow</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Midtrans Direct Wire Clearing • Absorbed under Atelier Concierge Tier</span>
+</div>
+<div class="col-span-2 text-center font-body-sm text-body-sm text-on-surface-variant">Fixed Fee</div>
+<div class="col-span-3 text-right font-body-md text-body-md text-on-surface-variant line-through">$14.50</div>
+</div>
+</div>
+<!-- Ledger Totals Breakdown -->
+<div class="mt-space-md pt-space-md flex flex-col sm:flex-row justify-between items-start sm:items-end gap-space-md bg-surface-container-low p-space-md rounded">
+<div class="flex flex-col space-y-1">
+<span class="font-kicker text-kicker uppercase text-on-surface-variant">Audit Metadata</span>
+<span class="font-body-sm text-body-sm text-on-surface">Created: <strong class="font-medium">Oct 24, 2025 • 02:40 WIB</strong></span>
+<span class="font-body-sm text-body-sm text-on-surface">Hold Window: <strong class="font-medium text-secondary">18 Hours (Manual Review Policy)</strong></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Provisioning Node: MK-CL-JAKARTA-04</span>
+</div>
+<div class="flex flex-col items-end space-y-1">
+<div class="flex items-center gap-space-lg text-body-sm">
+<span class="text-on-surface-variant font-body-sm">Gross Subtotal:</span>
+<span class="text-on-surface font-medium font-body-sm">$2,612.61</span>
+</div>
+<div class="flex items-center gap-space-lg text-body-sm">
+<span class="text-on-surface-variant font-body-sm">PPN Tax (11% Statutory):</span>
+<span class="text-on-surface font-medium font-body-sm">$287.39</span>
+</div>
+<div class="flex items-center gap-space-lg pt-1">
+<span class="font-label-caps text-label-caps uppercase text-on-surface">Total Payable Escrow:</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">$2,900.00</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: Payment Verification & Gateway Audit (Receipt OCR & Proof) -->
+<section class="bg-surface-container-lowest p-space-lg rounded shadow-sm flex flex-col">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-md gap-space-sm">
+<div>
+<span class="font-kicker text-kicker uppercase text-secondary">02 — Verification &amp; Wire Audit</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mt-0.5">Direct Bank Transfer Reconciliation</h2>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="px-space-sm py-1 bg-surface-container font-label-caps text-label-caps text-on-surface uppercase rounded">
+              BCA Virtual Account
+            </span>
+<span class="px-space-sm py-1 bg-secondary-container font-label-caps text-label-caps text-on-secondary-container uppercase rounded">
+              Receipt Uploaded
+            </span>
+</div>
+</div>
+<!-- Wire Specs / Account Match Box -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md p-space-md bg-surface-container-low rounded my-space-md">
+<div class="flex flex-col">
+<span class="font-kicker text-kicker uppercase text-on-surface-variant">Designated Escrow Account</span>
+<span class="font-body-md text-body-md font-medium text-on-surface mt-1">BCA Atelier Central Escrow</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">VA: 80777 0819 44200</span>
+</div>
+<div class="flex flex-col">
+<span class="font-kicker text-kicker uppercase text-on-surface-variant">Gateway Identifier</span>
+<span class="font-body-md text-body-md font-medium text-on-surface mt-1">TRF-BCA-982104-JKT</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Provider: Midtrans Wire Sync</span>
+</div>
+<div class="flex flex-col">
+<span class="font-kicker text-kicker uppercase text-on-surface-variant">Proof Ingestion Time</span>
+<span class="font-body-md text-body-md font-medium text-on-surface mt-1">Oct 24, 2025 • 08:22 WIB</span>
+<span class="font-body-sm text-body-sm text-secondary font-medium">Via VIP Bride Portal</span>
+</div>
+</div>
+<!-- Visual Receipt Inspection & OCR Inspector Split -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md items-stretch mt-space-sm">
+<!-- Proof Image Visual Card (5 Cols) -->
+<div class="md:col-span-5 bg-surface-container p-space-md rounded flex flex-col justify-between">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Client Attachment</span>
+<span class="font-kicker text-kicker text-on-surface-variant">1.8 MB • JPG</span>
+</div>
+<!-- Receipt Preview Canvas -->
+<div class="relative group my-space-sm overflow-hidden rounded bg-surface-container-highest aspect-[3/4] flex items-center justify-center shadow-inner">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Editorial close up high resolution photograph of an Indonesian BCA mobile banking digital transfer receipt slip displaying transfer confirmation for 45,820,000 IDR to Atelier Escrow, crisp clean typography on alabaster paper background with soft studio shadows and luxury terracotta accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_GavTkeT1foIj9gB8K4qs1mzPVZ6HWlK1Honhc9_An58LCok2AF5QZCprstLr3W_Nc_kvki3x2xYW0XnDPn1-9c2l9nfbwpOUomZevekYmKHJ21tAl2khwsAm4V_x_MUro2Azhk_dkQRbv21_3yoeeu1MZXsjPTYUb1gLZOeZRyYfPqKCXx0l5nf33w8W66Po6aINIDtLTC2rIDR5VrGUPfTAilkZdIda6SSkM2eL2eM16w7im9A"/>
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-space-sm">
+<button class="px-space-md py-space-xs bg-surface-container-lowest text-on-surface font-label-caps text-label-caps rounded shadow-md hover:bg-surface-bright flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">zoom_in</span>
+<span>Inspect</span>
+</button>
+<button class="p-space-xs bg-surface-container-lowest text-on-surface font-label-caps text-label-caps rounded shadow-md hover:bg-surface-bright">
+<span class="material-symbols-outlined text-[16px]">download</span>
+</button>
+</div>
+</div>
+<div class="pt-space-xs flex items-center justify-between text-body-sm">
+<span class="text-on-surface font-medium truncate">BCA_Receipt_SarahJ_24Oct.jpg</span>
+<span class="text-secondary font-semibold text-right shrink-0">300 DPI</span>
+</div>
+</div>
+<!-- OCR Match Data & Checkpoints (7 Cols) -->
+<div class="md:col-span-7 flex flex-col justify-between space-y-space-md bg-surface-container-low p-space-md rounded">
+<div>
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">document_scanner</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">OCR Verification Engine</span>
+</div>
+<span class="px-space-xs py-0.5 bg-surface-container-high text-secondary font-label-caps text-label-caps rounded">
+                  99.4% Match Score
+                </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Computer vision pass calibrated for BCA Mobile &amp; KlikBCA layouts. All primary ledger anchors match system intent.
+              </p>
+<!-- Checkpoint List -->
+<div class="mt-space-md space-y-space-xs">
+<div class="p-space-sm bg-surface-container-lowest rounded flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Beneficiary Account Validated</span>
+<span class="font-kicker text-kicker text-on-surface-variant">Target: 80777081944200 (Moment Kita Atelier)</span>
+</div>
+</div>
+<span class="font-label-caps text-label-caps text-secondary">MATCH</span>
+</div>
+<div class="p-space-sm bg-surface-container-lowest rounded flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Exact Currency Sum Match</span>
+<span class="font-kicker text-kicker text-on-surface-variant">Extracted: IDR 45.820.000,00 ($2,900.00)</span>
+</div>
+</div>
+<span class="font-label-caps text-label-caps text-secondary">EXACT 100%</span>
+</div>
+<div class="p-space-sm bg-surface-container-lowest rounded flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Origin Payer Name Verified</span>
+<span class="font-kicker text-kicker text-on-surface-variant">Extracted: SARAH JENKINS DE CASTRO</span>
+</div>
+</div>
+<span class="font-label-caps text-label-caps text-secondary">MATCH</span>
+</div>
+<div class="p-space-sm bg-surface-container-high rounded flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">pending</span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Human Superuser Ledger Signoff</span>
+<span class="font-kicker text-kicker text-on-surface-variant">Requires Atelier Superuser PIN</span>
+</div>
+</div>
+<span class="font-label-caps text-label-caps text-secondary">AWAITING</span>
+</div>
+</div>
+</div>
+<!-- OCR Details Raw Footprint -->
+<div class="p-space-sm bg-surface-container rounded text-on-surface-variant font-mono text-[11px] leading-relaxed">
+              RAW OCR HASH: bca_20251024_081512_ref982104jkt_sarahj_chksum_8f29d10e<br/>
+              BANK STATUS: SUCCESS (RECONCILED WITH BCA CENTRAL SETTLEMENT GATEWAY)
+            </div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: Related Entities & Unlocked Entitlements -->
+<section class="bg-surface-container-lowest p-space-lg rounded shadow-sm flex flex-col space-y-space-md">
+<div>
+<span class="font-kicker text-kicker uppercase text-secondary">03 — Connected Atelier Assets</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mt-0.5">Linked Invitation Suite &amp; Quota Flow</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Invitation Showcase Card -->
+<div class="p-space-md bg-surface-container-low rounded flex flex-col justify-between space-y-space-md">
+<div>
+<div class="flex items-start justify-between">
+<span class="font-kicker text-kicker uppercase text-secondary">Digital Invitation Master</span>
+<span class="px-space-xs py-0.5 bg-surface-container text-on-surface-variant font-label-caps text-label-caps rounded">
+                  Pending Activation
+                </span>
+</div>
+<div class="mt-space-sm flex gap-space-md">
+<div class="w-16 h-20 bg-surface-container-highest shrink-0 rounded overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Editorial wedding invitation preview showing delicate serif typography Sarah and Liam printed on cream deckle-edge paper with gold foil botanical motif in a minimal luxury atelier setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAH2qjwQqX5pVtY-UANuefVi5yCHfw0L6OsGdqaRsHtoEpbx2PeWBQnT65IAcYzp-lNo-ht_o5IUyan_tpbY8KWnivq6cFl2vpPqua6EJL-uScGI4R10uUB99uJzvC68FIkUTfOvo_X8f0IT0sx4OVmACZ7zo8D3B3fxM7KF3lYD1EMyCCle6V9gSmWm5E_s56FtdSjT81sg5ugLJPyYtLGkkdqmzBtA-grEB6BLrxd30iV67gH3aI"/>
+</div>
+<div class="flex flex-col min-w-0">
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Sarah &amp; Liam — Grand Heirloom</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Arch Chantilly Template FR-v2.4</p>
+<span class="font-kicker text-kicker text-secondary mt-1 truncate">momentkita.com/c/sarah-liam</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs pt-space-xs">
+<a class="px-space-sm py-1 bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-caps text-label-caps rounded transition-colors flex items-center gap-1" href="#">
+<span>Editor</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+<a class="px-space-sm py-1 bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-caps text-label-caps rounded transition-colors flex items-center gap-1" href="#">
+<span>Live Preview</span>
+<span class="material-symbols-outlined text-[14px]">visibility</span>
+</a>
+</div>
+</div>
+<!-- Print Order & Entitlement Provisioning -->
+<div class="p-space-md bg-surface-container-low rounded flex flex-col justify-between space-y-space-md">
+<div>
+<div class="flex items-start justify-between">
+<span class="font-kicker text-kicker uppercase text-secondary">Physical Atelier Job</span>
+<span class="px-space-xs py-0.5 bg-secondary-container text-on-secondary-container font-label-caps text-label-caps rounded">
+                  Auto-Queued #PO-8821
+                </span>
+</div>
+<div class="mt-space-sm space-y-space-xs">
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-on-surface-variant">Print Workshop:</span>
+<span class="text-on-surface font-medium">Bandung Line 01 Letterpress</span>
+</div>
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-on-surface-variant">Paper Stock:</span>
+<span class="text-on-surface font-medium">600 GSM 100% Cotton Rag</span>
+</div>
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-on-surface-variant">Foil Finishing:</span>
+<span class="text-on-surface font-medium">Rose Gold Blind Deboss</span>
+</div>
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-on-surface-variant">Ledger Balance Impact:</span>
+<span class="text-secondary font-semibold">+3 Suite Credits Released</span>
+</div>
+</div>
+</div>
+<div class="pt-space-xs flex items-center justify-between text-on-surface-variant text-body-sm">
+<span class="font-label-caps text-label-caps">Status upon signoff:</span>
+<span class="text-on-surface font-medium font-body-sm">Immediate Production Release</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: Activity & Audit Trail History -->
+<section class="bg-surface-container-lowest p-space-lg rounded shadow-sm flex flex-col">
+<div class="flex items-center justify-between pb-space-md">
+<div>
+<span class="font-kicker text-kicker uppercase text-secondary">04 — Immutable Ledger Timeline</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mt-0.5">Audit Trail &amp; Verification Events</h2>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant">5 Recorded Events</span>
+</div>
+<!-- Vertical Timeline Cadence -->
+<div class="relative pl-6 space-y-space-lg before:content-[''] before:absolute before:left-2.5 before:top-2 before:bottom-2 before:w-0.5 before:bg-surface-container-high">
+<!-- Event 1: Invoice Created -->
+<div class="relative flex flex-col">
+<span class="absolute -left-6 top-1 w-3 h-3 rounded-full bg-surface-container-highest"></span>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between">
+<span class="font-body-md text-body-md font-medium text-on-surface">Invoice Created &amp; Dispatched</span>
+<span class="font-kicker text-kicker text-on-surface-variant">Oct 24, 2025 • 02:40 WIB</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Drafted by Concierge <span class="text-on-surface font-medium">Rina Maharani</span> following VIP consultation for destination wedding suite.
+            </p>
+</div>
+<!-- Event 2: BCA VA Generated -->
+<div class="relative flex flex-col">
+<span class="absolute -left-6 top-1 w-3 h-3 rounded-full bg-surface-container-highest"></span>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between">
+<span class="font-body-md text-body-md font-medium text-on-surface">BCA Virtual Account Generated</span>
+<span class="font-kicker text-kicker text-on-surface-variant">Oct 24, 2025 • 02:41 WIB</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Gateway handshake completed via Midtrans Core API. Escrow lock set for $2,900.00 equivalent.
+            </p>
+</div>
+<!-- Event 3: Receipt Uploaded -->
+<div class="relative flex flex-col">
+<span class="absolute -left-6 top-1 w-3 h-3 rounded-full bg-secondary"></span>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between">
+<span class="font-body-md text-body-md font-medium text-on-surface">Wire Transfer Receipt Uploaded</span>
+<span class="font-kicker text-kicker text-secondary font-semibold">Oct 24, 2025 • 08:22 WIB</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Sarah Jenkins uploaded proof file <code class="font-mono text-body-sm bg-surface-container px-1 py-0.5 rounded">BCA_Transfer_Receipt_SarahJenkins_24Oct.jpg</code> from IP 114.122.38.10 (Bali, ID).
+            </p>
+</div>
+<!-- Event 4: OCR Automation -->
+<div class="relative flex flex-col">
+<span class="absolute -left-6 top-1 w-3 h-3 rounded-full bg-secondary"></span>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between">
+<span class="font-body-md text-body-md font-medium text-on-surface">OCR Heuristics Pass Passed (99.4%)</span>
+<span class="font-kicker text-kicker text-on-surface-variant">Oct 24, 2025 • 08:25 WIB</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Payer Name, Target Account, and Amount Exactness cleared by Automated Inspection Daemon v3.1.
+            </p>
+</div>
+<!-- Event 5: Pending Now -->
+<div class="relative flex flex-col">
+<span class="absolute -left-6 top-1 w-3 h-3 rounded-full bg-secondary-container ring-4 ring-surface-container-low animate-pulse"></span>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between">
+<span class="font-body-md text-body-md font-semibold text-secondary">Awaiting Superuser Confirmation</span>
+<span class="font-kicker text-kicker text-secondary font-semibold">CURRENT ACTIVE STATE</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Verification desk waiting on Atelier Superuser confirmation to release quota credits and fire Bandung print job.
+            </p>
+</div>
+</div>
+</section>
+</div>
+<!-- RIGHT COLUMN (4 Columns desktop) -->
+<div class="xl:col-span-4 flex flex-col space-y-space-lg">
+<!-- SECTION 5: Customer VIP Profile Card -->
+<section class="bg-surface-container-lowest p-space-lg rounded shadow-sm flex flex-col">
+<div class="flex items-center justify-between pb-space-sm">
+<span class="font-kicker text-kicker uppercase text-secondary">Customer Dossier</span>
+<a class="font-label-caps text-label-caps text-on-surface hover:text-secondary flex items-center gap-1 transition-colors" href="#">
+<span>Profile</span>
+<span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+</a>
+</div>
+<div class="mt-space-sm flex items-center gap-space-md">
+<div class="w-14 h-14 rounded-full overflow-hidden bg-surface-container-high shrink-0 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Sophisticated natural light portrait of a smiling bride Sarah with Liam in warm Mediterranean sunlight with soft editorial depth of field, elegant and luxury wedding celebration aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqp1QRjj4qiibCS5ezyX7eIaUBmoB5bkjhkFH2uqDtXQedojAZ6X1fPvK7hBTWiRauJQsGTxdQ8iijXhtQA1g5F4f9FG4Jc9WYMYxoazg_BP5o55j0JdqiGPPuTXL5B_hplR2wo6IJ5I15zqmwxlX8UNXjxgSSwLqddrMfgX2fJyiZSPW-xf9XCM7p57hw0rlDtqqA5V_PIZP1HwkyRnS7MxlU7onnBP9IMHI1VSboQu7bswZHLmY"/>
+</div>
+<div class="flex flex-col min-w-0">
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Sarah Jenkins &amp; Liam</h3>
+<span class="font-label-caps text-label-caps text-secondary mt-0.5">Destination VIP • Bali</span>
+<span class="font-kicker text-kicker text-on-surface-variant">CID: #MK-CUST-8842</span>
+</div>
+</div>
+<!-- Customer Communication Channels -->
+<div class="mt-space-md pt-space-md space-y-space-xs bg-surface-container-low p-space-md rounded">
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-on-surface-variant">Email:</span>
+<span class="text-on-surface font-medium truncate ml-2">sarah.jenkins@atelier-bali.com</span>
+</div>
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-on-surface-variant">WhatsApp:</span>
+<span class="text-on-surface font-medium">+62 811-9234-7712</span>
+</div>
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-on-surface-variant">Lifetime Spend:</span>
+<span class="text-on-surface font-semibold">$5,800.00 USD</span>
+</div>
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-on-surface-variant">Previous Orders:</span>
+<span class="text-on-surface font-medium">1 (Save-The-Date Suite)</span>
+</div>
+</div>
+<div class="mt-space-md flex gap-space-xs">
+<a class="w-full py-space-xs bg-surface-container-high text-on-surface hover:bg-surface-variant font-label-caps text-label-caps text-center rounded flex items-center justify-center gap-1 transition-colors" href="https://wa.me/6281192347712" target="_blank">
+<span class="material-symbols-outlined text-[16px] text-secondary">chat</span>
+<span>Open WhatsApp Chat</span>
+</a>
+</div>
+</section>
+<!-- SECTION 6: Sensitive Action Confirmation Interactive Preview Card -->
+<section class="bg-surface-container p-space-lg rounded shadow-md flex flex-col relative overflow-hidden">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">shield</span>
+<span class="font-label-caps text-label-caps text-secondary uppercase font-semibold">Verification Desk Signoff</span>
+</div>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-space-xs">Authorize Settlement</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+          Authorizing this wire reconciles <span class="font-semibold text-on-surface">$2,900.00</span> in the studio escrow, grants <span class="font-semibold text-on-surface">3 Ledger Units</span> to Sarah Jenkins, and dispatches print production order <span class="font-semibold text-on-surface">#PO-8821</span> to Bandung Line 01.
+        </p>
+<div class="my-space-md space-y-space-sm">
+<div>
+<label class="font-kicker text-kicker uppercase text-on-surface-variant block mb-1">
+              Internal Ledger Signoff Reason (Audit Requirement)
+            </label>
+<input class="w-full px-space-sm py-2 bg-surface-container-lowest text-on-surface font-body-sm text-body-sm rounded focus:outline-none" id="auditReasonInput" type="text" value="Confirmed via BCA e-Banking statement match by Atelier Admin"/>
+</div>
+<div>
+<label class="font-kicker text-kicker uppercase text-on-surface-variant block mb-1">
+              Superuser PIN / Passcode
+            </label>
+<input class="w-28 tracking-widest text-center px-space-sm py-2 bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded focus:outline-none" maxlength="4" placeholder="••••" type="password" value="8842"/>
+</div>
+</div>
+<div class="flex flex-col space-y-space-xs">
+<button class="w-full py-space-sm bg-primary text-on-primary hover:bg-secondary font-label-caps text-label-caps rounded flex items-center justify-center gap-space-xs transition-colors shadow" id="authConfirmActionBtn">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Authorize &amp; Confirm Payment</span>
+</button>
+<button class="w-full py-space-xs bg-surface-container-high text-on-surface hover:bg-surface-variant font-label-caps text-label-caps rounded transition-colors text-center">
+            Dismiss / Flag for Lead Auditor
+          </button>
+</div>
+<span class="font-kicker text-kicker text-on-surface-variant mt-space-sm text-center">
+          Irreversible Escrow Settlement • Logged under Atelier Admin v2.4
+        </span>
+</section>
+<!-- SECTION 7: Internal Admin Scratchpad & Notes -->
+<section class="bg-surface-container-lowest p-space-lg rounded shadow-sm flex flex-col space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="font-kicker text-kicker uppercase text-secondary">Superuser Scratchpad</span>
+<span class="font-kicker text-kicker text-on-surface-variant">Confidential</span>
+</div>
+<!-- Prior Notes Stream -->
+<div class="space-y-space-sm" id="notesContainer">
+<div class="p-space-sm bg-surface-container-low rounded text-body-sm">
+<div class="flex items-center justify-between pb-1">
+<span class="font-label-caps text-label-caps text-on-surface font-semibold">Rina Maharani (Concierge)</span>
+<span class="font-kicker text-kicker text-on-surface-variant">Oct 24, 02:45 WIB</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Bride requested custom rose copper wax seal dye batch #882. Payment via BCA direct wire because foreign Amex hit foreign transaction threshold. Receipt confirmed genuine.
+            </p>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded text-body-sm">
+<div class="flex items-center justify-between pb-1">
+<span class="font-label-caps text-label-caps text-on-surface font-semibold">OCR Ingestion Daemon</span>
+<span class="font-kicker text-kicker text-on-surface-variant">Oct 24, 08:25 WIB</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Automated pass completed with zero optical discrepancies. Font geometry verified against BCA Mobile v5.2 APK template standard.
+            </p>
+</div>
+</div>
+<!-- Add Note Input Form -->
+<div class="pt-space-xs space-y-space-xs">
+<textarea class="w-full p-space-sm bg-surface-container text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm rounded focus:outline-none resize-none" id="newAdminNote" placeholder="Add internal admin note... (visible only to Atelier Superusers)" rows="3"></textarea>
+<div class="flex justify-end">
+<button class="px-space-md py-1.5 bg-primary text-on-primary hover:bg-secondary font-label-caps text-label-caps rounded transition-colors" id="saveNoteBtn">
+              Save Note
+            </button>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- MODAL / POPUP: Interactive Settlement Confirmation Dialog -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm hidden items-center justify-center p-space-md" id="confirmationModal">
+<div class="bg-surface-container-lowest max-w-lg w-full rounded p-space-xl shadow-xl flex flex-col space-y-space-md transform transition-all">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[24px]">verified_user</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Confirm Settlement</span>
+</div>
+<button class="p-1 text-on-surface-variant hover:text-on-surface rounded" id="closeModalBtn">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        You are about to authorize manual payment verification for transaction <strong class="text-on-surface">#TX-98419</strong> ($2,900.00 USD). This action immediately:
+      </p>
+<ul class="space-y-space-xs bg-surface-container-low p-space-md rounded font-body-sm text-body-sm text-on-surface">
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[16px] mt-0.5">check</span>
+<span>Settles and marks Invoice <strong>INV-2025-0839</strong> as Paid in Studio Escrow</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[16px] mt-0.5">check</span>
+<span>Unlocks Live URL and Multi-event RSVP modules for Sarah &amp; Liam</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[16px] mt-0.5">check</span>
+<span>Queues Print Dispatch <strong>#PO-8821</strong> at Bandung Letterpress Atelier</span>
+</li>
+</ul>
+<div class="space-y-space-xs">
+<label class="font-kicker text-kicker uppercase text-on-surface-variant block">Superuser PIN Required</label>
+<input class="w-full text-center tracking-widest px-space-md py-2 bg-surface-container text-on-surface font-body-md text-body-md rounded focus:outline-none" id="modalPinInput" maxlength="4" placeholder="••••" type="password"/>
+</div>
+<div class="pt-space-sm flex items-center justify-end gap-space-sm">
+<button class="px-space-md py-space-xs bg-surface-container-high text-on-surface hover:bg-surface-variant font-label-caps text-label-caps rounded transition-colors" id="cancelModalBtn">
+          Cancel
+        </button>
+<button class="px-space-lg py-space-xs bg-primary text-on-primary hover:bg-secondary font-label-caps text-label-caps rounded transition-colors flex items-center gap-1 shadow" id="finalAuthorizeBtn">
+<span class="material-symbols-outlined text-[16px]">lock_open</span>
+<span>Authorize Now</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Interactive JavaScript Micro-interactions -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Modal Triggers
+      const triggerModalBtn = document.getElementById('triggerModalBtn');
+      const authConfirmActionBtn = document.getElementById('authConfirmActionBtn');
+      const confirmationModal = document.getElementById('confirmationModal');
+      const closeModalBtn = document.getElementById('closeModalBtn');
+      const cancelModalBtn = document.getElementById('cancelModalBtn');
+      const finalAuthorizeBtn = document.getElementById('finalAuthorizeBtn');
+
+      function openModal() {
+        if (confirmationModal) {
+          confirmationModal.classList.remove('hidden');
+          confirmationModal.classList.add('flex');
+        }
+      }
+
+      function closeModal() {
+        if (confirmationModal) {
+          confirmationModal.classList.add('hidden');
+          confirmationModal.classList.remove('flex');
+        }
+      }
+
+      if (triggerModalBtn) triggerModalBtn.addEventListener('click', openModal);
+      if (authConfirmActionBtn) authConfirmActionBtn.addEventListener('click', openModal);
+      if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+      if (cancelModalBtn) cancelModalBtn.addEventListener('click', closeModal);
+
+      // Copy Transaction ID Action
+      const copyTxBtn = document.getElementById('copyTxBtn');
+      if (copyTxBtn) {
+        copyTxBtn.addEventListener('click', () => {
+          navigator.clipboard.writeText('#TX-98419').then(() => {
+            const label = copyTxBtn.querySelector('span:last-child');
+            if (label) {
+              const original = label.textContent;
+              label.textContent = 'COPIED';
+              setTimeout(() => { label.textContent = original; }, 1800);
+            }
+          }).catch(() => {});
+        });
+      }
+
+      // Add Admin Note Action
+      const saveNoteBtn = document.getElementById('saveNoteBtn');
+      const newAdminNote = document.getElementById('newAdminNote');
+      const notesContainer = document.getElementById('notesContainer');
+
+      if (saveNoteBtn && newAdminNote && notesContainer) {
+        saveNoteBtn.addEventListener('click', () => {
+          const text = newAdminNote.value.trim();
+          if (!text) return;
+
+          const now = new Date();
+          const timeString = 'Oct 24, ' + now.getHours().toString().padStart(2, '0') + ':' + now.getMinutes().toString().padStart(2, '0') + ' WIB';
+
+          const noteEl = document.createElement('div');
+          noteEl.className = 'p-space-sm bg-surface-container-low rounded text-body-sm transition-all duration-300';
+          noteEl.innerHTML = `
+            <div class="flex items-center justify-between pb-1">
+              <span class="font-label-caps text-label-caps text-on-surface font-semibold">Atelier Superuser (You)</span>
+              <span class="font-kicker text-kicker text-secondary">${timeString}</span>
+            </div>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">${text.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</p>
+          `;
+
+          notesContainer.prepend(noteEl);
+          newAdminNote.value = '';
+        });
+      }
+
+      // Modal Confirmation Success Simulation
+      if (finalAuthorizeBtn) {
+        finalAuthorizeBtn.addEventListener('click', () => {
+          finalAuthorizeBtn.innerHTML = `
+            <span class="material-symbols-outlined text-[16px] animate-spin">refresh</span>
+            <span>Settling Escrow...</span>
+          `;
+          setTimeout(() => {
+            closeModal();
+            alert('Transaction #TX-98419 has been authorized and settled. 3 Quota Units credited to Sarah Jenkins & Liam.');
+            window.location.reload();
+          }, 900);
+        });
+      }
+    });
+  </script>
+</div></main></div></body></html>

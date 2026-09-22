@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-error-container": "#93000a", "on-secondary-fixed": "#380d00", "inverse-primary": "#c8c6c5", "outline": "#747878", "error-container": "#ffdad6", "inverse-surface": "#31312d", "on-primary-container": "#858383", "on-primary": "#ffffff", "primary-container": "#1c1b1b", "primary-fixed": "#e5e2e1", "tertiary-fixed": "#ffdad3", "on-secondary": "#ffffff", "background": "#fcf9f3", "surface-container-low": "#f6f3ed", "tertiary": "#000000", "on-tertiary-fixed-variant": "#753224", "surface-container": "#f0eee8", "error": "#ba1a1a", "on-primary-fixed-variant": "#474746", "tertiary-fixed-dim": "#ffb4a4", "on-tertiary": "#ffffff", "surface-container-lowest": "#ffffff", "secondary-container": "#ffad91", "surface-variant": "#e5e2dc", "secondary": "#8c4d37", "primary-fixed-dim": "#c8c6c5", "surface-tint": "#5f5e5e", "surface-bright": "#fcf9f3", "on-error": "#ffffff", "surface-dim": "#dcdad4", "outline-variant": "#c4c7c7", "surface": "#fcf9f3", "on-primary-fixed": "#1c1b1b", "tertiary-container": "#3c0801", "on-tertiary-fixed": "#3c0801", "on-surface-variant": "#444748", "primary": "#000000", "on-tertiary-container": "#c06d5b", "inverse-on-surface": "#f3f0ea", "on-secondary-fixed-variant": "#703722", "on-background": "#1c1c18", "secondary-fixed": "#ffdbcf", "surface-container-highest": "#e5e2dc", "on-secondary-container": "#7a3e29", "on-surface": "#1c1c18", "secondary-fixed-dim": "#ffb59c", "surface-container-high": "#ebe8e2" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "margin-mobile": "1.25rem", "gutter-mobile": "1rem", "space-xl": "3rem", "space-md": "1rem", "gutter": "2rem", "margin": "3.5rem", "space-xs": "0.25rem", "space-lg": "1.75rem" }, "fontFamily": { "headline-lg-mobile": ["Playfair Display"], "label-caps": ["Plus Jakarta Sans"], "display-hero-mobile": ["Playfair Display"], "quote-editorial": ["Playfair Display"], "headline-lg": ["Playfair Display"], "body-sm": ["Plus Jakarta Sans"], "headline-md": ["Playfair Display"], "body-lg": ["Plus Jakarta Sans"], "display-hero": ["Playfair Display"], "body-md": ["Plus Jakarta Sans"], "headline-xl": ["Playfair Display"], "headline-xl-mobile": ["Playfair Display"], "headline-sm": ["Playfair Display"], "kicker": ["Plus Jakarta Sans"] }, "fontSize": { "headline-lg-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "0em", "fontWeight": "400" }], "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.12em", "fontWeight": "600" }], "display-hero-mobile": ["44px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "400" }], "quote-editorial": ["24px", { "lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "400" }], "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "body-lg": ["18px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "display-hero": ["84px", { "lineHeight": "92px", "letterSpacing": "-0.03em", "fontWeight": "400" }], "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "400" }], "headline-xl-mobile": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "headline-sm": ["22px", { "lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "600" }], "kicker": ["11px", { "lineHeight": "16px", "letterSpacing": "0.2em", "fontWeight": "600" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="px-space-lg pt-space-lg pb-space-md flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 bg-primary flex items-center justify-center text-on-primary font-headline-sm text-headline-sm">M</div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-primary leading-none">Moment Kita</span><span class="font-kicker text-kicker uppercase tracking-widest text-secondary mt-1">L'Atelier Nuance</span></div></div><span class="font-label-caps text-label-caps px-space-xs py-0.5 bg-surface-container-high text-on-surface-variant">v2.4</span></div><div class="px-space-md py-space-xs"><div class="h-px bg-surface-variant w-full"></div></div><nav class="flex-1 px-space-md py-space-sm space-y-space-md overflow-y-auto" data-active-classes="bg-surface-container-high text-primary font-medium"><div class="space-y-space-xs"><div class="px-space-sm font-kicker text-kicker uppercase text-on-surface-variant">Overview</div><a class="flex items-center justify-between px-space-sm py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="dashboard" href="#"><span>Dashboard</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-kicker text-kicker uppercase text-on-surface-variant">Management</div><a class="flex items-center justify-between px-space-sm py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="customers" href="#"><span>Customers</span></a><a class="flex items-center justify-between px-space-sm py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm bg-surface-container-high text-primary font-medium" data-path="invitations" href="#"><span>Invitations</span><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span></a><a class="flex items-center justify-between px-space-sm py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="templates" href="#"><span>Templates</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-kicker text-kicker uppercase text-on-surface-variant">Commerce</div><a class="flex items-center justify-between px-space-sm py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="transactions" href="#"><span>Transactions</span></a><a class="flex items-center justify-between px-space-sm py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="packages-quota" href="#"><span>Packages &amp; Quota</span></a><a class="flex items-center justify-between px-space-sm py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="printed-orders" href="#"><span>Printed Orders</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-kicker text-kicker uppercase text-on-surface-variant">Operations</div><a class="flex items-center justify-between px-space-sm py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="notifications" href="#"><span>Notifications</span></a><a class="flex items-center justify-between px-space-sm py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="audit-logs" href="#"><span>Audit Logs</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-kicker text-kicker uppercase text-on-surface-variant">System</div><a class="flex items-center justify-between px-space-sm py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="settings" href="#"><span>Settings</span></a></div></nav></div><div class="p-space-md"><div class="p-space-sm bg-surface-container flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[16px]">person</span></div><div class="flex flex-col"><span class="font-label-caps text-label-caps text-on-surface">Atelier Admin</span><span class="font-kicker text-kicker text-secondary uppercase">Superuser</span></div></div><button aria-label="Switch profile" class="text-on-surface-variant hover:text-on-surface"><span class="material-symbols-outlined text-[18px]">unfold_more</span></button></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/90 backdrop-blur-xl z-40 px-space-lg flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-1"><div class="flex items-center gap-space-xs font-label-caps text-label-caps text-on-surface-variant tracking-wider uppercase"><span>MANAGEMENT</span><span class="text-surface-variant">/</span><span>INVITATIONS</span><span class="text-surface-variant">/</span><span class="text-on-surface font-semibold">RAKA &amp; AYU</span><span class="text-on-surface-variant text-[10px]">(#MK-INV-77402)</span><span class="text-surface-variant">/</span><span class="text-secondary">WISHES &amp; BLESSINGS MODERATION</span></div><div class="flex items-center gap-space-sm"><div class="flex items-center gap-1.5 px-2 py-0.5 bg-surface-container-low text-on-surface"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span><span class="font-kicker text-kicker text-on-surface-variant tracking-wider uppercase">Live Webhook Sync: 24ms • Redis Cache OK</span></div></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center w-64"><span class="material-symbols-outlined absolute left-2.5 text-[18px] text-on-surface-variant pointer-events-none">search</span><input class="w-full pl-8 pr-3 py-1.5 bg-surface-container-low text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest transition-colors" placeholder="Search wishes, guests, tags..." type="text"/></div><div class="h-6 w-px bg-surface-variant"></div><button aria-label="Notifications" class="relative p-1.5 text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-secondary"></span></button><button class="px-space-md py-2 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-caps text-label-caps uppercase transition-colors">Batch Approve</button><button class="px-space-md py-2 bg-primary hover:bg-secondary text-on-primary font-label-caps text-label-caps uppercase transition-colors">+ Pin Blessing</button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-20 w-full bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Wedding Context Header -->
+<div class="w-full bg-surface-container-lowest px-space-lg py-space-md shadow-sm">
+<div class="max-w-[1560px] mx-auto flex flex-col xl:flex-row xl:items-center xl:justify-between gap-space-md">
+<!-- Title & Context Dossier -->
+<div class="flex flex-col gap-1.5">
+<div class="flex flex-wrap items-center gap-space-sm">
+<h1 class="font-headline-md text-headline-md text-on-surface tracking-tight">Raka &amp; Ayu — Wishes &amp; Blessings Moderation</h1>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-high text-on-surface font-label-caps text-label-caps uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            Live Stream Guestbook
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex flex-wrap items-center gap-x-2 gap-y-1">
+<span>Bespoke Duo (Digital + 100 Letterpress Sets)</span>
+<span class="text-surface-variant">•</span>
+<span>Wedding Date: 12 October 2026</span>
+<span class="text-surface-variant">•</span>
+<span>Grand Ballroom Hotel Mulia Senayan, Jakarta</span>
+<span class="text-surface-variant">•</span>
+<a class="text-secondary hover:text-on-surface font-medium underline underline-offset-4 decoration-secondary/40" href="#">momentkita.id/raka-ayu</a>
+</p>
+<div class="flex flex-wrap items-center gap-2 pt-1">
+<span class="font-label-caps text-label-caps px-2 py-0.5 bg-surface-container text-on-surface-variant tracking-wider">TIER: BESPOKE DUO HYBRID</span>
+<span class="font-label-caps text-label-caps px-2 py-0.5 bg-surface-container text-on-surface-variant tracking-wider">SUITE: CHÂTEAU DE CHANTILLY (V2.4)</span>
+<span class="font-label-caps text-label-caps px-2 py-0.5 bg-secondary-fixed text-on-secondary-fixed-variant tracking-wider">PUBLIC GUESTBOOK: MODERATED LIVE STREAM</span>
+</div>
+</div>
+<!-- Action Toolbar -->
+<div class="flex flex-wrap items-center gap-2.5">
+<a class="inline-flex items-center gap-1.5 px-space-md py-2.5 bg-surface-container-low hover:bg-surface-container text-on-surface font-label-caps text-label-caps uppercase transition-colors shadow-sm" href="#">
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+<span>Open Public Guestbook</span>
+</a>
+<button class="inline-flex items-center gap-1.5 px-space-md py-2.5 bg-primary hover:bg-secondary text-on-primary font-label-caps text-label-caps uppercase transition-colors shadow-sm" onclick="triggerBatchApproveModal()">
+<span class="material-symbols-outlined text-[16px]">done_all</span>
+<span>Batch Approve (24)</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-space-md py-2.5 bg-surface-container-low hover:bg-surface-container text-on-surface font-label-caps text-label-caps uppercase transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Export (CSV)</span>
+</button>
+<button class="inline-flex items-center justify-center w-9 h-9 bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors shadow-sm" onclick="toggleSensitivityDrawer()" title="Auto-Filter Sensitivity Settings">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Main Content Space -->
+<div class="w-full max-w-[1560px] mx-auto px-space-lg py-space-lg flex flex-col gap-space-lg">
+<!-- KPI Metric Cards Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Total Wishes -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-kicker text-kicker text-on-surface-variant uppercase tracking-widest block">TOTAL WISHES</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-lg text-headline-lg text-on-surface">348</span>
+<span class="inline-flex items-center text-secondary font-label-caps text-label-caps font-semibold">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span> +18 today
+              </span>
+</div>
+</div>
+<div class="w-10 h-10 bg-surface-container-low flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">mark_chat_read</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm bg-surface-container-low/50 px-2.5 py-1.5">
+<span>Received from 210 guest links</span>
+<span class="font-label-caps text-[11px] text-secondary">60.3% CTR</span>
+</div>
+</div>
+<!-- Published -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-kicker text-kicker text-on-surface-variant uppercase tracking-widest block">PUBLISHED TO GUESTBOOK</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-lg text-headline-lg text-on-surface">312</span>
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface font-label-caps text-label-caps">89.7% Live</span>
+</div>
+</div>
+<div class="w-10 h-10 bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm bg-surface-container-low/50 px-2.5 py-1.5">
+<span>Digital suite &amp; projector display</span>
+<span class="font-label-caps text-[11px] text-on-surface-variant">SYNCED</span>
+</div>
+</div>
+<!-- Awaiting Approval (Pending) -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-kicker text-kicker text-secondary uppercase tracking-widest block">AWAITING APPROVAL</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-lg text-headline-lg text-secondary">24</span>
+<span class="px-2 py-0.5 bg-secondary-container text-on-secondary-container font-label-caps text-label-caps font-semibold">Action Req.</span>
+</div>
+</div>
+<div class="w-10 h-10 bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[20px]">pending_actions</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between font-body-sm text-body-sm bg-secondary-fixed/30 px-2.5 py-1.5 text-on-secondary-fixed-variant">
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">flag</span>
+<span>6 flagged by keyword filter</span>
+</span>
+<button class="font-label-caps text-[11px] underline underline-offset-2 hover:text-on-surface" onclick="filterFlaggedOnly()">Review Now</button>
+</div>
+</div>
+<!-- Hidden / Suppressed -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-kicker text-kicker text-on-surface-variant uppercase tracking-widest block">SUPPRESSED / HIDDEN</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-lg text-headline-lg text-on-surface">12</span>
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant font-label-caps text-label-caps">3.4% Total</span>
+</div>
+</div>
+<div class="w-10 h-10 bg-surface-container-low flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">visibility_off</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm bg-surface-container-low/50 px-2.5 py-1.5">
+<span>Filtered or held by bride/groom</span>
+<span class="font-label-caps text-[11px] text-on-surface-variant">ARCHIVED</span>
+</div>
+</div>
+</div>
+<!-- Editorial Workspace: Split Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Left / Main Column: Filters + Moderation Feed (Cols 1-8 / 9) -->
+<div class="lg:col-span-8 xl:col-span-9 flex flex-col gap-space-md">
+<!-- Status Filter Tabs & Search Strip -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm flex flex-col gap-space-md">
+<!-- Filter Tabs -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex flex-wrap items-center gap-1.5" id="tabContainer">
+<button class="px-3 py-1.5 font-label-caps text-label-caps uppercase bg-primary text-on-primary transition-colors" onclick="switchTab(this, 'all')">
+                All Wishes (348)
+              </button>
+<button class="px-3 py-1.5 font-label-caps text-label-caps uppercase bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors flex items-center gap-1.5" onclick="switchTab(this, 'pending')">
+<span>Awaiting Review</span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="text-secondary font-bold">24</span>
+</button>
+<button class="px-3 py-1.5 font-label-caps text-label-caps uppercase bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors" onclick="switchTab(this, 'published')">
+                Published (312)
+              </button>
+<button class="px-3 py-1.5 font-label-caps text-label-caps uppercase bg-secondary-fixed/50 hover:bg-secondary-fixed text-on-secondary-fixed-variant transition-colors flex items-center gap-1" onclick="switchTab(this, 'flagged')">
+<span class="material-symbols-outlined text-[14px]">flag</span>
+<span>Flagged Rules (6)</span>
+</button>
+<button class="px-3 py-1.5 font-label-caps text-label-caps uppercase bg-surface-container-low hover:bg-surface-container text-on-surface-variant transition-colors" onclick="switchTab(this, 'hidden')">
+                Hidden (12)
+              </button>
+</div>
+<!-- Visual Layout Selector -->
+<div class="flex items-center gap-1 bg-surface-container-low p-1">
+<button class="p-1 bg-surface-container-lowest text-primary shadow-sm" title="Detailed Feed View">
+<span class="material-symbols-outlined text-[18px]">view_agenda</span>
+</button>
+<button class="p-1 text-on-surface-variant hover:text-on-surface" title="Compact Table View">
+<span class="material-symbols-outlined text-[18px]">table_rows</span>
+</button>
+</div>
+</div>
+<!-- Search & Detailed Selectors -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-sm pt-space-xs">
+<div class="md:col-span-6 relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-[18px] text-on-surface-variant pointer-events-none">search</span>
+<input class="w-full pl-9 pr-3 py-2 bg-surface-container-low text-on-surface font-body-sm text-body-sm placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest transition-colors" id="wishesSearchInput" placeholder="Search guest name, wish keyword, table, or message content..." type="text"/>
+</div>
+<div class="md:col-span-3">
+<select class="w-full px-3 py-2 bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest cursor-pointer">
+<option value="all">Guest Category: All Tiers</option>
+<option value="vip">VIP Keluarga (64)</option>
+<option value="vvip">Corporate VVIP (42)</option>
+<option value="sahabat">Sahabat Pengantin (118)</option>
+<option value="overseas">Overseas Guests (26)</option>
+</select>
+</div>
+<div class="md:col-span-3">
+<select class="w-full px-3 py-2 bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest cursor-pointer">
+<option value="newest">Sort: Newest First</option>
+<option value="oldest">Sort: Oldest First</option>
+<option value="longest">Sort: Message Length</option>
+<option value="vip_first">Sort: VIP Priority First</option>
+</select>
+</div>
+</div>
+<!-- Multi-Select Bulk Action Toolbar (Active Context) -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm px-space-sm py-2 bg-surface-container-low text-on-surface">
+<div class="flex items-center gap-3">
+<label class="flex items-center gap-2 cursor-pointer select-none">
+<input class="w-4 h-4 accent-primary rounded-none cursor-pointer" id="selectAllCheckbox" onchange="toggleSelectAll(this)" type="checkbox"/>
+<span class="font-label-caps text-label-caps uppercase text-on-surface">Select All Pending (24)</span>
+</label>
+<span class="text-surface-variant">|</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant" id="selectedCountLabel">3 wishes selected</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-2.5 py-1 bg-primary hover:bg-secondary text-on-primary font-label-caps text-[11px] uppercase transition-colors shadow-sm flex items-center gap-1" onclick="batchApproveSelected()">
+<span class="material-symbols-outlined text-[14px]">check</span>
+<span>Batch Approve</span>
+</button>
+<button class="px-2.5 py-1 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-caps text-[11px] uppercase transition-colors flex items-center gap-1" onclick="batchHideSelected()">
+<span class="material-symbols-outlined text-[14px]">visibility_off</span>
+<span>Batch Hide</span>
+</button>
+<button class="px-2.5 py-1 bg-error-container hover:bg-error text-on-error-container hover:text-on-error font-label-caps text-[11px] uppercase transition-colors flex items-center gap-1" onclick="batchDeleteSelected()">
+<span class="material-symbols-outlined text-[14px]">delete</span>
+<span>Batch Delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Moderation Items Feed -->
+<div class="flex flex-col gap-space-sm" id="wishesFeed">
+<!-- Item 1: Flagged by Keyword / Awaiting Approval -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm transition-all hover:shadow-md flex flex-col gap-space-sm" data-flagged="true" data-status="pending">
+<div class="flex flex-wrap items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<input checked="" class="item-checkbox mt-1 w-4 h-4 accent-primary rounded-none cursor-pointer" type="checkbox"/>
+<div class="w-10 h-10 bg-secondary-fixed flex items-center justify-center font-headline-sm text-on-secondary-fixed">
+                  DS
+                </div>
+<div class="flex flex-col">
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">Dimas Setiawan</span>
+<span class="font-label-caps text-label-caps px-2 py-0.5 bg-surface-container-high text-on-surface-variant">Sahabat Pengantin (Alumni UI)</span>
+<span class="font-label-caps text-label-caps px-2 py-0.5 bg-surface-container text-on-surface">Attending (1 Pax)</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>Today, 14:22 WIB</span>
+<span class="text-surface-variant">•</span>
+<span>Link ID: #G-44029</span>
+<span class="text-surface-variant">•</span>
+<span class="text-secondary font-medium">Table 08</span>
+</span>
+</div>
+</div>
+<!-- Status Badge -->
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 bg-secondary-fixed text-on-secondary-fixed-variant font-label-caps text-label-caps uppercase">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>Awaiting Review</span>
+</span>
+</div>
+</div>
+<!-- Flag Warning Alert -->
+<div class="bg-secondary-fixed/40 px-space-sm py-2 flex items-center justify-between text-on-secondary-fixed-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary">warning</span>
+<span><strong>AI Rule Flag:</strong> Flagged for informal banquet banter / slang keyword ("taruhan", "pesta bujang").</span>
+</div>
+<span class="font-label-caps text-[10px] uppercase text-secondary">Confidence 94%</span>
+</div>
+<!-- Message Pull-Quote -->
+<div class="px-space-md py-space-sm bg-surface-container-low font-quote-editorial text-quote-editorial text-on-surface leading-relaxed italic">
+              "Selamat ya bro! Jangan lupa taruhan semalam haha, ditunggu pesta bujang round 2 malam ini!"
+            </div>
+<!-- Action Strip -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-2">
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">devices</span>
+<span>Submitted via iPhone 15 Pro • Jakarta ID</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 bg-primary hover:bg-secondary text-on-primary font-label-caps text-label-caps uppercase transition-colors shadow-sm flex items-center gap-1" onclick="approveWish(this)">
+<span class="material-symbols-outlined text-[14px]">check</span>
+<span>Approve Blessing</span>
+</button>
+<button class="px-3 py-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-caps text-label-caps uppercase transition-colors" onclick="hideWish(this)">
+                  Hide Message
+                </button>
+<button class="p-1.5 text-on-surface-variant hover:text-error hover:bg-error-container transition-colors" onclick="openDeleteModal('Dimas Setiawan', 'DS-44029')" title="Delete permanently">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 2: Published / VIP Keluarga / Pinned Candidate -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm transition-all hover:shadow-md flex flex-col gap-space-sm" data-status="published">
+<div class="flex flex-wrap items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<input class="item-checkbox mt-1 w-4 h-4 accent-primary rounded-none cursor-pointer" type="checkbox"/>
+<div class="w-10 h-10 bg-surface-container-high flex items-center justify-center font-headline-sm text-on-surface">
+                  RA
+                </div>
+<div class="flex flex-col">
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">Dr. Raden Mas Arya &amp; Ibu</span>
+<span class="font-label-caps text-label-caps px-2 py-0.5 bg-primary text-on-primary">VIP Keluarga</span>
+<span class="font-label-caps text-label-caps px-2 py-0.5 bg-surface-container text-on-surface">Attending (2 Pax)</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>Today, 11:05 WIB</span>
+<span class="text-surface-variant">•</span>
+<span>Link ID: #G-10291</span>
+<span class="text-surface-variant">•</span>
+<span class="text-secondary font-medium">VIP Table 01</span>
+</span>
+</div>
+</div>
+<!-- Status Badge -->
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 bg-surface-container-high text-on-surface font-label-caps text-label-caps uppercase">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+<span>Published Live</span>
+</span>
+<span class="inline-flex items-center gap-0.5 px-2 py-1 bg-secondary-fixed text-on-secondary-fixed-variant font-label-caps text-[11px] uppercase">
+<span class="material-symbols-outlined text-[13px]">push_pin</span>
+<span>Pinned</span>
+</span>
+</div>
+</div>
+<!-- Message Pull-Quote -->
+<div class="px-space-md py-space-sm bg-surface-container-low font-quote-editorial text-quote-editorial text-on-surface leading-relaxed italic">
+              "Wishing Raka &amp; Ayu a lifetime of love, warmth, and laughter. Seeing you both grow together from university days to this breathtaking moment brings pure joy. May your home be filled with boundless blessings! Sampai jumpa di Mulia!"
+            </div>
+<!-- Action Strip -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-2">
+<div class="flex items-center gap-3 font-body-sm text-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">favorite</span>
+<span class="font-medium text-on-surface">14 Bride/Groom Likes</span>
+</span>
+<span class="text-surface-variant">•</span>
+<span>Verified WhatsApp RSVP</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 bg-surface-container-high hover:bg-surface-container text-on-surface font-label-caps text-label-caps uppercase transition-colors flex items-center gap-1" onclick="togglePin(this)">
+<span class="material-symbols-outlined text-[14px]">push_pin</span>
+<span>Unpin from Slider</span>
+</button>
+<button class="px-3 py-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-caps text-label-caps uppercase transition-colors" onclick="hideWish(this)">
+                  Hide
+                </button>
+<button class="p-1.5 text-on-surface-variant hover:text-error hover:bg-error-container transition-colors" onclick="openDeleteModal('Dr. Raden Mas Arya', 'RA-10291')" title="Delete permanently">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 3: Awaiting Approval / Standard Clean Wish -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm transition-all hover:shadow-md flex flex-col gap-space-sm" data-status="pending">
+<div class="flex flex-wrap items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<input checked="" class="item-checkbox mt-1 w-4 h-4 accent-primary rounded-none cursor-pointer" type="checkbox"/>
+<div class="w-10 h-10 bg-surface-container-low flex items-center justify-center font-headline-sm text-on-surface">
+                  CN
+                </div>
+<div class="flex flex-col">
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">Clarissa Novianty</span>
+<span class="font-label-caps text-label-caps px-2 py-0.5 bg-surface-container-high text-on-surface-variant">Sahabat Ayu</span>
+<span class="font-label-caps text-label-caps px-2 py-0.5 bg-surface-container text-on-surface">Attending (1 Pax)</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>Yesterday, 20:18 WIB</span>
+<span class="text-surface-variant">•</span>
+<span>Link ID: #G-88120</span>
+<span class="text-surface-variant">•</span>
+<span class="text-secondary font-medium">Table 12</span>
+</span>
+</div>
+</div>
+<!-- Status Badge -->
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 bg-secondary-fixed text-on-secondary-fixed-variant font-label-caps text-label-caps uppercase">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>Awaiting Review</span>
+</span>
+</div>
+</div>
+<!-- Message Pull-Quote -->
+<div class="px-space-md py-space-sm bg-surface-container-low font-quote-editorial text-quote-editorial text-on-surface leading-relaxed italic">
+              "Dear Ayu &amp; Raka, congratulations on your special day. Thank you for the elegant invitation and warm letterpress suite! Can't wait to celebrate at the Grand Ballroom."
+            </div>
+<!-- Action Strip -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-2">
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">sentiment_satisfied</span>
+<span>Sentiment Score: Positive (0.98) • Clean</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 bg-primary hover:bg-secondary text-on-primary font-label-caps text-label-caps uppercase transition-colors shadow-sm flex items-center gap-1" onclick="approveWish(this)">
+<span class="material-symbols-outlined text-[14px]">check</span>
+<span>Approve Blessing</span>
+</button>
+<button class="px-3 py-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-caps text-label-caps uppercase transition-colors" onclick="hideWish(this)">
+                  Hide
+                </button>
+<button class="p-1.5 text-on-surface-variant hover:text-error hover:bg-error-container transition-colors" onclick="openDeleteModal('Clarissa Novianty', 'CN-88120')" title="Delete permanently">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 4: Published / Overseas Guest / Regrets with Love -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm transition-all hover:shadow-md flex flex-col gap-space-sm" data-status="published">
+<div class="flex flex-wrap items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<input class="item-checkbox mt-1 w-4 h-4 accent-primary rounded-none cursor-pointer" type="checkbox"/>
+<div class="w-10 h-10 bg-surface-container-high flex items-center justify-center font-headline-sm text-on-surface">
+                  SJ
+                </div>
+<div class="flex flex-col">
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">Sarah Jenkins &amp; Liam</span>
+<span class="font-label-caps text-label-caps px-2 py-0.5 bg-surface-container text-on-surface-variant">Overseas (London, UK)</span>
+<span class="font-label-caps text-label-caps px-2 py-0.5 bg-surface-container-high text-on-surface-variant">Regrets (Unable to attend)</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>Oct 22, 09:30 WIB</span>
+<span class="text-surface-variant">•</span>
+<span>Link ID: #G-55109</span>
+<span class="text-surface-variant">•</span>
+<span>Overseas RSVP Link</span>
+</span>
+</div>
+</div>
+<!-- Status Badge -->
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 bg-surface-container-high text-on-surface font-label-caps text-label-caps uppercase">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+<span>Published Live</span>
+</span>
+</div>
+</div>
+<!-- Message Pull-Quote -->
+<div class="px-space-md py-space-sm bg-surface-container-low font-quote-editorial text-quote-editorial text-on-surface leading-relaxed italic">
+              "Selamat menempuh hidup baru Raka &amp; Ayu! Semoga sakinah, mawaddah, warahmah. Mohon maaf tidak bisa hadir langsung dari London, doa terbaik kami panjatkan dari jauh!"
+            </div>
+<!-- Action Strip -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-2">
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">public</span>
+<span>Submitted from United Kingdom (London IP)</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 bg-surface-container-low hover:bg-surface-container text-on-surface font-label-caps text-label-caps uppercase transition-colors flex items-center gap-1" onclick="togglePin(this)">
+<span class="material-symbols-outlined text-[14px]">push_pin</span>
+<span>Pin to Slider</span>
+</button>
+<button class="px-3 py-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-caps text-label-caps uppercase transition-colors" onclick="hideWish(this)">
+                  Hide
+                </button>
+<button class="p-1.5 text-on-surface-variant hover:text-error hover:bg-error-container transition-colors" onclick="openDeleteModal('Sarah Jenkins &amp; Liam', 'SJ-55109')" title="Delete permanently">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 5: Corporate VVIP / Hendra Gunawan -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm transition-all hover:shadow-md flex flex-col gap-space-sm" data-status="published">
+<div class="flex flex-wrap items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<input class="item-checkbox mt-1 w-4 h-4 accent-primary rounded-none cursor-pointer" type="checkbox"/>
+<div class="w-10 h-10 bg-primary text-on-primary flex items-center justify-center font-headline-sm">
+                  HG
+                </div>
+<div class="flex flex-col">
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">Bpk. Hendra Gunawan, S.E.</span>
+<span class="font-label-caps text-label-caps px-2 py-0.5 bg-primary text-on-primary">Corporate VVIP (Astra Group)</span>
+<span class="font-label-caps text-label-caps px-2 py-0.5 bg-surface-container text-on-surface">Attending (2 Pax)</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>Oct 21, 19:40 WIB</span>
+<span class="text-surface-variant">•</span>
+<span>Link ID: #G-00219</span>
+<span class="text-surface-variant">•</span>
+<span class="text-secondary font-medium">VIP Table 03</span>
+</span>
+</div>
+</div>
+<!-- Status Badge -->
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 bg-surface-container-high text-on-surface font-label-caps text-label-caps uppercase">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+<span>Published Live</span>
+</span>
+</div>
+</div>
+<!-- Message Pull-Quote -->
+<div class="px-space-md py-space-sm bg-surface-container-low font-quote-editorial text-quote-editorial text-on-surface leading-relaxed italic">
+              "Congratulations to the wonderful couple! May your journey together be as stunning and graceful as your love story. Warmest regards from Gunawan family."
+            </div>
+<!-- Action Strip -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-2">
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+<span>VIP concierge RSVP confirmed</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 bg-surface-container-low hover:bg-surface-container text-on-surface font-label-caps text-label-caps uppercase transition-colors flex items-center gap-1" onclick="togglePin(this)">
+<span class="material-symbols-outlined text-[14px]">push_pin</span>
+<span>Pin to Slider</span>
+</button>
+<button class="px-3 py-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-caps text-label-caps uppercase transition-colors" onclick="hideWish(this)">
+                  Hide
+                </button>
+<button class="p-1.5 text-on-surface-variant hover:text-error hover:bg-error-container transition-colors" onclick="openDeleteModal('Bpk. Hendra Gunawan', 'HG-00219')" title="Delete permanently">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 6: Suppressed / Hidden Row -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm transition-all hover:shadow-md flex flex-col gap-space-sm opacity-80" data-status="hidden">
+<div class="flex flex-wrap items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<input class="item-checkbox mt-1 w-4 h-4 accent-primary rounded-none cursor-pointer" type="checkbox"/>
+<div class="w-10 h-10 bg-surface-container flex items-center justify-center font-headline-sm text-on-surface-variant">
+                  TL
+                </div>
+<div class="flex flex-col">
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface-variant line-through">Tan Sri David Lim</span>
+<span class="font-label-caps text-label-caps px-2 py-0.5 bg-surface-container text-on-surface-variant">Corporate Guest</span>
+<span class="font-label-caps text-label-caps px-2 py-0.5 bg-surface-container-high text-on-surface-variant">Attending</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>Oct 20, 15:10 WIB</span>
+<span class="text-surface-variant">•</span>
+<span>Hidden by Admin: Duplicate Submission</span>
+</span>
+</div>
+</div>
+<!-- Status Badge -->
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 bg-surface-container-high text-on-surface-variant font-label-caps text-label-caps uppercase">
+<span class="material-symbols-outlined text-[14px]">visibility_off</span>
+<span>Suppressed</span>
+</span>
+</div>
+</div>
+<!-- Message Pull-Quote -->
+<div class="px-space-md py-space-sm bg-surface-container-low font-quote-editorial text-quote-editorial text-on-surface-variant leading-relaxed italic">
+              "Warm congratulations Raka and Ayu. (Duplicate message re-submitted with correct salutation)."
+            </div>
+<!-- Action Strip -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-2">
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<span>Reason: Replaced by updated wish #G-00188</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-caps text-label-caps uppercase transition-colors flex items-center gap-1" onclick="approveWish(this)">
+<span class="material-symbols-outlined text-[14px]">undo</span>
+<span>Restore / Approve</span>
+</button>
+<button class="px-3 py-1.5 bg-error-container hover:bg-error text-on-error-container hover:text-on-error font-label-caps text-label-caps uppercase transition-colors flex items-center gap-1" onclick="openDeleteModal('Tan Sri David Lim', 'TL-00182')">
+<span class="material-symbols-outlined text-[14px]">delete_forever</span>
+<span>Delete Permanently</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination Bar -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm flex flex-wrap items-center justify-between gap-space-sm text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-2">
+<span>Showing <strong>1 to 6</strong> of <strong>348 wishes</strong></span>
+<span class="text-surface-variant">•</span>
+<select class="px-2 py-1 bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none">
+<option>10 per page</option>
+<option>25 per page</option>
+<option>50 per page</option>
+</select>
+</div>
+<div class="flex items-center gap-1">
+<button class="px-3 py-1.5 bg-surface-container-low text-on-surface font-label-caps text-label-caps uppercase disabled:opacity-40" disabled="">Previous</button>
+<button class="px-3 py-1.5 bg-primary text-on-primary font-label-caps text-label-caps">1</button>
+<button class="px-3 py-1.5 bg-surface-container-low hover:bg-surface-container text-on-surface font-label-caps text-label-caps">2</button>
+<button class="px-3 py-1.5 bg-surface-container-low hover:bg-surface-container text-on-surface font-label-caps text-label-caps">3</button>
+<span class="px-2">...</span>
+<button class="px-3 py-1.5 bg-surface-container-low hover:bg-surface-container text-on-surface font-label-caps text-label-caps">35</button>
+<button class="px-3 py-1.5 bg-surface-container-low hover:bg-surface-container text-on-surface font-label-caps text-label-caps uppercase">Next</button>
+</div>
+</div>
+</div>
+<!-- Right Column: Interactive Sensory & Moderation Intelligence Dock (Cols 9-12 / 3) -->
+<div class="lg:col-span-4 xl:col-span-3 flex flex-col gap-space-md">
+<!-- Live Telemetry & Pipeline Status -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest">REAL-TIME TELEMETRY</span>
+<span class="inline-flex items-center gap-1 text-[11px] font-label-caps text-on-surface font-medium">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+              Live Sync
+            </span>
+</div>
+<div class="space-y-2 pt-1 text-body-sm">
+<div class="flex items-center justify-between p-2 bg-surface-container-low">
+<span class="text-on-surface-variant">Redis Stream Latency</span>
+<span class="font-label-caps font-semibold text-on-surface">18ms (Optimal)</span>
+</div>
+<div class="flex items-center justify-between p-2 bg-surface-container-low">
+<span class="text-on-surface-variant">Guestbook Webhook</span>
+<span class="font-label-caps font-semibold text-secondary">Active • 200 OK</span>
+</div>
+<div class="flex items-center justify-between p-2 bg-surface-container-low">
+<span class="text-on-surface-variant">Live Projector Feed</span>
+<span class="font-label-caps font-semibold text-on-surface">Ballroom Display 01</span>
+</div>
+</div>
+</div>
+<!-- AI Content Guardian & Sensitivity Controls -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-secondary">shield</span>
+<span class="font-headline-sm text-[17px] text-on-surface">AI Content Guardian</span>
+</div>
+<span class="font-label-caps text-[10px] px-2 py-0.5 bg-surface-container text-on-surface-variant uppercase">Standard</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Automated linguistic heuristic engine holds profanity, trolling, promotional spam, and sensitive banter in Pending.
+          </p>
+<div class="space-y-3 pt-2">
+<!-- Toggle 1 -->
+<label class="flex items-start justify-between gap-3 cursor-pointer p-2 hover:bg-surface-container-low transition-colors">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Auto-Approve Verified VIP Guests</span>
+<span class="font-kicker text-[10px] text-on-surface-variant">Bypasses moderation queue if clean</span>
+</div>
+<input checked="" class="w-4 h-4 mt-1 accent-primary rounded-none" type="checkbox"/>
+</label>
+<!-- Toggle 2 -->
+<label class="flex items-start justify-between gap-3 cursor-pointer p-2 hover:bg-surface-container-low transition-colors">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Auto-Approve Attending RSVPs Only</span>
+<span class="font-kicker text-[10px] text-on-surface-variant">Holds unverified links for manual review</span>
+</div>
+<input checked="" class="w-4 h-4 mt-1 accent-primary rounded-none" type="checkbox"/>
+</label>
+<!-- Toggle 3 -->
+<label class="flex items-start justify-between gap-3 cursor-pointer p-2 hover:bg-surface-container-low transition-colors">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Instant Push to Live Ballroom Screen</span>
+<span class="font-kicker text-[10px] text-on-surface-variant">Sync approved wishes to projector stream</span>
+</div>
+<input checked="" class="w-4 h-4 mt-1 accent-primary rounded-none" type="checkbox"/>
+</label>
+</div>
+<div class="pt-2">
+<button class="w-full py-2 bg-surface-container-low hover:bg-surface-container text-on-surface font-label-caps text-label-caps uppercase transition-colors" onclick="toggleSensitivityDrawer()">
+              Configure Keyword Blacklist
+            </button>
+</div>
+</div>
+<!-- Sentiment & Keyword Frequency Cloud -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-kicker text-kicker uppercase text-on-surface-variant tracking-widest">BLESSING KEYWORD PULSE</span>
+<span class="font-label-caps text-[10px] text-secondary">348 ENTRIES</span>
+</div>
+<div class="flex flex-wrap items-center gap-2 pt-1">
+<span class="px-2.5 py-1 bg-surface-container-high text-on-surface font-headline-sm text-[16px]">Sakinah (142)</span>
+<span class="px-2 py-0.5 bg-secondary-fixed text-on-secondary-fixed-variant font-body-sm text-body-sm font-semibold">Langgeng (118)</span>
+<span class="px-2.5 py-1 bg-surface-container text-on-surface-variant font-quote-editorial text-[18px]">Bahagia (96)</span>
+<span class="px-2 py-0.5 bg-surface-container-low text-on-surface font-body-sm text-body-sm">Berkah (84)</span>
+<span class="px-2.5 py-1 bg-surface-container-high text-on-surface font-headline-sm text-[15px]">Congratulations (72)</span>
+<span class="px-2 py-0.5 bg-secondary-fixed/50 text-on-secondary-fixed-variant font-body-sm text-[12px]">Love &amp; Light (38)</span>
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-quote-editorial text-[15px]">Breathtaking (29)</span>
+<span class="px-2 py-0.5 bg-surface-container-low text-on-surface font-body-sm text-[12px]">Mulia Senayan (21)</span>
+</div>
+</div>
+<!-- Live Projection Preview Card -->
+<div class="bg-primary text-on-primary p-space-md shadow-md flex flex-col justify-between gap-space-md relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-kicker text-kicker uppercase tracking-widest text-secondary-fixed-dim">BALLROOM LED STREAM</span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-caps text-[10px] uppercase tracking-wider text-surface-dim">NOW SHOWING ON DISPLAY #1:</span>
+<p class="font-quote-editorial text-quote-editorial leading-snug italic text-surface-bright">
+              "Seeing you both grow together from university days to this breathtaking moment brings pure joy..."
+            </p>
+<span class="font-headline-sm text-[15px] text-secondary-fixed-dim mt-2">— Dr. Raden Mas Arya &amp; Ibu</span>
+</div>
+<div class="pt-2 flex items-center justify-between text-[11px] font-label-caps text-surface-dim">
+<span>Next in rotation: 4 seconds</span>
+<a class="underline hover:text-on-primary" href="#">Full Screen Preview</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Destructive Delete Confirmation Modal Overlay -->
+<div class="fixed inset-0 bg-primary/40 backdrop-blur-sm z-50 hidden items-center justify-center p-space-md transition-opacity" id="deleteModal">
+<div class="bg-surface-container-lowest max-w-lg w-full p-space-lg shadow-xl flex flex-col gap-space-md transform transition-all">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 bg-error-container text-on-error-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">delete_forever</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Delete Wish from Guestbook?</h3>
+<span class="font-kicker text-kicker text-secondary uppercase tracking-widest">IRREVERSIBLE ACTION</span>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface" onclick="closeDeleteModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Are you sure you wish to permanently remove the blessing from <strong class="text-on-surface" id="deleteModalGuestName">Guest</strong>? This record will be expunged from both the public digital invitation and live ballroom rotation streams.
+      </p>
+<div class="p-space-sm bg-surface-container-low font-body-sm text-body-sm text-on-surface-variant">
+        Reference ID: <span class="font-mono text-on-surface font-semibold" id="deleteModalRefId">#G-XXXXX</span>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-space-md py-2.5 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-caps text-label-caps uppercase transition-colors" onclick="closeDeleteModal()">
+          Cancel
+        </button>
+<button class="px-space-md py-2.5 bg-error text-on-error hover:bg-error/90 font-label-caps text-label-caps uppercase transition-colors shadow-sm" onclick="confirmDeleteWish()">
+          Confirm Delete
+        </button>
+</div>
+</div>
+</div>
+<!-- Sensitivity Settings Drawer Overlay -->
+<div class="fixed inset-0 bg-primary/40 backdrop-blur-sm z-50 hidden justify-end transition-opacity" id="sensitivityDrawer">
+<div class="bg-surface-container-lowest w-full max-w-md h-full p-space-lg shadow-2xl flex flex-col justify-between overflow-y-auto">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Keyword Filter &amp; Rules</h3>
+<span class="font-kicker text-kicker text-secondary uppercase tracking-wider">MOMENT KITA CONTENT GUARDIAN</span>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface" onclick="toggleSensitivityDrawer()">
+<span class="material-symbols-outlined text-[22px]">close</span>
+</button>
+</div>
+<div class="space-y-space-sm">
+<label class="block">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant block mb-1">Sensitivity Sensitivity Level</span>
+<select class="w-full px-3 py-2 bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none">
+<option>Strict (Corporate &amp; Royal Protocol)</option>
+<option selected="">Standard (Balanced Wedding Social)</option>
+<option>Relaxed (Direct publish all, report only)</option>
+</select>
+</label>
+<div>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant block mb-1">Custom Blacklist Keywords (Comma-Separated)</span>
+<textarea class="w-full p-3 bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none placeholder:text-on-surface-variant resize-none" placeholder="e.g. pinjol, slot, judi, mantan, taruhan..." rows="4">taruhan, pesta bujang, transfer, diskon, promo, slot</textarea>
+<span class="font-kicker text-[10px] text-on-surface-variant block mt-1">Wishes matching these words will be automatically routed to "Awaiting Review".</span>
+</div>
+<div class="space-y-2 pt-2">
+<label class="flex items-center gap-2 text-body-sm text-on-surface cursor-pointer">
+<input checked="" class="w-4 h-4 accent-primary rounded-none" type="checkbox"/>
+<span>Block external web links and URLs</span>
+</label>
+<label class="flex items-center gap-2 text-body-sm text-on-surface cursor-pointer">
+<input checked="" class="w-4 h-4 accent-primary rounded-none" type="checkbox"/>
+<span>Filter phone numbers and banking account strings</span>
+</label>
+<label class="flex items-center gap-2 text-body-sm text-on-surface cursor-pointer">
+<input checked="" class="w-4 h-4 accent-primary rounded-none" type="checkbox"/>
+<span>Flag excessive all-caps submissions</span>
+</label>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-md">
+<button class="px-space-md py-2.5 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-caps text-label-caps uppercase" onclick="toggleSensitivityDrawer()">
+          Cancel
+        </button>
+<button class="px-space-md py-2.5 bg-primary hover:bg-secondary text-on-primary font-label-caps text-label-caps uppercase shadow-sm" onclick="saveSensitivityRules()">
+          Save Guardian Rules
+        </button>
+</div>
+</div>
+</div>
+<!-- Notification Toast Container -->
+<div class="fixed bottom-6 right-6 z-50 bg-primary text-on-primary px-space-md py-space-sm shadow-xl flex items-center gap-3 transition-transform duration-300 translate-y-32" id="toastNotification">
+<span class="material-symbols-outlined text-[18px] text-secondary-fixed">check_circle</span>
+<span class="font-body-sm text-body-sm" id="toastMessage">Action executed successfully.</span>
+</div>
+<script>
+    let activeDeleteContext = null;
+
+    function showToast(message) {
+      const toast = document.getElementById('toastNotification');
+      const toastText = document.getElementById('toastMessage');
+      if (toast && toastText) {
+        toastText.textContent = message;
+        toast.classList.remove('translate-y-32');
+        setTimeout(() => {
+          toast.classList.add('translate-y-32');
+        }, 3000);
+      }
+    }
+
+    function switchTab(button, tabKey) {
+      const container = document.getElementById('tabContainer');
+      const buttons = container.querySelectorAll('button');
+      buttons.forEach(b => {
+        b.classList.remove('bg-primary', 'text-on-primary');
+        b.classList.add('bg-surface-container-low', 'text-on-surface');
+      });
+      button.classList.remove('bg-surface-container-low', 'text-on-surface');
+      button.classList.add('bg-primary', 'text-on-primary');
+
+      const items = document.querySelectorAll('#wishesFeed > div');
+      items.forEach(item => {
+        if (tabKey === 'all') {
+          item.style.display = 'flex';
+        } else if (tabKey === 'flagged') {
+          item.style.display = item.dataset.flagged === 'true' ? 'flex' : 'none';
+        } else {
+          item.style.display = item.dataset.status === tabKey ? 'flex' : 'none';
+        }
+      });
+    }
+
+    function filterFlaggedOnly() {
+      const tabs = document.querySelectorAll('#tabContainer button');
+      if (tabs.length >= 4) {
+        switchTab(tabs[3], 'flagged');
+      }
+    }
+
+    function toggleSelectAll(masterCheckbox) {
+      const checkboxes = document.querySelectorAll('.item-checkbox');
+      checkboxes.forEach(cb => cb.checked = masterCheckbox.checked);
+      updateSelectedCount();
+    }
+
+    function updateSelectedCount() {
+      const selected = document.querySelectorAll('.item-checkbox:checked').length;
+      const countLabel = document.getElementById('selectedCountLabel');
+      if (countLabel) {
+        countLabel.textContent = `${selected} wish${selected === 1 ? '' : 'es'} selected`;
+      }
+    }
+
+    document.querySelectorAll('.item-checkbox').forEach(cb => {
+      cb.addEventListener('change', updateSelectedCount);
+    });
+
+    function approveWish(btn) {
+      const row = btn.closest('[data-status]');
+      if (row) {
+        row.dataset.status = 'published';
+        row.removeAttribute('data-flagged');
+        const flagAlert = row.querySelector('.bg-secondary-fixed\\/40');
+        if (flagAlert) flagAlert.remove();
+
+        const badge = row.querySelector('.font-label-caps.uppercase');
+        if (badge) {
+          badge.className = 'inline-flex items-center gap-1 px-2.5 py-1 bg-surface-container-high text-on-surface font-label-caps text-label-caps uppercase';
+          badge.innerHTML = '<span class="material-symbols-outlined text-[14px]">verified</span><span>Published Live</span>';
+        }
+        btn.remove();
+        showToast('Wish approved & published to live guestbook!');
+      }
+    }
+
+    function hideWish(btn) {
+      const row = btn.closest('[data-status]');
+      if (row) {
+        row.dataset.status = 'hidden';
+        row.classList.add('opacity-75');
+        const badge = row.querySelector('.font-label-caps.uppercase');
+        if (badge) {
+          badge.className = 'inline-flex items-center gap-1 px-2.5 py-1 bg-surface-container-high text-on-surface-variant font-label-caps text-label-caps uppercase';
+          badge.innerHTML = '<span class="material-symbols-outlined text-[14px]">visibility_off</span><span>Suppressed</span>';
+        }
+        showToast('Wish suppressed from public view.');
+      }
+    }
+
+    function togglePin(btn) {
+      const icon = btn.querySelector('.material-symbols-outlined');
+      const text = btn.querySelector('span:last-child');
+      if (text.textContent.includes('Unpin')) {
+        text.textContent = 'Pin to Slider';
+        showToast('Blessing removed from featured projection slider.');
+      } else {
+        text.textContent = 'Unpin from Slider';
+        showToast('Blessing pinned to live projector rotation!');
+      }
+    }
+
+    function openDeleteModal(name, refId) {
+      activeDeleteContext = refId;
+      document.getElementById('deleteModalGuestName').textContent = name;
+      document.getElementById('deleteModalRefId').textContent = '#' + refId;
+      const modal = document.getElementById('deleteModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeDeleteModal() {
+      const modal = document.getElementById('deleteModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      activeDeleteContext = null;
+    }
+
+    function confirmDeleteWish() {
+      if (activeDeleteContext) {
+        showToast('Blessing deleted permanently.');
+        closeDeleteModal();
+      }
+    }
+
+    function triggerBatchApproveModal() {
+      showToast('All 24 pending wishes approved successfully!');
+    }
+
+    function batchApproveSelected() {
+      showToast('Selected wishes approved and pushed to live guestbook.');
+    }
+
+    function batchHideSelected() {
+      showToast('Selected wishes hidden from guestbook view.');
+    }
+
+    function batchDeleteSelected() {
+      openDeleteModal('All Selected', 'BATCH-SELECTED');
+    }
+
+    function toggleSensitivityDrawer() {
+      const drawer = document.getElementById('sensitivityDrawer');
+      if (drawer.classList.contains('hidden')) {
+        drawer.classList.remove('hidden');
+        drawer.classList.add('flex');
+      } else {
+        drawer.classList.add('hidden');
+        drawer.classList.remove('flex');
+      }
+    }
+
+    function saveSensitivityRules() {
+      toggleSensitivityDrawer();
+      showToast('AI Guardian rules updated successfully.');
+    }
+
+    const searchInput = document.getElementById('wishesSearchInput');
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase();
+        const items = document.querySelectorAll('#wishesFeed > div');
+        items.forEach(item => {
+          const text = item.textContent.toLowerCase();
+          item.style.display = text.includes(query) ? 'flex' : 'none';
+        });
+      });
+    }
+  </script>
+</div></main></div></body></html>

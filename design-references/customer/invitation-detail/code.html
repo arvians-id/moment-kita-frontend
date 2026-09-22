@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-primary-container":"#858383","on-error-container":"#93000a","on-error":"#ffffff","on-secondary-fixed":"#380d00","on-background":"#1c1c18","on-surface":"#1c1c18","tertiary":"#000000","surface-bright":"#fcf9f3","tertiary-fixed-dim":"#ffb4a4","inverse-surface":"#31312d","on-tertiary-fixed-variant":"#753224","outline-variant":"#c4c7c7","on-secondary":"#ffffff","tertiary-fixed":"#ffdad3","on-surface-variant":"#444748","primary-container":"#1c1b1b","surface-container-lowest":"#ffffff","secondary-container":"#ffad91","secondary-fixed":"#ffdbcf","secondary-fixed-dim":"#ffb59c","on-primary-fixed":"#1c1b1b","on-primary":"#ffffff","surface-container-high":"#ebe8e2","surface":"#fcf9f3","surface-variant":"#e5e2dc","outline":"#747878","primary":"#000000","on-tertiary-container":"#c06d5b","primary-fixed-dim":"#c8c6c5","on-tertiary-fixed":"#3c0801","error":"#ba1a1a","surface-container-low":"#f6f3ed","inverse-primary":"#c8c6c5","error-container":"#ffdad6","background":"#fcf9f3","primary-fixed":"#e5e2e1","surface-container":"#f0eee8","tertiary-container":"#3c0801","surface-tint":"#5f5e5e","on-tertiary":"#ffffff","surface-dim":"#dcdad4","surface-container-highest":"#e5e2dc","inverse-on-surface":"#f3f0ea","on-primary-fixed-variant":"#474746","secondary":"#8c4d37","on-secondary-container":"#7a3e29","on-secondary-fixed-variant":"#703722"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"gutter":"2rem","space-xl":"3rem","space-sm":"0.5rem","margin":"3.5rem","space-lg":"1.75rem","space-xs":"0.25rem","space-md":"1rem","gutter-mobile":"1rem","margin-mobile":"1.25rem"},fontFamily:{"kicker":["Plus Jakarta Sans"],"headline-md":["Playfair Display"],"display-hero":["Playfair Display"],"headline-sm":["Playfair Display"],"body-md":["Plus Jakarta Sans"],"label-caps":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"headline-xl-mobile":["Playfair Display"],"headline-xl":["Playfair Display"],"headline-lg-mobile":["Playfair Display"],"quote-editorial":["Playfair Display"],"display-hero-mobile":["Playfair Display"],"headline-lg":["Playfair Display"]},fontSize:{"kicker":["11px",{lineHeight:"16px",letterSpacing:"0.2em",fontWeight:"600"}],"headline-md":["28px",{lineHeight:"36px",letterSpacing:"-0.01em",fontWeight:"500"}],"display-hero":["84px",{lineHeight:"92px",letterSpacing:"-0.03em",fontWeight:"400"}],"headline-sm":["22px",{lineHeight:"30px",letterSpacing:"0em",fontWeight:"600"}],"body-md":["15px",{lineHeight:"24px",letterSpacing:"0em",fontWeight:"400"}],"label-caps":["12px",{lineHeight:"16px",letterSpacing:"0.12em",fontWeight:"600"}],"body-lg":["18px",{lineHeight:"30px",letterSpacing:"-0.01em",fontWeight:"400"}],"body-sm":["13px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"400"}],"headline-xl-mobile":["36px",{lineHeight:"42px",letterSpacing:"-0.01em",fontWeight:"400"}],"headline-xl":["56px",{lineHeight:"64px",letterSpacing:"-0.02em",fontWeight:"400"}],"headline-lg-mobile":["28px",{lineHeight:"34px",letterSpacing:"0em",fontWeight:"400"}],"quote-editorial":["24px",{lineHeight:"36px",letterSpacing:"0em",fontWeight:"400"}],"display-hero-mobile":["44px",{lineHeight:"48px",letterSpacing:"-0.02em",fontWeight:"400"}],"headline-lg":["40px",{lineHeight:"48px",letterSpacing:"-0.015em",fontWeight:"400"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-6 px-5"><div class="flex flex-col gap-6"><div class="flex items-center gap-3 px-2"><div class="w-9 h-9 rounded-full bg-primary flex items-center justify-center"><span class="font-headline-sm text-headline-sm text-on-primary italic">M</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface leading-none">Moment Kita</span><span class="font-kicker text-kicker uppercase text-secondary tracking-widest mt-1">Atelier Client Suite</span></div></div><div class="flex flex-col gap-5 pt-2"><div class="flex flex-col gap-1"><span class="font-kicker text-kicker uppercase text-on-surface-variant px-3 mb-1 tracking-wider">Overview</span><nav class="flex flex-col gap-0.5" data-active-classes="bg-surface-container-highest text-on-surface font-medium"><a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[19px]">space_dashboard</span><span class="font-body-sm text-body-sm">Dashboard</span></a></nav></div><div class="flex flex-col gap-1"><span class="font-kicker text-kicker uppercase text-on-surface-variant px-3 mb-1 tracking-wider">Wedding</span><nav class="flex flex-col gap-0.5" data-active-classes="bg-surface-container-highest text-on-surface font-medium"><a class="flex items-center gap-3 px-3 py-2 transition-colors text-on-surface-variant" data-path="my-invitations" href="#"><span class="material-symbols-outlined text-[19px]">mail</span><span class="font-body-sm text-body-sm">My Invitations</span></a></nav></div><div class="flex flex-col gap-1"><span class="font-kicker text-kicker uppercase text-on-surface-variant px-3 mb-1 tracking-wider">Account</span><nav class="flex flex-col gap-0.5" data-active-classes="bg-surface-container-highest text-on-surface font-medium"><a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="transactions" href="#"><span class="material-symbols-outlined text-[19px]">receipt_long</span><span class="font-body-sm text-body-sm">Transactions</span></a><a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="notifications" href="#"><span class="material-symbols-outlined text-[19px]">notifications</span><span class="font-body-sm text-body-sm">Notifications</span></a><a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[19px]">settings</span><span class="font-body-sm text-body-sm">Settings</span></a></nav></div></div></div><div class="flex flex-col gap-3"><div class="bg-surface-container p-4"><div class="flex items-center justify-between mb-1.5"><span class="font-kicker text-kicker uppercase text-secondary">Tier</span><span class="material-symbols-outlined text-secondary text-[16px]">hotel_class</span></div><p class="font-body-sm text-body-sm font-semibold text-on-surface leading-snug">Signature Suite</p><p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">1 Invitation Quota Remaining</p></div><div class="flex items-center gap-3 px-2 py-1"><div class="w-9 h-9 rounded-full bg-secondary flex items-center justify-center text-on-secondary font-label-caps text-label-caps">WS</div><div class="flex flex-col"><span class="font-body-sm text-body-sm font-medium text-on-surface leading-tight">Widdy &amp; Sarah</span><span class="font-kicker text-kicker uppercase text-on-surface-variant leading-none mt-0.5">Couple Account</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40"><div class="h-16 w-full px-8 flex items-center justify-between"><div class="flex items-center gap-4"><img alt="Brand logo. - Primary color: #1a1a1a
+- Font: playfairDisplay
+- Mode: light
+- Roundness: rounded-lg
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WRqdm6LQrsNtDYQH6alJWMkWfk8mr7SPqKl8gfl7AvBd40Jje4RrE22TykoB2RppbfnyAF2up2zNsWoEEOAzFuAN1npFQei0jfZqImhociqxHqkWuTOiZPCxGJmPYqxbPvy5Rx2weYo7U8hJdkx9NPou6jBCa_GrhtbmoggtyXUo9t6RX7e69grmpegVwtyw9hYyP4hsJ3T_vZnPOwt4eaQH75GZeWtOjhkaQqGZoTZVpuFOyuLFBC"/><div class="flex items-center gap-2"><span class="font-body-sm text-body-sm text-on-surface-variant">Atelier Workspace</span><span class="font-body-sm text-body-sm text-on-surface-variant">/</span><span class="font-headline-sm text-headline-sm text-on-surface font-medium">Widdy &amp; Sarah Wedding</span></div></div><div class="flex items-center gap-5"><button class="h-9 px-4 bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-1.5 hover:bg-secondary hover:text-on-secondary transition-colors"><span class="material-symbols-outlined text-[16px]">add</span><span>New Invitation</span></button><button class="relative flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-0 right-0 w-2 h-2 rounded-full bg-secondary"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<!-- Top Breadcrumb & Status Ribbon -->
+<div class="w-full px-8 pt-6 pb-4 flex flex-col gap-4">
+<!-- Breadcrumb trail -->
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<a class="hover:text-on-surface transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]">arrow_back</span>
+<span>My Invitations</span>
+</a>
+<span class="text-outline-variant">/</span>
+<span class="text-on-surface font-medium">Raka &amp; Ayu — The Parisian Winter Suite</span>
+<span class="ml-2 px-2.5 py-0.5 bg-secondary/10 text-secondary font-label-caps text-label-caps uppercase rounded-full">
+        ● Live &amp; Published
+      </span>
+</div>
+<!-- Editorial Workspace Header -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-6">
+<div class="flex flex-col gap-2 max-w-3xl">
+<div class="flex items-center gap-3">
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest">Atelier Monograph No. 042</span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span class="font-kicker text-kicker uppercase text-on-surface-variant">Theme: Château de Chantilly</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight leading-none">
+          Raka &amp; Ayu
+          <span class="font-quote-editorial text-quote-editorial italic font-normal text-on-surface-variant block mt-1">The Parisian Winter Suite</span>
+</h1>
+<p class="font-body-md text-body-md text-on-surface-variant flex flex-wrap items-center gap-y-1 gap-x-3 mt-1">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[17px] text-secondary">calendar_today</span>
+            Saturday, 24 November 2026
+          </span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[17px] text-secondary">location_on</span>
+            Grand Hyatt Ballroom, Jakarta
+          </span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[17px] text-secondary">cloud_done</span>
+            Hosted until 20 Feb 2027 (82 days active)
+          </span>
+</p>
+</div>
+<!-- Quick Action Controls -->
+<div class="flex flex-wrap items-center gap-2.5">
+<!-- Copy Public Link Chip -->
+<button class="h-10 px-3.5 bg-surface-container hover:bg-surface-container-high transition-colors flex items-center gap-2 group text-on-surface" id="copyUrlBtn" onclick="navigator.clipboard.writeText('https://momentkita.id/raka-ayu'); const t=document.getElementById('copyToast'); t.classList.remove('hidden'); setTimeout(()=&gt;t.classList.add('hidden'), 2500);">
+<span class="material-symbols-outlined text-[17px] text-secondary">link</span>
+<span class="font-body-sm text-body-sm font-medium">momentkita.id/raka-ayu</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant group-hover:text-on-surface">content_copy</span>
+</button>
+<a class="h-10 px-4 bg-surface-container-high hover:bg-surface-container-highest transition-colors flex items-center gap-2 text-on-surface" href="#simulator">
+<span class="material-symbols-outlined text-[17px]">visibility</span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider">Preview Live</span>
+</a>
+<button class="h-10 px-4 bg-primary text-on-primary hover:bg-secondary transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[17px]">edit_note</span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider">Edit Story &amp; Music</span>
+</button>
+<!-- Dropdown Menu Trigger -->
+<div class="relative">
+<button class="w-10 h-10 bg-surface-container hover:bg-surface-container-high transition-colors flex items-center justify-center text-on-surface" id="menuTrigger" onclick="document.getElementById('overflowMenu').classList.toggle('hidden')">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+<div class="hidden absolute right-0 mt-2 w-64 bg-surface-container-lowest shadow-xl z-30 py-2" id="overflowMenu">
+<a class="flex items-center gap-2.5 px-4 py-2 text-body-sm font-body-sm text-on-surface hover:bg-surface-container transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px] text-secondary">qr_code_2</span>
+<span>Download Printable QR Kit</span>
+</a>
+<a class="flex items-center gap-2.5 px-4 py-2 text-body-sm font-body-sm text-on-surface hover:bg-surface-container transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px] text-secondary">file_download</span>
+<span>Export Offline Guestbook (.xlsx)</span>
+</a>
+<a class="flex items-center gap-2.5 px-4 py-2 text-body-sm font-body-sm text-on-surface hover:bg-surface-container transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px] text-secondary">schedule</span>
+<span>Extend Atelier Cloud Hosting</span>
+</a>
+<div class="h-px bg-surface-container mx-3 my-1"></div>
+<a class="flex items-center gap-2.5 px-4 py-2 text-body-sm font-body-sm text-secondary hover:bg-surface-container transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">support_agent</span>
+<span>Concierge WhatsApp Support</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Notification Toast for Copy Link -->
+<div class="hidden fixed bottom-6 right-8 bg-primary text-on-primary px-4 py-2.5 shadow-xl flex items-center gap-2 z-50 transition-all" id="copyToast">
+<span class="material-symbols-outlined text-[18px] text-secondary-fixed">check_circle</span>
+<span class="font-body-sm text-body-sm">Personalized suite link copied to clipboard!</span>
+</div>
+<!-- Local Wedding Tab Navigation -->
+<div class="w-full flex items-center gap-1 overflow-x-auto pb-1 bg-surface-container-low px-1.5 py-1.5">
+<button class="px-4 py-2 bg-surface-container-lowest shadow-sm text-on-surface font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-2 shrink-0">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Overview</span>
+</button>
+<button class="px-4 py-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-2 transition-colors shrink-0">
+<span>Guests</span>
+<span class="text-[11px] px-1.5 py-0.2 bg-surface-container-high rounded-full">128</span>
+</button>
+<button class="px-4 py-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-2 transition-colors shrink-0">
+<span>RSVP &amp; Seating</span>
+<span class="text-[11px] px-1.5 py-0.2 bg-surface-container-high rounded-full">96</span>
+</button>
+<button class="px-4 py-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-2 transition-colors shrink-0">
+<span>Wishes &amp; Blessings</span>
+<span class="text-[11px] px-1.5 py-0.2 bg-secondary/15 text-secondary rounded-full font-semibold">42</span>
+</button>
+<button class="px-4 py-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-2 transition-colors shrink-0">
+<span>Digital Envelope &amp; Gift</span>
+<span class="text-[11px] px-1.5 py-0.2 bg-surface-container-high rounded-full">2 Active</span>
+</button>
+<button class="px-4 py-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-2 transition-colors shrink-0">
+<span>Version History</span>
+<span class="text-[11px] px-1.5 py-0.2 bg-surface-container-high rounded-full">v2.4</span>
+</button>
+</div>
+</div>
+<!-- Main Canvas: 12-Column Editorial Grid -->
+<div class="w-full px-8 py-6 flex flex-col gap-10">
+<!-- Reassurance / Immediate Guidance Banner -->
+<div class="w-full p-5 bg-surface-container-low shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary/15 text-secondary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[22px]">mark_email_read</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface leading-snug">Suite Published &amp; Actively Greeting Guests</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Your ceremony narrative has been viewed 384 times this week. <strong class="text-on-surface font-medium">32 VIP invitations</strong> are currently pending guest opening.
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-3 shrink-0 w-full md:w-auto">
+<button class="flex-1 md:flex-none h-9 px-4 bg-secondary text-on-secondary hover:bg-on-secondary-fixed transition-colors font-label-caps text-label-caps uppercase tracking-wider flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">send</span>
+<span>Send Batch WhatsApp Reminder</span>
+</button>
+</div>
+</div>
+<!-- Editorial Metrics Quadrant (4 Cards) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-6 shadow-sm flex flex-col justify-between group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-4">
+<span class="font-kicker text-kicker uppercase text-secondary">01 — Total Audience</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">groups</span>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-medium text-on-surface">128</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Guests Listed</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            112 personalized links sent, 16 pending dispatch.
+          </p>
+</div>
+<div class="w-full bg-surface-container h-1.5 mt-4 overflow-hidden">
+<div class="bg-primary h-full" style="width: 87.5%"></div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-6 shadow-sm flex flex-col justify-between group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-4">
+<span class="font-kicker text-kicker uppercase text-secondary">02 — RSVP Response Rate</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">how_to_reg</span>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-medium text-on-surface">75%</span>
+<span class="font-body-sm text-body-sm text-secondary font-medium">(96 Replied)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            84 Attending warmly, 12 sent warm regrets.
+          </p>
+</div>
+<div class="w-full bg-surface-container h-1.5 mt-4 overflow-hidden flex">
+<div class="bg-secondary h-full" style="width: 65%"></div>
+<div class="bg-surface-dim h-full" style="width: 10%"></div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-6 shadow-sm flex flex-col justify-between group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-4">
+<span class="font-kicker text-kicker uppercase text-secondary">03 — Confirmed Pax</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">table_restaurant</span>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-medium text-on-surface">146</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Seats Reserved</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            134 Adult sets, 12 child meals configured.
+          </p>
+</div>
+<div class="w-full bg-surface-container h-1.5 mt-4 overflow-hidden">
+<div class="bg-primary h-full" style="width: 73%"></div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest p-6 shadow-sm flex flex-col justify-between group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-4">
+<span class="font-kicker text-kicker uppercase text-secondary">04 — Heartfelt Wishes</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">favorite</span>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-medium text-on-surface">42</span>
+<span class="font-body-sm text-body-sm text-secondary font-medium">Guest Notes</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 truncate">
+            Latest: Om Bramantyo &amp; Tante Rina
+          </p>
+</div>
+<div class="w-full bg-surface-container h-1.5 mt-4 overflow-hidden">
+<div class="bg-secondary h-full" style="width: 90%"></div>
+</div>
+</div>
+</div>
+<!-- Asymmetric Split Showcase: Live Smartphone Mockup & Event Countdown -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left Column (5 Cols): Physical & Digital Stationery Showcase -->
+<div class="lg:col-span-5 flex flex-col gap-6">
+<!-- Phone Device Mockup Card -->
+<div class="bg-surface-container-low p-7 shadow-md relative overflow-hidden flex flex-col items-center">
+<div class="w-full flex items-center justify-between mb-5">
+<div class="flex flex-col">
+<span class="font-kicker text-kicker uppercase text-secondary tracking-wider">Preview Canvas</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Interactive Mobile View</span>
+</div>
+<span class="px-2.5 py-1 bg-surface-container font-label-caps text-label-caps uppercase text-on-surface">
+              Château v2.4
+            </span>
+</div>
+<!-- Realistic Phone Container with Editorial Stationery -->
+<div class="relative w-full max-w-[290px] aspect-[9/18.5] bg-on-surface rounded-[40px] p-2.5 shadow-2xl transition-transform hover:scale-[1.01] duration-300">
+<!-- Camera Island -->
+<div class="absolute top-4 left-1/2 -translate-x-1/2 w-20 h-4 bg-on-surface rounded-full z-20"></div>
+<!-- Screen Viewport -->
+<div class="w-full h-full bg-surface-container-lowest rounded-[32px] overflow-hidden flex flex-col items-center justify-between p-5 relative select-none">
+<!-- Background Delicate Flower / Paper Grain Accent -->
+<div class="absolute inset-0 opacity-10 bg-cover bg-center pointer-events-none" data-alt="Subtle fine art floral debossing texture on warm off-white handmade cotton paper, soft shadow play, minimalist editorial aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB3mXJsCpCYV4iwAM3wtLhVI-O_atm72sDnacylALVPOuidBEapfViCH1Tkc8W3JLZjX-LwBeiMH8p0scpZ2KmlWylLacGApugZeuGEFd3GnQ9KTX0SgHswqmat7NY20gs2-43XT0cpXu3H3Oy_OZ-i9JaO7DHYuUAW_jzGRHvaBmnKBRO4SlyGfHYCyx00nOO3_YZx26c7_tzb15kABW_2rFXTwNAGSq72DVfD2WV1J89-K31_w5s')"></div>
+<!-- Top Monogram & Kicker -->
+<div class="flex flex-col items-center pt-8 text-center z-10">
+<span class="font-kicker text-[9px] tracking-[0.25em] text-secondary uppercase">The Wedding Celebration Of</span>
+<h3 class="font-headline-md text-headline-md tracking-tight text-on-surface mt-2 leading-tight">
+                  Raka &amp;<br/><span class="italic font-normal">Ayu</span>
+</h3>
+<div class="w-8 h-px bg-secondary/40 my-3"></div>
+<p class="font-label-caps text-[10px] uppercase tracking-widest text-on-surface-variant">
+                  Saturday • 24 Nov 2026
+                </p>
+</div>
+<!-- Center Wax Seal & Graphic Motif -->
+<div class="flex flex-col items-center my-auto z-10">
+<div class="w-14 h-14 rounded-full bg-secondary flex items-center justify-center shadow-lg text-on-secondary relative group cursor-pointer">
+<div class="absolute inset-0 rounded-full border border-surface-bright/40"></div>
+<span class="font-headline-sm text-headline-sm italic text-surface-bright">R&amp;A</span>
+</div>
+<span class="font-kicker text-[8px] uppercase tracking-widest text-on-surface-variant mt-2">Tap to Unfold Envelope</span>
+</div>
+<!-- Bottom Invitation Footer Detail -->
+<div class="w-full text-center pb-3 z-10">
+<span class="font-kicker text-[8px] uppercase tracking-wider text-on-surface-variant block">Grand Hyatt Jakarta</span>
+<span class="font-kicker text-[8px] text-secondary tracking-widest uppercase mt-0.5 block">09:00 WIB • Reception 19:00 WIB</span>
+</div>
+</div>
+</div>
+<!-- Bottom Device Controls -->
+<div class="w-full mt-6 pt-5 bg-surface-container-lowest p-4 flex items-center justify-between gap-3">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Interactive Previewer</span>
+<span class="font-kicker text-kicker uppercase text-on-surface-variant">Sound &amp; RSVP Animation</span>
+</div>
+<button class="h-8 px-3.5 bg-primary text-on-primary hover:bg-secondary transition-colors font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px]">play_circle</span>
+<span>Launch Simulator</span>
+</button>
+</div>
+</div>
+<!-- Physical Letterpress Atelier Match Card -->
+<div class="bg-surface-container-low p-6 shadow-sm flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[20px]">history_edu</span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface">Physical Keepsake Atelier</span>
+</div>
+<span class="font-kicker text-kicker uppercase px-2 py-0.5 bg-surface-container text-secondary">In Production</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Matching tactile stationery order <strong class="text-on-surface font-medium">#MK-7721</strong> has been locked with the Bandung printing atelier.
+          </p>
+<div class="p-3 bg-surface-container-lowest flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">600 GSM Wild Cotton Cardstock</span>
+<span class="text-secondary font-medium">Foil Deboss Approved</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm pt-1">
+<a class="text-secondary hover:text-on-surface font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-1" href="#">
+<span>View Letterpress Proof PDF</span>
+<span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</a>
+<span class="text-on-surface-variant text-[12px]">Est. Courier: 12 Nov 2026</span>
+</div>
+</div>
+</div>
+<!-- Right Column (7 Cols): Deep Workspace Telemetry & Operational Sections -->
+<div class="lg:col-span-7 flex flex-col gap-8">
+<!-- Countdown Banner -->
+<div class="p-6 bg-surface-container-lowest shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 relative overflow-hidden">
+<div class="flex flex-col gap-1 z-10">
+<span class="font-kicker text-kicker uppercase text-secondary">Sacred Union Countdown</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">
+              82 Days Until We Say "I Do"
+            </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Saturday, 24 November 2026 • Akad 09:00 WIB • Grand Ballroom 19:00 WIB
+            </p>
+</div>
+<div class="flex items-center gap-3 z-10 shrink-0">
+<div class="flex flex-col items-center justify-center w-14 h-16 bg-surface-container">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">82</span>
+<span class="font-kicker text-[9px] uppercase tracking-wider text-on-surface-variant">Days</span>
+</div>
+<div class="flex flex-col items-center justify-center w-14 h-16 bg-surface-container">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">14</span>
+<span class="font-kicker text-[9px] uppercase tracking-wider text-on-surface-variant">Hours</span>
+</div>
+<div class="flex flex-col items-center justify-center w-14 h-16 bg-surface-container">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">36</span>
+<span class="font-kicker text-[9px] uppercase tracking-wider text-on-surface-variant">Mins</span>
+</div>
+</div>
+</div>
+<!-- RSVP Status & Breakdown Module -->
+<div class="bg-surface-container-lowest p-6 shadow-sm flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-kicker text-kicker uppercase text-secondary">Guest Responses</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">RSVP &amp; Table Allocations</h3>
+</div>
+<div class="flex items-center gap-2">
+<button class="h-8 px-3 bg-surface-container hover:bg-surface-container-high transition-colors font-label-caps text-label-caps uppercase text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Export PDF</span>
+</button>
+<button class="h-8 px-3 bg-surface-container hover:bg-surface-container-high transition-colors font-label-caps text-label-caps uppercase text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">airline_seat_recline_extra</span>
+<span>Seating Map</span>
+</button>
+</div>
+</div>
+<!-- Multi-Segmented Progress Bar -->
+<div class="flex flex-col gap-2">
+<div class="w-full h-3 bg-surface-container overflow-hidden flex gap-0.5">
+<div class="bg-secondary h-full transition-all duration-500" style="width: 65.6%" title="Attending: 84 Guests"></div>
+<div class="bg-outline-variant h-full transition-all duration-500" style="width: 9.4%" title="Declined: 12 Guests"></div>
+<div class="bg-surface-dim h-full transition-all duration-500" style="width: 25.0%" title="Awaiting: 32 Guests"></div>
+</div>
+<!-- Legend breakdown -->
+<div class="grid grid-cols-3 gap-2 pt-1">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 bg-secondary shrink-0"></span>
+<span class="font-body-sm text-body-sm text-on-surface">
+<strong>84</strong> Attending (134 Pax)
+                </span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 bg-outline-variant shrink-0"></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+<strong>12</strong> Regretfully Declined
+                </span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 bg-surface-dim shrink-0"></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+<strong>32</strong> Awaiting Reply
+                </span>
+</div>
+</div>
+</div>
+<!-- Quick Action Callout Inside Card -->
+<div class="p-3.5 bg-surface-container-low flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[20px]">notifications_active</span>
+<span class="font-body-sm text-body-sm text-on-surface">32 VIP invitations have not confirmed their RSVP yet.</span>
+</div>
+<button class="text-secondary font-label-caps text-label-caps uppercase tracking-wider hover:underline flex items-center gap-1 shrink-0">
+<span>Send Gentle Reminder</span>
+<span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Guest Management Snapshot Widget (Recent Guests) -->
+<div class="bg-surface-container-lowest p-6 shadow-sm flex flex-col gap-5">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-kicker text-kicker uppercase text-secondary">Recipient Directory</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Recent Guest Activity</h3>
+</div>
+<a class="font-label-caps text-label-caps uppercase tracking-wider text-secondary hover:text-on-surface flex items-center gap-1" href="#">
+<span>Manage All 128 Guests</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Guest Rows -->
+<div class="flex flex-col gap-2">
+<!-- Guest Item 1 -->
+<div class="p-3.5 bg-surface-container-low hover:bg-surface-container transition-colors flex items-center justify-between gap-4">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-9 h-9 rounded-full bg-secondary/15 text-secondary flex items-center justify-center font-label-caps text-label-caps shrink-0">
+                  HG
+                </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-body-md text-body-md font-medium text-on-surface truncate">Bpk. Hendra Gunawan &amp; Keluarga</span>
+<span class="px-2 py-0.2 bg-secondary/10 text-secondary text-[11px] font-semibold uppercase tracking-wider">VIP Table 01</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Personalized Link: momentkita.id/raka-ayu?to=hendra-gunawan</span>
+</div>
+</div>
+<div class="flex items-center gap-3 shrink-0">
+<span class="px-2.5 py-1 bg-surface-container-lowest text-on-surface font-body-sm text-body-sm font-medium">
+                  2 Pax Confirmed
+                </span>
+<button class="text-on-surface-variant hover:text-secondary p-1">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</button>
+</div>
+</div>
+<!-- Guest Item 2 -->
+<div class="p-3.5 bg-surface-container-low hover:bg-surface-container transition-colors flex items-center justify-between gap-4">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-9 h-9 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center font-label-caps text-label-caps shrink-0">
+                  CV
+                </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-body-md text-body-md font-medium text-on-surface truncate">Clarissa Valois</span>
+<span class="px-2 py-0.2 bg-surface-container-high text-on-surface-variant text-[11px] font-semibold uppercase tracking-wider">Bridesmaid</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Personalized Link: momentkita.id/raka-ayu?to=clarissa-valois</span>
+</div>
+</div>
+<div class="flex items-center gap-3 shrink-0">
+<span class="px-2.5 py-1 bg-surface-container-lowest text-on-surface font-body-sm text-body-sm font-medium">
+                  1 Pax Confirmed
+                </span>
+<button class="text-on-surface-variant hover:text-secondary p-1">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</button>
+</div>
+</div>
+<!-- Guest Item 3 -->
+<div class="p-3.5 bg-surface-container-low hover:bg-surface-container transition-colors flex items-center justify-between gap-4">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-9 h-9 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center font-label-caps text-label-caps shrink-0">
+                  DP
+                </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-body-md text-body-md font-medium text-on-surface truncate">Dimas Prasetyo</span>
+<span class="px-2 py-0.2 bg-surface-container-high text-on-surface-variant text-[11px] font-semibold uppercase tracking-wider">Groom Family</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Link dispatched via WhatsApp (Not Opened Yet)</span>
+</div>
+</div>
+<div class="flex items-center gap-3 shrink-0">
+<span class="px-2.5 py-1 bg-secondary-container/30 text-on-secondary-container font-body-sm text-body-sm font-medium">
+                  Awaiting RSVP
+                </span>
+<button class="text-on-surface-variant hover:text-secondary p-1">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Heartfelt Wishes & Blessings Editorial Showcase -->
+<div class="bg-surface-container-lowest p-6 shadow-sm flex flex-col gap-5">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-kicker text-kicker uppercase text-secondary">Archival Guestbook</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Recent Wishes &amp; Blessings</h3>
+</div>
+<a class="font-label-caps text-label-caps uppercase tracking-wider text-secondary hover:text-on-surface flex items-center gap-1" href="#">
+<span>Moderate All 42 Wishes</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Wish Card 1 -->
+<div class="p-5 bg-surface-container-low flex flex-col justify-between gap-4 relative">
+<span class="material-symbols-outlined text-secondary/30 text-[32px] absolute top-3 right-3 select-none">format_quote</span>
+<p class="font-quote-editorial text-[17px] leading-relaxed text-on-surface italic">
+                “Semoga lancar dan penuh keberkahan hingga hari H untuk Raka &amp; Ayu tersayang. Bahagia selalu menempuh hidup baru!”
+              </p>
+<div class="flex items-center justify-between pt-2">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Sarah Jenkins</span>
+<span class="font-kicker text-[10px] text-on-surface-variant uppercase">Bridesmaid • 2 hrs ago</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-[18px]">favorite</span>
+</div>
+</div>
+<!-- Wish Card 2 -->
+<div class="p-5 bg-surface-container-low flex flex-col justify-between gap-4 relative">
+<span class="material-symbols-outlined text-secondary/30 text-[32px] absolute top-3 right-3 select-none">format_quote</span>
+<p class="font-quote-editorial text-[17px] leading-relaxed text-on-surface italic">
+                “Selamat untuk ananda berdua. Semoga senantiasa menjadi keluarga yang sakinah, mawaddah, warahmah di lindungan-Nya.”
+              </p>
+<div class="flex items-center justify-between pt-2">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Bpk. &amp; Ibu Dr. Arya</span>
+<span class="font-kicker text-[10px] text-on-surface-variant uppercase">Family Elder • 5 hrs ago</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-[18px]">favorite</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Digital Envelope & Gift Registry Status -->
+<div class="bg-surface-container-lowest p-6 shadow-sm flex flex-col gap-5">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-kicker text-kicker uppercase text-secondary">Tanda Kasih &amp; Registry</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Configured Digital Envelopes</h3>
+</div>
+<button class="h-8 px-3 bg-surface-container hover:bg-surface-container-high transition-colors font-label-caps text-label-caps uppercase tracking-wider text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Configure Accounts</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Account 1 -->
+<div class="p-4 bg-surface-container-low flex items-start justify-between">
+<div class="flex flex-col gap-1">
+<span class="font-label-caps text-[11px] uppercase tracking-wider text-secondary">Primary Bank Transfer</span>
+<span class="font-headline-sm text-[18px] text-on-surface">Bank BCA</span>
+<span class="font-mono text-body-sm text-on-surface font-semibold tracking-wider">0882-9910-21</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">a.n. Raka Daniswara</span>
+</div>
+<span class="px-2 py-0.5 bg-surface-container-highest text-on-surface text-[11px] font-medium uppercase tracking-wider">
+                QRIS Ready
+              </span>
+</div>
+<!-- Account 2 -->
+<div class="p-4 bg-surface-container-low flex items-start justify-between">
+<div class="flex flex-col gap-1">
+<span class="font-label-caps text-[11px] uppercase tracking-wider text-secondary">Secondary Bank Transfer</span>
+<span class="font-headline-sm text-[18px] text-on-surface">Bank Mandiri</span>
+<span class="font-mono text-body-sm text-on-surface font-semibold tracking-wider">132-00-9981-221</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">a.n. Ayu Prameswari</span>
+</div>
+<span class="px-2 py-0.5 bg-surface-container-highest text-on-surface text-[11px] font-medium uppercase tracking-wider">
+                Active
+              </span>
+</div>
+</div>
+<div class="p-3 bg-surface-container-low flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">home_pin</span>
+<span class="text-on-surface">Physical Gift Delivery Address: Menteng, Central Jakarta (Visible to Guests)</span>
+</div>
+<a class="text-secondary font-label-caps text-label-caps uppercase tracking-wider hover:underline" href="#">Edit</a>
+</div>
+</div>
+<!-- Specifications & Recent Workspace Activity -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Atelier Package Specs -->
+<div class="bg-surface-container-lowest p-6 shadow-sm flex flex-col justify-between gap-4">
+<div class="flex flex-col gap-1">
+<span class="font-kicker text-kicker uppercase text-secondary">Tier Entitlements</span>
+<h4 class="font-headline-sm text-[19px] text-on-surface">Signature Bespoke Suite</h4>
+</div>
+<div class="flex flex-col gap-2.5 text-body-sm font-body-sm text-on-surface">
+<div class="flex items-center justify-between py-1">
+<span class="text-on-surface-variant">Custom Domain</span>
+<span class="font-medium text-secondary">momentkita.id/raka-ayu</span>
+</div>
+<div class="flex items-center justify-between py-1">
+<span class="text-on-surface-variant">RSVP Quota</span>
+<span class="font-medium">Unlimited Responses</span>
+</div>
+<div class="flex items-center justify-between py-1">
+<span class="text-on-surface-variant">Audio Guestbook</span>
+<span class="font-medium text-secondary">Hi-Fi Lossless (Active)</span>
+</div>
+<div class="flex items-center justify-between py-1">
+<span class="text-on-surface-variant">Cloud Storage</span>
+<span class="font-medium">Active until 20 Feb 2027</span>
+</div>
+</div>
+<button class="w-full h-8 mt-2 bg-surface-container hover:bg-surface-container-high transition-colors font-label-caps text-label-caps uppercase tracking-wider text-on-surface flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">upgrade</span>
+<span>Manage Plan &amp; Add-ons</span>
+</button>
+</div>
+<!-- Activity Timeline -->
+<div class="bg-surface-container-lowest p-6 shadow-sm flex flex-col justify-between gap-4">
+<div class="flex flex-col gap-1">
+<span class="font-kicker text-kicker uppercase text-secondary">Changelog</span>
+<h4 class="font-headline-sm text-[19px] text-on-surface">Recent Workspace Events</h4>
+</div>
+<div class="flex flex-col gap-3">
+<div class="flex items-start gap-2.5 text-body-sm font-body-sm">
+<span class="w-2 h-2 rounded-full bg-secondary shrink-0 mt-1.5"></span>
+<div class="flex flex-col">
+<span class="text-on-surface font-medium">Ayu uploaded 4 new gallery portraits</span>
+<span class="text-on-surface-variant text-[12px]">2 hours ago • Gallery Section</span>
+</div>
+</div>
+<div class="flex items-start gap-2.5 text-body-sm font-body-sm">
+<span class="w-2 h-2 rounded-full bg-outline-variant shrink-0 mt-1.5"></span>
+<div class="flex flex-col">
+<span class="text-on-surface font-medium">3 guests opened personalized invitation link</span>
+<span class="text-on-surface-variant text-[12px]">4 hours ago • WhatsApp Direct</span>
+</div>
+</div>
+<div class="flex items-start gap-2.5 text-body-sm font-body-sm">
+<span class="w-2 h-2 rounded-full bg-outline-variant shrink-0 mt-1.5"></span>
+<div class="flex flex-col">
+<span class="text-on-surface font-medium">Clarissa confirmed attendance with 1 companion</span>
+<span class="text-on-surface-variant text-[12px]">Yesterday, 18:20 • RSVP Engine</span>
+</div>
+</div>
+</div>
+<a class="text-secondary font-label-caps text-label-caps uppercase tracking-wider hover:underline text-center pt-2" href="#">
+              View Complete Audit Log →
+            </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Editorial Footer Ribbon for Customer Workspace -->
+<div class="w-full pt-8 pb-12 flex flex-col sm:flex-row items-center justify-between text-body-sm font-body-sm text-on-surface-variant gap-4">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-[16px] text-secondary italic">Moment Kita</span>
+<span>— Atelier Haute Celebration Suite. Crafted for Raka &amp; Ayu.</span>
+</div>
+<div class="flex items-center gap-6">
+<a class="hover:text-on-surface transition-colors" href="#">Privacy &amp; Data Security</a>
+<a class="hover:text-on-surface transition-colors" href="#">Help Center</a>
+<a class="hover:text-on-surface transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[15px] text-secondary">support_agent</span>
+<span>WhatsApp Atelier Concierge</span>
+</a>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

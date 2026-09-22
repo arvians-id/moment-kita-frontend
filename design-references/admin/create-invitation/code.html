@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&amp;family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-variant":"#e5e2dc","inverse-primary":"#c8c6c5","on-secondary-container":"#7a3e29","primary-container":"#1c1b1b","background":"#fcf9f3","surface-container-lowest":"#ffffff","secondary":"#8c4d37","on-surface":"#1c1c18","on-tertiary-fixed-variant":"#753224","primary-fixed":"#e5e2e1","primary":"#000000","on-primary-fixed-variant":"#474746","surface-tint":"#5f5e5e","outline":"#747878","primary-fixed-dim":"#c8c6c5","inverse-on-surface":"#f3f0ea","surface-container-highest":"#e5e2dc","on-surface-variant":"#444748","tertiary-fixed":"#ffdad3","on-primary":"#ffffff","tertiary":"#000000","surface":"#fcf9f3","surface-bright":"#fcf9f3","on-secondary-fixed":"#380d00","on-primary-fixed":"#1c1b1b","tertiary-container":"#3c0801","on-error-container":"#93000a","on-error":"#ffffff","secondary-fixed":"#ffdbcf","on-tertiary":"#ffffff","inverse-surface":"#31312d","surface-container":"#f0eee8","error":"#ba1a1a","secondary-container":"#ffad91","on-tertiary-container":"#c06d5b","surface-dim":"#dcdad4","on-secondary-fixed-variant":"#703722","on-tertiary-fixed":"#3c0801","on-secondary":"#ffffff","surface-container-low":"#f6f3ed","error-container":"#ffdad6","secondary-fixed-dim":"#ffb59c","on-background":"#1c1c18","on-primary-container":"#858383","outline-variant":"#c4c7c7","surface-container-high":"#ebe8e2","tertiary-fixed-dim":"#ffb4a4"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"gutter-mobile":"1rem","gutter":"2rem","space-md":"1rem","margin":"3.5rem","space-xl":"3rem","space-xs":"0.25rem","margin-mobile":"1.25rem","space-lg":"1.75rem","space-sm":"0.5rem"},"fontFamily":{"headline-xl-mobile":["Playfair Display"],"body-sm":["Plus Jakarta Sans"],"headline-sm":["Playfair Display"],"quote-editorial":["Playfair Display"],"body-lg":["Plus Jakarta Sans"],"headline-md":["Playfair Display"],"headline-xl":["Playfair Display"],"display-hero":["Playfair Display"],"headline-lg-mobile":["Playfair Display"],"headline-lg":["Playfair Display"],"body-md":["Plus Jakarta Sans"],"label-caps":["Plus Jakarta Sans"],"display-hero-mobile":["Playfair Display"],"kicker":["Plus Jakarta Sans"]},"fontSize":{"headline-xl-mobile":["36px",{"lineHeight":"42px","letterSpacing":"-0.01em","fontWeight":"400"}],"body-sm":["13px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"400"}],"headline-sm":["22px",{"lineHeight":"30px","letterSpacing":"0em","fontWeight":"600"}],"quote-editorial":["24px",{"lineHeight":"36px","letterSpacing":"0em","fontWeight":"400"}],"body-lg":["18px",{"lineHeight":"30px","letterSpacing":"-0.01em","fontWeight":"400"}],"headline-md":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"500"}],"headline-xl":["56px",{"lineHeight":"64px","letterSpacing":"-0.02em","fontWeight":"400"}],"display-hero":["84px",{"lineHeight":"92px","letterSpacing":"-0.03em","fontWeight":"400"}],"headline-lg-mobile":["28px",{"lineHeight":"34px","letterSpacing":"0em","fontWeight":"400"}],"headline-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.015em","fontWeight":"400"}],"body-md":["15px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"label-caps":["12px",{"lineHeight":"16px","letterSpacing":"0.12em","fontWeight":"600"}],"display-hero-mobile":["44px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"400"}],"kicker":["11px",{"lineHeight":"16px","letterSpacing":"0.2em","fontWeight":"600"}]}}}};</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-low flex flex-col z-50 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 px-6 flex items-center justify-between bg-surface-container-low"><div class="flex items-center gap-3"><img alt="Brand logo. - Primary color: #1a1a1a - Font: playfairDisplay - Mode: light - Roundness: rounded-lg" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WORa7OFIDEA7UPD6MXwEEjQLZ-jy7n080Duy_MtM2d0iXYga0ZH1v4JwIzC9mcMobJ7aMmmbk-R6eD5oytZOkNtvi0CO67tJ9GoAna2Yf03mENT0HnwfYrqWgKPsrZtDzVXA2BA6huVaulYlgBQ0roeaVG7xp40Eck7D6fpl5_bPO70EGCIfPONyFDQmpRT2_Y5BgnOg3y2nxoHTaQqTflRQBQdj4wymaHOfCTkeCoSu_7wpl6XY2c"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary leading-none tracking-tight">Moment Kita</span><span class="font-kicker text-kicker text-on-surface-variant uppercase mt-1">Studio Admin · v2.4</span></div></div></div><div class="flex-1 overflow-y-auto px-4 py-4 space-y-6"><nav class="space-y-6" data-active-classes="bg-primary-container text-on-primary font-body-sm text-body-sm rounded-none shadow-sm"><div><p class="font-kicker text-kicker text-secondary uppercase px-3 mb-2">OVERVIEW</p><div class="space-y-1"><a class="flex items-center gap-3 px-3 py-2 font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[18px]">dashboard</span><span>Dashboard</span></a></div></div><div><p class="font-kicker text-kicker text-secondary uppercase px-3 mb-2">MANAGEMENT</p><div class="space-y-1"><a class="flex items-center gap-3 px-3 py-2 font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="customers" href="#"><span class="material-symbols-outlined text-[18px]">group</span><span>Customers</span></a><a aria-current="page" class="flex items-center gap-3 px-3 py-2 transition-colors bg-primary-container text-on-primary font-body-sm text-body-sm rounded-none shadow-sm" data-path="invitations" href="#"><span class="material-symbols-outlined text-[18px]">mail</span><span>Invitations</span></a><a class="flex items-center gap-3 px-3 py-2 font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="templates" href="#"><span class="material-symbols-outlined text-[18px]">style</span><span>Templates</span></a></div></div><div><p class="font-kicker text-kicker text-secondary uppercase px-3 mb-2">COMMERCE</p><div class="space-y-1"><a class="flex items-center gap-3 px-3 py-2 font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="transactions" href="#"><span class="material-symbols-outlined text-[18px]">receipt_long</span><span>Transactions</span></a><a class="flex items-center gap-3 px-3 py-2 font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="packages-quota" href="#"><span class="material-symbols-outlined text-[18px]">inventory_2</span><span>Packages &amp; Quota</span></a><a class="flex items-center gap-3 px-3 py-2 font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="printed-orders" href="#"><span class="material-symbols-outlined text-[18px]">local_shipping</span><span>Printed Orders</span></a></div></div><div><p class="font-kicker text-kicker text-secondary uppercase px-3 mb-2">OPERATIONS</p><div class="space-y-1"><a class="flex items-center justify-between px-3 py-2 font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="notifications" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[18px]">notifications</span><span>Notifications</span></div><span class="px-1.5 py-0.5 font-label-caps text-label-caps bg-secondary text-on-secondary">3</span></a><a class="flex items-center gap-3 px-3 py-2 font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="audit-logs" href="#"><span class="material-symbols-outlined text-[18px]">history_edu</span><span>Audit Logs</span></a></div></div><div><p class="font-kicker text-kicker text-secondary uppercase px-3 mb-2">SYSTEM</p><div class="space-y-1"><a class="flex items-center gap-3 px-3 py-2 font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[18px]">tune</span><span>Settings</span></a></div></div></nav></div><div class="p-4 bg-surface-container"><div class="flex items-center gap-3"><div class="w-9 h-9 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col min-w-0"><span class="font-label-caps text-label-caps text-on-surface truncate">Atelier Admin</span><span class="font-body-sm text-body-sm text-on-surface-variant truncate">Superuser</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-8 flex items-center justify-between"><div class="flex items-center gap-4 min-w-0"><img alt="Brand logo. - Primary color: #1a1a1a - Font: playfairDisplay - Mode: light - Roundness: rounded-lg" class="h-7 w-auto object-contain hidden lg:block" src="https://lh3.googleusercontent.com/aida/AEtjO1WORa7OFIDEA7UPD6MXwEEjQLZ-jy7n080Duy_MtM2d0iXYga0ZH1v4JwIzC9mcMobJ7aMmmbk-R6eD5oytZOkNtvi0CO67tJ9GoAna2Yf03mENT0HnwfYrqWgKPsrZtDzVXA2BA6huVaulYlgBQ0roeaVG7xp40Eck7D6fpl5_bPO70EGCIfPONyFDQmpRT2_Y5BgnOg3y2nxoHTaQqTflRQBQdj4wymaHOfCTkeCoSu_7wpl6XY2c"/><div class="flex items-center gap-2 font-label-caps text-label-caps tracking-wider text-on-surface-variant truncate"><span class="text-on-surface-variant">MANAGEMENT</span><span class="material-symbols-outlined text-[14px] text-outline-variant">chevron_right</span><span class="text-on-surface-variant">INVITATIONS</span><span class="material-symbols-outlined text-[14px] text-outline-variant">chevron_right</span><span class="text-primary font-semibold">CREATE INVITATION</span></div></div><div class="flex items-center gap-4"><div class="relative hidden md:flex items-center"><div class="flex items-center gap-2 px-3 py-1.5 bg-surface-container text-on-surface-variant rounded-none"><span class="material-symbols-outlined text-[18px]">search</span><span class="font-body-sm text-body-sm pr-6 text-on-surface-variant">Search atelier...</span><kbd class="font-label-caps text-label-caps px-1.5 py-0.5 bg-surface text-on-surface-variant">⌘K</kbd></div></div><div class="hidden sm:flex items-center gap-2 px-3 py-1.5 bg-surface-container text-on-surface font-body-sm text-body-sm"><span class="material-symbols-outlined text-[18px] text-secondary">calendar_today</span><span>Oct 1 – Oct 31, 2024</span></div><a class="relative p-2 text-on-surface-variant hover:text-on-surface transition-colors" data-path="notifications" href="#"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-secondary"></span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="w-full pt-20 px-8 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Utility Sub-Header & Breadcrumb Bar -->
+<section class="w-full pb-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-outline-variant/30">
+<div class="space-y-2">
+<div class="flex items-center gap-2">
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest">Admin Console</span>
+<span class="text-outline-variant text-xs">•</span>
+<span class="font-kicker text-kicker uppercase text-on-surface-variant tracking-wider">Provisioning Engine</span>
+<span class="text-outline-variant text-xs">•</span>
+<span class="px-2 py-0.5 bg-surface-container font-label-caps text-[10px] text-primary tracking-widest font-mono">MK-ORCHESTRATION</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Create New Invitation Suite</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+          Provision and orchestrate digital guest experiences and companion tactile print pipelines for registered couples or bespoke managed atelier clients.
+        </p>
+</div>
+<div class="flex items-center gap-4 shrink-0">
+<button class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-error transition-colors px-3 py-2 underline underline-offset-4 decoration-outline-variant hover:decoration-error" type="button">
+          Discard Draft
+        </button>
+<button class="bg-surface-container-high hover:bg-surface-container-highest text-on-surface px-5 py-3 font-label-caps text-label-caps uppercase tracking-wider transition-all flex items-center gap-2 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">save</span>
+          Save as Staging Draft
+        </button>
+</div>
+</div>
+<!-- Multi-Step Interactive Progress Bar -->
+<div class="pt-6">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-4">
+<div class="flex items-center gap-3">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-primary font-semibold">Workflow Cadence</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">schedule</span>
+            Est. 3–4 mins completion
+          </span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<span class="inline-block w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
+<span>Auto-saving to Atelier Cloud Vault</span>
+<span class="text-xs text-outline font-mono">14:28:02 UTC</span>
+</div>
+</div>
+<!-- Stepper Nodes -->
+<div class="grid grid-cols-2 md:grid-cols-5 gap-3">
+<!-- Step 1 -->
+<button class="text-left p-3.5 transition-all bg-primary text-on-primary shadow-sm flex flex-col justify-between h-20" id="step-btn-1" onclick="switchStep(1)">
+<div class="flex items-center justify-between w-full">
+<span class="font-label-caps text-[11px] tracking-widest opacity-80 uppercase">01 / Step</span>
+<span class="material-symbols-outlined text-[16px] text-secondary-container">check_circle</span>
+</div>
+<span class="font-headline-sm text-[15px] font-medium leading-tight">Customer Dossier</span>
+</button>
+<!-- Step 2 -->
+<button class="text-left p-3.5 transition-all bg-surface-container-high hover:bg-surface-container-highest text-on-surface flex flex-col justify-between h-20" id="step-btn-2" onclick="switchStep(2)">
+<div class="flex items-center justify-between w-full">
+<span class="font-label-caps text-[11px] tracking-widest text-on-surface-variant uppercase">02 / Step</span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+<span class="font-headline-sm text-[15px] font-medium leading-tight">Template Architecture</span>
+</button>
+<!-- Step 3 -->
+<button class="text-left p-3.5 transition-all bg-surface-container-low hover:bg-surface-container text-on-surface-variant flex flex-col justify-between h-20" id="step-btn-3" onclick="switchStep(3)">
+<div class="flex items-center justify-between w-full">
+<span class="font-label-caps text-[11px] tracking-widest text-outline uppercase">03 / Step</span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+</div>
+<span class="font-headline-sm text-[15px] font-normal leading-tight text-on-surface">Wedding Basics</span>
+</button>
+<!-- Step 4 -->
+<button class="text-left p-3.5 transition-all bg-surface-container-low hover:bg-surface-container text-on-surface-variant flex flex-col justify-between h-20" id="step-btn-4" onclick="switchStep(4)">
+<div class="flex items-center justify-between w-full">
+<span class="font-label-caps text-[11px] tracking-widest text-outline uppercase">04 / Step</span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+</div>
+<span class="font-headline-sm text-[15px] font-normal leading-tight text-on-surface">Commercial Entitlement</span>
+</button>
+<!-- Step 5 -->
+<button class="text-left p-3.5 transition-all bg-surface-container-low hover:bg-surface-container text-on-surface-variant flex flex-col justify-between h-20 col-span-2 md:col-span-1" id="step-btn-5" onclick="switchStep(5)">
+<div class="flex items-center justify-between w-full">
+<span class="font-label-caps text-[11px] tracking-widest text-outline uppercase">05 / Step</span>
+<span class="material-symbols-outlined text-[16px] text-outline">rocket_launch</span>
+</div>
+<span class="font-headline-sm text-[15px] font-normal leading-tight text-on-surface">Review &amp; Launch</span>
+</button>
+</div>
+</div>
+</section>
+<!-- 2-Column Work Engine: Form (65%) vs Live Dossier Inspector (35%) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start pb-20">
+<!-- LEFT MAIN OPERATIONAL COLUMN (12 col -> 7 col on lg) -->
+<div class="lg:col-span-7 flex flex-col space-y-10">
+<!-- STEP 1: CUSTOMER PROVISIONING -->
+<section class="bg-surface-container-lowest p-6 sm:p-8 shadow-sm space-y-8" id="step-section-1">
+<div class="flex items-start justify-between border-b border-surface-container pb-4">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2 py-0.5 bg-secondary/10 text-secondary font-label-caps text-[11px] uppercase tracking-wider">Step 01 of 05</span>
+<span class="text-outline-variant text-xs">•</span>
+<span class="font-label-caps text-[11px] text-on-surface-variant uppercase">Identity Binding</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary">Customer Selection &amp; Quota Provisioning</h2>
+</div>
+<span class="material-symbols-outlined text-secondary text-2xl">fingerprint</span>
+</div>
+<!-- Mode Toggle Switcher -->
+<div class="space-y-3">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">Client Onboarding Channel</label>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 p-1 bg-surface-container">
+<button class="py-2.5 px-4 font-body-sm text-body-sm font-medium transition-all text-on-primary bg-primary shadow-sm flex items-center justify-center gap-2" id="tab-existing" onclick="setCustomerMode('existing')" type="button">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+              Existing Customer Account
+            </button>
+<button class="py-2.5 px-4 font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-all flex items-center justify-center gap-2" id="tab-new" onclick="setCustomerMode('new')" type="button">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+              + New Managed VIP Client
+            </button>
+</div>
+</div>
+<!-- Panel 1: Existing Customer Auto-Lookup -->
+<div class="space-y-4" id="panel-existing-client">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider block">Search Registered Couple Database</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3.5 top-3.5 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full bg-surface-container-low pl-11 pr-24 py-3 font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface border-0" placeholder="Search by name, email, phone or booking reference..." type="text" value="Ayu Prameswari"/>
+<span class="absolute right-3.5 top-3 font-label-caps text-[11px] px-2 py-1 bg-surface text-secondary uppercase font-semibold">Verified</span>
+</div>
+<!-- Selected Customer Card -->
+<div class="p-4 bg-surface-container-low flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div class="flex items-center gap-3.5">
+<div class="w-12 h-12 bg-primary text-on-primary flex items-center justify-center font-headline-sm font-light shrink-0">
+                AP
+              </div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<h4 class="font-headline-sm text-base text-primary font-semibold truncate">Ayu Prameswari</h4>
+<span class="px-2 py-0.5 bg-secondary-container text-on-secondary-container font-label-caps text-[10px] uppercase font-bold tracking-wider">VIP Managed</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">ayu@heritage-indonesia.com • +62 811-2948-3920</p>
+</div>
+</div>
+<div class="flex sm:flex-col items-end justify-between sm:justify-center border-t sm:border-t-0 pt-2 sm:pt-0 border-surface-variant">
+<span class="font-label-caps text-[11px] uppercase tracking-wider text-secondary font-semibold">Ledger Quota</span>
+<span class="font-headline-sm text-lg text-primary font-bold">3 Credits Avail.</span>
+</div>
+</div>
+<!-- Quota preview badge note -->
+<div class="flex items-center gap-2.5 px-3.5 py-2.5 bg-surface text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">account_balance_wallet</span>
+<span>Client holds <strong>3 active suite entitlement units</strong>. Allocating this invitation will deduct <strong>1 unit</strong> automatically upon approval.</span>
+</div>
+</div>
+<!-- Panel 2: New Managed Customer (hidden by default) -->
+<div class="hidden space-y-4" id="panel-new-client">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant block mb-1.5">Primary Contact Full Name</label>
+<input class="w-full bg-surface-container-low p-3 font-body-md text-on-surface focus:outline-none focus:bg-surface" placeholder="e.g. Clarissa Salim" type="text"/>
+</div>
+<div>
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant block mb-1.5">Primary Contact Email</label>
+<input class="w-full bg-surface-container-low p-3 font-body-md text-on-surface focus:outline-none focus:bg-surface" placeholder="clarissa@salim-group.id" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant block mb-1.5">WhatsApp Number (Direct Concierge)</label>
+<div class="flex">
+<span class="bg-surface-container px-3 py-3 font-body-sm text-on-surface-variant font-mono text-sm shrink-0">+62 🇮🇩</span>
+<input class="w-full bg-surface-container-low p-3 font-body-md text-on-surface focus:outline-none focus:bg-surface" placeholder="812 3456 7890" type="tel"/>
+</div>
+</div>
+<div>
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant block mb-1.5">Lead Atelier Concierge</label>
+<select class="w-full bg-surface-container-low p-3 font-body-md text-on-surface focus:outline-none focus:bg-surface">
+<option selected="">Rina Maharani (Lead Bali Atelier)</option>
+<option>Farhan Malik (Jakarta High-Craft)</option>
+<option>Helena Rousseau (International VIP)</option>
+</select>
+</div>
+</div>
+<div>
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant block mb-1.5">Private Atelier Concierge Notes</label>
+<textarea class="w-full bg-surface-container-low p-3 font-body-sm text-on-surface focus:outline-none focus:bg-surface" placeholder="Strict privacy embargo requested. Family requires physical letterpress mockups hand-delivered to Dharmawangsa residence." rows="2"></textarea>
+</div>
+</div>
+</section>
+<!-- STEP 2: TEMPLATE ARCHITECTURE -->
+<section class="bg-surface-container-lowest p-6 sm:p-8 shadow-sm space-y-6" id="step-section-2">
+<div class="flex items-start justify-between border-b border-surface-container pb-4">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2 py-0.5 bg-secondary/10 text-secondary font-label-caps text-[11px] uppercase tracking-wider">Step 02 of 05</span>
+<span class="text-outline-variant text-xs">•</span>
+<span class="font-label-caps text-[11px] text-on-surface-variant uppercase">Visual Typology</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary">Template Architecture</h2>
+</div>
+<span class="material-symbols-outlined text-secondary text-2xl">style</span>
+</div>
+<!-- Filter Chips -->
+<div class="flex items-center gap-2 overflow-x-auto pb-2">
+<button class="px-3.5 py-1.5 bg-primary text-on-primary font-label-caps text-[11px] uppercase tracking-wider shrink-0">All Architectures</button>
+<button class="px-3.5 py-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-caps text-[11px] uppercase tracking-wider shrink-0">Modern Editorial</button>
+<button class="px-3.5 py-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-caps text-[11px] uppercase tracking-wider shrink-0">Classic Parisian</button>
+<button class="px-3.5 py-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-caps text-[11px] uppercase tracking-wider shrink-0">Botanical &amp; Organics</button>
+<button class="px-3.5 py-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-caps text-[11px] uppercase tracking-wider shrink-0">Minimalist Noir</button>
+</div>
+<!-- Template Cards Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+<!-- Template Card 1 (Selected) -->
+<div class="relative bg-surface-container-low p-4 flex flex-col justify-between group cursor-pointer ring-2 ring-primary">
+<div class="absolute top-2 right-2 bg-secondary text-on-secondary px-2 py-0.5 font-label-caps text-[9px] uppercase tracking-widest z-10">
+              Selected
+            </div>
+<div class="relative w-full h-44 overflow-hidden mb-3 bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Exquisite wedding stationery mock-up on cream textured handmade deckle-edge paper with embossed floral crest and gold foil calligraphy, captured in soft warm natural light with dried bunny tails and botanical accents in an artisanal photography studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSzbEhn5JQzGHYVPq7TqKNLkD3IckgqScrlY1dyns_ox3Pv7mLO4PiXJrXRUS_PRTcf280OAjSuXCAt-Ew5VYYFFApvXbcL1vLVuMuEcbnlZWyRrHhCrCoseM-k-5oeSoSnOAJ4Tbm0ZmCz-mJY8H1iRCeS-4B7yL_DoH2o8yxxYgIAjGrQ-yvOO5nuZb_qOdAMEvZU0MJePuUkIvqK-7oYNqXNBub7tKkTI3waFHV87NEjpp8o7g"/>
+<div class="absolute bottom-2 left-2 bg-primary/80 backdrop-blur-sm text-on-primary font-label-caps text-[10px] px-2 py-0.5">
+                v2.4 Live
+              </div>
+</div>
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-headline-sm text-base text-primary font-semibold">Château de Chantilly</span>
+</div>
+<p class="font-body-sm text-[12px] text-secondary font-medium mb-2">French Monogram &amp; Deboss</p>
+<ul class="space-y-1 mb-4 text-on-surface-variant font-body-sm text-[12px]">
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[14px] text-secondary">check</span>Dual-Session RSVP</li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[14px] text-secondary">check</span>Cashless Angpao / QRIS</li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[14px] text-secondary">check</span>Lossless Audio Ambient</li>
+</ul>
+</div>
+<a class="font-label-caps text-[11px] text-primary hover:text-secondary uppercase underline tracking-wider pt-2 border-t border-surface-container flex items-center justify-between" href="#">
+<span>Preview Demo</span>
+<span class="material-symbols-outlined text-[14px]">north_east</span>
+</a>
+</div>
+<!-- Template Card 2 -->
+<div class="relative bg-surface-container-low p-4 flex flex-col justify-between group cursor-pointer hover:bg-surface-container-high transition-colors">
+<div class="relative w-full h-44 overflow-hidden mb-3 bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Modern minimalist digital smartphone invitation mockup resting on linen fabric with soft diagonal shadows and neutral beige color palette, showcasing bilingual clean typography and elegant spacing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7-IAqR2IZ5EKjse72GE9Ni0E2f4kAePM0jXzzy5FePKrevJ7KME6j6lNsNa3KzYpqme1OpfNh3MIhn7YrPvkUMmv2odXC-crLmYSnboqQ2l4bki59RrtTEm0yNR3iOBk6IhbSZDE3wMraembEqL2A8UbjDFdbSMkvPAZqUlLSfGWwQW3wXcAQGJ6NMeWcWpdx-Rk1WFbQHa5Zq1O9BY8cb6n6SxSzFl-4WlwtFCXKgQGBEkWwKKY"/>
+<div class="absolute bottom-2 left-2 bg-primary/80 backdrop-blur-sm text-on-primary font-label-caps text-[10px] px-2 py-0.5">
+                v1.9 Live
+              </div>
+</div>
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-headline-sm text-base text-primary font-semibold">Kyoto Whisper</span>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant font-medium mb-2">Japanese Minimalist Vellum</p>
+<ul class="space-y-1 mb-4 text-on-surface-variant font-body-sm text-[12px]">
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[14px] text-outline">check</span>Bilingual Typography</li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[14px] text-outline">check</span>Vertical Editorial Gallery</li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[14px] text-outline">check</span>Bespoke Dark Mode</li>
+</ul>
+</div>
+<a class="font-label-caps text-[11px] text-primary hover:text-secondary uppercase underline tracking-wider pt-2 border-t border-surface-container flex items-center justify-between" href="#">
+<span>Select Architecture</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+<!-- Template Card 3 -->
+<div class="relative bg-surface-container-low p-4 flex flex-col justify-between group cursor-pointer hover:bg-surface-container-high transition-colors">
+<div class="relative w-full h-44 overflow-hidden mb-3 bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Luxury wedding invitation stationery layout with tactile wax seal and torn raw cotton paper edge, editorial Swiss serif fonts, flat lay composition on beige stone surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYvvABcvHgVHe84Ka7etQPCzYsezOpXw0qSEt2_DeTZtlZh8Ufcnf9Czd30Gx5nIQDEryVTvJKLXS5efimLL304pAcRHH9xoxMH1Z1LkkUAhLkl1VODFBaM0kOurhRr-jYjADkGaCZAvjgyqKAfM0Qk4CEhPfQU3CiOCT2T-50VHwDjD-HifdjYnGZ8vW4Up6YC3qR7UKNrBRndyjGU86Va_ajINv3c4iULVCdYkY9mvEs2L3WYws"/>
+<div class="absolute bottom-2 left-2 bg-primary/80 backdrop-blur-sm text-on-primary font-label-caps text-[10px] px-2 py-0.5">
+                v3.0 Live
+              </div>
+</div>
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-headline-sm text-base text-primary font-semibold">Aura Blanche</span>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant font-medium mb-2">Swiss Modern Serif</p>
+<ul class="space-y-1 mb-4 text-on-surface-variant font-body-sm text-[12px]">
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[14px] text-outline">check</span>Interactive 3D Envelope</li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[14px] text-outline">check</span>Multi-day Itinerary Guide</li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[14px] text-outline">check</span>Travel Concierge Embed</li>
+</ul>
+</div>
+<a class="font-label-caps text-[11px] text-primary hover:text-secondary uppercase underline tracking-wider pt-2 border-t border-surface-container flex items-center justify-between" href="#">
+<span>Select Architecture</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- STEP 3: WEDDING BASICS & IDENTITY -->
+<section class="bg-surface-container-lowest p-6 sm:p-8 shadow-sm space-y-6" id="step-section-3">
+<div class="flex items-start justify-between border-b border-surface-container pb-4">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2 py-0.5 bg-secondary/10 text-secondary font-label-caps text-[11px] uppercase tracking-wider">Step 03 of 05</span>
+<span class="text-outline-variant text-xs">•</span>
+<span class="font-label-caps text-[11px] text-on-surface-variant uppercase">Celebration Dossier</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary">Wedding Basics &amp; Identity</h2>
+</div>
+<span class="material-symbols-outlined text-secondary text-2xl">favorite</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+<div>
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant block mb-1.5">Bride Full Name</label>
+<input class="w-full bg-surface-container-low p-3 font-body-md text-on-surface focus:outline-none focus:bg-surface" id="input-bride" oninput="updatePreview()" type="text" value="Ayu Prameswari"/>
+<span class="font-body-sm text-[11px] text-on-surface-variant mt-1 block">Displayed primarily on header invitations</span>
+</div>
+<div>
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant block mb-1.5">Groom Full Name</label>
+<input class="w-full bg-surface-container-low p-3 font-body-md text-on-surface focus:outline-none focus:bg-surface" id="input-groom" oninput="updatePreview()" type="text" value="Dimas Raditya"/>
+<span class="font-body-sm text-[11px] text-on-surface-variant mt-1 block">Joined in formal monograms</span>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+<div>
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant block mb-1.5">Main Celebration Date</label>
+<div class="relative">
+<input class="w-full bg-surface-container-low p-3 pr-10 font-body-md text-on-surface focus:outline-none focus:bg-surface" type="text" value="Saturday, November 15, 2025"/>
+<span class="material-symbols-outlined absolute right-3 top-3 text-secondary text-[20px]">calendar_today</span>
+</div>
+</div>
+<div>
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant block mb-1.5">Celebration City &amp; Venue</label>
+<div class="relative">
+<input class="w-full bg-surface-container-low p-3 pr-10 font-body-md text-on-surface focus:outline-none focus:bg-surface" type="text" value="The Cliffside Vows at Uluwatu, Bali"/>
+<span class="material-symbols-outlined absolute right-3 top-3 text-secondary text-[20px]">pin_drop</span>
+</div>
+</div>
+</div>
+<!-- Proposed Suite Slug -->
+<div class="p-4 bg-surface-container-low space-y-2">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant block">Proposed Digital Suite Vanity Slug</label>
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
+<div class="flex items-center flex-1 bg-surface-container px-3 py-2 font-mono text-sm text-on-surface-variant">
+<span>momentkita.com/c/</span>
+<input class="bg-transparent text-primary font-bold focus:outline-none ml-0.5 w-full" id="input-slug" oninput="updatePreview()" type="text" value="ayu-dimas"/>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="inline-flex items-center gap-1 px-3 py-2 bg-emerald-50 text-emerald-800 font-label-caps text-[11px] uppercase font-bold">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+                Slug Available
+              </span>
+<button class="p-2 bg-surface text-on-surface-variant hover:text-on-surface" title="Copy preview link" type="button">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Secondary Event Switcher -->
+<div class="flex items-center justify-between p-4 bg-surface-container-high/40">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-2xl">event_upcoming</span>
+<div>
+<p class="font-headline-sm text-base text-primary font-semibold">Separate Akad / Holy Matrimony &amp; Reception</p>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Enable distinct RSVP tracks, dress codes, and timed guest pass access.</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</section>
+<!-- STEP 4: PACKAGE & COMMERCIAL ENTITLEMENT -->
+<section class="bg-surface-container-lowest p-6 sm:p-8 shadow-sm space-y-6" id="step-section-4">
+<div class="flex items-start justify-between border-b border-surface-container pb-4">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2 py-0.5 bg-secondary/10 text-secondary font-label-caps text-[11px] uppercase tracking-wider">Step 04 of 05</span>
+<span class="text-outline-variant text-xs">•</span>
+<span class="font-label-caps text-[11px] text-on-surface-variant uppercase">Commercial Binding</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary">Package &amp; Atelier Entitlement</h2>
+</div>
+<span class="material-symbols-outlined text-secondary text-2xl">workspace_premium</span>
+</div>
+<div class="space-y-4">
+<!-- Package 1 -->
+<label class="block p-5 bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer relative">
+<div class="flex items-start justify-between gap-4">
+<div class="flex items-start gap-4">
+<input class="mt-1 accent-primary" name="package" onchange="setPackage('Signature Digital Suite', '$850', '1 Credit')" type="radio"/>
+<div>
+<div class="flex items-center gap-2 mb-1">
+<h3 class="font-headline-sm text-lg text-primary font-semibold">Signature Digital Suite</h3>
+<span class="font-label-caps text-[10px] uppercase px-2 py-0.5 bg-surface-container text-on-surface-variant">Digital Only</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-2">Unlimited RSVPs, 500 WhatsApp SMS notifications, 1-year hosting vault, custom vanity URL.</p>
+<div class="flex items-center gap-4 text-xs text-on-surface-variant font-mono">
+<span>• 1 Ledger Unit Deduction</span>
+<span>• 48h Provision SLA</span>
+</div>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-headline-sm text-xl text-primary font-bold block">$850</span>
+<span class="font-label-caps text-[10px] text-secondary uppercase">1 Quota Credit</span>
+</div>
+</div>
+</label>
+<!-- Package 2 (Selected) -->
+<label class="block p-5 bg-surface-container-low ring-2 ring-primary relative cursor-pointer">
+<div class="absolute -top-2.5 right-6 bg-primary text-on-primary px-3 py-0.5 font-label-caps text-[10px] uppercase tracking-widest">
+              Recommended Choice
+            </div>
+<div class="flex items-start justify-between gap-4">
+<div class="flex items-start gap-4">
+<input checked="" class="mt-1 accent-primary" name="package" onchange="setPackage('Bespoke Duo (Digital + 100x Letterpress)', '$1,650', '2 Credits')" type="radio"/>
+<div>
+<div class="flex items-center gap-2 mb-1">
+<h3 class="font-headline-sm text-lg text-primary font-semibold">Bespoke Duo (Digital + 100x Letterpress)</h3>
+<span class="font-label-caps text-[10px] uppercase px-2 py-0.5 bg-secondary-container text-on-secondary-container font-semibold">Dual Pipeline</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-2">600 GSM Cotton Paper, blind deboss crest, custom wax seal set, lossless audio digital suite with 5GB guest storage.</p>
+<div class="flex items-center gap-4 text-xs text-secondary font-mono">
+<span class="font-semibold">• 2 Ledger Units Deduction</span>
+<span>• Physical Atelier Proof Included</span>
+</div>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-headline-sm text-xl text-primary font-bold block">$1,650</span>
+<span class="font-label-caps text-[10px] text-secondary uppercase font-semibold">2 Quota Credits</span>
+</div>
+</div>
+</label>
+<!-- Package 3 -->
+<label class="block p-5 bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer relative">
+<div class="flex items-start justify-between gap-4">
+<div class="flex items-start gap-4">
+<input class="mt-1 accent-primary" name="package" onchange="setPackage('Grand Atelier Heirloom', '$2,900', '3 Credits')" type="radio"/>
+<div>
+<div class="flex items-center gap-2 mb-1">
+<h3 class="font-headline-sm text-lg text-primary font-semibold">Grand Atelier Heirloom</h3>
+<span class="font-label-caps text-[10px] uppercase px-2 py-0.5 bg-surface text-secondary font-bold">Couture Tier</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-2">Custom copperplate calligraphy, gold foil hot stamping, deckle edges, 250 printed sets, dedicated Concierge Manager.</p>
+<div class="flex items-center gap-4 text-xs text-on-surface-variant font-mono">
+<span>• 3 Ledger Units Deduction</span>
+<span>• Dedicated Art Director</span>
+</div>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-headline-sm text-xl text-primary font-bold block">$2,900</span>
+<span class="font-label-caps text-[10px] text-secondary uppercase">3 Quota Credits</span>
+</div>
+</div>
+</label>
+</div>
+</section>
+<!-- STEP 5: BOTTOM SUBMISSION & CONTROL BAR -->
+<section class="bg-surface-container p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<button class="px-5 py-3 bg-surface hover:bg-surface-variant text-on-surface font-label-caps text-label-caps uppercase transition-colors flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+            Previous Step
+          </button>
+<button class="px-5 py-3 bg-transparent hover:bg-surface-variant/40 text-on-surface-variant font-label-caps text-label-caps uppercase transition-colors" type="button">
+            Save Draft
+          </button>
+</div>
+<button class="w-full sm:w-auto px-8 py-3.5 bg-primary hover:bg-secondary text-on-primary font-label-caps text-label-caps uppercase tracking-widest shadow-md transition-all flex items-center justify-center gap-3" onclick="launchProvisionModal()" type="button">
+<span>Create Invitation Suite</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</section>
+</div>
+<!-- RIGHT STICKY INSPECTOR / DOSSIER SUMMARY COLUMN (35% width -> 5 col on lg) -->
+<div class="lg:col-span-5 sticky top-24 space-y-6">
+<!-- Summary Card Container -->
+<div class="bg-surface-container-lowest p-6 shadow-md space-y-6">
+<!-- Header with Live Pulse -->
+<div class="flex items-center justify-between border-b border-surface-container pb-4">
+<div>
+<span class="font-kicker text-kicker text-secondary uppercase tracking-widest">LIVE INSPECTOR</span>
+<h3 class="font-headline-sm text-lg text-primary mt-0.5">Suite Specification Dossier</h3>
+</div>
+<span class="px-2.5 py-1 bg-surface-container font-label-caps text-[10px] uppercase text-on-surface tracking-wider font-semibold">
+            Draft Provisioning
+          </span>
+</div>
+<!-- Interactive Mobile Viewport Mockup Preview -->
+<div class="p-4 bg-surface-container-low flex flex-col items-center justify-center">
+<div class="w-64 bg-background shadow-xl p-4 flex flex-col items-center text-center space-y-3 relative overflow-hidden">
+<!-- Simulated iPhone Notch -->
+<div class="w-20 h-3.5 bg-primary/20 rounded-b-md mx-auto -mt-4 mb-2"></div>
+<span class="font-kicker text-[8px] uppercase tracking-widest text-secondary font-bold">WEDDING INVITATION</span>
+<div class="space-y-0.5">
+<h4 class="font-headline-sm text-lg text-primary tracking-tight" id="preview-bride-name">Ayu</h4>
+<p class="font-serif italic text-xs text-secondary">&amp;</p>
+<h4 class="font-headline-sm text-lg text-primary tracking-tight" id="preview-groom-name">Dimas</h4>
+</div>
+<p class="font-body-sm text-[10px] text-on-surface-variant uppercase tracking-wider">
+              At Uluwatu Cliffside • Bali
+            </p>
+<div class="w-12 h-px bg-secondary/40 my-1"></div>
+<div class="font-headline-sm text-sm text-primary tracking-widest">
+              NOV | 15 | 2025
+            </div>
+<div class="w-full pt-2">
+<div class="w-full py-1.5 bg-primary text-on-primary font-label-caps text-[8px] uppercase tracking-widest">
+                Open Guest Portal
+              </div>
+</div>
+<div class="text-[9px] font-mono text-outline-variant pt-1 truncate w-full" id="preview-slug-display">
+              momentkita.com/c/ayu-dimas
+            </div>
+</div>
+<span class="font-label-caps text-[10px] uppercase tracking-wider text-on-surface-variant mt-3 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]">smartphone</span>
+            Real-time viewport rendering
+          </span>
+</div>
+<!-- Configuration Snapshot List -->
+<div class="space-y-3 text-body-sm text-body-sm">
+<div class="flex items-center justify-between py-1.5 border-b border-surface-container">
+<span class="text-on-surface-variant">Client Account</span>
+<span class="font-medium text-primary text-right truncate ml-2">Ayu Prameswari (VIP)</span>
+</div>
+<div class="flex items-center justify-between py-1.5 border-b border-surface-container">
+<span class="text-on-surface-variant">Template Architecture</span>
+<span class="font-medium text-primary text-right">Château de Chantilly v2.4</span>
+</div>
+<div class="flex items-center justify-between py-1.5 border-b border-surface-container">
+<span class="text-on-surface-variant">Commercial Package</span>
+<span class="font-medium text-primary text-right" id="preview-package-name">Bespoke Duo ($1,650)</span>
+</div>
+<div class="flex items-center justify-between py-1.5 border-b border-surface-container">
+<span class="text-on-surface-variant">Ledger Unit Impact</span>
+<span class="font-semibold text-secondary text-right" id="preview-quota-impact">Deducts 2 of 3 Credits</span>
+</div>
+<div class="flex items-center justify-between py-1.5 border-b border-surface-container">
+<span class="text-on-surface-variant">Lead Atelier Concierge</span>
+<span class="font-medium text-primary text-right">Rina Maharani</span>
+</div>
+<div class="flex items-center justify-between py-1.5">
+<span class="text-on-surface-variant">Print Production Routing</span>
+<span class="font-label-caps text-[10px] text-emerald-800 bg-emerald-50 px-2 py-0.5 uppercase font-bold">Bandung Atelier Line 01</span>
+</div>
+</div>
+<!-- Quota Ledger Legal Notice Box -->
+<div class="p-3.5 bg-surface-container text-on-surface-variant font-body-sm text-xs leading-relaxed space-y-1">
+<div class="flex items-center gap-1.5 font-semibold text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary">info</span>
+<span>Escrow &amp; Quota Ledger Notice</span>
+</div>
+<p>Upon triggering launch, credit will be locked from client ledger ID <code class="bg-surface px-1 text-primary">#MK-CUST-8842</code>. Administrators hold a 24-hour window to void or restock quota.</p>
+</div>
+<!-- Fast Actions & Auto-Launch Directives -->
+<div class="space-y-4 pt-2">
+<label class="flex items-center gap-2.5 cursor-pointer">
+<input checked="" class="w-4 h-4 accent-primary" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">Launch Studio Editor directly upon completion</span>
+</label>
+<label class="flex items-center gap-2.5 cursor-pointer">
+<input checked="" class="w-4 h-4 accent-primary" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">Send automated WhatsApp Welcome Dossier to Bride</span>
+</label>
+<button class="w-full py-4 bg-primary hover:bg-secondary text-on-primary font-label-caps text-label-caps uppercase tracking-widest shadow-md transition-all flex items-center justify-center gap-2" onclick="launchProvisionModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+            Provision &amp; Create Suite
+          </button>
+</div>
+</div>
+<!-- Quick Technical Health Check -->
+<div class="p-4 bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-emerald-700">dns</span>
+<div class="leading-tight">
+<p class="font-label-caps text-[11px] text-primary uppercase font-bold">Edge Edge-Routing Status</p>
+<p class="font-body-sm text-[11px] text-on-surface-variant">Singapore CDN • Latency 14ms</p>
+</div>
+</div>
+<span class="font-mono text-xs text-emerald-800 font-semibold bg-emerald-100 px-2 py-0.5">READY</span>
+</div>
+</div>
+</div>
+<!-- Interactive Provisioning Confirmation Toast/Modal Simulation -->
+<div class="fixed inset-0 bg-primary/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4" id="provision-modal">
+<div class="bg-surface p-8 max-w-md w-full shadow-2xl space-y-6 text-center">
+<div class="w-16 h-16 bg-surface-container rounded-full mx-auto flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-3xl animate-spin">refresh</span>
+</div>
+<div class="space-y-2">
+<span class="font-kicker text-kicker uppercase text-secondary">ATELIER ENGINE RUNNING</span>
+<h3 class="font-headline-md text-headline-md text-primary">Provisioning Suite...</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Deducting ledger credits, binding custom domain routing, and preparing the interactive digital envelope assets.
+        </p>
+</div>
+<div class="w-full bg-surface-container h-1.5 overflow-hidden">
+<div class="bg-secondary h-full w-2/3 animate-pulse"></div>
+</div>
+<div class="pt-2">
+<button class="w-full py-3 bg-surface-container hover:bg-surface-container-high font-label-caps text-label-caps uppercase text-on-surface tracking-wider transition-colors" onclick="closeModal()" type="button">
+          Cancel Operation
+        </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Vanilla Micro-Interactions Script -->
+<script>
+  function switchStep(stepNumber) {
+    // Reset all stepper buttons
+    for (let i = 1; i <= 5; i++) {
+      const btn = document.getElementById(`step-btn-${i}`);
+      if (btn) {
+        if (i === stepNumber) {
+          btn.className = "text-left p-3.5 transition-all bg-primary text-on-primary shadow-sm flex flex-col justify-between h-20";
+        } else if (i < stepNumber) {
+          btn.className = "text-left p-3.5 transition-all bg-surface-container-high hover:bg-surface-container-highest text-on-surface flex flex-col justify-between h-20";
+        } else {
+          btn.className = "text-left p-3.5 transition-all bg-surface-container-low hover:bg-surface-container text-on-surface-variant flex flex-col justify-between h-20";
+        }
+      }
+    }
+    
+    // Smooth scroll to the targeted section
+    const target = document.getElementById(`step-section-${stepNumber}`);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  function setCustomerMode(mode) {
+    const existingBtn = document.getElementById('tab-existing');
+    const newBtn = document.getElementById('tab-new');
+    const panelExisting = document.getElementById('panel-existing-client');
+    const panelNew = document.getElementById('panel-new-client');
+
+    if (mode === 'new') {
+      newBtn.className = "py-2.5 px-4 font-body-sm text-body-sm font-medium transition-all text-on-primary bg-primary shadow-sm flex items-center justify-center gap-2";
+      existingBtn.className = "py-2.5 px-4 font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-all flex items-center justify-center gap-2";
+      panelExisting.classList.add('hidden');
+      panelNew.classList.remove('hidden');
+    } else {
+      existingBtn.className = "py-2.5 px-4 font-body-sm text-body-sm font-medium transition-all text-on-primary bg-primary shadow-sm flex items-center justify-center gap-2";
+      newBtn.className = "py-2.5 px-4 font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-all flex items-center justify-center gap-2";
+      panelExisting.classList.remove('hidden');
+      panelNew.classList.add('hidden');
+    }
+  }
+
+  function updatePreview() {
+    const bride = document.getElementById('input-bride').value || 'Bride';
+    const groom = document.getElementById('input-groom').value || 'Groom';
+    const slug = document.getElementById('input-slug').value || 'ayu-dimas';
+
+    document.getElementById('preview-bride-name').innerText = bride.split(' ')[0];
+    document.getElementById('preview-groom-name').innerText = groom.split(' ')[0];
+    document.getElementById('preview-slug-display').innerText = `momentkita.com/c/${slug.toLowerCase().replace(/[^a-z0-9-]/g, '')}`;
+  }
+
+  function setPackage(name, price, credits) {
+    document.getElementById('preview-package-name').innerText = `${name} (${price})`;
+    document.getElementById('preview-quota-impact').innerText = `Deducts ${credits} from Balance`;
+  }
+
+  function launchProvisionModal() {
+    document.getElementById('provision-modal').classList.remove('hidden');
+  }
+
+  function closeModal() {
+    document.getElementById('provision-modal').classList.add('hidden');
+  }
+</script></main></div></body></html>

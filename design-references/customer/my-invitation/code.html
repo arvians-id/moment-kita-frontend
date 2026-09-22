@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-primary-container":"#858383","on-error-container":"#93000a","on-error":"#ffffff","on-secondary-fixed":"#380d00","on-background":"#1c1c18","on-surface":"#1c1c18","tertiary":"#000000","surface-bright":"#fcf9f3","tertiary-fixed-dim":"#ffb4a4","inverse-surface":"#31312d","on-tertiary-fixed-variant":"#753224","outline-variant":"#c4c7c7","on-secondary":"#ffffff","tertiary-fixed":"#ffdad3","on-surface-variant":"#444748","primary-container":"#1c1b1b","surface-container-lowest":"#ffffff","secondary-container":"#ffad91","secondary-fixed":"#ffdbcf","secondary-fixed-dim":"#ffb59c","on-primary-fixed":"#1c1b1b","on-primary":"#ffffff","surface-container-high":"#ebe8e2","surface":"#fcf9f3","surface-variant":"#e5e2dc","outline":"#747878","primary":"#000000","on-tertiary-container":"#c06d5b","primary-fixed-dim":"#c8c6c5","on-tertiary-fixed":"#3c0801","error":"#ba1a1a","surface-container-low":"#f6f3ed","inverse-primary":"#c8c6c5","error-container":"#ffdad6","background":"#fcf9f3","primary-fixed":"#e5e2e1","surface-container":"#f0eee8","tertiary-container":"#3c0801","surface-tint":"#5f5e5e","on-tertiary":"#ffffff","surface-dim":"#dcdad4","surface-container-highest":"#e5e2dc","inverse-on-surface":"#f3f0ea","on-primary-fixed-variant":"#474746","secondary":"#8c4d37","on-secondary-container":"#7a3e29","on-secondary-fixed-variant":"#703722"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"gutter":"2rem","space-xl":"3rem","space-sm":"0.5rem","margin":"3.5rem","space-lg":"1.75rem","space-xs":"0.25rem","space-md":"1rem","gutter-mobile":"1rem","margin-mobile":"1.25rem"},fontFamily:{"kicker":["Plus Jakarta Sans"],"headline-md":["Playfair Display"],"display-hero":["Playfair Display"],"headline-sm":["Playfair Display"],"body-md":["Plus Jakarta Sans"],"label-caps":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"headline-xl-mobile":["Playfair Display"],"headline-xl":["Playfair Display"],"headline-lg-mobile":["Playfair Display"],"quote-editorial":["Playfair Display"],"display-hero-mobile":["Playfair Display"],"headline-lg":["Playfair Display"]},fontSize:{"kicker":["11px",{lineHeight:"16px",letterSpacing:"0.2em",fontWeight:"600"}],"headline-md":["28px",{lineHeight:"36px",letterSpacing:"-0.01em",fontWeight:"500"}],"display-hero":["84px",{lineHeight:"92px",letterSpacing:"-0.03em",fontWeight:"400"}],"headline-sm":["22px",{lineHeight:"30px",letterSpacing:"0em",fontWeight:"600"}],"body-md":["15px",{lineHeight:"24px",letterSpacing:"0em",fontWeight:"400"}],"label-caps":["12px",{lineHeight:"16px",letterSpacing:"0.12em",fontWeight:"600"}],"body-lg":["18px",{lineHeight:"30px",letterSpacing:"-0.01em",fontWeight:"400"}],"body-sm":["13px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"400"}],"headline-xl-mobile":["36px",{lineHeight:"42px",letterSpacing:"-0.01em",fontWeight:"400"}],"headline-xl":["56px",{lineHeight:"64px",letterSpacing:"-0.02em",fontWeight:"400"}],"headline-lg-mobile":["28px",{lineHeight:"34px",letterSpacing:"0em",fontWeight:"400"}],"quote-editorial":["24px",{lineHeight:"36px",letterSpacing:"0em",fontWeight:"400"}],"display-hero-mobile":["44px",{lineHeight:"48px",letterSpacing:"-0.02em",fontWeight:"400"}],"headline-lg":["40px",{lineHeight:"48px",letterSpacing:"-0.015em",fontWeight:"400"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-6 px-5"><div class="flex flex-col gap-6"><div class="flex items-center gap-3 px-2"><div class="w-9 h-9 rounded-full bg-primary flex items-center justify-center"><span class="font-headline-sm text-headline-sm text-on-primary italic">M</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface leading-none">Moment Kita</span><span class="font-kicker text-kicker uppercase text-secondary tracking-widest mt-1">Atelier Client Suite</span></div></div><div class="flex flex-col gap-5 pt-2"><div class="flex flex-col gap-1"><span class="font-kicker text-kicker uppercase text-on-surface-variant px-3 mb-1 tracking-wider">Overview</span><nav class="flex flex-col gap-0.5" data-active-classes="bg-surface-container-highest text-on-surface font-medium"><a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[19px]">space_dashboard</span><span class="font-body-sm text-body-sm">Dashboard</span></a></nav></div><div class="flex flex-col gap-1"><span class="font-kicker text-kicker uppercase text-on-surface-variant px-3 mb-1 tracking-wider">Wedding</span><nav class="flex flex-col gap-0.5" data-active-classes="bg-surface-container-highest text-on-surface font-medium"><a aria-current="page" class="flex items-center gap-3 px-3 py-2 transition-colors bg-surface-container-highest text-on-surface font-medium" data-path="my-invitations" href="#"><span class="material-symbols-outlined text-[19px]">mail</span><span class="font-body-sm text-body-sm">My Invitations</span></a></nav></div><div class="flex flex-col gap-1"><span class="font-kicker text-kicker uppercase text-on-surface-variant px-3 mb-1 tracking-wider">Account</span><nav class="flex flex-col gap-0.5" data-active-classes="bg-surface-container-highest text-on-surface font-medium"><a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="transactions" href="#"><span class="material-symbols-outlined text-[19px]">receipt_long</span><span class="font-body-sm text-body-sm">Transactions</span></a><a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="notifications" href="#"><span class="material-symbols-outlined text-[19px]">notifications</span><span class="font-body-sm text-body-sm">Notifications</span></a><a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[19px]">settings</span><span class="font-body-sm text-body-sm">Settings</span></a></nav></div></div></div><div class="flex flex-col gap-3"><div class="bg-surface-container p-4"><div class="flex items-center justify-between mb-1.5"><span class="font-kicker text-kicker uppercase text-secondary">Tier</span><span class="material-symbols-outlined text-secondary text-[16px]">hotel_class</span></div><p class="font-body-sm text-body-sm font-semibold text-on-surface leading-snug">Signature Suite</p><p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">1 Invitation Quota Remaining</p></div><div class="flex items-center gap-3 px-2 py-1"><div class="w-9 h-9 rounded-full bg-secondary flex items-center justify-center text-on-secondary font-label-caps text-label-caps">WS</div><div class="flex flex-col"><span class="font-body-sm text-body-sm font-medium text-on-surface leading-tight">Widdy &amp; Sarah</span><span class="font-kicker text-kicker uppercase text-on-surface-variant leading-none mt-0.5">Couple Account</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40"><div class="h-16 w-full px-8 flex items-center justify-between"><div class="flex items-center gap-4"><img alt="Brand logo. - Primary color: #1a1a1a
+- Font: playfairDisplay
+- Mode: light
+- Roundness: rounded-lg
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WRqdm6LQrsNtDYQH6alJWMkWfk8mr7SPqKl8gfl7AvBd40Jje4RrE22TykoB2RppbfnyAF2up2zNsWoEEOAzFuAN1npFQei0jfZqImhociqxHqkWuTOiZPCxGJmPYqxbPvy5Rx2weYo7U8hJdkx9NPou6jBCa_GrhtbmoggtyXUo9t6RX7e69grmpegVwtyw9hYyP4hsJ3T_vZnPOwt4eaQH75GZeWtOjhkaQqGZoTZVpuFOyuLFBC"/><div class="flex items-center gap-2"><span class="font-body-sm text-body-sm text-on-surface-variant">Atelier Workspace</span><span class="font-body-sm text-body-sm text-on-surface-variant">/</span><span class="font-headline-sm text-headline-sm text-on-surface font-medium">Widdy &amp; Sarah Wedding</span></div></div><div class="flex items-center gap-5"><button class="h-9 px-4 bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-1.5 hover:bg-secondary hover:text-on-secondary transition-colors"><span class="material-symbols-outlined text-[16px]">add</span><span>New Invitation</span></button><button class="relative flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-0 right-0 w-2 h-2 rounded-full bg-secondary"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface"><div class="w-full px-8 py-8"><div class="flex flex-col w-full">
+<!-- PAGE HEADER & QUICK ACTIONS -->
+<section class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-8 border-b border-surface-container-highest">
+<div class="flex flex-col max-w-2xl">
+<div class="flex items-center gap-2 mb-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest">Digital Stationery Atelier</span>
+</div>
+<h1 class="font-headline-md text-headline-md tracking-tight text-on-surface">My Invitations</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1.5 leading-relaxed">
+        Create and manage your wedding celebrations, digital stationery suites, and guest experiences in one place.
+      </p>
+</div>
+<div class="flex items-center gap-3 shrink-0">
+<button class="h-10 px-4 bg-surface-container-low text-on-surface hover:bg-surface-container-high transition-colors font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-2 border border-surface-container-highest">
+<span class="material-symbols-outlined text-[17px] text-secondary">menu_book</span>
+<span>Explore Atelier Templates</span>
+</button>
+<button class="h-10 px-5 bg-primary text-on-primary hover:bg-secondary hover:text-on-secondary transition-colors font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Create Invitation</span>
+</button>
+</div>
+</section>
+<!-- SUBTLE INVENTORY & QUOTA METRICS ROW -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 py-8">
+<div class="p-5 bg-surface-container-lowest border border-surface-container-highest flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="font-kicker text-kicker uppercase tracking-wider">Total Invitations</span>
+<span class="material-symbols-outlined text-[18px]">folder_special</span>
+</div>
+<div class="mt-2">
+<div class="font-headline-sm text-headline-sm text-on-surface">3 Projects</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Across 2 wedding celebrations</p>
+</div>
+</div>
+<div class="p-5 bg-surface-container-lowest border border-surface-container-highest flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="font-kicker text-kicker uppercase tracking-wider">Published &amp; Live</span>
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span>
+</span>
+</div>
+<div class="mt-2">
+<div class="font-headline-sm text-headline-sm text-on-surface">1 Active</div>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">public</span> Live on custom sub-url
+        </p>
+</div>
+</div>
+<div class="p-5 bg-surface-container-lowest border border-surface-container-highest flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="font-kicker text-kicker uppercase tracking-wider">In Draft &amp; Setup</span>
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+</div>
+<div class="mt-2">
+<div class="font-headline-sm text-headline-sm text-on-surface">1 In Progress</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">65% setup complete</p>
+</div>
+</div>
+<div class="p-5 bg-surface-container-low border border-surface-container-highest flex flex-col justify-between">
+<div class="flex items-center justify-between text-secondary mb-2">
+<span class="font-kicker text-kicker uppercase tracking-wider">Quota Allocation</span>
+<span class="material-symbols-outlined text-[18px]">hotel_class</span>
+</div>
+<div class="mt-2">
+<div class="font-headline-sm text-headline-sm text-on-surface">1 Celebration Quota</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Signature Suite • Unlimited drafts</p>
+</div>
+</div>
+</section>
+<!-- TIP BANNER -->
+<div class="mb-8 p-4 bg-surface-container-low border-l-2 border-secondary flex items-start sm:items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0">tips_and_updates</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+<span class="font-semibold text-on-surface">Atelier Tip:</span> You can create unlimited design drafts anytime without using quota. An invitation quota is only committed when you finalize and publish.
+      </p>
+</div>
+<span class="hidden md:inline font-kicker text-kicker text-secondary uppercase tracking-widest whitespace-nowrap">Signature Plan</span>
+</div>
+<!-- FILTER & VIEW TOOLBAR -->
+<section class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 pb-6 mb-8 border-b border-surface-container-highest">
+<div class="flex items-center gap-1 overflow-x-auto pb-1 md:pb-0" id="filterTabGroup">
+<button class="filter-tab active px-3.5 py-1.5 text-on-surface bg-surface-container-highest font-label-caps text-label-caps tracking-wider border-b-2 border-primary" onclick="filterInvitations('all', this)">
+        All Invitations (3)
+      </button>
+<button class="filter-tab px-3.5 py-1.5 text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps tracking-wider transition-colors" onclick="filterInvitations('published', this)">
+        Published (1)
+      </button>
+<button class="filter-tab px-3.5 py-1.5 text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps tracking-wider transition-colors" onclick="filterInvitations('draft', this)">
+        Drafts (1)
+      </button>
+<button class="filter-tab px-3.5 py-1.5 text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps tracking-wider transition-colors" onclick="filterInvitations('archived', this)">
+        Archived (1)
+      </button>
+</div>
+<div class="flex items-center gap-3">
+<div class="relative flex-1 sm:w-64">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[17px]">search</span>
+<input class="w-full pl-9 pr-3 py-1.5 bg-surface-container-lowest border border-surface-container-highest text-on-surface font-body-sm text-body-sm focus:outline-none focus:border-secondary transition-colors" id="invitationSearchInput" oninput="handleSearch(this.value)" placeholder="Search by couple or slug..." type="text"/>
+</div>
+<div class="relative shrink-0">
+<select class="appearance-none bg-surface-container-lowest border border-surface-container-highest text-on-surface font-body-sm text-body-sm py-1.5 pl-3 pr-8 focus:outline-none focus:border-secondary cursor-pointer">
+<option>Recently Modified</option>
+<option>Event Date: Nearest</option>
+<option>Alphabetical</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-on-surface-variant text-[16px] pointer-events-none">expand_more</span>
+</div>
+</div>
+</section>
+<!-- INVITATION CARDS GRID -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16" id="invitationCardsContainer">
+<!-- CARD 1: PUBLISHED & INTERACTIVE -->
+<article class="invitation-card group bg-surface-container-lowest border border-surface-container-highest flex flex-col justify-between transition-all duration-300 hover:shadow-md" data-category="published" data-title="Widdy &amp; Sarah The Parisian Winter Suite momentkita.id/widdy-sarah">
+<div>
+<!-- Card Top Bar -->
+<div class="p-6 border-b border-surface-container-highest flex items-start justify-between gap-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-2 mb-2">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-secondary-fixed text-on-secondary-fixed font-kicker text-kicker uppercase tracking-widest">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Published &amp; Interactive
+              </span>
+<span class="font-kicker text-kicker text-on-surface-variant uppercase tracking-wider">01 — LIVE SUITE</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-medium leading-snug">Widdy &amp; Sarah — The Parisian Winter Suite</h2>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-1 mt-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+                Saturday, 24 November 2026
+              </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                Grand Hyatt Ballroom, Jakarta
+              </span>
+</div>
+</div>
+<div class="relative">
+<button aria-label="Card Options" class="p-1.5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" onclick="toggleCardMenu('menu-1')">
+<span class="material-symbols-outlined text-[20px]">more_horiz</span>
+</button>
+<div class="hidden absolute right-0 top-8 w-48 bg-surface-container-lowest border border-surface-container-highest shadow-lg z-20 py-1.5 flex flex-col font-body-sm text-body-sm" id="menu-1">
+<button class="px-3.5 py-2 text-left hover:bg-surface-container text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">share</span> Share via WhatsApp
+              </button>
+<button class="px-3.5 py-2 text-left hover:bg-surface-container text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">qr_code_2</span> Download QR Code
+              </button>
+<button class="px-3.5 py-2 text-left hover:bg-surface-container text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">link</span> Customize Vanity Slug
+              </button>
+<button class="px-3.5 py-2 text-left hover:bg-surface-container text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">content_copy</span> Duplicate as Template
+              </button>
+</div>
+</div>
+</div>
+<!-- Preview Showcase + Details -->
+<div class="p-6 grid grid-cols-1 sm:grid-cols-12 gap-6 items-center">
+<div class="sm:col-span-5 relative group/img overflow-hidden bg-surface-container border border-surface-container-highest aspect-[3/4] flex items-center justify-center">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-105" data-alt="Editorial wedding invitation stationery mock-up shown inside a sleek black modern smartphone resting horizontally over organic textured linen fabric with dried delicate floral accents and warm natural morning window light shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAW3rkGkBPb-BXthwEoTn1xfnB5-y6awDqvw2l-Vg_r6vvhaQj0rmI4bgDlNfyiY-fM8fAxfRgmYULecXPcRyq_dsxoYrVM70waKwJXhmYQGEnC8atjJc5VaTqbzGjNLMUXj__TD9NMXVaFHBY4DLZ33LcUYeZSwXKsV4xIiBmTaA-Yvgau86Gltmfb2vrPAEqCMPj2tQboi6PBBh5P4jZUCS_zre9_J0dSNNkQMfjb784kvkHzJQE"/>
+<div class="absolute inset-0 bg-primary/10 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center">
+<span class="px-3 py-1 bg-surface/90 backdrop-blur font-label-caps text-label-caps text-on-surface uppercase tracking-wider">Preview Suite</span>
+</div>
+</div>
+<div class="sm:col-span-7 flex flex-col justify-between space-y-4">
+<div>
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest">Atelier Theme</span>
+<p class="font-headline-sm text-body-lg text-on-surface mt-0.5">Château de Chantilly</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Editorial French Floral with digital deckled edge</p>
+</div>
+<!-- Public Slug & Copy -->
+<div class="p-2.5 bg-surface-container-low border border-surface-container-highest flex items-center justify-between gap-2">
+<div class="flex items-center gap-2 truncate">
+<span class="material-symbols-outlined text-secondary text-[16px] shrink-0">link</span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">momentkita.id/widdy-sarah</span>
+</div>
+<div class="flex items-center gap-1 shrink-0">
+<button class="p-1 text-on-surface-variant hover:text-on-surface" onclick="navigator.clipboard.writeText('https://momentkita.id/widdy-sarah'); alert('Invitation URL copied to clipboard');" title="Copy URL">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+<a class="p-1 text-on-surface-variant hover:text-on-surface" href="#" target="_blank" title="Visit Public Site">
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Live Metrics Strip -->
+<div class="grid grid-cols-3 gap-2 pt-2 border-t border-surface-container-highest text-center">
+<div>
+<span class="font-headline-sm text-body-lg text-on-surface font-medium">84</span>
+<span class="block font-kicker text-kicker text-on-surface-variant uppercase mt-0.5">RSVPs</span>
+</div>
+<div>
+<span class="font-headline-sm text-body-lg text-on-surface font-medium">42</span>
+<span class="block font-kicker text-kicker text-on-surface-variant uppercase mt-0.5">Wishes</span>
+</div>
+<div>
+<span class="font-headline-sm text-body-lg text-on-surface font-medium">1,284</span>
+<span class="block font-kicker text-kicker text-on-surface-variant uppercase mt-0.5">Views</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">
+              Hosting valid until 20 Feb 2027 • 82 days until wedding
+            </p>
+</div>
+</div>
+</div>
+<!-- Card Action Footer -->
+<div class="px-6 py-4 bg-surface-container-low border-t border-surface-container-highest flex items-center justify-between gap-3">
+<button class="flex-1 h-9 px-4 bg-primary text-on-primary hover:bg-secondary hover:text-on-secondary transition-colors font-label-caps text-label-caps uppercase tracking-wider flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Manage Celebration</span>
+</button>
+<button class="h-9 px-4 bg-surface-container-lowest border border-surface-container-highest text-on-surface hover:bg-surface-container transition-colors font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">visibility</span>
+<span>Live Proof</span>
+</button>
+</div>
+</article>
+<!-- CARD 2: DRAFT / IN PROGRESS -->
+<article class="invitation-card group bg-surface-container-lowest border border-surface-container-highest flex flex-col justify-between transition-all duration-300 hover:shadow-md" data-category="draft" data-title="Widdy &amp; Sarah Intimate Tea Ceremony &amp; Akad Kyoto Whisper">
+<div>
+<!-- Card Top Bar -->
+<div class="p-6 border-b border-surface-container-highest flex items-start justify-between gap-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-2 mb-2">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-surface-container-highest text-on-surface-variant font-kicker text-kicker uppercase tracking-widest">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                In Draft • 65% Completed
+              </span>
+<span class="font-kicker text-kicker text-on-surface-variant uppercase tracking-wider">02 — DRAFT</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-medium leading-snug">Widdy &amp; Sarah — Intimate Tea Ceremony &amp; Akad</h2>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-1 mt-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+                Friday, 23 November 2026
+              </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                Plataran Dharmawangsa, Jakarta
+              </span>
+</div>
+</div>
+<div class="relative">
+<button aria-label="Card Options" class="p-1.5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" onclick="toggleCardMenu('menu-2')">
+<span class="material-symbols-outlined text-[20px]">more_horiz</span>
+</button>
+<div class="hidden absolute right-0 top-8 w-44 bg-surface-container-lowest border border-surface-container-highest shadow-lg z-20 py-1.5 flex flex-col font-body-sm text-body-sm" id="menu-2">
+<button class="px-3.5 py-2 text-left hover:bg-surface-container text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">content_copy</span> Duplicate Draft
+              </button>
+<button class="px-3.5 py-2 text-left hover:bg-surface-container text-error flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">delete</span> Delete Draft
+              </button>
+</div>
+</div>
+</div>
+<!-- Preview Showcase + Details -->
+<div class="p-6 grid grid-cols-1 sm:grid-cols-12 gap-6 items-center">
+<div class="sm:col-span-5 relative group/img overflow-hidden bg-surface-container border border-surface-container-highest aspect-[3/4] flex items-center justify-center">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-105 opacity-90" data-alt="Flat lay overhead photograph of high-end artisanal deckled edge wedding invitations on heavy handmade cotton paper with wax seal, blush silk ribbon, delicate gold calligraphy, surrounded by neutral dried botanicals on light sand canvas." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjUU9j3wYEV03ICo6mByLQ4dCsMTOGdO-_WIJ9vr8Vsqod8holGTKwvHyq2gOf0wVcr5GhBudDdX4-mjmCdFor-Pb4eEIpgWNX8ULS9A_xpwj9f4Iu71hAhhgGE2pz7pu8LACCO5n6W39xENgln80k1PSY0_tQihViRHl0mVVJ0kDx0g7f7MoFtg_mk3_bmVZcCNqh4vhlOt_ZBUboLV7QvUcO8uEhoBllibrSR_lrn1FnN7EDS-4"/>
+<div class="absolute top-2 left-2 px-2 py-0.5 bg-surface/90 backdrop-blur font-kicker text-kicker uppercase text-secondary">Draft Preview</div>
+</div>
+<div class="sm:col-span-7 flex flex-col justify-between space-y-4">
+<div>
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest">Atelier Theme</span>
+<p class="font-headline-sm text-body-lg text-on-surface mt-0.5">Kyoto Whisper v3.1</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Washi minimalist aesthetic with vertical editorial typography</p>
+</div>
+<!-- Progress bar -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between text-body-sm">
+<span class="font-kicker text-kicker uppercase text-on-surface-variant">Completion Checklist</span>
+<span class="font-medium text-secondary">3 of 5 Complete</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-secondary transition-all duration-300" style="width: 65%;"></div>
+</div>
+</div>
+<div class="p-3 bg-surface-container-low border border-surface-container-highest">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary mt-0.5">info</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">
+                  Schedule &amp; Love Story ready. Pending: Wedding gift registry accounts and background instrumental selection.
+                </p>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Last modified 2 days ago by Sarah
+            </p>
+</div>
+</div>
+</div>
+<!-- Card Action Footer -->
+<div class="px-6 py-4 bg-surface-container-low border-t border-surface-container-highest flex items-center justify-between gap-3">
+<button class="flex-1 h-9 px-4 bg-primary text-on-primary hover:bg-secondary hover:text-on-secondary transition-colors font-label-caps text-label-caps uppercase tracking-wider flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+<span>Continue Editing</span>
+</button>
+<button class="h-9 px-4 bg-surface-container-lowest border border-surface-container-highest text-on-surface hover:bg-surface-container transition-colors font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">preview</span>
+<span>Preview Draft</span>
+</button>
+</div>
+</article>
+<!-- CARD 3: FINALIZED / READY TO PUBLISH -->
+<article class="invitation-card group bg-surface-container-lowest border border-surface-container-highest flex flex-col justify-between transition-all duration-300 hover:shadow-md" data-category="draft" data-title="Sarah Jenkins Liam Autumn Letterpress Preview">
+<div>
+<!-- Card Top Bar -->
+<div class="p-6 border-b border-surface-container-highest flex items-start justify-between gap-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-2 mb-2">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-secondary-fixed text-on-secondary-fixed font-kicker text-kicker uppercase tracking-widest">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+                Ready to Publish
+              </span>
+<span class="font-kicker text-kicker text-on-surface-variant uppercase tracking-wider">03 — FINALIZED PROOF</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-medium leading-snug">Sarah Jenkins &amp; Liam — Autumn Letterpress Preview</h2>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-1 mt-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+                18 December 2026
+              </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">auto_awesome</span>
+                Bespoke Letterpress Floral
+              </span>
+</div>
+</div>
+<div class="relative">
+<button aria-label="Card Options" class="p-1.5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" onclick="toggleCardMenu('menu-3')">
+<span class="material-symbols-outlined text-[20px]">more_horiz</span>
+</button>
+<div class="hidden absolute right-0 top-8 w-44 bg-surface-container-lowest border border-surface-container-highest shadow-lg z-20 py-1.5 flex flex-col font-body-sm text-body-sm" id="menu-3">
+<button class="px-3.5 py-2 text-left hover:bg-surface-container text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">history</span> Revision History
+              </button>
+<button class="px-3.5 py-2 text-left hover:bg-surface-container text-error flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">delete</span> Delete Proof
+              </button>
+</div>
+</div>
+</div>
+<!-- Preview Showcase + Details -->
+<div class="p-6 grid grid-cols-1 sm:grid-cols-12 gap-6 items-center">
+<div class="sm:col-span-5 relative group/img overflow-hidden bg-surface-container border border-surface-container-highest aspect-[3/4] flex items-center justify-center">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-105" data-alt="Close up warm shot of luxurious bespoke copper foil stamped wedding invitations with floral arrangements in terracotta vase, olive branch sprigs and antique brass wax seal stamp on rustic oak tabletop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuByqQORk5vqGfuaDu5Frn8OYHulGu6dRbe0SV3y43xPexoGqliUpJo39SZdN6fEBDBkf4FP4WwK0EzxH1m58bbWlbXahEDC8TASiZrq4UEcS5ZtW71f8QdvgvD0dbqWNvmZEQ6WmrRvPXStPJg7pR8lhxpvoGod2AxjV2xYVojI31994uJyAn7ugfuWjDnbi3_jeWvuMfeX5Z2df4nYec9p4OTNQSNSC-v2pp-MPv5JthomYCqlxHg"/>
+<div class="absolute bottom-2 right-2 px-2.5 py-0.5 bg-primary text-on-primary font-kicker text-kicker uppercase">Ready</div>
+</div>
+<div class="sm:col-span-7 flex flex-col justify-between space-y-4">
+<div>
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest">Suite Configuration</span>
+<p class="font-headline-sm text-body-lg text-on-surface mt-0.5">Bespoke Letterpress Floral</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Dual-format digital link + matching physical print voucher</p>
+</div>
+<div class="p-3 bg-secondary-fixed/30 border border-secondary-fixed text-on-secondary-fixed">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary shrink-0 mt-0.5">verified_user</span>
+<p class="font-body-sm text-body-sm leading-snug">
+                  Editorial proof review is complete. Ready to assign your remaining Suite Quota and generate your celebration link.
+                </p>
+</div>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+<span>All 5 sections validated by Atelier Quality Control</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card Action Footer -->
+<div class="px-6 py-4 bg-surface-container-low border-t border-surface-container-highest flex items-center justify-between gap-3">
+<button class="flex-1 h-9 px-4 bg-secondary text-on-secondary hover:bg-primary hover:text-on-primary transition-colors font-label-caps text-label-caps uppercase tracking-wider flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[16px]">rocket_launch</span>
+<span>Publish Invitation</span>
+</button>
+<button class="h-9 px-4 bg-surface-container-lowest border border-surface-container-highest text-on-surface hover:bg-surface-container transition-colors font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Review Proof</span>
+</button>
+</div>
+</article>
+<!-- CARD 4: EXPIRED / HISTORICAL ARCHIVE -->
+<article class="invitation-card group bg-surface-container-lowest border border-surface-container-highest flex flex-col justify-between transition-all duration-300 hover:shadow-md" data-category="archived" data-title="Budi &amp; Clara Engagement Soirée Botanical Solstice">
+<div>
+<!-- Card Top Bar -->
+<div class="p-6 border-b border-surface-container-highest flex items-start justify-between gap-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-2 mb-2">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-surface-container-highest text-on-surface-variant font-kicker text-kicker uppercase tracking-widest">
+<span class="material-symbols-outlined text-[14px]">archive</span>
+                Expired on 15 Oct 2026
+              </span>
+<span class="font-kicker text-kicker text-on-surface-variant uppercase tracking-wider">04 — ARCHIVED</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-medium leading-snug">Budi &amp; Clara — Engagement Soirée</h2>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-1 mt-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">event_busy</span>
+                12 October 2026
+              </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">palette</span>
+                Botanical Solstice
+              </span>
+</div>
+</div>
+<div class="relative">
+<button aria-label="Card Options" class="p-1.5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" onclick="toggleCardMenu('menu-4')">
+<span class="material-symbols-outlined text-[20px]">more_horiz</span>
+</button>
+<div class="hidden absolute right-0 top-8 w-44 bg-surface-container-lowest border border-surface-container-highest shadow-lg z-20 py-1.5 flex flex-col font-body-sm text-body-sm" id="menu-4">
+<button class="px-3.5 py-2 text-left hover:bg-surface-container text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">file_download</span> Export CSV Guestlist
+              </button>
+<button class="px-3.5 py-2 text-left hover:bg-surface-container text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">hide_source</span> Unpublish Permanently
+              </button>
+</div>
+</div>
+</div>
+<!-- Details -->
+<div class="p-6 flex flex-col justify-between space-y-4">
+<div class="p-4 bg-surface-container-low border border-surface-container-highest">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px] shrink-0 mt-0.5">lock_clock</span>
+<div>
+<p class="font-headline-sm text-body-md text-on-surface font-semibold">Celebration Past &amp; Preserved</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+                  Public access has concluded. Guest RSVPs (98 responses) and digital guestbook wishes are permanently archived and accessible for download.
+                </p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 py-2 border-y border-surface-container-highest">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px]">mark_email_read</span>
+<div>
+<span class="font-headline-sm text-body-lg text-on-surface font-medium">98 Total</span>
+<span class="block font-kicker text-kicker text-on-surface-variant uppercase">RSVPs Preserved</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px]">photo_library</span>
+<div>
+<span class="font-headline-sm text-body-lg text-on-surface font-medium">34 Photos</span>
+<span class="block font-kicker text-kicker text-on-surface-variant uppercase">Guestbook Uploads</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Card Action Footer -->
+<div class="px-6 py-4 bg-surface-container-low border-t border-surface-container-highest flex items-center justify-between gap-3">
+<button class="flex-1 h-9 px-4 bg-surface-container-lowest border border-surface-container-highest text-on-surface hover:bg-surface-container transition-colors font-label-caps text-label-caps uppercase tracking-wider flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary">update</span>
+<span>Extend Hosting (1 Yr)</span>
+</button>
+<button class="h-9 px-4 bg-surface-container-lowest border border-surface-container-highest text-on-surface hover:bg-surface-container transition-colors font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+<span>Memory Book (PDF)</span>
+</button>
+</div>
+</article>
+<!-- CARD 5: "CREATE NEW INVITATION" EMPTY-SLOT CARD -->
+<article class="invitation-card border-2 border-dashed border-surface-container-highest bg-surface-container-low/50 hover:bg-surface-container-low transition-colors duration-300 p-8 flex flex-col items-center justify-center text-center group cursor-pointer" data-category="draft" data-title="Create New Invitation Start Draft" onclick="alert('Opening Atelier Suite Creator wizard...');">
+<div class="w-16 h-16 rounded-full bg-surface-container-lowest border border-surface-container-highest flex items-center justify-center text-secondary group-hover:scale-110 transition-transform mb-5 shadow-sm">
+<span class="material-symbols-outlined text-[28px]">add</span>
+</div>
+<span class="font-kicker text-kicker text-secondary uppercase tracking-widest mb-1.5">Atelier Studio</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-medium mb-2">Start a New Celebration</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm mb-6 leading-relaxed">
+        Choose from our curated digital and letterpress suites. Craft your story, schedule, and RSVP suite at your own pace without consuming quota.
+      </p>
+<button class="h-10 px-6 bg-primary text-on-primary hover:bg-secondary hover:text-on-secondary transition-colors font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>+ Start New Draft</span>
+</button>
+</article>
+</section>
+<!-- COLLAPSIBLE ONBOARDING / EMPTY STATE PREVIEW DRAWER -->
+<section class="mt-8 pt-8 border-t border-surface-container-highest">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">visibility</span>
+<span class="font-headline-sm text-body-lg text-on-surface font-medium">New Atelier Account Preview</span>
+</div>
+<button class="font-label-caps text-label-caps uppercase text-secondary hover:underline flex items-center gap-1" onclick="toggleZeroState()">
+<span id="zeroStateToggleLabel">Show Pristine Zero-State</span>
+<span class="material-symbols-outlined text-[16px]" id="zeroStateIcon">expand_more</span>
+</button>
+</div>
+<!-- ZERO-STATE CONTAINER -->
+<div class="hidden bg-surface-container-lowest border border-surface-container-highest p-8 md:p-12 transition-all" id="zeroStateDrawer">
+<div class="max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-8 text-center md:text-left">
+<div class="w-48 h-48 shrink-0 relative bg-surface-container overflow-hidden border border-surface-container-highest flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Editorial close up of minimalist deckled wedding stationary suite laid over warm raw linen, soft pampas grass and gentle morning window shadow." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC75TX-9Relqa2Zn5jPuscPg0Pefogp6DAf-yX1j8NMCthMCJ9Uj9iTK3v8tBDYTlDwyvPoIUystpSMcH3LGeTJjJh2YGsMxC8xJYcTx3ZfvynVUuuLT1obCkTKqQNCsPM1nEiGICDgTMF4gJtJRzoY8BUwEH_J_IbWhgILquu_iZJtf-IqsldoPrzQhUZvCy6AcNrrACYWQ5aKoYowMQdibSV57nB_0s1h1NY6OHT5euzWqkG-DtU"/>
+</div>
+<div class="flex flex-col">
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest mb-1.5">Welcome to Moment Kita Atelier</span>
+<h2 class="font-headline-md text-headline-sm md:text-headline-md text-on-surface leading-tight">
+            Your celebration begins with an intentional invitation.
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 mb-6 leading-relaxed">
+            Begin by choosing an aesthetic from our curated architectural collection, or consult our atelier concierge for bespoke letterpress and physical foil stamping.
+          </p>
+<div class="flex flex-wrap items-center justify-center md:justify-start gap-4">
+<button class="h-10 px-5 bg-primary text-on-primary hover:bg-secondary hover:text-on-secondary transition-colors font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">explore</span>
+<span>Explore Templates</span>
+</button>
+<button class="h-10 px-5 bg-surface-container-lowest border border-surface-container-highest text-on-surface hover:bg-surface-container transition-colors font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">support_agent</span>
+<span>Book Atelier Consultation</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  function toggleCardMenu(menuId) {
+    const targetMenu = document.getElementById(menuId);
+    if (!targetMenu) return;
+    
+    // Close other open menus
+    document.querySelectorAll('[id^="menu-"]').forEach(menu => {
+      if (menu.id !== menuId) {
+        menu.classList.add('hidden');
+      }
+    });
+
+    targetMenu.classList.toggle('hidden');
+  }
+
+  // Close menus on outside click
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('[onclick^="toggleCardMenu"]') && !e.target.closest('[id^="menu-"]')) {
+      document.querySelectorAll('[id^="menu-"]').forEach(menu => menu.classList.add('hidden'));
+    }
+  });
+
+  function filterInvitations(category, clickedTab) {
+    const tabs = document.querySelectorAll('.filter-tab');
+    tabs.forEach(tab => {
+      tab.classList.remove('bg-surface-container-highest', 'text-on-surface', 'border-b-2', 'border-primary');
+      tab.classList.add('text-on-surface-variant');
+    });
+
+    clickedTab.classList.remove('text-on-surface-variant');
+    clickedTab.classList.add('bg-surface-container-highest', 'text-on-surface', 'border-b-2', 'border-primary');
+
+    const cards = document.querySelectorAll('.invitation-card');
+    cards.forEach(card => {
+      const cardCategory = card.getAttribute('data-category');
+      if (category === 'all' || cardCategory === category) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  function handleSearch(query) {
+    const normalized = query.toLowerCase().trim();
+    const cards = document.querySelectorAll('.invitation-card');
+
+    cards.forEach(card => {
+      const title = (card.getAttribute('data-title') || '').toLowerCase();
+      if (!normalized || title.includes(normalized)) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  function toggleZeroState() {
+    const drawer = document.getElementById('zeroStateDrawer');
+    const label = document.getElementById('zeroStateToggleLabel');
+    const icon = document.getElementById('zeroStateIcon');
+
+    if (drawer.classList.contains('hidden')) {
+      drawer.classList.remove('hidden');
+      label.textContent = 'Hide Zero-State Preview';
+      icon.textContent = 'expand_less';
+    } else {
+      drawer.classList.add('hidden');
+      label.textContent = 'Show Pristine Zero-State';
+      icon.textContent = 'expand_more';
+    }
+  }
+</script></div></main></div></body></html>

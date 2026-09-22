@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-tertiary":"#ffffff","surface-dim":"#dcdad4","on-surface-variant":"#444748","error-container":"#ffdad6","on-primary":"#ffffff","secondary-fixed":"#ffdbcf","on-primary-fixed-variant":"#474746","on-secondary-fixed":"#380d00","surface-container-low":"#f6f3ed","primary-fixed":"#e5e2e1","inverse-surface":"#31312d","on-tertiary-fixed-variant":"#753224","on-primary-fixed":"#1c1b1b","on-error-container":"#93000a","secondary-container":"#ffad91","error":"#ba1a1a","background":"#fcf9f3","primary":"#000000","secondary-fixed-dim":"#ffb59c","on-surface":"#1c1c18","on-secondary-fixed-variant":"#703722","on-error":"#ffffff","tertiary":"#000000","outline":"#747878","primary-container":"#1c1b1b","on-secondary":"#ffffff","surface-bright":"#fcf9f3","on-background":"#1c1c18","secondary":"#8c4d37","surface-container-lowest":"#ffffff","tertiary-fixed":"#ffdad3","tertiary-container":"#3c0801","surface":"#fcf9f3","on-primary-container":"#858383","surface-container-high":"#ebe8e2","primary-fixed-dim":"#c8c6c5","surface-variant":"#e5e2dc","surface-tint":"#5f5e5e","inverse-primary":"#c8c6c5","tertiary-fixed-dim":"#ffb4a4","on-tertiary-fixed":"#3c0801","outline-variant":"#c4c7c7","inverse-on-surface":"#f3f0ea","surface-container-highest":"#e5e2dc","surface-container":"#f0eee8","on-tertiary-container":"#c06d5b","on-secondary-container":"#7a3e29"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"gutter":"2rem","margin":"3.5rem","space-lg":"1.75rem","space-xl":"3rem","space-sm":"0.5rem","space-md":"1rem","margin-mobile":"1.25rem","space-xs":"0.25rem","gutter-mobile":"1rem"},fontFamily:{"headline-lg":["Playfair Display"],"headline-sm":["Playfair Display"],"body-sm":["Plus Jakarta Sans"],"quote-editorial":["Playfair Display"],"display-hero":["Playfair Display"],"headline-md":["Playfair Display"],"headline-xl":["Playfair Display"],"display-hero-mobile":["Playfair Display"],"label-caps":["Plus Jakarta Sans"],"headline-xl-mobile":["Playfair Display"],"body-lg":["Plus Jakarta Sans"],"kicker":["Plus Jakarta Sans"],"headline-lg-mobile":["Playfair Display"],"body-md":["Plus Jakarta Sans"]},fontSize:{"headline-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.015em","fontWeight":"400"}],"headline-sm":["22px",{"lineHeight":"30px","letterSpacing":"0em","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"400"}],"quote-editorial":["24px",{"lineHeight":"36px","letterSpacing":"0em","fontWeight":"400"}],"display-hero":["84px",{"lineHeight":"92px","letterSpacing":"-0.03em","fontWeight":"400"}],"headline-md":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"500"}],"headline-xl":["56px",{"lineHeight":"64px","letterSpacing":"-0.02em","fontWeight":"400"}],"display-hero-mobile":["44px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"400"}],"label-caps":["12px",{"lineHeight":"16px","letterSpacing":"0.12em","fontWeight":"600"}],"headline-xl-mobile":["36px",{"lineHeight":"42px","letterSpacing":"-0.01em","fontWeight":"400"}],"body-lg":["18px",{"lineHeight":"30px","letterSpacing":"-0.01em","fontWeight":"400"}],"kicker":["11px",{"lineHeight":"16px","letterSpacing":"0.2em","fontWeight":"600"}],"headline-lg-mobile":["28px",{"lineHeight":"34px","letterSpacing":"0em","fontWeight":"400"}],"body-md":["15px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col h-full overflow-y-auto"><div class="px-6 py-6 flex items-center gap-3 bg-surface-container-low"><img alt="Brand logo. - Primary color: #1a1a1a
+- Font: playfairDisplay
+- Mode: light
+- Roundness: rounded-lg
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WRqdm6LQrsNtDYQH6alJWMkWfk8mr7SPqKl8gfl7AvBd40Jje4RrE22TykoB2RppbfnyAF2up2zNsWoEEOAzFuAN1npFQei0jfZqImhociqxHqkWuTOiZPCxGJmPYqxbPvy5Rx2weYo7U8hJdkx9NPou6jBCa_GrhtbmoggtyXUo9t6RX7e69grmpegVwtyw9hYyP4hsJ3T_vZnPOwt4eaQH75GZeWtOjhkaQqGZoTZVpuFOyuLFBC"/><div class="flex flex-col"><div class="flex items-center gap-1.5"><span class="font-headline-sm text-headline-sm text-primary leading-none">Moment Kita</span></div><div class="flex items-center gap-2 mt-1"><span class="font-kicker text-kicker uppercase text-secondary tracking-widest">STUDIO ADMIN</span><span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-caps text-[10px] leading-tight">v2.4</span></div></div></div><nav class="flex-1 px-4 space-y-5 pb-6" data-active-classes="bg-primary text-on-primary font-medium"><div class="space-y-1"><div class="px-3 py-1 font-kicker text-kicker uppercase text-on-surface-variant">OVERVIEW</div><a class="flex items-center gap-3 px-3 py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[19px]">dashboard</span><span class="font-body-sm text-body-sm">Dashboard</span></a></div><div class="space-y-1"><div class="px-3 py-1 font-kicker text-kicker uppercase text-on-surface-variant">MANAGEMENT</div><a class="flex items-center gap-3 px-3 py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="customers" href="#"><span class="material-symbols-outlined text-[19px]">group</span><span class="font-body-sm text-body-sm">Customers</span></a><a class="flex items-center gap-3 px-3 py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="invitations" href="#"><span class="material-symbols-outlined text-[19px]">mark_email_read</span><span class="font-body-sm text-body-sm">Invitations</span></a><a class="flex items-center gap-3 px-3 py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="templates" href="#"><span class="material-symbols-outlined text-[19px]">style</span><span class="font-body-sm text-body-sm">Templates</span></a></div><div class="space-y-1"><div class="px-3 py-1 font-kicker text-kicker uppercase text-on-surface-variant">COMMERCE</div><a class="flex items-center gap-3 px-3 py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="transactions" href="#"><span class="material-symbols-outlined text-[19px]">receipt_long</span><span class="font-body-sm text-body-sm">Transactions</span></a><a class="flex items-center gap-3 px-3 py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="packages-quota" href="#"><span class="material-symbols-outlined text-[19px]">inventory_2</span><span class="font-body-sm text-body-sm">Packages &amp; Quota</span></a><a aria-current="page" class="flex items-center gap-3 px-3 py-2 rounded transition-colors bg-primary text-on-primary font-medium" data-path="printed-orders" href="#"><span class="material-symbols-outlined text-[19px]">print</span><span class="font-body-sm text-body-sm">Printed Orders</span><span class="ml-auto w-1.5 h-1.5 rounded-full bg-secondary"></span></a></div><div class="space-y-1"><div class="px-3 py-1 font-kicker text-kicker uppercase text-on-surface-variant">OPERATIONS</div><a class="flex items-center gap-3 px-3 py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="notifications" href="#"><span class="material-symbols-outlined text-[19px]">notifications</span><span class="font-body-sm text-body-sm">Notifications</span></a><a class="flex items-center gap-3 px-3 py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="audit-logs" href="#"><span class="material-symbols-outlined text-[19px]">history_edu</span><span class="font-body-sm text-body-sm">Audit Logs</span></a></div><div class="space-y-1"><div class="px-3 py-1 font-kicker text-kicker uppercase text-on-surface-variant">SYSTEM</div><a class="flex items-center gap-3 px-3 py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[19px]">tune</span><span class="font-body-sm text-body-sm">Settings</span></a></div></nav></div><div class="p-4 bg-surface-container-high/60 m-3 rounded"><div class="flex items-center gap-3"><div class="w-9 h-9 rounded bg-primary flex items-center justify-center text-on-primary font-headline-sm text-sm">MK</div><div class="flex flex-col min-w-0 flex-1"><span class="font-body-sm text-body-sm font-semibold truncate text-on-surface">Atelier Admin</span><span class="font-label-caps text-[10px] text-on-surface-variant tracking-wider uppercase truncate">Superuser Role</span></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">verified_user</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-8"><div class="flex items-center gap-6"><div class="flex items-center gap-2 font-label-caps text-label-caps tracking-widest text-on-surface-variant"><span class="text-secondary font-semibold">COMMERCE</span><span class="text-outline-variant">/</span><span class="text-on-surface-variant">BESPOKE ATELIER DISPATCH</span><span class="text-outline-variant">/</span><span class="text-on-surface font-semibold">PRINTED ORDER DOSSIER</span></div><div class="hidden xl:flex items-center gap-2 pl-4 border-l border-outline-variant/30"><span class="inline-block w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span class="font-kicker text-kicker uppercase text-on-surface-variant">Live Atelier Press Sync</span></div></div><div class="flex items-center gap-4"><div class="relative flex items-center w-72"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[18px]">search</span><input class="w-full pl-9 pr-3 py-1.5 bg-surface-container-low rounded font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant/70 focus:outline-none focus:bg-surface-container-lowest transition-colors" placeholder="Search order, client, WhatsApp (+62)..." type="text"/></div><button class="flex items-center gap-2 px-3 py-1.5 bg-surface-container-low hover:bg-surface-container text-on-surface rounded font-label-caps text-label-caps tracking-wider transition-colors"><span class="material-symbols-outlined text-[16px]">file_download</span><span>Export Spec Sheet (PDF)</span></button><button class="flex items-center gap-2 px-3.5 py-1.5 bg-primary hover:bg-secondary text-on-primary rounded font-label-caps text-label-caps tracking-wider transition-colors"><span class="material-symbols-outlined text-[16px]">add</span><span>New Inquiry</span></button><div class="h-5 w-px bg-outline-variant/40 mx-1"></div><button class="relative p-1.5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error"></span></button><div class="flex items-center gap-2 pl-2"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<!-- Operational Notice Ribbon -->
+<section class="w-full bg-surface-container-high px-8 py-3.5 flex flex-wrap items-center justify-between gap-4 shadow-sm">
+<div class="flex items-center gap-3">
+<span class="flex h-2 w-2 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest">CONCIERGE-ASSISTED BESPOKE ATELIER WORKFLOW</span>
+<span class="text-outline-variant font-body-sm">•</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+        Plate Engraving Verified <span class="text-on-surface-variant">(Die #FP-772)</span> • Swatch tint #882 approved via WhatsApp • Current stage: <strong class="text-secondary font-semibold">Hand Plate Pressing at Bandung Atelier Line 01</strong>
+</p>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-secondary">verified</span>
+        Pre-press Inspector: Kang Asep
+      </span>
+<div class="h-4 w-px bg-outline-variant"></div>
+<a class="font-label-caps text-label-caps text-secondary underline hover:text-on-surface transition-colors" href="#quick-update">Jump to Status Controls ↓</a>
+</div>
+</section>
+<!-- Editorial Order Header Hero -->
+<section class="w-full px-8 py-8 bg-surface">
+<div class="flex flex-col xl:flex-row xl:items-end justify-between gap-6 pb-6 border-b border-surface-container-highest">
+<div class="space-y-3">
+<div class="flex flex-wrap items-center gap-3">
+<span class="px-2.5 py-1 bg-surface-container-highest text-on-surface-variant font-label-caps text-label-caps tracking-widest uppercase rounded">
+            DOSSIER REF: #PO-8821
+          </span>
+<span class="px-2.5 py-1 bg-secondary text-on-secondary font-label-caps text-label-caps tracking-widest uppercase rounded flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]">star</span>
+            PRIORITY VIP ATELIER RUN
+          </span>
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container font-label-caps text-label-caps uppercase rounded-full flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            In Production (Bandung Line 01)
+          </span>
+</div>
+<div class="flex flex-wrap items-baseline gap-4">
+<h1 class="font-headline-xl text-headline-xl text-primary tracking-tight">Grand Heirloom Letterpress Suite</h1>
+<span class="font-headline-md text-headline-md text-secondary italic">for Sarah &amp; Liam</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+          Manual dual-strike letterpress on 600 GSM double-thick wild cotton with hand-torn deckle edging, hot rose copper foil, and botanical wax seals. Connected to digital suite <span class="font-semibold text-primary">#ARCH-FR-01 (Château de Chantilly)</span>.
+        </p>
+</div>
+<!-- Header Action Cluster -->
+<div class="flex flex-wrap items-center gap-3">
+<a class="px-5 py-3 bg-[#1e4d3a] hover:bg-[#16382a] text-on-primary font-label-caps text-label-caps tracking-wider uppercase rounded flex items-center gap-2.5 shadow-sm transition-all duration-200" href="https://wa.me/6281192347712" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>WhatsApp Client (+62 811-9234-7712)</span>
+</a>
+<button class="px-4 py-3 bg-primary hover:bg-secondary text-on-primary font-label-caps text-label-caps tracking-wider uppercase rounded flex items-center gap-2 transition-colors" id="btn-update-modal-trigger">
+<span class="material-symbols-outlined text-[18px]">published_with_changes</span>
+<span>Advance Stage</span>
+</button>
+<button class="px-4 py-3 bg-surface-container-high hover:bg-surface-container text-on-surface font-label-caps text-label-caps tracking-wider uppercase rounded flex items-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-[18px]">print</span>
+<span>Atelier Spec Sheet</span>
+</button>
+<button class="p-3 bg-surface-container-high hover:bg-surface-container text-on-surface rounded flex items-center justify-center transition-colors" title="More Actions">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Main Operational Canvas (12 cols layout) -->
+<section class="w-full px-8 pb-20 pt-4 bg-surface">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- ==================== LEFT COLUMN (8 cols): SPECIFICATIONS, VERIFICATION & ARTISAN LOGS ==================== -->
+<div class="lg:col-span-8 flex flex-col space-y-10">
+<!-- A. Material & Press Specifications Bento -->
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm space-y-8">
+<div class="flex items-center justify-between border-b border-surface-container-high pb-4">
+<div class="flex items-center gap-3">
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest">01 — SPECIFICATION MATRIX</span>
+<span class="text-outline-variant font-body-sm">•</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Double-Thick Archival Suite</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+<span class="font-label-caps text-label-caps text-secondary uppercase">Plates Etched &amp; Tested</span>
+</div>
+</div>
+<!-- Quantity Breakdown High-Level -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<div class="p-5 bg-surface-container-low rounded-lg space-y-1">
+<span class="font-kicker text-kicker text-on-surface-variant uppercase">Core Guest Suites</span>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-primary">250</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">complete sets</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant/80">Invitation + RSVP + Details Card + Outer Envelopes</p>
+</div>
+<div class="p-5 bg-surface-container-low rounded-lg space-y-1">
+<span class="font-kicker text-kicker text-on-surface-variant uppercase">Archival Keepsake Proofs</span>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-secondary">15</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">framing prints</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant/80">Archival presentation boxes in Belgian oatmeal linen</p>
+</div>
+<div class="p-5 bg-surface-container-low rounded-lg space-y-1">
+<span class="font-kicker text-kicker text-on-surface-variant uppercase">Calligraphy Overrun Reserve</span>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-primary">20</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">blank envelopes</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant/80">Allocated for manual script scribing tests</p>
+</div>
+</div>
+<!-- Tactile Material Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+<!-- Paper Stock -->
+<div class="p-6 bg-surface-container rounded-lg space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">layers</span>
+<h4 class="font-headline-sm text-headline-sm text-primary">Paper Stock &amp; Deckle</h4>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface text-secondary font-label-caps text-label-caps">600 GSM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                100% Wild Long-Fiber Cotton, handmade double-thick cardstock. Natural stone-washed ivory tone.
+              </p>
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-2.5 py-1 bg-surface-container-lowest text-on-surface text-body-sm font-medium rounded">Raw Untrimmed Feather Deckle</span>
+<span class="px-2.5 py-1 bg-surface-container-lowest text-on-surface text-body-sm font-medium rounded">Porous Tactile Tooth</span>
+</div>
+</div>
+<!-- Print Finishing -->
+<div class="p-6 bg-surface-container rounded-lg space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">brush</span>
+<h4 class="font-headline-sm text-headline-sm text-primary">Finishing &amp; Stamping</h4>
+</div>
+<span class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-caps text-label-caps">Dual Pass</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Pass 1: Deep architectural blind deboss monogram crest.<br/>
+                Pass 2: Warm Rose Copper hot-stamping foil (Kurz Luxuriance #RC-22).
+              </p>
+<div class="flex items-center gap-2 pt-2">
+<div class="w-4 h-4 rounded-full bg-[#c27664] shadow-sm"></div>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Rose Copper Micro-Sheen Foil (#FP-772)</span>
+</div>
+</div>
+<!-- Envelopes & Flaps -->
+<div class="p-6 bg-surface-container rounded-lg space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">mail</span>
+<h4 class="font-headline-sm text-headline-sm text-primary">Outer Envelope &amp; Liner</h4>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface text-on-surface-variant font-label-caps text-label-caps">270 GSM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Euro-flap deep curved wallet envelope in Warm Sand shade. Custom printed botanical interior liner foil-pressed with estate flora illustrations.
+              </p>
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-2.5 py-1 bg-surface-container-lowest text-on-surface text-body-sm font-medium rounded">Warm Sand Flap</span>
+<span class="px-2.5 py-1 bg-surface-container-lowest text-on-surface text-body-sm font-medium rounded">Botanical Gilt Liner</span>
+</div>
+</div>
+<!-- Wax Seals & Scribing -->
+<div class="p-6 bg-surface-container rounded-lg space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">energy_savings_leaf</span>
+<h4 class="font-headline-sm text-headline-sm text-primary">Wax Seal &amp; Calligraphy</h4>
+</div>
+<span class="px-2 py-0.5 rounded bg-secondary text-on-secondary font-label-caps text-label-caps">Hand Poured</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Custom botanical olive branch seal die (#WS-04). Hand-poured terracotta clay wax blend (#882). Outer envelope addresses scribed in sepia walnut ink by master penman.
+              </p>
+<div class="flex items-center gap-3 pt-2">
+<div class="w-4 h-4 rounded-full bg-[#a3533c] shadow-sm"></div>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Terracotta #882 + Olive Ribbon Band</span>
+</div>
+</div>
+</div>
+<!-- Included Hardware & Archival Retainers -->
+<div class="p-4 bg-surface-container-low rounded-lg flex flex-wrap items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[24px]">inventory</span>
+<div>
+<span class="font-body-sm text-body-sm font-semibold text-primary">Archival Heritage Preservation</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">The custom engraved magnesium deboss plate is archived in Atelier Vault Drawer #B-19 for future family announcements.</p>
+</div>
+</div>
+<span class="font-label-caps text-label-caps text-secondary font-semibold uppercase">Plate Stored in Vault</span>
+</div>
+</div>
+<!-- B. Swatch Proof & Verification Gallery (Photo-Rich Editorial Showcase) -->
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm space-y-6">
+<div class="flex flex-wrap items-center justify-between gap-4 border-b border-surface-container-high pb-4">
+<div>
+<div class="flex items-center gap-3">
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest">02 — PHYSICAL PROOF VERIFICATION</span>
+<span class="text-outline-variant font-body-sm">•</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Bandung Pressroom Cameras</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mt-1">Inspected Atelier Swatches</h3>
+</div>
+<div class="flex items-center gap-2 px-3 py-1.5 bg-surface-container-high rounded text-on-surface font-label-caps text-label-caps">
+<span class="material-symbols-outlined text-[16px] text-[#1e4d3a]">check_circle</span>
+<span>Client Verified via WhatsApp (Oct 24, 09:15 WIB)</span>
+</div>
+</div>
+<!-- Proof Visual Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+<!-- Swatch Proof 01 -->
+<div class="group relative flex flex-col bg-surface-container-low rounded-lg overflow-hidden transition-all duration-300 hover:shadow-md">
+<div class="relative w-full h-56 overflow-hidden bg-surface-dim">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Macro close-up shot of luxurious 600 GSM double thick handmade wild cotton paper with raw feathered deckle edges. Deep blind deboss letterpress typography and copper foil monogram shimmering under warm atelier studio side lighting on an aged wooden crafting bench." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT5Kq0fweTbAXD_mPTT2h4BuSjmXJ9I2Xk1-C_cgkrDQH2Spj6CEVkUh4B7lyg2R-2SIlOGUpVOtMMvDgndhW3t56PuUWR64GrmT8RNUXFfqoZLE-X-v52eDN61hQOk5VvmBPL0lnt7Yrl-r4j5Dmpa9Y8x4AkMFqfF-uD-JvE_d6x5y3MPnHInPZOzGIK-7BaU86aNzBIkho6BwU8sK-Q5LRYe1l132Rwc3yH9sDJpmbajPDdVdk"/>
+<div class="absolute top-3 left-3 px-2 py-1 bg-primary/80 backdrop-blur-sm text-on-primary font-label-caps text-[10px] uppercase rounded">
+                  Proof 01 • Cotton Fiber
+                </div>
+</div>
+<div class="p-4 space-y-1 flex-1 flex flex-col justify-between">
+<div>
+<h4 class="font-headline-sm text-[16px] text-primary">600 GSM Deckle &amp; Deboss</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Deep strike test on double-thick wild cotton. Impression depth measured at 0.38mm.</p>
+</div>
+<div class="flex items-center justify-between pt-3 border-t border-surface-container-highest mt-3">
+<span class="font-kicker text-kicker text-secondary uppercase">Plate #FP-772 Pass 1</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">zoom_in</span>
+</div>
+</div>
+</div>
+<!-- Swatch Proof 02 -->
+<div class="group relative flex flex-col bg-surface-container-low rounded-lg overflow-hidden transition-all duration-300 hover:shadow-md">
+<div class="relative w-full h-56 overflow-hidden bg-surface-dim">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Editorial overhead flatlay of bespoke wedding invitation suite featuring a handmade terracotta clay botanical wax seal, torn deckle-edge envelopes, soft sage silk ribbon, gold brass wax seal stamp, and delicate olive foliage resting on natural linen fabric." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDz0ioHISlLzvQEuIrv4gTZcK2meU07-SQsFMHfcwp8xRGrlPHzNWz379cGwS5nGDRipr6uI4y40tBhHS4Opkq06lpOZuSJKUyHaWtcW4WUaSZpD8cCvS5adxcxImbEIZQQdOJSuwep4IX2WSB63y9LXWHpW7nbsfQ0_AZ2NLNi5-Xhwo8Qft8Ynh_bp9Rc-7o3SYXgBDyNllVofQQMegzcS-5gE86E8b1Lk0rtFevuqtU0NCbjtBA"/>
+<div class="absolute top-3 left-3 px-2 py-1 bg-primary/80 backdrop-blur-sm text-on-primary font-label-caps text-[10px] uppercase rounded">
+                  Proof 02 • Wax &amp; Ribbon
+                </div>
+</div>
+<div class="p-4 space-y-1 flex-1 flex flex-col justify-between">
+<div>
+<h4 class="font-headline-sm text-[16px] text-primary">Terracotta Wax Blend #882</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Color pigment test cast at 115°C with muted sage green hand-frayed chiffon ribbon.</p>
+</div>
+<div class="flex items-center justify-between pt-3 border-t border-surface-container-highest mt-3">
+<span class="font-kicker text-kicker text-secondary uppercase">Seal Die #WS-04</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">zoom_in</span>
+</div>
+</div>
+</div>
+<!-- Swatch Proof 03 (Foil Specimen Visualizer) -->
+<div class="group relative flex flex-col bg-surface-container-low rounded-lg overflow-hidden transition-all duration-300 hover:shadow-md">
+<div class="relative w-full h-56 bg-primary-container p-6 flex flex-col justify-between text-on-primary">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-[10px] uppercase tracking-widest text-secondary-fixed">DIE PROOF #DS-99</span>
+<span class="material-symbols-outlined text-secondary-fixed text-[20px]">precision_manufacturing</span>
+</div>
+<!-- Inline SVG of Mirror Engraved Plate -->
+<div class="my-auto flex flex-col items-center justify-center text-center py-2">
+<svg class="w-16 h-16 text-[#e89d87] mb-2 opacity-90" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 100 100">
+<circle cx="50" cy="50" r="44" stroke-dasharray="3 3"></circle>
+<path d="M35 65 V35 L50 55 L65 35 V65" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M42 50 H58" stroke-linecap="round"></path>
+</svg>
+<span class="font-quote-editorial text-sm italic text-secondary-fixed">Château de Chantilly Serif Monogram</span>
+<span class="font-label-caps text-[10px] tracking-wider text-on-primary-container uppercase mt-1">Micro-Chem Etched Copper Die</span>
+</div>
+<div class="text-[11px] text-on-primary-container flex items-center justify-between">
+<span>Depth: 0.42mm</span>
+<span class="text-secondary-fixed font-semibold">Tolerances Passed</span>
+</div>
+</div>
+<div class="p-4 space-y-1 flex-1 flex flex-col justify-between">
+<div>
+<h4 class="font-headline-sm text-[16px] text-primary">Foil Strike Calibration</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Temperature calibrated to 142°C on 1964 Heidelberg Red Ball Platen. Zero foil bleed.</p>
+</div>
+<div class="flex items-center justify-between pt-3 border-t border-surface-container-highest mt-3">
+<span class="font-kicker text-kicker text-secondary uppercase">Heidelberg Bandung Line 01</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- C. Artisan Instructions & Concierge Scratchpad -->
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm space-y-8">
+<div class="flex items-center justify-between border-b border-surface-container-high pb-4">
+<div class="flex items-center gap-3">
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest">03 — ATELIER SPECIAL INSTRUCTIONS</span>
+<span class="text-outline-variant font-body-sm">•</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Bandung Pressroom Floor</span>
+</div>
+<span class="px-2.5 py-1 bg-surface-container text-on-surface font-label-caps text-[10px] uppercase rounded">Live Operational Notes</span>
+</div>
+<!-- Highlighted Special Nuances Callout -->
+<div class="p-6 bg-surface-container rounded-lg space-y-4">
+<h4 class="font-headline-sm text-headline-sm text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">assignment_late</span>
+              Bespoke Production Directives
+            </h4>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="p-4 bg-surface rounded space-y-1.5 shadow-sm">
+<span class="font-label-caps text-[11px] text-secondary uppercase font-semibold">1. Torn Deckle Borders</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">The natural wild feather deckle must remain completely intact on the bottom and right edges. Never guillotine cut.</p>
+</div>
+<div class="p-4 bg-surface rounded space-y-1.5 shadow-sm">
+<span class="font-label-caps text-[11px] text-secondary uppercase font-semibold">2. Wax Thermals</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Maintain melting vat strictly at 115°C to avoid pigment scorch. Each wax seal stamped with 3.2s dwell time.</p>
+</div>
+<div class="p-4 bg-surface rounded space-y-1.5 shadow-sm">
+<span class="font-label-caps text-[11px] text-secondary uppercase font-semibold">3. Tropical Weatherproofing</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Bali destination delivery: Final suites sealed in airtight cedar crates with food-grade silica gel packings.</p>
+</div>
+</div>
+</div>
+<!-- Internal Concierge Scratchpad -->
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<label class="font-headline-sm text-[18px] text-primary" for="new-note-input">Artisan &amp; Concierge Team Scratchpad</label>
+<span class="font-kicker text-kicker text-on-surface-variant uppercase">5 Notes Logged</span>
+</div>
+<!-- New Note Composer -->
+<div class="p-4 bg-surface-container rounded-lg space-y-3">
+<textarea class="w-full bg-surface-container-lowest p-3 rounded font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none focus:ring-1 focus:ring-secondary transition-all" id="new-note-input" placeholder="Log internal note (e.g. foil temperature adjustment, guest address update from WhatsApp)..." rows="2"></textarea>
+<div class="flex flex-wrap items-center justify-between gap-3">
+<div class="flex items-center gap-2">
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase">Category:</span>
+<button class="px-2 py-0.5 rounded bg-surface text-secondary font-label-caps text-[10px] uppercase font-semibold hover:bg-secondary hover:text-on-secondary transition-colors" type="button">Pressroom</button>
+<button class="px-2 py-0.5 rounded bg-surface text-on-surface-variant font-label-caps text-[10px] uppercase hover:bg-secondary hover:text-on-secondary transition-colors" type="button">Packaging</button>
+<button class="px-2 py-0.5 rounded bg-surface text-on-surface-variant font-label-caps text-[10px] uppercase hover:bg-secondary hover:text-on-secondary transition-colors" type="button">Client WhatsApp</button>
+</div>
+<button class="px-4 py-1.5 bg-primary hover:bg-secondary text-on-primary font-label-caps text-label-caps tracking-wider uppercase rounded transition-colors flex items-center gap-1.5" id="btn-save-note" type="button">
+<span class="material-symbols-outlined text-[15px]">send</span>
+<span>Post Entry</span>
+</button>
+</div>
+</div>
+<!-- Timeline of Internal Notes -->
+<div class="space-y-3 pt-2" id="notes-container">
+<!-- Note Item 1 -->
+<div class="p-4 bg-surface-container-low rounded-lg space-y-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-secondary text-on-secondary font-headline-sm text-[11px] flex items-center justify-center">KA</span>
+<span class="font-body-sm text-body-sm font-semibold text-primary">Kang Asep (Lead Pressman)</span>
+<span class="px-1.5 py-0.5 bg-surface text-secondary font-label-caps text-[9px] uppercase rounded">Pressroom</span>
+</div>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Today • 11:20 WIB</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant pl-8">
+                  First 100 impressions off the Heidelberg windmill. Foil adherence is crisp, blind deboss crest depth verified with micrometer at 0.38mm. Proceeding with remaining 150 run.
+                </p>
+</div>
+<!-- Note Item 2 -->
+<div class="p-4 bg-surface-container-low rounded-lg space-y-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary font-headline-sm text-[11px] flex items-center justify-center">DR</span>
+<span class="font-body-sm text-body-sm font-semibold text-primary">Dimas Raditya (Senior Concierge)</span>
+<span class="px-1.5 py-0.5 bg-surface text-on-surface-variant font-label-caps text-[9px] uppercase rounded">WhatsApp</span>
+</div>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Oct 24 • 09:20 WIB</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant pl-8">
+                  Sarah approved the warm rose copper swatch macro photo sent over WhatsApp. She specifically requested to ensure Sarah &amp; Liam's RSVP response card has walnut calligraphy accents. Confirmed with Kang Asep.
+                </p>
+</div>
+<!-- Note Item 3 -->
+<div class="p-4 bg-surface-container-low rounded-lg space-y-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface font-headline-sm text-[11px] flex items-center justify-center">RM</span>
+<span class="font-body-sm text-body-sm font-semibold text-primary">Rina Maharani (Studio Curator)</span>
+<span class="px-1.5 py-0.5 bg-surface text-on-surface-variant font-label-caps text-[9px] uppercase rounded">Packaging</span>
+</div>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Oct 23 • 16:45 WIB</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant pl-8">
+                  Handcrafted cedar presentation crate arrived from Jepara artisan studio. Verified velvet lining fit for 250 suites.
+                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ==================== RIGHT COLUMN (4 cols): CLIENT CARD, TIMELINE & QUICK CONTROLS ==================== -->
+<div class="lg:col-span-4 flex flex-col space-y-8">
+<!-- D. VIP Customer Dossier & Concierge Access Card -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm space-y-6">
+<div class="flex items-center justify-between border-b border-surface-container-high pb-4">
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest">VIP CLIENT DOSSIER</span>
+<span class="px-2 py-0.5 bg-secondary-fixed text-on-secondary-fixed font-label-caps text-[10px] uppercase rounded font-bold">VIP Destination</span>
+</div>
+<!-- Customer Identity -->
+<div class="flex items-start gap-4">
+<div class="w-14 h-14 rounded-full bg-primary flex items-center justify-center text-on-primary font-headline-sm text-xl shadow-sm">
+              SJ
+            </div>
+<div class="space-y-1">
+<h3 class="font-headline-sm text-headline-sm text-primary leading-tight">Sarah Jenkins &amp; Liam</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Destination Wedding: Bali 2026</p>
+<div class="flex items-center gap-1.5 text-secondary pt-0.5">
+<span class="material-symbols-outlined text-[15px]">event</span>
+<span class="font-label-caps text-[11px] tracking-wider uppercase font-semibold">June 18, 2026</span>
+</div>
+</div>
+</div>
+<!-- Direct Channels -->
+<div class="space-y-3 pt-2">
+<div class="p-3 bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">mail</span>
+<span class="font-body-sm text-body-sm text-on-surface select-all">sarah.jenkins@atelier-paris.fr</span>
+</div>
+<button class="text-on-surface-variant hover:text-primary" onclick="navigator.clipboard.writeText('sarah.jenkins@atelier-paris.fr')" title="Copy Email">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+<div class="p-3.5 bg-[#eaf4ec] rounded-lg space-y-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-[#1e4d3a] animate-pulse"></span>
+<span class="font-label-caps text-[10px] uppercase tracking-wider text-[#1e4d3a] font-bold">Active WhatsApp Thread</span>
+</div>
+<span class="font-body-sm text-[11px] text-[#1e4d3a]/80">2h ago</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm font-semibold text-[#16382a] select-all">+62 811-9234-7712</span>
+<a class="px-3 py-1 bg-[#1e4d3a] hover:bg-[#16382a] text-on-primary font-label-caps text-[11px] uppercase rounded transition-colors flex items-center gap-1" href="https://wa.me/6281192347712" target="_blank">
+<span>Chat</span>
+<span class="material-symbols-outlined text-[13px]">arrow_outward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Destination Shipping / Handover Details -->
+<div class="space-y-2 pt-2 border-t border-surface-container-high">
+<span class="font-kicker text-kicker uppercase text-on-surface-variant">White-Glove Handover Destination</span>
+<div class="p-3 bg-surface-container-low rounded-lg space-y-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">hotel</span>
+<span class="font-body-sm text-body-sm font-semibold text-primary">Bulgari Resort Bali</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Jalan Goa Lempeh, Banjar Dinas Kangin, Uluwatu, Kabupaten Badung, Bali 80364
+              </p>
+<div class="pt-1.5 flex items-center gap-1 text-[11px] text-secondary font-medium">
+<span class="material-symbols-outlined text-[14px]">shield_with_heart</span>
+<span>Direct hand-off to Concierge Coordinator: Bapak Wayan</span>
+</div>
+</div>
+</div>
+</div>
+<!-- E. Manual Operational Status Timeline (Editorial Stepper) -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm space-y-6">
+<div class="flex items-center justify-between border-b border-surface-container-high pb-4">
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest">ATELIER PRESS TIMELINE</span>
+<span class="font-label-caps text-label-caps text-secondary font-semibold uppercase">Stage 5 of 7</span>
+</div>
+<!-- Stepper Track -->
+<div class="relative pl-6 space-y-6 before:absolute before:left-[11px] before:top-2 before:bottom-2 before:w-[2px] before:bg-surface-container-highest">
+<!-- Step 1 (Completed) -->
+<div class="relative flex items-start gap-4">
+<div class="absolute -left-6 mt-0.5 w-6 h-6 rounded-full bg-[#1e4d3a] text-on-primary flex items-center justify-center text-[13px] shadow-sm">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<div>
+<span class="font-body-sm text-body-sm font-semibold text-primary">1. Inquiry &amp; Curation</span>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Oct 18, 2025 • Initial consultation &amp; package setup</p>
+</div>
+</div>
+<!-- Step 2 (Completed) -->
+<div class="relative flex items-start gap-4">
+<div class="absolute -left-6 mt-0.5 w-6 h-6 rounded-full bg-[#1e4d3a] text-on-primary flex items-center justify-center text-[13px] shadow-sm">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<div>
+<span class="font-body-sm text-body-sm font-semibold text-primary">2. Payment &amp; Settlement</span>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Oct 20, 2025 • 100% Settled ($1,450.00 USD via Escrow)</p>
+</div>
+</div>
+<!-- Step 3 (Completed) -->
+<div class="relative flex items-start gap-4">
+<div class="absolute -left-6 mt-0.5 w-6 h-6 rounded-full bg-[#1e4d3a] text-on-primary flex items-center justify-center text-[13px] shadow-sm">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<div>
+<span class="font-body-sm text-body-sm font-semibold text-primary">3. Swatch &amp; Paper Approval</span>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Oct 22, 2025 • 600 GSM Cotton &amp; Terracotta #882 OK</p>
+</div>
+</div>
+<!-- Step 4 (Completed) -->
+<div class="relative flex items-start gap-4">
+<div class="absolute -left-6 mt-0.5 w-6 h-6 rounded-full bg-[#1e4d3a] text-on-primary flex items-center justify-center text-[13px] shadow-sm">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<div>
+<span class="font-body-sm text-body-sm font-semibold text-primary">4. Plate Casting &amp; Engraving</span>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Oct 23, 2025 • Magnesium &amp; copper dies milled</p>
+</div>
+</div>
+<!-- Step 5 (ACTIVE STAGE) -->
+<div class="relative flex items-start gap-4 p-3 bg-secondary-container/40 rounded-lg -ml-3">
+<div class="w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center text-[13px] shadow-sm flex-shrink-0 animate-pulse">
+<span class="material-symbols-outlined text-[14px]">precision_manufacturing</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-body-sm text-body-sm font-bold text-primary">5. Hand Plate Pressing</span>
+<span class="px-1.5 py-0.2 bg-secondary text-on-secondary font-label-caps text-[9px] uppercase rounded">ACTIVE</span>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant mt-0.5">Oct 24, 2025 • Bandung Line 01 (100 / 250 printed)</p>
+</div>
+</div>
+<!-- Step 6 (Upcoming) -->
+<div class="relative flex items-start gap-4 opacity-60">
+<div class="absolute -left-6 mt-0.5 w-6 h-6 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center text-[13px]">
+                6
+              </div>
+<div>
+<span class="font-body-sm text-body-sm font-semibold text-primary">6. Assembly &amp; Wax Seals</span>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Target: Oct 26, 2025 • Hand-ribbon tying &amp; botanical seals</p>
+</div>
+</div>
+<!-- Step 7 (Upcoming) -->
+<div class="relative flex items-start gap-4 opacity-60">
+<div class="absolute -left-6 mt-0.5 w-6 h-6 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center text-[13px]">
+                7
+              </div>
+<div>
+<span class="font-body-sm text-body-sm font-semibold text-primary">7. White-Glove Handover</span>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Target: Oct 29, 2025 • Moisture-sealed crate dispatched</p>
+</div>
+</div>
+</div>
+</div>
+<!-- F. Payment & Commercial Summary -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm space-y-4">
+<div class="flex items-center justify-between border-b border-surface-container-high pb-4">
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest">COMMERCIAL SETTLEMENT</span>
+<span class="px-2 py-0.5 bg-[#eaf4ec] text-[#1e4d3a] font-label-caps text-[10px] uppercase rounded font-bold">Paid 100%</span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Total Atelier Invoice:</span>
+<div class="text-right">
+<span class="font-headline-md text-headline-md text-primary">$1,450.00 <span class="font-body-sm text-xs font-normal text-on-surface-variant">USD</span></span>
+<p class="font-body-sm text-[11px] text-on-surface-variant">~IDR 22,950,000 (Settled via BCA Escrow)</p>
+</div>
+</div>
+<div class="p-3 bg-surface-container-low rounded-lg space-y-2 text-body-sm">
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Ledger Reference:</span>
+<a class="font-medium text-secondary hover:underline flex items-center gap-1" href="#">
+<span>#TX-98419</span>
+<span class="material-symbols-outlined text-[13px]">open_in_new</span>
+</a>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Settlement Date:</span>
+<span class="text-primary font-medium">Oct 20, 2025 (09:41 WIB)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Verified Receipt:</span>
+<span class="font-mono text-[11px] text-on-surface font-medium bg-surface px-1.5 py-0.5 rounded">OCR #TRF-BCA-982104-JKT</span>
+</div>
+</div>
+</div>
+<!-- G. Stage Update Panel (Direct Manual Control) -->
+<div class="bg-surface-container-high rounded-xl p-6 shadow-sm space-y-5" id="quick-update">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">toggle_on</span>
+<h4 class="font-headline-sm text-headline-sm text-primary">Advance Stage</h4>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Manual Admin</span>
+</div>
+<div class="space-y-3">
+<label class="font-body-sm text-body-sm font-semibold text-primary" for="stage-select">Target Production Milestone</label>
+<div class="relative">
+<select class="w-full bg-surface-container-lowest text-on-surface font-body-sm text-body-sm py-2.5 px-3 rounded appearance-none focus:outline-none focus:ring-1 focus:ring-secondary" id="stage-select">
+<option selected="" value="step5">Stage 5: Hand Plate Pressing (Current)</option>
+<option value="step6">Stage 6: Hand Assembly &amp; Wax Sealing</option>
+<option value="step7">Stage 7: Atelier White-Glove Handover</option>
+<option value="complete">Stage 8: Completed &amp; Archival Logged</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-on-surface-variant pointer-events-none text-[20px]">expand_more</span>
+</div>
+</div>
+<!-- Pre-flight Concierge Checklist -->
+<div class="space-y-2 pt-1">
+<span class="font-kicker text-kicker uppercase text-on-surface-variant">Quality Control Checklist</span>
+<label class="flex items-center gap-2.5 p-2 bg-surface-container-lowest rounded cursor-pointer select-none">
+<input checked="" class="w-4 h-4 accent-secondary rounded" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">100% Press run inspected by Kang Asep</span>
+</label>
+<label class="flex items-center gap-2.5 p-2 bg-surface-container-lowest rounded cursor-pointer select-none">
+<input checked="" class="w-4 h-4 accent-secondary rounded" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">Foil strike video sent to Sarah via WhatsApp</span>
+</label>
+<label class="flex items-center gap-2.5 p-2 bg-surface-container-lowest rounded cursor-pointer select-none">
+<input class="w-4 h-4 accent-secondary rounded" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">Wax seal formula #882 pre-melted</span>
+</label>
+</div>
+<button class="w-full py-3 bg-secondary hover:bg-[#a3533c] text-on-secondary font-label-caps text-label-caps tracking-wider uppercase rounded transition-all shadow-sm flex items-center justify-center gap-2" id="btn-commit-stage">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Commit Status Transition</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Modal Drawer for Advance Stage -->
+<div class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm hidden items-center justify-center p-4" id="advance-modal">
+<div class="bg-surface rounded-xl max-w-lg w-full p-8 shadow-2xl space-y-6 relative">
+<button class="absolute top-5 right-5 text-on-surface-variant hover:text-on-surface" id="btn-close-modal">
+<span class="material-symbols-outlined text-[24px]">close</span>
+</button>
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-secondary font-label-caps text-label-caps uppercase">
+<span class="material-symbols-outlined text-[18px]">rule</span>
+<span>Artisan Production Handshake</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">Advance Order #PO-8821</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          You are moving this order from <span class="font-semibold text-primary">Hand Plate Pressing</span> to <span class="font-semibold text-secondary">Stage 6: Hand Assembly &amp; Botanical Wax Sealing</span>.
+        </p>
+</div>
+<div class="p-4 bg-surface-container-low rounded-lg space-y-3">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[24px]">inventory_2</span>
+<div>
+<span class="font-body-sm font-semibold text-primary">Batch Verification</span>
+<p class="font-body-sm text-on-surface-variant text-[12px]">250 Letterpress suites + 15 archival sets + 20 overrun envelopes ready.</p>
+</div>
+</div>
+</div>
+<div class="space-y-3">
+<label class="font-body-sm text-body-sm font-semibold text-primary" for="modal-operator-note">Handover Dispatch Note</label>
+<textarea class="w-full bg-surface-container-lowest p-3 rounded font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-1 focus:ring-secondary" id="modal-operator-note" placeholder="e.g. Press run finished with zero rejects. Transferred to assembly desk." rows="2"></textarea>
+</div>
+<div class="flex items-center justify-end gap-3 pt-2">
+<button class="px-5 py-2.5 bg-surface-container text-on-surface font-label-caps text-label-caps tracking-wider uppercase rounded hover:bg-surface-container-high transition-colors" id="btn-cancel-modal">
+          Cancel
+        </button>
+<button class="px-5 py-2.5 bg-secondary hover:bg-[#a3533c] text-on-secondary font-label-caps text-label-caps tracking-wider uppercase rounded transition-colors flex items-center gap-2" id="btn-confirm-advance">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Confirm &amp; Notify Concierge</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Micro-interactions Script -->
+<script>
+    (function initOrderPage() {
+      // Advance Stage Modal
+      const modal = document.getElementById('advance-modal');
+      const triggerBtn = document.getElementById('btn-update-modal-trigger');
+      const closeBtn = document.getElementById('btn-close-modal');
+      const cancelBtn = document.getElementById('btn-cancel-modal');
+      const confirmAdvanceBtn = document.getElementById('btn-confirm-advance');
+      const commitQuickBtn = document.getElementById('btn-commit-stage');
+
+      function openModal() {
+        if (modal) {
+          modal.classList.remove('hidden');
+          modal.classList.add('flex');
+        }
+      }
+
+      function closeModal() {
+        if (modal) {
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+        }
+      }
+
+      if (triggerBtn) triggerBtn.addEventListener('click', openModal);
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+      if (cancelBtn) cancelBtn.addEventListener('click', closeModal);
+
+      if (confirmAdvanceBtn) {
+        confirmAdvanceBtn.addEventListener('click', function() {
+          const originalText = confirmAdvanceBtn.innerHTML;
+          confirmAdvanceBtn.innerHTML = '<span class="material-symbols-outlined text-[16px] animate-spin">refresh</span><span>Transitioning...</span>';
+          setTimeout(() => {
+            confirmAdvanceBtn.innerHTML = '<span class="material-symbols-outlined text-[16px]">done</span><span>Transition Confirmed!</span>';
+            setTimeout(() => {
+              closeModal();
+              confirmAdvanceBtn.innerHTML = originalText;
+            }, 800);
+          }, 600);
+        });
+      }
+
+      if (commitQuickBtn) {
+        commitQuickBtn.addEventListener('click', function() {
+          const originalText = commitQuickBtn.innerHTML;
+          commitQuickBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span><span>Updating Stage...</span>';
+          setTimeout(() => {
+            commitQuickBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">done_all</span><span>Stage Updated to Assembly</span>';
+            commitQuickBtn.classList.remove('bg-secondary');
+            commitQuickBtn.classList.add('bg-[#1e4d3a]');
+            setTimeout(() => {
+              commitQuickBtn.innerHTML = originalText;
+              commitQuickBtn.classList.remove('bg-[#1e4d3a]');
+              commitQuickBtn.classList.add('bg-secondary');
+            }, 2500);
+          }, 800);
+        });
+      }
+
+      // Add Note Interactivity
+      const saveNoteBtn = document.getElementById('btn-save-note');
+      const noteInput = document.getElementById('new-note-input');
+      const notesContainer = document.getElementById('notes-container');
+
+      if (saveNoteBtn && noteInput && notesContainer) {
+        saveNoteBtn.addEventListener('click', function() {
+          const noteText = noteInput.value.trim();
+          if (!noteText) return;
+
+          const newNote = document.createElement('div');
+          newNote.className = 'p-4 bg-surface-container-low rounded-lg space-y-1 animate-fadeIn';
+          newNote.innerHTML = `
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="w-6 h-6 rounded-full bg-primary text-on-primary font-headline-sm text-[11px] flex items-center justify-center">MK</span>
+                <span class="font-body-sm text-body-sm font-semibold text-primary">Atelier Admin (You)</span>
+                <span class="px-1.5 py-0.5 bg-surface text-secondary font-label-caps text-[9px] uppercase rounded">Direct Log</span>
+              </div>
+              <span class="font-body-sm text-[12px] text-on-surface-variant">Just now</span>
+            </div>
+            <p class="font-body-sm text-body-sm text-on-surface-variant pl-8">${noteText.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</p>
+          `;
+
+          notesContainer.prepend(newNote);
+          noteInput.value = '';
+        });
+      }
+    })();
+  </script>
+</div></main></div></body></html>

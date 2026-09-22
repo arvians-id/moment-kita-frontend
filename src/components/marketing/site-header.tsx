@@ -1,11 +1,8 @@
-import { ChevronDown, MessageCircle, UserRound } from "lucide-react";
+import { MessageCircle, UserRound } from "lucide-react";
 import Link from "next/link";
 
 import { MobileNavigation } from "@/components/marketing/mobile-navigation";
-import {
-  primaryNavigation,
-  productNavigation,
-} from "@/components/marketing/navigation";
+import { PrimaryNavigation } from "@/components/marketing/primary-navigation";
 import { Container } from "@/components/shared/container";
 
 const navigationClass =
@@ -33,54 +30,7 @@ export function SiteHeader() {
           </span>
         </Link>
 
-        <nav aria-label="Primary navigation" className="hidden xl:block">
-          <ul className="flex items-center gap-6">
-            <li className="group relative py-4 focus-within:text-secondary">
-              <button
-                type="button"
-                className={`${navigationClass} flex items-center gap-1`}
-              >
-                Products
-                <ChevronDown
-                  aria-hidden="true"
-                  size={13}
-                  className="transition-transform group-hover:rotate-180 group-focus-within:rotate-180"
-                />
-              </button>
-              <div className="invisible absolute left-0 top-full w-64 translate-y-2 bg-surface-lowest p-2 opacity-0 shadow-[0_18px_40px_-14px_rgba(46,38,33,0.16)] transition-all group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
-                <Link
-                  href={productNavigation[0].href}
-                  className="flex flex-col p-4 hover:bg-surface-low"
-                >
-                  <span className="text-[10px] font-semibold tracking-[0.18em] text-secondary uppercase">
-                    01 — Suite
-                  </span>
-                  <span className="mt-1 text-sm">
-                    {productNavigation[0].label}
-                  </span>
-                </Link>
-                <Link
-                  href={productNavigation[1].href}
-                  className="flex flex-col p-4 hover:bg-surface-low"
-                >
-                  <span className="text-[10px] font-semibold tracking-[0.18em] text-secondary uppercase">
-                    02 — Atelier
-                  </span>
-                  <span className="mt-1 text-sm">
-                    {productNavigation[1].label}
-                  </span>
-                </Link>
-              </div>
-            </li>
-            {primaryNavigation.map((item) => (
-              <li key={item.href}>
-                <Link href={item.href} className={navigationClass}>
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <PrimaryNavigation />
 
         <div className="hidden items-center gap-4 lg:flex">
           <Link

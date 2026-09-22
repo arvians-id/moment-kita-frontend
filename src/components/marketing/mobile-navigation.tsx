@@ -2,12 +2,17 @@
 
 import { Menu, MessageCircle, X } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-import { mobileNavigation } from "@/components/marketing/navigation";
+import {
+  isCurrentRoute,
+  mobileNavigation,
+} from "@/components/marketing/navigation";
 
 export function MobileNavigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     if (!isOpen) return;
@@ -44,18 +49,30 @@ export function MobileNavigation() {
           className="absolute inset-x-0 top-full max-h-[calc(100vh-5rem)] overflow-y-auto border-t border-border bg-surface-lowest px-5 py-6 shadow-[0_18px_40px_-16px_rgba(28,28,24,0.18)]"
         >
           <ul className="grid divide-y divide-border">
-            {mobileNavigation.map((item) => (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className="flex min-h-12 items-center justify-between py-3 text-xs font-semibold tracking-[0.14em] uppercase transition-colors hover:text-secondary"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.label}
-                  <span aria-hidden="true">↗</span>
-                </Link>
-              </li>
-            ))}
+            {mobileNavigation.map((item) => {
+              const current = isCurrentRoute(pathname, item.href);
+              return (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    aria-current={current ? "page" : undefined}
+                    className={`flex min-h-12 items-center justify-between py-3 text-xs font-semibold tracking-[0.14em] uppercase transition-colors ${current ? "text-secondary" : "hover:text-secondary"}`}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    <span
+                      className={
+                        current
+                          ? "rounded-full bg-primary px-3 py-1.5 text-primary-foreground"
+                          : undefined
+                      }
+                    >
+                      {item.label}
+                    </span>
+                    <span aria-hidden="true">↗</span>
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
           <Link
             href="/register"

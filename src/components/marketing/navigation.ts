@@ -18,3 +18,17 @@ export const mobileNavigation = [
   { href: "/contact", label: "Contact" },
   { href: "/login", label: "Log In" },
 ] as const;
+
+/**
+ * A destination is current when the pathname is the route itself or one of its
+ * nested routes, so `/templates/elegant-01` still marks Templates as current.
+ */
+export function isCurrentRoute(pathname: string, href: string): boolean {
+  if (href === "/") return pathname === "/";
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
+
+/** The Products parent is current on any of its product destinations. */
+export function isProductRoute(pathname: string): boolean {
+  return productNavigation.some((item) => isCurrentRoute(pathname, item.href));
+}

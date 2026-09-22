@@ -12,14 +12,14 @@
 - Wishes Management
 - Digital Gift Management
 - Version History
-
-### Next
 - Invitation Detail
-
-### Pending
 - Create Invitation
 - Invitation Builder
+
+### Next
 - Transactions
+
+### Pending
 - Notifications
 - Settings
 

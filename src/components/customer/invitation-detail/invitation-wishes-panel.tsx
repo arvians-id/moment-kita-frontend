@@ -1,11 +1,14 @@
 import { ArrowRight, Heart, Quote } from "lucide-react";
+import Link from "next/link";
 
 import type { InvitationWish } from "@/types";
 
 export function InvitationWishesPanel({
+  invitationId,
   wishes,
   totalWishes,
 }: {
+  invitationId: string;
   wishes: InvitationWish[];
   totalWishes: number;
 }) {
@@ -21,13 +24,13 @@ export function InvitationWishesPanel({
           </h2>
         </div>
         {totalWishes > 0 ? (
-          <span
-            aria-disabled="true"
-            className="flex cursor-not-allowed items-center gap-1 text-[12px] leading-4 font-semibold tracking-[0.12em] text-secondary uppercase"
+          <Link
+            href={`/app/invitations/${invitationId}/wishes`}
+            className="flex items-center gap-1 text-[12px] leading-4 font-semibold tracking-[0.12em] text-secondary uppercase transition-colors hover:text-on-surface"
           >
             <span>Moderate all {totalWishes} wishes</span>
             <ArrowRight aria-hidden size={14} />
-          </span>
+          </Link>
         ) : null}
       </div>
 

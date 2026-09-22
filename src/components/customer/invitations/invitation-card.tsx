@@ -434,13 +434,13 @@ export function InvitationCard({
       <footer className="flex items-center justify-between gap-3 border-t border-surface-highest bg-surface-low px-5 py-4 sm:px-6">
         {status === "published" ? (
           <>
-            <span
-              aria-disabled="true"
-              className={`${primaryActionClass} ${inactiveClass} bg-primary text-primary-foreground`}
+            <Link
+              href={`/app/invitations/${invitation.id}`}
+              className={`${primaryActionClass} bg-primary text-primary-foreground hover:bg-secondary`}
             >
               <SlidersHorizontal aria-hidden size={15} />
               Manage
-            </span>
+            </Link>
             <Link href={`/${invitation.slug}`} className={secondaryActionClass}>
               <Eye aria-hidden size={15} className="text-secondary" />
               View
@@ -450,13 +450,13 @@ export function InvitationCard({
 
         {status === "draft" ? (
           <>
-            <span
-              aria-disabled="true"
-              className={`${primaryActionClass} ${inactiveClass} bg-primary text-primary-foreground`}
+            <Link
+              href={`/app/invitations/${invitation.id}/edit`}
+              className={`${primaryActionClass} bg-primary text-primary-foreground hover:bg-secondary`}
             >
               <PenLine aria-hidden size={15} />
               Continue editing
-            </span>
+            </Link>
             <span
               aria-disabled="true"
               className={`${secondaryActionClass} ${inactiveClass}`}
@@ -476,13 +476,13 @@ export function InvitationCard({
               <Rocket aria-hidden size={15} />
               Publish invitation
             </span>
-            <span
-              aria-disabled="true"
-              className={`${secondaryActionClass} ${inactiveClass}`}
+            <Link
+              href={`/app/invitations/${invitation.id}`}
+              className={secondaryActionClass}
             >
               <Eye aria-hidden size={15} className="text-secondary" />
               Review proof
-            </span>
+            </Link>
           </>
         ) : null}
 
@@ -514,13 +514,13 @@ export function InvitationCard({
               <CopyPlus aria-hidden size={15} className="text-secondary" />
               Duplicate as draft
             </span>
-            <span
-              aria-disabled="true"
-              className={`${secondaryActionClass} ${inactiveClass}`}
+            <Link
+              href={`/app/invitations/${invitation.id}`}
+              className={secondaryActionClass}
             >
               <FileText aria-hidden size={15} />
               View record
-            </span>
+            </Link>
           </>
         ) : null}
       </footer>

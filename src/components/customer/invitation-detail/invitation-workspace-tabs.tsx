@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { buildInvitationNavigation } from "@/config/customer-navigation";
 import type { InvitationDetail } from "@/types";
 
@@ -6,7 +8,8 @@ import type { InvitationDetail } from "@/types";
  *
  * Destinations and availability come from the canonical navigation config, so
  * this never becomes a competing navigation system — it mirrors the sidebar
- * and surfaces each section's count.
+ * and surfaces each section's count. Every section besides Overview now has a
+ * real page, so this renders live links rather than disabled placeholders.
  */
 export function InvitationWorkspaceTabs({
   detail,
@@ -15,11 +18,12 @@ export function InvitationWorkspaceTabs({
 }) {
   const { invitation, guests, wishes, gift } = detail;
   const items = buildInvitationNavigation(invitation.id);
+  const totalWishes = invitation.metrics?.wishes ?? wishes.length;
 
   const counts: Record<string, string | undefined> = {
     Guests: guests ? String(guests.totalInvited) : undefined,
     RSVP: guests ? String(guests.attending + guests.declined) : undefined,
-    Wishes: wishes.length > 0 ? String(wishes.length) : undefined,
+    Wishes: totalWishes > 0 ? String(totalWishes) : undefined,
     "Digital Gift": gift ? `${gift.accounts.length} active` : undefined,
   };
 
@@ -31,18 +35,13 @@ export function InvitationWorkspaceTabs({
       {items.map((item) => {
         const isOverview = item.label === "Overview";
         const count = counts[item.label];
-
-        return (
-          <span
-            key={item.href}
-            aria-current={isOverview ? "page" : undefined}
-            aria-disabled={isOverview ? undefined : "true"}
-            className={`flex shrink-0 items-center gap-2 px-4 py-2 text-[12px] leading-4 font-semibold tracking-[0.12em] whitespace-nowrap uppercase ${
-              isOverview
-                ? "bg-surface-lowest text-on-surface shadow-sm"
-                : "cursor-not-allowed text-on-surface-variant/70"
-            }`}
-          >
+        const tabClass = `flex shrink-0 items-center gap-2 px-4 py-2 text-[12px] leading-4 font-semibold tracking-[0.12em] whitespace-nowrap uppercase transition-colors ${
+          isOverview
+            ? "bg-surface-lowest text-on-surface shadow-sm"
+            : "text-on-surface-variant hover:bg-surface-container hover:text-on-surface"
+        }`;
+        const content = (
+          <>
             {isOverview ? (
               <span
                 aria-hidden
@@ -55,7 +54,30 @@ export function InvitationWorkspaceTabs({
                 {count}
               </span>
             ) : null}
-          </span>
+          </>
+        );
+
+        if (isOverview || !item.available) {
+          return (
+            <span
+              key={item.href}
+              aria-current={isOverview ? "page" : undefined}
+              aria-disabled={!item.available ? "true" : undefined}
+              className={
+                item.available
+                  ? tabClass
+                  : `${tabClass} cursor-not-allowed text-on-surface-variant/70`
+              }
+            >
+              {content}
+            </span>
+          );
+        }
+
+        return (
+          <Link key={item.href} href={item.href} className={tabClass}>
+            {content}
+          </Link>
         );
       })}
     </nav>

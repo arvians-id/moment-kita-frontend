@@ -1,4 +1,5 @@
 import { ArrowRight, BellRing, Download, Table2 } from "lucide-react";
+import Link from "next/link";
 
 import type { GuestResponseSummary } from "@/types";
 
@@ -6,8 +7,10 @@ const inactiveChip =
   "inline-flex h-8 cursor-not-allowed items-center gap-1.5 bg-surface-container px-3 text-[11px] font-semibold tracking-[0.12em] uppercase opacity-90";
 
 export function InvitationRsvpPanel({
+  invitationId,
   guests,
 }: {
+  invitationId: string;
   guests: GuestResponseSummary | null;
 }) {
   return (
@@ -30,6 +33,12 @@ export function InvitationRsvpPanel({
             <Table2 aria-hidden size={14} />
             Seating map
           </span>
+          <Link
+            href={`/app/invitations/${invitationId}/rsvp`}
+            className="inline-flex h-8 items-center gap-1.5 bg-primary px-3 text-[11px] font-semibold tracking-[0.12em] text-primary-foreground uppercase transition-colors hover:bg-secondary"
+          >
+            Open RSVP
+          </Link>
         </div>
       </div>
 

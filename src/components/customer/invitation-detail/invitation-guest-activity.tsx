@@ -1,4 +1,5 @@
 import { ArrowRight, MessageCircle, Send } from "lucide-react";
+import Link from "next/link";
 
 import { publicConfig } from "@/lib/config";
 import type { GuestRsvpStatus, InvitationGuestEntry } from "@/types";
@@ -10,9 +11,11 @@ const statusTone: Record<GuestRsvpStatus, string> = {
 };
 
 export function InvitationGuestActivity({
+  invitationId,
   guests,
   totalGuests,
 }: {
+  invitationId: string;
   guests: InvitationGuestEntry[];
   totalGuests: number;
 }) {
@@ -29,13 +32,13 @@ export function InvitationGuestActivity({
             Recent guest activity
           </h2>
         </div>
-        <span
-          aria-disabled="true"
-          className="flex cursor-not-allowed items-center gap-1 text-[12px] leading-4 font-semibold tracking-[0.12em] text-secondary uppercase"
+        <Link
+          href={`/app/invitations/${invitationId}/guests`}
+          className="flex items-center gap-1 text-[12px] leading-4 font-semibold tracking-[0.12em] text-secondary uppercase transition-colors hover:text-on-surface"
         >
           <span>Manage all {totalGuests} guests</span>
           <ArrowRight aria-hidden size={14} />
-        </span>
+        </Link>
       </div>
 
       {guests.length > 0 ? (

@@ -1,4 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
 import { publicConfig } from "@/lib/config";
 import type {
@@ -116,12 +117,12 @@ export function InvitationPlanAndChangelog({
           </p>
         )}
 
-        <span
-          aria-disabled="true"
-          className="cursor-not-allowed pt-2 text-center text-[12px] font-semibold tracking-[0.12em] text-secondary uppercase"
+        <Link
+          href={`/app/invitations/${invitation.id}/versions`}
+          className="pt-2 text-center text-[12px] font-semibold tracking-[0.12em] text-secondary uppercase transition-colors hover:text-on-surface"
         >
           View complete audit log
-        </span>
+        </Link>
       </div>
     </section>
   );

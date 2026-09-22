@@ -152,13 +152,13 @@ export function InvitationDetailHeader({
             </span>
           )}
 
-          <span
-            aria-disabled="true"
-            className={`${actionBase} ${inactive} bg-primary text-primary-foreground`}
+          <Link
+            href={`/app/invitations/${invitation.id}/edit`}
+            className={`${actionBase} bg-primary text-primary-foreground hover:bg-secondary`}
           >
             <PenLine aria-hidden size={16} />
             <span>Edit Invitation</span>
-          </span>
+          </Link>
         </div>
       </div>
     </header>

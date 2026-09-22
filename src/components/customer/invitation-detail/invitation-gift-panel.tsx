@@ -1,10 +1,13 @@
 import { Home, SlidersHorizontal } from "lucide-react";
+import Link from "next/link";
 
 import type { DigitalGiftSummary } from "@/types";
 
 export function InvitationGiftPanel({
+  invitationId,
   gift,
 }: {
+  invitationId: string;
   gift: DigitalGiftSummary | null;
 }) {
   return (
@@ -18,13 +21,13 @@ export function InvitationGiftPanel({
             Configured digital envelopes
           </h2>
         </div>
-        <span
-          aria-disabled="true"
-          className="inline-flex h-8 cursor-not-allowed items-center gap-1.5 bg-surface-container px-3 text-[11px] font-semibold tracking-[0.12em] uppercase opacity-90"
+        <Link
+          href={`/app/invitations/${invitationId}/gift`}
+          className="inline-flex h-8 items-center gap-1.5 bg-surface-container px-3 text-[11px] font-semibold tracking-[0.12em] uppercase transition-colors hover:bg-surface-high"
         >
           <SlidersHorizontal aria-hidden size={14} />
           Configure
-        </span>
+        </Link>
       </div>
 
       {gift && gift.accounts.length > 0 ? (
@@ -66,12 +69,12 @@ export function InvitationGiftPanel({
                 />
                 <span>Gift delivery address: {gift.deliveryAddress}</span>
               </span>
-              <span
-                aria-disabled="true"
-                className="cursor-not-allowed text-[12px] font-semibold tracking-[0.12em] text-secondary uppercase"
+              <Link
+                href={`/app/invitations/${invitationId}/gift`}
+                className="text-[12px] font-semibold tracking-[0.12em] text-secondary uppercase transition-colors hover:text-on-surface"
               >
                 Edit
-              </span>
+              </Link>
             </div>
           ) : null}
         </>

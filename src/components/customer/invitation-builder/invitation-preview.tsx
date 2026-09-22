@@ -31,11 +31,15 @@ export function InvitationPreview({
   sections,
   content,
   activeSectionLabel,
+  previewStatusLabel = "Live",
+  previewNote = "Preview updates instantly from local editor state. No backend request is made for each field change.",
 }: {
   invitation: CustomerInvitation;
   sections: InvitationBuilderSection[];
   content: InvitationBuilderContent;
   activeSectionLabel: string;
+  previewStatusLabel?: string;
+  previewNote?: string;
 }) {
   const firstEvent = content.events[0];
   const cover =
@@ -59,7 +63,7 @@ export function InvitationPreview({
         </span>
         <span className="inline-flex items-center gap-1 text-[9px] font-semibold tracking-[0.12em] text-on-surface-variant uppercase">
           <RefreshCw aria-hidden size={12} />
-          Live
+          {previewStatusLabel}
         </span>
       </div>
 
@@ -285,8 +289,7 @@ export function InvitationPreview({
       </div>
 
       <p className="mt-4 max-w-xs text-center text-[10px] leading-4 text-on-surface-variant">
-        Preview updates instantly from local editor state. No backend request is
-        made for each field change.
+        {previewNote}
       </p>
     </aside>
   );

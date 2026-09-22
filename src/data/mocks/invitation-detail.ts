@@ -92,22 +92,38 @@ export const mockInvitationDetails: Readonly<
       accounts: [
         {
           id: "gift_01",
+          accountType: "bank",
+          provider: "Bank BCA",
           role: "Primary bank transfer",
           bankName: "Bank BCA",
           accountNumber: "0882-9910-21",
           accountHolder: "Raka Daniswara",
-          badge: "QRIS ready",
+          badge: "Bank account",
+          label: "For Raka",
         },
         {
           id: "gift_02",
+          accountType: "e_wallet",
+          provider: "GoPay",
           role: "Secondary bank transfer",
-          bankName: "Bank Mandiri",
-          accountNumber: "132-00-9981-221",
+          bankName: "GoPay",
+          accountNumber: "0812-9981-2210",
           accountHolder: "Ayu Prameswari",
-          badge: "Active",
+          badge: "E-wallet",
+          label: "For Ayu",
         },
       ],
-      deliveryAddress: "Menteng, Central Jakarta (visible to guests)",
+      deliveryAddress:
+        "Jl. Teuku Umar No. 14, Gondangdia, Menteng, Jakarta Pusat 10350",
+      physicalAddress: {
+        recipientName: "Raka & Ayu",
+        phoneNumber: "+62 812 3456 7890",
+        address: "Jl. Teuku Umar No. 14, Gondangdia, Menteng",
+        city: "Jakarta Pusat",
+        province: "DKI Jakarta",
+        postalCode: "10350",
+        deliveryNotes: "Please call before delivery.",
+      },
     },
     activity: [
       {

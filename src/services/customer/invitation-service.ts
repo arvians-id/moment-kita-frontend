@@ -118,6 +118,9 @@ export async function getInvitationDetail(
       ? {
           accounts: record.gift.accounts.map((account) => ({ ...account })),
           deliveryAddress: record.gift.deliveryAddress,
+          physicalAddress: record.gift.physicalAddress
+            ? { ...record.gift.physicalAddress }
+            : undefined,
         }
       : null,
     activity: (record.activity ?? []).map((entry) => ({ ...entry })),

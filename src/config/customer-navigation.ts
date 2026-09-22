@@ -129,13 +129,13 @@ export function buildInvitationNavigation(
       label: "Digital Gift",
       href: `${base}/gift`,
       icon: Gift,
-      available: false,
+      available: true,
     },
     {
       label: "Version History",
       href: `${base}/versions`,
       icon: History,
-      available: false,
+      available: true,
     },
   ];
 }

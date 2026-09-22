@@ -178,18 +178,33 @@ export interface InvitationWish {
 
 export interface DigitalGiftAccount {
   id: string;
+  accountType?: "bank" | "e_wallet";
+  /** Canonical bank or e-wallet provider name for management forms. */
+  provider?: string;
   /** e.g. "Primary bank transfer". */
   role: string;
   bankName: string;
   accountNumber: string;
   accountHolder: string;
   badge: string;
+  label?: string;
+}
+
+export interface PhysicalGiftAddress {
+  recipientName: string;
+  phoneNumber: string;
+  address: string;
+  city: string;
+  province: string;
+  postalCode: string;
+  deliveryNotes?: string;
 }
 
 export interface DigitalGiftSummary {
   accounts: DigitalGiftAccount[];
   /** Physical gift delivery address shown to guests, when configured. */
   deliveryAddress?: string;
+  physicalAddress?: PhysicalGiftAddress;
 }
 
 /** One invitation's full workspace payload. */
@@ -310,6 +325,23 @@ export interface InvitationBuilderData {
   content: InvitationBuilderContent;
 }
 
+export interface InvitationVersion {
+  versionNumber: number;
+  /** ISO 8601 timestamp for an explicit successful save. */
+  savedAt: string;
+  summary: string;
+  content: InvitationBuilderContent;
+  sections: InvitationBuilderSection[];
+  isCurrent: boolean;
+  restoredFromVersion?: number;
+}
+
+export interface VersionHistoryData {
+  invitation: CustomerInvitation;
+  /** Newest first, with no more than ten restorable versions. */
+  versions: InvitationVersion[];
+}
+
 /** Customer-facing RSVP states used by the invitation guest directory. */
 export type GuestAttendanceStatus = "pending" | "attending" | "not_attending";
 
@@ -417,6 +449,17 @@ export interface WishesManagementData {
   guests: InvitationGuest[];
   wishes: WishRecord[];
   settings: WishesSettingsSummary;
+}
+
+export interface DigitalGiftConfiguration {
+  enabled: boolean;
+  physicalGiftEnabled: boolean;
+}
+
+export interface DigitalGiftManagementData {
+  invitation: CustomerInvitation;
+  gift: DigitalGiftSummary;
+  configuration: DigitalGiftConfiguration;
 }
 
 /** Frontend-only review states for one row in the guided guest import flow. */

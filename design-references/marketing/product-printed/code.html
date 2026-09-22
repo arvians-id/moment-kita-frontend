@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "background": "#fcf9f3", "on-tertiary": "#ffffff", "outline": "#747878", "error-container": "#ffdad6", "on-tertiary-fixed-variant": "#753224", "surface-tint": "#5f5e5e", "surface": "#fcf9f3", "secondary-container": "#ffad91", "surface-container-highest": "#e5e2dc", "on-primary-container": "#858383", "outline-variant": "#c4c7c7", "on-tertiary-container": "#c06d5b", "inverse-on-surface": "#f3f0ea", "surface-container-lowest": "#ffffff", "on-secondary": "#ffffff", "on-error": "#ffffff", "primary-fixed-dim": "#c8c6c5", "on-secondary-fixed-variant": "#703722", "on-surface-variant": "#444748", "surface-container-high": "#ebe8e2", "on-primary": "#ffffff", "inverse-primary": "#c8c6c5", "on-surface": "#1c1c18", "tertiary": "#000000", "surface-bright": "#fcf9f3", "tertiary-fixed-dim": "#ffb4a4", "tertiary-container": "#3c0801", "error": "#ba1a1a", "surface-variant": "#e5e2dc", "on-secondary-fixed": "#380d00", "secondary": "#8c4d37", "on-error-container": "#93000a", "primary-container": "#1c1b1b", "surface-container": "#f0eee8", "tertiary-fixed": "#ffdad3", "on-tertiary-fixed": "#3c0801", "on-secondary-container": "#7a3e29", "secondary-fixed": "#ffdbcf", "on-primary-fixed": "#1c1b1b", "inverse-surface": "#31312d", "surface-container-low": "#f6f3ed", "primary": "#000000", "secondary-fixed-dim": "#ffb59c", "primary-fixed": "#e5e2e1", "on-background": "#1c1c18", "on-primary-fixed-variant": "#474746", "surface-dim": "#dcdad4" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "3rem", "margin": "3.5rem", "space-xs": "0.25rem", "space-md": "1rem", "gutter-mobile": "1rem", "space-sm": "0.5rem", "gutter": "2rem", "margin-mobile": "1.25rem", "space-lg": "1.75rem" }, "fontFamily": { "body-sm": ["Plus Jakarta Sans"], "headline-lg": ["Playfair Display"], "headline-lg-mobile": ["Playfair Display"], "label-caps": ["Plus Jakarta Sans"], "kicker": ["Plus Jakarta Sans"], "display-hero-mobile": ["Playfair Display"], "quote-editorial": ["Playfair Display"], "body-lg": ["Plus Jakarta Sans"], "headline-xl": ["Playfair Display"], "display-hero": ["Playfair Display"], "headline-sm": ["Playfair Display"], "headline-md": ["Playfair Display"], "body-md": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Playfair Display"] }, "fontSize": { "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "400" }], "headline-lg-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "0em", "fontWeight": "400" }], "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.12em", "fontWeight": "600" }], "kicker": ["11px", { "lineHeight": "16px", "letterSpacing": "0.2em", "fontWeight": "600" }], "display-hero-mobile": ["44px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "400" }], "quote-editorial": ["24px", { "lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "headline-xl": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "400" }], "display-hero": ["84px", { "lineHeight": "92px", "letterSpacing": "-0.03em", "fontWeight": "400" }], "headline-sm": ["22px", { "lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "600" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl-mobile": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.01em", "fontWeight": "400" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-[1440px] mx-auto px-margin-mobile lg:px-margin flex items-center justify-between"><div class="flex items-center gap-space-md"><img alt="L'Atelier Nuance Monogram Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WORa7OFIDEA7UPD6MXwEEjQLZ-jy7n080Duy_MtM2d0iXYga0ZH1v4JwIzC9mcMobJ7aMmmbk-R6eD5oytZOkNtvi0CO67tJ9GoAna2Yf03mENT0HnwfYrqWgKPsrZtDzVXA2BA6huVaulYlgBQ0roeaVG7xp40Eck7D6fpl5_bPO70EGCIfPONyFDQmpRT2_Y5BgnOg3y2nxoHTaQqTflRQBQdj4wymaHOfCTkeCoSu_7wpl6XY2c"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none">L'Atelier Nuance</span><span class="font-kicker text-kicker uppercase tracking-widest text-on-surface-variant mt-space-xs">Digital &amp; Fine Print Studio</span></div></div><nav class="hidden xl:flex items-center gap-space-lg" data-active-classes="text-primary font-semibold"><div class="relative group py-space-sm"><button class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant group-hover:text-primary flex items-center gap-1 transition-colors duration-200" type="button">Products<span class="material-symbols-outlined text-[14px] text-on-surface-variant transition-transform group-hover:rotate-180">expand_more</span></button><div class="absolute left-0 top-full hidden group-hover:flex flex-col w-64 bg-surface-container-lowest p-space-sm shadow-[0_16px_40px_-12px_rgba(46,38,33,0.08)]"><a class="p-space-sm hover:bg-surface-container-low transition-colors duration-150 flex flex-col" data-path="digital-invitations" href="#"><span class="font-kicker text-kicker text-secondary uppercase">01 — Suite</span><span class="font-body-md text-body-md text-on-surface">Digital Invitations (SaaS)</span></a><a class="p-space-sm hover:bg-surface-container-low transition-colors duration-150 flex flex-col" data-path="printed-fine-stationery" href="#"><span class="font-kicker text-kicker text-secondary uppercase">02 — Atelier</span><span class="font-body-md text-body-md text-on-surface">Printed &amp; Fine Stationery</span></a></div></div><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-200" data-path="templates" href="#">Templates</a><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-200" data-path="features" href="#">Features</a><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-200" data-path="pricing" href="#">Pricing</a><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-200" data-path="how-it-works" href="#">How It Works</a><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-200" data-path="faq" href="#">FAQ</a></nav><div class="hidden lg:flex items-center gap-space-md"><a class="inline-flex items-center gap-1.5 font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-secondary transition-colors duration-200" data-path="consultation" href="#"><span class="material-symbols-outlined text-[16px]">forum</span><span>Consult via WhatsApp</span></a><span class="h-4 w-px bg-surface-container-highest"></span><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-200" data-path="login" href="#">Log In</a><a class="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-wider hover:bg-secondary transition-colors duration-200 shadow-sm" data-path="create-invitation" href="#">Create Digital Invitation</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div><div class="flex items-center gap-space-sm xl:hidden"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><button aria-label="Open Editorial Menu" class="p-2 text-on-surface hover:text-primary focus:outline-none" type="button"><span class="material-symbols-outlined text-2xl">menu</span></button></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
+<!-- HERO SECTION -->
+<section class="relative w-full bg-surface py-space-xl lg:py-28 overflow-hidden">
+<div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+<!-- Hero Text Content -->
+<div class="lg:col-span-6 flex flex-col space-y-space-md z-10">
+<div class="inline-flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest">02 — The Print Atelier · Heirloom Stationery &amp; Bespoke Letterpress</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-primary leading-tight">
+            Made to be <span class="italic font-normal text-secondary">held</span>.<br/>Designed to be <span class="italic font-normal text-secondary">remembered</span>.
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+            Tactile wedding invitations hand-pressed on archival 600gsm cotton papers, sculpted with blind deboss crests, and sealed with antique wax. Each heirloom suite is tailored in intimate dialogue with our master typographers.
+          </p>
+<div class="pt-space-sm flex flex-col sm:flex-row items-stretch sm:items-center gap-space-md">
+<a class="inline-flex items-center justify-center px-8 py-4 bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-wider hover:bg-secondary transition-colors duration-200 shadow-md" href="#collection">
+              Explore Collection
+            </a>
+<a class="inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-full bg-surface-container-lowest text-primary font-label-caps text-label-caps uppercase tracking-wider shadow-sm hover:bg-surface-container transition-colors duration-200" href="https://wa.me/#" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px] text-secondary">forum</span>
+<span>Consult via WhatsApp</span>
+<span class="text-[10px] font-normal lowercase tracking-normal text-secondary bg-secondary-fixed/50 px-2 py-0.5 rounded-full">avg 20m</span>
+</a>
+</div>
+<div class="pt-space-md flex items-center gap-space-lg font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-base">verified</span>
+<span>600–900gsm Pure Cotton</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-base">architecture</span>
+<span>1950s Heidelberg Letterpress</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-base">local_shipping</span>
+<span>Global White-Glove Care</span>
+</div>
+</div>
+</div>
+<!-- Hero Tactile Image Visualizer -->
+<div class="lg:col-span-6 relative mt-space-lg lg:mt-0">
+<div class="relative rounded-lg overflow-hidden shadow-2xl bg-surface-container-low p-3 md:p-5">
+<img alt="Heirloom wedding invitation suite flatlay" class="w-full h-auto object-cover rounded shadow-inner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4VqWi1Cl0myXC8I1X1ZNTuJ8gxc1pUcbnZr-cOEAmJP-Nw1YWwpQ-tPFarIeu9IK6J2KYjZrbsJQB5Rx14vasvI2zTU8ntbsuc9iiRXJWftyT4nhhS_aZqeDSK4_H5CnVVI8orEmbYwR8eGCJl0_05wbkgxZWerccKMK6onHHvX0DNrzCXaXV4mmGISpDlVnswHERlkEWSnZ6ZUSD1rJED2i-VvkcgvQrB-ZpXX3MejCruzGtRUo"/>
+<!-- Floating Detail Annotation Badges -->
+<div class="absolute top-8 left-8 bg-surface-container-lowest/95 backdrop-blur-md px-3.5 py-2 rounded shadow-md hidden sm:flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-kicker text-kicker text-on-surface uppercase">Paper: 600gsm Wild Cotton Deckle Edge</span>
+</div>
+<div class="absolute bottom-16 right-8 bg-surface-container-lowest/95 backdrop-blur-md px-3.5 py-2 rounded shadow-md hidden sm:flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-kicker text-kicker text-on-surface uppercase">Finishing: Heated Copper-Rose Foil</span>
+</div>
+<div class="absolute top-1/2 -left-4 -translate-y-1/2 bg-surface-container-lowest/95 backdrop-blur-md px-3.5 py-2 rounded shadow-md hidden md:flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-kicker text-kicker text-on-surface uppercase">Detail: Hand-Poured Monogram Seal</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CURATED AESTHETIC EDITIONS / CATEGORY FILTER -->
+<section class="w-full bg-surface-container-low py-space-xl" id="collection">
+<div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg">
+<div>
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest block mb-space-xs">Disciplines of Fine Print</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">Curated Aesthetic Editions</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md mt-space-sm md:mt-0">
+          Each edition serves as an architectural foundation ready to be shaped to your wedding story, venue texture, and personal monogram.
+        </p>
+</div>
+<!-- Category Filter Tabs -->
+<div class="flex items-center gap-2 overflow-x-auto pb-4 scrollbar-none" id="categoryFilterBar">
+<button class="filter-pill active px-5 py-2.5 rounded-full text-label-caps font-label-caps uppercase tracking-wider bg-primary text-on-primary transition-colors shadow-sm" data-category="all">All Editions</button>
+<button class="filter-pill px-5 py-2.5 rounded-full text-label-caps font-label-caps uppercase tracking-wider bg-surface-container-lowest text-on-surface-variant hover:text-primary transition-colors shadow-sm" data-category="minimal">Minimal Monolith</button>
+<button class="filter-pill px-5 py-2.5 rounded-full text-label-caps font-label-caps uppercase tracking-wider bg-surface-container-lowest text-on-surface-variant hover:text-primary transition-colors shadow-sm" data-category="classic">Classic Archival</button>
+<button class="filter-pill px-5 py-2.5 rounded-full text-label-caps font-label-caps uppercase tracking-wider bg-surface-container-lowest text-on-surface-variant hover:text-primary transition-colors shadow-sm" data-category="botanical">Warm Botanical</button>
+<button class="filter-pill px-5 py-2.5 rounded-full text-label-caps font-label-caps uppercase tracking-wider bg-surface-container-lowest text-on-surface-variant hover:text-primary transition-colors shadow-sm" data-category="couture">Modern Haute Couture</button>
+<button class="filter-pill px-5 py-2.5 rounded-full text-label-caps font-label-caps uppercase tracking-wider bg-surface-container-lowest text-on-surface-variant hover:text-primary transition-colors shadow-sm" data-category="bespoke">Bespoke Atelier</button>
+</div>
+<!-- BESPOKE PRODUCT SHOWCASE GRID -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md mt-space-lg">
+<!-- Suite A -->
+<div class="suite-card flex flex-col bg-surface-container-lowest rounded-lg p-4 shadow-sm hover:shadow-xl transition-all duration-300 group" data-category="botanical">
+<div class="relative overflow-hidden rounded bg-surface-container aspect-[4/5] mb-space-sm">
+<img alt="Le Jardin Minimaliste Suite" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpTH3iP0CvCkw59Xn8Sd5OQCzguQAWjEX_cD3ctTVQ7m5pm09I45meK1O09uV4rYU2AD8ZGjAAsFE99jVpLbRPFpy-a1byRBT1zi67g1uBDyJutAEbamIeA0YItjXmoHneZCr28OyfdyOfmTayhqpYzNEKJqmQka_VJRhd7wusFbd6njjvgmwim-CVKGaDFoqpW08ME7XMVxXD475X7ESkZ4fWGahWQOBCmqXUEofNihK4YZ92iKA"/>
+<div class="absolute top-3 left-3 bg-primary/80 backdrop-blur-sm text-on-primary px-2.5 py-1 rounded text-[10px] font-kicker uppercase tracking-widest">Botanical Deboss</div>
+</div>
+<span class="font-kicker text-kicker uppercase text-secondary tracking-wider mb-1">Edition 01</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Le Jardin Minimaliste</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-space-sm">
+            600gsm Somerset Cotton · Blind Deboss Botanical Crest &amp; Rose Foil · Hand-Torn Deckle Edge.
+          </p>
+<div class="mt-auto pt-space-sm flex items-center justify-between">
+<div>
+<span class="font-kicker text-[10px] uppercase text-on-surface-variant block">From</span>
+<span class="font-headline-sm text-primary text-xl">$12 <span class="font-body-sm text-body-sm text-on-surface-variant">/ suite</span></span>
+</div>
+<a class="inline-flex items-center gap-1 text-label-caps font-label-caps uppercase text-secondary hover:text-primary transition-colors" href="https://wa.me/#?text=Inquiry%20regarding%20Le%20Jardin%20Minimaliste">
+<span>Inquire</span>
+<span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+</a>
+</div>
+</div>
+<!-- Suite B -->
+<div class="suite-card flex flex-col bg-surface-container-lowest rounded-lg p-4 shadow-sm hover:shadow-xl transition-all duration-300 group" data-category="classic">
+<div class="relative overflow-hidden rounded bg-surface-container aspect-[4/5] mb-space-sm">
+<img alt="Sienna &amp; Solstice Archival Suite" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDos_GrRZT8hiwB0lF9mKlip-AM3N8-jj2ETwt9Sym8_rWq8MuAkdDSMLsXHXsvP00IXQtNs5Y5KwdbtB2bIQVai8sxcUuE7vaYpejwQ6XMLusgxYwLNmEMSImFtL43HAG-wuNUWZM43xUdUJEHNqeaLFxInJQt7z2txgz2GxsE6tzW3r1A9DDsoXoqKtvKlnf9S2TzsGAq40o1NydC8X1t7kfSXs8vs60VTteJgySPg_DAbbDRe9Y"/>
+<div class="absolute top-3 left-3 bg-secondary/90 backdrop-blur-sm text-on-secondary px-2.5 py-1 rounded text-[10px] font-kicker uppercase tracking-widest">Bronze Foil</div>
+</div>
+<span class="font-kicker text-kicker uppercase text-secondary tracking-wider mb-1">Edition 02</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Sienna &amp; Solstice</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-space-sm">
+            Sun-bleached Tuscan Ocre &amp; Raw Cotton · Matte Bronze Foil Stamping · Hand-dyed Crepe Silk Ribbon.
+          </p>
+<div class="mt-auto pt-space-sm flex items-center justify-between">
+<div>
+<span class="font-kicker text-[10px] uppercase text-on-surface-variant block">From</span>
+<span class="font-headline-sm text-primary text-xl">$15 <span class="font-body-sm text-body-sm text-on-surface-variant">/ suite</span></span>
+</div>
+<a class="inline-flex items-center gap-1 text-label-caps font-label-caps uppercase text-secondary hover:text-primary transition-colors" href="https://wa.me/#?text=Inquiry%20regarding%20Sienna%20and%20Solstice">
+<span>Inquire</span>
+<span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+</a>
+</div>
+</div>
+<!-- Suite C -->
+<div class="suite-card flex flex-col bg-surface-container-lowest rounded-lg p-4 shadow-sm hover:shadow-xl transition-all duration-300 group" data-category="minimal">
+<div class="relative overflow-hidden rounded bg-surface-container aspect-[4/5] mb-space-sm">
+<img alt="Copenhagen Reverie Monogram" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDA5XlQijeIxAuOIaaTBxhr99Baj_L-kKBM_rx0VBEANgkLtIpiCVmvyiePxe7pCT2KCjIbe3C7jPSRQVn3kZZzOR1zbQe58x146rj5qGsi3qdk868mm3K_0l-mgtJWBNQJVxqTgyHuB7hL5SeaW5AG8A7t39DAMfnToR7KQAgzOu7pssJF4IOemoqZmkzmF96DoQ_2clTFubPQkLuELiDT-sCZJVVQjEBgQ0utQMeoRSaXZom8C34"/>
+<div class="absolute top-3 left-3 bg-primary/80 backdrop-blur-sm text-on-primary px-2.5 py-1 rounded text-[10px] font-kicker uppercase tracking-widest">700gsm Moulin</div>
+</div>
+<span class="font-kicker text-kicker uppercase text-secondary tracking-wider mb-1">Edition 03</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Copenhagen Reverie</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-space-sm">
+            Double-thick 700gsm French Moulin Cotton · Deep Tactile Letterpress · Custom Typographic Crest.
+          </p>
+<div class="mt-auto pt-space-sm flex items-center justify-between">
+<div>
+<span class="font-kicker text-[10px] uppercase text-on-surface-variant block">From</span>
+<span class="font-headline-sm text-primary text-xl">$14 <span class="font-body-sm text-body-sm text-on-surface-variant">/ suite</span></span>
+</div>
+<a class="inline-flex items-center gap-1 text-label-caps font-label-caps uppercase text-secondary hover:text-primary transition-colors" href="https://wa.me/#?text=Inquiry%20regarding%20Copenhagen%20Reverie">
+<span>Inquire</span>
+<span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+</a>
+</div>
+</div>
+<!-- Suite D -->
+<div class="suite-card flex flex-col bg-surface-container-lowest rounded-lg p-4 shadow-sm hover:shadow-xl transition-all duration-300 group" data-category="bespoke">
+<div class="relative overflow-hidden rounded bg-surface-container aspect-[4/5] mb-space-sm">
+<img alt="Ethereal Botanique Wax Seal Suite" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_5AsTZWlZz2Kns_G3-US55CODw6e-tZNBwaLhm2EUccidZGuN_2T1PW5k0QUHwZHpR9e213WrXscXKPi7MXMFzpB5Py7Gio6c1u2jMQBzeQRWpiHyr4gkySgQosJKZBaXTkzBVzLwMT39TRkmR9fi6OV8DIDAv4iS3KI4mK-RN_FUl_LVdJLNiPcfxe0gevdPQAfZsdPGIP8HkRCuyEGPcRtKIXeaLA1rhiOg1mm77UzSUkdQEBE"/>
+<div class="absolute top-3 left-3 bg-secondary-container text-on-secondary-container px-2.5 py-1 rounded text-[10px] font-kicker uppercase tracking-widest font-semibold">Terracotta Wax</div>
+</div>
+<span class="font-kicker text-kicker uppercase text-secondary tracking-wider mb-1">Edition 04</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Ethereal Botanique</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-space-sm">
+            Stone-washed Ivory Paper · Terracotta Hand-Poured Wax Seal · Olive Botanical Impression · Vellum.
+          </p>
+<div class="mt-auto pt-space-sm flex items-center justify-between">
+<div>
+<span class="font-kicker text-[10px] uppercase text-on-surface-variant block">From</span>
+<span class="font-headline-sm text-primary text-xl">$16 <span class="font-body-sm text-body-sm text-on-surface-variant">/ suite</span></span>
+</div>
+<a class="inline-flex items-center gap-1 text-label-caps font-label-caps uppercase text-secondary hover:text-primary transition-colors" href="https://wa.me/#?text=Inquiry%20regarding%20Ethereal%20Botanique">
+<span>Inquire</span>
+<span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Quick Action Banner -->
+<div class="mt-space-lg bg-surface-container p-6 rounded-lg flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-2xl">auto_stories</span>
+<div>
+<h4 class="font-headline-sm text-primary text-lg">Curious to feel the paper density in your hands?</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Order our curated Artisan Swatch Kit featuring all 6 paper weights, foil tones, and wax seals.</p>
+</div>
+</div>
+<a class="px-6 py-3 rounded-full bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-wider hover:bg-secondary transition-colors whitespace-nowrap" href="https://wa.me/#?text=Order%20Swatch%20Kit">
+          Order Swatch Kit ($25)
+        </a>
+</div>
+</div>
+</section>
+<!-- THE MATERIAL EXPERIENCE: SENSORY ANATOMY OF CRAFT -->
+<section class="w-full bg-surface py-space-xl lg:py-28">
+<div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin">
+<div class="text-center max-w-3xl mx-auto mb-space-xl">
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest block mb-space-xs">The Tactile Architecture</span>
+<h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-primary leading-tight">Sensory Anatomy of Fine Craft</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-sm">
+          Unlike industrial digital printing, our heirloom creations are sensory artifacts. Every millimeter is calculated for weight, relief depth, and light play.
+        </p>
+</div>
+<!-- 6-Card Sensory Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+<!-- Craft 01 -->
+<div class="bg-surface-container-lowest p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow flex flex-col">
+<div class="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center text-secondary mb-space-md">
+<span class="material-symbols-outlined text-2xl">layers</span>
+</div>
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest mb-1">01 · Substrate</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">Archival Cotton Paper</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-4">
+            600gsm to 900gsm pure cotton handmade paper milled in historic European mills with naturally feathered, hand-torn deckle edges. Acid-free and preserved for centuries.
+          </p>
+<div class="mt-auto pt-3 text-[12px] font-label-caps uppercase tracking-wider text-on-surface-variant/80">
+            Density: 600–900 GSM · 100% Cotton Rag
+          </div>
+</div>
+<!-- Craft 02 -->
+<div class="bg-surface-container-lowest p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow flex flex-col">
+<div class="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center text-secondary mb-space-md">
+<span class="material-symbols-outlined text-2xl">flare</span>
+</div>
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest mb-1">02 · Illumination</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">Hot Foil Stamping</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-4">
+            Custom magnesium dies heated to 130°C to press metallic foils deep into the fibers. Available in antique copper, rose bronze, champagne, and matte satin gold.
+          </p>
+<div class="mt-auto pt-3 text-[12px] font-label-caps uppercase tracking-wider text-on-surface-variant/80">
+            Heat: 130°C Thermal Bond · Precision Foil
+          </div>
+</div>
+<!-- Craft 03 -->
+<div class="bg-surface-container-lowest p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow flex flex-col">
+<div class="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center text-secondary mb-space-md">
+<span class="material-symbols-outlined text-2xl">texture</span>
+</div>
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest mb-1">03 · Relief</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">Blind Deboss Sculpting</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-4">
+            Multi-level sculptured dies that depress your personal crest into heavy cotton without pigment. It relies entirely on natural shadows and touch to reveal its intricacy.
+          </p>
+<div class="mt-auto pt-3 text-[12px] font-label-caps uppercase tracking-wider text-on-surface-variant/80">
+            Depth: 0.8mm Shadow Inset · Tactile Relief
+          </div>
+</div>
+<!-- Craft 04 -->
+<div class="bg-surface-container-lowest p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow flex flex-col">
+<div class="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center text-secondary mb-space-md">
+<span class="material-symbols-outlined text-2xl">precision_manufacturing</span>
+</div>
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest mb-1">04 · Impression</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">Vintage Letterpress</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-4">
+            Hand-fed onto our restored 1950s Heidelberg "Windmill" Platen presses. Each impression leaves a crisp, deep bite into the soft cotton pulp that you can trace with your fingertips.
+          </p>
+<div class="mt-auto pt-3 text-[12px] font-label-caps uppercase tracking-wider text-on-surface-variant/80">
+            Press: 1954 Heidelberg Tiegel · Manual Inking
+          </div>
+</div>
+<!-- Craft 05 -->
+<div class="bg-surface-container-lowest p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow flex flex-col">
+<div class="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center text-secondary mb-space-md">
+<span class="material-symbols-outlined text-2xl">mail</span>
+</div>
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest mb-1">05 · Casing</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">Envelopes &amp; Vellum Liners</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-4">
+            Hand-constructed heavyweight Euro-flap envelopes lined with bespoke translucent vellum illustrations, architectural sketches of your venue, or botanical flourishes.
+          </p>
+<div class="mt-auto pt-3 text-[12px] font-label-caps uppercase tracking-wider text-on-surface-variant/80">
+            Envelope: 300gsm Cotton · French Vellum
+          </div>
+</div>
+<!-- Craft 06 -->
+<div class="bg-surface-container-lowest p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow flex flex-col">
+<div class="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center text-secondary mb-space-md">
+<span class="material-symbols-outlined text-2xl">history_edu</span>
+</div>
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest mb-1">06 · Adornment</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">Wax Seals &amp; Silk Ribbons</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-4">
+            Natural beeswax blended with mineral pigments, hand-poured and stamped with your monogram stamp, paired with plant-dyed Habotai silk ribbon with organic frayed edges.
+          </p>
+<div class="mt-auto pt-3 text-[12px] font-label-caps uppercase tracking-wider text-on-surface-variant/80">
+            Seals: Natural Beeswax · 100% French Silk
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- INTERACTIVE BESPOKE CUSTOMIZATION MATRIX -->
+<section class="w-full bg-surface-container-low py-space-xl">
+<div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<div class="lg:col-span-5 flex flex-col space-y-space-sm">
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest">Tailored to Your Celebration</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-tight">The Atelier Customization Matrix</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Every element is modular and completely bespoke. Review the five core dimensions of customization, then configure your preferences during your 1-on-1 WhatsApp session.
+          </p>
+<div class="pt-space-md">
+<div class="bg-surface-container-lowest p-5 rounded-lg shadow-sm">
+<span class="font-label-caps text-label-caps uppercase text-primary tracking-wider block mb-2">Live Concierge Note</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                "We provide full digital proofing within 48 hours of your consultation. You can mix and match finishes across main invites, details cards, and menus without compromise."
+              </p>
+<div class="mt-4 flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-primary flex items-center justify-center text-on-primary font-serif font-semibold text-xs">LN</div>
+<div>
+<p class="font-label-caps text-xs font-semibold text-primary">Margaux de la Tour</p>
+<p class="font-body-sm text-[11px] text-on-surface-variant">Head of Letterpress, Paris Atelier</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 space-y-space-sm">
+<!-- Dimension 1 -->
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-sm">
+<div class="flex items-center justify-between mb-2">
+<span class="font-kicker text-kicker uppercase text-secondary">01 · Typography &amp; Monogram Crests</span>
+<span class="material-symbols-outlined text-secondary text-lg">draw</span>
+</div>
+<h4 class="font-headline-sm text-primary text-xl mb-2">Custom Intertwining Monograms</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Tailored calligraphy, archival Venetian serif typography, and bespoke family crests drawn by hand before digital vectorization and brass die cutting.
+            </p>
+</div>
+<!-- Dimension 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-sm">
+<div class="flex items-center justify-between mb-2">
+<span class="font-kicker text-kicker uppercase text-secondary">02 · Paper Substrates &amp; Tonalities</span>
+<span class="material-symbols-outlined text-secondary text-lg">palette</span>
+</div>
+<h4 class="font-headline-sm text-primary text-xl mb-2">Pulp Tones &amp; Weight Configurations</h4>
+<div class="flex flex-wrap gap-2 pt-1">
+<span class="px-3 py-1 bg-surface-container rounded-full text-xs font-label-caps text-on-surface">Pure Alabaster</span>
+<span class="px-3 py-1 bg-surface-container rounded-full text-xs font-label-caps text-on-surface">Warm Terracotta</span>
+<span class="px-3 py-1 bg-surface-container rounded-full text-xs font-label-caps text-on-surface">Muted Sage</span>
+<span class="px-3 py-1 bg-surface-container rounded-full text-xs font-label-caps text-on-surface">Raw Stone</span>
+<span class="px-3 py-1 bg-surface-container rounded-full text-xs font-label-caps text-on-surface">Midnight Charcoal</span>
+</div>
+</div>
+<!-- Dimension 3 -->
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-sm">
+<div class="flex items-center justify-between mb-2">
+<span class="font-kicker text-kicker uppercase text-secondary">03 · Print &amp; Edge Finishes</span>
+<span class="material-symbols-outlined text-secondary text-lg">hotel_class</span>
+</div>
+<h4 class="font-headline-sm text-primary text-xl mb-2">Artisan Press Methods</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Letterpress debossing with custom Pantone inks, heated metallic foil in 8 shades, blind deboss, and hand-beveled gilded edges in 24k gold leaf.
+            </p>
+</div>
+<!-- Dimension 4 -->
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-sm">
+<div class="flex items-center justify-between mb-2">
+<span class="font-kicker text-kicker uppercase text-secondary">04 · Envelope &amp; Enclosure Architecture</span>
+<span class="material-symbols-outlined text-secondary text-lg">mark_email_unread</span>
+</div>
+<h4 class="font-headline-sm text-primary text-xl mb-2">Hand-Addressed Calligraphy &amp; Liners</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Euro-point flaps, deckle flap edges, printed guest addressing in archival ink, and custom-illustrated venue liners printed on Italian parchment.
+            </p>
+</div>
+<!-- Dimension 5 -->
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-sm">
+<div class="flex items-center justify-between mb-2">
+<span class="font-kicker text-kicker uppercase text-secondary">05 · Day-Of Harmonization</span>
+<span class="material-symbols-outlined text-secondary text-lg">menu_book</span>
+</div>
+<h4 class="font-headline-sm text-primary text-xl mb-2">Full Celebration Stationary Suites</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Flawless continuity extending to Vow Books, Ceremony Programs, Die-cut Menus, Escort Cards, and Thank You stationery sets.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- HOW IT WORKS: THE HIGH-TOUCH ARTISAN JOURNEY -->
+<section class="w-full bg-surface py-space-xl lg:py-28">
+<div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin">
+<div class="max-w-2xl mb-space-xl">
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest block mb-space-xs">The Atelier Process</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-tight">
+          Why we consult via WhatsApp rather than an automated shopping cart.
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-sm">
+          Heirloom letterpress is bespoke craftsmanship. An impersonal web cart cannot understand your venue's lighting, paper weights, or personalized monogram proportions.
+        </p>
+</div>
+<!-- 6 Chronological Steps -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+<!-- Step 1 -->
+<div class="flex flex-col bg-surface-container-low p-7 rounded-lg">
+<span class="font-headline-md text-secondary text-2xl font-serif mb-3">01</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Aesthetic Discovery</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Select your preferred edition or share your wedding Pinterest moodboard, venue architecture, and floral tones with our curation team.
+          </p>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col bg-surface-container-low p-7 rounded-lg">
+<span class="font-headline-md text-secondary text-2xl font-serif mb-3">02</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Dedicated WhatsApp Dialogue</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Connect directly with your personal master typographer. Exchange ideas fluidly without waiting days for sluggish email chains.
+          </p>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col bg-surface-container-low p-7 rounded-lg">
+<span class="font-headline-md text-secondary text-2xl font-serif mb-3">03</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Tactile Swatch Box</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Receive our sample presentation box in 2–3 days to touch real cotton weights, examine foil reflections, and test wax seals at home.
+          </p>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col bg-surface-container-low p-7 rounded-lg">
+<span class="font-headline-md text-secondary text-2xl font-serif mb-3">04</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Typographic Proofs</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Receive vector layout proofs with unlimited typographic refinements on kerning, ligatures, hierarchy, and personalized crest monograms.
+          </p>
+</div>
+<!-- Step 5 -->
+<div class="flex flex-col bg-surface-container-low p-7 rounded-lg">
+<span class="font-headline-md text-secondary text-2xl font-serif mb-3">05</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Artisan Pressing &amp; Gilding</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Once approved, your stationery is hand-fed through our vintage Heidelberg presses, inspected by eye, and finished with wax and ribbon.
+          </p>
+</div>
+<!-- Step 6 -->
+<div class="flex flex-col bg-surface-container-low p-7 rounded-lg">
+<span class="font-headline-md text-secondary text-2xl font-serif mb-3">06</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Heirloom Cased Delivery</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Carefully packaged in archival linen presentation boxes and delivered via DHL Express directly to your residence worldwide.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- PRICING & INVESTMENT TRANSPARENCY -->
+<section class="w-full bg-surface-container-low py-space-xl">
+<div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin">
+<div class="text-center max-w-3xl mx-auto mb-space-xl">
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest block mb-space-xs">Investment Clarity</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-tight">Transparent Atelier Pricing</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-sm">
+          Because every suite utilizes authentic artisan letterpress and manual finishing, costs are governed by paper density, foil passes, and quantity. No hidden plate fees.
+        </p>
+</div>
+<!-- Pricing Tier Cards -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg">
+<!-- Tier 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-lg shadow-sm flex flex-col justify-between">
+<div>
+<span class="font-kicker text-kicker uppercase text-secondary tracking-wider block mb-2">Tier 01</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-1">Intimate Gatherings</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">Designed for boutique weddings, microweddings, and elopements.</p>
+<div class="mb-6">
+<span class="font-headline-xl text-4xl font-serif text-primary">$16–$19</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ complete suite</span>
+<span class="block font-kicker text-[11px] text-on-surface-variant mt-1">Recommended for 30–50 Suites</span>
+</div>
+<ul class="space-y-3 font-body-sm text-body-sm text-on-surface-variant border-t border-surface-container py-6">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">check</span>
+<span>Main Invitation on 600gsm Cotton</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">check</span>
+<span>RSVP Card + Addressed Return Envelope</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">check</span>
+<span>Main Envelope with Return Address</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">check</span>
+<span>1 Metallic Foil or Blind Deboss Pass</span>
+</li>
+</ul>
+</div>
+<a class="w-full text-center py-3 rounded bg-surface-container text-primary font-label-caps text-label-caps uppercase tracking-wider hover:bg-primary hover:text-on-primary transition-colors" href="https://wa.me/#?text=Quote%20request%20for%20Intimate%20Gatherings%20tier">
+            Inquire for 30–50 Suites
+          </a>
+</div>
+<!-- Tier 2 (Featured) -->
+<div class="bg-surface-container-lowest p-8 rounded-lg shadow-md flex flex-col justify-between relative ring-2 ring-secondary/30">
+<div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-secondary text-on-secondary px-4 py-1 rounded-full text-kicker font-kicker uppercase tracking-widest">
+            Most Commissioned
+          </div>
+<div>
+<span class="font-kicker text-kicker uppercase text-secondary tracking-wider block mb-2">Tier 02</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-1">Classic Celebration</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">Our signature full-suite experience with hand-adorned embellishments.</p>
+<div class="mb-6">
+<span class="font-headline-xl text-4xl font-serif text-primary">$12–$15</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ complete suite</span>
+<span class="block font-kicker text-[11px] text-on-surface-variant mt-1">Recommended for 75–125 Suites</span>
+</div>
+<ul class="space-y-3 font-body-sm text-body-sm text-on-surface-variant border-t border-surface-container py-6">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">check</span>
+<span>Main Invite on 700gsm French Moulin</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">check</span>
+<span>RSVP Card &amp; Illustrated Details Card</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">check</span>
+<span>Custom Monogram Wax Seal &amp; Vellum Liner</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">check</span>
+<span>Hand-Torn Deckle Edge Finishing</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">check</span>
+<span>Complimentary Digital RSVP Web Sync</span>
+</li>
+</ul>
+</div>
+<a class="w-full text-center py-3 rounded bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-wider hover:bg-secondary transition-colors" href="https://wa.me/#?text=Quote%20request%20for%20Classic%20Celebration%20tier">
+            Inquire for 75–125 Suites
+          </a>
+</div>
+<!-- Tier 3 -->
+<div class="bg-surface-container-lowest p-8 rounded-lg shadow-sm flex flex-col justify-between">
+<div>
+<span class="font-kicker text-kicker uppercase text-secondary tracking-wider block mb-2">Tier 03</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-1">Grand Haute Couture</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">Multi-day destination weddings with day-of stationery harmonization.</p>
+<div class="mb-6">
+<span class="font-headline-xl text-4xl font-serif text-primary">Custom</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ bespoke curation</span>
+<span class="block font-kicker text-[11px] text-on-surface-variant mt-1">Recommended for 150+ Suites</span>
+</div>
+<ul class="space-y-3 font-body-sm text-body-sm text-on-surface-variant border-t border-surface-container py-6">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">check</span>
+<span>Double-Thick 900gsm Cardstock with Gilded Edges</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">check</span>
+<span>Full Weekend 5-Piece Suite + Custom Map</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">check</span>
+<span>Hand-Penned Ink Calligraphy Guest Addressing</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">check</span>
+<span>Full Day-Of Event Suite (Menus, Vow Books, Signs)</span>
+</li>
+</ul>
+</div>
+<a class="w-full text-center py-3 rounded bg-surface-container text-primary font-label-caps text-label-caps uppercase tracking-wider hover:bg-primary hover:text-on-primary transition-colors" href="https://wa.me/#?text=Quote%20request%20for%20Grand%20Haute%20Couture%20tier">
+            Request Private Consultation
+          </a>
+</div>
+</div>
+<!-- Live Price Estimate Helper -->
+<div class="mt-space-xl p-8 rounded-lg bg-surface-container flex flex-col md:flex-row items-center justify-between gap-6">
+<div>
+<h4 class="font-headline-sm text-primary text-xl">Need an exact formal quote for your guest count?</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Send us your quantity and favored pieces on WhatsApp for an immediate itemized PDF estimate.</p>
+</div>
+<a class="px-8 py-4 rounded-full bg-secondary text-on-secondary font-label-caps text-label-caps uppercase tracking-wider hover:opacity-90 transition-opacity flex items-center gap-2 whitespace-nowrap shadow-sm" href="https://wa.me/#?text=Hello%2C%20I%20would%20like%20a%20tailored%20print%20quote">
+<span class="material-symbols-outlined text-[18px]">calculate</span>
+<span>Instant WhatsApp Estimate</span>
+</a>
+</div>
+</div>
+</section>
+<!-- REAL ATELIER COMMISSIONS (PORTFOLIO) -->
+<section class="w-full bg-surface py-space-xl lg:py-28">
+<div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl">
+<div>
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest block mb-space-xs">Archival Provenance</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">Real Atelier Commissions</h2>
+</div>
+<a class="font-label-caps text-label-caps uppercase tracking-wider text-secondary hover:text-primary transition-colors flex items-center gap-1 mt-4 md:mt-0" href="https://wa.me/#">
+<span>View complete archive</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg">
+<!-- Commission 1 -->
+<div class="flex flex-col group">
+<div class="rounded-lg overflow-hidden bg-surface-container aspect-[4/3] mb-4">
+<img alt="Villa Balbiano Lake Como Wedding Stationery" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPoTBi8SgDtBMxKrS4OytK4pSB7wAQDeAX6pH0wSKuyOagaBo4dAirQGeQ4ipMCIuu9XPLb6i-8oIFlLccIrySeiqnRIF2Jh7cB23KjJGP2vd_IuXZNbnlCeBEkWU6d1b3M5oJZLQouq9yZKi_i3atMSol4k9oLB4-AScz1hY8zYSGmrnv1lcAv5jT0PcpDZkABl8UpuxEQSd-r-J-r6ut7aqEzocfohO9CTz8jY7BXycdiIqquxQ"/>
+</div>
+<span class="font-kicker text-kicker uppercase text-secondary tracking-wider mb-1">Lake Como, Italy</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Villa Balbiano Commission</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-3">
+            120 bespoke suites in warm ivory with copper-rose heated foil, deckle edged Somerset cotton, and olive botanical hand-poured wax seal.
+          </p>
+<div class="font-label-caps text-[11px] uppercase tracking-wider text-on-surface-variant/80">
+            Suite Count: 120 · Finish: Copper Foil &amp; Olive Seal
+          </div>
+</div>
+<!-- Commission 2 -->
+<div class="flex flex-col group">
+<div class="rounded-lg overflow-hidden bg-surface-container aspect-[4/3] mb-4">
+<img alt="Château de Villette France Wedding Stationery" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrVUrh7St98G_DCqXGSrv3BJwjsCibpgM8qaUD7mlXwPZlFy9I2sP1AuUwVA8YIzafVC-p7tsYg_f1OY6vCZNCSN5VTyU78gGH1TMDZN78PEEdIFUDRO4AEt5VMK1WvvjCr9ljEEmi--hc838tDE3p5IurbF8MOaNi6LpRVdU_VEgKmG38_qQZA64Sik_DbLaVKNqUI67omMLmzdNPTh1CuxECzCLWn1tTsU_LX-YAqhGkKBwpuTk"/>
+</div>
+<span class="font-kicker text-kicker uppercase text-secondary tracking-wider mb-1">Île-de-France, France</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Château de Villette Commission</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-3">
+            85 suites on heavy 700gsm cotton featuring a blind debossed family heritage crest, frayed French silk ribbons, and Italian calligraphy guest addressing.
+          </p>
+<div class="font-label-caps text-[11px] uppercase tracking-wider text-on-surface-variant/80">
+            Suite Count: 85 · Finish: Blind Deboss &amp; French Silk
+          </div>
+</div>
+<!-- Commission 3 -->
+<div class="flex flex-col group">
+<div class="rounded-lg overflow-hidden bg-surface-container aspect-[4/3] mb-4">
+<img alt="Tribeca Rooftop New York Wedding Stationery" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcPFcirCrv6dT6FnEp8Th2fUh3md79Ssj7SbNGUh2qcGrFqevgVoO7BP9ye9RzckFjRCIjYes8yWPrthAZEm1NVWLP2LhEH1zDI1U23N_B_GnxiSaeFy2Z__L2-0u-en5jwJdE3HLD2Zu5V6tTst21Wiot05QiHqEJgik-F3EMeCW2fDhvJvPSJcxF7H2-UhSWGLqYqgwC8VWYVXKbJv0DSCpx1kOq7Msvpo2Rd1NOZ6wqMepjZz8"/>
+</div>
+<span class="font-kicker text-kicker uppercase text-secondary tracking-wider mb-1">New York City, USA</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Tribeca Rooftop Commission</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-3">
+            140 modern monolith suites featuring architectural typography, champagne metallic letterpress, black-wax stamp closures, and matching acrylic day-of menus.
+          </p>
+<div class="font-label-caps text-[11px] uppercase tracking-wider text-on-surface-variant/80">
+            Suite Count: 140 · Finish: Champagne Letterpress
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- FREQUENTLY ANSWERED PRINT QUESTIONS -->
+<section class="w-full bg-surface-container-low py-space-xl">
+<div class="max-w-[900px] mx-auto px-margin-mobile lg:px-margin">
+<div class="text-center mb-space-xl">
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest block mb-space-xs">Guidance &amp; Clarifications</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">Frequently Answered Questions</h2>
+</div>
+<!-- Accordions -->
+<div class="space-y-4" id="faqGroup">
+<div class="faq-item bg-surface-container-lowest rounded-lg p-6 shadow-sm cursor-pointer">
+<div class="flex items-center justify-between">
+<h4 class="font-headline-sm text-primary text-lg">What is the minimum order quantity for printed invitations?</h4>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300">expand_more</span>
+</div>
+<div class="faq-content hidden mt-3 pt-3 text-on-surface-variant font-body-sm text-body-sm border-t border-surface-container">
+            Our standard production run begins at 50 suites to maintain economic feasibility for custom metal die manufacturing and Heidelberg press setup. Smaller boutique runs (30 suites) are easily accommodated under our Intimate Gatherings tier.
+          </div>
+</div>
+<div class="faq-item bg-surface-container-lowest rounded-lg p-6 shadow-sm cursor-pointer">
+<div class="flex items-center justify-between">
+<h4 class="font-headline-sm text-primary text-lg">How long does the design and production process take?</h4>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300">expand_more</span>
+</div>
+<div class="faq-content hidden mt-3 pt-3 text-on-surface-variant font-body-sm text-body-sm border-t border-surface-container">
+            Typographic proofs are delivered within 48 hours via WhatsApp. Following your final sign-off, production, manual edge tearing, foil stamping, and drying require 3 to 4 weeks. Rush 14-day production is available upon atelier capacity verification.
+          </div>
+</div>
+<div class="faq-item bg-surface-container-lowest rounded-lg p-6 shadow-sm cursor-pointer">
+<div class="flex items-center justify-between">
+<h4 class="font-headline-sm text-primary text-lg">Can we request physical paper and foil samples before ordering?</h4>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300">expand_more</span>
+</div>
+<div class="faq-content hidden mt-3 pt-3 text-on-surface-variant font-body-sm text-body-sm border-t border-surface-container">
+            Yes, wholeheartedly. We recommend ordering our curated Artisan Swatch Kit ($25, fully credited toward your eventual invitation commission). It contains all paper densities, foil shades, ribbon swatches, and wax seal examples.
+          </div>
+</div>
+<div class="faq-item bg-surface-container-lowest rounded-lg p-6 shadow-sm cursor-pointer">
+<div class="flex items-center justify-between">
+<h4 class="font-headline-sm text-primary text-lg">Why do you take orders via WhatsApp rather than an automated checkout?</h4>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300">expand_more</span>
+</div>
+<div class="faq-content hidden mt-3 pt-3 text-on-surface-variant font-body-sm text-body-sm border-t border-surface-container">
+            Heirloom letterpress is an haute-couture medium. Dialogue regarding paper absorbency, plate deboss depth, venue color palettes, and wording etiquette cannot be properly solved by an impersonal web dropdown. Our clients enjoy frictionless 1-on-1 WhatsApp consultations with real typographers.
+          </div>
+</div>
+<div class="faq-item bg-surface-container-lowest rounded-lg p-6 shadow-sm cursor-pointer">
+<div class="flex items-center justify-between">
+<h4 class="font-headline-sm text-primary text-lg">Can we pair our printed stationery with a matching digital invitation?</h4>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300">expand_more</span>
+</div>
+<div class="faq-content hidden mt-3 pt-3 text-on-surface-variant font-body-sm text-body-sm border-t border-surface-container">
+            Yes! Our Harmonization Program ensures your digital wedding website mirrors your exact typography, hand-drawn monogram crest, and color tonalities. Printed cards can also feature subtle micro-QR codes stamped in foil on details inserts.
+          </div>
+</div>
+<div class="faq-item bg-surface-container-lowest rounded-lg p-6 shadow-sm cursor-pointer">
+<div class="flex items-center justify-between">
+<h4 class="font-headline-sm text-primary text-lg">Do you handle guest addressing and calligraphy?</h4>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300">expand_more</span>
+</div>
+<div class="faq-content hidden mt-3 pt-3 text-on-surface-variant font-body-sm text-body-sm border-t border-surface-container">
+            We provide both archival digital calligraphic guest address printing that matches your primary suite typeface, as well as true hand-lettered dip-pen pointed nib calligraphy executed by our studio scribes.
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- GRAND FINAL CTA (SENSORIAL DARK INTERMEZZO) -->
+<section class="w-full bg-primary-container text-on-primary py-space-xl lg:py-28 relative overflow-hidden">
+<!-- Ambient subtle background glow -->
+<div class="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-secondary/10 blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-secondary/10 blur-3xl pointer-events-none"></div>
+<div class="max-w-[1000px] mx-auto px-margin-mobile lg:px-margin text-center relative z-10">
+<span class="font-kicker text-kicker uppercase text-secondary-fixed tracking-widest block mb-space-sm">
+        Start Your Heirloom Commission
+      </span>
+<h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-primary leading-tight max-w-2xl mx-auto">
+        Let’s create something worth <span class="italic font-normal text-secondary-fixed">keeping</span>.
+      </h2>
+<p class="font-body-lg text-body-lg text-on-primary-container max-w-xl mx-auto mt-space-md mb-space-lg">
+        Connect directly with our atelier director Margaux on WhatsApp. Share your date, approximate count, and visual aspirations for personalized guidance.
+      </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-space-md">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-secondary text-on-secondary font-label-caps text-label-caps uppercase tracking-wider hover:opacity-90 transition-opacity shadow-lg" href="https://wa.me/#?text=Hello%20Margaux%2C%20I%20would%20love%20to%20consult%20on%20wedding%20invitations" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-xl">forum</span>
+<span>Start Consultation on WhatsApp</span>
+</a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full bg-primary-container border border-surface-container-highest/20 text-on-primary font-label-caps text-label-caps uppercase tracking-wider hover:bg-surface-container-high/10 transition-colors" href="https://wa.me/#?text=Order%20Sample%20Swatch%20Kit">
+          Order Swatch Kit ($25)
+        </a>
+</div>
+<!-- Trust Badges -->
+<div class="pt-space-xl flex flex-wrap items-center justify-center gap-space-lg text-on-primary-container font-body-sm text-body-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-base">verified</span>
+<span>Handcrafted in Paris &amp; NY</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-base">flight_takeoff</span>
+<span>Global DHL Express Insured Shipping</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-base">spa</span>
+<span>100% Archival Cotton Guaranteed</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Simple category filtering
+  const filterPills = document.querySelectorAll('#categoryFilterBar .filter-pill');
+  const suiteCards = document.querySelectorAll('.suite-card');
+
+  filterPills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      filterPills.forEach(p => {
+        p.classList.remove('bg-primary', 'text-on-primary', 'active');
+        p.classList.add('bg-surface-container-lowest', 'text-on-surface-variant');
+      });
+      pill.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant');
+      pill.classList.add('bg-primary', 'text-on-primary', 'active');
+
+      const target = pill.getAttribute('data-category');
+
+      suiteCards.forEach(card => {
+        if (target === 'all' || card.getAttribute('data-category') === target) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // Accordion Logic
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const content = item.querySelector('.faq-content');
+      const icon = item.querySelector('.material-symbols-outlined');
+      const isHidden = content.classList.contains('hidden');
+
+      // Close all
+      document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+      document.querySelectorAll('.faq-item .material-symbols-outlined').forEach(i => i.style.transform = 'rotate(0deg)');
+
+      // Open selected
+      if (isHidden) {
+        content.classList.remove('hidden');
+        icon.style.transform = 'rotate(180deg)';
+      }
+    });
+  });
+</script></main><footer class="w-full bg-surface-container-low text-on-surface"><div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin pt-space-xl pb-space-lg"><div class="pb-space-xl"><span class="font-kicker text-kicker uppercase text-secondary tracking-widest block mb-space-xs">The Nuance Manifesto</span><h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary max-w-3xl leading-tight">Two distinct expressions of love. One elevated wedding studio.</h2></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-lg py-space-xl"><div class="flex flex-col space-y-space-md lg:col-span-1"><span class="font-headline-sm text-headline-sm text-primary">L'Atelier Nuance</span><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">An haute couture stationery house pairing cloud-architected guest journeys with tactile cotton paper suites.</p><div class="flex flex-col gap-1 font-body-sm text-body-sm text-on-surface"><span class="font-medium">Ateliers:</span><span class="text-on-surface-variant">Paris · New York · Digital Cloud</span></div><div class="flex items-center gap-space-md pt-space-xs font-body-sm text-body-sm text-on-surface-variant"><a class="hover:text-primary transition-colors" href="#">Instagram</a><a class="hover:text-primary transition-colors" href="#">TikTok</a><a class="hover:text-primary transition-colors" href="#">Pinterest</a><a class="hover:text-primary transition-colors" href="#">Spotify</a></div></div><div class="flex flex-col space-y-space-sm"><span class="font-label-caps text-label-caps uppercase text-primary tracking-wider">Products</span><ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant"><li class="flex flex-col"><a class="hover:text-primary transition-colors" data-path="digital-invitations" href="#">Digital Invitations (SaaS)</a><span class="text-on-surface-variant/70 text-[11px]">Web suites, RSVP, QR seals</span></li><li class="flex flex-col pt-1"><a class="hover:text-primary transition-colors" data-path="printed-fine-stationery" href="#">Printed &amp; Fine Stationery</a><span class="text-on-surface-variant/70 text-[11px]">Cotton 600gsm, Deboss, Foil</span></li><li class="pt-1"><a class="hover:text-primary transition-colors" data-path="bespoke-curation" href="#">Bespoke Hybrid Curation</a></li></ul></div><div class="flex flex-col space-y-space-sm"><span class="font-label-caps text-label-caps uppercase text-primary tracking-wider">Explore</span><ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" data-path="templates" href="#">Curated Templates</a></li><li><a class="hover:text-primary transition-colors" data-path="pricing" href="#">Investment &amp; Pricing</a></li><li><a class="hover:text-primary transition-colors" data-path="features" href="#">Interactive Features</a></li><li><a class="hover:text-primary transition-colors" data-path="how-it-works" href="#">The Production Process</a></li></ul></div><div class="flex flex-col space-y-space-sm"><span class="font-label-caps text-label-caps uppercase text-primary tracking-wider">Concierge &amp; Support</span><ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors flex items-center gap-1" data-path="consultation" href="#"><span class="material-symbols-outlined text-[14px]">forum</span><span>WhatsApp Direct</span></a></li><li><a class="hover:text-primary transition-colors" href="mailto:atelier@nuance.wedding">atelier@nuance.wedding</a></li><li><a class="hover:text-primary transition-colors" data-path="faq" href="#">Frequently Answered</a></li><li><a class="hover:text-primary transition-colors" data-path="booking" href="#">Book Studio Consultation</a></li></ul></div><div class="flex flex-col space-y-space-sm"><span class="font-label-caps text-label-caps uppercase text-primary tracking-wider">Legal &amp; Studio</span><ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a></li><li><a class="hover:text-primary transition-colors" data-path="terms-of-service" href="#">Terms of Service</a></li><li><a class="hover:text-primary transition-colors" data-path="accessibility" href="#">Digital Accessibility</a></li><li><a class="hover:text-primary transition-colors" data-path="sustainability" href="#">Carbon-Neutral Printing</a></li></ul></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-sm font-body-sm text-body-sm text-on-surface-variant"><div class="flex flex-wrap items-center gap-space-md"><span class="font-label-caps text-label-caps">© 2025 L'Atelier Nuance Studio Inc.</span><span>All rights reserved.</span></div><div class="flex items-center gap-space-lg font-kicker text-kicker uppercase tracking-wider text-on-surface-variant"><span>Paris — 16:40 CET</span><span>·</span><span>New York — 10:40 EST</span></div></div></div></footer></body></html>

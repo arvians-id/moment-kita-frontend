@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary-fixed": "#380d00", "on-secondary": "#ffffff", "inverse-on-surface": "#f3f0ea", "on-secondary-fixed-variant": "#703722", "secondary-fixed": "#ffdbcf", "on-error-container": "#93000a", "surface-bright": "#fcf9f3", "on-primary-fixed": "#1c1b1b", "on-surface-variant": "#444748", "surface-variant": "#e5e2dc", "secondary-fixed-dim": "#ffb59c", "surface-container-lowest": "#ffffff", "surface-container-low": "#f6f3ed", "secondary": "#8c4d37", "inverse-surface": "#31312d", "tertiary-container": "#3c0801", "on-primary-fixed-variant": "#474746", "error": "#ba1a1a", "on-primary-container": "#858383", "on-tertiary-fixed": "#3c0801", "on-tertiary": "#ffffff", "surface-tint": "#5f5e5e", "secondary-container": "#ffad91", "error-container": "#ffdad6", "inverse-primary": "#c8c6c5", "on-primary": "#ffffff", "on-tertiary-container": "#c06d5b", "surface": "#fcf9f3", "tertiary": "#000000", "primary-fixed": "#e5e2e1", "tertiary-fixed-dim": "#ffb4a4", "surface-container-highest": "#e5e2dc", "surface-container-high": "#ebe8e2", "on-tertiary-fixed-variant": "#753224", "primary": "#000000", "on-error": "#ffffff", "outline-variant": "#c4c7c7", "primary-container": "#1c1b1b", "on-surface": "#1c1c18", "primary-fixed-dim": "#c8c6c5", "tertiary-fixed": "#ffdad3", "outline": "#747878", "background": "#fcf9f3", "surface-dim": "#dcdad4", "surface-container": "#f0eee8", "on-background": "#1c1c18", "on-secondary-container": "#7a3e29" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "space-sm": "0.5rem", "margin": "3.5rem", "gutter": "2rem", "margin-mobile": "1.25rem", "space-md": "1rem", "gutter-mobile": "1rem", "space-xl": "3rem", "space-lg": "1.75rem" }, "fontFamily": { "headline-xl": ["Playfair Display"], "body-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "display-hero": ["Playfair Display"], "headline-lg": ["Playfair Display"], "headline-xl-mobile": ["Playfair Display"], "quote-editorial": ["Playfair Display"], "label-caps": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-sm": ["Playfair Display"], "headline-lg-mobile": ["Playfair Display"], "headline-md": ["Playfair Display"], "kicker": ["Plus Jakarta Sans"], "display-hero-mobile": ["Playfair Display"] }, "fontSize": { "headline-xl": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "display-hero": ["84px", { "lineHeight": "92px", "letterSpacing": "-0.03em", "fontWeight": "400" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "400" }], "headline-xl-mobile": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "quote-editorial": ["24px", { "lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "400" }], "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.12em", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-sm": ["22px", { "lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "600" }], "headline-lg-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "kicker": ["11px", { "lineHeight": "16px", "letterSpacing": "0.2em", "fontWeight": "600" }], "display-hero-mobile": ["44px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "400" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-[1440px] mx-auto px-margin-mobile lg:px-margin flex items-center justify-between"><a class="flex items-center gap-space-md text-inherit no-underline" data-path="how-it-works" href="#"><img alt="L'Atelier Nuance Monogram Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WORa7OFIDEA7UPD6MXwEEjQLZ-jy7n080Duy_MtM2d0iXYga0ZH1v4JwIzC9mcMobJ7aMmmbk-R6eD5oytZOkNtvi0CO67tJ9GoAna2Yf03mENT0HnwfYrqWgKPsrZtDzVXA2BA6huVaulYlgBQ0roeaVG7xp40Eck7D6fpl5_bPO70EGCIfPONyFDQmpRT2_Y5BgnOg3y2nxoHTaQqTflRQBQdj4wymaHOfCTkeCoSu_7wpl6XY2c"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none">L'Atelier Nuance</span><span class="font-kicker text-kicker uppercase tracking-widest text-on-surface-variant mt-space-xs">Digital &amp; Fine Print Studio</span></div></a><nav class="hidden xl:flex items-center gap-space-lg" data-active-classes="text-primary font-semibold relative after:content-[''] after:absolute after:bottom-[-6px] after:left-0 after:right-0 after:h-[1px] after:bg-primary"><div class="relative group py-space-sm"><button class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant group-hover:text-primary flex items-center gap-1 transition-colors duration-200" type="button">Products<span class="material-symbols-outlined text-[14px] text-on-surface-variant transition-transform group-hover:rotate-180">expand_more</span></button><div class="absolute left-0 top-full hidden group-hover:flex flex-col w-64 bg-surface-container-lowest p-space-sm shadow-[0_16px_40px_-12px_rgba(46,38,33,0.08)]"><a class="p-space-sm hover:bg-surface-container-low transition-colors duration-150 flex flex-col" data-path="digital-invitations" href="#"><span class="font-kicker text-kicker text-secondary uppercase">01 — Suite</span><span class="font-body-md text-body-md text-on-surface">Digital Invitations (SaaS)</span></a><a class="p-space-sm hover:bg-surface-container-low transition-colors duration-150 flex flex-col" data-path="printed-fine-stationery" href="#"><span class="font-kicker text-kicker text-secondary uppercase">02 — Atelier</span><span class="font-body-md text-body-md text-on-surface">Printed &amp; Fine Stationery</span></a></div></div><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-200" data-path="templates" href="#">Templates</a><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-200" data-path="features" href="#">Features</a><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-200" data-path="pricing" href="#">Pricing</a><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-200" data-path="how-it-works" href="#">How It Works</a><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-200" data-path="about" href="#">About</a><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-200" data-path="faq" href="#">FAQ</a></nav><div class="hidden lg:flex items-center gap-space-md"><a class="inline-flex items-center gap-1.5 font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-secondary transition-colors duration-200" data-path="consultation" href="#"><span class="material-symbols-outlined text-[16px]">forum</span><span>Consult via WhatsApp</span></a><span class="h-4 w-px bg-surface-container-highest"></span><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-200" data-path="login" href="#">Log In</a><a class="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-wider hover:bg-secondary transition-colors duration-200 shadow-sm" data-path="create-invitation" href="#">Create Digital Invitation</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div><div class="flex items-center gap-space-sm xl:hidden"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><button aria-label="Open Editorial Menu" class="p-2 text-on-surface hover:text-primary focus:outline-none" type="button"><span class="material-symbols-outlined text-2xl">menu</span></button></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
+<!-- Hero Section -->
+<section class="relative w-full overflow-hidden bg-surface py-space-xl lg:py-28">
+<div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<div class="lg:col-span-8 flex flex-col space-y-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest">07 — Maison &amp; Intention</span>
+<span class="w-8 h-px bg-outline-variant"></span>
+</div>
+<h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-primary leading-tight tracking-tight">
+            Every celebration deserves a story <span class="italic text-secondary font-normal">beautifully told.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl leading-relaxed pt-space-xs">
+            We founded L'Atelier Nuance with a singular reverence: that wedding invitations are not administrative announcements, but the first architectural glimpse into a couple's shared life. In an era caught between impersonal mass-market stationery and rigid bespoke waiting lists, we built an atelier where digital intelligence and tactile letterpress coexist with uncompromising grace.
+          </p>
+<div class="pt-space-md flex flex-wrap items-center gap-x-space-md gap-y-space-xs font-label-caps text-label-caps uppercase text-on-surface-variant/80 tracking-wider">
+<span>Paris &amp; New York Ateliers</span>
+<span>•</span>
+<span>Zero Compromise on Materiality</span>
+<span>•</span>
+<span>Cloud Performance Architecture</span>
+</div>
+</div>
+<div class="lg:col-span-4 hidden lg:flex flex-col items-end justify-center pt-8">
+<div class="p-space-lg bg-surface-container-low shadow-sm rounded-none max-w-xs text-right">
+<span class="font-kicker text-kicker uppercase tracking-widest text-secondary block mb-space-xs">Artisan Registry</span>
+<p class="font-quote-editorial text-quote-editorial text-primary italic leading-snug">
+              "Tactile dignity, digital weightlessness."
+            </p>
+<span class="font-body-sm text-body-sm text-on-surface-variant block mt-space-sm">— Paris Studio No. 04</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- The Genesis Section -->
+<section class="w-full bg-surface-container-lowest py-space-xl lg:py-28">
+<div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<!-- Text Column -->
+<div class="lg:col-span-5 flex flex-col space-y-space-md">
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest">The Genesis</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-tight">
+            Bridging the dichotomy of the modern invitation.
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            For decades, engaged couples were presented with a forced concession: compromise either on the tactile poetry of physical paper or the fluid convenience of modern software. Mass-market digital invitations felt synthetic, riddled with platform branding and disposable form templates. Conversely, bespoke letterpress houses often demanded four-month lead times, high error liabilities, and manual guest tracking spreadsheets.
+          </p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            L'Atelier Nuance was born to restore reverence, aesthetic autonomy, and quiet ease to both mediums under a single design language. We treat web experiences with the typographic rigor of 19th-century publishing, and print suites with the exacting calibration of architectural drafting.
+          </p>
+<div class="pt-space-sm flex items-center gap-space-md">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary">600–900<span class="text-secondary text-base">gsm</span></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Pure European Cotton</span>
+</div>
+<div class="w-px h-10 bg-surface-container-highest"></div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary">&lt; 1.2<span class="text-secondary text-base">s</span></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Global Edge Latency</span>
+</div>
+</div>
+</div>
+<!-- Visual Mosaic Column -->
+<div class="lg:col-span-7 relative flex flex-col sm:flex-row gap-space-md items-center justify-center">
+<div class="w-full sm:w-1/2 overflow-hidden shadow-xl bg-surface-container-low relative">
+<img class="w-full h-[420px] object-cover hover:scale-105 transition-transform duration-700 ease-out" data-alt="Editorial close up top view of handcrafted wedding invitation suite on heavy natural cotton deckle edge paper with copper foil typography, soft silk blush ribbon, envelope with vintage botanical line illustration liner and gold wax seal on warm linen background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuiUo6eAmLOzL7VvwJleo7TL_0sH5de8Q-jU89P8FxOTZnnuPa3ZKZmJ03iyGw6bpQwM68hjqd28tsSJrToIlta9niVJuZSwhu9yAHjqZJahGxeywwf3d5cbxejA_cbaK03f-ovkKY3foDMP0DryQbiH1XJMcojjuA_QeaKjaVbyasZk-7BCmOW7Od6JEMk4dsjutC7fZm98BfgGEFMb5Si4FUo94Mtyc6tpGOVb7auShh61wPTYA"/>
+<div class="absolute bottom-0 left-0 right-0 p-space-sm bg-gradient-to-t from-black/60 to-transparent">
+<span class="font-label-caps text-label-caps uppercase text-white tracking-widest">Tactile Print Suite</span>
+</div>
+</div>
+<div class="w-full sm:w-1/2 overflow-hidden shadow-xl bg-surface-container-low relative sm:-mt-12">
+<img class="w-full h-[420px] object-cover hover:scale-105 transition-transform duration-700 ease-out" data-alt="Minimalist smartphone resting on natural textured linen table next to dry pampas grass florals displaying an elegant high end bespoke digital wedding invitation with clean serif typography, blush accents and date counter" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvGweLGgWJdsfy-CETZHUuKIbixMea47gDlGQJX3WHChTz0ZrPilBrWS8-y_657QA2vaw7fsQy9fdvvO812Stal3lEKVr_bekLVOfe51xklaaoB8vYcVThSnb2pP3LaHG-p4od5EB_6fSUeadgppgyFDF0Jh7ozh1DmTZniBCuM6ANZfi4-eWcyvyfUc-dcFWw-sQSxdWvPA8j1J5T2GYdsZwoTURjbwx2MPmRpXSL7AD3O4TEnTE"/>
+<div class="absolute bottom-0 left-0 right-0 p-space-sm bg-gradient-to-t from-black/60 to-transparent">
+<span class="font-label-caps text-label-caps uppercase text-white tracking-widest">Digital Companion</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Philosophy / The Three Core Pillars -->
+<section class="w-full bg-surface-container-low py-space-xl lg:py-28">
+<div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-md">
+<div class="flex flex-col space-y-space-xs max-w-2xl">
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest">Our Philosophy</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">
+            Three commitments that guide every typographic stroke, line of code, and cotton press run.
+          </h2>
+</div>
+<div class="hidden lg:block text-right">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant">Architecture &amp; Atelier</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Pillar 1: Design -->
+<div class="flex flex-col justify-between bg-surface-container-lowest p-space-lg shadow-sm">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="font-kicker text-kicker text-secondary uppercase">01 / Aesthetic</span>
+<span class="material-symbols-outlined text-on-surface-variant text-xl">auto_stories</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Typographic Reverence &amp; Restraint</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Drawing from classic Parisian editorial layouts and Swiss architectural proportions. Every font pairing, line height, and whitespace margin is calibrated for emotional weight and visual timelessness—never succumbing to ephemeral internet design fads.
+            </p>
+</div>
+<div class="pt-space-lg flex items-center gap-space-xs font-label-caps text-label-caps uppercase text-secondary">
+<span>Hand-balanced kerning</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+<!-- Pillar 2: Technology -->
+<div class="flex flex-col justify-between bg-surface-container-lowest p-space-lg shadow-sm">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="font-kicker text-kicker text-secondary uppercase">02 / Infrastructure</span>
+<span class="material-symbols-outlined text-on-surface-variant text-xl">cloud_sync</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Quiet Cloud Architecture</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Technology should never feel cold or algorithmic. Our digital suites load under 1.2s on edge networks worldwide, provide seamless real-time RSVP coordination, zero-commission cash gifts, and private guest intimacy without ads, third-party trackers, or app downloads.
+            </p>
+</div>
+<div class="pt-space-lg flex items-center gap-space-xs font-label-caps text-label-caps uppercase text-secondary">
+<span>Encrypted guest journeys</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+<!-- Pillar 3: Craftsmanship -->
+<div class="flex flex-col justify-between bg-surface-container-lowest p-space-lg shadow-sm">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="font-kicker text-kicker text-secondary uppercase">03 / Materiality</span>
+<span class="material-symbols-outlined text-on-surface-variant text-xl">fingerprint</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">The Permanent Artifact</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Working alongside master artisans with restored 1950s Heidelberg platen presses. 600 to 900gsm wild European cotton papers, hand-torn deckle edges, heated copper foils, and hand-poured wax monograms engineered to become cherished heirlooms for generations.
+            </p>
+</div>
+<div class="pt-space-lg flex items-center gap-space-xs font-label-caps text-label-caps uppercase text-secondary">
+<span>Heidelberg platen archival press</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Macro Imagery Row -->
+<div class="mt-space-xl grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-7 overflow-hidden shadow-md">
+<img alt="Close up tactile wedding stationery craftsmanship: blind deboss and warm copper-rose foil letterpress on thick off-white handmade deckle edge cotton paper, artisan touch, luxury editorial macro photography, soft warm neutral lighting." class="w-full h-[360px] object-cover hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida/AEtjO1UJPo9rLJg7F21uoRYJt1Te-VZF73tutW1_EQjrdHMK27eJ76Em4UTcj1uXAVvpiRUIkIIfay_2j0VaaYiesOr1SxH-q82va_bla1y-Q7vDSmsQ2JUUwX6C6PVluhpzsPZ58uRLGFF4g2c5GHNMwDlG_-IU7XXaxRmv_wHHtLH8aiyVOiFeqjr8f9A73h_gA9zHIhhd-ofythybzSp1NflHdyTvYPy_rMxK6y32RfXNwdNKtLe7EmGwTQ"/>
+</div>
+<div class="md:col-span-5 p-space-lg bg-surface-container flex flex-col justify-center">
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest mb-space-xs">The Tactile Impression</span>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-space-sm">Deep blind deboss &amp; warm copper foil.</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Every sheet in our print atelier is pulled by hand. We believe in the physical weight of an invitation—the unmistakable, textured resistance of 100% rag cotton meeting high-tonnage mechanical impression dies.
+          </p>
+<div class="mt-space-md flex items-center gap-4 text-secondary font-label-caps text-label-caps uppercase">
+<span>View Material Swatchbook</span>
+<span class="material-symbols-outlined text-sm">north_east</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Two Product Worlds (Comparison & Harmonization) -->
+<section class="w-full bg-surface py-space-xl lg:py-28">
+<div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin">
+<div class="text-center max-w-3xl mx-auto mb-space-xl">
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest block mb-space-xs">The Dual Disciplines</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-space-sm">
+          Two distinct expressions of love. One elevated studio.
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Both mediums share our uncompromising aesthetic standard, yet each serves your celebration with distinct autonomy. Choose one, or harmoniously unite both.
+        </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+<!-- Digital Invitation Suite Card -->
+<div class="bg-surface-container-lowest p-space-lg lg:p-12 shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="font-kicker text-kicker text-secondary uppercase tracking-widest">01 — Digital Experience</span>
+<span class="font-label-caps text-label-caps uppercase bg-surface-container px-3 py-1 rounded-full text-on-surface">Interactive SaaS</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">The Digital Invitation Suite</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Architected for the modern celebration requiring fluid agility without synthetic aesthetics. Delivered directly to guest inboxes or instant messaging with digital wax seals.
+            </p>
+<ul class="space-y-space-sm pt-space-sm font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-base">check</span>
+<span>Interactive digital envelopes with custom audio accompaniment</span>
+</li>
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-base">check</span>
+<span>Sub-domain bespoke URLs (e.g., alex-margaret.ateliernuance.com)</span>
+</li>
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-base">check</span>
+<span>Real-time RSVP intelligence, dietary logic, &amp; guest capacity caps</span>
+</li>
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-base">check</span>
+<span>0% fee honeymoon registry directly linked to personal bank accounts</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-lg">
+<a class="inline-flex items-center justify-center px-6 py-3.5 bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-wider hover:bg-secondary transition-colors duration-200" data-path="digital-invitations" href="#">
+              Explore Digital Suite
+            </a>
+</div>
+</div>
+<!-- Tactile Print Atelier Card -->
+<div class="bg-surface-container-high p-space-lg lg:p-12 shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="font-kicker text-kicker text-secondary uppercase tracking-widest">02 — Bespoke Print</span>
+<span class="font-label-caps text-label-caps uppercase bg-surface-container-highest px-3 py-1 rounded-full text-on-surface">Archival Craft</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">The Artisan Printed Atelier</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Tactile paper heirlooms designed to outlive the celebration. Handcrafted with traditional platen letterpress techniques, foil stamping, and organic raw deckle edges.
+            </p>
+<ul class="space-y-space-sm pt-space-sm font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-base">check</span>
+<span>600–900gsm wild European 100% cotton handmade cardstock</span>
+</li>
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-base">check</span>
+<span>Hand-mixed custom Pantone ink debossing and hot foil stamping</span>
+</li>
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-base">check</span>
+<span>Calligraphic envelope addressing and bespoke wax seals</span>
+</li>
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-base">check</span>
+<span>Direct 1-on-1 proofing sessions with Paris studio typographers</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-lg">
+<a class="inline-flex items-center justify-center px-6 py-3.5 bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-wider hover:bg-secondary transition-colors duration-200" data-path="printed-fine-stationery" href="#">
+              Explore Printed Atelier
+            </a>
+</div>
+</div>
+</div>
+<!-- Harmonized Protocol Banner -->
+<div class="mt-space-lg p-space-lg bg-surface-container-low flex flex-col md:flex-row items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary shrink-0 mt-1">
+<span class="material-symbols-outlined text-xl">hub</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-primary">The Harmonized Protocol</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed max-w-2xl">
+              Over 65% of our couples harmonize both worlds: a printed keepsake suite for the mantlepiece and elder family members, complemented by a digital companion suite for effortless guest logistics, live directions, and multi-event itineraries.
+            </p>
+</div>
+</div>
+<a class="font-label-caps text-label-caps uppercase text-secondary hover:text-primary transition-colors shrink-0 flex items-center gap-1" data-path="bespoke-curation" href="#">
+<span>Learn about hybrid suites</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Design Approach Grid (4 Foundational Principles) -->
+<section class="w-full bg-surface-container-lowest py-space-xl lg:py-28">
+<div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin">
+<div class="flex flex-col space-y-space-xs max-w-xl mb-space-xl">
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest">Methodology</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">
+          Our Design Approach
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Four non-negotiable principles rooted in architectural intentionality and quiet luxury.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="p-space-lg bg-surface-container-low flex flex-col justify-between">
+<div>
+<span class="font-headline-md text-headline-md text-secondary block mb-space-xs">01</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Curated</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Every template in our archive is an intentional monograph, not an endless template farm. We produce only twelve seasonal design suites per calendar year.
+            </p>
+</div>
+<div class="pt-space-md font-kicker text-kicker uppercase tracking-wider text-on-surface-variant/60">
+            Archive Curation
+          </div>
+</div>
+<div class="p-space-lg bg-surface-container-low flex flex-col justify-between">
+<div>
+<span class="font-headline-md text-headline-md text-secondary block mb-space-xs">02</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Human</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Direct WhatsApp dialogue with experienced atelier directors, not automated chatbots or generic ticketing queues. True conciergerie for your celebration.
+            </p>
+</div>
+<div class="pt-space-md font-kicker text-kicker uppercase tracking-wider text-on-surface-variant/60">
+            Dedicated Concierge
+          </div>
+</div>
+<div class="p-space-lg bg-surface-container-low flex flex-col justify-between">
+<div>
+<span class="font-headline-md text-headline-md text-secondary block mb-space-xs">03</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Modern</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Subtle interactions, zero-friction edge cloud delivery, and aesthetic autonomy for contemporary couples who value quiet elegance over noisy novelties.
+            </p>
+</div>
+<div class="pt-space-md font-kicker text-kicker uppercase tracking-wider text-on-surface-variant/60">
+            Cloud Agility
+          </div>
+</div>
+<div class="p-space-lg bg-surface-container-low flex flex-col justify-between">
+<div>
+<span class="font-headline-md text-headline-md text-secondary block mb-space-xs">04</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Personal</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Bespoke monogram crests, tailored venue line-art, and personalized guest salutations crafted to reflect the unique cadence of your partnership.
+            </p>
+</div>
+<div class="pt-space-md font-kicker text-kicker uppercase tracking-wider text-on-surface-variant/60">
+            Bespoke Cresting
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Team / Atelier Collective Section (Honest Studio Manifesto) -->
+<section class="w-full bg-surface-container py-space-xl lg:py-28">
+<div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-6 flex flex-col space-y-space-md">
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest">The Atelier Collective</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-tight">
+            Typographers, Software Architects, and Master Printers.
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            We operate as a distributed multidisciplinary guild across Paris, Brooklyn, and Cloud Edge infrastructure. Rather than an oversized commercial agency, our team remains deliberately boutique: senior typographers with backgrounds in luxury editorial publishing, paired with software engineers obsessed with tactile digital fluidity.
+          </p>
+<div class="p-space-md bg-surface-container-lowest shadow-sm">
+<p class="font-quote-editorial text-quote-editorial text-primary italic leading-snug">
+              "We measure our success not by the volume of invitations dispatched, but by the quiet gasp when an envelope is opened."
+            </p>
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-secondary block mt-space-sm">Studio Manifesto — 2025</span>
+</div>
+</div>
+<div class="lg:col-span-6 flex flex-col justify-center">
+<div class="bg-surface-container-lowest p-space-lg shadow-sm">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between pb-space-sm">
+<span class="font-label-caps text-label-caps uppercase text-primary tracking-wider">Maison Footprint</span>
+<span class="font-kicker text-kicker uppercase text-secondary">Presence</span>
+</div>
+<div class="space-y-space-sm font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center justify-between py-space-xs">
+<span class="font-medium text-on-surface">Paris Letterpress Workshop</span>
+<span>6th Arrondissement — Print &amp; Foil Archive</span>
+</div>
+<div class="flex items-center justify-between py-space-xs">
+<span class="font-medium text-on-surface">New York Creative Studio</span>
+<span>Brooklyn DUMBO — Design Direction</span>
+</div>
+<div class="flex items-center justify-between py-space-xs">
+<span class="font-medium text-on-surface">Global Edge Cloud</span>
+<span>Multi-region AWS / Fastly Edge Network</span>
+</div>
+<div class="flex items-center justify-between py-space-xs">
+<span class="font-medium text-on-surface">Private Conciergerie</span>
+<span>Direct Encrypted WhatsApp Line</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Statement Final CTA -->
+<section class="w-full bg-primary text-on-primary py-space-xl lg:py-28">
+<div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin text-center">
+<div class="max-w-3xl mx-auto flex flex-col items-center space-y-space-md">
+<span class="font-kicker text-kicker uppercase text-secondary-fixed tracking-widest">Commence Your Suite</span>
+<h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-primary leading-tight">
+          Craft an invitation that reflects your story.
+        </h2>
+<p class="font-body-lg text-body-lg text-on-primary/80 max-w-xl">
+          Begin customizing your digital suite in minutes, or consult directly with our print directors to commission an archival heirloom.
+        </p>
+<div class="pt-space-md flex flex-col sm:flex-row items-center gap-space-md w-full sm:w-auto justify-center">
+<a class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-secondary text-on-secondary font-label-caps text-label-caps uppercase tracking-wider hover:bg-secondary/90 transition-colors duration-200" data-path="templates" href="#">
+            Explore Our Designs
+          </a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-transparent text-on-primary font-label-caps text-label-caps uppercase tracking-wider hover:bg-white/10 transition-colors duration-200" data-path="consultation" href="#">
+<span class="material-symbols-outlined text-sm mr-2">forum</span>
+<span>Consult via WhatsApp</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-low text-on-surface"><div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin pt-space-xl pb-space-lg"><div class="pb-space-xl"><span class="font-kicker text-kicker uppercase text-secondary tracking-widest block mb-space-xs">The Nuance Manifesto</span><h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary max-w-3xl leading-tight">Two distinct expressions of love. One elevated wedding studio.</h2></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-lg py-space-xl"><div class="flex flex-col space-y-space-md lg:col-span-1"><span class="font-headline-sm text-headline-sm text-primary">L'Atelier Nuance</span><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">An haute couture stationery house pairing cloud-architected guest journeys with tactile cotton paper suites.</p><div class="flex flex-col gap-1 font-body-sm text-body-sm text-on-surface"><span class="font-medium">Ateliers:</span><span class="text-on-surface-variant">Paris · New York · Digital Cloud</span></div><div class="flex items-center gap-space-md pt-space-xs font-body-sm text-body-sm text-on-surface-variant"><a class="hover:text-primary transition-colors" href="#">Instagram</a><a class="hover:text-primary transition-colors" href="#">TikTok</a><a class="hover:text-primary transition-colors" href="#">Pinterest</a><a class="hover:text-primary transition-colors" href="#">Spotify</a></div></div><div class="flex flex-col space-y-space-sm"><span class="font-label-caps text-label-caps uppercase text-primary tracking-wider">Products</span><ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant"><li class="flex flex-col"><a class="hover:text-primary transition-colors" data-path="digital-invitations" href="#">Digital Invitations (SaaS)</a><span class="text-on-surface-variant/70 text-[11px]">Web suites, RSVP, QR seals</span></li><li class="flex flex-col pt-1"><a class="hover:text-primary transition-colors" data-path="printed-fine-stationery" href="#">Printed &amp; Fine Stationery</a><span class="text-on-surface-variant/70 text-[11px]">Cotton 600gsm, Deboss, Foil</span></li><li class="pt-1"><a class="hover:text-primary transition-colors" data-path="bespoke-curation" href="#">Bespoke Hybrid Curation</a></li></ul></div><div class="flex flex-col space-y-space-sm"><span class="font-label-caps text-label-caps uppercase text-primary tracking-wider">Explore</span><ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" data-path="templates" href="#">Curated Templates</a></li><li><a class="hover:text-primary transition-colors" data-path="pricing" href="#">Investment &amp; Pricing</a></li><li><a class="hover:text-primary transition-colors" data-path="features" href="#">Interactive Features</a></li><li><a class="hover:text-primary transition-colors" data-path="how-it-works" href="#">The Production Process</a></li><li><a class="hover:text-primary transition-colors" data-path="about" href="#">Our Story &amp; Maison</a></li></ul></div><div class="flex flex-col space-y-space-sm"><span class="font-label-caps text-label-caps uppercase text-primary tracking-wider">Concierge &amp; Support</span><ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors flex items-center gap-1" data-path="consultation" href="#"><span class="material-symbols-outlined text-[14px]">forum</span><span>WhatsApp Direct</span></a></li><li><a class="hover:text-primary transition-colors" href="mailto:atelier@nuance.wedding">atelier@nuance.wedding</a></li><li><a class="hover:text-primary transition-colors" data-path="faq" href="#">Frequently Answered</a></li><li><a class="hover:text-primary transition-colors" data-path="booking" href="#">Book Studio Consultation</a></li></ul></div><div class="flex flex-col space-y-space-sm"><span class="font-label-caps text-label-caps uppercase text-primary tracking-wider">Legal &amp; Studio</span><ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a></li><li><a class="hover:text-primary transition-colors" data-path="terms-of-service" href="#">Terms of Service</a></li><li><a class="hover:text-primary transition-colors" data-path="accessibility" href="#">Digital Accessibility</a></li><li><a class="hover:text-primary transition-colors" data-path="sustainability" href="#">Carbon-Neutral Printing</a></li></ul></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-sm font-body-sm text-body-sm text-on-surface-variant"><div class="flex flex-wrap items-center gap-space-md"><span class="font-label-caps text-label-caps">© 2025 L'Atelier Nuance Studio Inc.</span><span>All rights reserved.</span></div><div class="flex items-center gap-space-lg font-kicker text-kicker uppercase tracking-wider text-on-surface-variant"><span>Paris — 16:40 CET</span><span>·</span><span>New York — 10:40 EST</span></div></div></div></footer></body></html>

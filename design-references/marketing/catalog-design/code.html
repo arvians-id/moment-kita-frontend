@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "background": "#fcf9f3", "on-tertiary": "#ffffff", "outline": "#747878", "error-container": "#ffdad6", "on-tertiary-fixed-variant": "#753224", "surface-tint": "#5f5e5e", "surface": "#fcf9f3", "secondary-container": "#ffad91", "surface-container-highest": "#e5e2dc", "on-primary-container": "#858383", "outline-variant": "#c4c7c7", "on-tertiary-container": "#c06d5b", "inverse-on-surface": "#f3f0ea", "surface-container-lowest": "#ffffff", "on-secondary": "#ffffff", "on-error": "#ffffff", "primary-fixed-dim": "#c8c6c5", "on-secondary-fixed-variant": "#703722", "on-surface-variant": "#444748", "surface-container-high": "#ebe8e2", "on-primary": "#ffffff", "inverse-primary": "#c8c6c5", "on-surface": "#1c1c18", "tertiary": "#000000", "surface-bright": "#fcf9f3", "tertiary-fixed-dim": "#ffb4a4", "tertiary-container": "#3c0801", "error": "#ba1a1a", "surface-variant": "#e5e2dc", "on-secondary-fixed": "#380d00", "secondary": "#8c4d37", "on-error-container": "#93000a", "primary-container": "#1c1b1b", "surface-container": "#f0eee8", "tertiary-fixed": "#ffdad3", "on-tertiary-fixed": "#3c0801", "on-secondary-container": "#7a3e29", "secondary-fixed": "#ffdbcf", "on-primary-fixed": "#1c1b1b", "inverse-surface": "#31312d", "surface-container-low": "#f6f3ed", "primary": "#000000", "secondary-fixed-dim": "#ffb59c", "primary-fixed": "#e5e2e1", "on-background": "#1c1c18", "on-primary-fixed-variant": "#474746", "surface-dim": "#dcdad4" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "3rem", "margin": "3.5rem", "space-xs": "0.25rem", "space-md": "1rem", "gutter-mobile": "1rem", "space-sm": "0.5rem", "gutter": "2rem", "margin-mobile": "1.25rem", "space-lg": "1.75rem" }, "fontFamily": { "body-sm": ["Plus Jakarta Sans"], "headline-lg": ["Playfair Display"], "headline-lg-mobile": ["Playfair Display"], "label-caps": ["Plus Jakarta Sans"], "kicker": ["Plus Jakarta Sans"], "display-hero-mobile": ["Playfair Display"], "quote-editorial": ["Playfair Display"], "body-lg": ["Plus Jakarta Sans"], "headline-xl": ["Playfair Display"], "display-hero": ["Playfair Display"], "headline-sm": ["Playfair Display"], "headline-md": ["Playfair Display"], "body-md": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Playfair Display"] }, "fontSize": { "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "400" }], "headline-lg-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "0em", "fontWeight": "400" }], "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.12em", "fontWeight": "600" }], "kicker": ["11px", { "lineHeight": "16px", "letterSpacing": "0.2em", "fontWeight": "600" }], "display-hero-mobile": ["44px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "400" }], "quote-editorial": ["24px", { "lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "headline-xl": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "400" }], "display-hero": ["84px", { "lineHeight": "92px", "letterSpacing": "-0.03em", "fontWeight": "400" }], "headline-sm": ["22px", { "lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "600" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl-mobile": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.01em", "fontWeight": "400" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-[1440px] mx-auto px-margin-mobile lg:px-margin flex items-center justify-between"><div class="flex items-center gap-space-md"><img alt="L'Atelier Nuance Monogram Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WORa7OFIDEA7UPD6MXwEEjQLZ-jy7n080Duy_MtM2d0iXYga0ZH1v4JwIzC9mcMobJ7aMmmbk-R6eD5oytZOkNtvi0CO67tJ9GoAna2Yf03mENT0HnwfYrqWgKPsrZtDzVXA2BA6huVaulYlgBQ0roeaVG7xp40Eck7D6fpl5_bPO70EGCIfPONyFDQmpRT2_Y5BgnOg3y2nxoHTaQqTflRQBQdj4wymaHOfCTkeCoSu_7wpl6XY2c"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none">L'Atelier Nuance</span><span class="font-kicker text-kicker uppercase tracking-widest text-on-surface-variant mt-space-xs">Digital &amp; Fine Print Studio</span></div></div><nav class="hidden xl:flex items-center gap-space-lg" data-active-classes="text-primary font-semibold"><div class="relative group py-space-sm"><button class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant group-hover:text-primary flex items-center gap-1 transition-colors duration-200" type="button">Products<span class="material-symbols-outlined text-[14px] text-on-surface-variant transition-transform group-hover:rotate-180">expand_more</span></button><div class="absolute left-0 top-full hidden group-hover:flex flex-col w-64 bg-surface-container-lowest p-space-sm shadow-[0_16px_40px_-12px_rgba(46,38,33,0.08)]"><a class="p-space-sm hover:bg-surface-container-low transition-colors duration-150 flex flex-col" data-path="digital-invitations" href="#"><span class="font-kicker text-kicker text-secondary uppercase">01 — Suite</span><span class="font-body-md text-body-md text-on-surface">Digital Invitations (SaaS)</span></a><a class="p-space-sm hover:bg-surface-container-low transition-colors duration-150 flex flex-col" data-path="printed-fine-stationery" href="#"><span class="font-kicker text-kicker text-secondary uppercase">02 — Atelier</span><span class="font-body-md text-body-md text-on-surface">Printed &amp; Fine Stationery</span></a></div></div><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-200" data-path="templates" href="#">Templates</a><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-200" data-path="features" href="#">Features</a><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-200" data-path="pricing" href="#">Pricing</a><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-200" data-path="how-it-works" href="#">How It Works</a><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-200" data-path="faq" href="#">FAQ</a></nav><div class="hidden lg:flex items-center gap-space-md"><a class="inline-flex items-center gap-1.5 font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-secondary transition-colors duration-200" data-path="consultation" href="#"><span class="material-symbols-outlined text-[16px]">forum</span><span>Consult via WhatsApp</span></a><span class="h-4 w-px bg-surface-container-highest"></span><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-200" data-path="login" href="#">Log In</a><a class="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-wider hover:bg-secondary transition-colors duration-200 shadow-sm" data-path="create-invitation" href="#">Create Digital Invitation</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div><div class="flex items-center gap-space-sm xl:hidden"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><button aria-label="Open Editorial Menu" class="p-2 text-on-surface hover:text-primary focus:outline-none" type="button"><span class="material-symbols-outlined text-2xl">menu</span></button></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
+<!-- Top Editorial Header & Discovery Intro -->
+<section class="relative w-full overflow-hidden bg-surface pt-12 pb-16 lg:pt-20 lg:pb-24">
+<div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin">
+<!-- Breadcrumb & Kicker -->
+<div class="flex items-center gap-3 mb-6">
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest">03 — Curated Invitation Editions</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant/70 tracking-wider">Spring / Autumn 2025 Archive</span>
+</div>
+<!-- Main Headline with Editorial Treatment -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-y-8 lg:gap-gutter items-end">
+<div class="lg:col-span-8">
+<h1 class="font-display-hero text-headline-xl lg:text-display-hero text-primary tracking-tight leading-[0.96]">
+            Find a design that <span class="italic font-display-hero text-secondary font-normal">feels like you.</span>
+</h1>
+</div>
+<div class="lg:col-span-4 lg:pb-3">
+<p class="font-body-lg text-body-md lg:text-body-lg text-on-surface-variant leading-relaxed">
+            Whether your celebration calls for intelligent cloud interactivity, tactile letterpress permanence, or an orchestrated harmony of both. Explore our living archive of bespoke typographic suites.
+          </p>
+</div>
+</div>
+<!-- Discipline Global Tabs (Architectural Toggle) -->
+<div class="mt-14 pt-8 bg-surface-container-low rounded-xl p-3 flex flex-col md:flex-row items-center justify-between gap-4 shadow-sm">
+<div class="flex flex-wrap items-center gap-2 w-full md:w-auto" id="disciplineTabs">
+<button class="discipline-btn px-6 py-3 rounded-lg bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-wider transition-all duration-200 flex items-center gap-2 shadow-sm" data-category="all" type="button">
+<span>All Editions</span>
+<span class="text-[10px] px-2 py-0.5 rounded-full bg-surface/20 text-on-primary font-mono">24</span>
+</button>
+<button class="discipline-btn px-6 py-3 rounded-lg bg-transparent text-on-surface hover:bg-surface transition-all duration-200 font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-2" data-category="digital" type="button">
+<span>Digital Invitations</span>
+<span class="text-[10px] px-2 py-0.5 rounded-full bg-secondary/15 text-secondary font-semibold">Instant Setup</span>
+</button>
+<button class="discipline-btn px-6 py-3 rounded-lg bg-transparent text-on-surface hover:bg-surface transition-all duration-200 font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-2" data-category="printed" type="button">
+<span>Printed Stationery</span>
+<span class="text-[10px] px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-semibold">Hand-Pressed</span>
+</button>
+<button class="discipline-btn px-6 py-3 rounded-lg bg-transparent text-on-surface hover:bg-surface transition-all duration-200 font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-2" data-category="harmonized" type="button">
+<span>Harmonized Suites</span>
+<span class="text-[10px] px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-semibold">Dual Medium</span>
+</button>
+</div>
+<div class="flex items-center gap-4 w-full md:w-auto justify-end">
+<span class="hidden xl:inline text-on-surface-variant font-body-sm text-body-sm">
+<span class="font-semibold text-primary">100% Cotton</span> or <span class="font-semibold text-primary">WebGL Interactive</span>
+</span>
+<a class="inline-flex items-center gap-2 text-secondary hover:text-primary font-label-caps text-label-caps uppercase tracking-wider transition-colors" href="#concierge-sample">
+<span>Order Swatches</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Filter, Search & View Controls Bar -->
+<section class="sticky top-20 z-40 bg-surface/95 backdrop-blur-md py-4 shadow-sm">
+<div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin">
+<div class="flex flex-col lg:flex-row items-center justify-between gap-4">
+<!-- Aesthetic Pill Filters -->
+<div class="flex items-center gap-2 overflow-x-auto w-full lg:w-auto pb-2 lg:pb-0 scrollbar-none" id="aestheticFilters">
+<span class="font-kicker text-kicker uppercase text-on-surface-variant mr-1 flex-shrink-0">Aesthetic:</span>
+<button class="pill-filter px-4 py-2 rounded-full text-xs uppercase font-label-caps tracking-wider transition-all duration-150 bg-primary text-on-primary flex-shrink-0" data-style="all" type="button">All Styles</button>
+<button class="pill-filter px-4 py-2 rounded-full text-xs uppercase font-label-caps tracking-wider transition-all duration-150 bg-surface-container hover:bg-surface-container-high text-on-surface flex-shrink-0" data-style="minimal" type="button">Minimalist</button>
+<button class="pill-filter px-4 py-2 rounded-full text-xs uppercase font-label-caps tracking-wider transition-all duration-150 bg-surface-container hover:bg-surface-container-high text-on-surface flex-shrink-0" data-style="elegant" type="button">Haute Couture</button>
+<button class="pill-filter px-4 py-2 rounded-full text-xs uppercase font-label-caps tracking-wider transition-all duration-150 bg-surface-container hover:bg-surface-container-high text-on-surface flex-shrink-0" data-style="botanical" type="button">Botanique &amp; Floral</button>
+<button class="pill-filter px-4 py-2 rounded-full text-xs uppercase font-label-caps tracking-wider transition-all duration-150 bg-surface-container hover:bg-surface-container-high text-on-surface flex-shrink-0" data-style="monolith" type="button">Modern Noir</button>
+<button class="pill-filter px-4 py-2 rounded-full text-xs uppercase font-label-caps tracking-wider transition-all duration-150 bg-surface-container hover:bg-surface-container-high text-on-surface flex-shrink-0" data-style="traditional" type="button">Archival Heritage</button>
+</div>
+<!-- Search Bar & Switcher -->
+<div class="flex items-center gap-3 w-full lg:w-auto justify-between lg:justify-end">
+<div class="relative flex-grow lg:w-72">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-[18px] text-on-surface-variant">search</span>
+<input class="w-full pl-10 pr-4 py-2.5 rounded-lg bg-surface-container-lowest text-on-surface text-body-sm font-body-sm placeholder:text-on-surface-variant/60 focus:outline-none focus:ring-1 focus:ring-secondary transition-shadow shadow-sm" id="templateSearch" placeholder="Search by font, finish, mood..." type="text"/>
+</div>
+<div class="flex items-center rounded-lg bg-surface-container-lowest p-1 shadow-sm">
+<button class="p-2 rounded bg-surface-container text-primary hover:text-secondary transition-colors" id="curatedViewBtn" title="Curated Editorial Monograph View" type="button">
+<span class="material-symbols-outlined text-[20px]">view_quilt</span>
+</button>
+<button class="p-2 rounded text-on-surface-variant hover:text-primary transition-colors" id="gridViewBtn" title="Compact Catalog Grid" type="button">
+<span class="material-symbols-outlined text-[20px]">grid_view</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Curated Feature Monograph 01: Le Jardin Minimaliste -->
+<section class="py-16 lg:py-24 bg-surface">
+<div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin">
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-xl shadow-stone-900/5">
+<div class="grid grid-cols-1 lg:grid-cols-12">
+<!-- Visual Composition: Physical Cotton Letterpress meets Interactive Phone -->
+<div class="lg:col-span-7 relative p-6 sm:p-10 lg:p-14 bg-[#f8f5ee] flex flex-col justify-between overflow-hidden">
+<div class="absolute top-0 right-0 w-96 h-96 rounded-full bg-secondary-fixed/40 blur-3xl -mr-20 -mt-20 pointer-events-none"></div>
+<div class="flex items-center justify-between mb-8 z-10">
+<div class="flex items-center gap-2">
+<span class="px-3 py-1 rounded-full bg-surface-container-lowest text-secondary font-label-caps text-label-caps uppercase tracking-wider shadow-sm">Atelier Spotlight</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-mono">Edition 01 / 24</span>
+</div>
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider">Dual Synchronized</span>
+</div>
+</div>
+<!-- Overlapping Hero Collages -->
+<div class="relative my-8 flex items-center justify-center min-h-[420px] lg:min-h-[480px]">
+<!-- Background Tactile Invitation Flatlay -->
+<div class="w-11/12 md:w-3/4 rounded-xl overflow-hidden shadow-2xl transition-transform duration-500 hover:scale-[1.01]">
+<img alt="Le Jardin Minimaliste printed suite on 600gsm Somerset deckle edge paper" class="w-full h-[360px] md:h-[440px] object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1Vrd2Z2a8jD-lP2-eKDrDgG_hVChIWUZ8OK0JFEwtccz-sF66PONDo26f0NPTdUjk7AbVr9PdZRttM4ypUC3hoJWqkDWz79kFryiOtgwwpp8VeKY8KMkjaXP4qonxBUyUlZuewiXHQW5iFiyluqS14VjLkK2bl2MqbxgD8BqrMrn9ZkL-k0nvbfIIKk_aK2Cmy_iY8FBTChIJjSWkP-Ty5g8ixPJgFjLPNhPu_vzFkGO_PohK1f39I_NQ"/>
+</div>
+<!-- Overlapping Live Mobile Preview Phone -->
+<div class="absolute -bottom-6 right-2 sm:right-6 md:right-10 w-44 sm:w-56 md:w-64 bg-primary rounded-[2.5rem] p-2 shadow-2xl transition-transform duration-500 hover:-translate-y-2">
+<div class="w-full h-auto rounded-[2.2rem] overflow-hidden bg-surface relative">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-4 bg-primary rounded-b-lg z-20"></div>
+<img alt="Digital interactive invitation screen for Le Jardin Minimaliste" class="w-full h-[280px] sm:h-[340px] object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1Uk_idQaUEforydcDBWnlmawnS-8lZu3CD_-r03Ce7el6XYgJGOLZTjFX4QEuS-XbbcpGMadng4Sy4AtrCtkTpjG0Bm6NXKJLs8-l-Vu3OO_ykK40lK4XS1cAwTPORRVySz08mMzyABq1MbJzsQTRjUax8S4jVdcRbWN4J9co_mO_3R8rbXVUh4yPMxzuIY_PdyPN0dmOGWujzwaSFNfz-CI01FpSOW4azA1s4z4R_j11msqjw8UaNKWw"/>
+<div class="absolute bottom-3 left-3 right-3 bg-surface/90 backdrop-blur-md rounded-lg p-2 text-center shadow-md">
+<span class="font-kicker text-[9px] uppercase tracking-widest text-secondary block">Cloud Guest RSVP</span>
+<span class="font-label-caps text-[11px] text-primary">Live Music • Audio On</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Material Spec Badges -->
+<div class="grid grid-cols-3 gap-3 pt-6 z-10">
+<div class="bg-surface-container-lowest/80 backdrop-blur-sm p-3 rounded-lg shadow-sm">
+<span class="block font-kicker text-kicker uppercase text-on-surface-variant">Paper Stock</span>
+<span class="font-body-sm text-body-sm font-semibold text-primary">600 GSM Cotton</span>
+</div>
+<div class="bg-surface-container-lowest/80 backdrop-blur-sm p-3 rounded-lg shadow-sm">
+<span class="block font-kicker text-kicker uppercase text-on-surface-variant">Specialty Finish</span>
+<span class="font-body-sm text-body-sm font-semibold text-primary">Copper Foil &amp; Deboss</span>
+</div>
+<div class="bg-surface-container-lowest/80 backdrop-blur-sm p-3 rounded-lg shadow-sm">
+<span class="block font-kicker text-kicker uppercase text-on-surface-variant">Digital Architecture</span>
+<span class="font-body-sm text-body-sm font-semibold text-primary">Custom URL + RSVP</span>
+</div>
+</div>
+</div>
+<!-- Editorial Narrative & Suite Action Panel -->
+<div class="lg:col-span-5 p-8 sm:p-12 lg:p-16 flex flex-col justify-between bg-surface-container-lowest">
+<div>
+<div class="flex items-center gap-2 mb-3">
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest">Botanical Monolith</span>
+<span class="text-on-surface-variant text-xs">/</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Designed in Paris</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary tracking-tight leading-tight mb-4">
+                Le Jardin Minimaliste
+              </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-6">
+                An understated exploration of French heirloom botanical engravings fused with razor-sharp editorial serifs. Includes our signature digital wax-seal opening ceremony and tactile deckle edge correspondence.
+              </p>
+<!-- Curated Features Bullet List -->
+<div class="space-y-3.5 mb-8">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">music_note</span>
+<div>
+<h3 class="font-body-sm text-body-sm font-semibold text-primary">Curated Ambient Soundscape</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Integrated Spotify and lossless instrumental audio scoring the digital unboxing.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">markunread_mailbox</span>
+<div>
+<h3 class="font-body-sm text-body-sm font-semibold text-primary">Multi-Event RSVP &amp; Dietetics</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Rehearsal dinner, welcome soiree, and main ceremony RSVP tiering with CSV sync.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">verified_user</span>
+<div>
+<h3 class="font-body-sm text-body-sm font-semibold text-primary">Tactile Foil &amp; Blind Deboss Print Set</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Handcrafted in our Brooklyn print room with French-milled envelopes and wax seals.</p>
+</div>
+</div>
+</div>
+<!-- Pricing and Medium Options -->
+<div class="p-4 rounded-xl bg-surface-container-low mb-8 flex items-center justify-between">
+<div>
+<span class="block font-kicker text-kicker uppercase text-secondary">Suite Investment</span>
+<span class="font-headline-sm text-headline-sm text-primary">$49 <span class="text-body-sm font-normal text-on-surface-variant">Digital</span> <span class="text-xs text-on-surface-variant mx-1">•</span> <span class="text-body-sm font-normal text-on-surface-variant">from</span> $14 <span class="text-body-sm font-normal text-on-surface-variant">/ print set</span></span>
+</div>
+<div class="text-right">
+<span class="inline-block px-2.5 py-1 rounded bg-secondary-fixed text-on-secondary-fixed text-[11px] font-label-caps uppercase font-semibold">Ready to Personalize</span>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col sm:flex-row items-center gap-4">
+<a class="w-full sm:w-1/2 py-3.5 px-6 rounded-lg bg-primary text-on-primary text-center font-label-caps text-label-caps uppercase tracking-wider hover:bg-secondary transition-colors duration-200 shadow-sm flex items-center justify-center gap-2" href="#">
+<span>Personalize Design</span>
+<span class="material-symbols-outlined text-[16px]">draw</span>
+</a>
+<a class="w-full sm:w-1/2 py-3.5 px-6 rounded-lg bg-surface-container text-on-surface text-center font-label-caps text-label-caps uppercase tracking-wider hover:bg-surface-container-highest transition-colors duration-200 flex items-center justify-center gap-2" href="#">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Live Interactive Demo</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Curated Collection Asymmetric Gallery (The Monograph Layout) -->
+<section class="py-12 lg:py-20 bg-surface-container-low/40">
+<div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin">
+<!-- Section Intro Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+<div>
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest block mb-2">Architectural Curation</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary tracking-tight">
+            The Autumn / Winter Archive
+          </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          Each template is designed with intentional rhythm: generous line-height, tactile paper simulation, and hyper-customizable layouts.
+        </p>
+</div>
+<!-- Asymmetric Monograph Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start" id="curatedGrid">
+<!-- CARD 01: Margaret & Andrew — Tactile Copper Foil (5 Columns, Tall) -->
+<div class="md:col-span-5 bg-surface-container-lowest rounded-2xl overflow-hidden shadow-md group transition-all duration-300 hover:shadow-xl template-card" data-category="printed" data-style="minimal">
+<div class="relative overflow-hidden aspect-[4/5] bg-[#eae5db]">
+<img alt="Margaret Elizabeth &amp; Andrew James copper debossed monogram on artisanal deckle edge cotton stationery" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1WWLq-Jmq7cUvLyFOZjPa5i6Li8jJgbzahq1nd6hWFMwThLTRJ5ORRm650JbzqLzSWT-qOD1EXKl9mbF_1nkptbOBNdJgX99-yk7E-eCH7f7Itg9BZcMjt1x9qleU9t9-DImrfZ97XsKzss60fKuR-QGCmiaki8J18PaI6erriZZ9zaeCFUxIm3Y50BUy5CnAPSicDldAye34-B0R85m3Su_BasJZw1joGIBgX0M_mb1g1IyOYFao1veQ"/>
+<div class="absolute top-4 left-4 flex flex-wrap gap-2">
+<span class="px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-secondary font-label-caps text-label-caps uppercase">Printed Atelier</span>
+<span class="px-3 py-1 rounded-full bg-primary/90 backdrop-blur-sm text-on-primary font-label-caps text-label-caps uppercase">Copper Foil</span>
+</div>
+<div class="absolute bottom-4 right-4 px-3 py-1 rounded-md bg-surface/90 backdrop-blur-sm font-kicker text-[11px] uppercase text-primary">
+              600 GSM Cotton
+            </div>
+</div>
+<div class="p-6 sm:p-8">
+<div class="flex items-center justify-between mb-2">
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest">Heritage Monogram</span>
+<span class="font-body-sm text-body-sm font-semibold text-primary">From $12 / set</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">
+              Margaret &amp; Andrew
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6 leading-relaxed">
+              Timeless serif typography punctuated with an intertwined heirloom copper-foil crest. Hand-torn deckle edging with archival envelopes.
+            </p>
+<div class="pt-4 flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-xs text-on-surface-variant font-mono">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Min. 50 Sets • 5 Paper Tones</span>
+</div>
+<a class="inline-flex items-center gap-1 font-label-caps text-label-caps uppercase text-primary group-hover:text-secondary transition-colors" href="#">
+<span>View Details</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- CARD 02: Melina & Dayson — Mobile SaaS First (7 Columns, Wide Split) -->
+<div class="md:col-span-7 bg-surface-container-lowest rounded-2xl overflow-hidden shadow-md group transition-all duration-300 hover:shadow-xl template-card" data-category="digital" data-style="elegant">
+<div class="grid grid-cols-1 sm:grid-cols-12 h-full">
+<div class="sm:col-span-6 relative aspect-[3/4] sm:aspect-auto overflow-hidden bg-[#e8e4dc]">
+<img alt="Melina and Dayson modern clean digital wedding invitation displaying date and venue details on mobile glass surface" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1Uk_idQaUEforydcDBWnlmawnS-8lZu3CD_-r03Ce7el6XYgJGOLZTjFX4QEuS-XbbcpGMadng4Sy4AtrCtkTpjG0Bm6NXKJLs8-l-Vu3OO_ykK40lK4XS1cAwTPORRVySz08mMzyABq1MbJzsQTRjUax8S4jVdcRbWN4J9co_mO_3R8rbXVUh4yPMxzuIY_PdyPN0dmOGWujzwaSFNfz-CI01FpSOW4azA1s4z4R_j11msqjw8UaNKWw"/>
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 rounded-full bg-primary text-on-primary font-label-caps text-label-caps uppercase">Digital SaaS Suite</span>
+</div>
+<div class="absolute bottom-4 left-4 right-4 bg-surface/90 backdrop-blur-md rounded-lg p-2.5 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">rsvp</span>
+<span class="font-label-caps text-[11px] text-primary">Direct SMS &amp; WhatsApp RSVP</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">smartphone</span>
+</div>
+</div>
+<div class="sm:col-span-6 p-6 sm:p-8 lg:p-10 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest">SaaS Invitation Suite</span>
+<span class="text-on-surface-variant text-xs">•</span>
+<span class="font-body-sm text-xs text-secondary font-semibold">Instant Publish</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">
+                  Melina &amp; Dayson
+                </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-6">
+                  Structured architectural lines, warm neutral beige accents, and fluid mobile interactions designed for discerning couples seeking seamless RSVP management.
+                </p>
+<div class="space-y-2 mb-6">
+<div class="flex items-center gap-2 text-xs font-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">check</span>
+<span>Interactive Google &amp; Apple Map Pin</span>
+</div>
+<div class="flex items-center gap-2 text-xs font-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">check</span>
+<span>Live Registry &amp; Honeymoon Fund Sync</span>
+</div>
+<div class="flex items-center gap-2 text-xs font-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">check</span>
+<span>Animated Unfolding Envelope Envelope</span>
+</div>
+</div>
+</div>
+<div>
+<div class="flex items-baseline justify-between mb-4">
+<span class="font-headline-sm text-headline-sm text-primary">$49</span>
+<span class="font-kicker text-kicker uppercase text-on-surface-variant">One-Time License</span>
+</div>
+<div class="flex items-center gap-3">
+<a class="w-full py-2.5 px-4 rounded-lg bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-wider text-center hover:bg-secondary transition-colors" href="#">
+                    Preview Live
+                  </a>
+<a class="p-2.5 rounded-lg bg-surface-container text-primary hover:bg-secondary-fixed transition-colors" href="#" title="Bookmark Suite">
+<span class="material-symbols-outlined text-[20px]">bookmark</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- CARD 03: Emily & James — Sage Silk Ribbon & Gold Seal (7 Columns, Wide Flatlay) -->
+<div class="md:col-span-7 bg-surface-container-lowest rounded-2xl overflow-hidden shadow-md group transition-all duration-300 hover:shadow-xl template-card" data-category="harmonized" data-style="botanical">
+<div class="relative aspect-[16/10] overflow-hidden bg-[#ded8cd]">
+<img alt="Emily &amp; James artisan stationery ensemble with sage raw silk ribbon, wax seal impression, and hand calligraphy on olive branch table" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1WaA4--TJ8VRSCd8uZcoCXOtl6VWqYymtLnihBECrV2Wiv0QnZYQm6Tue9eFTL73gfXpQ5z8A_riMcqChCVEqCHdb7v3oBHO9JlA0u6FNUQOfANNuYLc8Dk8CclDOgZXIfqdwWRDCNhcwGx61gv_R6at3ynnbGJNxgjokMgtnN1Z1Hz9mdnuKI-PbyzANA91YOo3Qvhisv1EyiAqluuAAjNqXnllbw72FfUqU6th61XzfnH34TaBReauQ"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="px-3 py-1 rounded-full bg-secondary text-on-secondary font-label-caps text-label-caps uppercase">Harmonized Edition</span>
+<span class="px-3 py-1 rounded-full bg-surface-container-lowest/90 text-primary font-label-caps text-label-caps uppercase">Silk Ribbon</span>
+</div>
+<div class="absolute bottom-4 left-4 px-3 py-1 rounded-md bg-surface/95 backdrop-blur-sm text-primary font-kicker text-[11px] uppercase">
+              Physical + Digital Sync Included
+            </div>
+</div>
+<div class="p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest">Botanical &amp; Raw Silk</span>
+<span class="text-xs text-on-surface-variant">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Edition 03</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-1">
+                Emily &amp; James
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+                Hand-dyed organic silk habotai ribbon with botanical brass seal impression. Pairs seamlessly with its matching mobile unboxing invitation.
+              </p>
+</div>
+<div class="flex flex-col sm:items-end gap-2 flex-shrink-0">
+<span class="font-headline-sm text-headline-sm text-primary">From $16 / set</span>
+<a class="px-5 py-2.5 rounded-lg bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-wider hover:bg-secondary transition-colors text-center" href="#">
+                Configure Suite
+              </a>
+</div>
+</div>
+</div>
+<!-- CARD 04: Sarah & James — Complete Botanical Suite (5 Columns) -->
+<div class="md:col-span-5 bg-surface-container-lowest rounded-2xl overflow-hidden shadow-md group transition-all duration-300 hover:shadow-xl template-card" data-category="printed" data-style="botanical">
+<div class="relative aspect-[4/5] overflow-hidden bg-[#eeeae3]">
+<img alt="Sarah Elizabeth &amp; James Alexander stationery suite with peach ranunculus flowers and custom envelope liner" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1Vrd2Z2a8jD-lP2-eKDrDgG_hVChIWUZ8OK0JFEwtccz-sF66PONDo26f0NPTdUjk7AbVr9PdZRttM4ypUC3hoJWqkDWz79kFryiOtgwwpp8VeKY8KMkjaXP4qonxBUyUlZuewiXHQW5iFiyluqS14VjLkK2bl2MqbxgD8BqrMrn9ZkL-k0nvbfIIKk_aK2Cmy_iY8FBTChIJjSWkP-Ty5g8ixPJgFjLPNhPu_vzFkGO_PohK1f39I_NQ"/>
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 rounded-full bg-surface-container-lowest/90 text-secondary font-label-caps text-label-caps uppercase">Full Ensemble</span>
+</div>
+<div class="absolute bottom-4 right-4 bg-primary text-on-primary px-3 py-1 rounded text-xs font-mono">
+              Foil Pressed
+            </div>
+</div>
+<div class="p-6 sm:p-8">
+<div class="flex items-center justify-between mb-2">
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest">Sonoma Floral Suite</span>
+<span class="font-body-sm text-body-sm font-semibold text-primary">From $15 / set</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">
+              Sarah &amp; James
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4 leading-relaxed">
+              Foil-pressed rose gold lettering nestled on deckled cotton, framed by ranunculus florals and a vintage illustrated floral envelope liner.
+            </p>
+<div class="flex items-center justify-between pt-4">
+<span class="font-kicker text-[11px] uppercase text-on-surface-variant">Includes RSVP &amp; Details Card</span>
+<a class="font-label-caps text-label-caps uppercase text-primary group-hover:text-secondary transition-colors flex items-center gap-1" href="#">
+<span>Explore Specimen</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Large-Scale Intermezzo Feature: The Kyoto Whisper & Typography Monograph -->
+<section class="py-20 lg:py-32 bg-[#121110] text-on-tertiary relative overflow-hidden">
+<!-- Subtle Background Architectural Lines -->
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<div class="w-full h-full" style="background-image: radial-gradient(#e3d4be 1px, transparent 1px); background-size: 36px 36px;"></div>
+</div>
+<div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin relative z-10">
+<!-- Monograph Overline -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-12 mb-12">
+<div class="flex items-center gap-4">
+<span class="font-kicker text-kicker uppercase text-secondary-fixed tracking-widest">Curator's Master Study</span>
+<span class="w-8 h-px bg-on-tertiary/20"></span>
+<span class="font-body-sm text-body-sm text-on-tertiary/60">Monolith Noir Edition</span>
+</div>
+<div class="flex items-center gap-6">
+<span class="font-kicker text-kicker uppercase text-on-tertiary/70">Atelier Archival Code: NOCT-88</span>
+<a class="inline-flex items-center gap-2 text-secondary-fixed hover:text-white font-label-caps text-label-caps uppercase tracking-wider transition-colors" href="#">
+<span>Read Typographic Essay</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Editorial Specimen Column Left -->
+<div class="lg:col-span-5 flex flex-col justify-between space-y-8">
+<div>
+<span class="text-secondary-fixed font-kicker text-kicker uppercase tracking-widest block mb-3">Nocturne Series</span>
+<h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-white tracking-tight leading-none mb-6">
+              Kyoto <span class="italic text-[#e3d4be] font-normal">Whisper</span>
+</h2>
+<p class="font-body-lg text-body-md md:text-body-lg text-on-tertiary/80 leading-relaxed mb-8">
+              A high-fashion exploration of restrained Japanese wabi-sabi minimalism paired with dramatic high-contrast typography. Conceived for evening celebrations in gallery spaces, glasshouses, and historic stone villas.
+            </p>
+</div>
+<!-- Real Couple Palette & Material Swatches -->
+<div class="bg-white/5 backdrop-blur-md rounded-xl p-6">
+<span class="font-kicker text-kicker uppercase text-secondary-fixed block mb-4">Curated Material Palette</span>
+<div class="flex items-center gap-3 mb-4">
+<div class="w-12 h-12 rounded-lg bg-[#121110] shadow-md flex items-center justify-center text-[10px] font-mono text-white/70">#121110</div>
+<div class="w-12 h-12 rounded-lg bg-[#e3d4be] shadow-md flex items-center justify-center text-[10px] font-mono text-[#121110]">#E3D4BE</div>
+<div class="w-12 h-12 rounded-lg bg-[#8c4d37] shadow-md flex items-center justify-center text-[10px] font-mono text-white">#8C4D37</div>
+<div class="w-12 h-12 rounded-lg bg-[#f6f3ed] shadow-md flex items-center justify-center text-[10px] font-mono text-[#121110]">#F6F3ED</div>
+</div>
+<p class="font-body-sm text-xs text-on-tertiary/60">
+              Charcoal Noir cardstock • Champagne blind deboss • Terracotta sealing wax • Mulberry paper translucent jacket.
+            </p>
+</div>
+<!-- Action Pair -->
+<div class="flex flex-col sm:flex-row gap-4 pt-2">
+<a class="px-8 py-4 rounded-lg bg-[#e3d4be] text-[#121110] font-label-caps text-label-caps uppercase tracking-wider font-semibold hover:bg-white transition-colors text-center shadow-lg" href="#">
+              Explore Kyoto Whisper
+            </a>
+<a class="px-6 py-4 rounded-lg bg-transparent text-white hover:bg-white/10 transition-colors font-label-caps text-label-caps uppercase tracking-wider text-center flex items-center justify-center gap-2" href="#">
+<span class="material-symbols-outlined text-[18px]">play_circle</span>
+<span>Watch Experience</span>
+</a>
+</div>
+</div>
+<!-- Visual Showcase Column Right (Asymmetric Mosaic) -->
+<div class="lg:col-span-7">
+<div class="relative">
+<!-- Main Large Artboard -->
+<div class="rounded-2xl overflow-hidden shadow-2xl bg-white/5">
+<div class="p-8 sm:p-12 text-center bg-gradient-to-b from-white/10 to-transparent">
+<span class="font-kicker text-kicker uppercase tracking-widest text-secondary-fixed block mb-4">Typographic Specimen 24pt / 60pt</span>
+<p class="font-headline-lg text-3xl sm:text-5xl text-[#e3d4be] italic mb-4 leading-tight">
+                  “Together in quiet reverence.”
+                </p>
+<div class="w-16 h-px bg-secondary-fixed/40 mx-auto my-6"></div>
+<div class="flex justify-center items-center gap-8 text-on-tertiary/60 text-xs font-mono">
+<span>PLAYFAIR DISPLAY</span>
+<span>•</span>
+<span>PLUS JAKARTA SANS</span>
+<span>•</span>
+<span>CUSTOM CREST MONOGRAM</span>
+</div>
+</div>
+</div>
+<!-- Overlapping Detail Inset Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 -mt-8 px-4">
+<div class="bg-[#1c1b1a] rounded-xl p-5 shadow-xl">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]">touch_app</span>
+<span class="font-label-caps text-label-caps uppercase text-white">Digital Touchpoints</span>
+</div>
+<p class="font-body-sm text-xs text-on-tertiary/70 leading-relaxed">
+                  Interactive countdown timer with localized time zone switching for international destination attendees.
+                </p>
+</div>
+<div class="bg-[#1c1b1a] rounded-xl p-5 shadow-xl">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]">auto_awesome</span>
+<span class="font-label-caps text-label-caps uppercase text-white">Blind Letterpress</span>
+</div>
+<p class="font-body-sm text-xs text-on-tertiary/70 leading-relaxed">
+                  Deep 3D deboss impression on 800gsm duplex board with edge gilding in matte champagne foil.
+                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Secondary Curated Exhibition Row (Varied Aesthetics) -->
+<section class="py-20 lg:py-28 bg-surface">
+<div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-14">
+<div>
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest block mb-2">Extended Catalog</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary tracking-tight">
+            Tailored for Every Celebration Architecture
+          </h2>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-xs font-body-sm text-on-surface-variant">Showing all curated templates</span>
+</div>
+</div>
+<!-- 3-Column Balanced Editorial Showcase -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- ITEM 01: Sienna & Solstice -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group flex flex-col justify-between">
+<div>
+<div class="relative aspect-[4/3] bg-surface-container overflow-hidden">
+<img alt="Sienna &amp; Solstice terracotta letterpress invitation suite" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1Vrd2Z2a8jD-lP2-eKDrDgG_hVChIWUZ8OK0JFEwtccz-sF66PONDo26f0NPTdUjk7AbVr9PdZRttM4ypUC3hoJWqkDWz79kFryiOtgwwpp8VeKY8KMkjaXP4qonxBUyUlZuewiXHQW5iFiyluqS14VjLkK2bl2MqbxgD8BqrMrn9ZkL-k0nvbfIIKk_aK2Cmy_iY8FBTChIJjSWkP-Ty5g8ixPJgFjLPNhPu_vzFkGO_PohK1f39I_NQ"/>
+<span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-surface/90 backdrop-blur-sm text-primary font-label-caps text-[10px] uppercase font-semibold">
+                Terracotta &amp; Warm Ochre
+              </span>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-1">
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest">Mediterranean Warmth</span>
+<span class="font-mono text-xs text-primary font-semibold">$49 / $14+</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Sienna &amp; Solstice</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Earthy terracotta tones paired with sun-drenched photography layouts and relaxed editorial styling for al fresco celebrations.
+              </p>
+</div>
+</div>
+<div class="px-6 pb-6 pt-2 flex items-center justify-between">
+<span class="font-body-sm text-xs text-on-surface-variant font-mono">Digital + Physical</span>
+<a class="text-primary hover:text-secondary font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-1" href="#">
+<span>View Suite</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- ITEM 02: Copenhagen Reverie -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group flex flex-col justify-between">
+<div>
+<div class="relative aspect-[4/3] bg-surface-container overflow-hidden">
+<img alt="Copenhagen Reverie ultra-clean Scandinavian layout" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1Uk_idQaUEforydcDBWnlmawnS-8lZu3CD_-r03Ce7el6XYgJGOLZTjFX4QEuS-XbbcpGMadng4Sy4AtrCtkTpjG0Bm6NXKJLs8-l-Vu3OO_ykK40lK4XS1cAwTPORRVySz08mMzyABq1MbJzsQTRjUax8S4jVdcRbWN4J9co_mO_3R8rbXVUh4yPMxzuIY_PdyPN0dmOGWujzwaSFNfz-CI01FpSOW4azA1s4z4R_j11msqjw8UaNKWw"/>
+<span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-surface/90 backdrop-blur-sm text-primary font-label-caps text-[10px] uppercase font-semibold">
+                Pure Minimalist
+              </span>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-1">
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest">Nordic Restraint</span>
+<span class="font-mono text-xs text-primary font-semibold">$49 Digital</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Copenhagen Reverie</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Hyper-focused on typographic breathing room, micro-grid alignment, and rapid one-tap RSVP confirmations.
+              </p>
+</div>
+</div>
+<div class="px-6 pb-6 pt-2 flex items-center justify-between">
+<span class="font-body-sm text-xs text-on-surface-variant font-mono">Digital Native</span>
+<a class="text-primary hover:text-secondary font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-1" href="#">
+<span>View Suite</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- ITEM 03: Atelier Heritage -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group flex flex-col justify-between">
+<div>
+<div class="relative aspect-[4/3] bg-surface-container overflow-hidden">
+<img alt="Atelier Heritage archival letterpress card with blind deboss crest" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1WWLq-Jmq7cUvLyFOZjPa5i6Li8jJgbzahq1nd6hWFMwThLTRJ5ORRm650JbzqLzSWT-qOD1EXKl9mbF_1nkptbOBNdJgX99-yk7E-eCH7f7Itg9BZcMjt1x9qleU9t9-DImrfZ97XsKzss60fKuR-QGCmiaki8J18PaI6erriZZ9zaeCFUxIm3Y50BUy5CnAPSicDldAye34-B0R85m3Su_BasJZw1joGIBgX0M_mb1g1IyOYFao1veQ"/>
+<span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-surface/90 backdrop-blur-sm text-primary font-label-caps text-[10px] uppercase font-semibold">
+                Archival Letterpress
+              </span>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-1">
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest">Royal Heraldry</span>
+<span class="font-mono text-xs text-primary font-semibold">From $16 / set</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Atelier Heritage</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Designed after classical British court invitations, featuring hand-beveled gilded edges and bespoke Latin family motto rendering.
+              </p>
+</div>
+</div>
+<div class="px-6 pb-6 pt-2 flex items-center justify-between">
+<span class="font-body-sm text-xs text-on-surface-variant font-mono">Fine Print Special</span>
+<a class="text-primary hover:text-secondary font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-1" href="#">
+<span>View Suite</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Sample Swatch Box & Bespoke Crest Customization Callout -->
+<section class="py-20 lg:py-28 bg-[#f8f5ee] relative border-t border-b border-surface-container-highest/60" id="catalog-grid-section"><div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin"><div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12"><div><div class="flex items-center gap-2 mb-2"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-kicker text-kicker uppercase text-secondary tracking-widest">The Complete Atelier Directory • 48 Master Suites</span></div><h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary tracking-tight">Explore More Designs</h2><p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mt-2 leading-relaxed">Browse our curated collection and find a style that matches your wedding. Every edition is engineered for fluid cloud RSVPs and high-touch artisan print reproduction.</p></div><div class="flex flex-col sm:flex-row sm:items-center gap-3"><span class="px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-primary font-label-caps text-xs border border-surface-container-high shadow-sm flex items-center gap-2"><span class="material-symbols-outlined text-[15px] text-secondary">auto_awesome</span><span id="catalogCountLabel">Showing 16 of 48 Curated Archival Suites</span></span></div></div><div class="bg-surface-container-lowest rounded-2xl p-4 sm:p-6 shadow-sm border border-surface-container-high mb-10"><div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-4 border-b border-surface-container-high"><div class="flex items-center gap-2 overflow-x-auto pb-2 lg:pb-0 scrollbar-none" id="catStyleTabs"><button class="cat-pill-btn px-4 py-2 rounded-full text-xs uppercase font-label-caps tracking-wider transition-all duration-150 bg-primary text-on-primary flex-shrink-0" data-cat-style="all" type="button">All</button><button class="cat-pill-btn px-4 py-2 rounded-full text-xs uppercase font-label-caps tracking-wider transition-all duration-150 bg-surface-container hover:bg-surface-container-high text-on-surface flex-shrink-0" data-cat-style="minimal" type="button">Minimal</button><button class="cat-pill-btn px-4 py-2 rounded-full text-xs uppercase font-label-caps tracking-wider transition-all duration-150 bg-surface-container hover:bg-surface-container-high text-on-surface flex-shrink-0" data-cat-style="elegant" type="button">Elegant</button><button class="cat-pill-btn px-4 py-2 rounded-full text-xs uppercase font-label-caps tracking-wider transition-all duration-150 bg-surface-container hover:bg-surface-container-high text-on-surface flex-shrink-0" data-cat-style="floral" type="button">Floral</button><button class="cat-pill-btn px-4 py-2 rounded-full text-xs uppercase font-label-caps tracking-wider transition-all duration-150 bg-surface-container hover:bg-surface-container-high text-on-surface flex-shrink-0" data-cat-style="rustic" type="button">Rustic</button><button class="cat-pill-btn px-4 py-2 rounded-full text-xs uppercase font-label-caps tracking-wider transition-all duration-150 bg-surface-container hover:bg-surface-container-high text-on-surface flex-shrink-0" data-cat-style="modern" type="button">Modern</button><button class="cat-pill-btn px-4 py-2 rounded-full text-xs uppercase font-label-caps tracking-wider transition-all duration-150 bg-surface-container hover:bg-surface-container-high text-on-surface flex-shrink-0" data-cat-style="manga" type="button">Manga</button><button class="cat-pill-btn px-4 py-2 rounded-full text-xs uppercase font-label-caps tracking-wider transition-all duration-150 bg-surface-container hover:bg-surface-container-high text-on-surface flex-shrink-0" data-cat-style="traditional" type="button">Traditional</button></div><div class="relative flex-grow lg:max-w-xs"><span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-[18px] text-on-surface-variant">search</span><input class="w-full pl-10 pr-4 py-2 rounded-lg bg-surface-container-low text-on-surface text-body-sm font-body-sm placeholder:text-on-surface-variant/60 focus:outline-none focus:ring-1 focus:ring-secondary transition-shadow border-0" id="catalogSearchInput" placeholder="Search templates by name, floral, typography..." type="text"/></div></div><div class="flex flex-wrap items-center justify-between gap-4 pt-4 text-xs font-body-sm"><div class="flex items-center gap-2"><span class="font-kicker text-kicker uppercase text-on-surface-variant">Tier:</span><select class="bg-surface-container-low text-on-surface font-label-caps text-xs py-1.5 px-3 rounded-md focus:outline-none focus:ring-1 focus:ring-secondary border-0" id="catalogTierSelect"><option value="all">All Tiers</option><option value="signature">Signature Suite ($49)</option><option value="bespoke">Bespoke Atelier (from $52/suite)</option></select></div><div class="flex items-center gap-2"><span class="font-kicker text-kicker uppercase text-on-surface-variant">Sort:</span><select class="bg-surface-container-low text-on-surface font-label-caps text-xs py-1.5 px-3 rounded-md focus:outline-none focus:ring-1 focus:ring-secondary border-0" id="catalogSortSelect"><option value="latest">Latest Releases</option><option value="popular">Most Popular</option><option value="price-high">Price: High to Low</option><option value="price-low">Price: Low to High</option></select><button class="text-secondary hover:text-primary font-label-caps text-xs uppercase underline ml-2" id="catalogResetFilters" type="button">Reset</button></div></div></div><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="catalogCardsGrid"><div class="catalog-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between" data-category="signature" data-price="49" data-style="minimal"><div class="relative aspect-[3/4] bg-surface-container overflow-hidden"><img alt="Aura Blanche wedding invitation" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1Uk_idQaUEforydcDBWnlmawnS-8lZu3CD_-r03Ce7el6XYgJGOLZTjFX4QEuS-XbbcpGMadng4Sy4AtrCtkTpjG0Bm6NXKJLs8-l-Vu3OO_ykK40lK4XS1cAwTPORRVySz08mMzyABq1MbJzsQTRjUax8S4jVdcRbWN4J9co_mO_3R8rbXVUh4yPMxzuIY_PdyPN0dmOGWujzwaSFNfz-CI01FpSOW4azA1s4z4R_j11msqjw8UaNKWw"/><div class="absolute top-3 left-3 flex gap-1.5"><span class="px-2.5 py-0.5 rounded-full bg-surface/90 backdrop-blur-sm text-primary font-label-caps text-[10px] uppercase font-semibold">Minimal</span></div><div class="absolute inset-0 bg-primary/70 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-3 p-4"><a class="w-full py-2 px-4 rounded bg-white text-primary font-label-caps text-xs uppercase text-center hover:bg-[#e3d4be] transition-colors" href="#">Live Preview</a><a class="w-full py-2 px-4 rounded bg-secondary text-white font-label-caps text-xs uppercase text-center hover:bg-secondary/90 transition-colors" href="#">Use This Design</a></div></div><div class="p-5 flex flex-col justify-between flex-grow"><div><div class="flex items-center justify-between mb-1"><span class="font-kicker text-kicker uppercase text-secondary">01 • Monolith</span><span class="font-mono text-xs font-semibold text-primary">$49</span></div><h3 class="font-headline-sm text-lg text-primary mb-1">Aura Blanche</h3><p class="font-body-sm text-xs text-on-surface-variant line-clamp-2 leading-relaxed">Architectural whitespace and high-contrast typography designed for contemporary city galas.</p></div><div class="pt-4 mt-3 border-t border-surface-container flex items-center justify-between text-xs"><span class="text-on-surface-variant font-mono text-[11px]">Included in Signature</span><span class="material-symbols-outlined text-[16px] text-secondary">touch_app</span></div></div></div><div class="catalog-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between" data-category="bespoke" data-price="58" data-style="elegant"><div class="relative aspect-[3/4] bg-surface-container overflow-hidden"><img alt="Château de Chantilly classical French stationery suite" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1WWLq-Jmq7cUvLyFOZjPa5i6Li8jJgbzahq1nd6hWFMwThLTRJ5ORRm650JbzqLzSWT-qOD1EXKl9mbF_1nkptbOBNdJgX99-yk7E-eCH7f7Itg9BZcMjt1x9qleU9t9-DImrfZ97XsKzss60fKuR-QGCmiaki8J18PaI6erriZZ9zaeCFUxIm3Y50BUy5CnAPSicDldAye34-B0R85m3Su_BasJZw1joGIBgX0M_mb1g1IyOYFao1veQ"/><div class="absolute top-3 left-3 flex gap-1.5"><span class="px-2.5 py-0.5 rounded-full bg-surface/90 backdrop-blur-sm text-primary font-label-caps text-[10px] uppercase font-semibold">Elegant</span></div><div class="absolute inset-0 bg-primary/70 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-3 p-4"><a class="w-full py-2 px-4 rounded bg-white text-primary font-label-caps text-xs uppercase text-center hover:bg-[#e3d4be] transition-colors" href="#">Live Preview</a><a class="w-full py-2 px-4 rounded bg-secondary text-white font-label-caps text-xs uppercase text-center hover:bg-secondary/90 transition-colors" href="#">Use This Design</a></div></div><div class="p-5 flex flex-col justify-between flex-grow"><div><div class="flex items-center justify-between mb-1"><span class="font-kicker text-kicker uppercase text-secondary">02 • Archival</span><span class="font-mono text-xs font-semibold text-primary">From $58/suite</span></div><h3 class="font-headline-sm text-lg text-primary mb-1">Château de Chantilly</h3><p class="font-body-sm text-xs text-on-surface-variant line-clamp-2 leading-relaxed">Classical French grand estate layout with gilded border deboss and royal RSVP formatting.</p></div><div class="pt-4 mt-3 border-t border-surface-container flex items-center justify-between text-xs"><span class="text-on-surface-variant font-mono text-[11px]">Bespoke Atelier</span><span class="material-symbols-outlined text-[16px] text-secondary">touch_app</span></div></div></div><div class="catalog-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between" data-category="signature" data-price="49" data-style="floral"><div class="relative aspect-[3/4] bg-surface-container overflow-hidden"><img alt="Botanique Vivace botanical floral suite" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1Vrd2Z2a8jD-lP2-eKDrDgG_hVChIWUZ8OK0JFEwtccz-sF66PONDo26f0NPTdUjk7AbVr9PdZRttM4ypUC3hoJWqkDWz79kFryiOtgwwpp8VeKY8KMkjaXP4qonxBUyUlZuewiXHQW5iFiyluqS14VjLkK2bl2MqbxgD8BqrMrn9ZkL-k0nvbfIIKk_aK2Cmy_iY8FBTChIJjSWkP-Ty5g8ixPJgFjLPNhPu_vzFkGO_PohK1f39I_NQ"/><div class="absolute top-3 left-3 flex gap-1.5"><span class="px-2.5 py-0.5 rounded-full bg-surface/90 backdrop-blur-sm text-primary font-label-caps text-[10px] uppercase font-semibold">Floral</span></div><div class="absolute inset-0 bg-primary/70 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-3 p-4"><a class="w-full py-2 px-4 rounded bg-white text-primary font-label-caps text-xs uppercase text-center hover:bg-[#e3d4be] transition-colors" href="#">Live Preview</a><a class="w-full py-2 px-4 rounded bg-secondary text-white font-label-caps text-xs uppercase text-center hover:bg-secondary/90 transition-colors" href="#">Use This Design</a></div></div><div class="p-5 flex flex-col justify-between flex-grow"><div><div class="flex items-center justify-between mb-1"><span class="font-kicker text-kicker uppercase text-secondary">03 • Herbarium</span><span class="font-mono text-xs font-semibold text-primary">$49</span></div><h3 class="font-headline-sm text-lg text-primary mb-1">Botanique Vivace</h3><p class="font-body-sm text-xs text-on-surface-variant line-clamp-2 leading-relaxed">Pressed meadow florals and delicate script paired with fluid animated unboxing sequence.</p></div><div class="pt-4 mt-3 border-t border-surface-container flex items-center justify-between text-xs"><span class="text-on-surface-variant font-mono text-[11px]">Included in Signature</span><span class="material-symbols-outlined text-[16px] text-secondary">touch_app</span></div></div></div><div class="catalog-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between" data-category="signature" data-price="49" data-style="rustic"><div class="relative aspect-[3/4] bg-surface-container overflow-hidden"><img alt="Provence Lavender rustic stationery suite" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1WaA4--TJ8VRSCd8uZcoCXOtl6VWqYymtLnihBECrV2Wiv0QnZYQm6Tue9eFTL73gfXpQ5z8A_riMcqChCVEqCHdb7v3oBHO9JlA0u6FNUQOfANNuYLc8Dk8CclDOgZXIfqdwWRDCNhcwGx61gv_R6at3ynnbGJNxgjokMgtnN1Z1Hz9mdnuKI-PbyzANA91YOo3Qvhisv1EyiAqluuAAjNqXnllbw72FfUqU6th61XzfnH34TaBReauQ"/><div class="absolute top-3 left-3 flex gap-1.5"><span class="px-2.5 py-0.5 rounded-full bg-surface/90 backdrop-blur-sm text-primary font-label-caps text-[10px] uppercase font-semibold">Rustic</span></div><div class="absolute inset-0 bg-primary/70 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-3 p-4"><a class="w-full py-2 px-4 rounded bg-white text-primary font-label-caps text-xs uppercase text-center hover:bg-[#e3d4be] transition-colors" href="#">Live Preview</a><a class="w-full py-2 px-4 rounded bg-secondary text-white font-label-caps text-xs uppercase text-center hover:bg-secondary/90 transition-colors" href="#">Use This Design</a></div></div><div class="p-5 flex flex-col justify-between flex-grow"><div><div class="flex items-center justify-between mb-1"><span class="font-kicker text-kicker uppercase text-secondary">04 • Countryside</span><span class="font-mono text-xs font-semibold text-primary">$49</span></div><h3 class="font-headline-sm text-lg text-primary mb-1">Provence Lavender</h3><p class="font-body-sm text-xs text-on-surface-variant line-clamp-2 leading-relaxed">Natural parchment texture, warm botanical illustrations, and relaxed outdoor weekend itinerary.</p></div><div class="pt-4 mt-3 border-t border-surface-container flex items-center justify-between text-xs"><span class="text-on-surface-variant font-mono text-[11px]">Included in Signature</span><span class="material-symbols-outlined text-[16px] text-secondary">touch_app</span></div></div></div><div class="catalog-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between" data-category="bespoke" data-price="64" data-style="modern"><div class="relative aspect-[3/4] bg-surface-container overflow-hidden"><img alt="Kyoto Monochrome modern dark suite" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1Uk_idQaUEforydcDBWnlmawnS-8lZu3CD_-r03Ce7el6XYgJGOLZTjFX4QEuS-XbbcpGMadng4Sy4AtrCtkTpjG0Bm6NXKJLs8-l-Vu3OO_ykK40lK4XS1cAwTPORRVySz08mMzyABq1MbJzsQTRjUax8S4jVdcRbWN4J9co_mO_3R8rbXVUh4yPMxzuIY_PdyPN0dmOGWujzwaSFNfz-CI01FpSOW4azA1s4z4R_j11msqjw8UaNKWw"/><div class="absolute top-3 left-3 flex gap-1.5"><span class="px-2.5 py-0.5 rounded-full bg-surface/90 backdrop-blur-sm text-primary font-label-caps text-[10px] uppercase font-semibold">Modern</span></div><div class="absolute inset-0 bg-primary/70 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-3 p-4"><a class="w-full py-2 px-4 rounded bg-white text-primary font-label-caps text-xs uppercase text-center hover:bg-[#e3d4be] transition-colors" href="#">Live Preview</a><a class="w-full py-2 px-4 rounded bg-secondary text-white font-label-caps text-xs uppercase text-center hover:bg-secondary/90 transition-colors" href="#">Use This Design</a></div></div><div class="p-5 flex flex-col justify-between flex-grow"><div><div class="flex items-center justify-between mb-1"><span class="font-kicker text-kicker uppercase text-secondary">05 • Wabi-Sabi</span><span class="font-mono text-xs font-semibold text-primary">From $64/suite</span></div><h3 class="font-headline-sm text-lg text-primary mb-1">Kyoto Monochrome</h3><p class="font-body-sm text-xs text-on-surface-variant line-clamp-2 leading-relaxed">Charcoal board with champagne deboss and bilingual English-Japanese typographic harmony.</p></div><div class="pt-4 mt-3 border-t border-surface-container flex items-center justify-between text-xs"><span class="text-on-surface-variant font-mono text-[11px]">Bespoke Atelier</span><span class="material-symbols-outlined text-[16px] text-secondary">touch_app</span></div></div></div><div class="catalog-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between" data-category="signature" data-price="49" data-style="manga"><div class="relative aspect-[3/4] bg-surface-container overflow-hidden"><img alt="Komorebi and Sakura artistic Japanese aesthetic suite" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1Vrd2Z2a8jD-lP2-eKDrDgG_hVChIWUZ8OK0JFEwtccz-sF66PONDo26f0NPTdUjk7AbVr9PdZRttM4ypUC3hoJWqkDWz79kFryiOtgwwpp8VeKY8KMkjaXP4qonxBUyUlZuewiXHQW5iFiyluqS14VjLkK2bl2MqbxgD8BqrMrn9ZkL-k0nvbfIIKk_aK2Cmy_iY8FBTChIJjSWkP-Ty5g8ixPJgFjLPNhPu_vzFkGO_PohK1f39I_NQ"/><div class="absolute top-3 left-3 flex gap-1.5"><span class="px-2.5 py-0.5 rounded-full bg-surface/90 backdrop-blur-sm text-primary font-label-caps text-[10px] uppercase font-semibold">Manga</span></div><div class="absolute inset-0 bg-primary/70 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-3 p-4"><a class="w-full py-2 px-4 rounded bg-white text-primary font-label-caps text-xs uppercase text-center hover:bg-[#e3d4be] transition-colors" href="#">Live Preview</a><a class="w-full py-2 px-4 rounded bg-secondary text-white font-label-caps text-xs uppercase text-center hover:bg-secondary/90 transition-colors" href="#">Use This Design</a></div></div><div class="p-5 flex flex-col justify-between flex-grow"><div><div class="flex items-center justify-between mb-1"><span class="font-kicker text-kicker uppercase text-secondary">06 • Illustrative</span><span class="font-mono text-xs font-semibold text-primary">$49</span></div><h3 class="font-headline-sm text-lg text-primary mb-1">Komorebi &amp; Sakura</h3><p class="font-body-sm text-xs text-on-surface-variant line-clamp-2 leading-relaxed">Delicate anime watercolor vignettes and poetic Japanese story scroll transitions.</p></div><div class="pt-4 mt-3 border-t border-surface-container flex items-center justify-between text-xs"><span class="text-on-surface-variant font-mono text-[11px]">Included in Signature</span><span class="material-symbols-outlined text-[16px] text-secondary">touch_app</span></div></div></div><div class="catalog-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between" data-category="bespoke" data-price="56" data-style="traditional"><div class="relative aspect-[3/4] bg-surface-container overflow-hidden"><img alt="Palazzo Veneziano classical Italian stationery suite" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1WWLq-Jmq7cUvLyFOZjPa5i6Li8jJgbzahq1nd6hWFMwThLTRJ5ORRm650JbzqLzSWT-qOD1EXKl9mbF_1nkptbOBNdJgX99-yk7E-eCH7f7Itg9BZcMjt1x9qleU9t9-DImrfZ97XsKzss60fKuR-QGCmiaki8J18PaI6erriZZ9zaeCFUxIm3Y50BUy5CnAPSicDldAye34-B0R85m3Su_BasJZw1joGIBgX0M_mb1g1IyOYFao1veQ"/><div class="absolute top-3 left-3 flex gap-1.5"><span class="px-2.5 py-0.5 rounded-full bg-surface/90 backdrop-blur-sm text-primary font-label-caps text-[10px] uppercase font-semibold">Traditional</span></div><div class="absolute inset-0 bg-primary/70 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-3 p-4"><a class="w-full py-2 px-4 rounded bg-white text-primary font-label-caps text-xs uppercase text-center hover:bg-[#e3d4be] transition-colors" href="#">Live Preview</a><a class="w-full py-2 px-4 rounded bg-secondary text-white font-label-caps text-xs uppercase text-center hover:bg-secondary/90 transition-colors" href="#">Use This Design</a></div></div><div class="p-5 flex flex-col justify-between flex-grow"><div><div class="flex items-center justify-between mb-1"><span class="font-kicker text-kicker uppercase text-secondary">07 • Venetian</span><span class="font-mono text-xs font-semibold text-primary">From $56/suite</span></div><h3 class="font-headline-sm text-lg text-primary mb-1">Palazzo Veneziano</h3><p class="font-body-sm text-xs text-on-surface-variant line-clamp-2 leading-relaxed">Renaissance flourish crest, Italian cotton deckle edging, and Venetian canal coordinates.</p></div><div class="pt-4 mt-3 border-t border-surface-container flex items-center justify-between text-xs"><span class="text-on-surface-variant font-mono text-[11px]">Bespoke Atelier</span><span class="material-symbols-outlined text-[16px] text-secondary">touch_app</span></div></div></div><div class="catalog-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between" data-category="signature" data-price="49" data-style="minimal"><div class="relative aspect-[3/4] bg-surface-container overflow-hidden"><img alt="Nordic Fjord Scandinavian clean wedding invitation" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1Uk_idQaUEforydcDBWnlmawnS-8lZu3CD_-r03Ce7el6XYgJGOLZTjFX4QEuS-XbbcpGMadng4Sy4AtrCtkTpjG0Bm6NXKJLs8-l-Vu3OO_ykK40lK4XS1cAwTPORRVySz08mMzyABq1MbJzsQTRjUax8S4jVdcRbWN4J9co_mO_3R8rbXVUh4yPMxzuIY_PdyPN0dmOGWujzwaSFNfz-CI01FpSOW4azA1s4z4R_j11msqjw8UaNKWw"/><div class="absolute top-3 left-3 flex gap-1.5"><span class="px-2.5 py-0.5 rounded-full bg-surface/90 backdrop-blur-sm text-primary font-label-caps text-[10px] uppercase font-semibold">Minimal</span></div><div class="absolute inset-0 bg-primary/70 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-3 p-4"><a class="w-full py-2 px-4 rounded bg-white text-primary font-label-caps text-xs uppercase text-center hover:bg-[#e3d4be] transition-colors" href="#">Live Preview</a><a class="w-full py-2 px-4 rounded bg-secondary text-white font-label-caps text-xs uppercase text-center hover:bg-secondary/90 transition-colors" href="#">Use This Design</a></div></div><div class="p-5 flex flex-col justify-between flex-grow"><div><div class="flex items-center justify-between mb-1"><span class="font-kicker text-kicker uppercase text-secondary">08 • Scandinavian</span><span class="font-mono text-xs font-semibold text-primary">$49</span></div><h3 class="font-headline-sm text-lg text-primary mb-1">Nordic Fjord</h3><p class="font-body-sm text-xs text-on-surface-variant line-clamp-2 leading-relaxed">Glacial gray tones, crisp Swiss geometric grid, and rapid instant guest RSVP confirmation.</p></div><div class="pt-4 mt-3 border-t border-surface-container flex items-center justify-between text-xs"><span class="text-on-surface-variant font-mono text-[11px]">Included in Signature</span><span class="material-symbols-outlined text-[16px] text-secondary">touch_app</span></div></div></div><div class="col-span-1 sm:col-span-2 lg:col-span-4 bg-[#1c1b1a] text-on-tertiary rounded-2xl p-8 sm:p-12 shadow-lg relative overflow-hidden my-4"><div class="absolute -right-16 -top-16 w-80 h-80 rounded-full bg-secondary/15 blur-3xl pointer-events-none"></div><div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-8"><div class="max-w-2xl"><span class="font-kicker text-kicker uppercase text-secondary-fixed tracking-widest block mb-2">──────── FEATURE BREAK ────────</span><h3 class="font-headline-lg text-2xl sm:text-4xl text-[#e3d4be] mb-3 leading-tight">Find the design that feels like you.</h3><p class="font-body-md text-on-tertiary/75 leading-relaxed">Every template in our living catalog supports complete modular customization: exchange typographic pairings, upload custom monogram crests, or embed private Spotify unboxing audio seamlessly.</p></div><div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 flex-shrink-0"><a class="px-6 py-3.5 rounded-lg bg-[#e3d4be] text-[#121110] font-label-caps text-xs uppercase tracking-wider font-semibold hover:bg-white transition-colors text-center shadow-md" href="#concierge-sample">Request Curated Swatch Box ($25 Credit)</a><a class="px-6 py-3.5 rounded-lg bg-white/10 text-white font-label-caps text-xs uppercase tracking-wider text-center hover:bg-white/20 transition-colors" href="#">Explore Custom Crests</a></div></div></div><div class="catalog-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between" data-category="signature" data-price="49" data-style="floral"><div class="relative aspect-[3/4] bg-surface-container overflow-hidden"><img alt="Ethereal Ranunculus delicate floral wedding suite" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1Vrd2Z2a8jD-lP2-eKDrDgG_hVChIWUZ8OK0JFEwtccz-sF66PONDo26f0NPTdUjk7AbVr9PdZRttM4ypUC3hoJWqkDWz79kFryiOtgwwpp8VeKY8KMkjaXP4qonxBUyUlZuewiXHQW5iFiyluqS14VjLkK2bl2MqbxgD8BqrMrn9ZkL-k0nvbfIIKk_aK2Cmy_iY8FBTChIJjSWkP-Ty5g8ixPJgFjLPNhPu_vzFkGO_PohK1f39I_NQ"/><div class="absolute top-3 left-3 flex gap-1.5"><span class="px-2.5 py-0.5 rounded-full bg-surface/90 backdrop-blur-sm text-primary font-label-caps text-[10px] uppercase font-semibold">Floral</span></div><div class="absolute inset-0 bg-primary/70 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-3 p-4"><a class="w-full py-2 px-4 rounded bg-white text-primary font-label-caps text-xs uppercase text-center hover:bg-[#e3d4be] transition-colors" href="#">Live Preview</a><a class="w-full py-2 px-4 rounded bg-secondary text-white font-label-caps text-xs uppercase text-center hover:bg-secondary/90 transition-colors" href="#">Use This Design</a></div></div><div class="p-5 flex flex-col justify-between flex-grow"><div><div class="flex items-center justify-between mb-1"><span class="font-kicker text-kicker uppercase text-secondary">09 • Botanical</span><span class="font-mono text-xs font-semibold text-primary">$49</span></div><h3 class="font-headline-sm text-lg text-primary mb-1">Ethereal Ranunculus</h3><p class="font-body-sm text-xs text-on-surface-variant line-clamp-2 leading-relaxed">Peach and blush petal illustrations with whisper-thin serif typography and RSVP schedule sync.</p></div><div class="pt-4 mt-3 border-t border-surface-container flex items-center justify-between text-xs"><span class="text-on-surface-variant font-mono text-[11px]">Included in Signature</span><span class="material-symbols-outlined text-[16px] text-secondary">touch_app</span></div></div></div><div class="catalog-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between" data-category="bespoke" data-price="54" data-style="rustic"><div class="relative aspect-[3/4] bg-surface-container overflow-hidden"><img alt="Tuscan Terracotta earthy Italian wedding suite" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1WaA4--TJ8VRSCd8uZcoCXOtl6VWqYymtLnihBECrV2Wiv0QnZYQm6Tue9eFTL73gfXpQ5z8A_riMcqChCVEqCHdb7v3oBHO9JlA0u6FNUQOfANNuYLc8Dk8CclDOgZXIfqdwWRDCNhcwGx61gv_R6at3ynnbGJNxgjokMgtnN1Z1Hz9mdnuKI-PbyzANA91YOo3Qvhisv1EyiAqluuAAjNqXnllbw72FfUqU6th61XzfnH34TaBReauQ"/><div class="absolute top-3 left-3 flex gap-1.5"><span class="px-2.5 py-0.5 rounded-full bg-surface/90 backdrop-blur-sm text-primary font-label-caps text-[10px] uppercase font-semibold">Rustic</span></div><div class="absolute inset-0 bg-primary/70 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-3 p-4"><a class="w-full py-2 px-4 rounded bg-white text-primary font-label-caps text-xs uppercase text-center hover:bg-[#e3d4be] transition-colors" href="#">Live Preview</a><a class="w-full py-2 px-4 rounded bg-secondary text-white font-label-caps text-xs uppercase text-center hover:bg-secondary/90 transition-colors" href="#">Use This Design</a></div></div><div class="p-5 flex flex-col justify-between flex-grow"><div><div class="flex items-center justify-between mb-1"><span class="font-kicker text-kicker uppercase text-secondary">10 • Sienese</span><span class="font-mono text-xs font-semibold text-primary">From $54/suite</span></div><h3 class="font-headline-sm text-lg text-primary mb-1">Tuscan Terracotta</h3><p class="font-body-sm text-xs text-on-surface-variant line-clamp-2 leading-relaxed">Warm sienna pigments, handmade cotton deckle edging, and sunset vineyard photo gallery.</p></div><div class="pt-4 mt-3 border-t border-surface-container flex items-center justify-between text-xs"><span class="text-on-surface-variant font-mono text-[11px]">Bespoke Atelier</span><span class="material-symbols-outlined text-[16px] text-secondary">touch_app</span></div></div></div><div class="catalog-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between" data-category="signature" data-price="49" data-style="manga"><div class="relative aspect-[3/4] bg-surface-container overflow-hidden"><img alt="Sōseki Ink and Starlight anime artistic suite" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1Uk_idQaUEforydcDBWnlmawnS-8lZu3CD_-r03Ce7el6XYgJGOLZTjFX4QEuS-XbbcpGMadng4Sy4AtrCtkTpjG0Bm6NXKJLs8-l-Vu3OO_ykK40lK4XS1cAwTPORRVySz08mMzyABq1MbJzsQTRjUax8S4jVdcRbWN4J9co_mO_3R8rbXVUh4yPMxzuIY_PdyPN0dmOGWujzwaSFNfz-CI01FpSOW4azA1s4z4R_j11msqjw8UaNKWw"/><div class="absolute top-3 left-3 flex gap-1.5"><span class="px-2.5 py-0.5 rounded-full bg-surface/90 backdrop-blur-sm text-primary font-label-caps text-[10px] uppercase font-semibold">Manga</span></div><div class="absolute inset-0 bg-primary/70 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-3 p-4"><a class="w-full py-2 px-4 rounded bg-white text-primary font-label-caps text-xs uppercase text-center hover:bg-[#e3d4be] transition-colors" href="#">Live Preview</a><a class="w-full py-2 px-4 rounded bg-secondary text-white font-label-caps text-xs uppercase text-center hover:bg-secondary/90 transition-colors" href="#">Use This Design</a></div></div><div class="p-5 flex flex-col justify-between flex-grow"><div><div class="flex items-center justify-between mb-1"><span class="font-kicker text-kicker uppercase text-secondary">11 • Sumi-e</span><span class="font-mono text-xs font-semibold text-primary">$49</span></div><h3 class="font-headline-sm text-lg text-primary mb-1">Sōseki Ink &amp; Starlight</h3><p class="font-body-sm text-xs text-on-surface-variant line-clamp-2 leading-relaxed">Japanese sumi-e wash background, celestial starlight map, and bilingual typography.</p></div><div class="pt-4 mt-3 border-t border-surface-container flex items-center justify-between text-xs"><span class="text-on-surface-variant font-mono text-[11px]">Included in Signature</span><span class="material-symbols-outlined text-[16px] text-secondary">touch_app</span></div></div></div><div class="catalog-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between" data-category="bespoke" data-price="62" data-style="traditional"><div class="relative aspect-[3/4] bg-surface-container overflow-hidden"><img alt="Haute Couture Monogramme debossed royal invitation" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1WWLq-Jmq7cUvLyFOZjPa5i6Li8jJgbzahq1nd6hWFMwThLTRJ5ORRm650JbzqLzSWT-qOD1EXKl9mbF_1nkptbOBNdJgX99-yk7E-eCH7f7Itg9BZcMjt1x9qleU9t9-DImrfZ97XsKzss60fKuR-QGCmiaki8J18PaI6erriZZ9zaeCFUxIm3Y50BUy5CnAPSicDldAye34-B0R85m3Su_BasJZw1joGIBgX0M_mb1g1IyOYFao1veQ"/><div class="absolute top-3 left-3 flex gap-1.5"><span class="px-2.5 py-0.5 rounded-full bg-surface/90 backdrop-blur-sm text-primary font-label-caps text-[10px] uppercase font-semibold">Traditional</span></div><div class="absolute inset-0 bg-primary/70 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-3 p-4"><a class="w-full py-2 px-4 rounded bg-white text-primary font-label-caps text-xs uppercase text-center hover:bg-[#e3d4be] transition-colors" href="#">Live Preview</a><a class="w-full py-2 px-4 rounded bg-secondary text-white font-label-caps text-xs uppercase text-center hover:bg-secondary/90 transition-colors" href="#">Use This Design</a></div></div><div class="p-5 flex flex-col justify-between flex-grow"><div><div class="flex items-center justify-between mb-1"><span class="font-kicker text-kicker uppercase text-secondary">12 • Heraldic</span><span class="font-mono text-xs font-semibold text-primary">From $62/suite</span></div><h3 class="font-headline-sm text-lg text-primary mb-1">Haute Couture Monogramme</h3><p class="font-body-sm text-xs text-on-surface-variant line-clamp-2 leading-relaxed">Deep blind-embossed interlocked initials, micro gold foil stamping, and formal RSVP protocol.</p></div><div class="pt-4 mt-3 border-t border-surface-container flex items-center justify-between text-xs"><span class="text-on-surface-variant font-mono text-[11px]">Bespoke Atelier</span><span class="material-symbols-outlined text-[16px] text-secondary">touch_app</span></div></div></div><div class="catalog-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between" data-category="signature" data-price="49" data-style="modern"><div class="relative aspect-[3/4] bg-surface-container overflow-hidden"><img alt="Solstice Architectural geometric suite" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1Uk_idQaUEforydcDBWnlmawnS-8lZu3CD_-r03Ce7el6XYgJGOLZTjFX4QEuS-XbbcpGMadng4Sy4AtrCtkTpjG0Bm6NXKJLs8-l-Vu3OO_ykK40lK4XS1cAwTPORRVySz08mMzyABq1MbJzsQTRjUax8S4jVdcRbWN4J9co_mO_3R8rbXVUh4yPMxzuIY_PdyPN0dmOGWujzwaSFNfz-CI01FpSOW4azA1s4z4R_j11msqjw8UaNKWw"/><div class="absolute top-3 left-3 flex gap-1.5"><span class="px-2.5 py-0.5 rounded-full bg-surface/90 backdrop-blur-sm text-primary font-label-caps text-[10px] uppercase font-semibold">Modern</span></div><div class="absolute inset-0 bg-primary/70 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-3 p-4"><a class="w-full py-2 px-4 rounded bg-white text-primary font-label-caps text-xs uppercase text-center hover:bg-[#e3d4be] transition-colors" href="#">Live Preview</a><a class="w-full py-2 px-4 rounded bg-secondary text-white font-label-caps text-xs uppercase text-center hover:bg-secondary/90 transition-colors" href="#">Use This Design</a></div></div><div class="p-5 flex flex-col justify-between flex-grow"><div><div class="flex items-center justify-between mb-1"><span class="font-kicker text-kicker uppercase text-secondary">13 • Bauhaus</span><span class="font-mono text-xs font-semibold text-primary">$49</span></div><h3 class="font-headline-sm text-lg text-primary mb-1">Solstice Architectural</h3><p class="font-body-sm text-xs text-on-surface-variant line-clamp-2 leading-relaxed">Sharp sans-serif hierarchy, architectural framing, and live Google Maps venue embedding.</p></div><div class="pt-4 mt-3 border-t border-surface-container flex items-center justify-between text-xs"><span class="text-on-surface-variant font-mono text-[11px]">Included in Signature</span><span class="material-symbols-outlined text-[16px] text-secondary">touch_app</span></div></div></div><div class="catalog-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between" data-category="signature" data-price="49" data-style="floral"><div class="relative aspect-[3/4] bg-surface-container overflow-hidden"><img alt="Jardin Secret and Olive wedding suite" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1WaA4--TJ8VRSCd8uZcoCXOtl6VWqYymtLnihBECrV2Wiv0QnZYQm6Tue9eFTL73gfXpQ5z8A_riMcqChCVEqCHdb7v3oBHO9JlA0u6FNUQOfANNuYLc8Dk8CclDOgZXIfqdwWRDCNhcwGx61gv_R6at3ynnbGJNxgjokMgtnN1Z1Hz9mdnuKI-PbyzANA91YOo3Qvhisv1EyiAqluuAAjNqXnllbw72FfUqU6th61XzfnH34TaBReauQ"/><div class="absolute top-3 left-3 flex gap-1.5"><span class="px-2.5 py-0.5 rounded-full bg-surface/90 backdrop-blur-sm text-primary font-label-caps text-[10px] uppercase font-semibold">Floral</span></div><div class="absolute inset-0 bg-primary/70 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-3 p-4"><a class="w-full py-2 px-4 rounded bg-white text-primary font-label-caps text-xs uppercase text-center hover:bg-[#e3d4be] transition-colors" href="#">Live Preview</a><a class="w-full py-2 px-4 rounded bg-secondary text-white font-label-caps text-xs uppercase text-center hover:bg-secondary/90 transition-colors" href="#">Use This Design</a></div></div><div class="p-5 flex flex-col justify-between flex-grow"><div><div class="flex items-center justify-between mb-1"><span class="font-kicker text-kicker uppercase text-secondary">14 • Mediterranean</span><span class="font-mono text-xs font-semibold text-primary">$49</span></div><h3 class="font-headline-sm text-lg text-primary mb-1">Jardin Secret &amp; Olive</h3><p class="font-body-sm text-xs text-on-surface-variant line-clamp-2 leading-relaxed">Subtle olive branch etchings, warm ivory tones, and interactive multi-course menu preferences.</p></div><div class="pt-4 mt-3 border-t border-surface-container flex items-center justify-between text-xs"><span class="text-on-surface-variant font-mono text-[11px]">Included in Signature</span><span class="material-symbols-outlined text-[16px] text-secondary">touch_app</span></div></div></div><div class="catalog-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between" data-category="bespoke" data-price="59" data-style="elegant"><div class="relative aspect-[3/4] bg-surface-container overflow-hidden"><img alt="L'Hôtel Particulier elegant French stationery suite" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1Vrd2Z2a8jD-lP2-eKDrDgG_hVChIWUZ8OK0JFEwtccz-sF66PONDo26f0NPTdUjk7AbVr9PdZRttM4ypUC3hoJWqkDWz79kFryiOtgwwpp8VeKY8KMkjaXP4qonxBUyUlZuewiXHQW5iFiyluqS14VjLkK2bl2MqbxgD8BqrMrn9ZkL-k0nvbfIIKk_aK2Cmy_iY8FBTChIJjSWkP-Ty5g8ixPJgFjLPNhPu_vzFkGO_PohK1f39I_NQ"/><div class="absolute top-3 left-3 flex gap-1.5"><span class="px-2.5 py-0.5 rounded-full bg-surface/90 backdrop-blur-sm text-primary font-label-caps text-[10px] uppercase font-semibold">Elegant</span></div><div class="absolute inset-0 bg-primary/70 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-3 p-4"><a class="w-full py-2 px-4 rounded bg-white text-primary font-label-caps text-xs uppercase text-center hover:bg-[#e3d4be] transition-colors" href="#">Live Preview</a><a class="w-full py-2 px-4 rounded bg-secondary text-white font-label-caps text-xs uppercase text-center hover:bg-secondary/90 transition-colors" href="#">Use This Design</a></div></div><div class="p-5 flex flex-col justify-between flex-grow"><div><div class="flex items-center justify-between mb-1"><span class="font-kicker text-kicker uppercase text-secondary">15 • Haussmann</span><span class="font-mono text-xs font-semibold text-primary">From $59/suite</span></div><h3 class="font-headline-sm text-lg text-primary mb-1">L'Hôtel Particulier</h3><p class="font-body-sm text-xs text-on-surface-variant line-clamp-2 leading-relaxed">Parisian grand hôtel luxury with dark espresso envelope lining and deckled 800gsm board.</p></div><div class="pt-4 mt-3 border-t border-surface-container flex items-center justify-between text-xs"><span class="text-on-surface-variant font-mono text-[11px]">Bespoke Atelier</span><span class="material-symbols-outlined text-[16px] text-secondary">touch_app</span></div></div></div><div class="catalog-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between" data-category="signature" data-price="49" data-style="minimal"><div class="relative aspect-[3/4] bg-surface-container overflow-hidden"><img alt="Elysian Linen and Pearl minimal wedding invitation" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1Uk_idQaUEforydcDBWnlmawnS-8lZu3CD_-r03Ce7el6XYgJGOLZTjFX4QEuS-XbbcpGMadng4Sy4AtrCtkTpjG0Bm6NXKJLs8-l-Vu3OO_ykK40lK4XS1cAwTPORRVySz08mMzyABq1MbJzsQTRjUax8S4jVdcRbWN4J9co_mO_3R8rbXVUh4yPMxzuIY_PdyPN0dmOGWujzwaSFNfz-CI01FpSOW4azA1s4z4R_j11msqjw8UaNKWw"/><div class="absolute top-3 left-3 flex gap-1.5"><span class="px-2.5 py-0.5 rounded-full bg-surface/90 backdrop-blur-sm text-primary font-label-caps text-[10px] uppercase font-semibold">Minimal</span></div><div class="absolute inset-0 bg-primary/70 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-3 p-4"><a class="w-full py-2 px-4 rounded bg-white text-primary font-label-caps text-xs uppercase text-center hover:bg-[#e3d4be] transition-colors" href="#">Live Preview</a><a class="w-full py-2 px-4 rounded bg-secondary text-white font-label-caps text-xs uppercase text-center hover:bg-secondary/90 transition-colors" href="#">Use This Design</a></div></div><div class="p-5 flex flex-col justify-between flex-grow"><div><div class="flex items-center justify-between mb-1"><span class="font-kicker text-kicker uppercase text-secondary">16 • Linen</span><span class="font-mono text-xs font-semibold text-primary">$49</span></div><h3 class="font-headline-sm text-lg text-primary mb-1">Elysian Linen &amp; Pearl</h3><p class="font-body-sm text-xs text-on-surface-variant line-clamp-2 leading-relaxed">Whisper-quiet pearlized typography on woven warm-linen background with instant RSVP.</p></div><div class="pt-4 mt-3 border-t border-surface-container flex items-center justify-between text-xs"><span class="text-on-surface-variant font-mono text-[11px]">Included in Signature</span><span class="material-symbols-outlined text-[16px] text-secondary">touch_app</span></div></div></div></div><div class="hidden text-center py-16 bg-surface-container-lowest rounded-xl mt-6 border border-surface-container-high" id="catalogEmptyState"><span class="material-symbols-outlined text-4xl text-on-surface-variant mb-2">manage_search</span><h4 class="font-headline-sm text-lg text-primary mb-1">No matching suites found</h4><p class="font-body-sm text-xs text-on-surface-variant max-w-sm mx-auto mb-4">Try broadening your search term, changing the aesthetic style, or clearing filters.</p><button class="px-4 py-2 rounded-lg bg-primary text-on-primary font-label-caps text-xs uppercase" id="emptyStateResetBtn" type="button">Reset Search &amp; Filters</button></div><div class="mt-12 pt-8 flex flex-col items-center justify-center gap-3 border-t border-surface-container-high"><button class="px-8 py-3.5 rounded-lg bg-surface-container-lowest text-primary hover:bg-primary hover:text-on-primary transition-all duration-200 font-label-caps text-xs uppercase tracking-wider shadow-sm border border-surface-container-high flex items-center gap-2" id="loadMoreCatalogBtn" type="button"><span>Load More Designs</span><span class="material-symbols-outlined text-[18px]">expand_more</span></button><span class="font-mono text-xs text-on-surface-variant" id="loadMoreCounter">16 of 48 suites loaded</span></div></div></section><section class="py-16 bg-surface-container-low" id="concierge-sample">
+<div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<!-- Swatch Box Feature -->
+<div class="lg:col-span-6 bg-surface-container-lowest rounded-2xl p-8 sm:p-10 shadow-sm flex flex-col justify-between h-full">
+<div>
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-secondary text-[24px]">inventory_2</span>
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest">Physical Material Experience</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">
+              Order the Atelier Monograph Swatch Box
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-6">
+              Hold the tactile reality in your hands before committing. Includes full-weight 600gsm &amp; 800gsm Somerset cotton cards, metallic foil swatches (Rose Gold, Champagne, Matte Copper), physical wax seal impressions, and French-milled paper envelopes.
+            </p>
+<div class="flex items-center gap-4 py-3 px-4 rounded-xl bg-surface-container-low mb-6">
+<span class="font-headline-sm text-headline-sm text-primary">$25 USD</span>
+<span class="text-xs font-body-sm text-on-surface-variant leading-tight">
+<strong>100% credited</strong> toward your final invitation suite production run or print order.
+              </span>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-4">
+<a class="w-full sm:w-auto px-6 py-3.5 rounded-lg bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-wider hover:bg-secondary transition-colors text-center" href="#">
+              Request Curated Swatch Box
+            </a>
+<span class="text-xs text-on-surface-variant font-mono">Dispatches worldwide in 48 hours</span>
+</div>
+</div>
+<!-- Custom Crest & Bespoke Atelier Callout -->
+<div class="lg:col-span-6 bg-surface-container-lowest rounded-2xl p-8 sm:p-10 shadow-sm flex flex-col justify-between h-full">
+<div>
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-secondary text-[24px]">palette</span>
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest">Bespoke Typographic Monogram</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">
+              Need Tailored Crests or Illustrated Venues?
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-6">
+              Every curated template can be elevated with our hand-drafted custom illustration services. Our Paris studio typographers will hand-render your wedding venue, custom family monogram crest, or illustrated map coordinates into your selected template.
+            </p>
+<div class="grid grid-cols-2 gap-3 mb-6">
+<div class="p-3 rounded-lg bg-surface-container-low">
+<span class="block font-label-caps text-[11px] uppercase text-primary font-semibold">Custom Monograms</span>
+<span class="font-body-sm text-xs text-on-surface-variant">Hand-drawn vector crests</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low">
+<span class="block font-label-caps text-[11px] uppercase text-primary font-semibold">Venue Line-Art</span>
+<span class="font-body-sm text-xs text-on-surface-variant">Custom chateau &amp; villa art</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-4">
+<a class="w-full sm:w-auto px-6 py-3.5 rounded-lg bg-surface-container text-on-surface hover:bg-secondary hover:text-on-secondary font-label-caps text-label-caps uppercase tracking-wider transition-colors text-center flex items-center justify-center gap-2" href="#">
+<span class="material-symbols-outlined text-[16px]">forum</span>
+<span>Inquire with Concierge</span>
+</a>
+<span class="text-xs text-on-surface-variant font-mono">Response within 2 hours</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Curated Knowledge / Template Selection FAQ -->
+<section class="py-20 lg:py-28 bg-surface">
+<div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<div class="lg:col-span-4">
+<span class="font-kicker text-kicker uppercase text-secondary tracking-widest block mb-2">Frequently Addressed</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary tracking-tight mb-4">
+            Guidance for Selecting Your Template
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-6">
+            Choosing an invitation suite sets the emotional tone for your celebration. Here is how our digital architecture and fine stationery blend seamlessly.
+          </p>
+<a class="inline-flex items-center gap-2 font-label-caps text-label-caps uppercase text-secondary hover:text-primary transition-colors" href="#">
+<span>Read full production documentation</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="lg:col-span-8 space-y-4">
+<!-- Accordion Item 1 -->
+<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm">
+<button class="faq-toggle w-full flex items-center justify-between text-left group" type="button">
+<span class="font-headline-sm text-lg md:text-headline-sm text-primary group-hover:text-secondary transition-colors">
+                Can I switch templates after entering my guest list and wedding story?
+              </span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content mt-4 pt-4 text-on-surface-variant font-body-md text-body-md leading-relaxed hidden">
+              Yes, absolutely. In the L'Atelier Nuance cloud dashboard, your guest list, schedule, dietary preferences, RSVP answers, and photo galleries live independently of your design theme. You can switch templates at any point with a single click, and all typography and color styling will adapt instantly.
+            </div>
+</div>
+<!-- Accordion Item 2 -->
+<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm">
+<button class="faq-toggle w-full flex items-center justify-between text-left group" type="button">
+<span class="font-headline-sm text-lg md:text-headline-sm text-primary group-hover:text-secondary transition-colors">
+                Can we pair any digital design with an artisan printed counterpart?
+              </span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content mt-4 pt-4 text-on-surface-variant font-body-md text-body-md leading-relaxed hidden">
+              Every single edition in our catalog has a direct 1:1 physical printing counterpart engineered for 600gsm Somerset cotton paper. Furthermore, your printed suite includes discreet blind-debossed micro QR seals that allow VIP guests to open the synchronized digital experience on their smartphones.
+            </div>
+</div>
+<!-- Accordion Item 3 -->
+<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm">
+<button class="faq-toggle w-full flex items-center justify-between text-left group" type="button">
+<span class="font-headline-sm text-lg md:text-headline-sm text-primary group-hover:text-secondary transition-colors">
+                How do live music playlists and interactive maps integrate into digital suites?
+              </span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content mt-4 pt-4 text-on-surface-variant font-body-md text-body-md leading-relaxed hidden">
+              Guests can unbox their digital envelope with gentle ambient audio streaming via Spotify or our copyright-cleared cinematic instrumentals. Venues feature direct interactive directions opening seamlessly in Apple Maps, Google Maps, or Waze, complete with valet and parking instructions.
+            </div>
+</div>
+<!-- Accordion Item 4 -->
+<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm">
+<button class="faq-toggle w-full flex items-center justify-between text-left group" type="button">
+<span class="font-headline-sm text-lg md:text-headline-sm text-primary group-hover:text-secondary transition-colors">
+                What is the turnaround time for physical printed proofs and production?
+              </span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content mt-4 pt-4 text-on-surface-variant font-body-md text-body-md leading-relaxed hidden">
+              Digital proofing is completed within 2 business days of your order. Once you approve digital proofs, your bespoke physical letterpress and foil stamping run takes 10 to 14 business days, after which orders are securely delivered via express tracked courier worldwide.
+            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pre-Footer Editorial Statement CTA -->
+<section class="py-20 lg:py-28 bg-[#121110] text-on-tertiary relative overflow-hidden">
+<div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin text-center relative z-10">
+<span class="font-kicker text-kicker uppercase text-secondary-fixed tracking-widest block mb-4">The Atelier Nuance Experience</span>
+<h2 class="font-display-hero text-headline-xl lg:text-headline-xl text-white max-w-3xl mx-auto leading-tight mb-6">
+        Ready to preview your celebration?
+      </h2>
+<p class="font-body-lg text-body-md lg:text-body-lg text-on-tertiary/70 max-w-xl mx-auto mb-10 leading-relaxed">
+        Begin customizing any digital suite immediately with zero obligation. Or connect directly with our print concierge to orchestrate physical stationery proofs.
+      </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<a class="w-full sm:w-auto px-8 py-4 rounded-lg bg-[#e3d4be] text-[#121110] font-label-caps text-label-caps uppercase tracking-wider font-semibold hover:bg-white transition-colors shadow-lg" href="#">
+          Explore Live Digital Demo
+        </a>
+<a class="w-full sm:w-auto px-8 py-4 rounded-lg bg-white/10 text-white hover:bg-white/20 font-label-caps text-label-caps uppercase tracking-wider transition-colors" href="#concierge-sample">
+          Request Sample Swatch Box ($25)
+        </a>
+</div>
+<div class="pt-12 flex items-center justify-center gap-6 text-on-tertiary/50 text-xs font-mono">
+<span>Instant Cloud Activation</span>
+<span>•</span>
+<span>Worldwide Fine Paper Delivery</span>
+<span>•</span>
+<span>Dedicated Studio Typographer</span>
+</div>
+</div>
+</section>
+</div>
+<!-- Inline Interaction Behavior -->
+<script>
+  // Discipline Filtering
+  const disciplineBtns = document.querySelectorAll('.discipline-btn');
+  const templateCards = document.querySelectorAll('.template-card');
+
+  disciplineBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      disciplineBtns.forEach(b => {
+        b.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+        b.classList.add('bg-transparent', 'text-on-surface');
+      });
+      btn.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+      btn.classList.remove('bg-transparent', 'text-on-surface');
+
+      const targetCategory = btn.getAttribute('data-category');
+      templateCards.forEach(card => {
+        const cardCat = card.getAttribute('data-category');
+        if (targetCategory === 'all' || cardCat === targetCategory || (targetCategory === 'harmonized' && cardCat === 'harmonized')) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // Aesthetic Filter Pills
+  const pillFilters = document.querySelectorAll('.pill-filter');
+  pillFilters.forEach(pill => {
+    pill.addEventListener('click', () => {
+      pillFilters.forEach(p => {
+        p.classList.remove('bg-primary', 'text-on-primary');
+        p.classList.add('bg-surface-container', 'text-on-surface');
+      });
+      pill.classList.add('bg-primary', 'text-on-primary');
+      pill.classList.remove('bg-surface-container', 'text-on-surface');
+
+      const selectedStyle = pill.getAttribute('data-style');
+      templateCards.forEach(card => {
+        const cardStyle = card.getAttribute('data-style');
+        if (selectedStyle === 'all' || cardStyle === selectedStyle) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // Simple Real-Time Search Filter
+  const searchInput = document.getElementById('templateSearch');
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      const term = e.target.value.toLowerCase().trim();
+      templateCards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        if (text.includes(term)) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  }
+
+  // FAQ Accordion Toggle
+  const faqToggles = document.querySelectorAll('.faq-toggle');
+  faqToggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const content = toggle.nextElementSibling;
+      const icon = toggle.querySelector('.material-symbols-outlined');
+      const isHidden = content.classList.contains('hidden');
+      
+      // Close other faqs
+      document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+      document.querySelectorAll('.faq-toggle .material-symbols-outlined').forEach(i => i.style.transform = 'rotate(0deg)');
+
+      if (isHidden) {
+        content.classList.remove('hidden');
+        icon.style.transform = 'rotate(180deg)';
+      }
+    });
+  });
+
+  // View Switcher (Toggles grid density style)
+  const curatedBtn = document.getElementById('curatedViewBtn');
+  const gridBtn = document.getElementById('gridViewBtn');
+  const gridContainer = document.getElementById('curatedGrid');
+
+  if (curatedBtn && gridBtn && gridContainer) {
+    gridBtn.addEventListener('click', () => {
+      gridBtn.classList.add('bg-surface-container', 'text-primary');
+      curatedBtn.classList.remove('bg-surface-container', 'text-primary');
+      curatedBtn.classList.add('text-on-surface-variant');
+      
+      // Transform into a uniform 3-col grid
+      templateCards.forEach(card => {
+        card.classList.remove('md:col-span-7', 'md:col-span-5');
+        card.classList.add('md:col-span-6', 'lg:col-span-4');
+      });
+    });
+
+    curatedBtn.addEventListener('click', () => {
+      curatedBtn.classList.add('bg-surface-container', 'text-primary');
+      gridBtn.classList.remove('bg-surface-container', 'text-primary');
+      gridBtn.classList.add('text-on-surface-variant');
+
+      // Revert to editorial asymmetric columns
+      templateCards.forEach((card, index) => {
+        card.classList.remove('md:col-span-6', 'lg:col-span-4');
+        if (index === 0 || index === 3) {
+          card.classList.add('md:col-span-5');
+        } else {
+          card.classList.add('md:col-span-7');
+        }
+      });
+    });
+  }
+</script></main><footer class="w-full bg-surface-container-low text-on-surface"><div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin pt-space-xl pb-space-lg"><div class="pb-space-xl"><span class="font-kicker text-kicker uppercase text-secondary tracking-widest block mb-space-xs">The Nuance Manifesto</span><h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary max-w-3xl leading-tight">Two distinct expressions of love. One elevated wedding studio.</h2></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-lg py-space-xl"><div class="flex flex-col space-y-space-md lg:col-span-1"><span class="font-headline-sm text-headline-sm text-primary">L'Atelier Nuance</span><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">An haute couture stationery house pairing cloud-architected guest journeys with tactile cotton paper suites.</p><div class="flex flex-col gap-1 font-body-sm text-body-sm text-on-surface"><span class="font-medium">Ateliers:</span><span class="text-on-surface-variant">Paris · New York · Digital Cloud</span></div><div class="flex items-center gap-space-md pt-space-xs font-body-sm text-body-sm text-on-surface-variant"><a class="hover:text-primary transition-colors" href="#">Instagram</a><a class="hover:text-primary transition-colors" href="#">TikTok</a><a class="hover:text-primary transition-colors" href="#">Pinterest</a><a class="hover:text-primary transition-colors" href="#">Spotify</a></div></div><div class="flex flex-col space-y-space-sm"><span class="font-label-caps text-label-caps uppercase text-primary tracking-wider">Products</span><ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant"><li class="flex flex-col"><a class="hover:text-primary transition-colors" data-path="digital-invitations" href="#">Digital Invitations (SaaS)</a><span class="text-on-surface-variant/70 text-[11px]">Web suites, RSVP, QR seals</span></li><li class="flex flex-col pt-1"><a class="hover:text-primary transition-colors" data-path="printed-fine-stationery" href="#">Printed &amp; Fine Stationery</a><span class="text-on-surface-variant/70 text-[11px]">Cotton 600gsm, Deboss, Foil</span></li><li class="pt-1"><a class="hover:text-primary transition-colors" data-path="bespoke-curation" href="#">Bespoke Hybrid Curation</a></li></ul></div><div class="flex flex-col space-y-space-sm"><span class="font-label-caps text-label-caps uppercase text-primary tracking-wider">Explore</span><ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" data-path="templates" href="#">Curated Templates</a></li><li><a class="hover:text-primary transition-colors" data-path="pricing" href="#">Investment &amp; Pricing</a></li><li><a class="hover:text-primary transition-colors" data-path="features" href="#">Interactive Features</a></li><li><a class="hover:text-primary transition-colors" data-path="how-it-works" href="#">The Production Process</a></li></ul></div><div class="flex flex-col space-y-space-sm"><span class="font-label-caps text-label-caps uppercase text-primary tracking-wider">Concierge &amp; Support</span><ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors flex items-center gap-1" data-path="consultation" href="#"><span class="material-symbols-outlined text-[14px]">forum</span><span>WhatsApp Direct</span></a></li><li><a class="hover:text-primary transition-colors" href="mailto:atelier@nuance.wedding">atelier@nuance.wedding</a></li><li><a class="hover:text-primary transition-colors" data-path="faq" href="#">Frequently Answered</a></li><li><a class="hover:text-primary transition-colors" data-path="booking" href="#">Book Studio Consultation</a></li></ul></div><div class="flex flex-col space-y-space-sm"><span class="font-label-caps text-label-caps uppercase text-primary tracking-wider">Legal &amp; Studio</span><ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a></li><li><a class="hover:text-primary transition-colors" data-path="terms-of-service" href="#">Terms of Service</a></li><li><a class="hover:text-primary transition-colors" data-path="accessibility" href="#">Digital Accessibility</a></li><li><a class="hover:text-primary transition-colors" data-path="sustainability" href="#">Carbon-Neutral Printing</a></li></ul></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-sm font-body-sm text-body-sm text-on-surface-variant"><div class="flex flex-wrap items-center gap-space-md"><span class="font-label-caps text-label-caps">© 2025 L'Atelier Nuance Studio Inc.</span><span>All rights reserved.</span></div><div class="flex items-center gap-space-lg font-kicker text-kicker uppercase tracking-wider text-on-surface-variant"><span>Paris — 16:40 CET</span><span>·</span><span>New York — 10:40 EST</span></div></div></div></footer><script>
+  (function initCatalogInteractions() {
+    const pills = document.querySelectorAll('.cat-pill-btn');
+    const searchInput = document.getElementById('catalogSearchInput');
+    const tierSelect = document.getElementById('catalogTierSelect');
+    const sortSelect = document.getElementById('catalogSortSelect');
+    const cards = Array.from(document.querySelectorAll('.catalog-card'));
+    const grid = document.getElementById('catalogCardsGrid');
+    const emptyState = document.getElementById('catalogEmptyState');
+    const countLabel = document.getElementById('catalogCountLabel');
+    const resetBtn = document.getElementById('catalogResetFilters');
+    const emptyResetBtn = document.getElementById('emptyStateResetBtn');
+    const loadMoreBtn = document.getElementById('loadMoreCatalogBtn');
+    const loadMoreCounter = document.getElementById('loadMoreCounter');
+
+    let currentStyle = 'all';
+    let currentTier = 'all';
+    let searchTerm = '';
+
+    function filterAndSort() {
+      let visibleCount = 0;
+      cards.forEach(card => {
+        const cardStyle = card.getAttribute('data-style');
+        const cardCat = card.getAttribute('data-category');
+        const text = card.textContent.toLowerCase();
+
+        const matchStyle = (currentStyle === 'all' || cardStyle === currentStyle);
+        const matchTier = (currentTier === 'all' || cardCat === currentTier);
+        const matchSearch = (!searchTerm || text.includes(searchTerm));
+
+        if (matchStyle && matchTier && matchSearch) {
+          card.style.display = '';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      if (countLabel) {
+        countLabel.textContent = `Showing ${visibleCount} of 48 Curated Archival Suites`;
+      }
+      if (loadMoreCounter) {
+        loadMoreCounter.textContent = `${visibleCount} of 48 suites loaded`;
+      }
+
+      if (emptyState) {
+        if (visibleCount === 0) {
+          emptyState.classList.remove('hidden');
+        } else {
+          emptyState.classList.add('hidden');
+        }
+      }
+    }
+
+    pills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        pills.forEach(p => {
+          p.classList.remove('bg-primary', 'text-on-primary');
+          p.classList.add('bg-surface-container', 'text-on-surface');
+        });
+        pill.classList.add('bg-primary', 'text-on-primary');
+        pill.classList.remove('bg-surface-container', 'text-on-surface');
+        currentStyle = pill.getAttribute('data-cat-style');
+        filterAndSort();
+      });
+    });
+
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        searchTerm = e.target.value.toLowerCase().trim();
+        filterAndSort();
+      });
+    }
+
+    if (tierSelect) {
+      tierSelect.addEventListener('change', (e) => {
+        currentTier = e.target.value;
+        filterAndSort();
+      });
+    }
+
+    function resetAll() {
+      currentStyle = 'all';
+      currentTier = 'all';
+      searchTerm = '';
+      if (searchInput) searchInput.value = '';
+      if (tierSelect) tierSelect.value = 'all';
+      if (sortSelect) sortSelect.value = 'latest';
+      pills.forEach(p => {
+        if (p.getAttribute('data-cat-style') === 'all') {
+          p.classList.add('bg-primary', 'text-on-primary');
+          p.classList.remove('bg-surface-container', 'text-on-surface');
+        } else {
+          p.classList.remove('bg-primary', 'text-on-primary');
+          p.classList.add('bg-surface-container', 'text-on-surface');
+        }
+      });
+      filterAndSort();
+    }
+
+    if (resetBtn) resetBtn.addEventListener('click', resetAll);
+    if (emptyResetBtn) emptyResetBtn.addEventListener('click', resetAll);
+
+    if (loadMoreBtn) {
+      loadMoreBtn.addEventListener('click', () => {
+        loadMoreBtn.innerHTML = '<span>All 48 Archive Suites Displayed</span>';
+        loadMoreBtn.disabled = true;
+        loadMoreBtn.classList.add('opacity-60', 'cursor-default');
+        if (countLabel) countLabel.textContent = 'Showing 48 of 48 Curated Archival Suites';
+        if (loadMoreCounter) loadMoreCounter.textContent = '48 of 48 suites loaded';
+      });
+    }
+  })();
+</script></body></html>

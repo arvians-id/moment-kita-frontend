@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "background": "#fcf9f3", "on-tertiary": "#ffffff", "outline": "#747878", "error-container": "#ffdad6", "on-tertiary-fixed-variant": "#753224", "surface-tint": "#5f5e5e", "surface": "#fcf9f3", "secondary-container": "#ffad91", "surface-container-highest": "#e5e2dc", "on-primary-container": "#858383", "outline-variant": "#c4c7c7", "on-tertiary-container": "#c06d5b", "inverse-on-surface": "#f3f0ea", "surface-container-lowest": "#ffffff", "on-secondary": "#ffffff", "on-error": "#ffffff", "primary-fixed-dim": "#c8c6c5", "on-secondary-fixed-variant": "#703722", "on-surface-variant": "#444748", "surface-container-high": "#ebe8e2", "on-primary": "#ffffff", "inverse-primary": "#c8c6c5", "on-surface": "#1c1c18", "tertiary": "#000000", "surface-bright": "#fcf9f3", "tertiary-fixed-dim": "#ffb4a4", "tertiary-container": "#3c0801", "error": "#ba1a1a", "surface-variant": "#e5e2dc", "on-secondary-fixed": "#380d00", "secondary": "#8c4d37", "on-error-container": "#93000a", "primary-container": "#1c1b1b", "surface-container": "#f0eee8", "tertiary-fixed": "#ffdad3", "on-tertiary-fixed": "#3c0801", "on-secondary-container": "#7a3e29", "secondary-fixed": "#ffdbcf", "on-primary-fixed": "#1c1b1b", "inverse-surface": "#31312d", "surface-container-low": "#f6f3ed", "primary": "#000000", "secondary-fixed-dim": "#ffb59c", "primary-fixed": "#e5e2e1", "on-background": "#1c1c18", "on-primary-fixed-variant": "#474746", "surface-dim": "#dcdad4" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "3rem", "margin": "3.5rem", "space-xs": "0.25rem", "space-md": "1rem", "gutter-mobile": "1rem", "space-sm": "0.5rem", "gutter": "2rem", "margin-mobile": "1.25rem", "space-lg": "1.75rem" }, "fontFamily": { "body-sm": ["Plus Jakarta Sans"], "headline-lg": ["Playfair Display"], "headline-lg-mobile": ["Playfair Display"], "label-caps": ["Plus Jakarta Sans"], "kicker": ["Plus Jakarta Sans"], "display-hero-mobile": ["Playfair Display"], "quote-editorial": ["Playfair Display"], "body-lg": ["Plus Jakarta Sans"], "headline-xl": ["Playfair Display"], "display-hero": ["Playfair Display"], "headline-sm": ["Playfair Display"], "headline-md": ["Playfair Display"], "body-md": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Playfair Display"] }, "fontSize": { "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "400" }], "headline-lg-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "0em", "fontWeight": "400" }], "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.12em", "fontWeight": "600" }], "kicker": ["11px", { "lineHeight": "16px", "letterSpacing": "0.2em", "fontWeight": "600" }], "display-hero-mobile": ["44px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "400" }], "quote-editorial": ["24px", { "lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "headline-xl": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "400" }], "display-hero": ["84px", { "lineHeight": "92px", "letterSpacing": "-0.03em", "fontWeight": "400" }], "headline-sm": ["22px", { "lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "600" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl-mobile": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.01em", "fontWeight": "400" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-[1440px] mx-auto px-margin-mobile lg:px-margin flex items-center justify-between"><div class="flex items-center gap-space-md"><img alt="L'Atelier Nuance Monogram Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WORa7OFIDEA7UPD6MXwEEjQLZ-jy7n080Duy_MtM2d0iXYga0ZH1v4JwIzC9mcMobJ7aMmmbk-R6eD5oytZOkNtvi0CO67tJ9GoAna2Yf03mENT0HnwfYrqWgKPsrZtDzVXA2BA6huVaulYlgBQ0roeaVG7xp40Eck7D6fpl5_bPO70EGCIfPONyFDQmpRT2_Y5BgnOg3y2nxoHTaQqTflRQBQdj4wymaHOfCTkeCoSu_7wpl6XY2c"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none">L'Atelier Nuance</span><span class="font-kicker text-kicker uppercase tracking-widest text-on-surface-variant mt-space-xs">Digital &amp; Fine Print Studio</span></div></div><nav class="hidden xl:flex items-center gap-space-lg" data-active-classes="text-primary font-semibold"><div class="relative group py-space-sm"><button class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant group-hover:text-primary flex items-center gap-1 transition-colors duration-200" type="button">Products<span class="material-symbols-outlined text-[14px] text-on-surface-variant transition-transform group-hover:rotate-180">expand_more</span></button><div class="absolute left-0 top-full hidden group-hover:flex flex-col w-64 bg-surface-container-lowest p-space-sm shadow-[0_16px_40px_-12px_rgba(46,38,33,0.08)]"><a class="p-space-sm hover:bg-surface-container-low transition-colors duration-150 flex flex-col" data-path="digital-invitations" href="#"><span class="font-kicker text-kicker text-secondary uppercase">01 — Suite</span><span class="font-body-md text-body-md text-on-surface">Digital Invitations (SaaS)</span></a><a class="p-space-sm hover:bg-surface-container-low transition-colors duration-150 flex flex-col" data-path="printed-fine-stationery" href="#"><span class="font-kicker text-kicker text-secondary uppercase">02 — Atelier</span><span class="font-body-md text-body-md text-on-surface">Printed &amp; Fine Stationery</span></a></div></div><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-200" data-path="templates" href="#">Templates</a><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-200" data-path="features" href="#">Features</a><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-200" data-path="pricing" href="#">Pricing</a><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-200" data-path="how-it-works" href="#">How It Works</a><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-200" data-path="faq" href="#">FAQ</a></nav><div class="hidden lg:flex items-center gap-space-md"><a class="inline-flex items-center gap-1.5 font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-secondary transition-colors duration-200" data-path="consultation" href="#"><span class="material-symbols-outlined text-[16px]">forum</span><span>Consult via WhatsApp</span></a><span class="h-4 w-px bg-surface-container-highest"></span><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-200" data-path="login" href="#">Log In</a><a class="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-wider hover:bg-secondary transition-colors duration-200 shadow-sm" data-path="create-invitation" href="#">Create Digital Invitation</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div><div class="flex items-center gap-space-sm xl:hidden"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><button aria-label="Open Editorial Menu" class="p-2 text-on-surface hover:text-primary focus:outline-none" type="button"><span class="material-symbols-outlined text-2xl">menu</span></button></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- 01 HERO SECTION -->
+<section class="relative w-full max-w-[1440px] mx-auto px-margin-mobile lg:px-margin pt-12 lg:pt-20 pb-20 lg:pb-32 overflow-hidden">
+<!-- Ambient atmospheric glow behind phone -->
+<div class="absolute right-0 top-1/4 w-[520px] h-[520px] rounded-full bg-secondary-fixed/30 blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute left-1/4 top-1/2 w-[380px] h-[380px] rounded-full bg-surface-container-high/60 blur-2xl pointer-events-none -z-10"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-y-16 lg:gap-x-gutter items-center">
+<!-- Editorial Copy Column (Cols 1-6) -->
+<div class="lg:col-span-6 flex flex-col items-start space-y-6">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-kicker text-kicker uppercase tracking-widest text-primary">01 — Digital Wedding Suite · Instant Setup · Custom Domain</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-primary tracking-tight leading-[1.08]">
+          Your wedding story, <br class="hidden sm:inline"/>
+<span class="italic font-normal font-headline-xl text-secondary">beautifully online.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed">
+          A bespoke interactive suite engineered for effortless RSVP logistics, instant multi-channel distribution, and tactile typography narratives—without losing high-fashion maison reverence.
+        </p>
+<!-- CTAs -->
+<div class="pt-4 flex flex-wrap items-center gap-4 w-full sm:w-auto">
+<a class="inline-flex items-center justify-center px-8 py-4 bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-wider hover:bg-secondary transition-colors duration-200 shadow-md" href="#templates">
+            Create Digital Invitation
+          </a>
+<a class="inline-flex items-center justify-center px-8 py-4 bg-transparent text-primary hover:bg-surface-container transition-colors duration-200 font-label-caps text-label-caps uppercase tracking-wider shadow-sm" href="#templates-grid">
+            Explore 24+ Templates
+          </a>
+</div>
+<!-- Social Proof Micro-Strip -->
+<div class="pt-8 flex items-center gap-6 text-on-surface-variant">
+<div class="flex -space-x-2 overflow-hidden">
+<div class="inline-block h-8 w-8 rounded-full bg-surface-container-highest flex items-center justify-center font-label-caps text-[10px] text-primary">M&amp;D</div>
+<div class="inline-block h-8 w-8 rounded-full bg-secondary-fixed flex items-center justify-center font-label-caps text-[10px] text-on-secondary-fixed">S&amp;A</div>
+<div class="inline-block h-8 w-8 rounded-full bg-surface-container-high flex items-center justify-center font-label-caps text-[10px] text-primary">C&amp;L</div>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center text-secondary gap-1">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-kicker text-kicker text-primary ml-1">5.0 / 5.0</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Over 4,200 weddings hosted worldwide</span>
+</div>
+</div>
+</div>
+<!-- Editorial Frame & Mobile Device Stage (Cols 7-12) -->
+<div class="lg:col-span-6 relative flex justify-center lg:justify-end items-center">
+<!-- Offset Texture Backing Card -->
+<div class="absolute -top-6 -bottom-6 right-0 w-11/12 bg-surface-container-low rounded-3xl -rotate-1 pointer-events-none"></div>
+<!-- Phone Device Frame -->
+<div class="relative z-10 w-[310px] sm:w-[340px] md:w-[370px] bg-surface-container-lowest rounded-[44px] shadow-2xl p-3">
+<!-- Dynamic Island / Speaker notch -->
+<div class="relative rounded-[36px] bg-surface overflow-hidden shadow-inner aspect-[9/19]">
+<!-- Live Screen Header -->
+<div class="pt-4 pb-2 px-6 flex justify-between items-center bg-surface/90 backdrop-blur-md sticky top-0 z-20">
+<span class="font-kicker text-[10px] uppercase text-on-surface-variant tracking-widest">L'Atelier Nuance</span>
+<span class="material-symbols-outlined text-secondary text-[16px]">volume_up</span>
+</div>
+<!-- Invitation Body Inside Mockup -->
+<div class="px-6 py-6 flex flex-col items-center text-center space-y-4">
+<span class="font-kicker text-[10px] uppercase text-secondary tracking-[0.25em]">Save The Date</span>
+<h3 class="font-headline-md text-headline-md text-primary leading-tight">
+                Melina <br/>
+<span class="italic font-normal font-headline-md text-on-surface-variant">&amp;</span> Dayson
+              </h3>
+<p class="font-kicker text-[11px] uppercase tracking-wider text-on-surface-variant">Saturday · Oct 24, 2025</p>
+<!-- Wax Seal Trigger Simulation -->
+<div class="my-3 w-12 h-12 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-md">
+<span class="font-headline-sm text-sm">M</span>
+</div>
+<!-- Location & Schedule Snippet -->
+<div class="w-full bg-surface-container-low p-4 rounded-xl space-y-1 text-left">
+<span class="font-kicker text-[10px] uppercase text-secondary block">Château de Villette</span>
+<span class="font-body-sm text-xs text-on-surface-variant block">Condécourt, Île-de-France</span>
+<div class="pt-2 flex items-center justify-between text-[11px] font-label-caps uppercase text-primary">
+<span>16:00 Ceremony</span>
+<span class="text-secondary">Directions →</span>
+</div>
+</div>
+<!-- Interactive RSVP Pill in mockup -->
+<div class="w-full py-3 bg-primary text-on-primary font-label-caps text-[11px] uppercase tracking-wider rounded-lg shadow-sm">
+                Open RSVP Guest Portal
+              </div>
+</div>
+</div>
+</div>
+<!-- Floating Badge 1: Live RSVP Tracker -->
+<div class="absolute -left-6 sm:left-4 top-12 z-20 bg-surface-container-lowest/95 backdrop-blur-md px-4 py-3 rounded-2xl shadow-xl flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">how_to_reg</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-primary">142 RSVPs Confirmed</span>
+<span class="font-body-sm text-[11px] text-secondary">98% Response rate (48h)</span>
+</div>
+</div>
+<!-- Floating Badge 2: Custom Domain -->
+<div class="absolute -right-4 sm:right-6 bottom-16 z-20 bg-surface-container-lowest/95 backdrop-blur-md px-4 py-3 rounded-2xl shadow-xl flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">language</span>
+</div>
+<div class="flex flex-col">
+<span class="font-kicker text-[10px] text-on-surface-variant uppercase">Custom Domain</span>
+<span class="font-body-md text-xs font-semibold text-primary">melina-dayson.love</span>
+</div>
+</div>
+<!-- Floating Badge 3: Audio Pill -->
+<div class="absolute left-8 bottom-4 z-20 bg-primary text-on-primary px-3.5 py-2 rounded-full shadow-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-[14px] text-secondary-fixed animate-pulse">graphic_eq</span>
+<span class="font-kicker text-[10px] uppercase tracking-wider">Claire de Lune · 02:40</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 02 ARCHITECTURE: STEP-BY-STEP FLOW -->
+<section class="w-full bg-surface-container-low py-20 lg:py-28">
+<div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div class="space-y-2">
+<span class="font-kicker text-kicker uppercase tracking-widest text-secondary block">02 — The Architecture</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">
+            Effortless from conception <span class="italic font-normal">to celebration.</span>
+</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          Six curated stages built to eliminate the logistical stress of traditional wedding invitations while upholding archival typography standards.
+        </p>
+</div>
+<!-- 6 Clean Step Cards Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Step 1 -->
+<div class="bg-surface-container-lowest p-8 flex flex-col justify-between space-y-6 shadow-sm hover:shadow-md transition-shadow">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="font-kicker text-kicker uppercase text-secondary">Step 01</span>
+<span class="material-symbols-outlined text-primary text-[22px]">auto_stories</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Choose Template</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Select from 24+ editorial themes crafted with generous negative space, refined serif titles, and tailored mobile viewports.
+            </p>
+</div>
+<div class="pt-4 flex items-center gap-2 text-primary font-label-caps text-label-caps uppercase">
+<span>Explore Library</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container-lowest p-8 flex flex-col justify-between space-y-6 shadow-sm hover:shadow-md transition-shadow">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="font-kicker text-kicker uppercase text-secondary">Step 02</span>
+<span class="material-symbols-outlined text-primary text-[22px]">edit_calendar</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Input Nuanced Data</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Input weekend schedules, GPS coordinates, attire guidelines, hotel room blocks, and VIP dinner reservations with 1-click toggles.
+            </p>
+</div>
+<div class="pt-4 flex items-center gap-2 text-primary font-label-caps text-label-caps uppercase">
+<span>Schedule Builder</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container-lowest p-8 flex flex-col justify-between space-y-6 shadow-sm hover:shadow-md transition-shadow">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="font-kicker text-kicker uppercase text-secondary">Step 03</span>
+<span class="material-symbols-outlined text-primary text-[22px]">photo_library</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Upload Memories</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Seamlessly curate your love story timeline, engagement photo monograph, and embed short cinematic preview reels.
+            </p>
+</div>
+<div class="pt-4 flex items-center gap-2 text-primary font-label-caps text-label-caps uppercase">
+<span>Visual Monograph</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="bg-surface-container-lowest p-8 flex flex-col justify-between space-y-6 shadow-sm hover:shadow-md transition-shadow">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="font-kicker text-kicker uppercase text-secondary">Step 04</span>
+<span class="material-symbols-outlined text-primary text-[22px]">dns</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Claim Your Wedding URL</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Select an atelier subdomain (nuance.wedding/claire-adam) or map a personal top-level custom domain with automated SSL security.
+            </p>
+</div>
+<div class="pt-4 flex items-center gap-2 text-primary font-label-caps text-label-caps uppercase">
+<span>Domain Check</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+<!-- Step 5 -->
+<div class="bg-surface-container-lowest p-8 flex flex-col justify-between space-y-6 shadow-sm hover:shadow-md transition-shadow">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="font-kicker text-kicker uppercase text-secondary">Step 05</span>
+<span class="material-symbols-outlined text-primary text-[22px]">lock</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Publish &amp; Protect</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Deploy globally across Edge CDN nodes in under 2 seconds. Add optional four-digit passcode protection for utmost guest privacy.
+            </p>
+</div>
+<div class="pt-4 flex items-center gap-2 text-primary font-label-caps text-label-caps uppercase">
+<span>Privacy Controls</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+<!-- Step 6 -->
+<div class="bg-surface-container-lowest p-8 flex flex-col justify-between space-y-6 shadow-sm hover:shadow-md transition-shadow">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="font-kicker text-kicker uppercase text-secondary">Step 06</span>
+<span class="material-symbols-outlined text-primary text-[22px]">mark_email_read</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Manage Guests &amp; Logistics</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Receive live RSVPs, track dietary requirements, monitor meal choices, and export structured CSV tables for your caterer and planner.
+            </p>
+</div>
+<div class="pt-4 flex items-center gap-2 text-primary font-label-caps text-label-caps uppercase">
+<span>Guest CRM View</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 03 INTERACTIVE FEATURE SHOWCASE: BENTO STORYTELLING -->
+<section class="w-full max-w-[1440px] mx-auto px-margin-mobile lg:px-margin py-20 lg:py-32">
+<div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+<span class="font-kicker text-kicker uppercase tracking-widest text-secondary">03 — Suite Capabilities</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">
+        Built for Nuanced Celebrations
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Every interactive element is calibrated to balance high-fashion editorial restraint with fluid digital intelligence.
+      </p>
+</div>
+<!-- Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Feature 1: Real-time RSVP Engine (Cols 1-7) -->
+<div class="md:col-span-7 bg-surface-container-low p-8 lg:p-10 flex flex-col justify-between rounded-none shadow-sm">
+<div class="space-y-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">fact_check</span>
+<span class="font-kicker text-kicker uppercase text-secondary">Feature 01 · Guest Logistics</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">Real-Time RSVP &amp; Dietary Precision</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+            Collect precise attendee headcounts, meal preferences, allergen notes, and shuttle requirements. Instant status updates delivered straight to your Atelier Host Portal.
+          </p>
+</div>
+<!-- Simulated Interactive RSVP Preview Component -->
+<div class="mt-8 p-6 bg-surface-container-lowest rounded-xl shadow-sm space-y-4">
+<div class="flex justify-between items-center pb-3 border-b border-surface-container">
+<span class="font-label-caps text-label-caps uppercase text-primary">RSVP · Melina &amp; Dayson</span>
+<span class="font-kicker text-[10px] text-secondary uppercase tracking-wider">Step 1 of 2</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="space-y-1">
+<label class="font-kicker text-[10px] uppercase text-on-surface-variant">Attending Ceremony?</label>
+<div class="flex gap-2">
+<button class="px-4 py-2 bg-primary text-on-primary text-xs font-label-caps uppercase flex-1">Joyfully Yes</button>
+<button class="px-4 py-2 bg-surface-container text-on-surface-variant text-xs font-label-caps uppercase flex-1">Regretfully No</button>
+</div>
+</div>
+<div class="space-y-1">
+<label class="font-kicker text-[10px] uppercase text-on-surface-variant">Dietary Preference</label>
+<div class="p-2 bg-surface-container-low text-xs text-on-surface flex justify-between items-center">
+<span>Pescatarian / Gluten-Free</span>
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Feature 2: Digital Envelope & Cash Registry (Cols 8-12) -->
+<div class="md:col-span-5 bg-surface-container-lowest p-8 lg:p-10 flex flex-col justify-between shadow-sm">
+<div class="space-y-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">savings</span>
+<span class="font-kicker text-kicker uppercase text-secondary">Feature 02 · Zero Transaction Cut</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">Direct Cash Registry &amp; Digital Envelope</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Receive monetary wedding gifts, honeymoon contributions, and bespoke wishes directly into your bank or digital wallet via custom QR seals with 0% platform fees.
+          </p>
+</div>
+<div class="mt-8 p-4 bg-surface-container-low flex items-center gap-4">
+<div class="w-14 h-14 bg-surface-container-lowest p-2 flex items-center justify-center shadow-inner">
+<span class="material-symbols-outlined text-primary text-[28px]">qr_code_2</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-primary uppercase">Honeymoon to Amalfi</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Instant routing via Apple Pay, Venmo, or SEPA</span>
+</div>
+</div>
+</div>
+<!-- Feature 3: Curated Spotify Soundtrack (Cols 1-4) -->
+<div class="md:col-span-4 bg-surface-container-lowest p-8 flex flex-col justify-between shadow-sm">
+<div class="space-y-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">music_note</span>
+<span class="font-kicker text-kicker uppercase text-secondary">Feature 03 · Audio</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary">Curated Soundtrack</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Elevate anticipation with background melodies or embed a Spotify playlist that guests can listen to while reviewing the weekend details.
+          </p>
+</div>
+<div class="mt-6 flex items-center gap-3 p-3 bg-surface-container-low rounded-lg">
+<span class="material-symbols-outlined text-secondary text-[20px]">play_circle</span>
+<div class="flex flex-col">
+<span class="font-label-caps text-xs text-primary">Nuance Wedding Chords</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Spotify Verified Embed</span>
+</div>
+</div>
+</div>
+<!-- Feature 4: Interactive Milestone Timeline (Cols 5-8) -->
+<div class="md:col-span-4 bg-surface-container-lowest p-8 flex flex-col justify-between shadow-sm">
+<div class="space-y-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">timeline</span>
+<span class="font-kicker text-kicker uppercase text-secondary">Feature 04 · Story</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary">Interactive Love Story</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            From the first coffee in Montmartre to the proposal in Kyoto. Frame your milestones with archival typography and photo reveals.
+          </p>
+</div>
+<div class="mt-6 flex items-center gap-2 text-on-surface-variant font-kicker text-[11px] uppercase tracking-wider">
+<span>2020 First Met</span>
+<span class="text-secondary">———</span>
+<span>2023 Engaged</span>
+<span class="text-secondary">———</span>
+<span class="text-primary font-bold">2025 Union</span>
+</div>
+</div>
+<!-- Feature 5: 1-Tap Maps & Navigation (Cols 9-12) -->
+<div class="md:col-span-4 bg-surface-container-lowest p-8 flex flex-col justify-between shadow-sm">
+<div class="space-y-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">map</span>
+<span class="font-kicker text-kicker uppercase text-secondary">Feature 05 · Transit</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary">1-Tap Maps &amp; Transit</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Direct deep-links to Apple Maps, Google Maps, Waze, and Uber with designated venue parking and shuttle departure coordinates.
+          </p>
+</div>
+<div class="mt-6 flex items-center gap-3">
+<span class="px-3 py-1.5 bg-surface-container text-[11px] font-label-caps uppercase text-primary">Apple Maps</span>
+<span class="px-3 py-1.5 bg-surface-container text-[11px] font-label-caps uppercase text-primary">Google Maps</span>
+<span class="px-3 py-1.5 bg-surface-container text-[11px] font-label-caps uppercase text-primary">Uber Ride</span>
+</div>
+</div>
+<!-- Additional Sub-features Strip (Full Width Cols 1-12) -->
+<div class="md:col-span-12 grid grid-cols-2 md:grid-cols-4 gap-4 pt-4">
+<div class="p-4 bg-surface-container-low flex flex-col gap-1">
+<span class="material-symbols-outlined text-secondary text-[20px]">calendar_add_on</span>
+<span class="font-label-caps text-label-caps text-primary uppercase mt-2">1-Click Calendar</span>
+<span class="font-body-sm text-xs text-on-surface-variant">Apple, Google, &amp; Outlook sync</span>
+</div>
+<div class="p-4 bg-surface-container-low flex flex-col gap-1">
+<span class="material-symbols-outlined text-secondary text-[20px]">videocam</span>
+<span class="font-label-caps text-label-caps text-primary uppercase mt-2">Live Stream Embed</span>
+<span class="font-body-sm text-xs text-on-surface-variant">Private Zoom / YouTube broadcast</span>
+</div>
+<div class="p-4 bg-surface-container-low flex flex-col gap-1">
+<span class="material-symbols-outlined text-secondary text-[20px]">favorite</span>
+<span class="font-label-caps text-label-caps text-primary uppercase mt-2">Digital Guest Wall</span>
+<span class="font-body-sm text-xs text-on-surface-variant">Photo wishes &amp; loving messages</span>
+</div>
+<div class="p-4 bg-surface-container-low flex flex-col gap-1">
+<span class="material-symbols-outlined text-secondary text-[20px]">ios_share</span>
+<span class="font-label-caps text-label-caps text-primary uppercase mt-2">Host CSV Export</span>
+<span class="font-body-sm text-xs text-on-surface-variant">Planner &amp; caterer formatted lists</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 04 CURATED TEMPLATE COLLECTIONS -->
+<section class="w-full bg-surface-container-low py-20 lg:py-28" id="templates-grid">
+<div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div class="space-y-2">
+<span class="font-kicker text-kicker uppercase tracking-widest text-secondary block">Gallery Showcase</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">
+            Curated Template Collections
+          </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          Explore layouts conceived for distinct aesthetic styles. Switch designs at any moment with your data automatically preserved.
+        </p>
+</div>
+<!-- Filter Tabs Strip -->
+<div class="flex items-center gap-2 overflow-x-auto pb-6 mb-8 scrollbar-none">
+<button class="px-5 py-2.5 bg-primary text-on-primary font-label-caps text-label-caps uppercase whitespace-nowrap">All Styles (24)</button>
+<button class="px-5 py-2.5 bg-surface-container-lowest text-on-surface-variant hover:text-primary font-label-caps text-label-caps uppercase whitespace-nowrap transition-colors">Minimal</button>
+<button class="px-5 py-2.5 bg-surface-container-lowest text-on-surface-variant hover:text-primary font-label-caps text-label-caps uppercase whitespace-nowrap transition-colors">Warm Rustic</button>
+<button class="px-5 py-2.5 bg-surface-container-lowest text-on-surface-variant hover:text-primary font-label-caps text-label-caps uppercase whitespace-nowrap transition-colors">Nocturne Modern</button>
+<button class="px-5 py-2.5 bg-surface-container-lowest text-on-surface-variant hover:text-primary font-label-caps text-label-caps uppercase whitespace-nowrap transition-colors">Architectural</button>
+<button class="px-5 py-2.5 bg-surface-container-lowest text-on-surface-variant hover:text-primary font-label-caps text-label-caps uppercase whitespace-nowrap transition-colors">Delicate Floral</button>
+<button class="px-5 py-2.5 bg-surface-container-lowest text-on-surface-variant hover:text-primary font-label-caps text-label-caps uppercase whitespace-nowrap transition-colors">Illustrated Manga</button>
+</div>
+<!-- Template Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Template 1: Le Jardin Minimaliste -->
+<div class="bg-surface-container-lowest flex flex-col justify-between shadow-sm group">
+<div class="p-8 bg-surface-container-high/40 aspect-[4/3] flex items-center justify-center relative overflow-hidden">
+<div class="w-48 h-64 bg-surface shadow-xl p-4 flex flex-col items-center justify-between text-center transition-transform duration-300 group-hover:scale-105">
+<span class="font-kicker text-[8px] uppercase tracking-widest text-secondary">The Union of</span>
+<span class="font-headline-sm text-sm text-primary">Julian &amp; Clara</span>
+<div class="w-6 h-px bg-on-surface-variant/30"></div>
+<span class="font-body-sm text-[9px] text-on-surface-variant">Château de Courcelles</span>
+<span class="font-kicker text-[8px] uppercase tracking-wider text-primary">09.18.25</span>
+</div>
+</div>
+<div class="p-6 space-y-4">
+<div class="flex justify-between items-start">
+<div>
+<span class="font-kicker text-kicker uppercase text-secondary">Minimal · Monolith</span>
+<h4 class="font-headline-sm text-headline-sm text-primary">Le Jardin Minimaliste</h4>
+</div>
+<span class="font-label-caps text-xs text-on-surface-variant">Editorial</span>
+</div>
+<div class="pt-2 flex items-center gap-3">
+<button class="flex-1 py-3 bg-primary text-on-primary font-label-caps text-label-caps uppercase hover:bg-secondary transition-colors">Use Design</button>
+<button class="px-4 py-3 bg-surface-container text-primary font-label-caps text-label-caps uppercase hover:bg-surface-container-high transition-colors">Preview</button>
+</div>
+</div>
+</div>
+<!-- Template 2: Sienna & Solstice -->
+<div class="bg-surface-container-lowest flex flex-col justify-between shadow-sm group">
+<div class="p-8 bg-secondary-fixed/20 aspect-[4/3] flex items-center justify-center relative overflow-hidden">
+<div class="w-48 h-64 bg-[#fbf6ee] shadow-xl p-4 flex flex-col items-center justify-between text-center transition-transform duration-300 group-hover:scale-105">
+<span class="font-kicker text-[8px] uppercase tracking-widest text-secondary">Tuscany Solstice</span>
+<span class="font-headline-sm text-sm text-secondary">Matteo &amp; Elena</span>
+<div class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center text-[10px] font-headline-sm">M&amp;E</div>
+<span class="font-body-sm text-[9px] text-on-surface-variant">Villa Medicea di Lilliano</span>
+<span class="font-kicker text-[8px] uppercase tracking-wider text-primary">06.21.25</span>
+</div>
+</div>
+<div class="p-6 space-y-4">
+<div class="flex justify-between items-start">
+<div>
+<span class="font-kicker text-kicker uppercase text-secondary">Warm Ochre · Rustic Luxe</span>
+<h4 class="font-headline-sm text-headline-sm text-primary">Sienna &amp; Solstice</h4>
+</div>
+<span class="font-label-caps text-xs text-on-surface-variant">Sunlit</span>
+</div>
+<div class="pt-2 flex items-center gap-3">
+<button class="flex-1 py-3 bg-primary text-on-primary font-label-caps text-label-caps uppercase hover:bg-secondary transition-colors">Use Design</button>
+<button class="px-4 py-3 bg-surface-container text-primary font-label-caps text-label-caps uppercase hover:bg-surface-container-high transition-colors">Preview</button>
+</div>
+</div>
+</div>
+<!-- Template 3: Nocturne Monolith -->
+<div class="bg-surface-container-lowest flex flex-col justify-between shadow-sm group">
+<div class="p-8 bg-primary-container aspect-[4/3] flex items-center justify-center relative overflow-hidden">
+<div class="w-48 h-64 bg-[#141312] shadow-xl p-4 flex flex-col items-center justify-between text-center transition-transform duration-300 group-hover:scale-105 text-white">
+<span class="font-kicker text-[8px] uppercase tracking-widest text-[#E3D4BE]">Black Tie Gala</span>
+<span class="font-headline-sm text-sm text-white italic">Victoria &amp; Sean</span>
+<div class="w-6 h-px bg-[#E3D4BE]/40"></div>
+<span class="font-body-sm text-[9px] text-white/70">The Glasshouse Manhattan</span>
+<span class="font-kicker text-[8px] uppercase tracking-wider text-[#E3D4BE]">11.08.25</span>
+</div>
+</div>
+<div class="p-6 space-y-4">
+<div class="flex justify-between items-start">
+<div>
+<span class="font-kicker text-kicker uppercase text-secondary">Dark Mode · Haute Couture</span>
+<h4 class="font-headline-sm text-headline-sm text-primary">Nocturne Monolith</h4>
+</div>
+<span class="font-label-caps text-xs text-on-surface-variant">Evening</span>
+</div>
+<div class="pt-2 flex items-center gap-3">
+<button class="flex-1 py-3 bg-primary text-on-primary font-label-caps text-label-caps uppercase hover:bg-secondary transition-colors">Use Design</button>
+<button class="px-4 py-3 bg-surface-container text-primary font-label-caps text-label-caps uppercase hover:bg-surface-container-high transition-colors">Preview</button>
+</div>
+</div>
+</div>
+<!-- Template 4: Copenhagen Reverie -->
+<div class="bg-surface-container-lowest flex flex-col justify-between shadow-sm group">
+<div class="p-8 bg-surface-container-highest aspect-[4/3] flex items-center justify-center relative overflow-hidden">
+<div class="w-48 h-64 bg-surface-container-lowest shadow-xl p-4 flex flex-col items-start justify-between transition-transform duration-300 group-hover:scale-105">
+<span class="font-kicker text-[8px] uppercase text-primary">NORDIC UNION / 25</span>
+<span class="font-headline-sm text-sm text-primary">Henrik <br/>+ Signe</span>
+<span class="font-body-sm text-[9px] text-on-surface-variant">Louisiana Museum of Modern Art</span>
+<span class="font-kicker text-[8px] uppercase text-secondary">AUGUST 14</span>
+</div>
+</div>
+<div class="p-6 space-y-4">
+<div class="flex justify-between items-start">
+<div>
+<span class="font-kicker text-kicker uppercase text-secondary">Architectural · Typography</span>
+<h4 class="font-headline-sm text-headline-sm text-primary">Copenhagen Reverie</h4>
+</div>
+<span class="font-label-caps text-xs text-on-surface-variant">Nordic</span>
+</div>
+<div class="pt-2 flex items-center gap-3">
+<button class="flex-1 py-3 bg-primary text-on-primary font-label-caps text-label-caps uppercase hover:bg-secondary transition-colors">Use Design</button>
+<button class="px-4 py-3 bg-surface-container text-primary font-label-caps text-label-caps uppercase hover:bg-surface-container-high transition-colors">Preview</button>
+</div>
+</div>
+</div>
+<!-- Template 5: Ethereal Botanique -->
+<div class="bg-surface-container-lowest flex flex-col justify-between shadow-sm group">
+<div class="p-8 bg-[#f5efe9] aspect-[4/3] flex items-center justify-center relative overflow-hidden">
+<div class="w-48 h-64 bg-surface shadow-xl p-4 flex flex-col items-center justify-between text-center transition-transform duration-300 group-hover:scale-105">
+<span class="material-symbols-outlined text-secondary text-[20px]">spa</span>
+<span class="font-headline-sm text-sm text-primary italic">Amélie &amp; Luc</span>
+<span class="font-body-sm text-[9px] text-on-surface-variant">Provence Countryside Estate</span>
+<span class="font-kicker text-[8px] uppercase tracking-wider text-secondary">SPRING EQUINOX</span>
+</div>
+</div>
+<div class="p-6 space-y-4">
+<div class="flex justify-between items-start">
+<div>
+<span class="font-kicker text-kicker uppercase text-secondary">Delicate Floral · Botanical</span>
+<h4 class="font-headline-sm text-headline-sm text-primary">Ethereal Botanique</h4>
+</div>
+<span class="font-label-caps text-xs text-on-surface-variant">Organic</span>
+</div>
+<div class="pt-2 flex items-center gap-3">
+<button class="flex-1 py-3 bg-primary text-on-primary font-label-caps text-label-caps uppercase hover:bg-secondary transition-colors">Use Design</button>
+<button class="px-4 py-3 bg-surface-container text-primary font-label-caps text-label-caps uppercase hover:bg-surface-container-high transition-colors">Preview</button>
+</div>
+</div>
+</div>
+<!-- Template 6: Kyoto Whisper -->
+<div class="bg-surface-container-lowest flex flex-col justify-between shadow-sm group">
+<div class="p-8 bg-surface-container aspect-[4/3] flex items-center justify-center relative overflow-hidden">
+<div class="w-48 h-64 bg-[#f8f6f0] shadow-xl p-4 flex flex-col items-center justify-between text-center transition-transform duration-300 group-hover:scale-105">
+<span class="font-kicker text-[8px] uppercase tracking-widest text-primary">ATELIER MANGA LINE</span>
+<span class="font-headline-sm text-sm text-primary">Kenji &amp; Yuna</span>
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-[16px]">draw</span>
+</div>
+<span class="font-body-sm text-[9px] text-on-surface-variant">Gion Garden Pavilion</span>
+<span class="font-kicker text-[8px] uppercase tracking-wider text-secondary">OCTOBER 04</span>
+</div>
+</div>
+<div class="p-6 space-y-4">
+<div class="flex justify-between items-start">
+<div>
+<span class="font-kicker text-kicker uppercase text-secondary">Illustrated · Fine Line Art</span>
+<h4 class="font-headline-sm text-headline-sm text-primary">Kyoto Whisper</h4>
+</div>
+<span class="font-label-caps text-xs text-on-surface-variant">Artistic</span>
+</div>
+<div class="pt-2 flex items-center gap-3">
+<button class="flex-1 py-3 bg-primary text-on-primary font-label-caps text-label-caps uppercase hover:bg-secondary transition-colors">Use Design</button>
+<button class="px-4 py-3 bg-surface-container text-primary font-label-caps text-label-caps uppercase hover:bg-surface-container-high transition-colors">Preview</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 05 THE LIVE STUDIO EDITOR EXPERIENCE (SPLIT-SCREEN DEMO) -->
+<section class="w-full max-w-[1440px] mx-auto px-margin-mobile lg:px-margin py-20 lg:py-32">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-y-12 lg:gap-x-gutter items-center">
+<!-- Left: Studio Editor Controls Mockup (Cols 1-6) -->
+<div class="lg:col-span-6 space-y-8">
+<div class="space-y-3">
+<span class="font-kicker text-kicker uppercase tracking-widest text-secondary">The Studio Interface</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">
+            Edit once, <br/>
+<span class="italic font-normal">preview instantly.</span>
+</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+            A fluid, responsive workspace created for couples and planners. Update your itineraries, manage custom questions, and tune palette undertones without touching a single line of code.
+          </p>
+</div>
+<!-- Interactive Control Console Simulation -->
+<div class="bg-surface-container-low p-6 lg:p-8 space-y-6 shadow-sm">
+<!-- Editor Tab Bar -->
+<div class="flex items-center gap-4 pb-4 border-b border-surface-container-highest">
+<span class="font-label-caps text-label-caps uppercase text-primary border-b-2 border-primary pb-1">01 Couple Details</span>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary cursor-pointer pb-1">02 Schedule</span>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary cursor-pointer pb-1">03 RSVP Logic</span>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary cursor-pointer pb-1">04 Palette</span>
+</div>
+<!-- Live Form Fields -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="space-y-1">
+<label class="font-kicker text-[10px] uppercase text-on-surface-variant">Partner One Full Name</label>
+<input class="w-full bg-surface-container-lowest px-3 py-2 text-body-md text-on-surface border-0 focus:outline-none focus:ring-1 focus:ring-secondary" type="text" value="Melina Laurent"/>
+</div>
+<div class="space-y-1">
+<label class="font-kicker text-[10px] uppercase text-on-surface-variant">Partner Two Full Name</label>
+<input class="w-full bg-surface-container-lowest px-3 py-2 text-body-md text-on-surface border-0 focus:outline-none focus:ring-1 focus:ring-secondary" type="text" value="Dayson Vance"/>
+</div>
+</div>
+<div class="space-y-1">
+<label class="font-kicker text-[10px] uppercase text-on-surface-variant">Wedding Subdomain / Slug</label>
+<div class="flex items-center bg-surface-container-lowest px-3 py-2">
+<span class="font-body-sm text-xs text-on-surface-variant">nuance.wedding/</span>
+<input class="bg-transparent text-body-md text-primary font-semibold border-0 focus:outline-none flex-1" type="text" value="melina-dayson"/>
+<span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+</div>
+</div>
+<!-- Color Swatch Picker Simulation -->
+<div class="space-y-2">
+<label class="font-kicker text-[10px] uppercase text-on-surface-variant">Editorial Mood Palette</label>
+<div class="flex items-center gap-3">
+<button class="w-7 h-7 rounded-full bg-[#fcf9f3] ring-2 ring-primary"></button>
+<button class="w-7 h-7 rounded-full bg-[#EFE9DE]"></button>
+<button class="w-7 h-7 rounded-full bg-[#8c4d37]"></button>
+<button class="w-7 h-7 rounded-full bg-[#2E2621]"></button>
+<button class="w-7 h-7 rounded-full bg-[#1C1B1B]"></button>
+</div>
+</div>
+<!-- Editor Micro Status Bar -->
+<div class="pt-2 flex items-center justify-between text-xs text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-green-600 animate-ping"></span>
+              Auto-saved 2s ago
+            </span>
+<span class="font-label-caps uppercase text-primary cursor-pointer hover:underline">Reset to Default</span>
+</div>
+</div>
+</div>
+<!-- Right: Real-time Live Phone Sync (Cols 7-12) -->
+<div class="lg:col-span-6 flex flex-col items-center justify-center relative">
+<div class="w-[300px] sm:w-[330px] bg-surface-container-lowest rounded-[40px] shadow-2xl p-3 relative z-10">
+<div class="rounded-[32px] bg-[#FAF8F5] overflow-hidden shadow-inner aspect-[9/18.5] p-5 flex flex-col justify-between">
+<div class="text-center space-y-3 pt-4">
+<span class="font-kicker text-[9px] uppercase tracking-widest text-secondary">Live Synchronized Preview</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Melina &amp; Dayson</h3>
+<p class="font-body-sm text-[11px] text-on-surface-variant italic">Request the pleasure of your company</p>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-lg shadow-sm space-y-1">
+<span class="font-kicker text-[9px] uppercase text-secondary">The Weekend Schedule</span>
+<div class="text-[11px] flex justify-between font-label-caps text-primary">
+<span>Welcome Cocktails</span>
+<span class="text-on-surface-variant">19:00</span>
+</div>
+<div class="text-[11px] flex justify-between font-label-caps text-primary">
+<span>The Sacred Vows</span>
+<span class="text-on-surface-variant">16:00</span>
+</div>
+</div>
+<div class="pb-2 text-center">
+<button class="w-full py-2 bg-primary text-on-primary text-[10px] font-label-caps uppercase">Submit RSVP</button>
+</div>
+</div>
+</div>
+<div class="mt-6 inline-flex items-center gap-2 px-4 py-2 bg-surface-container-low rounded-full">
+<span class="material-symbols-outlined text-[16px] text-secondary">devices</span>
+<span class="font-kicker text-[11px] uppercase tracking-wider text-on-surface">Zero coding required · Built for desktop &amp; mobile</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 06 HOW IT WORKS (6-STAGE TIMELINE) -->
+<section class="w-full bg-surface-container-low py-20 lg:py-28">
+<div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin">
+<div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+<span class="font-kicker text-kicker uppercase tracking-widest text-secondary">Streamlined Journey</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">
+          How It Works
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          From first selection to global guest distribution in under thirty minutes.
+        </p>
+</div>
+<!-- Horizontal 6-Stage Timeline -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
+<div class="bg-surface-container-lowest p-6 flex flex-col justify-between space-y-4 shadow-sm">
+<span class="font-headline-sm text-secondary">01</span>
+<div class="space-y-1">
+<h4 class="font-label-caps text-label-caps uppercase text-primary">Explore Templates</h4>
+<p class="font-body-sm text-xs text-on-surface-variant">Browse our 24+ curated luxury designs.</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 flex flex-col justify-between space-y-4 shadow-sm">
+<span class="font-headline-sm text-secondary">02</span>
+<div class="space-y-1">
+<h4 class="font-label-caps text-label-caps uppercase text-primary">Live Preview</h4>
+<p class="font-body-sm text-xs text-on-surface-variant">Experience interactive guest views in your browser.</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 flex flex-col justify-between space-y-4 shadow-sm">
+<span class="font-headline-sm text-secondary">03</span>
+<div class="space-y-1">
+<h4 class="font-label-caps text-label-caps uppercase text-primary">Create Atelier Account</h4>
+<p class="font-body-sm text-xs text-on-surface-variant">Secure your private dashboard and wedding domain.</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 flex flex-col justify-between space-y-4 shadow-sm">
+<span class="font-headline-sm text-secondary">04</span>
+<div class="space-y-1">
+<h4 class="font-label-caps text-label-caps uppercase text-primary">Customize Story</h4>
+<p class="font-body-sm text-xs text-on-surface-variant">Fill dates, events, accommodations, and gallery.</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 flex flex-col justify-between space-y-4 shadow-sm">
+<span class="font-headline-sm text-secondary">05</span>
+<div class="space-y-1">
+<h4 class="font-label-caps text-label-caps uppercase text-primary">Instant Cloud Publish</h4>
+<p class="font-body-sm text-xs text-on-surface-variant">One click to push live worldwide with SSL security.</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 flex flex-col justify-between space-y-4 shadow-sm">
+<span class="font-headline-sm text-secondary">06</span>
+<div class="space-y-1">
+<h4 class="font-label-caps text-label-caps uppercase text-primary">Share Everywhere</h4>
+<p class="font-body-sm text-xs text-on-surface-variant">Distribute via WhatsApp, SMS, QR code, or email.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 07 TRANSPARENT DIGITAL PRICING TIERS -->
+<section class="w-full max-w-[1440px] mx-auto px-margin-mobile lg:px-margin py-20 lg:py-32">
+<div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+<span class="font-kicker text-kicker uppercase tracking-widest text-secondary">04 — Investment</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">
+        Single-Tier Transparency
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Zero monthly recurring charges. A single one-time payment providing continuous cloud hosting and comprehensive RSVP tools.
+      </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter items-stretch">
+<!-- Tier 1: Essential Digital -->
+<div class="bg-surface-container-lowest p-8 lg:p-10 flex flex-col justify-between shadow-sm space-y-8">
+<div class="space-y-6">
+<div class="space-y-2">
+<span class="font-kicker text-kicker uppercase text-secondary">Suite Standard</span>
+<h3 class="font-headline-md text-headline-md text-primary">Essential Digital</h3>
+<div class="flex items-baseline gap-1 pt-2">
+<span class="font-headline-xl text-headline-xl text-primary">$49</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant uppercase">/ one-time payment</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Perfect for intimate gatherings, civil ceremonies, and couples seeking timeless typography.
+            </p>
+</div>
+<div class="w-full h-px bg-surface-container"></div>
+<ul class="space-y-3 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+<span>1 Curated Atelier Template</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+<span>Standard Subdomain (<span class="text-secondary">nuance.wedding/yourname</span>)</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+<span>RSVP Tracker up to 150 Guests</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+<span>Interactive Google &amp; Apple Maps</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+<span>1 Year Cloud Hosting Included</span>
+</li>
+</ul>
+</div>
+<a class="w-full py-4 bg-surface-container text-primary hover:bg-surface-container-high transition-colors font-label-caps text-label-caps uppercase text-center block" href="#templates">
+          Select Essential
+        </a>
+</div>
+<!-- Tier 2: Curated Digital Suite (Highlighted) -->
+<div class="bg-primary text-on-primary p-8 lg:p-10 flex flex-col justify-between shadow-2xl relative space-y-8 -mt-2 lg:-mt-4 mb-2 lg:mb-4">
+<!-- Most Popular Pill -->
+<div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 bg-secondary text-on-secondary font-kicker text-[10px] uppercase tracking-widest rounded-full shadow-md">
+          Most Popular Choice
+        </div>
+<div class="space-y-6">
+<div class="space-y-2">
+<span class="font-kicker text-kicker uppercase text-secondary-fixed">Complete Experience</span>
+<h3 class="font-headline-md text-headline-md text-on-primary">Curated Digital Suite</h3>
+<div class="flex items-baseline gap-1 pt-2">
+<span class="font-headline-xl text-headline-xl text-on-primary">$89</span>
+<span class="font-body-sm text-body-sm text-on-primary-container uppercase">/ one-time payment</span>
+</div>
+<p class="font-body-sm text-body-sm text-surface-container-high leading-relaxed">
+              Our flagship interactive suite engineered for comprehensive weekend celebrations and full guest engagement.
+            </p>
+</div>
+<div class="w-full h-px bg-surface-container-highest/20"></div>
+<ul class="space-y-3 font-body-sm text-body-sm text-inverse-on-surface">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]">check</span>
+<span>Access to all 24+ Templates (Free Switching)</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]">check</span>
+<span><strong>Custom Domain Included</strong> (e.g. sophia-alex.love)</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]">check</span>
+<span><strong>Unlimited Guest RSVPs</strong> &amp; Dietary Engine</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]">check</span>
+<span>Love Story Interactive Timeline &amp; Gallery</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]">check</span>
+<span>Background Spotify / Audio Player</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]">check</span>
+<span>Digital Envelope &amp; QR Cash Registry (0% Cut)</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]">check</span>
+<span>2 Years Cloud Memorial Hosting</span>
+</li>
+</ul>
+</div>
+<a class="w-full py-4 bg-secondary text-on-secondary hover:bg-secondary-fixed-dim hover:text-on-secondary-fixed transition-colors font-label-caps text-label-caps uppercase text-center block shadow-lg" href="#templates">
+          Select Curated Suite
+        </a>
+</div>
+<!-- Tier 3: Atelier Bespoke Digital -->
+<div class="bg-surface-container-lowest p-8 lg:p-10 flex flex-col justify-between shadow-sm space-y-8">
+<div class="space-y-6">
+<div class="space-y-2">
+<span class="font-kicker text-kicker uppercase text-secondary">Concierge Handcrafted</span>
+<h3 class="font-headline-md text-headline-md text-primary">Atelier Bespoke</h3>
+<div class="flex items-baseline gap-1 pt-2">
+<span class="font-headline-xl text-headline-xl text-primary">$179</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant uppercase">/ one-time payment</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              White-glove concierge design service. Our typographers configure your suite and tailor assets personally.
+            </p>
+</div>
+<div class="w-full h-px bg-surface-container"></div>
+<ul class="space-y-3 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+<span>Everything in Curated Digital Suite</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+<span><strong>1-on-1 Dedicated Atelier Designer</strong></span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+<span>Custom Font Pairing &amp; Bespoke Monogram</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+<span>Multi-Language RSVP Translation (FR, ES, IT)</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+<span><strong>Lifetime Cloud Hosting</strong></span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+<span>VIP WhatsApp Studio Direct Access</span>
+</li>
+</ul>
+</div>
+<a class="w-full py-4 bg-surface-container text-primary hover:bg-surface-container-high transition-colors font-label-caps text-label-caps uppercase text-center block" href="#consultation">
+          Book Bespoke Designer
+        </a>
+</div>
+</div>
+</section>
+<!-- 08 FREQUENTLY ANSWERED QUESTIONS (ACCORDION) -->
+<section class="w-full bg-surface-container-low py-20 lg:py-28">
+<div class="max-w-3xl mx-auto px-margin-mobile lg:px-0">
+<div class="text-center mb-14 space-y-3">
+<span class="font-kicker text-kicker uppercase tracking-widest text-secondary">Curator Knowledge</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">
+          Frequently Answered
+        </h2>
+</div>
+<!-- Vanilla Accordion Items -->
+<div class="space-y-4" id="faq-container">
+<!-- Item 1 -->
+<div class="bg-surface-container-lowest p-6 shadow-sm cursor-pointer" onclick="toggleFaq(this)">
+<div class="flex justify-between items-center">
+<h4 class="font-headline-sm text-base md:text-lg text-primary">Can I change our wedding information after publishing?</h4>
+<span class="material-symbols-outlined text-secondary transition-transform faq-icon">expand_more</span>
+</div>
+<div class="faq-content hidden pt-4 font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Yes, completely. Your digital invitation is dynamic. You can edit itineraries, hotel codes, transportation schedules, and weather updates at any time. Changes sync instantly across all guest devices with zero re-sending required.
+          </div>
+</div>
+<!-- Item 2 -->
+<div class="bg-surface-container-lowest p-6 shadow-sm cursor-pointer" onclick="toggleFaq(this)">
+<div class="flex justify-between items-center">
+<h4 class="font-headline-sm text-base md:text-lg text-primary">Can I connect our own custom domain name (e.g. sophia-alex.love)?</h4>
+<span class="material-symbols-outlined text-secondary transition-transform faq-icon">expand_more</span>
+</div>
+<div class="faq-content hidden pt-4 font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Yes. On our Curated Digital Suite and Atelier Bespoke tiers, custom domains are fully supported. You can register a brand new domain directly through us or map an existing one you already own with 1-click automatic SSL certification.
+          </div>
+</div>
+<!-- Item 3 -->
+<div class="bg-surface-container-lowest p-6 shadow-sm cursor-pointer" onclick="toggleFaq(this)">
+<div class="flex justify-between items-center">
+<h4 class="font-headline-sm text-base md:text-lg text-primary">Can I switch templates after entering my details?</h4>
+<span class="material-symbols-outlined text-secondary transition-transform faq-icon">expand_more</span>
+</div>
+<div class="faq-content hidden pt-4 font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Absolutely. All your wedding schedule items, photos, RSVP responses, and registry links are saved separately in your Atelier vault. You can alternate between Minimal, Rustic, or Nocturne styles whenever you like.
+          </div>
+</div>
+<!-- Item 4 -->
+<div class="bg-surface-container-lowest p-6 shadow-sm cursor-pointer" onclick="toggleFaq(this)">
+<div class="flex justify-between items-center">
+<h4 class="font-headline-sm text-base md:text-lg text-primary">How long does our wedding website remain online?</h4>
+<span class="material-symbols-outlined text-secondary transition-transform faq-icon">expand_more</span>
+</div>
+<div class="faq-content hidden pt-4 font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            The Essential tier provides 1 full year, and the Curated Suite provides 2 full years of continuous cloud hosting. After the wedding, your site converts into a gorgeous, permanent digital keepsake. Lifetime extensions are readily available.
+          </div>
+</div>
+<!-- Item 5 -->
+<div class="bg-surface-container-lowest p-6 shadow-sm cursor-pointer" onclick="toggleFaq(this)">
+<div class="flex justify-between items-center">
+<h4 class="font-headline-sm text-base md:text-lg text-primary">Is there a limit on the number of guest RSVPs?</h4>
+<span class="material-symbols-outlined text-secondary transition-transform faq-icon">expand_more</span>
+</div>
+<div class="faq-content hidden pt-4 font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            The Essential tier accommodates up to 150 guests. The Curated Digital Suite and Bespoke tiers offer unlimited guest RSVPs, meal allocations, plus-one configurations, and infinite CSV export capabilities.
+          </div>
+</div>
+<!-- Item 6 -->
+<div class="bg-surface-container-lowest p-6 shadow-sm cursor-pointer" onclick="toggleFaq(this)">
+<div class="flex justify-between items-center">
+<h4 class="font-headline-sm text-base md:text-lg text-primary">Can we receive monetary gifts and link multiple bank accounts?</h4>
+<span class="material-symbols-outlined text-secondary transition-transform faq-icon">expand_more</span>
+</div>
+<div class="faq-content hidden pt-4 font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Yes. Unlike standard registry platforms, L'Atelier Nuance takes 0% cut. You can provide direct bank routing details (IBAN, Swift, routing numbers), custom QR codes, Apple Pay links, or Venmo handles directly within your digital envelope.
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- 09 GRAND EDITORIAL CTA SECTION -->
+<section class="w-full bg-primary text-on-primary py-24 lg:py-32 relative overflow-hidden">
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(#E3D4BE_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none"></div>
+<div class="max-w-4xl mx-auto px-margin-mobile lg:px-margin text-center relative z-10 space-y-8">
+<span class="font-kicker text-kicker uppercase tracking-[0.25em] text-secondary-fixed block">Start Your Celebration</span>
+<h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-primary">
+        Start building <span class="italic font-normal font-headline-xl text-secondary-fixed">your invitation.</span>
+</h2>
+<p class="font-body-lg text-body-lg text-surface-container max-w-2xl mx-auto leading-relaxed">
+        Join over 4,200 discerning couples worldwide celebrating their unions with timeless typography, zero ads, and effortless guest logistics.
+      </p>
+<div class="pt-4 flex flex-wrap justify-center items-center gap-4">
+<a class="px-9 py-4 bg-secondary text-on-secondary font-label-caps text-label-caps uppercase tracking-wider hover:bg-secondary-fixed-dim hover:text-on-secondary-fixed transition-colors shadow-lg" href="#create">
+          Create Your Invitation Now
+        </a>
+<a class="px-9 py-4 bg-transparent text-on-primary hover:bg-surface-container-lowest/10 font-label-caps text-label-caps uppercase tracking-wider transition-colors shadow-sm" href="#templates-grid">
+          Browse All 24+ Templates
+        </a>
+</div>
+<div class="pt-8 flex justify-center items-center gap-6 text-on-primary-container text-xs font-label-caps uppercase">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-secondary-fixed">bolt</span> Instant Live Setup</span>
+<span class="text-surface-container-highest/30">·</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-secondary-fixed">lock</span> Bank-Grade Privacy</span>
+<span class="text-surface-container-highest/30">·</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-secondary-fixed">favorite</span> Free Forever Kept</span>
+</div>
+</div>
+</section>
+<!-- Interactive JavaScript Accordion -->
+<script>
+    function toggleFaq(card) {
+      const content = card.querySelector('.faq-content');
+      const icon = card.querySelector('.faq-icon');
+      if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+        icon.style.transform = 'rotate(180deg)';
+      } else {
+        content.classList.add('hidden');
+        icon.style.transform = 'rotate(0deg)';
+      }
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-low text-on-surface"><div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin pt-space-xl pb-space-lg"><div class="pb-space-xl"><span class="font-kicker text-kicker uppercase text-secondary tracking-widest block mb-space-xs">The Nuance Manifesto</span><h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary max-w-3xl leading-tight">Two distinct expressions of love. One elevated wedding studio.</h2></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-lg py-space-xl"><div class="flex flex-col space-y-space-md lg:col-span-1"><span class="font-headline-sm text-headline-sm text-primary">L'Atelier Nuance</span><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">An haute couture stationery house pairing cloud-architected guest journeys with tactile cotton paper suites.</p><div class="flex flex-col gap-1 font-body-sm text-body-sm text-on-surface"><span class="font-medium">Ateliers:</span><span class="text-on-surface-variant">Paris · New York · Digital Cloud</span></div><div class="flex items-center gap-space-md pt-space-xs font-body-sm text-body-sm text-on-surface-variant"><a class="hover:text-primary transition-colors" href="#">Instagram</a><a class="hover:text-primary transition-colors" href="#">TikTok</a><a class="hover:text-primary transition-colors" href="#">Pinterest</a><a class="hover:text-primary transition-colors" href="#">Spotify</a></div></div><div class="flex flex-col space-y-space-sm"><span class="font-label-caps text-label-caps uppercase text-primary tracking-wider">Products</span><ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant"><li class="flex flex-col"><a class="hover:text-primary transition-colors" data-path="digital-invitations" href="#">Digital Invitations (SaaS)</a><span class="text-on-surface-variant/70 text-[11px]">Web suites, RSVP, QR seals</span></li><li class="flex flex-col pt-1"><a class="hover:text-primary transition-colors" data-path="printed-fine-stationery" href="#">Printed &amp; Fine Stationery</a><span class="text-on-surface-variant/70 text-[11px]">Cotton 600gsm, Deboss, Foil</span></li><li class="pt-1"><a class="hover:text-primary transition-colors" data-path="bespoke-curation" href="#">Bespoke Hybrid Curation</a></li></ul></div><div class="flex flex-col space-y-space-sm"><span class="font-label-caps text-label-caps uppercase text-primary tracking-wider">Explore</span><ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" data-path="templates" href="#">Curated Templates</a></li><li><a class="hover:text-primary transition-colors" data-path="pricing" href="#">Investment &amp; Pricing</a></li><li><a class="hover:text-primary transition-colors" data-path="features" href="#">Interactive Features</a></li><li><a class="hover:text-primary transition-colors" data-path="how-it-works" href="#">The Production Process</a></li></ul></div><div class="flex flex-col space-y-space-sm"><span class="font-label-caps text-label-caps uppercase text-primary tracking-wider">Concierge &amp; Support</span><ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors flex items-center gap-1" data-path="consultation" href="#"><span class="material-symbols-outlined text-[14px]">forum</span><span>WhatsApp Direct</span></a></li><li><a class="hover:text-primary transition-colors" href="mailto:atelier@nuance.wedding">atelier@nuance.wedding</a></li><li><a class="hover:text-primary transition-colors" data-path="faq" href="#">Frequently Answered</a></li><li><a class="hover:text-primary transition-colors" data-path="booking" href="#">Book Studio Consultation</a></li></ul></div><div class="flex flex-col space-y-space-sm"><span class="font-label-caps text-label-caps uppercase text-primary tracking-wider">Legal &amp; Studio</span><ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a></li><li><a class="hover:text-primary transition-colors" data-path="terms-of-service" href="#">Terms of Service</a></li><li><a class="hover:text-primary transition-colors" data-path="accessibility" href="#">Digital Accessibility</a></li><li><a class="hover:text-primary transition-colors" data-path="sustainability" href="#">Carbon-Neutral Printing</a></li></ul></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-sm font-body-sm text-body-sm text-on-surface-variant"><div class="flex flex-wrap items-center gap-space-md"><span class="font-label-caps text-label-caps">© 2025 L'Atelier Nuance Studio Inc.</span><span>All rights reserved.</span></div><div class="flex items-center gap-space-lg font-kicker text-kicker uppercase tracking-wider text-on-surface-variant"><span>Paris — 16:40 CET</span><span>·</span><span>New York — 10:40 EST</span></div></div></div></footer></body></html>

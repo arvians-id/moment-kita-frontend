@@ -123,7 +123,7 @@ export function buildInvitationNavigation(
       label: "Wishes",
       href: `${base}/wishes`,
       icon: MessageSquareHeart,
-      available: false,
+      available: true,
     },
     {
       label: "Digital Gift",

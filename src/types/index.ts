@@ -40,6 +40,10 @@ export type {
   PublicRsvpResponse,
   RsvpManagementData,
   RsvpSettingsSummary,
+  WishesManagementData,
+  WishesSettingsSummary,
+  WishModerationStatus,
+  WishRecord,
 } from "./customer";
 export type { Package } from "./package";
 export type {

@@ -390,6 +390,35 @@ export interface RsvpManagementData {
   settings: RsvpSettingsSummary;
 }
 
+export type WishModerationStatus = "published" | "pending" | "hidden";
+
+/**
+ * One guestbook submission. Known guests resolve their identity from the
+ * shared guest directory; public-link submissions carry only display details.
+ */
+export interface WishRecord {
+  id: string;
+  guestId?: string;
+  publicAuthor?: string;
+  publicInitials?: string;
+  message: string;
+  submittedAt: string;
+  status: WishModerationStatus;
+  source: "guest_link" | "public_link";
+}
+
+export interface WishesSettingsSummary {
+  enabled: boolean;
+  moderationMode: "automatic" | "approval_required";
+}
+
+export interface WishesManagementData {
+  invitation: CustomerInvitation;
+  guests: InvitationGuest[];
+  wishes: WishRecord[];
+  settings: WishesSettingsSummary;
+}
+
 /** Frontend-only review states for one row in the guided guest import flow. */
 export type GuestImportRowStatus =
   | "valid"

@@ -9,6 +9,7 @@
 - Guest Management
 - Guest Import
 - RSVP Management
+- Wishes Management
 
 ### Next
 - Invitation Detail
@@ -16,7 +17,6 @@
 ### Pending
 - Create Invitation
 - Invitation Builder
-- Wishes Management
 - Digital Gift Management
 - Version History
 - Transactions

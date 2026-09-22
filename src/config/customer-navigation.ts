@@ -118,7 +118,7 @@ export function buildInvitationNavigation(
       available: true,
     },
     { label: "Guests", href: `${base}/guests`, icon: Users, available: true },
-    { label: "RSVP", href: `${base}/rsvp`, icon: UserCheck, available: false },
+    { label: "RSVP", href: `${base}/rsvp`, icon: UserCheck, available: true },
     {
       label: "Wishes",
       href: `${base}/wishes`,

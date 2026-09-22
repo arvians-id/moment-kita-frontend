@@ -350,6 +350,46 @@ export interface GuestManagementData {
   groups: string[];
 }
 
+/** Metadata recorded when an existing directory guest submits an RSVP. */
+export interface GuestRsvpResponse {
+  guestId: string;
+  message: string;
+  /** ISO 8601 timestamp; null while the guest is still pending. */
+  respondedAt: string | null;
+  source: "guest_link" | "manual";
+}
+
+/**
+ * A response accepted through an open RSVP link. These entries intentionally
+ * remain separate from the managed guest directory until the customer chooses
+ * to add them there.
+ */
+export interface PublicRsvpResponse {
+  id: string;
+  name: string;
+  initials: string;
+  group: string;
+  rsvpStatus: GuestAttendanceStatus;
+  confirmedPax: number;
+  message: string;
+  respondedAt: string;
+}
+
+export interface RsvpSettingsSummary {
+  enabled: boolean;
+  accessMode: "guest_list_only" | "anyone_with_link";
+  deadline: string;
+}
+
+export interface RsvpManagementData {
+  invitation: CustomerInvitation;
+  guests: InvitationGuest[];
+  responses: GuestRsvpResponse[];
+  publicResponses: PublicRsvpResponse[];
+  groups: string[];
+  settings: RsvpSettingsSummary;
+}
+
 /** Frontend-only review states for one row in the guided guest import flow. */
 export type GuestImportRowStatus =
   | "valid"

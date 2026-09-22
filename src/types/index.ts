@@ -18,6 +18,7 @@ export type {
   GuestImportRow,
   GuestImportRowStatus,
   GuestManagementData,
+  GuestRsvpResponse,
   GuestResponseSummary,
   GuestRsvpStatus,
   InvitationArchive,
@@ -36,6 +37,9 @@ export type {
   InvitationProgress,
   InvitationWish,
   InvitationStatus,
+  PublicRsvpResponse,
+  RsvpManagementData,
+  RsvpSettingsSummary,
 } from "./customer";
 export type { Package } from "./package";
 export type {

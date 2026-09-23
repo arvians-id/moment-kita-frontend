@@ -12,12 +12,12 @@
 - Create Invitation
 - Invitation Editor
 - Template List
-
-### Next
 - Template Detail
 
-### Pending
+### Next
 - Transactions
+
+### Pending
 - Transaction Detail
 - Packages & Quota
 - Package Editor
@@ -98,7 +98,11 @@ Audit Logs page.
 - `/admin/invitations/[id]/activity` → Activity tab (contextual, invitation-scoped log)
 
 - `/admin/templates` → Template List
-- `/admin/templates/[id]` → Template Detail
+- `/admin/templates/[id]` → Template Detail (Overview tab)
+- `/admin/templates/[id]/versions` → Versions tab
+- `/admin/templates/[id]/capabilities` → Capabilities tab
+- `/admin/templates/[id]/usage` → Usage tab
+- `/admin/templates/[id]/commercial` → Commercial Settings tab
 
 - `/admin/transactions` → Transaction List
 - `/admin/transactions/[id]` → Transaction Detail

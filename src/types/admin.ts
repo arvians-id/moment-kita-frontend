@@ -3,6 +3,7 @@ import type {
   Customer,
   DigitalGiftSummary,
   GuestResponseSummary,
+  InvitationBuilderSectionType,
   InvitationGuestEntry,
   InvitationBuilderContent,
   InvitationBuilderSection,
@@ -353,4 +354,84 @@ export interface AdminCustomerDetailData {
   transactions: AdminCustomerTransaction[];
   quotaHistory: AdminCustomerQuotaEntry[];
   activity: AdminCustomerActivity[];
+}
+
+/*
+ * Template Detail types. Identity, availability, and commercial-access
+ * fields all stay owned by `AdminTemplateListItem` (the Template List's own
+ * type) so the List and Detail pages can never disagree about the same
+ * template — this data only adds detail-only projections on top of it.
+ */
+
+export type AdminTemplateVersionStatus =
+  "active" | "draft" | "available" | "disabled";
+
+/**
+ * Registry metadata for one released template build. Registering a version
+ * here is a developer-handoff record only; it never uploads or edits
+ * renderer source, and it never migrates invitations already pinned to a
+ * different version.
+ */
+export interface AdminTemplateVersion {
+  version: string;
+  status: AdminTemplateVersionStatus;
+  /** ISO 8601. */
+  registeredAt: string;
+  /** Invitations currently pinned to this exact version. */
+  usageCount: number;
+  note: string;
+}
+
+export type AdminCapabilitySupport = "supported" | "optional" | "unavailable";
+
+/**
+ * One content module a template's manifest may expose. Reuses the same
+ * section vocabulary as the invitation content model
+ * (`InvitationBuilderSectionType`) so a template's advertised capabilities
+ * can never drift from what Create Invitation and the Invitation Editor
+ * actually build against.
+ */
+export interface AdminTemplateCapability {
+  type: InvitationBuilderSectionType;
+  label: string;
+  support: AdminCapabilitySupport;
+  note: string;
+}
+
+export interface AdminTemplateMonthlyUsage {
+  /** Short month label, e.g. "May". */
+  label: string;
+  count: number;
+}
+
+export interface AdminTemplateUsage {
+  /** Equal to `AdminTemplateListItem.usageCount` — never a second total. */
+  totalInvitations: number;
+  publishedInvitations: number;
+  draftInvitations: number;
+  monthlyUsage: AdminTemplateMonthlyUsage[];
+  /** A recent sample only, not the full registry — see the Usage tab's disclosure. */
+  recentInvitations: AdminInvitationListItem[];
+}
+
+export interface AdminTemplatePackageAccess {
+  packageId: string;
+  packageName: string;
+  available: boolean;
+}
+
+export interface AdminTemplateCommercial {
+  availableToAllPackages: boolean;
+  packages: AdminTemplatePackageAccess[];
+}
+
+/** Complete service payload for one Admin template dossier. */
+export interface AdminTemplateDetailData {
+  template: AdminTemplateListItem;
+  /** ISO 8601 — when the template's first version was registered. */
+  createdAt: string;
+  versions: AdminTemplateVersion[];
+  capabilities: AdminTemplateCapability[];
+  usage: AdminTemplateUsage;
+  commercial: AdminTemplateCommercial;
 }

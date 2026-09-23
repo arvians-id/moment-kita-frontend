@@ -1,8 +1,10 @@
 import type {
+  Customer,
   InvitationStatus,
   TransactionPurpose,
   TransactionStatus,
 } from "./customer";
+import type { Package } from "./package";
 
 /** The signed-in Admin operator. Auth is out of scope for this task. */
 export interface AdminUser {
@@ -97,4 +99,119 @@ export interface AdminDashboardData {
   recentTransactions: RecentTransaction[];
   recentInvitations: RecentInvitation[];
   alerts: AdminAlert[];
+}
+
+/** Account linkage is explicit: managed profiles can exist without a User. */
+export type AdminCustomerAccountType = "registered" | "managed";
+
+export type AdminCustomerStatus = "active" | "no_quota" | "pending_payment";
+
+export type AdminCustomerPaymentStatus = "paid" | "pending";
+
+/**
+ * Admin directory projection of the canonical CustomerProfile aggregate.
+ * `linkedUserId = null` is intentional for studio-managed customers and must
+ * never be inferred from a matching email address.
+ */
+export interface AdminCustomer extends Pick<
+  Customer,
+  "id" | "name" | "initials"
+> {
+  email: string | null;
+  whatsapp: string;
+  accountType: AdminCustomerAccountType;
+  linkedUserId: string | null;
+  invitationCount: number;
+  quotaGranted: number;
+  quotaRemaining: number;
+  totalSpending: number;
+  paymentStatus: AdminCustomerPaymentStatus;
+  status: AdminCustomerStatus;
+  /** ISO 8601 timestamp. */
+  joinedAt: string;
+  notes?: string;
+}
+
+export interface AdminCustomerSummary {
+  totalCustomers: number;
+  registeredAccounts: number;
+  managedCustomers: number;
+  paidCustomers: number;
+  addedThisMonth: number;
+}
+
+export interface AdminCustomerListData {
+  customers: AdminCustomer[];
+  summary: AdminCustomerSummary;
+}
+
+/** Customer-owned invitation projection used by the Admin dossier. */
+export interface AdminCustomerInvitation {
+  id: string;
+  coupleLabel: string;
+  status: InvitationStatus;
+  /** ISO 8601 ceremony date. */
+  eventDate: string;
+  templateName: string;
+  /** Null until the first publish starts the expiration window. */
+  expiresAt: string | null;
+}
+
+/** Customer-specific transaction projection; the full commerce module is separate. */
+export interface AdminCustomerTransaction {
+  id: string;
+  reference: string;
+  purpose: AdminTransactionPurpose;
+  productName: string;
+  amount: number;
+  status: TransactionStatus;
+  /** ISO 8601. */
+  createdAt: string;
+}
+
+export type AdminQuotaSource =
+  "Package purchase" | "Invitation" | "Admin adjustment";
+
+/** Append-oriented history only; current quota remains authoritative on the customer. */
+export interface AdminCustomerQuotaEntry {
+  id: string;
+  delta: number;
+  reason: string;
+  source: AdminQuotaSource;
+  /** ISO 8601. */
+  createdAt: string;
+  adminName?: string;
+}
+
+export type AdminCustomerActivityKind =
+  "customer" | "payment" | "invitation" | "quota" | "profile";
+
+export interface AdminCustomerActivity {
+  id: string;
+  kind: AdminCustomerActivityKind;
+  title: string;
+  description: string;
+  /** ISO 8601. */
+  createdAt: string;
+  actor: string;
+}
+
+export interface AdminCustomerPackageSummary extends Pick<
+  Package,
+  "id" | "name" | "description"
+> {
+  /** ISO 8601. */
+  activatedAt: string;
+  /** ISO 8601, when this package has a defined validity window. */
+  expiresAt?: string;
+}
+
+/** Complete service payload for one Admin customer dossier. */
+export interface AdminCustomerDetailData {
+  customer: AdminCustomer;
+  currentPackage: AdminCustomerPackageSummary | null;
+  invitations: AdminCustomerInvitation[];
+  transactions: AdminCustomerTransaction[];
+  quotaHistory: AdminCustomerQuotaEntry[];
+  activity: AdminCustomerActivity[];
 }

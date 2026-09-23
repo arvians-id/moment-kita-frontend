@@ -5,13 +5,13 @@
 ### Completed
 - Admin App Foundation
 - Admin Dashboard
+- Customer List
+- Customer Detail
 
 ### Next
-- Customer List
+- Invitation List
 
 ### Pending
-- Customer Detail
-- Invitation List
 - Invitation Detail
 - Create Invitation
 - Invitation Editor

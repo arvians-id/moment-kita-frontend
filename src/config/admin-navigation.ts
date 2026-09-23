@@ -59,7 +59,7 @@ export const adminNavigation: AdminNavGroup[] = [
         label: "Customers",
         href: "/admin/customers",
         icon: Users,
-        available: false,
+        available: true,
       },
       {
         label: "Invitations",

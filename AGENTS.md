@@ -26,6 +26,24 @@ per page.
 
 Implement Customer CMS pages one focused page at a time.
 
+## Admin CMS
+
+Before implementing Admin CMS pages, read:
+
+`docs/admin-implementation.md`
+
+The navigation defined there is canonical.
+
+Some design references under `design-references/admin/**` contain
+outdated or incomplete sidebars — most notably an `Audit Logs` item that
+is explicitly excluded from the canonical navigation. Treat design
+references as visual references only.
+
+Reuse one shared Admin layout/navigation. Do not create page-specific
+Admin sidebars.
+
+Implement Admin CMS pages one focused page at a time.
+
 <!-- BEGIN:nextjs-agent-rules -->
 
 # This is NOT the Next.js you know

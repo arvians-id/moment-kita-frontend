@@ -20,9 +20,9 @@ export const mockCustomerNotifications: readonly CustomerNotification[] = [
     kind: "guestImportIssues",
     category: "guestsRsvp",
     eyebrow: "Guests & Import",
-    title: "Guest Import Completed with 3 Review Items",
+    title: "Guest Import Completed with 5 Review Items",
     description:
-      "125 guests were successfully imported to your guest list. 3 rows had ambiguous phone formats and were saved as pending drafts for your review.",
+      "5 of 10 rows in your uploaded guest list were ready to import. The other 5 need attention — a missing name, an invalid pax count, an unrecognised phone number, and two possible duplicates — before they're added.",
     occurredAt: ago(25 * MINUTE),
     read: false,
     attention: true,
@@ -38,7 +38,7 @@ export const mockCustomerNotifications: readonly CustomerNotification[] = [
     eyebrow: "RSVP & Attendance",
     title: "12 New Guests Confirmed RSVP Attendance",
     description:
-      "Sarah Jenkins, Dimas Prasetyo, and 10 others confirmed their attendance. Total confirmed headcount is now 146 pax.",
+      "Sarah Jenkins, Bpk. Dr. Raden Mas Arya, and 10 others confirmed their attendance. Total confirmed headcount is now 146 pax.",
     occurredAt: ago(HOUR),
     read: false,
     attention: false,

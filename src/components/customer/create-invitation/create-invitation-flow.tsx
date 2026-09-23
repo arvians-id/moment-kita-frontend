@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 
 import { CreationProgress } from "@/components/customer/create-invitation/creation-progress";
@@ -74,7 +75,7 @@ export function CreateInvitationFlow({
   const [activeStep, setActiveStep] = useState(3);
   const [basicsErrors, setBasicsErrors] = useState<BasicsErrors>({});
   const [showSuccess, setShowSuccess] = useState(false);
-  const [editorNotice, setEditorNotice] = useState(false);
+  const router = useRouter();
 
   const selectedTemplate =
     templates.find((template) => template.key === selectedKey) ?? templates[0];
@@ -204,7 +205,6 @@ export function CreateInvitationFlow({
     }
 
     setActiveStep(4);
-    setEditorNotice(false);
     setShowSuccess(true);
   }
 
@@ -283,8 +283,7 @@ export function CreateInvitationFlow({
           partnerTwo={partnerTwo}
           slug={slug}
           templateName={selectedTemplate.name}
-          editorNotice={editorNotice}
-          onStartEditing={() => setEditorNotice(true)}
+          onStartEditing={() => router.push("/app/invitations/inv_02/edit")}
           onClose={() => setShowSuccess(false)}
         />
       ) : null}

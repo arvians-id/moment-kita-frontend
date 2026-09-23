@@ -6,7 +6,6 @@ export function CreationSuccess({
   partnerTwo,
   slug,
   templateName,
-  editorNotice,
   onStartEditing,
   onClose,
 }: {
@@ -14,7 +13,6 @@ export function CreationSuccess({
   partnerTwo: string;
   slug: string;
   templateName: string;
-  editorNotice: boolean;
   onStartEditing: () => void;
   onClose: () => void;
 }) {
@@ -79,16 +77,6 @@ export function CreationSuccess({
             Ready
           </span>
         </div>
-
-        {editorNotice ? (
-          <p
-            role="status"
-            className="mb-4 rounded-[8px] bg-accent/35 p-3 text-[11px] leading-5 text-accent-foreground"
-          >
-            The Invitation Builder is intentionally not part of this task. Your
-            setup is ready for editor integration once that route is available.
-          </p>
-        ) : null}
 
         <div className="flex flex-col gap-3 sm:flex-row">
           <button

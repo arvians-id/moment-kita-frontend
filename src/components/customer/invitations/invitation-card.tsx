@@ -469,13 +469,13 @@ export function InvitationCard({
 
         {status === "finalized" ? (
           <>
-            <span
-              aria-disabled="true"
-              className={`${primaryActionClass} ${inactiveClass} bg-secondary text-secondary-foreground`}
+            <Link
+              href={`/app/invitations/${invitation.id}/edit`}
+              className={`${primaryActionClass} bg-secondary text-secondary-foreground hover:bg-primary`}
             >
               <Rocket aria-hidden size={15} />
               Publish invitation
-            </span>
+            </Link>
             <Link
               href={`/app/invitations/${invitation.id}`}
               className={secondaryActionClass}

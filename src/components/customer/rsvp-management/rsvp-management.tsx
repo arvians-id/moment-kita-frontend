@@ -301,6 +301,20 @@ export function RsvpManagement({
           <>
             <div className="mt-8">
               <RsvpSummaryCards summary={summary} />
+              {guests.length < initialData.invitation.guestCount ? (
+                <p className="mt-3 text-[11px] leading-5 text-on-surface-variant">
+                  Figures above cover the {guests.length} curated guest
+                  records on file, out of {initialData.invitation.guestCount}{" "}
+                  total invitations. Full guestbook totals are shown on the{" "}
+                  <Link
+                    href={`/app/invitations/${initialData.invitation.id}/guests`}
+                    className="font-semibold text-secondary hover:underline"
+                  >
+                    Guest Directory
+                  </Link>
+                  .
+                </p>
+              ) : null}
             </div>
 
             <SettingsSummary

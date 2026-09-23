@@ -30,7 +30,7 @@ export const mockCustomerInvitations: readonly CustomerInvitation[] = [
     expiresAt: "2027-02-20T23:59:00+07:00",
     guestCount: 128,
     confirmedCount: 84,
-    metrics: { rsvps: 84, wishes: 42, views: 1_284 },
+    metrics: { rsvps: 84, wishes: 7, views: 1_284 },
     lastModifiedLabel: "Updated 4 hours ago",
   },
   {
@@ -70,7 +70,7 @@ export const mockCustomerInvitations: readonly CustomerInvitation[] = [
     guestCount: 96,
     confirmedCount: 0,
     readinessNote:
-      "Proof review is complete. Publish to assign your remaining quota and generate the celebration link.",
+      "Proof review is complete and your invitation quota is already committed. Publish to generate the celebration link.",
     lastModifiedLabel: "Finalized 5 days ago",
   },
   {
@@ -132,11 +132,11 @@ export const mockEngagement: EngagementSummary = {
   envelopesOpened: 118,
   calendarAdds: 68,
   topLocations: ["Jakarta", "Surabaya", "Singapore", "Melbourne"],
-  wishesReceived: 42,
+  wishesReceived: 7,
   featuredWish: {
     message:
-      "Semoga lancar sampai hari H, Raka & Ayu. Semoga berkah dan saling menyayangi hingga maut memisahkan.",
-    author: "Tante Rina & Om Bramantyo (Family)",
+      "Selamat menempuh hidup baru Raka dan Ayu. Semoga senantiasa rukun, saling melengkapi, dan dilimpahi berkah serta kebahagiaan. Salam hangat dari keluarga besar di Jogja.",
+    author: "Bpk. Dr. Raden Mas Arya (VIP Family)",
   },
 };
 
@@ -156,7 +156,7 @@ export const mockActivity: readonly ActivityEntry[] = [
   {
     id: "act_01",
     kind: "rsvp",
-    message: "Dimas Prasetyo confirmed attendance for 2 pax",
+    message: "Bpk. Hendra Gunawan confirmed attendance for 2 pax",
     occurredAt: "18 minutes ago",
   },
   {

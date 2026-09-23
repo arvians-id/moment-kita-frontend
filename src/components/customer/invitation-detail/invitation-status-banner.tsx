@@ -45,8 +45,9 @@ function bannerFor(invitation: CustomerInvitation): BannerCopy {
         headline: "Proof locked and ready to publish",
         body:
           invitation.readinessNote ??
-          "Publish to assign your remaining quota and generate the celebration link.",
+          "Your invitation quota is already committed. Publish to generate the celebration link and start sharing with guests.",
         action: "Publish invitation",
+        actionHref: `/app/invitations/${invitation.id}/edit`,
       };
     case "expired":
       return {

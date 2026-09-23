@@ -1,3 +1,4 @@
+import { mockGuestSummary } from "@/data/mocks/customer";
 import type {
   ActivityEntry,
   DigitalGiftSummary,
@@ -28,17 +29,8 @@ export const mockInvitationDetails: Readonly<
 > = {
   // Published suite — the fully populated workspace.
   inv_01: {
-    guests: {
-      totalInvited: 128,
-      attending: 84,
-      declined: 12,
-      pending: 32,
-      confirmedPax: 146,
-      cateringTarget: 160,
-      invitedThisWeek: 12,
-      attendingAdults: 134,
-      attendingChildren: 12,
-    },
+    // Shares the Dashboard's guest summary so the two workspaces never drift.
+    guests: { ...mockGuestSummary },
     linksSent: 112,
     linksPending: 16,
     recentGuests: [
@@ -76,15 +68,15 @@ export const mockInvitationDetails: Readonly<
         message:
           "Semoga lancar dan penuh keberkahan hingga hari H untuk Raka & Ayu tersayang. Bahagia selalu menempuh hidup baru!",
         author: "Sarah Jenkins",
-        relation: "Bridesmaid",
+        relation: "Close Friends",
         occurredAt: "2 hrs ago",
       },
       {
         id: "wsh_02",
         message:
           "Selamat untuk ananda berdua. Semoga senantiasa menjadi keluarga yang sakinah, mawaddah, warahmah di lindungan-Nya.",
-        author: "Bpk. & Ibu Dr. Arya",
-        relation: "Family elder",
+        author: "Bpk. Dr. Raden Mas Arya",
+        relation: "VIP Family",
         occurredAt: "5 hrs ago",
       },
     ],

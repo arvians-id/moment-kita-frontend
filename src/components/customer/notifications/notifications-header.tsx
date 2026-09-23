@@ -1,7 +1,5 @@
-import { CheckCheck } from "lucide-react";
-
-const inactiveClass =
-  "inline-flex h-10 items-center gap-2 border border-surface-highest bg-surface-low px-4 text-[12px] leading-4 font-semibold tracking-[0.12em] uppercase opacity-90 cursor-not-allowed";
+import { CheckCheck, SlidersHorizontal } from "lucide-react";
+import Link from "next/link";
 
 export function NotificationsHeader({
   hasUnread,
@@ -46,10 +44,13 @@ export function NotificationsHeader({
             <CheckCheck aria-hidden size={16} />
             <span>Mark All as Read</span>
           </button>
-          {/* Notification preferences live on the Settings page, which is not built yet. */}
-          <span aria-disabled="true" className={inactiveClass} title="Coming soon">
-            Notification Preferences
-          </span>
+          <Link
+            href="/app/settings?tab=notifications"
+            className="inline-flex h-10 items-center gap-2 border border-surface-highest bg-surface-low px-4 text-[12px] leading-4 font-semibold tracking-[0.12em] uppercase transition-colors hover:bg-surface-high"
+          >
+            <SlidersHorizontal aria-hidden size={15} />
+            <span>Notification Preferences</span>
+          </Link>
         </div>
       </div>
     </div>

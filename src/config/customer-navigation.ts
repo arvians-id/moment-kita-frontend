@@ -93,7 +93,7 @@ export const customerGlobalNavigation: CustomerNavGroup[] = [
         label: "Settings",
         href: "/app/settings",
         icon: SlidersHorizontal,
-        available: false,
+        available: true,
       },
     ],
   },

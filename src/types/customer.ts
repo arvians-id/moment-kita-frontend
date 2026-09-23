@@ -653,3 +653,67 @@ export interface CustomerNotificationWithContext extends CustomerNotification {
     "id" | "reference" | "productName"
   > | null;
 }
+
+/*
+ * Account settings: profile identity, sign-in/security, and notification
+ * delivery preferences. This is account-level data, not celebration-level —
+ * invitation-specific configuration (RSVP, wishes, digital gift, slug, etc.)
+ * lives in the invitation workspace instead.
+ */
+
+export type SignInMethod = "password" | "google";
+
+/** Settings-only profile fields not needed by the rest of the Customer CMS. */
+export interface CustomerProfileDetails {
+  avatarUrl?: string;
+  /** Local Indonesian mobile number without the leading +62, e.g. "82212345678". */
+  whatsappNumber: string;
+  /** Human-readable label, e.g. "September 2026". */
+  memberSince: string;
+}
+
+export interface AccountSession {
+  id: string;
+  device: string;
+  location: string;
+  lastActiveLabel: string;
+  isCurrentDevice: boolean;
+}
+
+export interface CustomerSecurity {
+  signInMethod: SignInMethod;
+  /** Set when a Google account is linked, regardless of the primary sign-in method. */
+  googleEmail?: string;
+  hasPassword: boolean;
+  passwordUpdatedLabel: string;
+  sessions: AccountSession[];
+}
+
+export type NotificationPreferenceCategory =
+  | "wedding"
+  | "guestsRsvp"
+  | "wishes"
+  | "payments"
+  | "account";
+
+export interface NotificationPreferenceItem {
+  id: string;
+  category: NotificationPreferenceCategory;
+  title: string;
+  description: string;
+  inApp: boolean;
+  email: boolean;
+  /** True when the customer cannot turn this off (statutory or security). */
+  mandatory: boolean;
+}
+
+/** Everything the Settings page needs, composed from existing services. */
+export interface SettingsOverview {
+  customer: Customer;
+  profile: CustomerProfileDetails;
+  security: CustomerSecurity;
+  notificationPreferences: NotificationPreferenceItem[];
+  entitlement: EntitlementSummary;
+  currentInvitation: CustomerInvitation | null;
+  invitationCount: number;
+}

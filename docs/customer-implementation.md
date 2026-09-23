@@ -2,6 +2,8 @@
 
 ## Status
 
+**All planned Customer CMS pages are implemented.**
+
 ### Completed
 - Customer App Foundation
 - Customer Dashboard
@@ -17,8 +19,6 @@
 - Invitation Builder
 - Transactions
 - Notifications
-
-### Pending
 - Settings
 
 ---

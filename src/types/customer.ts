@@ -505,3 +505,151 @@ export interface GuestImportData {
   groups: string[];
   preview: GuestImportFilePreview;
 }
+
+/*
+ * Transactions & billing. Mirrors the backend's transaction design
+ * (docs/technical-design.md §22): four states, one commercial purpose per
+ * transaction, and an immutable snapshot captured at confirmation.
+ */
+
+/** Matches the backend transaction state machine exactly. */
+export type TransactionStatus = "pending" | "paid" | "cancelled" | "refunded";
+
+/**
+ * Customer-facing purchase purpose. `package` and `quotaAddon` both settle to
+ * the backend's DIGITAL_PACKAGE commercial purpose — they stay distinct
+ * customer-facing labels because a top-up invitation slot reads differently
+ * to a couple than their main suite purchase. `extension` maps to EXTENSION.
+ * PRINTED is intentionally omitted: no customer-side printed order record
+ * exists yet in this project's model.
+ */
+export type TransactionPurpose = "package" | "quotaAddon" | "extension";
+
+export interface TransactionAmount {
+  subtotal: number;
+  tax: number;
+  surcharge: number;
+  total: number;
+  currency: "IDR";
+}
+
+export interface TransactionPayment {
+  method: string;
+  /** e.g. "Auto-Settled"; omitted when not meaningful for the channel. */
+  channelBadge?: string;
+  /** Virtual account / channel reference number, customer-facing only. */
+  accountReference?: string;
+  bankReferenceNumber?: string;
+  /** ISO 8601; set once the payment is confirmed. */
+  verifiedAt?: string;
+}
+
+/** Present only on `extension` transactions. */
+export interface TransactionExtensionDetail {
+  previousExpiresAt: string;
+  extendedUntil: string;
+}
+
+export interface CustomerTransaction {
+  id: string;
+  /** Customer-friendly reference, e.g. "TRX-240922-001". Never a raw UUID. */
+  reference: string;
+  purpose: TransactionPurpose;
+  /** Product/package title, e.g. "Signature Package", "Validity Extension (+180 Days)". */
+  productName: string;
+  description: string;
+  status: TransactionStatus;
+  amount: TransactionAmount;
+  /** Null when the purchase is not yet assigned to a specific celebration. */
+  relatedInvitationId: string | null;
+  payment: TransactionPayment;
+  /** ISO 8601. */
+  createdAt: string;
+  /** ISO 8601; set once paid. */
+  paidAt?: string;
+  /** Official tax invoice number; only meaningful once paid. */
+  invoiceNumber?: string;
+  /** Customer-friendly entitlement grants, e.g. "+1 Invitation Quota". Paid only. */
+  entitlementsGranted: string[];
+  extension?: TransactionExtensionDetail;
+}
+
+/** A transaction with its related invitation resolved for display. */
+export interface CustomerTransactionWithInvitation extends CustomerTransaction {
+  relatedInvitation: Pick<
+    CustomerInvitation,
+    "id" | "coupleLabel" | "slug" | "templateName"
+  > | null;
+}
+
+/*
+ * Notifications. The customer-facing notification center groups updates by
+ * celebration (or the account itself) rather than modeling a generic
+ * social-style feed.
+ */
+
+/** The four filterable buckets shown in the Notifications page. */
+export type NotificationCategory =
+  | "wedding"
+  | "guestsRsvp"
+  | "payments"
+  | "account";
+
+/**
+ * What happened, used only to pick presentation (icon/tone). Kept separate
+ * from `category` so filtering stays coarse while the card content stays
+ * specific.
+ */
+export type NotificationKind =
+  | "guestImportCompleted"
+  | "guestImportIssues"
+  | "rsvpResponses"
+  | "wishesPending"
+  | "draftIncomplete"
+  | "invitationPublished"
+  | "invitationExtended"
+  | "invitationExpiringSoon"
+  | "invitationExpired"
+  | "giftAccountsUpdated"
+  | "paymentPending"
+  | "paymentConfirmed"
+  | "packageActivated"
+  | "accountSecurity";
+
+export interface CustomerNotification {
+  id: string;
+  kind: NotificationKind;
+  category: NotificationCategory;
+  /** Fine-grained label shown as the card's eyebrow, e.g. "Guests & Import". */
+  eyebrow: string;
+  title: string;
+  description: string;
+  /** ISO 8601 timestamp. */
+  occurredAt: string;
+  read: boolean;
+  /** Needs the customer to act, beyond simply being unread. */
+  attention: boolean;
+  /** Null for account-level notifications not tied to one celebration. */
+  relatedInvitationId: string | null;
+  relatedTransactionId?: string;
+  /** Small pill next to the wedding chip, e.g. "Action Required". */
+  tag?: string;
+  /** Trailing note shown after the timestamp, e.g. "Includes 3 dietary notes". */
+  meta?: string;
+  actionLabel?: string;
+  actionHref?: string;
+  /** True for links that leave the app, e.g. the public invitation URL. */
+  actionExternal?: boolean;
+}
+
+/** A notification with its related invitation/transaction resolved for display. */
+export interface CustomerNotificationWithContext extends CustomerNotification {
+  relatedInvitation: Pick<
+    CustomerInvitation,
+    "id" | "coupleLabel" | "slug" | "templateName"
+  > | null;
+  relatedTransaction: Pick<
+    CustomerTransaction,
+    "id" | "reference" | "productName"
+  > | null;
+}

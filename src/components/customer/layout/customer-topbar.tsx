@@ -16,6 +16,7 @@ export function CustomerTopbar({
   invitations,
   currentInvitation,
   entitlement,
+  notificationsUnreadCount = 0,
 }: Omit<CustomerSidebarProps, "onNavigate">) {
   const pathname = usePathname();
   const routeInvitationId = getInvitationIdFromPath(pathname);
@@ -60,13 +61,23 @@ export function CustomerTopbar({
             <span className="hidden sm:inline">New Invitation</span>
             <span className="sm:hidden">New</span>
           </Link>
-          <span
-            aria-hidden
-            className="relative grid size-9 place-items-center rounded-full text-on-surface-variant"
+          <Link
+            href="/app/notifications"
+            aria-label={
+              notificationsUnreadCount > 0
+                ? `Notifications, ${notificationsUnreadCount} unread`
+                : "Notifications"
+            }
+            className="relative grid size-9 place-items-center rounded-full text-on-surface-variant transition-colors hover:bg-surface-container hover:text-on-surface"
           >
-            <Bell size={19} />
-            <span className="absolute top-1.5 right-1.5 size-2 rounded-full bg-secondary ring-2 ring-surface" />
-          </span>
+            <Bell aria-hidden size={19} />
+            {notificationsUnreadCount > 0 ? (
+              <span
+                aria-hidden
+                className="absolute top-1.5 right-1.5 size-2 rounded-full bg-secondary ring-2 ring-surface"
+              />
+            ) : null}
+          </Link>
           <Link
             href="/login"
             aria-label={`Signed in as ${customer.name}`}

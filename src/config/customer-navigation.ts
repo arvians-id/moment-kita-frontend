@@ -81,14 +81,13 @@ export const customerGlobalNavigation: CustomerNavGroup[] = [
         label: "Transactions",
         href: "/app/transactions",
         icon: ReceiptText,
-        available: false,
+        available: true,
       },
       {
         label: "Notifications",
         href: "/app/notifications",
         icon: Bell,
-        available: false,
-        badge: 2,
+        available: true,
       },
       {
         label: "Settings",

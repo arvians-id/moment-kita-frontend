@@ -15,12 +15,10 @@
 - Invitation Detail
 - Create Invitation
 - Invitation Builder
-
-### Next
 - Transactions
+- Notifications
 
 ### Pending
-- Notifications
 - Settings
 
 ---

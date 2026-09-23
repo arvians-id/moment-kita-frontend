@@ -27,6 +27,8 @@ export interface CustomerSidebarProps {
   invitations: CustomerInvitation[];
   currentInvitation: CustomerInvitation | null;
   entitlement: EntitlementSummary;
+  /** Overrides the Notifications item's static badge with the live count. */
+  notificationsUnreadCount?: number;
   /** Lets the mobile drawer close itself when a destination is chosen. */
   onNavigate?: () => void;
 }
@@ -103,6 +105,7 @@ export function CustomerSidebarContent({
   invitations,
   currentInvitation,
   entitlement,
+  notificationsUnreadCount,
   onNavigate,
 }: CustomerSidebarProps) {
   const pathname = usePathname();
@@ -162,7 +165,11 @@ export function CustomerSidebarContent({
               {group.items.map((item) => (
                 <NavItem
                   key={item.href}
-                  item={item}
+                  item={
+                    item.href === "/app/notifications" && notificationsUnreadCount
+                      ? { ...item, badge: notificationsUnreadCount }
+                      : item
+                  }
                   isActive={
                     item.available && isCurrentRoute(pathname, item.href)
                   }

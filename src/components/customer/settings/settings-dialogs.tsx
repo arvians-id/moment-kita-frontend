@@ -152,7 +152,10 @@ export function ChangeEmailDialog({
           <span className="grid size-9 shrink-0 place-items-center bg-surface-container text-secondary">
             <Mail aria-hidden size={17} />
           </span>
-          <h2 id="change-email-title" className="font-serif text-[20px] leading-6">
+          <h2
+            id="change-email-title"
+            className="font-serif text-[20px] leading-6"
+          >
             Change Primary Email
           </h2>
         </div>
@@ -167,8 +170,8 @@ export function ChangeEmailDialog({
       </div>
 
       <p className="mt-3 text-[12px] leading-5 text-on-surface-variant">
-        For your security, we&apos;ll send a verification PIN to your new
-        email before it replaces{" "}
+        For your security, we&apos;ll send a verification PIN to your new email
+        before it replaces{" "}
         <span className="font-medium text-on-surface">{currentEmail}</span>.
       </p>
 
@@ -233,7 +236,8 @@ export function ChangePasswordDialog({
   const rules = getPasswordRuleChecks(newPassword);
   const newPasswordValid = isPasswordValid(newPassword);
   const matches = newPassword.length > 0 && newPassword === confirmPassword;
-  const valid = currentPassword.trim().length > 0 && newPasswordValid && matches;
+  const valid =
+    currentPassword.trim().length > 0 && newPasswordValid && matches;
 
   function submit(event: React.FormEvent) {
     event.preventDefault();

@@ -1,4 +1,4 @@
-import { CalendarDays, MapPin, Plus } from "lucide-react";
+import { CalendarDays, Link2, MapPin, Plus, Trash2 } from "lucide-react";
 
 import {
   EditorCard,
@@ -11,10 +11,12 @@ export function EventsEditor({
   events,
   onChange,
   onAdd,
+  onRemove,
 }: {
   events: InvitationBuilderEvent[];
   onChange: (id: string, patch: Partial<InvitationBuilderEvent>) => void;
   onAdd: () => void;
+  onRemove: (id: string) => void;
 }) {
   return (
     <EditorCard>
@@ -39,13 +41,23 @@ export function EventsEditor({
             key={event.id}
             className="rounded-[8px] bg-surface-low p-4 sm:p-5"
           >
-            <div className="mb-4 flex items-center gap-2">
-              <span className="grid size-6 place-items-center rounded-full bg-primary text-[10px] font-bold text-primary-foreground">
-                {index + 1}
+            <div className="mb-4 flex items-center justify-between gap-3">
+              <span className="flex items-center gap-2">
+                <span className="grid size-6 place-items-center rounded-full bg-primary text-[10px] font-bold text-primary-foreground">
+                  {index + 1}
+                </span>
+                <span className="text-[10px] font-semibold tracking-[0.14em] text-secondary uppercase">
+                  Event {String(index + 1).padStart(2, "0")}
+                </span>
               </span>
-              <span className="text-[10px] font-semibold tracking-[0.14em] text-secondary uppercase">
-                Event {String(index + 1).padStart(2, "0")}
-              </span>
+              <button
+                type="button"
+                onClick={() => onRemove(event.id)}
+                disabled={events.length <= 1}
+                className="inline-flex min-h-8 items-center gap-1.5 px-2 text-[9px] font-semibold tracking-[0.1em] text-red-700 uppercase hover:bg-red-50 disabled:cursor-not-allowed disabled:opacity-35"
+              >
+                <Trash2 aria-hidden size={13} /> Remove
+              </button>
             </div>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <div className="sm:col-span-2">
@@ -60,6 +72,40 @@ export function EventsEditor({
                   }
                   className={fieldClass + " bg-surface-lowest"}
                 />
+              </div>
+              <div>
+                <FieldLabel htmlFor={event.id + "-timezone"}>
+                  Timezone
+                </FieldLabel>
+                <input
+                  id={event.id + "-timezone"}
+                  value={event.timezone}
+                  placeholder="Asia/Jakarta (WIB)"
+                  onChange={(change) =>
+                    onChange(event.id, { timezone: change.target.value })
+                  }
+                  className={fieldClass + " bg-surface-lowest"}
+                />
+              </div>
+              <div>
+                <FieldLabel htmlFor={event.id + "-map"}>Map link</FieldLabel>
+                <div className="relative">
+                  <Link2
+                    aria-hidden
+                    size={15}
+                    className="absolute top-3 left-3 text-secondary"
+                  />
+                  <input
+                    id={event.id + "-map"}
+                    type="url"
+                    value={event.mapLink}
+                    placeholder="https://maps.google.com/..."
+                    onChange={(change) =>
+                      onChange(event.id, { mapLink: change.target.value })
+                    }
+                    className={fieldClass + " bg-surface-lowest pl-9"}
+                  />
+                </div>
               </div>
               <div>
                 <FieldLabel htmlFor={event.id + "-date"}>Date</FieldLabel>

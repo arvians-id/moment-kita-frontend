@@ -34,7 +34,8 @@ export default async function AdminDashboardPage() {
         eyebrow="Operational Suite · Live Telemetry"
         title={
           <>
-            {greetingFor(new Date())}, <span className="italic">{firstName}</span>
+            {greetingFor(new Date())},{" "}
+            <span className="italic">{firstName}</span>
           </>
         }
         description="Real-time visibility into customers, invitations, and commerce across the whole Moment Kita studio."

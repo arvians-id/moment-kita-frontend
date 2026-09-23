@@ -1,4 +1,15 @@
 @import "tailwindcss";
+
+.invitation-detail-shell:has(.admin-invitation-editor) {
+  display: block;
+  max-width: none;
+  padding-bottom: 0;
+}
+
+.invitation-detail-shell:has(.admin-invitation-editor)
+  > .invitation-detail-chrome {
+  display: none;
+}
 @import "tw-animate-css";
 
 @theme inline {

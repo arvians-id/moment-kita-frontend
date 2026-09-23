@@ -66,7 +66,10 @@ export function AdminMobileNav(props: Omit<AdminSidebarProps, "onNavigate">) {
                 aria-label="Admin navigation"
                 className="fixed inset-y-0 left-0 z-50 flex w-[min(20rem,88vw)] flex-col border-r border-border bg-surface-low shadow-[0_18px_40px_-12px_rgba(46,38,33,0.28)]"
               >
-                <AdminSidebarContent {...props} onNavigate={() => setIsOpen(false)} />
+                <AdminSidebarContent
+                  {...props}
+                  onNavigate={() => setIsOpen(false)}
+                />
               </div>
             </>,
             document.body,

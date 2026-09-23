@@ -48,9 +48,15 @@ export function ProfileSummaryCard({
             <p className="truncate text-[16px] font-semibold text-on-surface">
               {name}
             </p>
-            <BadgeCheck aria-hidden size={15} className="shrink-0 text-secondary" />
+            <BadgeCheck
+              aria-hidden
+              size={15}
+              className="shrink-0 text-secondary"
+            />
           </div>
-          <p className="truncate text-[12px] text-on-surface-variant">{email}</p>
+          <p className="truncate text-[12px] text-on-surface-variant">
+            {email}
+          </p>
           <span className="mt-1.5 inline-block bg-secondary/15 px-2 py-0.5 text-[9px] font-semibold tracking-[0.12em] text-secondary uppercase">
             {entitlement.packageName}
           </span>
@@ -68,7 +74,10 @@ export function ProfileSummaryCard({
           label="Status"
           value={
             <span className="inline-flex items-center gap-1 font-medium text-secondary">
-              <span aria-hidden className="size-1.5 rounded-full bg-secondary" />
+              <span
+                aria-hidden
+                className="size-1.5 rounded-full bg-secondary"
+              />
               Verified Customer
             </span>
           }
@@ -76,7 +85,11 @@ export function ProfileSummaryCard({
       </div>
 
       <div className="mt-4 flex items-center gap-2.5 bg-surface-container p-3">
-        <ShieldCheck aria-hidden size={16} className="shrink-0 text-secondary" />
+        <ShieldCheck
+          aria-hidden
+          size={16}
+          className="shrink-0 text-secondary"
+        />
         <p className="text-[11px] leading-4 text-on-surface-variant">
           Active across {invitationCount}{" "}
           {invitationCount === 1 ? "invitation" : "invitations"}.
@@ -86,13 +99,7 @@ export function ProfileSummaryCard({
   );
 }
 
-function Row({
-  label,
-  value,
-}: {
-  label: string;
-  value: React.ReactNode;
-}) {
+function Row({ label, value }: { label: string; value: React.ReactNode }) {
   return (
     <div className="flex items-center justify-between gap-3">
       <span className="text-on-surface-variant">{label}</span>

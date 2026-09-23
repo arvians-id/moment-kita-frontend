@@ -71,7 +71,7 @@ export const adminNavigation: AdminNavGroup[] = [
         label: "Templates",
         href: "/admin/templates",
         icon: Palette,
-        available: false,
+        available: true,
       },
     ],
   },

@@ -269,6 +269,8 @@ export interface InvitationBuilderEvent {
   endTime: string;
   venue: string;
   address: string;
+  timezone: string;
+  mapLink: string;
 }
 
 export interface InvitationBuilderGalleryItem {
@@ -297,6 +299,7 @@ export interface InvitationBuilderContent {
   rsvp: {
     headline: string;
     deadline: string;
+    accessPolicy: "guest_list" | "link";
     allowPlusOne: boolean;
     collectMealPreference: boolean;
   };
@@ -590,10 +593,7 @@ export interface CustomerTransactionWithInvitation extends CustomerTransaction {
 
 /** The four filterable buckets shown in the Notifications page. */
 export type NotificationCategory =
-  | "wedding"
-  | "guestsRsvp"
-  | "payments"
-  | "account";
+  "wedding" | "guestsRsvp" | "payments" | "account";
 
 /**
  * What happened, used only to pick presentation (icon/tone). Kept separate
@@ -690,11 +690,7 @@ export interface CustomerSecurity {
 }
 
 export type NotificationPreferenceCategory =
-  | "wedding"
-  | "guestsRsvp"
-  | "wishes"
-  | "payments"
-  | "account";
+  "wedding" | "guestsRsvp" | "wishes" | "payments" | "account";
 
 export interface NotificationPreferenceItem {
   id: string;

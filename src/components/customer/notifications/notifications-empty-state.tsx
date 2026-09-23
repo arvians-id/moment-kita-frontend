@@ -31,7 +31,11 @@ export function NotificationsFilteredEmptyState({
 }) {
   return (
     <div className="bg-surface-lowest px-6 py-14 text-center shadow-sm">
-      <SearchX aria-hidden size={30} className="mx-auto text-on-surface-variant" />
+      <SearchX
+        aria-hidden
+        size={30}
+        className="mx-auto text-on-surface-variant"
+      />
       <h2 className="mt-3 font-serif text-[22px]">
         No notifications match this view
       </h2>

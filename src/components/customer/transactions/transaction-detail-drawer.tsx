@@ -16,7 +16,10 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 import { externalLinkProps, whatsappHref } from "@/lib/whatsapp";
-import type { CustomerTransactionWithInvitation, TransactionStatus } from "@/types";
+import type {
+  CustomerTransactionWithInvitation,
+  TransactionStatus,
+} from "@/types";
 
 const currency = new Intl.NumberFormat("id-ID", {
   style: "currency",
@@ -42,7 +45,12 @@ const dateFormat = new Intl.DateTimeFormat("en-GB", {
 
 const statusBanner: Record<
   TransactionStatus,
-  { icon: LucideIcon; tone: string; title: string; body: (t: CustomerTransactionWithInvitation) => string }
+  {
+    icon: LucideIcon;
+    tone: string;
+    title: string;
+    body: (t: CustomerTransactionWithInvitation) => string;
+  }
 > = {
   paid: {
     icon: CheckCircle2,
@@ -142,7 +150,10 @@ export function TransactionDetailDrawer({
               </button>
             </h2>
             {copied ? (
-              <p aria-live="polite" className="mt-0.5 text-[11px] text-secondary">
+              <p
+                aria-live="polite"
+                className="mt-0.5 text-[11px] text-secondary"
+              >
                 Reference copied.
               </p>
             ) : null}
@@ -205,7 +216,9 @@ export function TransactionDetailDrawer({
             </div>
             <div className="mt-1 flex items-baseline justify-between bg-surface-container-high/60 px-2.5 py-2">
               <span className="text-[11px] font-semibold tracking-[0.12em] uppercase">
-                {transaction.status === "paid" ? "Total Settled" : "Total Amount"}
+                {transaction.status === "paid"
+                  ? "Total Settled"
+                  : "Total Amount"}
               </span>
               <span className="font-serif text-[22px] font-bold text-primary">
                 {currency.format(transaction.amount.total)}
@@ -219,7 +232,11 @@ export function TransactionDetailDrawer({
             </span>
             <div className="flex items-center justify-between gap-2">
               <span className="flex min-w-0 items-center gap-2">
-                <Building2 aria-hidden size={18} className="shrink-0 text-secondary" />
+                <Building2
+                  aria-hidden
+                  size={18}
+                  className="shrink-0 text-secondary"
+                />
                 <span className="truncate text-[13px] font-semibold">
                   {transaction.payment.method}
                 </span>
@@ -247,7 +264,9 @@ export function TransactionDetailDrawer({
                 </span>
                 <span>
                   {transaction.payment.verifiedAt
-                    ? dateTimeFormat.format(new Date(transaction.payment.verifiedAt))
+                    ? dateTimeFormat.format(
+                        new Date(transaction.payment.verifiedAt),
+                      )
                     : dateTimeFormat.format(new Date(transaction.createdAt))}
                 </span>
               </div>
@@ -275,15 +294,21 @@ export function TransactionDetailDrawer({
                 Hosting Extension
               </span>
               <div className="flex items-center justify-between text-[13px]">
-                <span className="text-on-surface-variant">Previously expired</span>
+                <span className="text-on-surface-variant">
+                  Previously expired
+                </span>
                 <span className="font-medium">
-                  {dateFormat.format(new Date(transaction.extension.previousExpiresAt))}
+                  {dateFormat.format(
+                    new Date(transaction.extension.previousExpiresAt),
+                  )}
                 </span>
               </div>
               <div className="flex items-center justify-between text-[13px]">
                 <span className="text-on-surface-variant">Extended until</span>
                 <span className="font-semibold text-secondary">
-                  {dateFormat.format(new Date(transaction.extension.extendedUntil))}
+                  {dateFormat.format(
+                    new Date(transaction.extension.extendedUntil),
+                  )}
                 </span>
               </div>
             </div>

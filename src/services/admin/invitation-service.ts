@@ -1,12 +1,19 @@
 import { mockInvitationLifecycle } from "@/data/mocks/admin";
 import { mockAdminCustomerDetails } from "@/data/mocks/admin-customers";
 import { buildAdminInvitationDetailSupplement } from "@/data/mocks/admin-invitation-details";
+import {
+  createMockBuilderContent,
+  mockBuilderSections,
+} from "@/data/mocks/invitation-builder";
+import { mockTemplateCatalog } from "@/data/mocks/template-catalog";
 import type {
+  AdminInvitationEditorData,
   AdminInvitationDetailData,
   AdminInvitationListData,
   AdminInvitationListItem,
   AdminInvitationSummary,
   InvitationStatus,
+  CustomerInvitation,
 } from "@/types";
 
 function buildInvitations(): AdminInvitationListItem[] {
@@ -104,5 +111,56 @@ export async function getAdminInvitationDetail(
     extensionHistory: supplement.extensionHistory.map((entry) => ({
       ...entry,
     })),
+  };
+}
+
+/**
+ * Admin editor read model. It adapts the Admin dossier into the shared
+ * invitation-builder model so content structure and preview behavior cannot
+ * drift between Customer and Admin editing surfaces.
+ */
+export async function getAdminInvitationEditor(
+  invitationId: string,
+): Promise<AdminInvitationEditorData | null> {
+  const [detail, list] = await Promise.all([
+    getAdminInvitationDetail(invitationId),
+    getAdminInvitationList(),
+  ]);
+  if (!detail) return null;
+
+  const source = detail.invitation;
+  const editorCoupleLabel = source.coupleLabel.split(" — ")[0];
+  const invitation: CustomerInvitation = {
+    id: source.id,
+    slug: source.slug,
+    coupleLabel: editorCoupleLabel,
+    title: source.coupleLabel,
+    status: source.status,
+    eventDate: source.eventDate,
+    venue: source.venue,
+    templateName: source.templateName,
+    guestCount: detail.engagement.guests.totalInvited,
+    confirmedCount: detail.engagement.guests.attending,
+    expiresAt: source.expiresAt ?? undefined,
+    lastModifiedLabel: detail.versions[0]?.savedAt,
+    readinessNote:
+      source.status === "finalized"
+        ? "Content is finalized and ready for an explicit Publish action."
+        : undefined,
+    cancelledNote:
+      source.status === "cancelled"
+        ? "Cancelled by an Admin operator. Content remains preserved."
+        : undefined,
+  };
+
+  return {
+    detail,
+    invitation,
+    sections: mockBuilderSections.map((section) => ({ ...section })),
+    content: createMockBuilderContent(invitation),
+    templates: mockTemplateCatalog.map((template) => ({ ...template })),
+    reservedSlugs: list.invitations
+      .filter((item) => item.id !== invitationId)
+      .map((item) => item.slug),
   };
 }

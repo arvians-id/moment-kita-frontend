@@ -3,6 +3,7 @@
 import { AlertTriangle, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
+import { publicConfig } from "@/lib/config";
 import type { AdminInvitationDetailData } from "@/types";
 
 export type InvitationAdminAction =
@@ -40,11 +41,15 @@ const descriptions: Record<InvitationAdminAction, string> = {
 export function InvitationPrivilegedDialog({
   action,
   data,
+  templateOptions,
+  reservedSlugs = [],
   onClose,
   onConfirm,
 }: {
   action: InvitationAdminAction;
   data: AdminInvitationDetailData;
+  templateOptions?: string[];
+  reservedSlugs?: string[];
   onClose: () => void;
   onConfirm: (message: string) => void;
 }) {
@@ -52,15 +57,17 @@ export function InvitationPrivilegedDialog({
   const [newSlug, setNewSlug] = useState("");
   const [targetTemplate, setTargetTemplate] = useState("");
   const [extensionDays, setExtensionDays] = useState("30");
+  const [referenceNow] = useState(() => new Date());
   const requiresReason = [
     "change_slug",
     "change_template",
     "extend",
     "cancel",
   ].includes(action);
+  const slugUnavailable = reservedSlugs.includes(newSlug);
   const hasActionValue =
     action === "change_slug"
-      ? newSlug.trim().length >= 3
+      ? newSlug.trim().length >= 3 && !slugUnavailable
       : action === "change_template"
         ? targetTemplate !== ""
         : action === "extend"
@@ -80,9 +87,12 @@ export function InvitationPrivilegedDialog({
   const currentExpiry = data.invitation.expiresAt
     ? new Date(data.invitation.expiresAt)
     : null;
-  const proposedExpiry = currentExpiry
+  const extensionBase = currentExpiry
+    ? new Date(Math.max(referenceNow.getTime(), currentExpiry.getTime()))
+    : null;
+  const proposedExpiry = extensionBase
     ? new Date(
-        currentExpiry.getTime() + Number(extensionDays || 0) * 86_400_000,
+        extensionBase.getTime() + Number(extensionDays || 0) * 86_400_000,
       )
     : null;
 
@@ -140,53 +150,91 @@ export function InvitationPrivilegedDialog({
         </div>
 
         {action === "change_slug" ? (
-          <div className="mt-5 grid gap-3 sm:grid-cols-2">
-            <label className="text-[9px] font-semibold tracking-[0.1em] text-on-surface-variant uppercase">
-              Current Slug
-              <input
-                readOnly
-                value={data.invitation.slug}
-                className="mt-2 h-11 w-full bg-surface-low px-3 font-mono text-[11px] text-on-surface-variant"
-              />
-            </label>
-            <label className="text-[9px] font-semibold tracking-[0.1em] text-on-surface-variant uppercase">
-              New Slug
-              <input
-                value={newSlug}
-                onChange={(event) =>
-                  setNewSlug(
-                    event.target.value.toLowerCase().replace(/[^a-z0-9-]/g, ""),
-                  )
-                }
-                placeholder="new-public-slug"
-                className="mt-2 h-11 w-full border border-border bg-white px-3 font-mono text-[11px] outline-none focus:border-secondary"
-              />
-            </label>
+          <div className="mt-5 space-y-3">
+            <div className="grid gap-3 sm:grid-cols-2">
+              <label className="text-[9px] font-semibold tracking-[0.1em] text-on-surface-variant uppercase">
+                Current Slug
+                <input
+                  readOnly
+                  value={data.invitation.slug}
+                  className="mt-2 h-11 w-full bg-surface-low px-3 font-mono text-[11px] text-on-surface-variant"
+                />
+              </label>
+              <label className="text-[9px] font-semibold tracking-[0.1em] text-on-surface-variant uppercase">
+                New Slug
+                <input
+                  value={newSlug}
+                  onChange={(event) =>
+                    setNewSlug(
+                      event.target.value
+                        .toLowerCase()
+                        .replace(/[^a-z0-9-]/g, ""),
+                    )
+                  }
+                  placeholder="new-public-slug"
+                  className="mt-2 h-11 w-full border border-border bg-white px-3 font-mono text-[11px] outline-none focus:border-secondary"
+                />
+                {slugUnavailable ? (
+                  <span className="mt-1 block tracking-normal text-red-700 normal-case">
+                    This address is already active or permanently reserved.
+                  </span>
+                ) : null}
+              </label>
+            </div>
+            <div className="bg-surface-low p-3 text-[10px] leading-5 text-on-surface-variant">
+              Resulting URL:{" "}
+              <strong className="font-mono text-on-surface">
+                {publicConfig.appUrl}/{newSlug || "new-public-slug"}
+              </strong>
+              <span className="mt-1 block">
+                The previous address remains permanently reserved. Redirect and
+                tombstone persistence will be handled by the backend.
+              </span>
+            </div>
           </div>
         ) : null}
 
         {action === "change_template" ? (
-          <label className="mt-5 block text-[9px] font-semibold tracking-[0.1em] text-on-surface-variant uppercase">
-            Target Template
-            <select
-              value={targetTemplate}
-              onChange={(event) => setTargetTemplate(event.target.value)}
-              className="mt-2 h-11 w-full border border-border bg-white px-3 text-[11px] outline-none focus:border-secondary"
-            >
-              <option value="">Select a compatible template</option>
-              {[
-                "Botanique",
-                "Château de Chantilly",
-                "Kyoto Whisper",
-                "Minimalist Modern",
-                "Velvet",
-              ]
-                .filter((item) => item !== data.invitation.templateName)
-                .map((item) => (
-                  <option key={item}>{item}</option>
-                ))}
-            </select>
-          </label>
+          <div className="mt-5 space-y-3">
+            <div className="grid gap-3 sm:grid-cols-2">
+              <label className="text-[9px] font-semibold tracking-[0.1em] text-on-surface-variant uppercase">
+                Current Template
+                <input
+                  readOnly
+                  value={data.invitation.templateName}
+                  className="mt-2 h-11 w-full bg-surface-low px-3 text-[11px] text-on-surface-variant"
+                />
+              </label>
+              <label className="text-[9px] font-semibold tracking-[0.1em] text-on-surface-variant uppercase">
+                New Template
+                <select
+                  value={targetTemplate}
+                  onChange={(event) => setTargetTemplate(event.target.value)}
+                  className="mt-2 h-11 w-full border border-border bg-white px-3 text-[11px] outline-none focus:border-secondary"
+                >
+                  <option value="">Select a compatible template</option>
+                  {(
+                    templateOptions ?? [
+                      "Botanique",
+                      "Château de Chantilly",
+                      "Kyoto Whisper",
+                      "Minimalist Modern",
+                      "Velvet",
+                    ]
+                  )
+                    .filter((item) => item !== data.invitation.templateName)
+                    .map((item) => (
+                      <option key={item}>{item}</option>
+                    ))}
+                </select>
+              </label>
+            </div>
+            <p className="border-l-2 border-secondary bg-accent/35 px-3 py-2 text-[10px] leading-5 text-accent-foreground">
+              Unsupported content must be retained as orphaned content until a
+              compatibility review is completed. This preview does not run a
+              template migration or discard content.
+            </p>
+          </div>
         ) : null}
 
         {action === "extend" ? (

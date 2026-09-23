@@ -79,7 +79,8 @@ export const mockCustomerTransactions: readonly CustomerTransaction[] = [
     reference: "TRX-240918-003",
     purpose: "quotaAddon",
     productName: "Additional Invitation Quota (+1)",
-    description: "Secondary intimate reception for extended family in Yogyakarta",
+    description:
+      "Secondary intimate reception for extended family in Yogyakarta",
     status: "pending",
     amount: {
       subtotal: 89_190,

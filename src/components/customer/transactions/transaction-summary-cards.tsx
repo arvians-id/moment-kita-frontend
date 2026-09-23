@@ -108,7 +108,9 @@ export function TransactionSummaryCards({
         </div>
         <div className="mt-2">
           <p className="font-serif text-[22px] leading-[30px] font-semibold">
-            {latestTransaction ? currency.format(latestTransaction.amount.total) : "—"}
+            {latestTransaction
+              ? currency.format(latestTransaction.amount.total)
+              : "—"}
           </p>
           <p className="mt-0.5 text-[13px] leading-5 text-on-surface-variant">
             {latestTransaction
@@ -118,7 +120,11 @@ export function TransactionSummaryCards({
         </div>
         {latestTransaction ? (
           <p className="mt-2 flex items-center gap-1 text-[11px] leading-4 text-on-surface-variant">
-            <CheckCircle2 aria-hidden size={13} className="shrink-0 text-secondary" />
+            <CheckCircle2
+              aria-hidden
+              size={13}
+              className="shrink-0 text-secondary"
+            />
             <span className="truncate">
               Settlement Ref #{latestTransaction.reference}
             </span>

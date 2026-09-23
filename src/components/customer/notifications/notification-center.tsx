@@ -39,9 +39,8 @@ export function NotificationCenter({
       attention: notifications.filter((item) => item.attention).length,
       wedding: notifications.filter((item) => item.category === "wedding")
         .length,
-      guestsRsvp: notifications.filter(
-        (item) => item.category === "guestsRsvp",
-      ).length,
+      guestsRsvp: notifications.filter((item) => item.category === "guestsRsvp")
+        .length,
       payments: notifications.filter((item) => item.category === "payments")
         .length,
       account: notifications.filter((item) => item.category === "account")

@@ -69,9 +69,7 @@ export function TransactionTable({
                 key={transaction.id}
                 onClick={() => onView(transaction)}
                 className={`group cursor-pointer transition-colors ${
-                  isSelected
-                    ? "bg-surface-highest/50"
-                    : "hover:bg-surface-low"
+                  isSelected ? "bg-surface-highest/50" : "hover:bg-surface-low"
                 }`}
               >
                 <td className="px-3 py-3.5 align-middle">
@@ -114,7 +112,9 @@ export function TransactionTable({
                 <td className="hidden px-3 py-3.5 align-middle text-[11px] whitespace-nowrap text-on-surface-variant xl:table-cell">
                   {dateFormat.format(created)}
                   <br />
-                  <span className="text-[10px]">{timeFormat.format(created)} WIB</span>
+                  <span className="text-[10px]">
+                    {timeFormat.format(created)} WIB
+                  </span>
                 </td>
                 <td className="px-3 py-3.5 text-right align-middle">
                   <button

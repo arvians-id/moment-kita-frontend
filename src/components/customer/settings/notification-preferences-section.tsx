@@ -30,7 +30,9 @@ export function NotificationPreferencesSection({
   ) {
     setDraft((current) =>
       current.map((item) =>
-        item.id === id && !item.mandatory ? { ...item, [channel]: value } : item,
+        item.id === id && !item.mandatory
+          ? { ...item, [channel]: value }
+          : item,
       ),
     );
   }
@@ -94,7 +96,9 @@ export function NotificationPreferencesSection({
                       <SettingsToggle
                         checked={item.inApp}
                         disabled={item.mandatory}
-                        onChange={(value) => updateChannel(item.id, "inApp", value)}
+                        onChange={(value) =>
+                          updateChannel(item.id, "inApp", value)
+                        }
                         label={`${item.title} in-app notifications`}
                       />
                     </div>
@@ -102,7 +106,9 @@ export function NotificationPreferencesSection({
                       <SettingsToggle
                         checked={item.email}
                         disabled={item.mandatory}
-                        onChange={(value) => updateChannel(item.id, "email", value)}
+                        onChange={(value) =>
+                          updateChannel(item.id, "email", value)
+                        }
                         label={`${item.title} email notifications`}
                       />
                     </div>
@@ -116,8 +122,7 @@ export function NotificationPreferencesSection({
         <div className="flex flex-col gap-4 border-t border-surface-highest pt-4 sm:flex-row sm:items-center sm:justify-between">
           <span className="inline-flex items-center gap-1.5 text-[11px] leading-4 font-semibold tracking-[0.06em] text-on-surface-variant uppercase">
             <Lock aria-hidden size={12} className="text-secondary" />
-            Required notifications stay on to protect your account and
-            payments
+            Required notifications stay on to protect your account and payments
           </span>
           <SaveButton
             label="Save Notification Preferences"

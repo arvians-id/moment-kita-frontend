@@ -51,7 +51,9 @@ export function RecentInvitationsList({
               </span>
             </div>
             <div className="flex shrink-0 flex-col text-[11px] text-on-surface-variant sm:text-right">
-              <span>Wedding {dateFormat.format(new Date(invitation.eventDate))}</span>
+              <span>
+                Wedding {dateFormat.format(new Date(invitation.eventDate))}
+              </span>
               <span>
                 {invitation.expiresAt
                   ? `Expires ${dateFormat.format(new Date(invitation.expiresAt))}`

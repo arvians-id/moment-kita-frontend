@@ -60,7 +60,11 @@ export function SaveButton({
         <Icon aria-hidden size={15} />
       ) : null}
       <span>
-        {status === "saving" ? savingLabel : status === "saved" ? savedLabel : label}
+        {status === "saving"
+          ? savingLabel
+          : status === "saved"
+            ? savedLabel
+            : label}
       </span>
     </button>
   );

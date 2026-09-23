@@ -188,6 +188,8 @@ export function createMockBuilderContent(
         endTime: "10:00",
         venue: invitation.venue,
         address: "Jl. M.H. Thamrin Kav. 28–30, Jakarta",
+        timezone: "Asia/Jakarta (WIB)",
+        mapLink: "https://maps.google.com/?q=Grand+Hyatt+Jakarta",
       },
       {
         id: "event_02",
@@ -197,6 +199,8 @@ export function createMockBuilderContent(
         endTime: "22:00",
         venue: "Grand Ballroom, Grand Hyatt Jakarta",
         address: "Jl. M.H. Thamrin Kav. 28–30, Jakarta",
+        timezone: "Asia/Jakarta (WIB)",
+        mapLink: "https://maps.google.com/?q=Grand+Hyatt+Jakarta",
       },
     ],
     gallery: gallery.map((item) => ({ ...item })),
@@ -221,6 +225,7 @@ export function createMockBuilderContent(
     rsvp: {
       headline: "Will you celebrate with us?",
       deadline: "2026-11-10",
+      accessPolicy: "guest_list",
       allowPlusOne: true,
       collectMealPreference: true,
     },

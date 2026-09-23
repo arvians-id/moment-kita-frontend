@@ -4,12 +4,16 @@ import type {
   DigitalGiftSummary,
   GuestResponseSummary,
   InvitationGuestEntry,
+  InvitationBuilderContent,
+  InvitationBuilderSection,
   InvitationStatus,
+  CustomerInvitation,
   InvitationWish,
   TransactionPurpose,
   TransactionStatus,
 } from "./customer";
 import type { Package } from "./package";
+import type { CatalogTemplate } from "./template";
 
 /** The signed-in Admin operator. Auth is out of scope for this task. */
 export interface AdminUser {
@@ -250,6 +254,46 @@ export interface AdminInvitationDetailData {
   versions: AdminInvitationVersionSummary[];
   activity: ActivityEntry[];
   extensionHistory: AdminInvitationExtension[];
+}
+
+export interface AdminCreateInvitationData {
+  customers: AdminCustomer[];
+  templates: CatalogTemplate[];
+  packages: Package[];
+  reservedSlugs: string[];
+  defaultTemplateKey: string;
+  defaultPackageId: string;
+}
+
+/** Admin editing workspace built on the shared invitation content model. */
+export interface AdminInvitationEditorData {
+  detail: AdminInvitationDetailData;
+  invitation: CustomerInvitation;
+  sections: InvitationBuilderSection[];
+  content: InvitationBuilderContent;
+  templates: CatalogTemplate[];
+  reservedSlugs: string[];
+}
+
+export interface AdminTemplateListItem extends CatalogTemplate {
+  activeVersion: string;
+  enabled: boolean;
+  featured: boolean;
+  usageCount: number;
+  packageAccess: string[];
+}
+
+export interface AdminTemplateSummary {
+  totalTemplates: number;
+  activeTemplates: number;
+  featuredTemplates: number;
+  totalUsage: number;
+}
+
+export interface AdminTemplateListData {
+  templates: AdminTemplateListItem[];
+  summary: AdminTemplateSummary;
+  categories: string[];
 }
 
 /** Customer-specific transaction projection; the full commerce module is separate. */

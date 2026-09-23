@@ -41,13 +41,14 @@ export const mockRevenueTrend: readonly RevenueTrendPoint[] = [
   { label: "Sep", amount: 45_300_000 },
 ];
 
-export const mockInvitationLifecycle: readonly InvitationLifecycleBreakdown[] = [
-  { status: "published", count: 184 },
-  { status: "finalized", count: 22 },
-  { status: "draft", count: 38 },
-  { status: "expired", count: 26 },
-  { status: "cancelled", count: 7 },
-];
+export const mockInvitationLifecycle: readonly InvitationLifecycleBreakdown[] =
+  [
+    { status: "published", count: 184 },
+    { status: "finalized", count: 22 },
+    { status: "draft", count: 38 },
+    { status: "expired", count: 26 },
+    { status: "cancelled", count: 7 },
+  ];
 
 export const mockTemplateUsage: readonly TemplateUsageEntry[] = [
   { templateName: "Château de Chantilly", suiteCount: 64 },

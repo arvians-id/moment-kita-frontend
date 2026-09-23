@@ -82,7 +82,8 @@ export async function getCustomerNotifications(): Promise<
 > {
   return [...mockCustomerNotifications]
     .sort(
-      (a, b) => new Date(b.occurredAt).getTime() - new Date(a.occurredAt).getTime(),
+      (a, b) =>
+        new Date(b.occurredAt).getTime() - new Date(a.occurredAt).getTime(),
     )
     .map(resolve);
 }

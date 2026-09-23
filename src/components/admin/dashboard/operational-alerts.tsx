@@ -33,9 +33,16 @@ export function OperationalAlerts({ alerts }: { alerts: AdminAlert[] }) {
           {alerts.map((alert) => {
             const { icon: Icon, tone } = severityPresentation[alert.severity];
             return (
-              <li key={alert.id} className="flex items-start justify-between gap-3 py-3">
+              <li
+                key={alert.id}
+                className="flex items-start justify-between gap-3 py-3"
+              >
                 <div className="flex min-w-0 items-start gap-3">
-                  <Icon aria-hidden size={17} className={`mt-0.5 shrink-0 ${tone}`} />
+                  <Icon
+                    aria-hidden
+                    size={17}
+                    className={`mt-0.5 shrink-0 ${tone}`}
+                  />
                   <div className="flex min-w-0 flex-col">
                     <span className="text-[13px] leading-5 font-semibold">
                       {alert.title}

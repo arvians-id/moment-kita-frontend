@@ -1,4 +1,7 @@
-import { mockCustomerInvitations, mockEntitlement } from "@/data/mocks/customer";
+import {
+  mockCustomerInvitations,
+  mockEntitlement,
+} from "@/data/mocks/customer";
 import { mockCustomerTransactions } from "@/data/mocks/transactions";
 import type {
   CustomerTransaction,
@@ -82,7 +85,8 @@ export async function getTransactionsOverview(): Promise<TransactionsOverview> {
 
   const latestTransaction =
     [...transactions].sort(
-      (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
+      (a, b) =>
+        new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
     )[0] ?? null;
 
   return {

@@ -54,7 +54,11 @@ export function ProfileSection({
   function handleSave() {
     setSubmitted(true);
     if (!nameValid || !whatsappValid) return;
-    onSave({ name: name.trim(), whatsappNumber: sanitizeWhatsappInput(whatsapp), avatarUrl });
+    onSave({
+      name: name.trim(),
+      whatsappNumber: sanitizeWhatsappInput(whatsapp),
+      avatarUrl,
+    });
   }
 
   return (
@@ -186,7 +190,9 @@ export function ProfileSection({
               placeholder="812 3456 7890"
               className={cn(
                 "h-11 flex-1 bg-surface-lowest px-4 text-[14px] shadow-sm outline-none focus:bg-surface",
-                submitted && !whatsappValid && "outline outline-1 outline-red-500",
+                submitted &&
+                  !whatsappValid &&
+                  "outline outline-1 outline-red-500",
               )}
             />
           </div>
@@ -265,7 +271,12 @@ function Field({
         {label}
       </label>
       {children}
-      <p className={cn("text-[11px] leading-4", invalid ? "text-red-600" : "text-on-surface-variant")}>
+      <p
+        className={cn(
+          "text-[11px] leading-4",
+          invalid ? "text-red-600" : "text-on-surface-variant",
+        )}
+      >
         {invalid ? "This field needs a valid value." : hint}
       </p>
     </div>

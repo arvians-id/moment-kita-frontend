@@ -61,7 +61,10 @@ function NavItem({
     return (
       <span
         aria-disabled="true"
-        className={cn(itemBaseClass, "cursor-not-allowed text-on-surface-variant/60")}
+        className={cn(
+          itemBaseClass,
+          "cursor-not-allowed text-on-surface-variant/60",
+        )}
       >
         {inner}
       </span>
@@ -126,11 +129,14 @@ export function AdminSidebarContent({
                 <NavItem
                   key={item.href}
                   item={
-                    item.href === "/admin/notifications" && notificationsUnreadCount
+                    item.href === "/admin/notifications" &&
+                    notificationsUnreadCount
                       ? { ...item, badge: notificationsUnreadCount }
                       : item
                   }
-                  isActive={item.available && isCurrentRoute(pathname, item.href)}
+                  isActive={
+                    item.available && isCurrentRoute(pathname, item.href)
+                  }
                   onNavigate={onNavigate}
                 />
               ))}

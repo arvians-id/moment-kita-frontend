@@ -20,8 +20,10 @@ export default async function CustomerAppLayout({
 }: {
   children: ReactNode;
 }) {
-  const [{ customer, invitations, currentInvitation, entitlement }, unreadNotificationCount] =
-    await Promise.all([getCustomerDashboard(), getUnreadNotificationCount()]);
+  const [
+    { customer, invitations, currentInvitation, entitlement },
+    unreadNotificationCount,
+  ] = await Promise.all([getCustomerDashboard(), getUnreadNotificationCount()]);
 
   return (
     <div className="min-h-screen bg-surface">

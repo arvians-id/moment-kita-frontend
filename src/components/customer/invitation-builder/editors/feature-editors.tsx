@@ -43,12 +43,14 @@ export function RsvpEditor({
   value: {
     headline: string;
     deadline: string;
+    accessPolicy: "guest_list" | "link";
     allowPlusOne: boolean;
     collectMealPreference: boolean;
   };
   onChange: (value: {
     headline: string;
     deadline: string;
+    accessPolicy: "guest_list" | "link";
     allowPlusOne: boolean;
     collectMealPreference: boolean;
   }) => void;
@@ -91,6 +93,23 @@ export function RsvpEditor({
             }
             className={fieldClass}
           />
+        </div>
+        <div>
+          <FieldLabel htmlFor="rsvp-access-policy">Response access</FieldLabel>
+          <select
+            id="rsvp-access-policy"
+            value={value.accessPolicy}
+            onChange={(event) =>
+              onChange({
+                ...value,
+                accessPolicy: event.target.value as "guest_list" | "link",
+              })
+            }
+            className={fieldClass}
+          >
+            <option value="guest_list">Guest List Only</option>
+            <option value="link">Anyone With Link</option>
+          </select>
         </div>
         <BooleanChoice
           checked={value.allowPlusOne}

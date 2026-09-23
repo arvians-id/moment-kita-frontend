@@ -14,11 +14,16 @@ export function TransactionsHeader() {
             <span aria-hidden className="text-on-surface-variant/50">
               /
             </span>
-            <span className="text-on-surface">Transactions &amp; Payment Settlements</span>
+            <span className="text-on-surface">
+              Transactions &amp; Payment Settlements
+            </span>
           </div>
           <div className="hidden items-center gap-2 border-l border-surface-highest pl-3 md:flex">
             <span className="inline-flex items-center gap-1.5 rounded-full bg-surface-container px-2.5 py-0.5 text-[11px] font-medium">
-              <span aria-hidden className="size-1.5 animate-pulse rounded-full bg-secondary" />
+              <span
+                aria-hidden
+                className="size-1.5 animate-pulse rounded-full bg-secondary"
+              />
               Concierge Billing Active
             </span>
             <span className="inline-flex items-center gap-1 rounded-full bg-surface-container px-2.5 py-0.5 text-[11px] font-medium text-on-surface-variant">
@@ -50,8 +55,8 @@ export function TransactionsHeader() {
           </h1>
           <p className="mt-1 text-[15px] leading-relaxed text-on-surface-variant">
             View your package purchases, invitation validity extensions, and
-            official transaction receipts. All payments are verified with
-            care by our studio concierge desk.
+            official transaction receipts. All payments are verified with care
+            by our studio concierge desk.
           </p>
         </div>
 

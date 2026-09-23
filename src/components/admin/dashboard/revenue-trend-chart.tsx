@@ -21,11 +21,15 @@ export function RevenueTrendChart({ points }: { points: RevenueTrendPoint[] }) {
   const max = Math.max(...values, 1);
   const min = Math.min(...values, 0);
   const range = max - min || 1;
-  const stepX = points.length > 1 ? (WIDTH - PADDING * 2) / (points.length - 1) : 0;
+  const stepX =
+    points.length > 1 ? (WIDTH - PADDING * 2) / (points.length - 1) : 0;
 
   const coords = points.map((point, index) => ({
     x: PADDING + stepX * index,
-    y: HEIGHT - PADDING - ((point.amount - min) / range) * (HEIGHT - PADDING * 2),
+    y:
+      HEIGHT -
+      PADDING -
+      ((point.amount - min) / range) * (HEIGHT - PADDING * 2),
     point,
   }));
 
@@ -66,14 +70,33 @@ export function RevenueTrendChart({ points }: { points: RevenueTrendPoint[] }) {
         >
           <defs>
             <linearGradient id="admin-revenue-fill" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="var(--secondary)" stopOpacity="0.18" />
-              <stop offset="100%" stopColor="var(--secondary)" stopOpacity="0" />
+              <stop
+                offset="0%"
+                stopColor="var(--secondary)"
+                stopOpacity="0.18"
+              />
+              <stop
+                offset="100%"
+                stopColor="var(--secondary)"
+                stopOpacity="0"
+              />
             </linearGradient>
           </defs>
           <path d={areaPath} fill="url(#admin-revenue-fill)" stroke="none" />
-          <path d={linePath} fill="none" stroke="var(--secondary)" strokeWidth="2" />
+          <path
+            d={linePath}
+            fill="none"
+            stroke="var(--secondary)"
+            strokeWidth="2"
+          />
           {coords.map(({ x, y, point }) => (
-            <circle key={point.label} cx={x} cy={y} r="3" fill="var(--secondary)" />
+            <circle
+              key={point.label}
+              cx={x}
+              cy={y}
+              r="3"
+              fill="var(--secondary)"
+            />
           ))}
         </svg>
       ) : null}

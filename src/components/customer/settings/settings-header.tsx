@@ -29,8 +29,8 @@ export function SettingsHeader({
             Settings
           </h1>
           <p className="mt-1 text-[15px] leading-relaxed text-on-surface-variant">
-            Manage your personal identity, sign-in credentials, and
-            notification preferences across your celebrations.
+            Manage your personal identity, sign-in credentials, and notification
+            preferences across your celebrations.
           </p>
         </div>
 

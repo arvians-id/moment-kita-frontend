@@ -71,8 +71,18 @@ export function BuilderFormPanel({
           endTime: "14:00",
           venue: "",
           address: "",
+          timezone: "Asia/Jakarta (WIB)",
+          mapLink: "",
         },
       ],
+    });
+  }
+
+  function removeEvent(id: string) {
+    if (content.events.length <= 1) return;
+    onContentChange({
+      ...content,
+      events: content.events.filter((event) => event.id !== id),
     });
   }
 
@@ -88,6 +98,7 @@ export function BuilderFormPanel({
             events={content.events}
             onChange={updateEvent}
             onAdd={addEvent}
+            onRemove={removeEvent}
           />
         );
       case "gallery":

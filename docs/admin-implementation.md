@@ -9,14 +9,14 @@
 - Customer Detail
 - Invitation List
 - Invitation Detail
-
-### Next
 - Create Invitation
-
-### Pending
 - Invitation Editor
 - Template List
+
+### Next
 - Template Detail
+
+### Pending
 - Transactions
 - Transaction Detail
 - Packages & Quota

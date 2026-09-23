@@ -23,7 +23,10 @@ import type {
 
 export type NotificationFilter = "all" | "unread" | NotificationCategory;
 
-export const notificationFilters: { value: NotificationFilter; label: string }[] = [
+export const notificationFilters: {
+  value: NotificationFilter;
+  label: string;
+}[] = [
   { value: "all", label: "All" },
   { value: "unread", label: "Unread" },
   { value: "wedding", label: "Wedding" },
@@ -87,7 +90,10 @@ export function groupByRecency(
   ).getTime();
   const startOfYesterday = startOfToday - DAY_MS;
 
-  const buckets: Record<NotificationGroupKey, CustomerNotificationWithContext[]> = {
+  const buckets: Record<
+    NotificationGroupKey,
+    CustomerNotificationWithContext[]
+  > = {
     today: [],
     yesterday: [],
     earlier: [],

@@ -34,7 +34,9 @@ export function SecuritySection({
   }
 
   function handleSignOutOthers() {
-    setSessions((current) => current.filter((session) => session.isCurrentDevice));
+    setSessions((current) =>
+      current.filter((session) => session.isCurrentDevice),
+    );
     showNotice("All other devices have been securely signed out.");
   }
 
@@ -133,7 +135,9 @@ export function SecuritySection({
               key={session.id}
               className={cn(
                 "flex items-center justify-between gap-4 p-3.5 shadow-sm",
-                session.isCurrentDevice ? "bg-surface-container" : "bg-surface-lowest",
+                session.isCurrentDevice
+                  ? "bg-surface-container"
+                  : "bg-surface-lowest",
               )}
             >
               <div className="flex min-w-0 items-center gap-3">
@@ -178,8 +182,8 @@ export function SecuritySection({
         {sessions.length > 1 ? (
           <div className="flex flex-col gap-3 pt-1 sm:flex-row sm:items-center sm:justify-between">
             <p className="max-w-md text-[12px] leading-5 text-on-surface-variant">
-              If you suspect unauthorized access, you can sign out every
-              device except this one.
+              If you suspect unauthorized access, you can sign out every device
+              except this one.
             </p>
             <button
               type="button"

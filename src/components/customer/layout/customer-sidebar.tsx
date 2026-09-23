@@ -166,7 +166,8 @@ export function CustomerSidebarContent({
                 <NavItem
                   key={item.href}
                   item={
-                    item.href === "/app/notifications" && notificationsUnreadCount
+                    item.href === "/app/notifications" &&
+                    notificationsUnreadCount
                       ? { ...item, badge: notificationsUnreadCount }
                       : item
                   }

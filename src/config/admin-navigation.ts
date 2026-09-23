@@ -65,7 +65,7 @@ export const adminNavigation: AdminNavGroup[] = [
         label: "Invitations",
         href: "/admin/invitations",
         icon: Mail,
-        available: false,
+        available: true,
       },
       {
         label: "Templates",

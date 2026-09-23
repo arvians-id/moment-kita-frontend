@@ -148,13 +148,42 @@ export interface AdminCustomerListData {
 /** Customer-owned invitation projection used by the Admin dossier. */
 export interface AdminCustomerInvitation {
   id: string;
+  slug: string;
   coupleLabel: string;
   status: InvitationStatus;
   /** ISO 8601 ceremony date. */
   eventDate: string;
+  venue: string;
   templateName: string;
+  /** ISO 8601; null until the invitation has been published once. */
+  publishedAt: string | null;
   /** Null until the first publish starts the expiration window. */
   expiresAt: string | null;
+}
+
+export type AdminInvitationOwner = Pick<
+  AdminCustomer,
+  "id" | "name" | "accountType" | "linkedUserId"
+>;
+
+/** Cross-customer invitation projection used by the Admin registry. */
+export interface AdminInvitationListItem extends AdminCustomerInvitation {
+  customer: AdminInvitationOwner;
+}
+
+export interface AdminInvitationSummary {
+  total: number;
+  draft: number;
+  finalized: number;
+  published: number;
+  expired: number;
+  cancelled: number;
+}
+
+export interface AdminInvitationListData {
+  invitations: AdminInvitationListItem[];
+  summary: AdminInvitationSummary;
+  templates: string[];
 }
 
 /** Customer-specific transaction projection; the full commerce module is separate. */

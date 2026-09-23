@@ -7,12 +7,12 @@
 - Admin Dashboard
 - Customer List
 - Customer Detail
-
-### Next
 - Invitation List
 
-### Pending
+### Next
 - Invitation Detail
+
+### Pending
 - Create Invitation
 - Invitation Editor
 - Template List

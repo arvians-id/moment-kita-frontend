@@ -157,111 +157,150 @@ export const mockAdminCustomers: readonly AdminCustomer[] = [
 ];
 
 interface InvitationSeed {
+  slug: string;
   coupleLabel: string;
   status: InvitationStatus;
   eventDate: string;
+  venue: string;
   templateName: string;
+  publishedAt: string | null;
   expiresAt: string | null;
 }
 
 const invitationSeeds: Record<string, readonly InvitationSeed[]> = {
   cus_ayu_prameswari: [
     {
+      slug: "ayu-dimas-bali",
       coupleLabel: "Ayu & Dimas — Bali Cliff Wedding",
       status: "published",
       eventDate: "2026-12-28T15:00:00+08:00",
+      venue: "The Cliffside Vows, Uluwatu",
       templateName: "Château de Chantilly",
+      publishedAt: "2026-09-12T10:30:00+07:00",
       expiresAt: "2027-03-28T23:59:00+07:00",
     },
     {
+      slug: "ayu-dimas-akad",
       coupleLabel: "Ayu & Dimas — Jakarta Akad",
       status: "finalized",
       eventDate: "2026-11-15T09:00:00+07:00",
+      venue: "The Dharmawangsa, Jakarta",
       templateName: "Kyoto Whisper",
+      publishedAt: null,
       expiresAt: null,
     },
   ],
   cus_julianne_moreau: [
     {
+      slug: "marc-julianne",
       coupleLabel: "Marc & Julianne",
       status: "published",
       eventDate: "2026-06-14T16:00:00+02:00",
+      venue: "Domaine de Fontenille, Provence",
       templateName: "Botanique",
+      publishedAt: "2026-03-22T09:15:00+07:00",
       expiresAt: "2026-09-30T23:59:00+07:00",
     },
   ],
   cus_sarah_jenkins: [
     {
+      slug: "sarah-liam",
       coupleLabel: "Sarah & Liam",
       status: "published",
       eventDate: "2026-12-18T15:00:00-05:00",
+      venue: "The Foundry, New York",
       templateName: "Kyoto",
+      publishedAt: "2026-08-28T16:40:00+07:00",
       expiresAt: "2027-03-18T23:59:00+07:00",
     },
   ],
   cus_melina_kertanegara: [
     {
+      slug: "melina-dayson",
       coupleLabel: "Melina & Dayson",
       status: "draft",
       eventDate: "2027-02-08T10:00:00+07:00",
+      venue: "Mayana Garden Sanctuary, Kyoto",
       templateName: "Velvet",
+      publishedAt: null,
       expiresAt: null,
     },
   ],
   cus_arthur_pendelton: [
     {
+      slug: "arthur-evelyn-london",
       coupleLabel: "Arthur & Evelyn — London",
       status: "published",
       eventDate: "2027-01-16T14:00:00+00:00",
+      venue: "Claridge's, London",
       templateName: "Minimalist Modern",
+      publishedAt: "2026-09-06T13:20:00+07:00",
       expiresAt: "2027-04-16T23:59:00+07:00",
     },
     {
+      slug: "arthur-evelyn-jakarta",
       coupleLabel: "Arthur & Evelyn — Jakarta Dinner",
       status: "draft",
       eventDate: "2027-02-06T18:00:00+07:00",
+      venue: "Plataran Menteng, Jakarta",
       templateName: "Château de Chantilly",
+      publishedAt: null,
       expiresAt: null,
     },
   ],
   cus_chloe_dsouza: [
     {
+      slug: "chloe-daniel-city",
       coupleLabel: "Chloe & Daniel — City Ceremony",
       status: "expired",
       eventDate: "2026-05-23T15:00:00-07:00",
+      venue: "San Francisco City Hall",
       templateName: "Botanique",
+      publishedAt: "2026-02-19T08:45:00+07:00",
       expiresAt: "2026-08-23T23:59:00+07:00",
     },
     {
+      slug: "chloe-daniel-family",
       coupleLabel: "Chloe & Daniel — Family Reception",
       status: "finalized",
       eventDate: "2026-10-10T18:00:00-07:00",
+      venue: "Cavallo Point, Sausalito",
       templateName: "Velvet",
+      publishedAt: null,
       expiresAt: null,
     },
   ],
   cus_beatrice_vane: [
     {
+      slug: "beatrice-henry-grand",
       coupleLabel: "Beatrice & Henry — Grand Celebration",
       status: "published",
       eventDate: "2027-04-17T16:00:00+07:00",
+      venue: "Amankila, Bali",
       templateName: "Château de Chantilly",
+      publishedAt: "2026-09-15T17:30:00+07:00",
       expiresAt: "2027-07-17T23:59:00+07:00",
     },
     {
+      slug: "beatrice-henry-vows",
       coupleLabel: "Beatrice & Henry — Intimate Vows",
       status: "draft",
       eventDate: "2027-04-16T10:00:00+07:00",
+      venue: "Tirtha Uluwatu, Bali",
       templateName: "Kyoto Whisper",
+      publishedAt: null,
       expiresAt: null,
     },
   ],
   cus_sophia_lauren: [
     {
+      slug: "sophia-nathan",
       coupleLabel: "Sophia & Nathan",
-      status: "draft",
+      status: "cancelled",
       eventDate: "2027-06-12T11:00:00-04:00",
+      venue: "Tribeca Loft, New York",
       templateName: "Minimalist Modern",
+      publishedAt: null,
       expiresAt: null,
     },
   ],

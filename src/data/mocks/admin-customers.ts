@@ -307,10 +307,18 @@ const invitationSeeds: Record<string, readonly InvitationSeed[]> = {
 };
 
 function buildInvitations(customer: AdminCustomer): AdminCustomerInvitation[] {
-  return (invitationSeeds[customer.id] ?? []).map((invitation, index) => ({
-    id: `adm_inv_${customer.id.slice(4)}_${index + 1}`,
-    ...invitation,
-  }));
+  return (invitationSeeds[customer.id] ?? []).map((invitation, index) => {
+    const lifecycleDate = invitation.publishedAt ?? "2026-09-20T14:10:00+07:00";
+
+    return {
+      id: `adm_inv_${customer.id.slice(4)}_${index + 1}`,
+      ...invitation,
+      templateVersion: index % 2 === 0 ? "2.4" : "1.8",
+      createdAt: customer.joinedAt,
+      finalizedAt: invitation.status === "draft" ? null : lifecycleDate,
+      quotaConsumed: invitation.status !== "draft",
+    };
+  });
 }
 
 function buildTransactions(

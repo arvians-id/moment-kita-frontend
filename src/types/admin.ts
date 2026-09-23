@@ -1,6 +1,11 @@
 import type {
+  ActivityEntry,
   Customer,
+  DigitalGiftSummary,
+  GuestResponseSummary,
+  InvitationGuestEntry,
   InvitationStatus,
+  InvitationWish,
   TransactionPurpose,
   TransactionStatus,
 } from "./customer";
@@ -155,10 +160,17 @@ export interface AdminCustomerInvitation {
   eventDate: string;
   venue: string;
   templateName: string;
+  templateVersion: string;
+  /** ISO 8601 timestamp when this suite was first created. */
+  createdAt: string;
+  /** Null until Finalize has occurred. */
+  finalizedAt: string | null;
   /** ISO 8601; null until the invitation has been published once. */
   publishedAt: string | null;
   /** Null until the first publish starts the expiration window. */
   expiresAt: string | null;
+  /** Finalize consumes quota; cancellation does not silently return it. */
+  quotaConsumed: boolean;
 }
 
 export type AdminInvitationOwner = Pick<
@@ -184,6 +196,60 @@ export interface AdminInvitationListData {
   invitations: AdminInvitationListItem[];
   summary: AdminInvitationSummary;
   templates: string[];
+}
+
+export interface AdminInvitationEngagement {
+  views: number;
+  guests: GuestResponseSummary;
+  rsvpCount: number;
+  wishes: number;
+  publishedWishes: number;
+  pendingWishes: number;
+  hiddenWishes: number;
+}
+
+export interface AdminInvitationContentSummary {
+  enabledSections: string[];
+  eventCount: number;
+  galleryCount: number;
+  audioEnabled: boolean;
+  rsvpEnabled: boolean;
+  wishesEnabled: boolean;
+}
+
+export interface AdminInvitationVersionSummary {
+  id: string;
+  versionNumber: number;
+  summary: string;
+  savedAt: string;
+  actor: string;
+  isCurrent: boolean;
+}
+
+export interface AdminInvitationExtension {
+  id: string;
+  days: number;
+  previousExpiration: string;
+  newExpiration: string;
+  createdAt: string;
+  actor: string;
+  reason: string;
+}
+
+/** Complete service payload for one invitation-scoped Admin dossier. */
+export interface AdminInvitationDetailData {
+  invitation: AdminInvitationListItem;
+  customer: AdminCustomer;
+  currentPackage: AdminCustomerPackageSummary | null;
+  engagement: AdminInvitationEngagement;
+  content: AdminInvitationContentSummary;
+  recentGuests: InvitationGuestEntry[];
+  recentWishes: InvitationWish[];
+  gift: DigitalGiftSummary | null;
+  giftEnabled: boolean;
+  versions: AdminInvitationVersionSummary[];
+  activity: ActivityEntry[];
+  extensionHistory: AdminInvitationExtension[];
 }
 
 /** Customer-specific transaction projection; the full commerce module is separate. */

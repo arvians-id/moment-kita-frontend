@@ -8,12 +8,12 @@
 - Customer List
 - Customer Detail
 - Invitation List
-
-### Next
 - Invitation Detail
 
-### Pending
+### Next
 - Create Invitation
+
+### Pending
 - Invitation Editor
 - Template List
 - Template Detail

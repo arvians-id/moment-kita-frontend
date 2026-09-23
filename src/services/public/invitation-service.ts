@@ -1,6 +1,10 @@
 import { mockInvitations } from "@/data/mocks/invitations";
 import type { PublicInvitation } from "@/types";
 
+export async function getPublicInvitationSlugs(): Promise<string[]> {
+  return mockInvitations.map((invitation) => invitation.slug);
+}
+
 export async function getPublicInvitationBySlug(
   slug: string,
 ): Promise<PublicInvitation | null> {

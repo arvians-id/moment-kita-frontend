@@ -7,8 +7,6 @@ import { getVersionHistory } from "@/services/customer/version-history-service";
 export const metadata: Metadata = { title: "Version History" };
 
 /** Version history will be request-scoped through the Customer BFF later. */
-export const dynamic = "force-dynamic";
-
 export default async function InvitationVersionHistoryPage({
   params,
 }: {

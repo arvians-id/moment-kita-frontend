@@ -17,8 +17,6 @@ export const metadata: Metadata = { title: "Dashboard" };
  * The dashboard reflects live per-request state (telemetry, alert counts),
  * and will read the Admin session cookie once authentication is wired in.
  */
-export const dynamic = "force-dynamic";
-
 function greetingFor(date: Date): string {
   const hour = date.getHours();
   if (hour < 12) return "Good morning";

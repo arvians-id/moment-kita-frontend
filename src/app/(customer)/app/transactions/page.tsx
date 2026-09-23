@@ -10,8 +10,6 @@ import { getTransactionsOverview } from "@/services/customer/transaction-service
 export const metadata: Metadata = { title: "Transactions" };
 
 /** Reflects live per-request billing state, and will read the session cookie. */
-export const dynamic = "force-dynamic";
-
 export default async function TransactionsPage() {
   const overview = await getTransactionsOverview();
 

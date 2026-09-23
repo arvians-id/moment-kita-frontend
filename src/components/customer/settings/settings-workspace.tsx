@@ -1,7 +1,7 @@
 "use client";
 
 import { Mail } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { NotificationPreferencesSection } from "@/components/customer/settings/notification-preferences-section";
 import {
@@ -11,25 +11,36 @@ import {
 import { ProfileSummaryCard } from "@/components/customer/settings/profile-summary-card";
 import { SecuritySection } from "@/components/customer/settings/security-section";
 import { SettingsHeader } from "@/components/customer/settings/settings-header";
-import { SettingsNav, type SettingsTab } from "@/components/customer/settings/settings-nav";
+import {
+  SettingsNav,
+  type SettingsTab,
+} from "@/components/customer/settings/settings-nav";
 import { getInitials } from "@/components/customer/settings/settings-utils";
 import type { SettingsOverview } from "@/types";
 
 export function SettingsWorkspace({
   overview,
-  initialTab = "profile",
 }: {
   overview: SettingsOverview;
-  initialTab?: SettingsTab;
 }) {
-  const [activeTab, setActiveTab] = useState<SettingsTab>(initialTab);
-  const [profile, setProfile] = useState<ProfileFormValues & { email: string }>({
-    name: overview.customer.name,
-    email: overview.customer.email,
-    whatsappNumber: overview.profile.whatsappNumber,
-    avatarUrl: overview.profile.avatarUrl,
-  });
+  const [activeTab, setActiveTab] = useState<SettingsTab>("profile");
+  const [profile, setProfile] = useState<ProfileFormValues & { email: string }>(
+    {
+      name: overview.customer.name,
+      email: overview.customer.email,
+      whatsappNumber: overview.profile.whatsappNumber,
+      avatarUrl: overview.profile.avatarUrl,
+    },
+  );
   const [notice, setNotice] = useState("");
+
+  useEffect(() => {
+    const tab = new URLSearchParams(window.location.search).get("tab");
+    if (tab === "profile" || tab === "security" || tab === "notifications") {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- URL search params are client-only in the static export.
+      setActiveTab(tab);
+    }
+  }, []);
 
   function showNotice(message: string) {
     setNotice(message);
@@ -75,7 +86,9 @@ export function SettingsWorkspace({
           {activeTab === "security" ? (
             <SecuritySection
               security={overview.security}
-              googleAccountEmail={overview.security.googleEmail ?? profile.email}
+              googleAccountEmail={
+                overview.security.googleEmail ?? profile.email
+              }
             />
           ) : null}
 

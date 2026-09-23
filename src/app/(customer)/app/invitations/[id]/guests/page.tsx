@@ -7,8 +7,6 @@ import { getGuestManagement } from "@/services/customer/guest-management-service
 export const metadata: Metadata = { title: "Guest Management" };
 
 /** Guest records will be request-scoped through the Customer BFF later. */
-export const dynamic = "force-dynamic";
-
 export default async function GuestManagementPage({
   params,
 }: {

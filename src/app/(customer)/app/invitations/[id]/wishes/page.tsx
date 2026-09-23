@@ -7,8 +7,6 @@ import { getWishesManagement } from "@/services/customer/wishes-management-servi
 export const metadata: Metadata = { title: "Wishes Management" };
 
 /** Wishes will be request-scoped through the Customer BFF later. */
-export const dynamic = "force-dynamic";
-
 export default async function WishesManagementPage({
   params,
 }: {

@@ -6,8 +6,6 @@ import { getNotificationsOverview } from "@/services/customer/notification-servi
 export const metadata: Metadata = { title: "Notifications" };
 
 /** Reflects live per-request read state, and will read the session cookie. */
-export const dynamic = "force-dynamic";
-
 export default async function NotificationsPage() {
   const overview = await getNotificationsOverview();
 

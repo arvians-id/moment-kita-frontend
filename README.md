@@ -26,7 +26,34 @@ npm run build
 npm run format:check
 ```
 
-Run the production build locally with `npm start` after `npm run build`.
+`npm run build` creates the static export in `out/`. Serve that directory with
+any static file server to inspect the production output locally.
+
+## GitHub Pages deployment
+
+The workflow in `.github/workflows/deploy-pages.yml` deploys pushes to `main`
+and also supports manual runs. It builds with the `/moment-kita-frontend` base
+path and publishes `out/` to:
+
+<https://arvians-id.github.io/moment-kita-frontend/>
+
+In GitHub, set **Settings → Pages → Build and deployment → Source** to
+**GitHub Actions** once. No custom domain or deployment secret is required.
+
+Local development remains available at <http://localhost:3000/> without a base
+path. To reproduce the Pages build locally, run:
+
+```bash
+NEXT_PUBLIC_BASE_PATH=/moment-kita-frontend \
+NEXT_PUBLIC_APP_URL=https://arvians-id.github.io/moment-kita-frontend \
+npm run build
+```
+
+GitHub Pages is a frontend-only preview. The current mock-backed marketing,
+Customer, and Admin screens are exported, including the known invitation IDs
+and the `raka-ayu` public invitation. Unknown dynamic IDs/slugs return 404.
+Request-time authentication, host/subdomain separation, the future BFF/API,
+and other server-dependent behavior are intentionally unavailable there.
 
 ## Structure
 

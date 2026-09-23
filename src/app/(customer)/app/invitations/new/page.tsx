@@ -7,8 +7,6 @@ import { getCreateInvitationPageData } from "@/services/customer/create-invitati
 export const metadata: Metadata = { title: "Create Invitation" };
 
 /** Entitlement and slug reservations will be request-scoped once the API lands. */
-export const dynamic = "force-dynamic";
-
 export default async function CreateInvitationPage() {
   const data = await getCreateInvitationPageData();
 

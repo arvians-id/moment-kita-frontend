@@ -2,13 +2,21 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { Container } from "@/components/shared/container";
-import { getPublicInvitationBySlug } from "@/services/public/invitation-service";
+import {
+  getPublicInvitationBySlug,
+  getPublicInvitationSlugs,
+} from "@/services/public/invitation-service";
 
 interface InvitationPageProps {
   params: Promise<{ slug: string }>;
 }
 
-export const dynamic = "force-dynamic";
+export const dynamicParams = false;
+
+export async function generateStaticParams() {
+  const slugs = await getPublicInvitationSlugs();
+  return slugs.map((slug) => ({ slug }));
+}
 
 export async function generateMetadata({
   params,

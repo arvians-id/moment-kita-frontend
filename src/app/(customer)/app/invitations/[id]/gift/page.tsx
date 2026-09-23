@@ -7,8 +7,6 @@ import { getDigitalGiftManagement } from "@/services/customer/digital-gift-manag
 export const metadata: Metadata = { title: "Digital Gift Management" };
 
 /** Gift configuration will be request-scoped through the Customer BFF later. */
-export const dynamic = "force-dynamic";
-
 export default async function DigitalGiftManagementPage({
   params,
 }: {

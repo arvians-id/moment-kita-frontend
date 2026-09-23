@@ -28,8 +28,6 @@ export async function generateMetadata({
 }
 
 /** Live per-invitation workspace data; will read the session cookie later. */
-export const dynamic = "force-dynamic";
-
 export default async function InvitationOverviewPage({
   params,
 }: InvitationOverviewPageProps) {

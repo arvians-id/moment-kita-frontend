@@ -16,8 +16,6 @@ export const metadata: Metadata = { title: "Dashboard" };
  * The dashboard reflects live per-request state (countdown, RSVP totals), and
  * will read the session cookie once authentication is wired in.
  */
-export const dynamic = "force-dynamic";
-
 export default async function CustomerDashboardPage() {
   const dashboard = await getCustomerDashboard();
   const { currentInvitation } = dashboard;

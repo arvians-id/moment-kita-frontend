@@ -7,8 +7,6 @@ import { getGuestImportData } from "@/services/customer/guest-management-service
 export const metadata: Metadata = { title: "Import Guests" };
 
 /** Import previews will be scoped to the signed-in customer through the BFF. */
-export const dynamic = "force-dynamic";
-
 export default async function GuestImportPage({
   params,
 }: {

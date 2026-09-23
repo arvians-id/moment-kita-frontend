@@ -7,8 +7,6 @@ import { getInvitationBuilder } from "@/services/customer/invitation-builder-ser
 export const metadata: Metadata = { title: "Invitation Studio" };
 
 /** Editor data will be request-scoped once customer API integration lands. */
-export const dynamic = "force-dynamic";
-
 export default async function InvitationBuilderPage({
   params,
 }: {

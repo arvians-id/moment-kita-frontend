@@ -7,8 +7,6 @@ import { getRsvpManagement } from "@/services/customer/rsvp-management-service";
 export const metadata: Metadata = { title: "RSVP Management" };
 
 /** RSVP records will be request-scoped through the Customer BFF later. */
-export const dynamic = "force-dynamic";
-
 export default async function RsvpManagementPage({
   params,
 }: {

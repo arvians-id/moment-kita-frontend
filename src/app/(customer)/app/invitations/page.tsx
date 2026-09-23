@@ -9,8 +9,6 @@ import { getCustomerInvitationsOverview } from "@/services/customer/invitation-s
 export const metadata: Metadata = { title: "My Invitations" };
 
 /** Reflects live per-request invitation state, and will read the session cookie. */
-export const dynamic = "force-dynamic";
-
 export default async function MyInvitationsPage() {
   const { invitations, entitlement, counts } =
     await getCustomerInvitationsOverview();

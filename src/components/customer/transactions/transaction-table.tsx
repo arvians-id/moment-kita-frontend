@@ -2,12 +2,8 @@ import { Heart } from "lucide-react";
 
 import { TransactionStatusBadge } from "@/components/customer/transactions/transaction-status-badge";
 import type { CustomerTransactionWithInvitation } from "@/types";
+import { idrFormat as currency } from "@/lib/format";
 
-const currency = new Intl.NumberFormat("id-ID", {
-  style: "currency",
-  currency: "IDR",
-  maximumFractionDigits: 0,
-});
 
 const dateFormat = new Intl.DateTimeFormat("en-GB", {
   day: "numeric",

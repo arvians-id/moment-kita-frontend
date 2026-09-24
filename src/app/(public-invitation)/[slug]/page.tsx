@@ -25,9 +25,10 @@ export async function generateMetadata({
   const invitation = await getPublicInvitationBySlug(slug);
 
   return {
-    title: invitation
-      ? `${invitation.couple.partnerOne} & ${invitation.couple.partnerTwo}`
-      : "Invitation",
+    title:
+      invitation && invitation.availability === "live"
+        ? `${invitation.couple.partnerOne} & ${invitation.couple.partnerTwo}`
+        : "Invitation",
     robots: {
       index: false,
       follow: false,
@@ -43,6 +44,25 @@ export default async function PublicInvitationPage({
   const invitation = await getPublicInvitationBySlug(slug);
 
   if (!invitation) notFound();
+
+  if (invitation.availability === "ended") {
+    return (
+      <main className="flex min-h-screen items-center bg-secondary/50 py-20 text-center">
+        <Container className="max-w-xl">
+          <p className="text-xs font-semibold tracking-[0.25em] text-accent-foreground uppercase">
+            Invitation ended
+          </p>
+          <h1 className="mt-5 font-serif text-4xl tracking-tight sm:text-5xl">
+            This invitation is no longer available
+          </h1>
+          <p className="mt-6 text-lg leading-8 text-muted-foreground">
+            The public page for this celebration has concluded. Please contact
+            the hosts directly if you need any details.
+          </p>
+        </Container>
+      </main>
+    );
+  }
 
   return (
     <main className="flex min-h-screen items-center bg-secondary/50 py-20 text-center">

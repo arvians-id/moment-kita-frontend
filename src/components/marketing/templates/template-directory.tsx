@@ -13,14 +13,10 @@ import { useMemo, useState } from "react";
 
 import { Container } from "@/components/shared/container";
 import type { CatalogStyle, CatalogTemplate } from "@/types";
+import { idrFormat as currency } from "@/lib/format";
 
 const PAGE_SIZE = 12;
 
-const currency = new Intl.NumberFormat("id-ID", {
-  style: "currency",
-  currency: "IDR",
-  maximumFractionDigits: 0,
-});
 
 const styleFilters = [
   { id: "all", label: "All" },

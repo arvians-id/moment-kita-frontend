@@ -2,12 +2,8 @@ import { Check } from "lucide-react";
 import Link from "next/link";
 
 import type { Package } from "@/types";
+import { idrFormat as currency } from "@/lib/format";
 
-const currency = new Intl.NumberFormat("id-ID", {
-  style: "currency",
-  currency: "IDR",
-  maximumFractionDigits: 0,
-});
 
 export function DigitalPricing({ packages }: { packages: Package[] }) {
   return (

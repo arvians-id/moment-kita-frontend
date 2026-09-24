@@ -1,6 +1,7 @@
 import { Gift, Link2, MailCheck, Map, Music2 } from "lucide-react";
 
 import type { CatalogTemplate } from "@/types";
+import { publicConfig } from "@/lib/config";
 
 const dateFormatter = new Intl.DateTimeFormat("en-GB", {
   day: "2-digit",
@@ -87,7 +88,7 @@ export function InvitationLivePreview({
           <div className="inline-flex max-w-full items-center gap-1.5 rounded-full bg-surface-container px-3 py-1">
             <Link2 aria-hidden size={11} className="shrink-0 text-secondary" />
             <span className="truncate text-[9px] tracking-[0.08em] lowercase">
-              momentkita.id/{slug || "your-wedding"}
+              {publicConfig.publicHost}/{slug || "your-wedding"}
             </span>
           </div>
 

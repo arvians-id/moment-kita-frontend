@@ -35,7 +35,7 @@ export function InvitationSpotlight({
   invitation: CustomerInvitation;
   daysUntilWedding: number | null;
 }) {
-  const invitationUrl = `${publicConfig.appUrl.replace(/^https?:\/\//, "")}/${invitation.slug}`;
+  const invitationUrl = `${publicConfig.publicHost}/${invitation.slug}`;
   const monogram = invitation.coupleLabel
     .split("&")
     .map((part) => part.trim().charAt(0))

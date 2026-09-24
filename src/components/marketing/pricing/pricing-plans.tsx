@@ -16,14 +16,10 @@ import { useState } from "react";
 
 import { Container } from "@/components/shared/container";
 import type { Package, PrintedProduct } from "@/types";
+import { idrFormat as currency } from "@/lib/format";
 
 type Mode = "digital" | "print";
 
-const currency = new Intl.NumberFormat("id-ID", {
-  style: "currency",
-  currency: "IDR",
-  maximumFractionDigits: 0,
-});
 
 const planPresentation = {
   essential: {

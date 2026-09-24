@@ -1,13 +1,7 @@
 import { ArrowRight, Flower2, MailOpen } from "lucide-react";
 
+import { TimeGreeting } from "@/components/shared/time-greeting";
 import type { CustomerAlert } from "@/types";
-
-function greetingFor(date: Date): string {
-  const hour = date.getHours();
-  if (hour < 12) return "Good morning";
-  if (hour < 18) return "Good afternoon";
-  return "Good evening";
-}
 
 export function DashboardWelcome({
   customerName,
@@ -39,7 +33,7 @@ export function DashboardWelcome({
           </div>
           <div className="flex items-center gap-3">
             <h1 className="font-serif text-[28px] leading-[34px] tracking-tight md:text-[40px] md:leading-[48px]">
-              {greetingFor(new Date())},{" "}
+              <TimeGreeting />,{" "}
               <span className="italic">{customerName}</span>
             </h1>
             <Flower2

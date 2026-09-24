@@ -12,6 +12,9 @@ import type {
   AdminNotificationCategory,
   AdminNotificationWithContext,
 } from "@/types";
+import { idrFormat } from "@/lib/format";
+export { idrFormat };
+
 
 export type AdminNotificationFilter =
   "all" | "unread" | AdminNotificationCategory;
@@ -46,11 +49,6 @@ export const priorityLabels = {
   urgent: "Urgent",
 } as const;
 
-export const idrFormat = new Intl.NumberFormat("id-ID", {
-  style: "currency",
-  currency: "IDR",
-  maximumFractionDigits: 0,
-});
 
 export const notificationTimestampFormat = new Intl.DateTimeFormat("en-GB", {
   day: "numeric",

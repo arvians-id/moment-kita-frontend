@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import type { GuestAttendanceStatus, InvitationGuest } from "@/types";
 
 import { createGuestAlias, createGuestInitials } from "./guest-utils";
+import { publicConfig } from "@/lib/config";
 
 const fieldClass =
   "h-11 w-full border border-transparent bg-surface-low px-3 text-[13px] outline-none transition-colors placeholder:text-on-surface-variant/55 focus:border-secondary focus:bg-surface-lowest";
@@ -44,7 +45,7 @@ export function GuestDrawer({
   const [error, setError] = useState("");
 
   const alias = useMemo(() => createGuestAlias(name), [name]);
-  const friendlyUrl = `momentkita.id/${invitationSlug}?to=${alias}`;
+  const friendlyUrl = `${publicConfig.publicHost}/${invitationSlug}?to=${alias}`;
 
   useEffect(() => {
     const previousOverflow = document.body.style.overflow;

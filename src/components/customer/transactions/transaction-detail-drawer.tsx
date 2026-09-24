@@ -20,12 +20,9 @@ import type {
   CustomerTransactionWithInvitation,
   TransactionStatus,
 } from "@/types";
+import { publicConfig } from "@/lib/config";
+import { idrFormat as currency } from "@/lib/format";
 
-const currency = new Intl.NumberFormat("id-ID", {
-  style: "currency",
-  currency: "IDR",
-  maximumFractionDigits: 0,
-});
 
 const dateTimeFormat = new Intl.DateTimeFormat("en-GB", {
   day: "numeric",
@@ -352,7 +349,7 @@ export function TransactionDetailDrawer({
                 className="flex items-center gap-1 text-[11px] text-on-surface-variant transition-colors hover:text-secondary"
               >
                 <span className="truncate font-mono">
-                  momentkita.id/{transaction.relatedInvitation.slug}
+                  {publicConfig.publicHost}/{transaction.relatedInvitation.slug}
                 </span>
                 <ExternalLink aria-hidden size={12} className="shrink-0" />
               </Link>

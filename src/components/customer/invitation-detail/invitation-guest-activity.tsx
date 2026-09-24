@@ -19,7 +19,7 @@ export function InvitationGuestActivity({
   guests: InvitationGuestEntry[];
   totalGuests: number;
 }) {
-  const host = publicConfig.appUrl.replace(/^https?:\/\//, "");
+  const host = publicConfig.publicHost;
 
   return (
     <section className="flex flex-col gap-5 bg-surface-lowest p-6 shadow-sm">

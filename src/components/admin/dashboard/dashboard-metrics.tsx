@@ -11,13 +11,8 @@ import {
 import type { LucideIcon } from "lucide-react";
 
 import type { AdminDashboardMetrics, AdminMetric } from "@/types";
+import { idrFormat as currencyFormat, numberFormat } from "@/lib/format";
 
-const numberFormat = new Intl.NumberFormat("en-US");
-const currencyFormat = new Intl.NumberFormat("id-ID", {
-  style: "currency",
-  currency: "IDR",
-  maximumFractionDigits: 0,
-});
 
 interface MetricCardConfig {
   key: keyof AdminDashboardMetrics;

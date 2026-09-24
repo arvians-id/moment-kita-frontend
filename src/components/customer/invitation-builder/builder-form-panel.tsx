@@ -124,9 +124,9 @@ export function BuilderFormPanel({
           />
         );
       case "quote": {
-        const quote =
-          content.quotes.find((item) => item.id === section.id) ??
-          content.quotes[0];
+        // Section instances are matched by ID only: falling back to another
+        // quote would silently edit the wrong section's content.
+        const quote = content.quotes.find((item) => item.id === section.id);
         return quote ? (
           <QuoteEditor
             quote={quote}
@@ -139,7 +139,11 @@ export function BuilderFormPanel({
               })
             }
           />
-        ) : null;
+        ) : (
+          <p className="text-sm text-on-surface-variant">
+            This version has no content for the “{section.label}” section.
+          </p>
+        );
       }
       case "rsvp":
         return (

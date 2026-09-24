@@ -1,5 +1,7 @@
 import { ArrowRight, Check, PartyPopper, PenLine, X } from "lucide-react";
 import Link from "next/link";
+import { publicConfig } from "@/lib/config";
+import { useEscapeKey } from "@/lib/use-escape-key";
 
 export function CreationSuccess({
   partnerOne,
@@ -16,6 +18,8 @@ export function CreationSuccess({
   onStartEditing: () => void;
   onClose: () => void;
 }) {
+  useEscapeKey(onClose);
+
   const one = partnerOne.trim().split(/\s+/)[0];
   const two = partnerTwo.trim().split(/\s+/)[0];
 
@@ -53,7 +57,7 @@ export function CreationSuccess({
           </strong>{" "}
           is prepared at{" "}
           <span className="font-semibold text-secondary">
-            momentkita.id/{slug}
+            {publicConfig.publicHost}/{slug}
           </span>{" "}
           with the {templateName} suite.
         </p>

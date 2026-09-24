@@ -1,10 +1,8 @@
 import type { AdminPrintedOrderStatus, TransactionStatus } from "@/types";
+import { idrFormat } from "@/lib/format";
+export { idrFormat };
 
-export const idrFormat = new Intl.NumberFormat("id-ID", {
-  style: "currency",
-  currency: "IDR",
-  maximumFractionDigits: 0,
-});
+
 
 export const orderDateFormat = new Intl.DateTimeFormat("en-GB", {
   day: "numeric",

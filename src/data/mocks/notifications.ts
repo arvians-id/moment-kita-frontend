@@ -153,7 +153,7 @@ export const mockCustomerNotifications: readonly CustomerNotification[] = [
     eyebrow: "Account Entitlements",
     title: "Package Successfully Activated",
     description:
-      "Your Signature Suite package is now active with 4 invitation quota and unlimited RSVPs across your celebrations.",
+      "Your Signature Suite package is now active with 1 invitation quota and unlimited RSVPs for your celebration.",
     occurredAt: ago(4 * DAY + 2 * HOUR),
     read: true,
     attention: false,

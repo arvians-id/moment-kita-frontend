@@ -2,6 +2,8 @@
 
 import { ArrowLeft, Check, FilePenLine } from "lucide-react";
 import Link from "next/link";
+import { publicConfig } from "@/lib/config";
+import { useEscapeKey } from "@/lib/use-escape-key";
 
 export function CreateInvitationSuccess({
   coupleLabel,
@@ -14,6 +16,8 @@ export function CreateInvitationSuccess({
   customerName: string;
   onClose: () => void;
 }) {
+  useEscapeKey(onClose);
+
   return (
     <div className="fixed inset-0 z-[80] grid place-items-center overflow-y-auto bg-black/55 p-4">
       <section
@@ -36,7 +40,7 @@ export function CreateInvitationSuccess({
         </h2>
         <p className="mt-3 text-[15px] font-semibold">{coupleLabel}</p>
         <p className="mt-1 text-[10px] text-on-surface-variant">
-          Owned by {customerName} · momentkita.id/{slug}
+          Owned by {customerName} · {publicConfig.publicHost}/{slug}
         </p>
         <div className="my-6 bg-surface-low p-4 text-left">
           <p className="text-[9px] font-semibold tracking-[0.12em] uppercase">

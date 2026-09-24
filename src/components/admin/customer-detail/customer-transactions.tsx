@@ -1,25 +1,9 @@
 import { ReceiptText } from "lucide-react";
 
-import type { AdminCustomerTransaction, TransactionStatus } from "@/types";
+import { TransactionStatusBadge } from "@/components/customer/transactions/transaction-status-badge";
+import type { AdminCustomerTransaction } from "@/types";
 
 import { dateFormat, idrFormat, titleCase } from "./customer-detail-formatters";
-
-const transactionStatusClass: Record<TransactionStatus, string> = {
-  pending: "bg-amber-100 text-amber-900",
-  paid: "bg-emerald-100 text-emerald-900",
-  cancelled: "bg-surface-container text-on-surface-variant",
-  refunded: "bg-blue-100 text-blue-900",
-};
-
-function StatusBadge({ status }: { status: TransactionStatus }) {
-  return (
-    <span
-      className={`inline-flex px-2 py-1 text-[9px] font-semibold tracking-[0.1em] uppercase ${transactionStatusClass[status]}`}
-    >
-      {titleCase(status)}
-    </span>
-  );
-}
 
 export function CustomerTransactions({
   transactions,
@@ -92,7 +76,10 @@ export function CustomerTransactions({
                       {idrFormat.format(transaction.amount)}
                     </td>
                     <td className="px-4 py-4 text-center">
-                      <StatusBadge status={transaction.status} />
+                      <TransactionStatusBadge
+                        className="rounded-none px-2"
+                        status={transaction.status}
+                      />
                     </td>
                     <td className="px-4 py-4 text-[11px] text-on-surface-variant">
                       {dateFormat.format(new Date(transaction.createdAt))}
@@ -115,7 +102,10 @@ export function CustomerTransactions({
                       {transaction.productName}
                     </h3>
                   </div>
-                  <StatusBadge status={transaction.status} />
+                  <TransactionStatusBadge
+                        className="rounded-none px-2"
+                        status={transaction.status}
+                      />
                 </div>
                 <dl className="mt-4 grid grid-cols-2 gap-3 bg-surface-low p-3">
                   <div>

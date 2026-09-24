@@ -3,12 +3,8 @@ import Image from "next/image";
 
 import { externalLinkProps, whatsappHref } from "@/lib/whatsapp";
 import type { PrintedProduct } from "@/types";
+import { idrFormat as currency } from "@/lib/format";
 
-const currency = new Intl.NumberFormat("id-ID", {
-  style: "currency",
-  currency: "IDR",
-  maximumFractionDigits: 0,
-});
 
 export function PrintedProductCard({ product }: { product: PrintedProduct }) {
   return (

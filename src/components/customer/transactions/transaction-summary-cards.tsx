@@ -2,12 +2,8 @@ import { CheckCircle2, ReceiptText, Sparkles, Wallet } from "lucide-react";
 
 import { TransactionStatusBadge } from "@/components/customer/transactions/transaction-status-badge";
 import type { TransactionsOverview } from "@/services/customer/transaction-service";
+import { idrFormat as currency } from "@/lib/format";
 
-const currency = new Intl.NumberFormat("id-ID", {
-  style: "currency",
-  currency: "IDR",
-  maximumFractionDigits: 0,
-});
 
 const dateFormat = new Intl.DateTimeFormat("en-GB", {
   day: "numeric",

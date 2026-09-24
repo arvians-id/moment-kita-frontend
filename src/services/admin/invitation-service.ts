@@ -1,3 +1,4 @@
+import { getReservedSlugs } from "@/data/mocks/reserved-slugs";
 import { mockInvitationLifecycle } from "@/data/mocks/admin";
 import { mockAdminCustomerDetails } from "@/data/mocks/admin-customers";
 import { buildAdminInvitationDetailSupplement } from "@/data/mocks/admin-invitation-details";
@@ -122,10 +123,7 @@ export async function getAdminInvitationDetail(
 export async function getAdminInvitationEditor(
   invitationId: string,
 ): Promise<AdminInvitationEditorData | null> {
-  const [detail, list] = await Promise.all([
-    getAdminInvitationDetail(invitationId),
-    getAdminInvitationList(),
-  ]);
+  const detail = await getAdminInvitationDetail(invitationId);
   if (!detail) return null;
 
   const source = detail.invitation;
@@ -159,8 +157,6 @@ export async function getAdminInvitationEditor(
     sections: mockBuilderSections.map((section) => ({ ...section })),
     content: createMockBuilderContent(invitation),
     templates: mockTemplateCatalog.map((template) => ({ ...template })),
-    reservedSlugs: list.invitations
-      .filter((item) => item.id !== invitationId)
-      .map((item) => item.slug),
+    reservedSlugs: getReservedSlugs(detail.invitation.slug),
   };
 }

@@ -9,6 +9,7 @@ import { RecentInvitationsList } from "@/components/admin/dashboard/recent-invit
 import { RecentTransactionsTable } from "@/components/admin/dashboard/recent-transactions";
 import { RevenueTrendChart } from "@/components/admin/dashboard/revenue-trend-chart";
 import { TemplateUsageList } from "@/components/admin/dashboard/template-usage-list";
+import { TimeGreeting } from "@/components/shared/time-greeting";
 import { getAdminDashboard } from "@/services/admin/dashboard-service";
 
 export const metadata: Metadata = { title: "Dashboard" };
@@ -17,13 +18,6 @@ export const metadata: Metadata = { title: "Dashboard" };
  * The dashboard reflects live per-request state (telemetry, alert counts),
  * and will read the Admin session cookie once authentication is wired in.
  */
-function greetingFor(date: Date): string {
-  const hour = date.getHours();
-  if (hour < 12) return "Good morning";
-  if (hour < 18) return "Good afternoon";
-  return "Good evening";
-}
-
 export default async function AdminDashboardPage() {
   const dashboard = await getAdminDashboard();
   const firstName = dashboard.admin.name.split(" ")[0];
@@ -34,7 +28,7 @@ export default async function AdminDashboardPage() {
         eyebrow="Operational Suite · Live Telemetry"
         title={
           <>
-            {greetingFor(new Date())},{" "}
+            <TimeGreeting />,{" "}
             <span className="italic">{firstName}</span>
           </>
         }

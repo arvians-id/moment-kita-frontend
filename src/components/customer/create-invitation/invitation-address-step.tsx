@@ -1,6 +1,7 @@
 import { AlertCircle, CheckCircle2, Globe2, Link2, Plus } from "lucide-react";
 
 import { cn } from "@/lib/utils";
+import { publicConfig } from "@/lib/config";
 
 export type SlugAvailability =
   "empty" | "invalid" | "unavailable" | "available";
@@ -88,7 +89,7 @@ export function InvitationAddressStep({
       >
         <span className="flex shrink-0 items-center gap-2 px-3 py-2 text-[13px] font-semibold">
           <Globe2 aria-hidden size={17} className="text-secondary" />
-          momentkita.id/
+          {publicConfig.publicHost}/
         </span>
         <label htmlFor="invitation-slug" className="sr-only">
           Invitation public address
@@ -146,7 +147,7 @@ export function InvitationAddressStep({
             >
               <Plus aria-hidden size={13} className="text-secondary" />
               <span>
-                momentkita.id/<strong>{suggestion}</strong>
+                {publicConfig.publicHost}/<strong>{suggestion}</strong>
               </span>
             </button>
           ))}

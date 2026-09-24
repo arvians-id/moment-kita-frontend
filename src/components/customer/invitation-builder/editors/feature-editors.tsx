@@ -5,7 +5,7 @@ import {
   fieldClass,
   FieldLabel,
 } from "@/components/customer/invitation-builder/builder-primitives";
-import type { DigitalGiftSummary } from "@/types";
+import type { DigitalGiftSummary, RsvpAccessMode } from "@/types";
 
 function BooleanChoice({
   checked,
@@ -43,14 +43,14 @@ export function RsvpEditor({
   value: {
     headline: string;
     deadline: string;
-    accessPolicy: "guest_list" | "link";
+    accessMode: RsvpAccessMode;
     allowPlusOne: boolean;
     collectMealPreference: boolean;
   };
   onChange: (value: {
     headline: string;
     deadline: string;
-    accessPolicy: "guest_list" | "link";
+    accessMode: RsvpAccessMode;
     allowPlusOne: boolean;
     collectMealPreference: boolean;
   }) => void;
@@ -98,17 +98,17 @@ export function RsvpEditor({
           <FieldLabel htmlFor="rsvp-access-policy">Response access</FieldLabel>
           <select
             id="rsvp-access-policy"
-            value={value.accessPolicy}
+            value={value.accessMode}
             onChange={(event) =>
               onChange({
                 ...value,
-                accessPolicy: event.target.value as "guest_list" | "link",
+                accessMode: event.target.value as RsvpAccessMode,
               })
             }
             className={fieldClass}
           >
-            <option value="guest_list">Guest List Only</option>
-            <option value="link">Anyone With Link</option>
+            <option value="guest_list_only">Guest List Only</option>
+            <option value="anyone_with_link">Anyone With Link</option>
           </select>
         </div>
         <BooleanChoice

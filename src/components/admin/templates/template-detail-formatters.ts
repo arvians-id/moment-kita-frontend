@@ -1,3 +1,6 @@
+import { idrFormat as currencyFormat } from "@/lib/format";
+export { currencyFormat };
+
 export const adminTemplateDateFormat = new Intl.DateTimeFormat("en-GB", {
   day: "numeric",
   month: "short",
@@ -5,8 +8,3 @@ export const adminTemplateDateFormat = new Intl.DateTimeFormat("en-GB", {
   timeZone: "Asia/Jakarta",
 });
 
-export const currencyFormat = new Intl.NumberFormat("id-ID", {
-  style: "currency",
-  currency: "IDR",
-  maximumFractionDigits: 0,
-});

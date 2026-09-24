@@ -1,28 +1,10 @@
 import { CalendarDays, ExternalLink, MailOpen } from "lucide-react";
 import Link from "next/link";
 
+import { InvitationStatusBadge } from "@/components/customer/invitation-status-badge";
 import type { AdminCustomerInvitation } from "@/types";
 
-import { dateFormat, titleCase } from "./customer-detail-formatters";
-
-const invitationStatusClass: Record<AdminCustomerInvitation["status"], string> =
-  {
-    draft: "bg-surface-container text-on-surface-variant",
-    finalized: "bg-blue-100 text-blue-900",
-    published: "bg-emerald-100 text-emerald-900",
-    expired: "bg-amber-100 text-amber-900",
-    cancelled: "bg-error-container text-on-error-container",
-  };
-
-function StatusBadge({ status }: Pick<AdminCustomerInvitation, "status">) {
-  return (
-    <span
-      className={`inline-flex px-2 py-1 text-[9px] font-semibold tracking-[0.1em] uppercase ${invitationStatusClass[status]}`}
-    >
-      {titleCase(status)}
-    </span>
-  );
-}
+import { dateFormat } from "./customer-detail-formatters";
 
 export function CustomerInvitations({
   invitations,
@@ -91,7 +73,10 @@ export function CustomerInvitations({
                       </p>
                     </td>
                     <td className="px-4 py-4">
-                      <StatusBadge status={invitation.status} />
+                      <InvitationStatusBadge
+                        className="rounded-none px-2"
+                        status={invitation.status}
+                      />
                     </td>
                     <td className="px-4 py-4 text-[11px] text-on-surface-variant">
                       {dateFormat.format(new Date(invitation.eventDate))}
@@ -132,7 +117,10 @@ export function CustomerInvitations({
                       {invitation.templateName}
                     </p>
                   </div>
-                  <StatusBadge status={invitation.status} />
+                  <InvitationStatusBadge
+                        className="rounded-none px-2"
+                        status={invitation.status}
+                      />
                 </div>
                 <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-[10px] text-on-surface-variant">
                   <span className="inline-flex items-center gap-1.5">

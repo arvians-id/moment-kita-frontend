@@ -9,6 +9,7 @@ import { PackageEditorHeader } from "@/components/admin/packages/package-editor-
 import { PackageSummaryCard } from "@/components/admin/packages/package-summary-card";
 import { PackageTemplateAccess } from "@/components/admin/packages/package-template-access";
 import type { AdminPackageEditorData, Package, PackageFormValues } from "@/types";
+import { useEscapeKey } from "@/lib/use-escape-key";
 
 const emptyValues: PackageFormValues = {
   name: "",
@@ -92,6 +93,7 @@ export function PackageEditorView({
   const [pendingNavigation, setPendingNavigation] = useState<string | null>(
     null,
   );
+  useEscapeKey(pendingNavigation ? () => setPendingNavigation(null) : null);
 
   const isDirty = JSON.stringify(values) !== JSON.stringify(savedValues);
 

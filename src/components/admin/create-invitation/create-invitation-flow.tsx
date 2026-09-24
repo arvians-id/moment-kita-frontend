@@ -22,6 +22,7 @@ import {
   TemplateStep,
   WeddingBasicsStep,
 } from "./create-invitation-steps";
+import { useEscapeKey } from "@/lib/use-escape-key";
 
 type BasicsErrors = Partial<
   Record<"partnerOne" | "partnerTwo" | "weddingDate" | "slug", string>
@@ -72,6 +73,7 @@ export function AdminCreateInvitationFlow({
   const [showAddCustomer, setShowAddCustomer] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
   const [showExit, setShowExit] = useState(false);
+  useEscapeKey(showExit ? () => setShowExit(false) : null);
   const [dirty, setDirty] = useState(false);
 
   const customer = customers.find((item) => item.id === customerId);

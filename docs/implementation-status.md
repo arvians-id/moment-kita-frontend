@@ -2,10 +2,11 @@
 
 ## Current Focus
 
-Public / Marketing Website only.
+The Public / Marketing site, Customer CMS and Admin CMS are implemented against
+mock services and have passed integration QA (`docs/frontend-integration-qa.md`).
 
-Backend, Customer App, Admin App, and actual Wedding Invitation
-Template implementation are currently deferred.
+The backend, real authentication, and actual Wedding Invitation Template
+renderers remain deferred.
 
 ## Approved Pages
 

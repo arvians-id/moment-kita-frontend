@@ -38,7 +38,7 @@ export function InvitationDetailHeader({
 }: {
   invitation: CustomerInvitation;
 }) {
-  const host = publicConfig.appUrl.replace(/^https?:\/\//, "");
+  const host = publicConfig.publicHost;
   const invitationUrl = `${host}/${invitation.slug}`;
   const isLive = invitation.status === "published";
   const [couple, ...rest] = invitation.title.split("—");

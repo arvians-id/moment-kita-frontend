@@ -1,8 +1,8 @@
 import { ArrowRight, Building2, Globe, Pointer, Quote } from "lucide-react";
 
 import type { EngagementSummary } from "@/types";
+import { numberFormat as numberFormatter } from "@/lib/format";
 
-const numberFormatter = new Intl.NumberFormat("en-US");
 
 const cardClass =
   "flex flex-col justify-between gap-5 rounded-[12px] bg-surface-lowest p-6 shadow-sm";

@@ -6,12 +6,8 @@ import {
   CustomerStatusBadge,
 } from "@/components/admin/customers/customer-status-badge";
 import type { AdminCustomer } from "@/types";
+import { idrFormat as currencyFormat } from "@/lib/format";
 
-const currencyFormat = new Intl.NumberFormat("id-ID", {
-  style: "currency",
-  currency: "IDR",
-  maximumFractionDigits: 0,
-});
 
 const dateFormat = new Intl.DateTimeFormat("en-GB", {
   day: "numeric",

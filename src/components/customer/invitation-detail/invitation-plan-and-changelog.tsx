@@ -24,7 +24,7 @@ export function InvitationPlanAndChangelog({
   entitlement: EntitlementSummary;
   activity: ActivityEntry[];
 }) {
-  const host = publicConfig.appUrl.replace(/^https?:\/\//, "");
+  const host = publicConfig.publicHost;
 
   const specs: { label: string; value: string; highlight?: boolean }[] = [
     {

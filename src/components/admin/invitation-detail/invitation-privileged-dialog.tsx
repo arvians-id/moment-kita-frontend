@@ -6,6 +6,13 @@ import { useEffect, useState } from "react";
 import { publicConfig } from "@/lib/config";
 import type { AdminInvitationDetailData } from "@/types";
 
+const expiryDateFormat = new Intl.DateTimeFormat("en-GB", {
+  day: "numeric",
+  month: "short",
+  year: "numeric",
+  timeZone: "Asia/Jakarta",
+});
+
 export type InvitationAdminAction =
   | "publish"
   | "unpublish"
@@ -215,11 +222,11 @@ export function InvitationPrivilegedDialog({
                   <option value="">Select a compatible template</option>
                   {(
                     templateOptions ?? [
-                      "Botanique",
+                      "Botanique Vivace",
                       "Château de Chantilly",
-                      "Kyoto Whisper",
-                      "Minimalist Modern",
-                      "Velvet",
+                      "Kyoto Monochrome",
+                      "Aura Blanche",
+                      "Tuscan Terracotta",
                     ]
                   )
                     .filter((item) => item !== data.invitation.templateName)
@@ -254,12 +261,13 @@ export function InvitationPrivilegedDialog({
             <div className="bg-surface-low p-3 text-[10px] text-on-surface-variant">
               <p>
                 Current:{" "}
-                {currentExpiry?.toLocaleDateString("en-GB") ?? "Not started"}
+                {currentExpiry ? expiryDateFormat.format(currentExpiry) : "Not started"}
               </p>
               <p className="mt-1 font-semibold text-on-surface">
                 Result:{" "}
-                {proposedExpiry?.toLocaleDateString("en-GB") ??
-                  "Starts after first publish"}
+                {proposedExpiry
+                  ? expiryDateFormat.format(proposedExpiry)
+                  : "Starts after first publish"}
               </p>
             </div>
           </div>

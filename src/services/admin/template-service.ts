@@ -22,10 +22,10 @@ const disabledTemplateKeys = new Set([
 
 const usageKeyByDashboardName: Record<string, string> = {
   "Château de Chantilly": "chateau-de-chantilly",
-  Botanique: "botanique-vivace",
-  Kyoto: "kyoto-monochrome",
-  Velvet: "tuscan-terracotta",
-  "Minimalist Modern": "aura-blanche",
+  "Botanique Vivace": "botanique-vivace",
+  "Kyoto Monochrome": "kyoto-monochrome",
+  "Tuscan Terracotta": "tuscan-terracotta",
+  "Aura Blanche": "aura-blanche",
 };
 
 /**

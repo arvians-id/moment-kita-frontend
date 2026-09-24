@@ -27,6 +27,11 @@
 
 ## Final QA
 
+> **Update 2026-09-24:** a cross-app integration QA pass followed this one; see
+> `docs/frontend-integration-qa.md`. Note that `/admin/login` in the route map
+> below is documented but not built yet (the Admin sign-out control is a
+> disabled stub until it is).
+
 - Navigation and active states were verified across the canonical Admin shell,
   mobile drawer, topbar, contextual links, and all documented child routes.
 - Route coverage was verified for all completed Admin pages, including dynamic

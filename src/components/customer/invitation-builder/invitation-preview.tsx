@@ -88,11 +88,11 @@ export function InvitationPreview({
               <span className="mt-4 text-[8px] font-semibold tracking-[0.2em] text-secondary uppercase">
                 The Holy Matrimony &amp; Reception
               </span>
-              <h1 className="mt-2 font-serif text-[38px] leading-[1.05] italic">
+              <h2 className="mt-2 font-serif text-[38px] leading-[1.05] italic">
                 {content.partners
                   .map((partner) => partner.nickname || "Partner")
                   .join(" & ")}
-              </h1>
+              </h2>
               <span className="my-4 h-px w-12 bg-secondary" />
               <p className="text-[9px] font-semibold tracking-[0.14em] text-on-surface-variant uppercase">
                 {firstEvent?.date

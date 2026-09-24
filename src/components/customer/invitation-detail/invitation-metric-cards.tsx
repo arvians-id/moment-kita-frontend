@@ -2,8 +2,8 @@ import { Heart, Table2, UserCheck, Users } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 import type { InvitationDetail } from "@/types";
+import { numberFormat } from "@/lib/format";
 
-const numberFormat = new Intl.NumberFormat("en-US");
 
 interface MetricCard {
   kicker: string;

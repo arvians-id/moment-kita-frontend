@@ -24,8 +24,8 @@ export function QuotaTipBanner({
         <p className="text-[13px] leading-5 text-on-surface-variant">
           <span className="font-semibold text-on-surface">Atelier tip:</span>{" "}
           {outOfQuota
-            ? "You can still create and design unlimited drafts. An extra celebration quota is only needed when you finalize and publish."
-            : "You can create unlimited design drafts anytime without using quota. A celebration quota is only committed when you finalize and publish."}
+            ? "You can still create and design unlimited drafts. An extra celebration quota is only needed when you finalize."
+            : "You can create unlimited design drafts anytime without using quota. A celebration quota is only committed when you finalize."}
         </p>
       </div>
       <span className="hidden shrink-0 text-[11px] leading-4 font-semibold tracking-[0.2em] whitespace-nowrap text-secondary uppercase md:inline">

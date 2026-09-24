@@ -225,7 +225,7 @@ export function createMockBuilderContent(
     rsvp: {
       headline: "Will you celebrate with us?",
       deadline: "2026-11-10",
-      accessPolicy: "guest_list",
+      accessMode: "anyone_with_link",
       allowPlusOne: true,
       collectMealPreference: true,
     },

@@ -1,10 +1,9 @@
-export const idrFormat = new Intl.NumberFormat("id-ID", {
-  style: "currency",
-  currency: "IDR",
-  maximumFractionDigits: 0,
-});
+import { idrFormat, numberFormat } from "@/lib/format";
+export { idrFormat };
 
-export const numberFormat = new Intl.NumberFormat("en-US");
+export { numberFormat };
+
+
 
 export const quotaDateFormat = new Intl.DateTimeFormat("en-GB", {
   day: "numeric",

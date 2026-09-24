@@ -164,7 +164,7 @@ export const mockInvitationDetails: Readonly<
       {
         id: "evt_12",
         kind: "invitation",
-        message: "Template switched to Sienna & Solstice",
+        message: "Template switched to Tuscan Terracotta",
         occurredAt: "4 days ago • Builder",
       },
     ],

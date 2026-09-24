@@ -27,6 +27,7 @@ import Link from "next/link";
 import { CopyLinkButton } from "@/components/customer/dashboard/copy-link-button";
 import { publicConfig } from "@/lib/config";
 import type { CustomerInvitation, InvitationStatus } from "@/types";
+import { numberFormat } from "@/lib/format";
 
 const longDate = new Intl.DateTimeFormat("en-GB", {
   weekday: "long",
@@ -41,7 +42,6 @@ const shortDate = new Intl.DateTimeFormat("en-GB", {
   year: "numeric",
   timeZone: "Asia/Jakarta",
 });
-const numberFormat = new Intl.NumberFormat("en-US");
 
 const chipBase =
   "inline-flex items-center gap-1.5 px-2.5 py-0.5 text-[11px] leading-4 font-semibold tracking-[0.12em] uppercase";
@@ -188,7 +188,7 @@ export function InvitationCard({
   index: number;
 }) {
   const { status } = invitation;
-  const host = publicConfig.appUrl.replace(/^https?:\/\//, "");
+  const host = publicConfig.publicHost;
   const invitationUrl = `${host}/${invitation.slug}`;
   const isArchived = status === "expired" || status === "cancelled";
 

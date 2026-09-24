@@ -16,6 +16,7 @@ import { InvitationStatusBadge } from "@/components/customer/invitation-status-b
 import type { AdminInvitationDetailData, InvitationStatus } from "@/types";
 
 import type { InvitationAdminAction } from "../invitation-detail/invitation-privileged-dialog";
+import { publicConfig } from "@/lib/config";
 
 export type AdminEditorLifecycleAction = "finalize" | "publish" | "unpublish";
 
@@ -88,7 +89,8 @@ export function AdminEditorHeader({
               {invitation.templateName} v{invitation.templateVersion}
             </span>
             <span className="inline-flex items-center gap-1.5 font-mono">
-              <Globe2 aria-hidden size={13} /> momentkita.id/{invitation.slug}
+              <Globe2 aria-hidden size={13} /> {publicConfig.publicHost}/
+              {invitation.slug}
             </span>
           </div>
         </div>

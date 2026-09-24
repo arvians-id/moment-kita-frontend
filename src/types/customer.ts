@@ -304,7 +304,7 @@ export interface InvitationBuilderContent {
   rsvp: {
     headline: string;
     deadline: string;
-    accessPolicy: "guest_list" | "link";
+    accessMode: RsvpAccessMode;
     allowPlusOne: boolean;
     collectMealPreference: boolean;
   };
@@ -415,9 +415,12 @@ export interface PublicRsvpResponse {
   respondedAt: string;
 }
 
+/** Who may submit an RSVP; shared by the builder and RSVP management. */
+export type RsvpAccessMode = "guest_list_only" | "anyone_with_link";
+
 export interface RsvpSettingsSummary {
   enabled: boolean;
-  accessMode: "guest_list_only" | "anyone_with_link";
+  accessMode: RsvpAccessMode;
   deadline: string;
 }
 

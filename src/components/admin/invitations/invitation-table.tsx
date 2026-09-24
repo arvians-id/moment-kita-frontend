@@ -13,7 +13,7 @@ import {
   publicPath,
 } from "./invitation-list-utils";
 
-const publicHost = publicConfig.appUrl.replace(/^https?:\/\//, "");
+const publicHost = publicConfig.publicHost;
 
 export function InvitationTable({
   invitations,

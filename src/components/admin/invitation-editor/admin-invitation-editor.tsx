@@ -23,6 +23,7 @@ import {
   type AdminEditorLifecycleAction,
 } from "./admin-editor-header";
 import { AdminEditorLifecycleDialog } from "./admin-editor-lifecycle-dialog";
+import { useEscapeKey } from "@/lib/use-escape-key";
 
 type MobileMode = "edit" | "preview";
 
@@ -69,6 +70,7 @@ export function AdminInvitationEditor({
   const [pendingNavigation, setPendingNavigation] = useState<string | null>(
     null,
   );
+  useEscapeKey(pendingNavigation ? () => setPendingNavigation(null) : null);
 
   const activeSection =
     sections.find((section) => section.id === activeSectionId) ?? sections[0];

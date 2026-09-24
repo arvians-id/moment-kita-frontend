@@ -7,8 +7,8 @@ import {
 import type { LucideIcon } from "lucide-react";
 
 import type { AdminCustomerSummary } from "@/types";
+import { numberFormat } from "@/lib/format";
 
-const numberFormat = new Intl.NumberFormat("en-US");
 
 interface CustomerMetricConfig {
   key: keyof Pick<

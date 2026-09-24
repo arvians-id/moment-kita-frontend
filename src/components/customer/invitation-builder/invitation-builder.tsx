@@ -1,6 +1,7 @@
 "use client";
 
 import { AlertTriangle, Eye, PenLine } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import { BuilderFormPanel } from "@/components/customer/invitation-builder/builder-form-panel";
@@ -12,6 +13,7 @@ import { BuilderSaveBar } from "@/components/customer/invitation-builder/builder
 import { BuilderSectionNavigation } from "@/components/customer/invitation-builder/builder-section-navigation";
 import { InvitationPreview } from "@/components/customer/invitation-builder/invitation-preview";
 import { LifecycleDialog } from "@/components/customer/invitation-builder/lifecycle-dialog";
+import { useEscapeKey } from "@/lib/use-escape-key";
 import { cn } from "@/lib/utils";
 import type {
   InvitationBuilderContent,
@@ -61,6 +63,20 @@ export function InvitationBuilder({
   const [savedLabel, setSavedLabel] = useState("Saved");
   const [mobileMode, setMobileMode] = useState<MobileMode>("edit");
   const [dialog, setDialog] = useState<LifecycleDialogKind | null>(null);
+  const [pendingNavigation, setPendingNavigation] = useState<string | null>(
+    null,
+  );
+  const router = useRouter();
+  useEscapeKey(pendingNavigation ? () => setPendingNavigation(null) : null);
+
+  useEffect(() => {
+    function handleBeforeUnload(event: BeforeUnloadEvent) {
+      if (!isDirty) return;
+      event.preventDefault();
+    }
+    window.addEventListener("beforeunload", handleBeforeUnload);
+    return () => window.removeEventListener("beforeunload", handleBeforeUnload);
+  }, [isDirty]);
 
   const activeSection =
     sections.find((section) => section.id === activeSectionId) ?? sections[0];
@@ -153,6 +169,7 @@ export function InvitationBuilder({
         onSave={saveChanges}
         onPreview={showPreview}
         onLifecycle={setDialog}
+        onNavigate={setPendingNavigation}
       />
 
       {(status === "expired" || status === "cancelled") && (
@@ -229,6 +246,46 @@ export function InvitationBuilder({
           />
         </div>
       </div>
+
+      {pendingNavigation ? (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="discard-builder-title"
+          className="fixed inset-0 z-[70] flex items-center justify-center bg-espresso/60 p-4 backdrop-blur-sm"
+        >
+          <div className="w-full max-w-md rounded-[14px] bg-surface-lowest p-6 shadow-2xl sm:p-8">
+            <p className="text-[10px] font-semibold tracking-[0.18em] text-secondary uppercase">
+              Unsaved changes
+            </p>
+            <h2
+              id="discard-builder-title"
+              className="mt-1 font-serif text-[24px] leading-8 font-semibold"
+            >
+              Leave the Builder?
+            </h2>
+            <p className="mt-3 text-[13px] leading-5 text-on-surface-variant">
+              Your edits have not been saved. Leaving now will discard them.
+            </p>
+            <div className="mt-6 flex flex-col-reverse gap-2 sm:flex-row sm:justify-end">
+              <button
+                type="button"
+                onClick={() => setPendingNavigation(null)}
+                className="min-h-11 rounded-[8px] bg-surface-container px-5 text-[11px] font-semibold tracking-[0.12em] uppercase"
+              >
+                Keep Editing
+              </button>
+              <button
+                type="button"
+                onClick={() => router.push(pendingNavigation)}
+                className="min-h-11 rounded-[8px] bg-red-700 px-5 text-[11px] font-semibold tracking-[0.12em] text-white uppercase"
+              >
+                Discard &amp; Leave
+              </button>
+            </div>
+          </div>
+        </div>
+      ) : null}
 
       {dialog ? (
         <LifecycleDialog

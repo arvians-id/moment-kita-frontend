@@ -1,12 +1,8 @@
 import { TransactionStatusBadge } from "@/components/customer/transactions/transaction-status-badge";
 import type { AdminTransactionPurpose, RecentTransaction } from "@/types";
 import Link from "next/link";
+import { idrFormat as currencyFormat } from "@/lib/format";
 
-const currencyFormat = new Intl.NumberFormat("id-ID", {
-  style: "currency",
-  currency: "IDR",
-  maximumFractionDigits: 0,
-});
 
 const dateFormat = new Intl.DateTimeFormat("en-GB", {
   day: "numeric",

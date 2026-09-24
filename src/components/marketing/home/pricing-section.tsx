@@ -4,12 +4,8 @@ import Link from "next/link";
 import { EditorialHeading } from "@/components/marketing/editorial-heading";
 import { Container } from "@/components/shared/container";
 import type { Package } from "@/types";
+import { idrFormat as currency } from "@/lib/format";
 
-const currency = new Intl.NumberFormat("id-ID", {
-  style: "currency",
-  currency: "IDR",
-  maximumFractionDigits: 0,
-});
 
 const tierLabels: Record<string, string> = {
   essential: "Self-guided",

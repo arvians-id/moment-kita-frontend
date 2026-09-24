@@ -154,6 +154,12 @@ For every page:
 
 ## Final QA / Integration Pass
 
+> **Update 2026-09-24:** the cross-app integration pass in
+> `docs/frontend-integration-qa.md` supersedes the "Not changed" items below
+> where they overlap: the guest-type duplication remains, the Customer builder
+> now has an unsaved-changes guard, status badges are shared with Admin, and
+> RSVP access mode is a single shared type.
+
 **Date:** 2026-09-23
 **Status:** Pass complete. All 14 planned Customer routes compile, lint, typecheck, and build cleanly. Customer CMS is confirmed feature-complete as one coherent product.
 

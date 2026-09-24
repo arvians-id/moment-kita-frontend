@@ -10,16 +10,13 @@ import {
 import Image from "next/image";
 
 import type { AdminCustomer, CatalogTemplate, Package } from "@/types";
+import { publicConfig } from "@/lib/config";
+import { idrFormat as idr } from "@/lib/format";
 
 const fieldClass =
   "min-h-11 w-full border border-transparent bg-surface-low px-3 text-[12px] outline-none transition-colors placeholder:text-on-surface-variant/55 focus:border-secondary";
 const labelClass =
   "text-[9px] font-semibold tracking-[0.13em] text-on-surface-variant uppercase";
-const idr = new Intl.NumberFormat("id-ID", {
-  style: "currency",
-  currency: "IDR",
-  maximumFractionDigits: 0,
-});
 
 function StepHeader({
   number,
@@ -334,7 +331,7 @@ export function WeddingBasicsStep({
             className={`mt-2 flex min-h-11 items-center border bg-surface-low ${availability === "invalid" || availability === "unavailable" ? "border-red-400" : availability === "available" ? "border-emerald-500" : "border-transparent"}`}
           >
             <span className="pl-3 font-mono text-[10px] tracking-normal text-on-surface-variant normal-case">
-              momentkita.id/
+              {publicConfig.publicHost}/
             </span>
             <input
               value={slug}

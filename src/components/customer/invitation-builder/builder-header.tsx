@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { InvitationStatusBadge } from "@/components/customer/invitation-status-badge";
 import type { CustomerInvitation, InvitationStatus } from "@/types";
+import { publicConfig } from "@/lib/config";
 
 export type LifecycleDialogKind = "finalize" | "publish" | "unpublish";
 
@@ -14,6 +15,7 @@ export function BuilderHeader({
   onSave,
   onPreview,
   onLifecycle,
+  onNavigate,
 }: {
   invitation: CustomerInvitation;
   status: InvitationStatus;
@@ -22,6 +24,8 @@ export function BuilderHeader({
   onSave: () => void;
   onPreview: () => void;
   onLifecycle: (kind: LifecycleDialogKind) => void;
+  /** Called instead of navigating when there are unsaved changes. */
+  onNavigate: (href: string) => void;
 }) {
   return (
     <header className="mb-5 border-b border-surface-highest bg-surface-lowest shadow-sm">
@@ -30,6 +34,11 @@ export function BuilderHeader({
           <div className="flex flex-wrap items-center gap-2">
             <Link
               href="/app/invitations"
+              onClick={(event) => {
+                if (!isDirty) return;
+                event.preventDefault();
+                onNavigate("/app/invitations");
+              }}
               className="inline-flex items-center gap-1 text-[10px] font-semibold tracking-[0.14em] text-on-surface-variant uppercase transition-colors hover:text-on-surface"
             >
               <ArrowLeft aria-hidden size={14} />
@@ -55,7 +64,7 @@ export function BuilderHeader({
             <span>Theme: {invitation.templateName}</span>
             <span className="inline-flex items-center gap-1">
               <Globe2 aria-hidden size={12} />
-              momentkita.id/{invitation.slug}
+              {publicConfig.publicHost}/{invitation.slug}
             </span>
           </div>
         </div>

@@ -150,6 +150,14 @@ function buildHistoricalContent(
   if (stepsBack >= 8) {
     content.gallery = content.gallery.slice(0, 1);
     content.quotes = content.quotes.slice(0, 1);
+    for (const section of sections) {
+      if (
+        section.type === "quote" &&
+        !content.quotes.some((quote) => quote.id === section.id)
+      ) {
+        section.visible = false;
+      }
+    }
   }
   if (stepsBack >= 9) {
     for (const section of sections) {

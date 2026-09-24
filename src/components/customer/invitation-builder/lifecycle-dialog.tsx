@@ -37,9 +37,9 @@ export function LifecycleDialog({
     },
     unpublish: {
       kicker: "Unpublish invitation",
-      title: "Pause Public Guest Access",
+      title: "Take the Invitation Offline",
       description:
-        "Guests will no longer be able to open the public invitation. Your content and responses remain preserved.",
+        "Guests will no longer be able to open the public invitation. Your content and responses remain preserved. Unpublishing does not return quota and does not pause the active period.",
       confirm: "Confirm Unpublish",
       Icon: AlertCircle,
     },

@@ -151,6 +151,7 @@ export type {
   PublicRsvpResponse,
   PhysicalGiftAddress,
   RsvpManagementData,
+  RsvpAccessMode,
   RsvpSettingsSummary,
   SettingsOverview,
   SignInMethod,

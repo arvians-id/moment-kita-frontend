@@ -16,7 +16,7 @@ export const mockCustomerTransactions: readonly CustomerTransaction[] = [
     purpose: "package",
     productName: "Signature Package",
     description:
-      "4 invitations, unlimited RSVPs, custom vanity slug & concierge",
+      "1 invitation, unlimited RSVPs, custom vanity slug & concierge",
     status: "paid",
     amount: {
       subtotal: 449_550,
@@ -37,7 +37,7 @@ export const mockCustomerTransactions: readonly CustomerTransaction[] = [
     paidAt: "2026-09-22T15:42:00+07:00",
     invoiceNumber: "INV-MK-2026-8819",
     entitlementsGranted: [
-      "4x Digital Invitation Quota (Total 4 Available)",
+      "1x Digital Invitation Quota",
       "365 Days Active Production Cloud Hosting",
       "Unlimited WhatsApp RSVPs & Guestbook",
       "Music Background & Interactive Vinyl Animation",
@@ -72,7 +72,7 @@ export const mockCustomerTransactions: readonly CustomerTransaction[] = [
     extension: {
       previousExpiresAt: "2026-08-25T23:59:00+07:00",
       extensionDays: 180,
-      extendedUntil: "2027-03-19T23:59:00+07:00",
+      extendedUntil: "2027-02-20T23:59:00+07:00",
     },
   },
   {

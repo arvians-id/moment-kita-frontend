@@ -1,7 +1,5 @@
-import {
-  mockCustomerInvitations,
-  mockEntitlement,
-} from "@/data/mocks/customer";
+import { getReservedSlugs } from "@/data/mocks/reserved-slugs";
+import { mockEntitlement } from "@/data/mocks/customer";
 import { mockTemplateCatalog } from "@/data/mocks/template-catalog";
 import type { CatalogTemplate, EntitlementSummary } from "@/types";
 
@@ -34,7 +32,7 @@ export async function getCreateInvitationPageData(): Promise<CreateInvitationPag
   return {
     templates: templates.map((template) => ({ ...template })),
     defaultTemplateKey: "chateau-de-chantilly",
-    reservedSlugs: mockCustomerInvitations.map((invitation) => invitation.slug),
+    reservedSlugs: getReservedSlugs(),
     entitlement: {
       ...mockEntitlement,
       features: [...mockEntitlement.features],

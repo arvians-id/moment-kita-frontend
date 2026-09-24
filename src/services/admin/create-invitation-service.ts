@@ -1,7 +1,7 @@
+import { getReservedSlugs } from "@/data/mocks/reserved-slugs";
 import { mockTemplateCatalog } from "@/data/mocks/template-catalog";
 import { listPackages } from "@/data/mocks/admin-packages-store";
 import { getAdminCustomers } from "@/services/admin/customer-service";
-import { getAdminInvitationList } from "@/services/admin/invitation-service";
 import type { AdminCreateInvitationData, CatalogTemplate } from "@/types";
 
 const ADMIN_TEMPLATE_KEYS = [
@@ -18,10 +18,7 @@ const ADMIN_TEMPLATE_KEYS = [
  * invitation, template, and package sources rather than owning copies.
  */
 export async function getAdminCreateInvitationData(): Promise<AdminCreateInvitationData> {
-  const [customers, invitationList] = await Promise.all([
-    getAdminCustomers(),
-    getAdminInvitationList(),
-  ]);
+  const customers = await getAdminCustomers();
   const templates = ADMIN_TEMPLATE_KEYS.map((key) =>
     mockTemplateCatalog.find((template) => template.key === key),
   ).filter((template): template is CatalogTemplate => Boolean(template));
@@ -33,7 +30,7 @@ export async function getAdminCreateInvitationData(): Promise<AdminCreateInvitat
       ...item,
       features: [...item.features],
     })),
-    reservedSlugs: invitationList.invitations.map((item) => item.slug),
+    reservedSlugs: getReservedSlugs(),
     defaultTemplateKey: "chateau-de-chantilly",
     defaultPackageId: "signature",
   };

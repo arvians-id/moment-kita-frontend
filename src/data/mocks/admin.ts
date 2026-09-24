@@ -50,10 +50,10 @@ export const mockInvitationLifecycle: readonly InvitationLifecycleBreakdown[] =
 
 export const mockTemplateUsage: readonly TemplateUsageEntry[] = [
   { templateName: "Château de Chantilly", suiteCount: 64 },
-  { templateName: "Botanique", suiteCount: 51 },
-  { templateName: "Kyoto", suiteCount: 38 },
-  { templateName: "Velvet", suiteCount: 25 },
-  { templateName: "Minimalist Modern", suiteCount: 19 },
+  { templateName: "Botanique Vivace", suiteCount: 51 },
+  { templateName: "Kyoto Monochrome", suiteCount: 38 },
+  { templateName: "Tuscan Terracotta", suiteCount: 25 },
+  { templateName: "Aura Blanche", suiteCount: 19 },
 ];
 
 export const mockRecentTransactions: readonly RecentTransaction[] = [

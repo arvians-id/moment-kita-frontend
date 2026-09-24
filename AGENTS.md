@@ -1,7 +1,7 @@
 # Frontend Project Instructions
 
 - `docs/technical-design.md` is the architectural source of truth.
-- The current development focus is the public/marketing frontend.
+- Public/marketing, Customer CMS and Admin CMS are implemented against mock services and have passed integration QA (`docs/frontend-integration-qa.md`). Backend integration and template renderers are the next phase.
 - The single Next.js application has four long-term boundaries: marketing, customer, admin, and invitation templates/renderers.
 - Do not implement future domains unless explicitly requested, and do not redesign the architecture without an explicit request.
 - Backend-dependent public data must use `services/public` backed by `data/mocks` until real API integration is requested.

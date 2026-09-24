@@ -1,5 +1,5 @@
 import { mockTemplateUsage } from "@/data/mocks/admin";
-import { mockPackages } from "@/data/mocks/packages";
+import { listPackages } from "@/data/mocks/admin-packages-store";
 import { mockTemplateCatalog } from "@/data/mocks/template-catalog";
 import { getAdminInvitationList } from "@/services/admin/invitation-service";
 import type {
@@ -40,14 +40,20 @@ export async function getAdminTemplateList(): Promise<AdminTemplateListData> {
     if (key) usageByKey.set(key, entry.suiteCount);
   });
 
+  const packages = listPackages();
   const templates = mockTemplateCatalog.map((template) => ({
     ...template,
     activeVersion: "v1.0",
     enabled: !disabledTemplateKeys.has(template.key),
     featured: template.popularity >= 90,
     usageCount: usageByKey.get(template.key) ?? 0,
-    packageAccess:
-      template.tier === "signature" ? ["Signature", "Prestige"] : ["Prestige"],
+    packageAccess: packages
+      .filter(
+        (pkg) =>
+          pkg.templateAccessMode === "all" ||
+          (pkg.selectedTemplateKeys ?? []).includes(template.key),
+      )
+      .map((pkg) => pkg.name),
   }));
 
   return {
@@ -260,10 +266,12 @@ async function buildUsage(
 function buildCommercial(
   template: AdminTemplateListItem,
 ): AdminTemplateCommercial {
-  const packages = mockPackages.map((pkg) => ({
+  const packages = listPackages().map((pkg) => ({
     packageId: pkg.id,
     packageName: pkg.name,
     available: template.packageAccess.includes(pkg.name),
+    price: pkg.price,
+    description: pkg.description,
   }));
 
   return {

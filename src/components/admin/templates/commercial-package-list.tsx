@@ -4,18 +4,15 @@ import { Check, X } from "lucide-react";
 import { useState } from "react";
 
 import { currencyFormat } from "@/components/admin/templates/template-detail-formatters";
-import type { AdminTemplatePackageAccess, Package } from "@/types";
+import type { AdminTemplatePackageAccess } from "@/types";
 
 export function CommercialPackageList({
   packages: initialPackages,
-  packageCatalog,
 }: {
   packages: AdminTemplatePackageAccess[];
-  packageCatalog: Package[];
 }) {
   const [packages, setPackages] = useState(initialPackages);
   const [notice, setNotice] = useState<string | null>(null);
-  const catalogById = new Map(packageCatalog.map((pkg) => [pkg.id, pkg]));
 
   function toggle(packageId: string) {
     setPackages((current) =>
@@ -46,7 +43,6 @@ export function CommercialPackageList({
 
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {packages.map((entry) => {
-          const catalogEntry = catalogById.get(entry.packageId);
           return (
             <article
               key={entry.packageId}
@@ -74,12 +70,9 @@ export function CommercialPackageList({
                     {entry.available ? "Available" : "Excluded"}
                   </span>
                 </div>
-                {catalogEntry ? (
-                  <p className="mt-2 text-[10px] leading-5 text-on-surface-variant">
-                    {currencyFormat.format(catalogEntry.price)} ·{" "}
-                    {catalogEntry.description}
-                  </p>
-                ) : null}
+                <p className="mt-2 text-[10px] leading-5 text-on-surface-variant">
+                  {currencyFormat.format(entry.price)} · {entry.description}
+                </p>
               </div>
               <button
                 type="button"

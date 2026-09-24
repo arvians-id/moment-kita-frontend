@@ -13,11 +13,7 @@
 - Invitation Editor
 - Template List
 - Template Detail
-
-### Next
 - Transactions
-
-### Pending
 - Transaction Detail
 - Packages & Quota
 - Package Editor
@@ -25,7 +21,9 @@
 - Printed Order Detail
 - Notifications
 - Settings
-- Final Admin QA
+
+### Next
+- Final Admin QA / Integration Pass
 
 ---
 

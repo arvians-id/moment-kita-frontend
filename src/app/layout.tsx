@@ -31,6 +31,9 @@ export const metadata: Metadata = {
     template: "%s | Moment Kita",
   },
   description: siteDescription,
+  icons: {
+    icon: "/favicon.ico",
+  },
   openGraph: {
     type: "website",
     siteName: "Moment Kita",

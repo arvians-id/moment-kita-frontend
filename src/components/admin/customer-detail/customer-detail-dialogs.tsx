@@ -18,6 +18,12 @@ export interface QuotaAdjustmentInput {
   reason: string;
 }
 
+export interface QuotaCustomerOption {
+  id: string;
+  name: string;
+  quotaRemaining: number;
+}
+
 function useDialogLifecycle(onClose: () => void) {
   useEffect(() => {
     function handleEscape(event: KeyboardEvent) {
@@ -221,10 +227,21 @@ export function AdjustQuotaDialog({
   currentQuota,
   onClose,
   onConfirm,
+  customerPicker,
 }: {
   currentQuota: number;
   onClose: () => void;
   onConfirm: (input: QuotaAdjustmentInput) => void;
+  /**
+   * When provided, the dialog also asks which customer to adjust — used by
+   * Packages & Quota, where no single customer is already in context.
+   * Customer Detail omits this and keeps its existing single-customer flow.
+   */
+  customerPicker?: {
+    customers: QuotaCustomerOption[];
+    selectedId: string | null;
+    onSelect: (id: string) => void;
+  };
 }) {
   const [direction, setDirection] = useState<"increase" | "decrease">(
     "increase",
@@ -238,6 +255,7 @@ export function AdjustQuotaDialog({
 
   function submit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    if (customerPicker && !customerPicker.selectedId) return;
     if (direction === "decrease" && amount > currentQuota) return;
     onConfirm({ direction, amount, reason: reason.trim() });
   }
@@ -259,6 +277,30 @@ export function AdjustQuotaDialog({
         />
 
         <form onSubmit={submit} className="mt-5 space-y-5">
+          {customerPicker ? (
+            <div className="space-y-1.5">
+              <label htmlFor="quota-adjustment-customer" className={labelClass}>
+                Customer <span aria-hidden>*</span>
+              </label>
+              <select
+                id="quota-adjustment-customer"
+                required
+                value={customerPicker.selectedId ?? ""}
+                onChange={(event) => customerPicker.onSelect(event.target.value)}
+                className={fieldClass}
+              >
+                <option value="" disabled>
+                  Select a customer...
+                </option>
+                {customerPicker.customers.map((option) => (
+                  <option key={option.id} value={option.id}>
+                    {option.name} — {option.quotaRemaining} remaining
+                  </option>
+                ))}
+              </select>
+            </div>
+          ) : null}
+
           <div
             className="grid grid-cols-2 gap-2"
             role="group"

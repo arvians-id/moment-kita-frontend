@@ -1,6 +1,7 @@
 "use client";
 
 import { Bell, Plus, Search } from "lucide-react";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import { AdminMobileNav } from "@/components/admin/layout/admin-mobile-nav";
@@ -66,14 +67,19 @@ export function AdminTopbar({
             <Plus aria-hidden size={15} />
             <span className="hidden sm:inline">Create Invitation</span>
           </span>
-          <span
-            aria-disabled="true"
+          <Link
+            href="/admin/notifications"
+            aria-label={
+              notificationsUnreadCount > 0
+                ? `View ${notificationsUnreadCount} unread notifications`
+                : "View notifications"
+            }
             title={
               notificationsUnreadCount > 0
-                ? `${notificationsUnreadCount} unread notifications (coming soon)`
-                : "Notifications (coming soon)"
+                ? `${notificationsUnreadCount} unread notifications`
+                : "Notifications"
             }
-            className="relative grid size-9 cursor-not-allowed place-items-center text-on-surface-variant/70"
+            className="relative grid size-9 place-items-center text-on-surface-variant transition-colors hover:bg-surface-container hover:text-on-surface focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary"
           >
             <Bell aria-hidden size={19} />
             {notificationsUnreadCount > 0 ? (
@@ -82,7 +88,7 @@ export function AdminTopbar({
                 className="absolute top-1.5 right-1.5 size-2 rounded-full bg-secondary ring-2 ring-surface"
               />
             ) : null}
-          </span>
+          </Link>
           <span
             aria-label={`Signed in as ${admin.name}`}
             title={`${admin.name} · ${admin.role}`}

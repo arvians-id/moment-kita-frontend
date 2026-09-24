@@ -1,3 +1,8 @@
+import type {
+  NotificationDeliveryPreference,
+  NotificationRecord,
+} from "./notification";
+
 /**
  * Customer CMS domain types.
  *
@@ -616,16 +621,11 @@ export type NotificationKind =
   | "packageActivated"
   | "accountSecurity";
 
-export interface CustomerNotification {
-  id: string;
+export interface CustomerNotification extends NotificationRecord {
   kind: NotificationKind;
   category: NotificationCategory;
   /** Fine-grained label shown as the card's eyebrow, e.g. "Guests & Import". */
   eyebrow: string;
-  title: string;
-  description: string;
-  /** ISO 8601 timestamp. */
-  occurredAt: string;
   read: boolean;
   /** Needs the customer to act, beyond simply being unread. */
   attention: boolean;
@@ -692,15 +692,8 @@ export interface CustomerSecurity {
 export type NotificationPreferenceCategory =
   "wedding" | "guestsRsvp" | "wishes" | "payments" | "account";
 
-export interface NotificationPreferenceItem {
-  id: string;
+export interface NotificationPreferenceItem extends NotificationDeliveryPreference {
   category: NotificationPreferenceCategory;
-  title: string;
-  description: string;
-  inApp: boolean;
-  email: boolean;
-  /** True when the customer cannot turn this off (statutory or security). */
-  mandatory: boolean;
 }
 
 /** Everything the Settings page needs, composed from existing services. */

@@ -20,7 +20,6 @@ import {
   adminTemplateDateFormat,
 } from "@/components/admin/templates/template-detail-formatters";
 import { InvitationStatusBadge } from "@/components/customer/invitation-status-badge";
-import { mockPackages } from "@/data/mocks/packages";
 import type {
   AdminCapabilitySupport,
   AdminTemplateCapability,
@@ -428,10 +427,7 @@ export function TemplateCommercialSection({
         }
       />
       <div className="mt-6">
-        <CommercialPackageList
-          packages={data.commercial.packages}
-          packageCatalog={[...mockPackages]}
-        />
+        <CommercialPackageList packages={data.commercial.packages} />
       </div>
     </Panel>
   );

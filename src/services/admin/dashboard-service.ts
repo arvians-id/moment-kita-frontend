@@ -1,7 +1,6 @@
 import {
   mockAdminAlerts,
   mockAdminMetrics,
-  mockAdminNotificationsUnreadCount,
   mockAdminUser,
   mockInvitationLifecycle,
   mockRecentInvitations,
@@ -9,6 +8,7 @@ import {
   mockRevenueTrend,
   mockTemplateUsage,
 } from "@/data/mocks/admin";
+import { getUnreadAdminNotificationCount as getNotificationUnreadCount } from "@/services/admin/notification-service";
 import type {
   AdminDashboardData,
   AdminUser,
@@ -28,7 +28,7 @@ export async function getAdminUser(): Promise<AdminUser> {
 }
 
 export async function getUnreadAdminNotificationCount(): Promise<number> {
-  return mockAdminNotificationsUnreadCount;
+  return getNotificationUnreadCount();
 }
 
 export async function getRecentTransactions(): Promise<RecentTransaction[]> {

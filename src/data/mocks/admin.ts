@@ -15,8 +15,6 @@ export const mockAdminUser: AdminUser = {
   initials: "AA",
 };
 
-export const mockAdminNotificationsUnreadCount = 3;
-
 export const mockAdminMetrics: AdminDashboardMetrics = {
   totalCustomers: { value: 342, changePercent: 8.4, note: "+27 this month" },
   totalTransactions: { value: 618, changePercent: 5.1, note: "84 this month" },
@@ -118,6 +116,75 @@ export const mockRecentTransactions: readonly RecentTransaction[] = [
     amount: 800_000,
     status: "refunded",
     createdAt: "2026-09-10T08:55:00+07:00",
+  },
+];
+
+/**
+ * Additional PRINTED transaction fixtures shared by the Transactions ledger
+ * and Printed Orders operations page. They stay transaction records (rather
+ * than a parallel payment collection) because printed commerce uses the same
+ * canonical transaction shell as every other purchase.
+ */
+export const mockPrintedTransactions: readonly RecentTransaction[] = [
+  {
+    id: "adm_txn_print_02",
+    reference: "PO-8819",
+    customerName: "Ayu Prameswari",
+    purpose: "printed",
+    productName: "Copenhagen Reverie",
+    amount: 85_000_000,
+    status: "paid",
+    createdAt: "2026-09-14T16:40:00+07:00",
+  },
+  {
+    id: "adm_txn_print_03",
+    reference: "PO-8816",
+    customerName: "Julianne Moreau",
+    purpose: "printed",
+    productName: "Le Jardin Minimaliste",
+    amount: 78_000_000,
+    status: "paid",
+    createdAt: "2026-09-11T14:10:00+07:00",
+  },
+  {
+    id: "adm_txn_print_04",
+    reference: "PO-8812",
+    customerName: "Chloe D'Souza",
+    purpose: "printed",
+    productName: "Paper Tasting Box",
+    amount: 450_000,
+    status: "paid",
+    createdAt: "2026-09-08T09:30:00+07:00",
+  },
+  {
+    id: "adm_txn_print_05",
+    reference: "PO-8809",
+    customerName: "Arthur Pendelton",
+    purpose: "printed",
+    productName: "Ethereal Botanique",
+    amount: 34_000_000,
+    status: "paid",
+    createdAt: "2026-09-04T11:20:00+07:00",
+  },
+  {
+    id: "adm_txn_print_06",
+    reference: "PO-8804",
+    customerName: "Melina Kertanegara",
+    purpose: "printed",
+    productName: "Sienna & Solstice",
+    amount: 52_000_000,
+    status: "paid",
+    createdAt: "2026-08-29T18:00:00+07:00",
+  },
+  {
+    id: "adm_txn_print_07",
+    reference: "PO-8798",
+    customerName: "Beatrice Vane",
+    purpose: "printed",
+    productName: "Le Jardin Minimaliste",
+    amount: 21_250_000,
+    status: "refunded",
+    createdAt: "2026-08-20T13:45:00+07:00",
   },
 ];
 

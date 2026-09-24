@@ -10,10 +10,17 @@ import type {
   InvitationStatus,
   CustomerInvitation,
   InvitationWish,
+  TransactionExtensionDetail,
+  TransactionPayment,
   TransactionPurpose,
   TransactionStatus,
 } from "./customer";
-import type { Package } from "./package";
+import type { Package, PackageTemplateAccessMode } from "./package";
+import type {
+  NotificationDeliveryPreference,
+  NotificationRecord,
+} from "./notification";
+import type { PrintedProduct } from "./printed-product";
 import type { CatalogTemplate } from "./template";
 
 /** The signed-in Admin operator. Auth is out of scope for this task. */
@@ -310,7 +317,10 @@ export interface AdminCustomerTransaction {
 }
 
 export type AdminQuotaSource =
-  "Package purchase" | "Invitation" | "Admin adjustment";
+  | "Package purchase"
+  | "Additional quota purchase"
+  | "Invitation"
+  | "Admin adjustment";
 
 /** Append-oriented history only; current quota remains authoritative on the customer. */
 export interface AdminCustomerQuotaEntry {
@@ -418,6 +428,8 @@ export interface AdminTemplatePackageAccess {
   packageId: string;
   packageName: string;
   available: boolean;
+  price: number;
+  description: string;
 }
 
 export interface AdminTemplateCommercial {
@@ -434,4 +446,365 @@ export interface AdminTemplateDetailData {
   capabilities: AdminTemplateCapability[];
   usage: AdminTemplateUsage;
   commercial: AdminTemplateCommercial;
+}
+
+/*
+ * Cross-customer Transactions registry. This is the Admin-wide commerce
+ * ledger — distinct from `AdminCustomerTransaction`, the focused per-customer
+ * ledger Customer Detail already renders — but it never duplicates the
+ * underlying records: the service layer aggregates the exact same
+ * per-customer transactions and the exact same Dashboard "recent
+ * transactions" fixtures, only projecting them into a richer cross-customer
+ * shape (customer link, related invitation, payment, and commercial effect).
+ */
+
+/** A transaction's customer is not always a resolvable registered profile. */
+export interface AdminTransactionCustomerRef {
+  id: string | null;
+  name: string;
+  accountType: AdminCustomerAccountType | null;
+}
+
+export interface AdminTransactionRelatedInvitation {
+  id: string;
+  coupleLabel: string;
+}
+
+export interface AdminTransactionListItem {
+  id: string;
+  /** Customer-friendly reference, e.g. "TRX-98421". */
+  reference: string;
+  purpose: AdminTransactionPurpose;
+  productName: string;
+  description: string;
+  amount: number;
+  status: TransactionStatus;
+  /** ISO 8601. */
+  createdAt: string;
+  /** ISO 8601; set once paid. */
+  paidAt: string | null;
+  customer: AdminTransactionCustomerRef;
+  relatedInvitation: AdminTransactionRelatedInvitation | null;
+  payment: TransactionPayment | null;
+  /** Customer-friendly entitlement grants, e.g. "+1 Invitation Quota". Paid only. */
+  entitlementsGranted: string[];
+  /** Present only on `extension` transactions. */
+  extension: TransactionExtensionDetail | null;
+  /** Internal Admin verification/cancellation note. Mock/local only. */
+  notes: string | null;
+}
+
+export interface AdminTransactionSummary {
+  totalRevenue: number;
+  revenueThisMonth: number;
+  pendingCount: number;
+  pendingAmount: number;
+  paidCount: number;
+}
+
+export interface AdminTransactionListData {
+  transactions: AdminTransactionListItem[];
+  summary: AdminTransactionSummary;
+}
+
+/*
+ * Printed Orders is an operational projection over PRINTED transactions. The
+ * inherited transaction fields remain the only payment source of truth; the
+ * fields below add manual print-run and fulfillment context only.
+ */
+
+export type AdminPrintedOrderStatus =
+  | "new"
+  | "confirmed"
+  | "in_production"
+  | "ready"
+  | "shipped"
+  | "completed"
+  | "cancelled";
+
+export interface AdminPrintedOrderFulfillment {
+  method: "courier" | "studio_pickup" | "international";
+  recipient: string;
+  addressSummary: string | null;
+  trackingNumber: string | null;
+  statusLabel: string;
+}
+
+export interface AdminPrintedOrderItem extends AdminTransactionListItem {
+  purpose: "printed";
+  productId: string | null;
+  designVariant: string;
+  quantity: number;
+  unitPrice: number;
+  orderStatus: AdminPrintedOrderStatus;
+  fulfillment: AdminPrintedOrderFulfillment;
+  internalNote: string | null;
+  customerNote: string | null;
+  /** ISO 8601; manual studio dates, never machine-scheduling data. */
+  productionStartedAt: string | null;
+  /** ISO 8601 estimated date. */
+  estimatedCompletionAt: string | null;
+  /** ISO 8601. */
+  shippedAt: string | null;
+  /** ISO 8601. */
+  deliveredAt: string | null;
+}
+
+export interface AdminPrintedOrderSummary {
+  totalOrders: number;
+  newOrders: number;
+  inProduction: number;
+  readyOrShipped: number;
+  completed: number;
+  paidRevenue: number;
+}
+
+export interface AdminPrintedOrderListData {
+  orders: AdminPrintedOrderItem[];
+  summary: AdminPrintedOrderSummary;
+  products: PrintedProduct[];
+  customers: AdminCustomer[];
+}
+
+export type AdminPrintedOrderActivityKind =
+  "order" | "payment" | "production" | "fulfillment" | "note";
+
+export interface AdminPrintedOrderActivity {
+  id: string;
+  kind: AdminPrintedOrderActivityKind;
+  title: string;
+  description: string;
+  /** ISO 8601. */
+  createdAt: string;
+  actor: string;
+}
+
+export interface AdminPrintedOrderDetailData {
+  order: AdminPrintedOrderItem;
+  customerProfile: AdminCustomer | null;
+  product: PrintedProduct | null;
+  activity: AdminPrintedOrderActivity[];
+}
+
+/*
+ * Operational notification center. Records keep only a resource type and id;
+ * labels, customer context, amounts, statuses, and routes are resolved by the
+ * Admin notification service from the canonical registries above.
+ */
+
+export type AdminNotificationCategory =
+  "payments" | "invitations" | "printedOrders" | "customers" | "moderation";
+
+export type AdminNotificationKind =
+  | "paymentVerification"
+  | "invitationExpiring"
+  | "invitationExpired"
+  | "printedOrderReady"
+  | "customerCreated"
+  | "wishesPending";
+
+export type AdminNotificationPriority = "normal" | "requiresAction" | "urgent";
+
+export type AdminNotificationResourceType =
+  "transaction" | "invitation" | "printedOrder" | "customer";
+
+export interface AdminNotification extends NotificationRecord {
+  kind: AdminNotificationKind;
+  category: AdminNotificationCategory;
+  /** Null means unread; otherwise the ISO 8601 time it was acknowledged. */
+  readAt: string | null;
+  priority: AdminNotificationPriority;
+  relatedResourceType: AdminNotificationResourceType;
+  relatedResourceId: string;
+}
+
+export interface AdminNotificationContext {
+  href: string;
+  actionLabel: string;
+  resourceLabel: string;
+  reference: string | null;
+  statusLabel: string | null;
+  customer: Pick<AdminCustomer, "id" | "name"> | null;
+  amount: number | null;
+  expiresAt: string | null;
+  pendingCount: number | null;
+}
+
+export interface AdminNotificationWithContext extends AdminNotification {
+  context: AdminNotificationContext;
+}
+
+/* Platform-level MVP settings. These are intentionally explicit domain
+ * fields rather than a generic key/value configuration engine. */
+
+export type AdminSettingsLocale = "id-ID" | "en-GB" | "en-US";
+export type AdminSettingsTimezone =
+  "Asia/Jakarta" | "Asia/Makassar" | "Asia/Jayapura" | "UTC";
+
+export interface AdminGeneralSettings {
+  platformName: string;
+  supportEmail: string;
+  supportWhatsapp: string;
+  timezone: AdminSettingsTimezone;
+  locale: AdminSettingsLocale;
+}
+
+export interface AdminSettingsSession {
+  device: string;
+  location: string;
+  lastActiveLabel: string;
+}
+
+export interface AdminSettingsAccount extends AdminUser {
+  email: string;
+  passwordUpdatedLabel: string;
+  currentSession: AdminSettingsSession;
+}
+
+export type AdminSettingsNotificationCategory =
+  "payments" | "invitations" | "printedOrders" | "moderation";
+
+export interface AdminSettingsNotificationPreference extends NotificationDeliveryPreference {
+  category: AdminSettingsNotificationCategory;
+}
+
+export interface AdminSettingsData {
+  general: AdminGeneralSettings;
+  account: AdminSettingsAccount;
+  notificationPreferences: AdminSettingsNotificationPreference[];
+}
+
+/*
+ * Transaction Detail projections. Every field here is derived at read time
+ * from `AdminTransactionListItem` plus the existing Customer/Package
+ * registries — nothing is stored as a second transaction record, so List
+ * and Detail can never disagree about the same transaction.
+ */
+
+export interface AdminTransactionPackageEffect {
+  packageId: string;
+  packageName: string;
+  price: number;
+  quotaGranted: number;
+  activeDurationDays: number;
+}
+
+export interface AdminTransactionQuotaEffect {
+  quantity: number;
+  /** Null when the owning customer profile could not be resolved. */
+  quotaBefore: number | null;
+  quotaAfter: number | null;
+}
+
+export interface AdminTransactionExtensionEffect {
+  invitationId: string;
+  coupleLabel: string;
+  previousExpiresAt: string;
+  extensionDays: number;
+  newExpiresAt: string;
+}
+
+export interface AdminTransactionPrintedEffect {
+  orderReference: string;
+  summary: string;
+}
+
+export interface AdminTransactionActivityEntry {
+  id: string;
+  title: string;
+  description: string;
+  /** ISO 8601. */
+  createdAt: string;
+}
+
+/** Complete service payload for one Admin transaction dossier. */
+export interface AdminTransactionDetailData {
+  transaction: AdminTransactionListItem;
+  /** Full profile when the transaction resolves to a registered/managed customer. */
+  customerProfile: AdminCustomer | null;
+  packageEffect: AdminTransactionPackageEffect | null;
+  quotaEffect: AdminTransactionQuotaEffect | null;
+  extensionEffect: AdminTransactionExtensionEffect | null;
+  printedEffect: AdminTransactionPrintedEffect | null;
+  activity: AdminTransactionActivityEntry[];
+}
+
+/*
+ * Packages & Quota. Package identity/pricing/quota/duration stay owned by
+ * the shared `Package` type (the same records Create Invitation and
+ * Template Detail's Commercial Settings already read); this only adds
+ * operational projections (template access, active customers) on top.
+ * Quota rows and ledger history are read from the same Customer registry
+ * Customer Detail already owns — never a second quota balance.
+ */
+
+export interface AdminPackageListItem extends Package {
+  /** Templates whose Commercial Settings include this package. */
+  templateAccessCount: number;
+  /** Customers currently on this package, by `currentPackage.name`. */
+  activeCustomerCount: number;
+}
+
+export interface AdminPackageQuotaSummary {
+  activePackages: number;
+  totalQuotaSold: number;
+  quotaUsed: number;
+  remainingCustomerQuota: number;
+  customersWithNoQuota: number;
+}
+
+/** One quota ledger row, enriched with a customer link and, where resolvable, its source transaction or invitation. */
+export interface AdminQuotaLedgerEntry extends AdminCustomerQuotaEntry {
+  customer: AdminTransactionCustomerRef;
+  relatedTransactionId: string | null;
+  relatedInvitationId: string | null;
+}
+
+export interface AdminCustomerQuotaRow {
+  customer: AdminCustomer;
+  /** ISO 8601; null when no quota ledger activity is on file. */
+  lastActivityAt: string | null;
+}
+
+/** Complete service payload for the Packages & Quota page. */
+export interface AdminPackagesQuotaData {
+  packages: AdminPackageListItem[];
+  summary: AdminPackageQuotaSummary;
+  customers: AdminCustomerQuotaRow[];
+  history: AdminQuotaLedgerEntry[];
+}
+
+/*
+ * Package Editor. `PackageFormValues` is the editable subset of `Package`
+ * (no `id` — assigned on create, immutable on edit) so Create and Edit can
+ * share one form and one save path.
+ */
+
+export interface AdminPackageEditorTemplateOption {
+  key: string;
+  name: string;
+  thumbnailUrl: string;
+  category: string;
+  /** Disabled templates are excluded from selection, matching Template List. */
+  enabled: boolean;
+}
+
+export interface AdminPackageEditorData {
+  /** Null when creating a new package. */
+  package: Package | null;
+  templates: AdminPackageEditorTemplateOption[];
+}
+
+export interface PackageFormValues {
+  name: string;
+  description: string;
+  price: number;
+  currency: "IDR";
+  invitationQuota: number;
+  activeDurationDays: number;
+  active: boolean;
+  featured: boolean;
+  features: string[];
+  templateAccessMode: PackageTemplateAccessMode;
+  selectedTemplateKeys: string[];
 }

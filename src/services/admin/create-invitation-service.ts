@@ -1,5 +1,5 @@
 import { mockTemplateCatalog } from "@/data/mocks/template-catalog";
-import { mockPackages } from "@/data/mocks/packages";
+import { listPackages } from "@/data/mocks/admin-packages-store";
 import { getAdminCustomers } from "@/services/admin/customer-service";
 import { getAdminInvitationList } from "@/services/admin/invitation-service";
 import type { AdminCreateInvitationData, CatalogTemplate } from "@/types";
@@ -29,7 +29,7 @@ export async function getAdminCreateInvitationData(): Promise<AdminCreateInvitat
   return {
     customers,
     templates: templates.map((template) => ({ ...template })),
-    packages: mockPackages.map((item) => ({
+    packages: listPackages().map((item) => ({
       ...item,
       features: [...item.features],
     })),

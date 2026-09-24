@@ -8,6 +8,9 @@ export const mockPackages: readonly Package[] = [
     price: 299_000,
     currency: "IDR",
     features: ["One digital invitation", "Core invitation sections"],
+    invitationQuota: 1,
+    activeDurationDays: 90,
+    active: true,
   },
   {
     id: "signature",
@@ -23,6 +26,9 @@ export const mockPackages: readonly Package[] = [
       "Priority support",
     ],
     featured: true,
+    invitationQuota: 1,
+    activeDurationDays: 180,
+    active: true,
   },
   {
     id: "prestige",
@@ -36,5 +42,8 @@ export const mockPackages: readonly Package[] = [
       "Bespoke setup assistance",
       "Priority design consultation",
     ],
+    invitationQuota: 1,
+    activeDurationDays: 365,
+    active: true,
   },
 ];

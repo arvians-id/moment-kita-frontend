@@ -72,16 +72,23 @@ export function TransactionDetailView({ data }: { data: AdminTransactionDetailDa
 
   function applyCancel(reason: string) {
     const cancelledAt = new Date().toISOString();
+    const wasPaid = transaction.status === "paid";
     setTransaction((current) => ({ ...current, status: "cancelled", notes: reason }));
     setNotes(reason);
     pushActivity([
       {
         title: "Transaction cancelled",
-        description: reason,
+        description: wasPaid
+          ? `${reason} Payment and granted commercial effects were not reversed.`
+          : reason,
         createdAt: cancelledAt,
       },
     ]);
-    setNotice(`${transaction.reference} was cancelled. No commercial effect was applied.`);
+    setNotice(
+      wasPaid
+        ? `${transaction.reference} was cancelled. Its settled payment and granted commercial effect were not reversed.`
+        : `${transaction.reference} was cancelled. No commercial effect was applied.`,
+    );
     setDialog(null);
   }
 

@@ -108,7 +108,6 @@ export function CustomerInvitations({
                       <Link
                         href={`/admin/invitations/${invitation.id}`}
                         prefetch={false}
-                        title="Admin Invitation Detail is intentionally deferred"
                         aria-label={`Open ${invitation.coupleLabel}`}
                         className="inline-grid size-9 place-items-center text-on-surface-variant transition-colors hover:bg-surface-container hover:text-secondary"
                       >
@@ -150,7 +149,6 @@ export function CustomerInvitations({
                 <Link
                   href={`/admin/invitations/${invitation.id}`}
                   prefetch={false}
-                  title="Admin Invitation Detail is intentionally deferred"
                   className="mt-4 inline-flex min-h-9 items-center gap-2 bg-surface-container px-3 text-[9px] font-semibold tracking-[0.1em] uppercase"
                 >
                   View Invitation <ExternalLink aria-hidden size={13} />

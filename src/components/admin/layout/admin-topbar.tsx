@@ -59,14 +59,13 @@ export function AdminTopbar({
         </div>
 
         <div className="flex shrink-0 items-center gap-2 sm:gap-3">
-          <span
-            aria-disabled="true"
-            title="Create Invitation (coming soon)"
-            className="hidden cursor-not-allowed items-center gap-2 bg-primary/90 px-3 py-2.5 text-[11px] leading-4 font-semibold tracking-[0.12em] text-primary-foreground uppercase sm:inline-flex sm:px-5"
+          <Link
+            href="/admin/invitations/new"
+            className="hidden items-center gap-2 bg-primary px-3 py-2.5 text-[11px] leading-4 font-semibold tracking-[0.12em] text-primary-foreground uppercase transition-colors hover:bg-secondary sm:inline-flex sm:px-5"
           >
             <Plus aria-hidden size={15} />
             <span className="hidden sm:inline">Create Invitation</span>
-          </span>
+          </Link>
           <Link
             href="/admin/notifications"
             aria-label={

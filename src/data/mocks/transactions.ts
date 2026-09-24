@@ -71,7 +71,8 @@ export const mockCustomerTransactions: readonly CustomerTransaction[] = [
     entitlementsGranted: ["+180 Days Active Hosting"],
     extension: {
       previousExpiresAt: "2026-08-25T23:59:00+07:00",
-      extendedUntil: "2027-02-20T23:59:00+07:00",
+      extensionDays: 180,
+      extendedUntil: "2027-03-19T23:59:00+07:00",
     },
   },
   {

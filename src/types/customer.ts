@@ -555,6 +555,8 @@ export interface TransactionPayment {
 /** Present only on `extension` transactions. */
 export interface TransactionExtensionDetail {
   previousExpiresAt: string;
+  /** Purchased duration; it cannot be derived when an expired term restarts from now. */
+  extensionDays: number;
   extendedUntil: string;
 }
 

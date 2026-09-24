@@ -248,6 +248,7 @@ export const mockAdminAlerts: readonly AdminAlert[] = [
     description:
       "Manual bank transfers verified but not yet confirmed in the ledger.",
     actionLabel: "Review Transactions",
+    actionHref: "/admin/transactions",
   },
   {
     id: "alert_expiring_soon",
@@ -256,6 +257,7 @@ export const mockAdminAlerts: readonly AdminAlert[] = [
     description:
       "Marc & Julianne and 2 others are approaching the end of their hosting window.",
     actionLabel: "View Invitations",
+    actionHref: "/admin/invitations",
   },
   {
     id: "alert_zero_quota",
@@ -264,6 +266,7 @@ export const mockAdminAlerts: readonly AdminAlert[] = [
     description:
       "These customers cannot finalize a new invitation without a top-up.",
     actionLabel: "Review Customers",
+    actionHref: "/admin/customers",
   },
   {
     id: "alert_unpublished_finalized",
@@ -272,5 +275,6 @@ export const mockAdminAlerts: readonly AdminAlert[] = [
     description:
       "Content is locked and ready; the couple has not gone live yet.",
     actionLabel: "View Invitations",
+    actionHref: "/admin/invitations",
   },
 ];

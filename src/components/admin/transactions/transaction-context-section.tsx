@@ -12,7 +12,6 @@ import type {
   AdminTransactionPackageEffect,
   AdminTransactionPrintedEffect,
   AdminTransactionQuotaEffect,
-  TransactionStatus,
 } from "@/types";
 
 /**
@@ -21,17 +20,19 @@ import type {
  * cancelled/refunded transactions must never imply a future action.
  */
 function effectNote(
-  status: TransactionStatus,
+  transaction: Pick<AdminTransactionListItem, "status" | "paidAt">,
   appliedText: string,
   pendingText: string,
 ): string {
-  switch (status) {
+  switch (transaction.status) {
     case "paid":
       return appliedText;
     case "pending":
       return pendingText;
     case "cancelled":
-      return "This transaction was cancelled before its commercial effect was applied.";
+      return transaction.paidAt
+        ? `${appliedText} The later cancellation did not reverse this effect or refund the settled payment.`
+        : "This transaction was cancelled before its commercial effect was applied.";
     case "refunded":
       return "This transaction was refunded. Its commercial effect is no longer active.";
     default:
@@ -100,7 +101,7 @@ function PackageContext({
       </dl>
       <p className="mt-4 bg-accent p-4 text-[11px] leading-5 text-accent-foreground">
         {effectNote(
-          transaction.status,
+          transaction,
           `${effect.packageName} is active for ${transaction.customer.name}, with +${effect.quotaGranted} invitation quota granted.`,
           `Confirming this payment will activate ${effect.packageName} and grant +${effect.quotaGranted} invitation quota to ${transaction.customer.name}.`,
         )}
@@ -131,7 +132,7 @@ function QuotaContext({
       </dl>
       <p className="mt-4 bg-accent p-4 text-[11px] leading-5 text-accent-foreground">
         {effectNote(
-          transaction.status,
+          transaction,
           `+${effect.quantity} invitation quota has been granted to ${transaction.customer.name}.`,
           `Confirming this payment will grant +${effect.quantity} invitation quota to ${transaction.customer.name}.`,
         )}
@@ -172,7 +173,7 @@ function ExtensionContext({
       </dl>
       <p className="mt-4 bg-accent p-4 text-[11px] leading-5 text-accent-foreground">
         {effectNote(
-          transaction.status,
+          transaction,
           `${effect.coupleLabel}'s hosting window was extended through ${transactionDateFormat.format(new Date(effect.newExpiresAt))}.`,
           `Confirming this payment will extend ${effect.coupleLabel}'s hosting window to the later of today or its existing expiration, plus ${effect.extensionDays} days.`,
         )}

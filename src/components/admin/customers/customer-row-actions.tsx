@@ -37,27 +37,24 @@ export function CustomerRowActions({
           >
             <UserRoundSearch aria-hidden size={15} /> View Customer
           </Link>
-          <span
-            aria-disabled="true"
-            title="Create Invitation (coming next)"
-            className="flex cursor-not-allowed items-center gap-2 px-3 py-2 text-[12px] text-on-surface-variant/55"
+          <Link
+            href={`/admin/invitations/new?customerId=${customer.id}`}
+            className="flex items-center gap-2 px-3 py-2 text-[12px] font-medium transition-colors hover:bg-surface-low"
           >
             <MailPlus aria-hidden size={15} /> Create Invitation
-          </span>
-          <span
-            aria-disabled="true"
-            title="Quota adjustment is intentionally deferred"
-            className="flex cursor-not-allowed items-center gap-2 px-3 py-2 text-[12px] text-on-surface-variant/55"
+          </Link>
+          <Link
+            href={`/admin/customers/${customer.id}`}
+            className="flex items-center gap-2 px-3 py-2 text-[12px] font-medium transition-colors hover:bg-surface-low"
           >
-            <Gauge aria-hidden size={15} /> Adjust Quota
-          </span>
-          <span
-            aria-disabled="true"
-            title="Transactions page (coming soon)"
-            className="flex cursor-not-allowed items-center gap-2 px-3 py-2 text-[12px] text-on-surface-variant/55"
+            <Gauge aria-hidden size={15} /> Manage Quota
+          </Link>
+          <Link
+            href="/admin/transactions"
+            className="flex items-center gap-2 px-3 py-2 text-[12px] font-medium transition-colors hover:bg-surface-low"
           >
             <ReceiptText aria-hidden size={15} /> View Transactions
-          </span>
+          </Link>
         </div>
       ) : null}
     </div>

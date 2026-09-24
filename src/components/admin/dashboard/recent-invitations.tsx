@@ -1,5 +1,6 @@
 import { InvitationStatusBadge } from "@/components/customer/invitation-status-badge";
 import type { RecentInvitation } from "@/types";
+import Link from "next/link";
 
 const dateFormat = new Intl.DateTimeFormat("en-GB", {
   day: "numeric",
@@ -24,13 +25,12 @@ export function RecentInvitationsList({
             Recent Invitations
           </h2>
         </div>
-        <span
-          aria-disabled="true"
-          title="Invitations page (coming soon)"
-          className="cursor-not-allowed text-[11px] font-semibold tracking-[0.12em] text-on-surface-variant/70 uppercase"
+        <Link
+          href="/admin/invitations"
+          className="text-[11px] font-semibold tracking-[0.12em] text-on-surface-variant uppercase transition-colors hover:text-primary"
         >
           View all
-        </span>
+        </Link>
       </div>
 
       <ul className="flex flex-col divide-y divide-border">

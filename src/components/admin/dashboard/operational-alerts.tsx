@@ -1,5 +1,6 @@
 import { AlertTriangle, Info, OctagonAlert } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import Link from "next/link";
 
 import type { AdminAlert, AdminAlertSeverity } from "@/types";
 
@@ -52,13 +53,12 @@ export function OperationalAlerts({ alerts }: { alerts: AdminAlert[] }) {
                     </span>
                   </div>
                 </div>
-                <span
-                  aria-disabled="true"
-                  title={`${alert.actionLabel} (coming soon)`}
-                  className="shrink-0 cursor-not-allowed self-center text-[11px] font-semibold tracking-[0.1em] text-on-surface-variant/70 uppercase"
+                <Link
+                  href={alert.actionHref}
+                  className="shrink-0 self-center text-[11px] font-semibold tracking-[0.1em] text-on-surface-variant uppercase transition-colors hover:text-primary"
                 >
                   {alert.actionLabel}
-                </span>
+                </Link>
               </li>
             );
           })}

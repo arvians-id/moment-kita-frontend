@@ -1,28 +1,41 @@
 import { CreditCard, Gauge, Plus, UserPlus } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import Link from "next/link";
 
 interface AdminQuickAction {
   label: string;
   hint: string;
   icon: LucideIcon;
+  href: string;
 }
 
 const actions: AdminQuickAction[] = [
-  { label: "Create Invitation", hint: "Provision a new suite", icon: Plus },
-  { label: "Add Customer", hint: "Register a client", icon: UserPlus },
+  {
+    label: "Create Invitation",
+    hint: "Provision a new suite",
+    icon: Plus,
+    href: "/admin/invitations/new",
+  },
+  {
+    label: "Add Customer",
+    hint: "Open customer registry",
+    icon: UserPlus,
+    href: "/admin/customers",
+  },
   {
     label: "Confirm Payment",
-    hint: "Settle a pending transaction",
+    hint: "Review pending payments",
     icon: CreditCard,
+    href: "/admin/transactions",
   },
-  { label: "Adjust Quota", hint: "Grant or reduce credits", icon: Gauge },
+  {
+    label: "Adjust Quota",
+    hint: "Open quota operations",
+    icon: Gauge,
+    href: "/admin/packages",
+  },
 ];
 
-/**
- * Shortcuts into flows that are not built yet — every tile stays inert
- * (`available: false`-style presentation) until its destination page lands,
- * matching the Customer CMS's own convention for not-yet-built actions.
- */
 export function AdminQuickActions() {
   return (
     <section className="flex flex-col gap-4 border border-border bg-surface-lowest p-5 sm:p-6">
@@ -31,12 +44,11 @@ export function AdminQuickActions() {
       </span>
 
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
-        {actions.map(({ label, hint, icon: Icon }) => (
-          <span
+        {actions.map(({ label, hint, icon: Icon, href }) => (
+          <Link
             key={label}
-            aria-disabled="true"
-            title={`${label} (coming soon)`}
-            className="flex cursor-not-allowed items-center gap-3 bg-surface-container p-3.5 text-left"
+            href={href}
+            className="flex items-center gap-3 bg-surface-container p-3.5 text-left transition-colors hover:bg-surface-high focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary"
           >
             <span className="grid size-9 shrink-0 place-items-center bg-surface-lowest">
               <Icon aria-hidden size={18} />
@@ -49,7 +61,7 @@ export function AdminQuickActions() {
                 {hint}
               </span>
             </span>
-          </span>
+          </Link>
         ))}
       </div>
     </section>

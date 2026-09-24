@@ -105,6 +105,7 @@ export interface AdminAlert {
   title: string;
   description: string;
   actionLabel: string;
+  actionHref: string;
 }
 
 export interface AdminDashboardData {

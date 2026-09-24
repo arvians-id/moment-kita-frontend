@@ -171,6 +171,7 @@ function buildFromSharedAdminFixtures(): AdminTransactionListItem[] {
         const previousExpiresAt = firstInvitation.expiresAt;
         extension = {
           previousExpiresAt,
+          extensionDays: 30,
           extendedUntil: addDaysIso(previousExpiresAt, 30),
         };
       }
@@ -364,17 +365,11 @@ function buildExtensionEffect(
     return null;
   }
 
-  const extensionDays = Math.round(
-    (new Date(transaction.extension.extendedUntil).getTime() -
-      new Date(transaction.extension.previousExpiresAt).getTime()) /
-      86_400_000,
-  );
-
   return {
     invitationId: transaction.relatedInvitation.id,
     coupleLabel: transaction.relatedInvitation.coupleLabel,
     previousExpiresAt: transaction.extension.previousExpiresAt,
-    extensionDays,
+    extensionDays: transaction.extension.extensionDays,
     newExpiresAt: transaction.extension.extendedUntil,
   };
 }

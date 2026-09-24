@@ -39,8 +39,9 @@ export function AdminMobileNav(props: Omit<AdminSidebarProps, "onNavigate">) {
         type="button"
         aria-expanded={isOpen}
         aria-controls="admin-mobile-nav"
-        aria-label={isOpen ? "Close navigation" : "Open navigation"}
-        onClick={() => setIsOpen((current) => !current)}
+        aria-label="Open navigation"
+        disabled={isOpen}
+        onClick={() => setIsOpen(true)}
         className="grid size-10 place-items-center text-on-surface transition-colors hover:bg-surface-container focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary"
       >
         {isOpen ? <X aria-hidden size={21} /> : <Menu aria-hidden size={21} />}
@@ -66,6 +67,14 @@ export function AdminMobileNav(props: Omit<AdminSidebarProps, "onNavigate">) {
                 aria-label="Admin navigation"
                 className="fixed inset-y-0 left-0 z-50 flex w-[min(20rem,88vw)] flex-col border-r border-border bg-surface-low shadow-[0_18px_40px_-12px_rgba(46,38,33,0.28)]"
               >
+                <button
+                  type="button"
+                  onClick={() => setIsOpen(false)}
+                  aria-label="Close navigation"
+                  className="absolute top-4 right-4 z-10 grid size-9 place-items-center text-on-surface-variant transition-colors hover:bg-surface-container hover:text-on-surface focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary"
+                >
+                  <X aria-hidden size={19} />
+                </button>
                 <AdminSidebarContent
                   {...props}
                   onNavigate={() => setIsOpen(false)}

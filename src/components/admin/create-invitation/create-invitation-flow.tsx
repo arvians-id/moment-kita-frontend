@@ -2,7 +2,7 @@
 
 import { ArrowLeft, ArrowRight, Save, X } from "lucide-react";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useMemo, useState } from "react";
 
 import {
@@ -47,6 +47,7 @@ export function AdminCreateInvitationFlow({
 }: {
   data: AdminCreateInvitationData;
 }) {
+  const router = useRouter();
   const searchParams = useSearchParams();
   const requestedCustomerId = searchParams.get("customerId");
   const initialCustomerId = data.customers.some(
@@ -180,7 +181,7 @@ export function AdminCreateInvitationFlow({
           onClick={() =>
             dirty
               ? setShowExit(true)
-              : window.location.assign("/admin/invitations")
+              : router.push("/admin/invitations")
           }
           className="inline-flex min-h-9 items-center gap-2 px-3 text-[9px] font-semibold tracking-[0.11em] text-on-surface-variant uppercase hover:bg-surface-container"
         >

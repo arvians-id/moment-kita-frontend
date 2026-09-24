@@ -128,7 +128,6 @@ export function InvitationDirectory({
       expirationFilter,
       invitations,
       now,
-      query,
       segment,
       statusFilter,
       templateFilter,

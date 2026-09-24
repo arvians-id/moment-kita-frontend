@@ -144,6 +144,7 @@ export function TransactionDirectory({
   function applyCancel(reason: string) {
     if (!pendingAction) return;
     const { transaction } = pendingAction;
+    const wasPaid = transaction.status === "paid";
 
     setTransactions((current) =>
       current.map((item) =>
@@ -152,7 +153,11 @@ export function TransactionDirectory({
           : item,
       ),
     );
-    setNotice(`${transaction.reference} was cancelled. No commercial effect was applied.`);
+    setNotice(
+      wasPaid
+        ? `${transaction.reference} was cancelled. Its settled payment and granted commercial effect were not reversed.`
+        : `${transaction.reference} was cancelled. No commercial effect was applied.`,
+    );
     setPendingAction(null);
   }
 

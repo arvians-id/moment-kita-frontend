@@ -1,6 +1,7 @@
 "use client";
 
 import { AlertTriangle, Eye, PenLine, X } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import { InvitationPrivilegedDialog } from "@/components/admin/invitation-detail/invitation-privileged-dialog";
@@ -38,6 +39,7 @@ export function AdminInvitationEditor({
 }: {
   initialData: AdminInvitationEditorData;
 }) {
+  const router = useRouter();
   const [content, setContent] = useState(() =>
     cloneContent(initialData.content),
   );
@@ -145,7 +147,7 @@ export function AdminInvitationEditor({
       setPendingNavigation(href);
       return;
     }
-    window.location.assign(href);
+    router.push(href);
   }
 
   function confirmLifecycle() {
@@ -337,7 +339,7 @@ export function AdminInvitationEditor({
               </button>
               <button
                 type="button"
-                onClick={() => window.location.assign(pendingNavigation)}
+                onClick={() => router.push(pendingNavigation)}
                 className="min-h-11 bg-red-700 px-5 text-[10px] font-semibold tracking-[0.1em] text-white uppercase"
               >
                 Discard &amp; Leave

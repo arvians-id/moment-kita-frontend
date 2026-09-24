@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 
 import { PackageEditorForm } from "@/components/admin/packages/package-editor-form";
@@ -79,6 +80,7 @@ export function PackageEditorView({
   mode: "create" | "edit";
   data: AdminPackageEditorData;
 }) {
+  const router = useRouter();
   const initialValues = useMemo(
     () => toFormValues(data.package),
     [data.package],
@@ -141,7 +143,7 @@ export function PackageEditorView({
       setNotice(
         `${values.name} created in this local preview. Packages & Quota reflects new packages only once the mock/service layer is connected to real persistence — returning to the registry now.`,
       );
-      window.setTimeout(() => window.location.assign("/admin/packages"), 900);
+      window.setTimeout(() => router.push("/admin/packages"), 900);
       return;
     }
 
@@ -157,7 +159,7 @@ export function PackageEditorView({
       setPendingNavigation(destination);
       return;
     }
-    window.location.assign(destination);
+    router.push(destination);
   }
 
   return (
@@ -230,7 +232,7 @@ export function PackageEditorView({
               </button>
               <button
                 type="button"
-                onClick={() => window.location.assign(pendingNavigation)}
+                onClick={() => router.push(pendingNavigation)}
                 className="min-h-11 bg-red-700 px-5 text-[10px] font-semibold tracking-[0.1em] text-white uppercase"
               >
                 Discard &amp; Leave

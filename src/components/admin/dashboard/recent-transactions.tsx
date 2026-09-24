@@ -1,5 +1,6 @@
 import { TransactionStatusBadge } from "@/components/customer/transactions/transaction-status-badge";
 import type { AdminTransactionPurpose, RecentTransaction } from "@/types";
+import Link from "next/link";
 
 const currencyFormat = new Intl.NumberFormat("id-ID", {
   style: "currency",
@@ -36,13 +37,12 @@ export function RecentTransactionsTable({
             Recent Transactions
           </h2>
         </div>
-        <span
-          aria-disabled="true"
-          title="Transactions page (coming soon)"
-          className="cursor-not-allowed text-[11px] font-semibold tracking-[0.12em] text-on-surface-variant/70 uppercase"
+        <Link
+          href="/admin/transactions"
+          className="text-[11px] font-semibold tracking-[0.12em] text-on-surface-variant uppercase transition-colors hover:text-primary"
         >
           View all
-        </span>
+        </Link>
       </div>
 
       <div className="overflow-x-auto">

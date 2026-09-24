@@ -128,8 +128,17 @@ export const adminNavigation: AdminNavGroup[] = [
  * it needs an exact match instead of the usual `startsWith` check.
  */
 export function isCurrentRoute(pathname: string, href: string): boolean {
-  if (href === ADMIN_APP_ROOT) return pathname === ADMIN_APP_ROOT;
-  return pathname === href || pathname.startsWith(`${href}/`);
+  const normalizedPathname =
+    pathname.length > 1 ? pathname.replace(/\/+$/, "") : pathname;
+  const normalizedHref = href.length > 1 ? href.replace(/\/+$/, "") : href;
+
+  if (normalizedHref === ADMIN_APP_ROOT) {
+    return normalizedPathname === ADMIN_APP_ROOT;
+  }
+  return (
+    normalizedPathname === normalizedHref ||
+    normalizedPathname.startsWith(`${normalizedHref}/`)
+  );
 }
 
 /** Resolves the active nav group + item for a pathname, for breadcrumbs. */

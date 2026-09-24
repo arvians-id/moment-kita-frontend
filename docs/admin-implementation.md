@@ -21,9 +21,35 @@
 - Printed Order Detail
 - Notifications
 - Settings
-
-### Next
 - Final Admin QA / Integration Pass
+
+---
+
+## Final QA
+
+- Navigation and active states were verified across the canonical Admin shell,
+  mobile drawer, topbar, contextual links, and all documented child routes.
+- Route coverage was verified for all completed Admin pages, including dynamic
+  detail routes, invitation tabs, template tabs, and package editor variants.
+- Shared customer, invitation, template, package, transaction, printed-order,
+  and notification service projections were checked for consistent ownership
+  and resource linking; managed customers remain valid without a linked User.
+- Invitation lifecycle, expiration/extension math, quota accounting, immutable
+  package entitlement snapshots, template-version pinning, and separated
+  payment/order states were verified against the technical design.
+- Every canonical Admin route was exercised at desktop, tablet, and mobile
+  widths with no viewport overflow or missing mobile navigation. Customer CMS
+  and public/auth routes also passed representative regression sweeps.
+- Notifications share one unread source with the topbar; privileged actions,
+  confirmation dialogs, editor guards, filters, settings reset/save behavior,
+  and empty/not-found handling were interaction-checked.
+- `npm run lint`, `npm run typecheck`, and `npm run build` pass cleanly. The
+  production export generated 309 static pages and a fresh-browser route sweep
+  completed without console warnings or errors.
+
+The completed Admin CMS is frontend-complete for the approved mock/service
+scope. Backend persistence, authentication enforcement, payment processing,
+and production audit storage remain intentionally outside this frontend pass.
 
 ---
 

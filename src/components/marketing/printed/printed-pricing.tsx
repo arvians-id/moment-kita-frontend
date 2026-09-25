@@ -5,57 +5,60 @@ import { externalLinkProps, whatsappHref } from "@/lib/whatsapp";
 
 const tiers = [
   {
-    tier: "Tier 01",
-    name: "Intimate Gatherings",
-    summary: "Designed for boutique weddings, microweddings, and elopements.",
+    tier: "Pilihan 01",
+    name: "Perayaan Intim",
+    summary: "Untuk pernikahan butik, intimate wedding, dan elopement.",
     price: "Rp2.400.000–2.900.000",
-    unit: "/ complete suite",
-    guidance: "Recommended for 30–50 Suites",
+    unit: "/ set lengkap",
+    guidance: "Disarankan untuk 30–50 Set",
     features: [
-      "Main Invitation on 600gsm Cotton",
-      "RSVP Card + Addressed Return Envelope",
-      "Main Envelope with Return Address",
-      "1 Metallic Foil or Blind Deboss Pass",
+      "Undangan Utama di Kertas Katun 600gsm",
+      "Kartu RSVP + Amplop Balasan Beralamat",
+      "Amplop Utama dengan Alamat Pengirim",
+      "1 Proses Foil Metalik atau Blind Deboss",
     ],
-    cta: "Inquire for 30–50 Suites",
-    message: "Quote request for the Intimate Gatherings tier",
+    cta: "Tanyakan untuk 30–50 Set",
+    message:
+      "Halo Moment Kita, saya ingin meminta penawaran untuk pilihan Perayaan Intim.",
     featured: false,
   },
   {
-    tier: "Tier 02",
-    name: "Classic Celebration",
+    tier: "Pilihan 02",
+    name: "Perayaan Klasik",
     summary:
-      "Our signature full-suite experience with hand-adorned embellishments.",
+      "Rangkaian lengkap khas kami dengan detail yang dikerjakan dengan tangan.",
     price: "Rp1.850.000–2.250.000",
-    unit: "/ complete suite",
-    guidance: "Recommended for 75–125 Suites",
+    unit: "/ set lengkap",
+    guidance: "Disarankan untuk 75–125 Set",
     features: [
-      "Main Invite on 700gsm French Moulin",
-      "RSVP Card & Illustrated Details Card",
-      "Custom Monogram Wax Seal & Vellum Liner",
-      "Hand-Torn Deckle Edge Finishing",
-      "Complimentary Digital RSVP Web Sync",
+      "Undangan Utama di French Moulin 700gsm",
+      "Kartu RSVP & Kartu Detail Berilustrasi",
+      "Segel Lilin Monogram & Lapisan Vellum",
+      "Finishing Tepi Deckle Buatan Tangan",
+      "Sinkronisasi RSVP Digital",
     ],
-    cta: "Inquire for 75–125 Suites",
-    message: "Quote request for the Classic Celebration tier",
+    cta: "Tanyakan untuk 75–125 Set",
+    message:
+      "Halo Moment Kita, saya ingin meminta penawaran untuk pilihan Perayaan Klasik.",
     featured: true,
   },
   {
-    tier: "Tier 03",
+    tier: "Pilihan 03",
     name: "Grand Haute Couture",
     summary:
-      "Multi-day destination weddings with day-of stationery harmonization.",
-    price: "Custom",
-    unit: "/ bespoke curation",
-    guidance: "Recommended for 150+ Suites",
+      "Untuk destination wedding beberapa hari dengan stationery hari acara.",
+    price: "Khusus",
+    unit: "/ rancangan personal",
+    guidance: "Disarankan untuk 150+ Set",
     features: [
-      "Double-Thick 900gsm Cardstock with Gilded Edges",
-      "Full Weekend 5-Piece Suite + Custom Map",
-      "Hand-Penned Ink Calligraphy Guest Addressing",
-      "Full Day-Of Event Suite (Menus, Vow Books, Signs)",
+      "Kartu 900gsm Ekstra Tebal dengan Tepi Gilded",
+      "Rangkaian 5 Bagian + Peta Khusus",
+      "Alamat Tamu dengan Kaligrafi Tangan",
+      "Stationery Hari Acara (Menu, Buku Janji, Signage)",
     ],
-    cta: "Request Private Consultation",
-    message: "Quote request for the Grand Haute Couture tier",
+    cta: "Minta Konsultasi Personal",
+    message:
+      "Halo Moment Kita, saya ingin meminta penawaran untuk pilihan Grand Haute Couture.",
     featured: false,
   },
 ] as const;
@@ -66,15 +69,15 @@ export function PrintedPricing() {
       <Container>
         <div className="mx-auto mb-12 max-w-3xl text-center">
           <p className="mb-1 text-[11px] leading-4 font-semibold tracking-[0.2em] text-secondary uppercase">
-            Investment Clarity
+            Rincian Harga
           </p>
           <h2 className="font-serif text-[28px] leading-[34px] md:text-[40px] md:leading-[48px] md:tracking-[-0.015em]">
-            Transparent Atelier Pricing
+            Harga Cetak yang Transparan
           </h2>
           <p className="mt-2 text-[15px] leading-6 text-on-surface-variant">
-            Because every suite utilizes authentic artisan letterpress and
-            manual finishing, costs are governed by paper density, foil passes,
-            and quantity. No hidden plate fees.
+            Karena setiap set menggunakan letterpress dan finishing manual,
+            harga mengikuti ketebalan kertas, jumlah proses foil, dan kuantitas.
+            Tidak ada biaya pelat tersembunyi.
           </p>
         </div>
 
@@ -90,7 +93,7 @@ export function PrintedPricing() {
             >
               {tier.featured ? (
                 <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-secondary px-4 py-1 text-[11px] leading-4 font-semibold tracking-[0.2em] whitespace-nowrap text-secondary-foreground uppercase">
-                  Most Commissioned
+                  Paling Sering Dipesan
                 </span>
               ) : null}
               <div>
@@ -145,22 +148,22 @@ export function PrintedPricing() {
         <div className="mt-12 flex flex-col items-center justify-between gap-6 rounded-[8px] bg-surface-container p-8 md:flex-row">
           <div>
             <h3 className="font-serif text-xl leading-7">
-              Need an exact formal quote for your guest count?
+              Perlu penawaran sesuai jumlah tamu Anda?
             </h3>
             <p className="text-[13px] leading-5 text-on-surface-variant">
-              Send us your quantity and favored pieces on WhatsApp for an
-              itemized estimate.
+              Kirim jumlah dan pilihan item melalui WhatsApp untuk estimasi yang
+              terperinci.
             </p>
           </div>
           <a
             href={whatsappHref(
-              "Hello, I would like a tailored printed stationery quote.",
+              "Halo Moment Kita, saya ingin meminta penawaran stationery cetak sesuai kebutuhan.",
             )}
             {...externalLinkProps}
             className="flex items-center gap-2 rounded-full bg-secondary px-8 py-4 text-[12px] leading-4 font-semibold tracking-[0.12em] whitespace-nowrap text-secondary-foreground uppercase shadow-sm transition-opacity hover:opacity-90"
           >
             <Calculator aria-hidden size={18} />
-            <span>Instant WhatsApp Estimate</span>
+            <span>Minta Estimasi via WhatsApp</span>
           </a>
         </div>
       </Container>

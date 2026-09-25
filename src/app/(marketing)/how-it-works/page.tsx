@@ -1,9 +1,9 @@
 import { HowItWorksPage } from "@/components/marketing/pages/how-it-works-page";
 
 export const metadata = {
-  title: "How It Works",
+  title: "Cara Kerja",
   description:
-    "See how Moment Kita digital invitations and printed stationery come together.",
+    "Lihat alur pembuatan undangan digital dan stationery cetak Moment Kita.",
 };
 
 export default function Page() {

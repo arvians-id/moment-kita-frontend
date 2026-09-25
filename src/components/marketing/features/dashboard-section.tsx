@@ -8,12 +8,12 @@ import {
 import Link from "next/link";
 
 const capabilities = [
-  { icon: Download, label: "Coordinator-ready guest and RSVP exports" },
+  { icon: Download, label: "Ekspor data tamu dan RSVP untuk koordinator" },
   {
     icon: MessageCircle,
-    label: "Clear links for time-sensitive guest updates",
+    label: "Tautan jelas untuk pembaruan penting bagi tamu",
   },
-  { icon: ShieldCheck, label: "No advertising or sale of guest data" },
+  { icon: ShieldCheck, label: "Tanpa iklan atau penjualan data tamu" },
 ] as const;
 
 export function DashboardSection() {
@@ -27,15 +27,14 @@ export function DashboardSection() {
           <div className="flex flex-col gap-4 lg:col-span-5">
             <p className="flex items-center gap-2 text-[10px] font-semibold tracking-[0.2em] text-[#ffb59c] uppercase sm:text-[11px]">
               <span className="size-2 rounded-full bg-secondary" />
-              05 — Host Control Center
+              04 — Dasbor Pasangan
             </p>
             <h2 className="font-serif text-[2rem] leading-[1.12] tracking-[-0.015em] text-white sm:text-[40px] sm:leading-[1.2]">
-              Control your entire celebration from your phone with quiet
-              clarity.
+              Kelola informasi perayaan dari ponsel dengan mudah dan tenang.
             </h2>
             <p className="text-sm leading-6 text-[#c8c6c5] sm:text-[15px]">
-              The couple’s backstage studio keeps responses, dietary notes, and
-              important guest information composed in one place.
+              Respons, catatan makanan, dan informasi penting tamu tersimpan
+              rapi dalam satu tempat.
             </p>
             <div className="space-y-3 pt-1">
               {capabilities.map(({ icon: Icon, label }) => (
@@ -56,7 +55,7 @@ export function DashboardSection() {
               href="/register"
               className="mt-1 inline-flex w-fit items-center justify-center rounded-full bg-secondary px-6 py-3 text-[10px] font-semibold tracking-wider text-white uppercase transition-opacity hover:opacity-90"
             >
-              Open Your Backstage Studio
+              Buka Dasbor Anda
             </Link>
           </div>
 
@@ -68,7 +67,7 @@ export function DashboardSection() {
                 </span>
                 <div>
                   <p className="text-[10px] font-semibold tracking-wider text-white uppercase">
-                    Moment Kita Live Overview
+                    Ringkasan Moment Kita
                   </p>
                   <p className="text-[10px] text-[#9f9c97]">
                     Melina &amp; Dayson • Villa Cimbrone
@@ -80,13 +79,13 @@ export function DashboardSection() {
                   type="button"
                   className="rounded bg-[#2a2825] px-3 py-1 text-[9px] font-semibold uppercase transition-colors hover:bg-secondary"
                 >
-                  Export CSV
+                  Ekspor CSV
                 </button>
                 <button
                   type="button"
                   className="rounded bg-[#2a2825] px-3 py-1 text-[9px] font-semibold uppercase transition-colors hover:bg-secondary"
                 >
-                  Print
+                  Cetak
                 </button>
               </div>
             </div>
@@ -94,21 +93,21 @@ export function DashboardSection() {
             <div className="my-4 grid gap-3 sm:grid-cols-3">
               {[
                 [
-                  "Attendance Rate",
+                  "Tingkat Kehadiran",
                   "94.6%",
-                  "142 of 150 confirmed",
+                  "142 dari 150 terkonfirmasi",
                   "text-emerald-400",
                 ],
                 [
-                  "Dietary Requests",
+                  "Permintaan Menu",
                   "24",
-                  "12 GF, 8 Vegan, 4 Allergies",
+                  "12 GF, 8 Vegan, 4 Alergi",
                   "text-[#ffb59c]",
                 ],
                 [
-                  "Guest Wishes",
+                  "Ucapan Tamu",
                   "86",
-                  "New messages collected",
+                  "Pesan baru terkumpul",
                   "text-emerald-400",
                 ],
               ].map(([label, value, detail, color]) => (
@@ -130,10 +129,10 @@ export function DashboardSection() {
             <div className="flex flex-col gap-3 rounded-xl bg-[#24211e] p-4">
               <div className="flex flex-wrap items-center justify-between gap-2">
                 <span className="text-[10px] font-semibold tracking-wider text-white uppercase">
-                  Live RSVP Attendance Progress
+                  Progres Kehadiran RSVP
                 </span>
                 <span className="text-[9px] font-semibold tracking-wider text-[#ffb59c] uppercase">
-                  Final Deadline: 14 Days
+                  Batas Akhir: 14 Hari
                 </span>
               </div>
               <div className="flex h-2.5 w-full overflow-hidden rounded-full bg-[#181615]">
@@ -147,14 +146,15 @@ export function DashboardSection() {
               <div className="flex flex-wrap justify-between gap-3 text-[10px] text-[#9f9c97]">
                 <span className="flex items-center gap-1.5">
                   <span className="size-2 rounded-full bg-emerald-500" />
-                  124 Attending
+                  124 Hadir
                 </span>
                 <span className="flex items-center gap-1.5">
                   <span className="size-2 rounded-full bg-amber-500" />
-                  18 Pending
+                  18 Menunggu
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <span className="size-2 rounded-full bg-rose-500" />8 Declined
+                  <span className="size-2 rounded-full bg-rose-500" />8 Tidak
+                  Hadir
                 </span>
               </div>
             </div>
@@ -168,15 +168,15 @@ export function DashboardSection() {
                 />
                 <div>
                   <p className="text-[10px] font-semibold text-white uppercase">
-                    Guest Update Center
+                    Pusat Informasi Tamu
                   </p>
                   <p className="text-[9px] text-[#9f9c97]">
-                    Keep the latest schedule and venue details together
+                    Jadwal dan detail lokasi terbaru dalam satu tempat
                   </p>
                 </div>
               </div>
               <span className="flex items-center gap-1 text-[9px] text-emerald-400">
-                <CheckCircle2 aria-hidden size={12} /> Ready
+                <CheckCircle2 aria-hidden size={12} /> Siap
               </span>
             </div>
           </div>

@@ -21,15 +21,15 @@ export function PrintedCollectionSection({
         <div className="mb-7 flex flex-col justify-between gap-4 md:flex-row md:items-end">
           <div>
             <p className="mb-1 text-[11px] leading-4 font-semibold tracking-[0.2em] text-secondary uppercase">
-              Disciplines of Fine Print
+              Koleksi Fine Print
             </p>
             <h2 className="font-serif text-[28px] leading-[34px] md:text-[40px] md:leading-[48px] md:tracking-[-0.015em]">
-              Curated Aesthetic Editions
+              Pilihan Gaya yang Dikurasi
             </h2>
           </div>
           <p className="max-w-md text-[13px] leading-5 text-on-surface-variant">
-            Each edition serves as an architectural foundation ready to be
-            shaped to your wedding story, venue texture, and personal monogram.
+            Setiap edisi dapat disesuaikan dengan kisah pernikahan, suasana
+            lokasi, dan monogram personal Anda.
           </p>
         </div>
 
@@ -47,20 +47,22 @@ export function PrintedCollectionSection({
             />
             <div>
               <h3 className="font-serif text-lg leading-7">
-                Curious to feel the paper density in your hands?
+                Ingin merasakan tekstur kertasnya secara langsung?
               </h3>
               <p className="text-[13px] leading-5 text-on-surface-variant">
-                Order our curated Artisan Swatch Kit featuring all 6 paper
-                weights, foil tones, and wax seals.
+                Pesan Swatch Kit berisi enam pilihan ketebalan kertas, warna
+                foil, dan contoh segel lilin.
               </p>
             </div>
           </div>
           <a
-            href={whatsappHref("Order Swatch Kit")}
+            href={whatsappHref(
+              "Halo Moment Kita, saya ingin memesan Swatch Kit.",
+            )}
             {...externalLinkProps}
             className="rounded-full bg-primary px-6 py-3 text-[12px] leading-4 font-semibold tracking-[0.12em] whitespace-nowrap text-primary-foreground uppercase transition-colors hover:bg-secondary"
           >
-            Order Swatch Kit (Rp250.000)
+            Pesan Swatch Kit (Rp250.000)
           </a>
         </div>
       </Container>

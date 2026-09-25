@@ -4,8 +4,8 @@ import { Container } from "@/components/shared/container";
 import { externalLinkProps, whatsappHref } from "@/lib/whatsapp";
 
 const bespokeServices = [
-  { title: "Custom Monograms", text: "Hand-drawn vector crests" },
-  { title: "Venue Line-Art", text: "Custom venue & villa art" },
+  { title: "Monogram Khusus", text: "Emblem vektor gambar tangan" },
+  { title: "Ilustrasi Lokasi", text: "Gambar khusus venue & vila" },
 ] as const;
 
 export function ConciergeCallouts() {
@@ -21,41 +21,39 @@ export function ConciergeCallouts() {
               <div className="mb-4 flex items-center gap-2">
                 <Package aria-hidden size={24} className="text-secondary" />
                 <span className="text-[11px] leading-4 font-semibold tracking-[0.2em] text-secondary uppercase">
-                  Physical Material Experience
+                  Pengalaman Material
                 </span>
               </div>
               <h2 className="mb-3 font-serif text-[28px] leading-9 font-medium tracking-[-0.01em]">
-                Order the Atelier Monograph Swatch Box
+                Pesan Kotak Contoh Material
               </h2>
               <p className="mb-6 text-[15px] leading-relaxed text-on-surface-variant">
-                Hold the tactile reality in your hands before committing.
-                Includes full-weight 600gsm &amp; 800gsm cotton cards, metallic
-                foil swatches (rose gold, champagne, matte copper), physical wax
-                seal impressions, and fine-milled paper envelopes.
+                Rasakan langsung materialnya sebelum memesan. Berisi kartu katun
+                600gsm &amp; 800gsm, contoh foil metalik (rose gold, champagne,
+                matte copper), segel lilin, dan amplop kertas pilihan.
               </p>
               <div className="mb-6 flex flex-wrap items-center gap-4 rounded-[12px] bg-surface-low px-4 py-3">
                 <span className="font-serif text-[22px] leading-[30px] font-semibold">
                   Rp250.000
                 </span>
                 <span className="flex-1 text-xs leading-tight text-on-surface-variant">
-                  <strong className="font-semibold">100% credited</strong>{" "}
-                  toward your final invitation suite production run or print
-                  order.
+                  <strong className="font-semibold">100% diperhitungkan</strong>{" "}
+                  ke nilai produksi atau pesanan cetak akhir Anda.
                 </span>
               </div>
             </div>
             <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
               <a
                 href={whatsappHref(
-                  "Hello Moment Kita, I would like to request the Atelier Monograph Swatch Box.",
+                  "Halo Moment Kita, saya ingin memesan Kotak Contoh Material.",
                 )}
                 {...externalLinkProps}
                 className="w-full rounded-[8px] bg-primary px-6 py-3.5 text-center text-[12px] leading-4 font-semibold tracking-[0.12em] text-primary-foreground uppercase transition-colors hover:bg-secondary sm:w-auto"
               >
-                Request Curated Swatch Box
+                Pesan Kotak Contoh
               </a>
               <span className="font-mono text-xs text-on-surface-variant">
-                Dispatched after studio confirmation
+                Dikirim setelah konfirmasi tim
               </span>
             </div>
           </div>
@@ -65,17 +63,16 @@ export function ConciergeCallouts() {
               <div className="mb-4 flex items-center gap-2">
                 <Palette aria-hidden size={24} className="text-secondary" />
                 <span className="text-[11px] leading-4 font-semibold tracking-[0.2em] text-secondary uppercase">
-                  Bespoke Typographic Monogram
+                  Monogram Tipografi Khusus
                 </span>
               </div>
               <h2 className="mb-3 font-serif text-[28px] leading-9 font-medium tracking-[-0.01em]">
-                Need Tailored Crests or Illustrated Venues?
+                Perlu Monogram atau Ilustrasi Lokasi Khusus?
               </h2>
               <p className="mb-6 text-[15px] leading-relaxed text-on-surface-variant">
-                Every curated template can be elevated with our hand-drafted
-                custom illustration services. Our studio typographers will
-                hand-render your wedding venue, custom family monogram crest, or
-                illustrated map coordinates into your selected template.
+                Setiap template dapat dilengkapi ilustrasi khusus. Tim kami
+                dapat menggambar lokasi pernikahan, monogram keluarga, atau peta
+                ilustratif untuk template pilihan Anda.
               </p>
               <div className="mb-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
                 {bespokeServices.map(({ title, text }) => (
@@ -93,16 +90,16 @@ export function ConciergeCallouts() {
             <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
               <a
                 href={whatsappHref(
-                  "Hello Moment Kita, I would like to discuss a bespoke crest or illustrated venue.",
+                  "Halo Moment Kita, saya ingin mendiskusikan monogram atau ilustrasi lokasi khusus.",
                 )}
                 {...externalLinkProps}
                 className="flex w-full items-center justify-center gap-2 rounded-[8px] bg-surface-container px-6 py-3.5 text-center text-[12px] leading-4 font-semibold tracking-[0.12em] uppercase transition-colors hover:bg-secondary hover:text-secondary-foreground sm:w-auto"
               >
                 <MessageCircle aria-hidden size={16} />
-                <span>Inquire with Concierge</span>
+                <span>Konsultasikan dengan Kami</span>
               </a>
               <span className="font-mono text-xs text-on-surface-variant">
-                Replies during studio hours
+                Balasan pada jam operasional
               </span>
             </div>
           </div>

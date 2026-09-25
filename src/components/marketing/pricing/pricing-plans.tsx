@@ -1,10 +1,8 @@
 "use client";
 
 import {
-  ArrowRight,
   Check,
   Gem,
-  Layers3,
   Mail,
   MessageCircle,
   MonitorSmartphone,
@@ -20,148 +18,142 @@ import { idrFormat as currency } from "@/lib/format";
 
 type Mode = "digital" | "print";
 
-
 const planPresentation = {
   essential: {
-    label: "Self-serve",
+    label: "Atur mandiri",
     extras: [
-      "Responsive guest experience",
-      "Event schedule and location details",
-      "Standard template collection",
-      "Studio email support",
+      "Pengalaman tamu yang responsif",
+      "Jadwal acara dan detail lokasi",
+      "Koleksi template standar",
+      "Dukungan melalui email",
     ],
   },
   signature: {
-    label: "Recommended",
+    label: "Direkomendasikan",
     extras: [
-      "Guest RSVP and dietary details",
-      "Gallery and story sections",
-      "Expanded visual personalization",
-      "Priority studio guidance",
+      "RSVP tamu dan detail makanan",
+      "Bagian galeri dan cerita",
+      "Personalisasi visual lebih luas",
+      "Pendampingan prioritas",
     ],
   },
   prestige: {
-    label: "Concierge managed",
+    label: "Dengan pendampingan",
     extras: [
-      "Everything in Signature",
-      "Dedicated setup assistance",
-      "Bespoke typographic direction",
-      "Direct studio consultation",
+      "Semua fitur Signature",
+      "Bantuan pengaturan khusus",
+      "Arahan tipografi personal",
+      "Konsultasi langsung",
     ],
   },
 } as const;
 
 const comparisonGroups = [
   {
-    title: "01 — Invitation foundation",
+    title: "01 — Dasar undangan",
     rows: [
-      ["Digital invitations included", "1", "1", "1"],
+      ["Undangan digital termasuk", "1", "1", "1"],
       [
-        "Template access",
-        "Standard collection",
-        "Curated collection",
-        "Curated collection",
+        "Akses template",
+        "Koleksi standar",
+        "Koleksi pilihan",
+        "Koleksi pilihan",
       ],
-      ["Event and venue details", "Included", "Included", "Included"],
+      ["Detail acara dan lokasi", "Included", "Included", "Included"],
     ],
   },
   {
-    title: "02 — Guest experience",
+    title: "02 — Pengalaman tamu",
     rows: [
-      ["RSVP collection", "Core", "Extended", "Extended"],
-      ["Dietary and household details", "Core", "Extended", "Extended"],
-      ["Guest wishes", "Included", "Included", "Included"],
+      ["Pengumpulan RSVP", "Dasar", "Lengkap", "Lengkap"],
+      ["Detail makanan dan rombongan", "Dasar", "Lengkap", "Lengkap"],
+      ["Ucapan tamu", "Included", "Included", "Included"],
     ],
   },
   {
-    title: "03 — Story and media",
+    title: "03 — Cerita dan media",
     rows: [
-      ["Story sections", "Core", "Extended", "Extended"],
-      ["Gallery presentation", "Core", "Extended", "Extended"],
-      ["Visual identity refinement", "—", "Included", "Studio assisted"],
+      ["Bagian cerita", "Dasar", "Lengkap", "Lengkap"],
+      ["Tampilan galeri", "Dasar", "Lengkap", "Lengkap"],
+      ["Penyempurnaan visual", "—", "Included", "Didampingi tim"],
     ],
   },
   {
-    title: "04 — Studio support",
+    title: "04 — Pendampingan",
     rows: [
-      ["Setup assistance", "Self-guided", "Priority", "White-glove"],
-      [
-        "Design consultation",
-        "—",
-        "Priority support",
-        "Dedicated consultation",
-      ],
-      ["Content preparation", "Self-guided", "Self-guided", "Studio assisted"],
+      ["Bantuan pengaturan", "Mandiri", "Prioritas", "Penuh"],
+      ["Konsultasi desain", "—", "Dukungan prioritas", "Konsultasi khusus"],
+      ["Persiapan konten", "Mandiri", "Mandiri", "Didampingi tim"],
     ],
   },
 ] as const;
 
 const printPresentation = [
   {
-    title: "Essential Collection",
-    label: "Minimum discussed",
+    title: "Koleksi Essential",
+    label: "Minimum sesuai diskusi",
     featured: false,
     features: [
-      "Archival cotton-paper direction",
-      "Letterpress or blind-deboss option",
-      "Coordinated invitation and details cards",
-      "Digital typographic proofing",
+      "Pilihan kertas katun berkualitas",
+      "Opsi letterpress atau blind deboss",
+      "Undangan dan kartu detail yang selaras",
+      "Proof tipografi digital",
     ],
   },
   {
-    title: "Premium Collection",
-    label: "Atelier favorite",
+    title: "Koleksi Premium",
+    label: "Pilihan favorit",
     featured: true,
     features: [
-      "Double-thick cotton-paper direction",
-      "Metallic foil and deboss options",
-      "Vellum, seals, or silk finishing",
-      "Envelope-addressing consultation",
+      "Kertas katun ekstra tebal",
+      "Pilihan foil metalik dan deboss",
+      "Finishing vellum, segel, atau sutra",
+      "Konsultasi alamat amplop",
     ],
   },
   {
     title: "Custom Haute Couture",
-    label: "Private commission",
+    label: "Pesanan personal",
     featured: false,
     features: [
-      "Unconstrained material direction",
-      "Sculptural press and finishing options",
-      "Custom monogram consultation",
-      "Coordinated day-of stationery direction",
+      "Pilihan material yang fleksibel",
+      "Opsi cetak dan finishing khusus",
+      "Konsultasi monogram personal",
+      "Stationery hari acara yang selaras",
     ],
   },
 ] as const;
 
 const costArchitecture = [
   [
-    "01 — Volume",
-    "Quantity Scale",
-    "Production setup is distributed across the final suite quantity.",
-    "Discussed per commission",
+    "01 — Jumlah",
+    "Skala Pesanan",
+    "Biaya persiapan produksi disesuaikan dengan jumlah akhir pesanan.",
+    "Dibahas per pesanan",
   ],
   [
-    "02 — Density",
-    "Paper & Texture",
-    "Paper weight, texture, layers, and deckle treatment shape the quote.",
-    "Cotton and specialty stocks",
+    "02 — Ketebalan",
+    "Kertas & Tekstur",
+    "Ketebalan, tekstur, lapisan, dan tepi deckle membentuk penawaran.",
+    "Katun dan kertas khusus",
   ],
   [
-    "03 — Pressing",
-    "Finishes & Foil",
-    "Each ink, impression, foil, or embossing pass requires its own setup.",
+    "03 — Cetak",
+    "Finishing & Foil",
+    "Setiap tinta, tekanan, foil, atau emboss memerlukan persiapan tersendiri.",
     "Letterpress & foil",
   ],
   [
-    "04 — Embellish",
-    "Seals & Ribbons",
-    "Wax, vellum, ribbon, and assembly add distinct material and handwork.",
-    "Handcrafted details",
+    "04 — Hiasan",
+    "Segel & Pita",
+    "Lilin, vellum, pita, dan perakitan menambah detail material serta pengerjaan tangan.",
+    "Detail buatan tangan",
   ],
   [
-    "05 — Script",
-    "Guest Calligraphy",
-    "Envelope addressing can range from archival print to hand-penned script.",
-    "Digital or hand-penned",
+    "05 — Tulisan",
+    "Kaligrafi Tamu",
+    "Alamat amplop dapat dicetak atau ditulis dengan tangan.",
+    "Digital atau tulisan tangan",
   ],
 ] as const;
 
@@ -184,7 +176,7 @@ function DigitalPricing({ packages }: { packages: Package[] }) {
             >
               {item.featured ? (
                 <span className="absolute -top-3.5 left-1/2 inline-flex -translate-x-1/2 items-center gap-1.5 whitespace-nowrap rounded-full bg-secondary px-4 py-1.5 text-[9px] font-semibold tracking-[0.14em] text-white uppercase shadow-sm">
-                  <Sparkles aria-hidden size={13} /> Most celebrated choice
+                  <Sparkles aria-hidden size={13} /> Pilihan terpopuler
                 </span>
               ) : null}
               <div>
@@ -194,7 +186,7 @@ function DigitalPricing({ packages }: { packages: Package[] }) {
                   <span
                     className={`text-[10px] font-semibold tracking-[0.18em] uppercase ${item.featured ? "text-secondary" : "text-on-surface-variant"}`}
                   >
-                    Plan 0{index + 1}
+                    Paket 0{index + 1}
                   </span>
                   <span
                     className={`rounded px-2.5 py-1 text-[9px] font-semibold tracking-wider uppercase ${item.featured ? "bg-accent text-accent-foreground" : "bg-surface-low text-on-surface-variant"}`}
@@ -211,7 +203,7 @@ function DigitalPricing({ packages }: { packages: Package[] }) {
                     {currency.format(item.price)}
                   </span>
                   <span className="text-[11px] text-on-surface-variant">
-                    / one-time package
+                    / sekali bayar
                   </span>
                 </div>
                 <ul className="my-8 space-y-3.5 text-xs leading-5">
@@ -231,7 +223,7 @@ function DigitalPricing({ packages }: { packages: Package[] }) {
                 href="/register"
                 className={`inline-flex min-h-11 items-center justify-center rounded px-6 text-[10px] font-semibold tracking-wider uppercase transition-colors ${item.featured ? "bg-primary text-white hover:bg-secondary" : "bg-surface-container text-primary hover:bg-surface-high"}`}
               >
-                Choose {item.name}
+                Pilih {item.name}
               </Link>
             </article>
           );
@@ -242,14 +234,12 @@ function DigitalPricing({ packages }: { packages: Package[] }) {
         <div className="flex flex-col justify-between gap-3 border-b border-surface-container pb-5 md:flex-row md:items-end">
           <div>
             <p className="text-[10px] font-semibold tracking-[0.2em] text-secondary uppercase">
-              Detailed architecture
+              Perbandingan Rinci
             </p>
-            <h2 className="mt-1 font-serif text-3xl">
-              Compare Suite Capabilities
-            </h2>
+            <h2 className="mt-1 font-serif text-3xl">Bandingkan Fitur Paket</h2>
           </div>
           <p className="text-xs text-on-surface-variant">
-            Package configuration remains backend-controlled.
+            Konfigurasi paket mengikuti layanan yang tersedia.
           </p>
         </div>
         <div className="overflow-x-auto">
@@ -257,7 +247,7 @@ function DigitalPricing({ packages }: { packages: Package[] }) {
             <thead>
               <tr className="border-b border-surface-container">
                 <th className="w-2/5 px-3 py-4 text-[10px] tracking-wider text-on-surface-variant uppercase">
-                  Capabilities
+                  Fitur
                 </th>
                 {packages.map((item, index) => (
                   <th
@@ -308,7 +298,7 @@ function FragmentRows({ group }: { group: (typeof comparisonGroups)[number] }) {
             >
               {value === "Included" ? (
                 <Check
-                  aria-label="Included"
+                  aria-label="Termasuk"
                   className="mx-auto text-secondary"
                   size={16}
                 />
@@ -330,16 +320,16 @@ function PrintPricing({ products }: { products: PrintedProduct[] }) {
         <div className="grid items-center gap-8 lg:grid-cols-12">
           <div className="lg:col-span-8">
             <p className="text-[10px] font-semibold tracking-[0.2em] text-secondary uppercase">
-              02 — The tactile atelier
+              02 — Stationery Cetak
             </p>
             <h2 className="mt-2 font-serif text-3xl leading-tight sm:text-4xl">
-              Fine letterpress is bespoke craftsmanship, not an automated
-              checkout.
+              Letterpress berkualitas dibuat secara personal, bukan melalui
+              checkout otomatis.
             </h2>
             <p className="mt-4 text-sm leading-7 text-on-surface-variant">
-              Every commission responds to paper weight, impression, finishing,
-              quantity, and assembly. The studio quotes each suite after
-              understanding the complete specification.
+              Setiap pesanan mengikuti ketebalan kertas, tekanan cetak,
+              finishing, jumlah, dan perakitan. Penawaran diberikan setelah
+              seluruh kebutuhan dipahami.
             </p>
           </div>
           <div className="lg:col-span-4 lg:text-right">
@@ -347,10 +337,10 @@ function PrintPricing({ products }: { products: PrintedProduct[] }) {
               href="/contact"
               className="inline-flex min-h-12 items-center justify-center gap-2 rounded bg-primary px-6 text-[10px] font-semibold tracking-wider text-white uppercase hover:bg-secondary"
             >
-              <MessageCircle aria-hidden size={16} /> Inquire via studio
+              <MessageCircle aria-hidden size={16} /> Konsultasi dengan kami
             </Link>
             <p className="mt-2 text-[11px] text-on-surface-variant">
-              Consultation-led · Manually confirmed
+              Melalui konsultasi · Dikonfirmasi manual
             </p>
           </div>
         </div>
@@ -366,13 +356,13 @@ function PrintPricing({ products }: { products: PrintedProduct[] }) {
             >
               {presentation.featured ? (
                 <span className="absolute -top-3.5 left-1/2 inline-flex -translate-x-1/2 items-center gap-1.5 whitespace-nowrap rounded-full bg-secondary px-4 py-1.5 text-[9px] font-semibold tracking-wider text-white uppercase">
-                  <Gem aria-hidden size={13} /> Atelier favorite
+                  <Gem aria-hidden size={13} /> Pilihan favorit
                 </span>
               ) : null}
               <div>
                 <div className="mb-4 flex items-center justify-between gap-3">
                   <span className="text-[10px] font-semibold tracking-[0.18em] text-on-surface-variant uppercase">
-                    Collection 0{index + 1}
+                    Koleksi 0{index + 1}
                   </span>
                   <span className="text-[9px] font-semibold tracking-wider text-secondary uppercase">
                     {presentation.label}
@@ -384,7 +374,7 @@ function PrintPricing({ products }: { products: PrintedProduct[] }) {
                 </p>
                 <div className="mt-6 flex items-baseline gap-2 border-b border-surface-container pb-6">
                   <span className="font-serif text-4xl">
-                    From {currency.format(product.startingPrice)}
+                    Mulai {currency.format(product.startingPrice)}
                   </span>
                 </div>
                 <ul className="my-8 space-y-3.5 text-xs leading-5">
@@ -404,7 +394,7 @@ function PrintPricing({ products }: { products: PrintedProduct[] }) {
                 href="/contact"
                 className={`inline-flex min-h-11 items-center justify-center rounded px-6 text-[10px] font-semibold tracking-wider uppercase ${presentation.featured ? "bg-primary text-white hover:bg-secondary" : "bg-surface-container hover:bg-surface-high"}`}
               >
-                Request consultation
+                Minta konsultasi
               </Link>
             </article>
           );
@@ -414,15 +404,14 @@ function PrintPricing({ products }: { products: PrintedProduct[] }) {
       <section className="mt-20 rounded-xl bg-surface-low p-8 lg:p-12">
         <div className="mb-10 max-w-2xl">
           <p className="text-[10px] font-semibold tracking-[0.2em] text-secondary uppercase">
-            Cost architecture
+            Komponen Biaya
           </p>
           <h2 className="mt-2 font-serif text-3xl sm:text-4xl">
-            Understanding Your Print Investment
+            Memahami Biaya Undangan Cetak
           </h2>
           <p className="mt-3 text-sm leading-7 text-on-surface-variant">
-            Traditional press work combines fixed production setup with material
-            and finishing choices. These five details shape a tailored
-            quotation.
+            Cetak tradisional memadukan persiapan produksi dengan pilihan
+            material dan finishing. Lima detail ini membentuk penawaran Anda.
           </p>
         </div>
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-5">
@@ -455,11 +444,11 @@ function PrintPricing({ products }: { products: PrintedProduct[] }) {
           </span>
           <div>
             <h2 className="font-serif text-xl">
-              Experience the Tactile Swatch Kit
+              Rasakan Material melalui Swatch Kit
             </h2>
             <p className="mt-1 text-xs leading-5 text-on-surface-variant">
-              Compare cotton stocks, impression, foil, and finishing before
-              confirming a printed commission.
+              Bandingkan kertas katun, tekanan cetak, foil, dan finishing
+              sebelum mengonfirmasi pesanan.
             </p>
           </div>
         </div>
@@ -467,7 +456,7 @@ function PrintPricing({ products }: { products: PrintedProduct[] }) {
           href="/contact"
           className="shrink-0 rounded bg-surface-container px-6 py-3 text-[10px] font-semibold tracking-wider uppercase hover:bg-primary hover:text-white"
         >
-          Request sample details
+          Minta detail sampel
         </Link>
       </section>
     </div>
@@ -483,98 +472,55 @@ export function PricingPlans({
 }) {
   const [mode, setMode] = useState<Mode>("digital");
   return (
-    <>
-      <section id="pricing-plans" className="pb-24">
-        <Container>
-          <div className="mb-6 flex justify-center">
-            <div className="inline-flex max-w-full gap-1 overflow-x-auto rounded-full bg-surface-container p-1.5 shadow-sm">
-              <button
-                type="button"
-                aria-pressed={mode === "digital"}
-                onClick={() => setMode("digital")}
-                className={`flex shrink-0 items-center gap-3 rounded-full px-5 py-3 text-left transition-colors sm:px-7 ${mode === "digital" ? "bg-primary text-white shadow-sm" : "text-on-surface hover:bg-surface-high"}`}
-              >
-                <MonitorSmartphone aria-hidden size={18} />
-                <span>
-                  <span className="block text-[10px] font-semibold tracking-wider uppercase">
-                    Digital Invitation Suite
-                  </span>
-                  <span className="mt-0.5 hidden text-[10px] opacity-70 sm:block">
-                    One-time packages, guest-first design
-                  </span>
+    <section id="pricing-plans" className="pb-24">
+      <Container>
+        <div className="mb-6 flex justify-center">
+          <div className="inline-flex max-w-full gap-1 overflow-x-auto rounded-full bg-surface-container p-1.5 shadow-sm">
+            <button
+              type="button"
+              aria-pressed={mode === "digital"}
+              onClick={() => setMode("digital")}
+              className={`flex shrink-0 items-center gap-3 rounded-full px-5 py-3 text-left transition-colors sm:px-7 ${mode === "digital" ? "bg-primary text-white shadow-sm" : "text-on-surface hover:bg-surface-high"}`}
+            >
+              <MonitorSmartphone aria-hidden size={18} />
+              <span>
+                <span className="block text-[10px] font-semibold tracking-wider uppercase">
+                  Undangan Digital
                 </span>
-              </button>
-              <button
-                type="button"
-                aria-pressed={mode === "print"}
-                onClick={() => setMode("print")}
-                className={`flex shrink-0 items-center gap-3 rounded-full px-5 py-3 text-left transition-colors sm:px-7 ${mode === "print" ? "bg-primary text-white shadow-sm" : "text-on-surface hover:bg-surface-high"}`}
-              >
-                <Mail aria-hidden size={18} />
-                <span>
-                  <span className="block text-[10px] font-semibold tracking-wider uppercase">
-                    Artisan Printed Stationery
-                  </span>
-                  <span className="mt-0.5 hidden text-[10px] opacity-70 sm:block">
-                    Cotton paper, press craft, concierge
-                  </span>
+                <span className="mt-0.5 hidden text-[10px] opacity-70 sm:block">
+                  Sekali bayar, nyaman untuk tamu
                 </span>
-              </button>
-            </div>
+              </span>
+            </button>
+            <button
+              type="button"
+              aria-pressed={mode === "print"}
+              onClick={() => setMode("print")}
+              className={`flex shrink-0 items-center gap-3 rounded-full px-5 py-3 text-left transition-colors sm:px-7 ${mode === "print" ? "bg-primary text-white shadow-sm" : "text-on-surface hover:bg-surface-high"}`}
+            >
+              <Mail aria-hidden size={18} />
+              <span>
+                <span className="block text-[10px] font-semibold tracking-wider uppercase">
+                  Stationery Cetak
+                </span>
+                <span className="mt-0.5 hidden text-[10px] opacity-70 sm:block">
+                  Kertas katun, cetak, dan konsultasi
+                </span>
+              </span>
+            </button>
           </div>
-          <p className="mb-12 text-center text-xs text-on-surface-variant">
-            {mode === "digital"
-              ? "Showing one-time digital package prices. Invitation duration follows the configured package lifecycle."
-              : "Showing indicative printed collection starting prices. Every commission is quoted manually."}
-          </p>
-          {mode === "digital" ? (
-            <DigitalPricing packages={packages} />
-          ) : (
-            <PrintPricing products={products} />
-          )}
-        </Container>
-      </section>
-
-      <section className="border-y border-border bg-surface-low py-16">
-        <Container>
-          <div className="flex flex-col items-center justify-between gap-8 rounded-xl bg-surface-lowest p-8 shadow-sm lg:flex-row lg:p-12">
-            <div className="max-w-3xl">
-              <p className="flex items-center gap-2 text-[10px] font-semibold tracking-[0.2em] text-secondary uppercase">
-                <Layers3 aria-hidden size={16} /> The harmonized atelier
-                protocol
-              </p>
-              <h2 className="mt-3 font-serif text-3xl leading-tight">
-                Bring digital ease and tactile keepsakes into one visual world.
-              </h2>
-              <p className="mt-3 text-sm leading-7 text-on-surface-variant">
-                A studio consultation can coordinate typography, color,
-                monogram, and guest communication across both disciplines. Any
-                combined quotation is confirmed manually.
-              </p>
-            </div>
-            <div className="flex w-full shrink-0 flex-col gap-3 sm:w-auto sm:flex-row">
-              <Link
-                href="/contact"
-                className="inline-flex min-h-12 items-center justify-center bg-primary px-6 text-[10px] font-semibold tracking-wider text-white uppercase hover:bg-secondary"
-              >
-                Consult both formats
-              </Link>
-              <button
-                type="button"
-                onClick={() => {
-                  setMode("digital");
-                  document
-                    .getElementById("pricing-plans")
-                    ?.scrollIntoView({ behavior: "smooth" });
-                }}
-                className="inline-flex min-h-12 items-center justify-center gap-2 bg-surface-container px-6 text-[10px] font-semibold tracking-wider uppercase hover:bg-surface-high"
-              >
-                View digital features <ArrowRight aria-hidden size={14} />
-              </button>
-            </div>
-          </div>
-        </Container>
-      </section>
-    </>
+        </div>
+        <p className="mb-12 text-center text-xs text-on-surface-variant">
+          {mode === "digital"
+            ? "Menampilkan harga paket digital sekali bayar. Masa aktif undangan mengikuti ketentuan paket."
+            : "Menampilkan kisaran harga awal koleksi cetak. Setiap pesanan ditawarkan secara manual."}
+        </p>
+        {mode === "digital" ? (
+          <DigitalPricing packages={packages} />
+        ) : (
+          <PrintPricing products={products} />
+        )}
+      </Container>
+    </section>
   );
 }

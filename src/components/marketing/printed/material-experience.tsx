@@ -5,45 +5,45 @@ import { Container } from "@/components/shared/container";
 const crafts = [
   {
     icon: Layers,
-    kicker: "01 · Substrate",
-    title: "Archival Cotton Paper",
-    text: "600gsm to 900gsm pure cotton handmade paper milled in historic European mills with naturally feathered, hand-torn deckle edges. Acid-free and preserved for centuries.",
-    spec: "Density: 600–900 GSM · 100% Cotton Rag",
+    kicker: "01 · Kertas",
+    title: "Kertas Katun Berkualitas",
+    text: "Kertas buatan tangan dari katun murni 600gsm hingga 900gsm, dengan tepi deckle alami yang disobek satu per satu. Bebas asam dan dibuat untuk bertahan lama.",
+    spec: "Ketebalan: 600–900 GSM · 100% Katun",
   },
   {
     icon: Flame,
-    kicker: "02 · Illumination",
+    kicker: "02 · Kilau",
     title: "Hot Foil Stamping",
-    text: "Custom magnesium dies heated to 130°C to press metallic foils deep into the fibers. Available in antique copper, rose bronze, champagne, and matte satin gold.",
-    spec: "Heat: 130°C Thermal Bond · Precision Foil",
+    text: "Cetakan magnesium khusus dipanaskan untuk menekan foil metalik ke dalam serat kertas. Tersedia dalam warna antique copper, rose bronze, champagne, dan emas satin matte.",
+    spec: "Panas: 130°C · Foil Presisi",
   },
   {
     icon: Waves,
     kicker: "03 · Relief",
-    title: "Blind Deboss Sculpting",
-    text: "Multi-level sculptured dies that depress your personal crest into heavy cotton without pigment. It relies entirely on natural shadows and touch to reveal its intricacy.",
-    spec: "Depth: 0.8mm Shadow Inset · Tactile Relief",
+    title: "Blind Deboss",
+    text: "Cetakan bertingkat membentuk monogram personal pada kertas katun tebal tanpa tinta. Bayangan alami dan sentuhan menampilkan detailnya dengan lembut.",
+    spec: "Kedalaman: 0,8mm · Relief Bertekstur",
   },
   {
     icon: Stamp,
-    kicker: "04 · Impression",
-    title: "Vintage Letterpress",
-    text: 'Hand-fed onto our restored 1950s Heidelberg "Windmill" Platen presses. Each impression leaves a crisp, deep bite into the soft cotton pulp that you can trace with your fingertips.',
-    spec: "Press: 1954 Heidelberg Tiegel · Manual Inking",
+    kicker: "04 · Cetak",
+    title: "Letterpress Klasik",
+    text: 'Setiap lembar dimasukkan dengan tangan ke mesin Heidelberg "Windmill" Platen era 1950-an. Tekanannya meninggalkan jejak tajam dan dalam pada serat katun lembut.',
+    spec: "Mesin: Heidelberg Tiegel 1954 · Tinta Manual",
   },
   {
     icon: Mail,
-    kicker: "05 · Casing",
-    title: "Envelopes & Vellum Liners",
-    text: "Hand-constructed heavyweight Euro-flap envelopes lined with bespoke translucent vellum illustrations, architectural sketches of your venue, or botanical flourishes.",
-    spec: "Envelope: 300gsm Cotton · French Vellum",
+    kicker: "05 · Amplop",
+    title: "Amplop & Lapisan Vellum",
+    text: "Amplop Euro-flap berbahan tebal dibuat dengan tangan dan dipadukan dengan ilustrasi vellum transparan, sketsa lokasi, atau detail botani pilihan.",
+    spec: "Amplop: Katun 300gsm · Vellum Prancis",
   },
   {
     icon: ScrollText,
-    kicker: "06 · Adornment",
-    title: "Wax Seals & Silk Ribbons",
-    text: "Natural beeswax blended with mineral pigments, hand-poured and stamped with your monogram stamp, paired with plant-dyed Habotai silk ribbon with organic frayed edges.",
-    spec: "Seals: Natural Beeswax · 100% French Silk",
+    kicker: "06 · Hiasan",
+    title: "Segel Lilin & Pita Sutra",
+    text: "Lilin alami dengan pigmen mineral dituangkan dan dicap menggunakan monogram Anda, lalu dipadukan dengan pita sutra Habotai yang diwarnai dari bahan nabati.",
+    spec: "Segel: Lilin Alami · 100% Sutra Prancis",
   },
 ] as const;
 
@@ -53,15 +53,15 @@ export function MaterialExperience() {
       <Container>
         <div className="mx-auto mb-12 max-w-3xl text-center">
           <p className="mb-1 text-[11px] leading-4 font-semibold tracking-[0.2em] text-secondary uppercase">
-            The Tactile Architecture
+            Material Pilihan
           </p>
           <h2 className="font-serif text-[36px] leading-[42px] tracking-[-0.01em] md:text-[56px] md:leading-[64px] md:tracking-[-0.02em]">
-            Sensory Anatomy of Fine Craft
+            Detail yang Terasa Istimewa
           </h2>
           <p className="mt-2 text-[15px] leading-6 text-on-surface-variant">
-            Unlike industrial digital printing, our heirloom creations are
-            sensory artifacts. Every millimeter is calculated for weight, relief
-            depth, and light play.
+            Berbeda dari cetak massal, setiap undangan dibuat untuk dinikmati
+            lewat sentuhan. Ketebalan, relief, dan pantulan cahaya
+            dipertimbangkan hingga detail terkecil.
           </p>
         </div>
 

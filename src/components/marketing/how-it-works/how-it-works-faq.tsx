@@ -7,27 +7,26 @@ import { Container } from "@/components/shared/container";
 
 const questions = [
   {
-    question:
-      "Can I transition from a digital invitation to a printed suite later?",
+    question: "Bisakah undangan digital dilanjutkan menjadi rangkaian cetak?",
     answer:
-      "Yes. A shared typographic direction, palette, and monogram can move from the digital invitation into a later stationery conversation. The printed commission is confirmed separately with the studio.",
+      "Bisa. Arah tipografi, palet, dan monogram dari undangan digital dapat diterapkan pada stationery cetak. Pesanan cetaknya dikonfirmasi secara terpisah bersama tim kami.",
   },
   {
-    question: "How do revisions work for printed typography proofs?",
+    question: "Bagaimana proses revisi proof tipografi cetak?",
     answer:
-      "Your studio proposal sets out the proofing rhythm before production begins. Typography, wording, hierarchy, and finishing notes are reviewed and approved before the commission reaches the press.",
-  },
-  {
-    question:
-      "What happens if our wedding date or venue changes after publishing?",
-    answer:
-      "Supported digital content can be updated after publishing without changing the invitation address. Printed pieces cannot be altered once production is approved, so the studio will discuss the most appropriate next step with you.",
+      "Alur proof dijelaskan sebelum produksi dimulai. Tipografi, susunan kata, hierarki, dan catatan finishing ditinjau serta disetujui sebelum masuk ke proses cetak.",
   },
   {
     question:
-      "Can we review paper and finish options before making our decision?",
+      "Bagaimana jika tanggal atau lokasi berubah setelah undangan dipublikasikan?",
     answer:
-      "Absolutely. Begin with a studio conversation about the papers, weight, foil, deboss, and edge treatments you are considering. Any physical sampling and its cost will be confirmed manually with the studio.",
+      "Konten digital yang didukung dapat diperbarui tanpa mengubah alamat undangan. Materi cetak tidak dapat diubah setelah produksi disetujui, sehingga tim kami akan mendiskusikan langkah terbaik bersama Anda.",
+  },
+  {
+    question:
+      "Bisakah kami melihat pilihan kertas dan finishing sebelum memutuskan?",
+    answer:
+      "Tentu. Mulai dengan percakapan mengenai kertas, ketebalan, foil, deboss, dan tepi yang Anda pertimbangkan. Ketersediaan serta biaya sampel fisik akan dikonfirmasi oleh tim kami.",
   },
 ] as const;
 
@@ -39,10 +38,10 @@ export function HowItWorksFaq() {
       <Container className="max-w-4xl">
         <div className="mb-12 text-center">
           <p className="text-[10px] font-semibold tracking-[0.2em] text-secondary uppercase">
-            Concierge advisory
+            Informasi untuk Anda
           </p>
           <h2 className="mt-3 font-serif text-3xl text-primary sm:text-4xl">
-            Frequently Answered
+            Pertanyaan yang Sering Diajukan
           </h2>
         </div>
         <div className="flex flex-col gap-4">

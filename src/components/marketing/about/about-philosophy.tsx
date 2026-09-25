@@ -13,24 +13,24 @@ import { Container } from "@/components/shared/container";
 const pillars = [
   {
     icon: BookOpen,
-    kicker: "01 / Aesthetic",
-    title: "Typographic Reverence & Restraint",
-    text: "Drawing from classic editorial layouts and Swiss architectural proportions. Every font pairing, line height, and whitespace margin is calibrated for emotional weight and visual timelessness—never succumbing to ephemeral internet design fads.",
-    footnote: "Hand-balanced kerning",
+    kicker: "01 / Estetika",
+    title: "Tipografi yang Anggun & Tenang",
+    text: "Terinspirasi tata letak editorial klasik dan proporsi Swiss. Setiap pasangan font, jarak baris, dan ruang kosong ditata untuk menghadirkan emosi serta keindahan yang tahan lama.",
+    footnote: "Kerning ditata dengan teliti",
   },
   {
     icon: CloudCog,
-    kicker: "02 / Infrastructure",
-    title: "Quiet Cloud Architecture",
-    text: "Technology should never feel cold or algorithmic. Our digital suites load quickly on edge networks worldwide, provide seamless real-time RSVP coordination, zero-commission cash gifts, and private guest intimacy without ads, third-party trackers, or app downloads.",
-    footnote: "Encrypted guest journeys",
+    kicker: "02 / Digital",
+    title: "Teknologi yang Terasa Hangat",
+    text: "Teknologi tidak seharusnya terasa dingin. Undangan digital kami dimuat cepat, mendukung koordinasi RSVP real-time, informasi hadiah langsung, dan akses tamu privat tanpa iklan atau unduhan aplikasi.",
+    footnote: "Pengalaman tamu yang privat",
   },
   {
     icon: Fingerprint,
-    kicker: "03 / Materiality",
-    title: "The Permanent Artifact",
-    text: "Working alongside master artisans with restored 1950s Heidelberg platen presses. 600 to 900gsm wild European cotton papers, hand-torn deckle edges, heated copper foils, and hand-poured wax monograms engineered to become cherished heirlooms for generations.",
-    footnote: "Heidelberg platen archival press",
+    kicker: "03 / Material",
+    title: "Kenang-kenangan yang Bertahan",
+    text: "Dikerjakan bersama perajin berpengalaman menggunakan mesin Heidelberg platen era 1950-an, kertas katun 600–900gsm, tepi deckle, foil tembaga, dan monogram segel lilin.",
+    footnote: "Mesin cetak Heidelberg platen",
   },
 ] as const;
 
@@ -41,15 +41,15 @@ export function AboutPhilosophy() {
         <div className="mb-12 flex flex-col justify-between gap-4 md:flex-row md:items-end">
           <div className="flex max-w-2xl flex-col gap-1">
             <span className="text-[11px] leading-4 font-semibold tracking-[0.2em] text-secondary uppercase">
-              Our Philosophy
+              Filosofi Kami
             </span>
             <h2 className="font-serif text-[28px] leading-[34px] md:text-[40px] md:leading-[48px] md:tracking-[-0.015em]">
-              Three commitments that guide every typographic stroke, line of
-              code, and cotton press run.
+              Tiga komitmen yang memandu setiap pilihan tipografi, baris kode,
+              dan proses cetak di atas katun.
             </h2>
           </div>
           <p className="hidden text-right text-[12px] leading-4 font-semibold tracking-[0.2em] text-on-surface-variant uppercase lg:block">
-            Architecture &amp; Atelier
+            Digital &amp; Fine Print
           </p>
         </div>
 
@@ -90,7 +90,7 @@ export function AboutPhilosophy() {
             <div className="relative h-[280px] w-full sm:h-[360px]">
               <Image
                 src="/images/marketing/embossed-cotton-invitation.png"
-                alt="Blind deboss and warm copper-rose foil letterpress on thick handmade deckle-edge cotton paper"
+                alt="Blind deboss dan letterpress foil copper-rose di atas kertas katun tebal bertepi deckle"
                 fill
                 sizes="(min-width: 768px) 58vw, 100vw"
                 className="object-cover transition-transform duration-700 ease-out hover:scale-105"
@@ -99,22 +99,21 @@ export function AboutPhilosophy() {
           </div>
           <div className="flex flex-col justify-center bg-surface-container p-7 md:col-span-5">
             <span className="mb-1 text-[11px] leading-4 font-semibold tracking-[0.2em] text-secondary uppercase">
-              The Tactile Impression
+              Kesan yang Dapat Disentuh
             </span>
             <h3 className="mb-2 font-serif text-[22px] leading-[30px] font-semibold">
-              Deep blind deboss &amp; warm copper foil.
+              Blind deboss dalam &amp; foil tembaga hangat.
             </h3>
             <p className="text-[13px] leading-relaxed text-on-surface-variant">
-              Every sheet in our print atelier is pulled by hand. We believe in
-              the physical weight of an invitation—the unmistakable, textured
-              resistance of 100% rag cotton meeting high-tonnage mechanical
-              impression dies.
+              Setiap lembar dicetak dengan tangan. Kami percaya bobot fisik
+              sebuah undangan—tekstur khas katun murni yang bertemu tekanan
+              cetak—menjadi bagian penting dari kenangan.
             </p>
             <Link
               href="/printed"
               className="mt-4 flex items-center gap-4 text-[12px] leading-4 font-semibold tracking-[0.12em] text-secondary uppercase transition-colors hover:text-primary"
             >
-              <span>View Material Swatchbook</span>
+              <span>Lihat Pilihan Material</span>
               <MoveUpRight aria-hidden size={14} />
             </Link>
           </div>

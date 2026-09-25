@@ -5,14 +5,13 @@ import { externalLinkProps, whatsappHref } from "@/lib/whatsapp";
 import type { PrintedProduct } from "@/types";
 import { idrFormat as currency } from "@/lib/format";
 
-
 export function PrintedProductCard({ product }: { product: PrintedProduct }) {
   return (
     <article className="group flex flex-col rounded-[8px] bg-surface-lowest p-4 shadow-sm transition-shadow duration-300 hover:shadow-xl">
       <div className="relative mb-2 aspect-[4/5] overflow-hidden rounded-[4px] bg-surface-container">
         <Image
           src={product.imageUrl}
-          alt={`${product.name} printed invitation suite`}
+          alt={`Rangkaian undangan cetak ${product.name}`}
           fill
           sizes="(min-width: 1024px) 22vw, (min-width: 768px) 45vw, 100vw"
           className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -33,12 +32,12 @@ export function PrintedProductCard({ product }: { product: PrintedProduct }) {
       <div className="mt-auto flex items-center justify-between gap-3 pt-2">
         <p>
           <span className="block text-[10px] font-semibold tracking-[0.2em] text-on-surface-variant uppercase">
-            From
+            Mulai
           </span>
           <span className="font-serif text-xl">
             {currency.format(product.startingPrice)}{" "}
             <span className="text-[13px] leading-5 font-sans text-on-surface-variant">
-              / suite
+              / set
             </span>
           </span>
         </p>
@@ -47,7 +46,7 @@ export function PrintedProductCard({ product }: { product: PrintedProduct }) {
           {...externalLinkProps}
           className="inline-flex items-center gap-1 text-[12px] leading-4 font-semibold tracking-[0.12em] text-secondary uppercase transition-colors hover:text-primary"
         >
-          <span>Inquire</span>
+          <span>Tanyakan</span>
           <ArrowUpRight aria-hidden size={14} />
         </a>
       </div>

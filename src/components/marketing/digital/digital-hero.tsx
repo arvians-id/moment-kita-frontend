@@ -11,30 +11,32 @@ export function DigitalHero() {
         <div className="flex flex-col items-start gap-6 lg:col-span-6">
           <div className="inline-flex items-center gap-2 rounded-full bg-surface-high px-3.5 py-1.5 text-[10px] font-semibold tracking-[0.18em] uppercase sm:text-[11px]">
             <span className="size-1.5 rounded-full bg-secondary" />
-            01 — Digital Wedding Suite · Guided Setup · Personal Link
+            01 — Undangan Digital · Panduan Mudah · Tautan Personal
           </div>
           <h1 className="font-serif text-[44px] leading-[1.08] tracking-[-0.025em] sm:text-5xl md:text-[56px]">
-            Your wedding story,
+            Kisah pernikahan Anda,
             <br className="hidden sm:block" />{" "}
-            <em className="font-normal text-secondary">beautifully online.</em>
+            <em className="font-normal text-secondary">
+              hadir indah di layar.
+            </em>
           </h1>
           <p className="max-w-xl text-base leading-7 text-on-surface-variant sm:text-lg sm:leading-8">
-            A bespoke interactive suite created for effortless guest logistics,
-            thoughtful sharing, and editorial storytelling—without losing the
-            warmth of a beautifully made invitation.
+            Undangan interaktif yang memudahkan informasi tamu, terasa personal
+            saat dibagikan, dan tetap membawa kehangatan sebuah undangan yang
+            dirancang dengan indah.
           </p>
           <div className="flex w-full flex-wrap items-center gap-4 pt-4 sm:w-auto">
             <Link
               href="/register"
               className="inline-flex flex-1 items-center justify-center bg-primary px-8 py-4 text-[10px] font-semibold tracking-wider text-white uppercase shadow-md transition-colors hover:bg-secondary sm:flex-none"
             >
-              Create Digital Invitation
+              Buat Undangan Digital
             </Link>
             <a
               href="#templates-grid"
               className="inline-flex flex-1 items-center justify-center bg-transparent px-8 py-4 text-[10px] font-semibold tracking-wider uppercase shadow-sm transition-colors hover:bg-surface-container sm:flex-none"
             >
-              Explore Templates
+              Jelajahi Template
             </a>
           </div>
           <div className="flex items-center gap-6 pt-8 text-on-surface-variant">
@@ -58,12 +60,10 @@ export function DigitalHero() {
                   <Star key={index} aria-hidden size={14} fill="currentColor" />
                 ))}
                 <span className="ml-1 text-[10px] font-semibold text-primary">
-                  Made for meaningful celebrations
+                  Dibuat untuk perayaan yang bermakna
                 </span>
               </div>
-              <span className="text-[12px]">
-                Responsive on mobile and desktop
-              </span>
+              <span className="text-[12px]">Nyaman di ponsel dan desktop</span>
             </div>
           </div>
         </div>
@@ -91,7 +91,7 @@ export function DigitalHero() {
                   Dayson
                 </h2>
                 <p className="text-[10px] font-semibold tracking-wider text-on-surface-variant uppercase">
-                  Saturday · Oct 24, 2026
+                  Sabtu · 24 Okt 2026
                 </p>
                 <div className="my-3 grid size-12 place-items-center rounded-full bg-secondary font-serif text-sm text-white shadow-md">
                   M
@@ -104,16 +104,16 @@ export function DigitalHero() {
                     Condécourt, Île-de-France
                   </span>
                   <div className="flex items-center justify-between pt-2 text-[9px] font-semibold uppercase">
-                    <span>16:00 Ceremony</span>
-                    <span className="text-secondary">Directions →</span>
+                    <span>16:00 Akad</span>
+                    <span className="text-secondary">Petunjuk arah →</span>
                   </div>
                 </div>
-                <a
-                  href="#suite-capabilities"
+                <Link
+                  href="/register"
                   className="w-full rounded-lg bg-primary py-3 text-[10px] font-semibold tracking-wider text-white uppercase shadow-sm"
                 >
-                  Open Guest Experience
-                </a>
+                  Buka Undangan
+                </Link>
               </div>
             </div>
           </div>
@@ -124,9 +124,9 @@ export function DigitalHero() {
             </span>
             <div>
               <p className="text-[10px] font-semibold uppercase">
-                Guest responses organized
+                Respons tamu tertata
               </p>
-              <p className="text-[10px] text-secondary">Live RSVP clarity</p>
+              <p className="text-[10px] text-secondary">RSVP mudah dipantau</p>
             </div>
           </div>
           <div className="absolute right-0 bottom-16 z-20 hidden items-center gap-3 rounded-2xl bg-white/95 px-4 py-3 shadow-xl backdrop-blur-md sm:flex">
@@ -135,7 +135,7 @@ export function DigitalHero() {
             </span>
             <div>
               <p className="text-[9px] font-semibold text-on-surface-variant uppercase">
-                Personal invitation link
+                Tautan undangan personal
               </p>
               <p className="text-[11px] font-semibold">
                 momentkita.com/melina-dayson

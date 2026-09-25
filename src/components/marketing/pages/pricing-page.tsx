@@ -2,6 +2,7 @@ import { PricingCta } from "@/components/marketing/pricing/pricing-cta";
 import { PricingFaq } from "@/components/marketing/pricing/pricing-faq";
 import { PricingHero } from "@/components/marketing/pricing/pricing-hero";
 import { PricingPlans } from "@/components/marketing/pricing/pricing-plans";
+import { SectionReveal } from "@/components/marketing/section-reveal";
 import type { Package, PrintedProduct } from "@/types";
 
 export function PricingPage({
@@ -14,9 +15,15 @@ export function PricingPage({
   return (
     <>
       <PricingHero />
-      <PricingPlans packages={packages} products={products} />
-      <PricingFaq />
-      <PricingCta />
+      <SectionReveal>
+        <PricingPlans packages={packages} products={products} />
+      </SectionReveal>
+      <SectionReveal>
+        <PricingFaq />
+      </SectionReveal>
+      <SectionReveal>
+        <PricingCta />
+      </SectionReveal>
     </>
   );
 }

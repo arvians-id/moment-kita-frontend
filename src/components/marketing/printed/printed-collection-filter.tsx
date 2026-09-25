@@ -22,7 +22,7 @@ export function PrintedCollectionFilter({
     <div>
       <div
         role="group"
-        aria-label="Filter printed editions by aesthetic"
+        aria-label="Filter edisi cetak berdasarkan gaya"
         className="flex items-center gap-2 overflow-x-auto pb-4"
       >
         {collections.map((collection) => {
@@ -53,8 +53,8 @@ export function PrintedCollectionFilter({
         </div>
       ) : (
         <p className="mt-7 rounded-[8px] bg-surface-lowest p-8 text-center text-[15px] leading-6 text-on-surface-variant shadow-sm">
-          This edition is commissioned entirely from scratch. Start a WhatsApp
-          consultation and the atelier will shape it around your celebration.
+          Edisi ini dibuat sepenuhnya dari awal. Mulai konsultasi WhatsApp dan
+          kami akan menyesuaikannya dengan perayaan Anda.
         </p>
       )}
     </div>

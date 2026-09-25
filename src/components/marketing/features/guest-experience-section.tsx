@@ -7,31 +7,32 @@ import {
   UserRound,
   Video,
 } from "lucide-react";
+import Link from "next/link";
 
 const guestFeatures = [
   {
     icon: UserRound,
-    title: "Personalized Dynamic Salutations",
+    title: "Sapaan Personal untuk Setiap Tamu",
     description:
-      "Create individualized guest links with tailored welcomes, assigned party sizes, and the right celebration details for each invitee.",
+      "Buat tautan tamu dengan sapaan khusus, jumlah rombongan, dan detail acara yang sesuai untuk setiap undangan.",
   },
   {
     icon: Music2,
-    title: "Acoustic Soundscapes & Story Timeline",
+    title: "Musik & Alur Cerita",
     description:
-      "Pair the invitation with optional music and lead guests through a considered, multi-chapter story of the celebration.",
+      "Lengkapi undangan dengan musik pilihan dan ajak tamu mengikuti kisah perayaan dalam beberapa bab.",
   },
   {
     icon: Map,
-    title: "Multi-Event Itinerary with Calendar Sync",
+    title: "Jadwal Acara & Sinkronisasi Kalender",
     description:
-      "Present every event in a clear sequence, with direct routes to calendar reminders and map directions when guests need them.",
+      "Tampilkan setiap acara secara runtut, lengkap dengan pengingat kalender dan petunjuk arah saat dibutuhkan.",
   },
   {
     icon: RadioTower,
-    title: "Embedded Ceremony Live Streaming",
+    title: "Live Streaming Acara",
     description:
-      "Give loved ones who cannot travel a graceful path to join a private ceremony stream from the same invitation experience.",
+      "Berikan akses privat bagi keluarga dan sahabat yang tidak dapat hadir untuk menyaksikan acara dari undangan yang sama.",
   },
 ] as const;
 
@@ -44,14 +45,14 @@ export function GuestExperienceSection() {
       <div className="mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-14">
         <div className="mb-7 max-w-2xl">
           <p className="text-[10px] font-semibold tracking-[0.2em] text-secondary uppercase sm:text-[11px]">
-            01 — The Honored Guest Journey
+            01 — Pengalaman Tamu
           </p>
           <h2 className="mt-2 font-serif text-[2rem] leading-[1.12] tracking-[-0.015em] text-primary sm:text-[40px] sm:leading-[1.2]">
-            A celebration of your story that runs effortlessly on every screen.
+            Kisah perayaan yang tampil indah di setiap layar.
           </h2>
           <p className="mt-2 text-sm leading-6 text-on-surface-variant sm:text-[15px]">
-            From the first reveal, your guests enter a personal, ad-free world
-            that feels as thoughtful as the celebration itself.
+            Sejak pertama dibuka, tamu menikmati pengalaman personal tanpa iklan
+            yang terasa seistimewa perayaan Anda.
           </p>
         </div>
 
@@ -66,7 +67,7 @@ export function GuestExperienceSection() {
                 </div>
                 <div className="mx-auto mb-3 inline-flex items-center gap-1 rounded-full bg-surface-container px-3 py-1 text-[9px] font-semibold tracking-wider text-on-surface-variant uppercase">
                   <Heart aria-hidden size={11} className="text-secondary" />
-                  Honoring Sarah &amp; David
+                  Untuk Sarah &amp; David
                 </div>
                 <h3 className="font-serif text-[28px] leading-none tracking-tight">
                   Melina
@@ -81,9 +82,9 @@ export function GuestExperienceSection() {
                 </span>
                 <div className="my-4 grid grid-cols-3 gap-1 rounded-lg bg-surface-high p-2.5">
                   {[
-                    ["84", "Days"],
-                    ["14", "Hours"],
-                    ["22", "Mins"],
+                    ["84", "Hari"],
+                    ["14", "Jam"],
+                    ["22", "Menit"],
                   ].map(([value, label]) => (
                     <div key={label} className="flex flex-col">
                       <span className="font-serif text-lg font-semibold">
@@ -124,12 +125,12 @@ export function GuestExperienceSection() {
                     ))}
                   </div>
                 </div>
-                <a
-                  href="#rsvp-intelligence"
+                <Link
+                  href="/register"
                   className="rounded-full bg-primary py-2.5 text-[10px] font-semibold tracking-wider text-white uppercase transition-colors hover:bg-secondary"
                 >
-                  Confirm Attendance
-                </a>
+                  Konfirmasi Kehadiran
+                </Link>
               </div>
             </div>
 
@@ -141,7 +142,7 @@ export function GuestExperienceSection() {
               />
               <div>
                 <p className="text-[10px] font-semibold tracking-wider uppercase">
-                  1-Tap Navigation
+                  Navigasi Sekali Ketuk
                 </p>
                 <p className="text-[10px] text-on-surface-variant">
                   Apple &amp; Google Maps
@@ -156,10 +157,10 @@ export function GuestExperienceSection() {
               />
               <div>
                 <p className="text-[10px] font-semibold tracking-wider uppercase">
-                  Private Live Stream
+                  Live Stream Privat
                 </p>
                 <p className="text-[10px] text-on-surface-variant">
-                  A place for distant guests
+                  Untuk tamu yang berada jauh
                 </p>
               </div>
             </div>

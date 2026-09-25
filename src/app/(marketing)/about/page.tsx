@@ -1,9 +1,9 @@
 import { AboutPage } from "@/components/marketing/pages/about-page";
 
 export const metadata = {
-  title: "About",
+  title: "Tentang Moment Kita",
   description:
-    "The Moment Kita studio: typographic reverence, quiet cloud architecture, and archival print craft brought together under one design language.",
+    "Kisah Moment Kita dalam merancang undangan digital dan stationery cetak yang hangat, modern, dan berkesan.",
 };
 
 export default function Page() {

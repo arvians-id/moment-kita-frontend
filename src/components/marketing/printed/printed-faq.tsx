@@ -5,36 +5,35 @@ import { useState } from "react";
 
 const questions = [
   {
-    question: "What is the minimum order quantity for printed invitations?",
+    question: "Berapa jumlah minimum pemesanan undangan cetak?",
     answer:
-      "Our standard production run begins at 50 suites to maintain economic feasibility for custom metal die manufacturing and Heidelberg press setup. Smaller boutique runs (30 suites) are easily accommodated under our Intimate Gatherings tier.",
+      "Produksi standar dimulai dari 50 set untuk menyesuaikan pembuatan pelat khusus dan persiapan mesin Heidelberg. Pesanan lebih kecil mulai 30 set tersedia dalam pilihan Perayaan Intim.",
   },
   {
-    question: "How long does the design and production process take?",
+    question: "Berapa lama proses desain dan produksi?",
     answer:
-      "Typographic proofs are delivered within 48 hours via WhatsApp. Following your final sign-off, production, manual edge tearing, foil stamping, and drying require 3 to 4 weeks. Rush 14-day production is available upon atelier capacity verification.",
+      "Proof tipografi dikirim melalui WhatsApp dalam 48 jam. Setelah persetujuan akhir, produksi, pembuatan tepi manual, foil stamping, dan pengeringan membutuhkan 3–4 minggu. Produksi ekspres 14 hari tersedia sesuai kapasitas tim.",
   },
   {
-    question: "Can we request physical paper and foil samples before ordering?",
+    question: "Bisakah kami meminta contoh kertas dan foil sebelum memesan?",
     answer:
-      "Yes, wholeheartedly. We recommend ordering our curated Artisan Swatch Kit (Rp250.000, fully credited toward your eventual invitation commission). It contains all paper densities, foil shades, ribbon swatches, and wax seal examples.",
-  },
-  {
-    question:
-      "Why do you take orders via WhatsApp rather than an automated checkout?",
-    answer:
-      "Heirloom letterpress is an haute-couture medium. Dialogue regarding paper absorbency, plate deboss depth, venue color palettes, and wording etiquette cannot be properly solved by an impersonal web dropdown. Our clients enjoy frictionless 1-on-1 WhatsApp consultations with real typographers.",
+      "Tentu. Kami menyarankan Swatch Kit (Rp250.000, diperhitungkan ke pesanan undangan Anda) yang berisi pilihan ketebalan kertas, warna foil, pita, dan contoh segel lilin.",
   },
   {
     question:
-      "Can we pair our printed stationery with a matching digital invitation?",
+      "Mengapa pesanan dilakukan melalui WhatsApp, bukan checkout otomatis?",
     answer:
-      "Yes. Our harmonization approach keeps your digital invitation aligned with the same typography, hand-drawn monogram crest, and color tonalities. Printed cards can also feature subtle micro-QR codes stamped in foil on details inserts.",
+      "Undangan letterpress memiliki banyak detail personal, mulai dari karakter kertas, kedalaman deboss, palet warna, hingga susunan kata. Konsultasi WhatsApp langsung membantu setiap keputusan dibuat dengan tepat.",
   },
   {
-    question: "Do you handle guest addressing and calligraphy?",
+    question: "Bisakah stationery cetak dipadukan dengan undangan digital?",
     answer:
-      "We provide both archival digital calligraphic guest address printing that matches your primary suite typeface, as well as true hand-lettered dip-pen pointed nib calligraphy executed by our studio scribes.",
+      "Bisa. Undangan digital dapat menggunakan tipografi, monogram gambar tangan, dan nuansa warna yang selaras. Kartu cetak juga dapat memuat kode QR kecil pada kartu detail.",
+  },
+  {
+    question: "Apakah tersedia penulisan alamat tamu dan kaligrafi?",
+    answer:
+      "Kami menyediakan cetak alamat tamu dengan gaya kaligrafi yang selaras dengan tipografi utama, serta kaligrafi tulisan tangan menggunakan pena celup.",
   },
 ] as const;
 
@@ -46,10 +45,10 @@ export function PrintedFaq() {
       <div className="mx-auto w-full max-w-[900px] px-5 sm:px-8 lg:px-14">
         <div className="mb-12 text-center">
           <p className="mb-1 text-[11px] leading-4 font-semibold tracking-[0.2em] text-secondary uppercase">
-            Guidance &amp; Clarifications
+            Panduan &amp; Informasi
           </p>
           <h2 className="font-serif text-[28px] leading-[34px] md:text-[40px] md:leading-[48px] md:tracking-[-0.015em]">
-            Frequently Answered Questions
+            Pertanyaan yang Sering Diajukan
           </h2>
         </div>
 

@@ -5,19 +5,30 @@ import { FeaturesCta } from "@/components/marketing/features/features-cta";
 import { FeaturesFaq } from "@/components/marketing/features/features-faq";
 import { FeaturesHero } from "@/components/marketing/features/features-hero";
 import { GuestExperienceSection } from "@/components/marketing/features/guest-experience-section";
-import { RsvpSection } from "@/components/marketing/features/rsvp-section";
+import { SectionReveal } from "@/components/marketing/section-reveal";
 
 export function FeaturesPage() {
   return (
     <>
       <FeaturesHero />
-      <GuestExperienceSection />
-      <RsvpSection />
-      <DigitalEnvelopeSection />
-      <BespokeSection />
-      <DashboardSection />
-      <FeaturesFaq />
-      <FeaturesCta />
+      <SectionReveal>
+        <GuestExperienceSection />
+      </SectionReveal>
+      <SectionReveal>
+        <DigitalEnvelopeSection />
+      </SectionReveal>
+      <SectionReveal>
+        <BespokeSection />
+      </SectionReveal>
+      <SectionReveal>
+        <DashboardSection />
+      </SectionReveal>
+      <SectionReveal>
+        <FeaturesFaq />
+      </SectionReveal>
+      <SectionReveal>
+        <FeaturesCta />
+      </SectionReveal>
     </>
   );
 }

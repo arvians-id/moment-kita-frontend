@@ -5,32 +5,30 @@ import { Container } from "@/components/shared/container";
 const questions = [
   {
     question:
-      "Are there recurring monthly subscriptions or hidden renewal costs?",
+      "Apakah ada langganan bulanan atau biaya perpanjangan tersembunyi?",
     answer:
-      "The current package catalogue uses one-time prices. Invitation availability still follows the configured package duration and lifecycle; Moment Kita does not promise lifetime hosting.",
-  },
-  {
-    question: "Can I upgrade from Essential to Signature or Prestige later?",
-    answer:
-      "Upgrade behavior will follow explicit package, transaction, entitlement, and quota rules when backend integration is implemented. This marketing page does not alter an entitlement.",
+      "Paket saat ini menggunakan harga sekali bayar. Masa aktif undangan mengikuti durasi yang tercantum pada paket.",
   },
   {
     question:
-      "How does the Printed Stationery deposit and production workflow operate?",
+      "Bisakah saya meningkatkan paket dari Essential ke Signature atau Prestige?",
     answer:
-      "Printed commissions are quoted and confirmed manually. Deposit timing, proof approval, remaining payment, production, and delivery are agreed directly with the studio.",
+      "Ketersediaan peningkatan paket mengikuti ketentuan paket, transaksi, dan kuota yang berlaku saat fitur tersebut tersedia.",
   },
   {
-    question:
-      "What is the cancellation and refund policy for digital and print orders?",
+    question: "Bagaimana alur deposit dan produksi stationery cetak?",
     answer:
-      "Final policies will be presented before a real transaction. This frontend does not collect payment, create orders, or promise refunds outside the approved commercial rules.",
+      "Pesanan cetak ditawarkan dan dikonfirmasi secara manual. Jadwal deposit, persetujuan proof, pelunasan, produksi, dan pengiriman disepakati langsung bersama tim kami.",
   },
   {
-    question:
-      "Can I request a physical sample swatch kit before committing to print?",
+    question: "Bagaimana kebijakan pembatalan dan pengembalian dana?",
     answer:
-      "Material sampling can be requested through the studio. Availability, contents, pricing, and delivery are confirmed manually for each inquiry.",
+      "Kebijakan final akan ditampilkan sebelum transaksi. Ketentuan pengembalian dana mengikuti aturan komersial yang berlaku.",
+  },
+  {
+    question: "Bisakah saya meminta Swatch Kit sebelum memesan undangan cetak?",
+    answer:
+      "Contoh material dapat diminta melalui tim kami. Ketersediaan, isi, harga, dan pengiriman dikonfirmasi untuk setiap permintaan.",
   },
 ] as const;
 
@@ -40,14 +38,14 @@ export function PricingFaq() {
       <Container>
         <div className="mb-12 max-w-2xl">
           <p className="text-[10px] font-semibold tracking-[0.2em] text-secondary uppercase">
-            03 — Complete transparency
+            03 — Informasi yang Jelas
           </p>
           <h2 className="mt-2 font-serif text-3xl tracking-tight sm:text-4xl">
-            Frequently Answered Questions
+            Pertanyaan yang Sering Diajukan
           </h2>
           <p className="mt-3 text-sm leading-7 text-on-surface-variant">
-            Essential details on digital access, upgrades, print deposits, and
-            sample kits.
+            Informasi penting mengenai akses digital, peningkatan paket, deposit
+            cetak, dan Swatch Kit.
           </p>
         </div>
         <div className="max-w-4xl space-y-4">

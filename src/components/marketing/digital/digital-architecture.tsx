@@ -12,44 +12,44 @@ import Link from "next/link";
 const steps = [
   {
     icon: BookOpen,
-    title: "Choose Template",
-    text: "Begin with an editorial design shaped for generous negative space, refined serif type, and a considered mobile viewport.",
-    label: "Explore Library",
+    title: "Pilih Template",
+    text: "Mulai dari desain editorial dengan ruang lapang, tipografi serif yang elegan, dan tampilan seluler yang nyaman.",
+    label: "Jelajahi Koleksi",
     href: "/templates",
   },
   {
     icon: CalendarDays,
-    title: "Compose Event Details",
-    text: "Add ceremonies, reception timing, attire guidance, accommodation notes, and the practical details guests need.",
-    label: "Plan the Story",
+    title: "Susun Detail Acara",
+    text: "Tambahkan jadwal akad dan resepsi, panduan busana, akomodasi, serta informasi penting untuk tamu.",
+    label: "Rencanakan Isinya",
     href: "/how-it-works",
   },
   {
     icon: ImageIcon,
-    title: "Curate Memories",
-    text: "Build a visual narrative with supported galleries and story chapters that feel personal without overwhelming the invitation.",
-    label: "Visual Chapters",
+    title: "Rangkai Kenangan",
+    text: "Bangun cerita visual melalui galeri dan bab perjalanan yang personal tanpa membuat undangan terasa penuh.",
+    label: "Bab Visual",
     href: "/features",
   },
   {
     icon: Link2,
-    title: "Set Your Invitation Link",
-    text: "Choose a memorable supported Moment Kita invitation address that stays stable throughout the celebration lifecycle.",
-    label: "Invitation Address",
+    title: "Tentukan Tautan Undangan",
+    text: "Pilih alamat undangan Moment Kita yang mudah diingat dan tetap sama sepanjang masa aktif undangan.",
+    label: "Alamat Undangan",
     href: "/features",
   },
   {
     icon: LockKeyhole,
-    title: "Review & Publish",
-    text: "Check the complete guest experience, finalize deliberately, and publish only when every supported detail is ready.",
-    label: "Privacy Controls",
+    title: "Tinjau & Publikasikan",
+    text: "Periksa pengalaman tamu secara menyeluruh, pastikan setiap detail siap, lalu publikasikan dengan tenang.",
+    label: "Kontrol Privasi",
     href: "/how-it-works",
   },
   {
     icon: MailCheck,
-    title: "Manage Guest Logistics",
-    text: "Keep attendance, dietary notes, wishes, and the details needed by your planning team in one composed workflow.",
-    label: "Guest Management",
+    title: "Kelola Informasi Tamu",
+    text: "Kelola kehadiran, catatan makanan, ucapan, dan detail yang dibutuhkan tim perencana dalam satu alur.",
+    label: "Kelola Tamu",
     href: "/features",
   },
 ] as const;
@@ -61,16 +61,16 @@ export function DigitalArchitecture() {
         <div className="mb-16 flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div>
             <p className="text-[10px] font-semibold tracking-[0.2em] text-secondary uppercase sm:text-[11px]">
-              02 — The Architecture
+              02 — Alur yang Sederhana
             </p>
             <h2 className="mt-2 font-serif text-[2rem] leading-[1.12] tracking-[-0.015em] sm:text-[40px] sm:leading-[1.2]">
-              Effortless from conception{" "}
-              <em className="font-normal">to celebration.</em>
+              Mudah sejak awal{" "}
+              <em className="font-normal">hingga hari perayaan.</em>
             </h2>
           </div>
           <p className="max-w-md text-sm leading-6 text-on-surface-variant sm:text-[15px]">
-            Six considered stages designed to remove logistical friction while
-            preserving the feeling of a beautifully composed invitation.
+            Enam tahap yang tertata untuk menyederhanakan kebutuhan tamu tanpa
+            mengurangi keindahan undangan Anda.
           </p>
         </div>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -82,7 +82,7 @@ export function DigitalArchitecture() {
               <div>
                 <div className="flex items-center justify-between">
                   <span className="text-[10px] font-semibold tracking-[0.2em] text-secondary uppercase">
-                    Step {String(index + 1).padStart(2, "0")}
+                    Langkah {String(index + 1).padStart(2, "0")}
                   </span>
                   <Icon aria-hidden size={21} />
                 </div>

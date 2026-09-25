@@ -13,13 +13,13 @@ const palette = [
 const insets = [
   {
     icon: Pointer,
-    title: "Digital Touchpoints",
-    text: "Interactive countdown timer with localized time zone switching for international destination attendees.",
+    title: "Detail Digital",
+    text: "Hitung mundur interaktif dengan penyesuaian zona waktu untuk tamu dari berbagai negara.",
   },
   {
     icon: Sparkles,
     title: "Blind Letterpress",
-    text: "Deep 3D deboss impression on 800gsm duplex board with edge gilding in matte champagne foil.",
+    text: "Deboss tiga dimensi pada papan duplex 800gsm dengan tepi berlapis foil champagne matte.",
   },
 ] as const;
 
@@ -34,7 +34,7 @@ export function KyotoIntermezzo() {
         <div className="mb-12 flex flex-col justify-between gap-6 pb-12 md:flex-row md:items-center">
           <div className="flex flex-wrap items-center gap-4">
             <span className="text-[11px] leading-4 font-semibold tracking-[0.2em] text-champagne uppercase">
-              Curator&rsquo;s Master Study
+              Pilihan Unggulan
             </span>
             <span aria-hidden className="h-px w-8 bg-white/20" />
             <span className="text-[13px] leading-5 text-white/60">
@@ -43,13 +43,13 @@ export function KyotoIntermezzo() {
           </div>
           <div className="flex flex-wrap items-center gap-6">
             <span className="text-[11px] leading-4 font-semibold tracking-[0.2em] text-white/70 uppercase">
-              Atelier Archival Code: NOCT-88
+              Kode Koleksi: NOCT-88
             </span>
             <Link
               href="/how-it-works"
               className="inline-flex items-center gap-2 text-[12px] leading-4 font-semibold tracking-[0.12em] text-champagne uppercase transition-colors hover:text-white"
             >
-              <span>Read Typographic Essay</span>
+              <span>Lihat Proses Desain</span>
               <ExternalLink aria-hidden size={16} />
             </Link>
           </div>
@@ -68,16 +68,15 @@ export function KyotoIntermezzo() {
                 </span>
               </h2>
               <p className="mb-8 text-[15px] leading-relaxed text-white/80 md:text-[18px]">
-                A high-fashion exploration of restrained Japanese wabi-sabi
-                minimalism paired with dramatic high-contrast typography.
-                Conceived for evening celebrations in gallery spaces,
-                glasshouses, and historic stone villas.
+                Minimalisme wabi-sabi Jepang yang tenang berpadu dengan
+                tipografi kontras. Dirancang untuk perayaan malam di galeri,
+                rumah kaca, dan vila batu bersejarah.
               </p>
             </div>
 
             <div className="rounded-[12px] bg-white/5 p-6 backdrop-blur-md">
               <span className="mb-4 block text-[11px] leading-4 font-semibold tracking-[0.2em] text-champagne uppercase">
-                Curated Material Palette
+                Palet Material Pilihan
               </span>
               <div className="mb-4 flex flex-wrap items-center gap-3">
                 {palette.map(({ hex, className }) => (
@@ -90,8 +89,8 @@ export function KyotoIntermezzo() {
                 ))}
               </div>
               <p className="text-xs text-white/60">
-                Charcoal Noir cardstock • Champagne blind deboss • Terracotta
-                sealing wax • Mulberry paper translucent jacket.
+                Kartu Charcoal Noir • Blind deboss champagne • Segel lilin
+                terracotta • Lapisan transparan kertas mulberry.
               </p>
             </div>
 
@@ -100,14 +99,14 @@ export function KyotoIntermezzo() {
                 href="/templates/nocturne-01"
                 className="rounded-[8px] bg-champagne px-8 py-4 text-center text-[12px] leading-4 font-semibold tracking-[0.12em] text-espresso uppercase shadow-lg transition-colors hover:bg-white"
               >
-                Explore Kyoto Whisper
+                Jelajahi Kyoto Whisper
               </Link>
               <Link
                 href="/digital"
                 className="flex items-center justify-center gap-2 rounded-[8px] bg-transparent px-6 py-4 text-center text-[12px] leading-4 font-semibold tracking-[0.12em] text-white uppercase transition-colors hover:bg-white/10"
               >
                 <PlayCircle aria-hidden size={18} />
-                <span>Watch Experience</span>
+                <span>Lihat Pengalaman</span>
               </Link>
             </div>
           </div>
@@ -117,10 +116,10 @@ export function KyotoIntermezzo() {
               <div className="overflow-hidden rounded-[16px] bg-white/5 shadow-2xl">
                 <div className="bg-gradient-to-b from-white/10 to-transparent p-8 text-center sm:p-12">
                   <span className="mb-4 block text-[11px] leading-4 font-semibold tracking-[0.2em] text-champagne uppercase">
-                    Typographic Specimen 24pt / 60pt
+                    Contoh Tipografi 24pt / 60pt
                   </span>
                   <p className="mb-4 font-serif text-3xl leading-tight text-champagne italic sm:text-5xl">
-                    &ldquo;Together in quiet reverence.&rdquo;
+                    &ldquo;Bersama dalam ketenangan yang indah.&rdquo;
                   </p>
                   <span
                     aria-hidden
@@ -131,7 +130,7 @@ export function KyotoIntermezzo() {
                     <span aria-hidden>•</span>
                     <span>PLUS JAKARTA SANS</span>
                     <span aria-hidden>•</span>
-                    <span>CUSTOM CREST MONOGRAM</span>
+                    <span>MONOGRAM KHUSUS</span>
                   </div>
                 </div>
               </div>

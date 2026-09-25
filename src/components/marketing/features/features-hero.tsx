@@ -1,17 +1,16 @@
 import { Bolt, CheckCircle2, LockKeyhole } from "lucide-react";
 
 const categories = [
-  ["Guest Experience", "#guest-experience"],
-  ["RSVP & Logistics", "#rsvp-intelligence"],
-  ["Digital Envelope & Registry", "#digital-envelope"],
-  ["Bespoke Architecture", "#bespoke-craft"],
-  ["Backstage Studio", "#couple-dashboard"],
+  ["Pengalaman Tamu", "#guest-experience"],
+  ["Amplop Digital & Hadiah", "#digital-envelope"],
+  ["Personalisasi Desain", "#bespoke-craft"],
+  ["Dasbor Pasangan", "#couple-dashboard"],
 ] as const;
 
 const standards = [
-  { icon: CheckCircle2, label: "Zero App Download Required" },
-  { icon: LockKeyhole, label: "Private Guest Access, No Advertising" },
-  { icon: Bolt, label: "Responsive Delivery Across Modern Devices" },
+  { icon: CheckCircle2, label: "Tanpa perlu mengunduh aplikasi" },
+  { icon: LockKeyhole, label: "Akses tamu privat, tanpa iklan" },
+  { icon: Bolt, label: "Responsif di perangkat modern" },
 ] as const;
 
 export function FeaturesHero() {
@@ -21,19 +20,16 @@ export function FeaturesHero() {
         <div className="flex flex-col gap-4 lg:col-span-8">
           <div className="inline-flex items-center gap-2 text-[10px] font-semibold tracking-[0.2em] text-secondary uppercase sm:text-[11px]">
             <span className="size-2 rounded-full bg-secondary" />
-            <span>
-              02 — Architectural Capabilities &amp; Suite Intelligence
-            </span>
+            <span>Fitur Undangan Digital Moment Kita</span>
           </div>
           <h1 className="max-w-4xl font-serif text-4xl leading-[1.06] tracking-[-0.025em] text-primary sm:text-5xl lg:text-[56px]">
-            Features crafted for{" "}
-            <em className="font-normal text-secondary">reverence</em> and quiet
-            ease.
+            Fitur yang dirancang untuk{" "}
+            <em className="font-normal text-secondary">berkesan</em> dan tetap
+            mudah digunakan.
           </h1>
           <p className="max-w-2xl text-base leading-7 text-on-surface-variant sm:text-lg sm:leading-8">
-            Every interaction is shaped with intention—uniting immersive
-            editorial beauty for your guests with calm, real-time clarity for
-            your planning.
+            Setiap interaksi dirancang dengan cermat, memadukan tampilan yang
+            indah untuk tamu dengan informasi real-time yang mudah Anda kelola.
           </p>
           <nav
             aria-label="Feature categories"
@@ -54,7 +50,7 @@ export function FeaturesHero() {
         <aside className="flex flex-col gap-4 lg:col-span-4">
           <div className="rounded-xl bg-surface-low p-4 shadow-sm">
             <p className="mb-2 text-[10px] font-semibold tracking-[0.2em] text-secondary uppercase">
-              Standard On All Suites
+              Tersedia di Semua Paket
             </p>
             <div className="space-y-2">
               {standards.map(({ icon: Icon, label }) => (
@@ -73,12 +69,10 @@ export function FeaturesHero() {
             </div>
           </div>
           <div className="flex items-center justify-between gap-4 rounded-lg bg-surface-high px-4 py-3 text-[13px] text-on-surface-variant">
-            <span className="font-medium text-primary">
-              Guest-ready delivery
-            </span>
+            <span className="font-medium text-primary">Siap untuk tamu</span>
             <span className="flex items-center gap-2 whitespace-nowrap">
               <span className="size-2 animate-pulse rounded-full bg-emerald-600" />
-              Always on
+              Selalu aktif
             </span>
           </div>
         </aside>

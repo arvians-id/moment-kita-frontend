@@ -17,18 +17,20 @@ export function HomeHero() {
               aria-hidden="true"
             />
             <span className="text-[10px] font-semibold tracking-[0.2em] uppercase">
-              Jakarta · The Cloud — Est. 2024
+              Jakarta · Digital &amp; Cetak — Sejak 2024
             </span>
           </div>
           <h1 className="mt-7 font-serif text-[2.8rem] leading-[1.04] tracking-[-0.025em] text-primary sm:text-6xl lg:text-[5.25rem]">
-            Where Poetry Meets
+            Saat Kisah Berpadu
             <br className="hidden sm:block" />
-            <em className="font-normal text-secondary"> Paper &amp; Pixel</em>
+            <em className="font-normal text-secondary">
+              {" "}
+              di Kertas &amp; Layar
+            </em>
           </h1>
           <p className="mt-6 max-w-2xl text-sm leading-7 text-on-surface-variant sm:text-lg sm:leading-8">
-            A modern wedding studio with two distinct disciplines: intelligent
-            interactive invitations for today and tactile fine stationery made
-            to be remembered.
+            Studio pernikahan modern untuk undangan digital yang interaktif dan
+            stationery cetak bertekstur yang layak dikenang.
           </p>
           <div className="mt-8 flex w-full flex-col justify-center gap-3 sm:w-auto sm:flex-row">
             <Button
@@ -37,7 +39,7 @@ export function HomeHero() {
               className="h-13 px-8 text-[11px] tracking-[0.14em] uppercase shadow-lg"
             >
               <Link href="/templates">
-                Create digital invitation
+                Buat undangan digital
                 <ArrowRight aria-hidden="true" size={16} />
               </Link>
             </Button>
@@ -53,7 +55,7 @@ export function HomeHero() {
                   size={16}
                   className="text-secondary"
                 />
-                Explore fine print atelier
+                Jelajahi undangan cetak
               </Link>
             </Button>
           </div>
@@ -66,7 +68,7 @@ export function HomeHero() {
           <div className="relative h-[380px] overflow-hidden rounded-lg shadow-[0_22px_55px_-24px_rgba(46,38,33,0.35)] sm:h-[520px] lg:h-[640px]">
             <Image
               src="/images/marketing/hero-stationery-suite.png"
-              alt="Artisanal wedding stationery with torn cotton edges, floral arrangements, silk ribbon, and a custom wax seal."
+              alt="Stationery pernikahan dengan tepi kertas katun, rangkaian bunga, pita sutra, dan segel lilin khusus."
               fill
               priority
               sizes="(max-width: 768px) 100vw, 1328px"
@@ -77,16 +79,16 @@ export function HomeHero() {
               <div className="flex flex-col gap-2 sm:flex-row">
                 <div className="flex items-center gap-2 bg-white/90 px-4 py-3 text-[10px] font-semibold tracking-[0.11em] text-primary uppercase shadow-md backdrop-blur-md">
                   <span className="text-secondary">01</span>
-                  Interactive RSVP · Personal guest links
+                  RSVP interaktif · Tautan tamu personal
                 </div>
                 <div className="hidden items-center gap-2 bg-white/90 px-4 py-3 text-[10px] font-semibold tracking-[0.11em] text-primary uppercase shadow-md backdrop-blur-md sm:flex">
                   <span className="text-secondary">02</span>
-                  Cotton paper · Warm foil deboss
+                  Kertas katun · Deboss foil hangat
                 </div>
               </div>
               <div className="hidden items-center gap-2 bg-primary/85 px-4 py-2.5 text-xs text-primary-foreground backdrop-blur-md md:flex">
                 <Leaf aria-hidden="true" size={15} className="text-champagne" />
-                Considered digital and fine-print craft
+                Undangan digital dan cetak yang dirancang penuh perhatian
               </div>
             </div>
           </div>

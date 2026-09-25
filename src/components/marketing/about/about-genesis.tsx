@@ -4,22 +4,22 @@ import { Container } from "@/components/shared/container";
 
 const mosaic = [
   {
-    caption: "Tactile Print Suite",
+    caption: "Rangkaian Cetak Bertekstur",
     src: "/images/marketing/garden-stationery-suite.png",
-    alt: "Handcrafted invitation suite on deckle-edge cotton paper with silk ribbon and a wax seal",
+    alt: "Rangkaian undangan kertas katun tepi deckle dengan pita sutra dan segel lilin",
     offset: false,
   },
   {
-    caption: "Digital Companion",
+    caption: "Pasangan Digital",
     src: "/images/marketing/digital-invitation-phone.png",
-    alt: "Digital wedding invitation displayed on a phone resting on linen beside dried pampas grass",
+    alt: "Undangan pernikahan digital di ponsel yang diletakkan di atas linen",
     offset: true,
   },
 ] as const;
 
 const measures = [
-  { value: "600–900", unit: "gsm", label: "Pure European Cotton" },
-  { value: "< 1.2", unit: "s", label: "Global Edge Latency" },
+  { value: "600–900", unit: "gsm", label: "Katun Murni Pilihan" },
+  { value: "< 1,2", unit: "dtk", label: "Waktu Muat Cepat" },
 ] as const;
 
 export function AboutGenesis() {
@@ -29,26 +29,22 @@ export function AboutGenesis() {
         <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-12">
           <div className="flex flex-col gap-4 lg:col-span-5">
             <span className="text-[11px] leading-4 font-semibold tracking-[0.2em] text-secondary uppercase">
-              The Genesis
+              Awal Perjalanan
             </span>
             <h2 className="font-serif text-[28px] leading-[34px] md:text-[40px] md:leading-[48px] md:tracking-[-0.015em]">
-              Bridging the dichotomy of the modern invitation.
+              Menyatukan kehangatan kertas dan kemudahan digital.
             </h2>
             <p className="text-[15px] leading-relaxed text-on-surface-variant">
-              For decades, engaged couples were presented with a forced
-              concession: compromise either on the tactile poetry of physical
-              paper or the fluid convenience of modern software. Mass-market
-              digital invitations felt synthetic, riddled with platform branding
-              and disposable form templates. Conversely, bespoke letterpress
-              houses often demanded four-month lead times, high error
-              liabilities, and manual guest tracking spreadsheets.
+              Selama bertahun-tahun, pasangan harus memilih antara kehangatan
+              undangan kertas dan kemudahan teknologi. Undangan digital sering
+              terasa seragam, sementara letterpress personal memerlukan waktu
+              panjang dan pengelolaan tamu yang terpisah.
             </p>
             <p className="text-[15px] leading-relaxed text-on-surface-variant">
-              Moment Kita was born to restore reverence, aesthetic autonomy, and
-              quiet ease to both mediums under a single design language. We
-              treat web experiences with the typographic rigor of 19th-century
-              publishing, and print suites with the exacting calibration of
-              architectural drafting.
+              Moment Kita hadir untuk membawa keindahan, kebebasan memilih gaya,
+              dan kemudahan ke dalam kedua medium tersebut. Pengalaman digital
+              dan stationery cetak kami dirancang dalam satu bahasa visual yang
+              selaras.
             </p>
             <div className="flex items-center gap-4 pt-2">
               {measures.map(({ value, unit, label }, index) => (

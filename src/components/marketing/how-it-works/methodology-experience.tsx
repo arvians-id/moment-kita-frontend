@@ -1,13 +1,6 @@
 "use client";
 
-import {
-  MailCheck,
-  MessageCircle,
-  QrCode,
-  RefreshCw,
-  Send,
-  Truck,
-} from "lucide-react";
+import { MailCheck, MessageCircle, QrCode, Send, Truck } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -17,16 +10,16 @@ import {
 } from "@/components/marketing/how-it-works/process-step-card";
 import { Container } from "@/components/shared/container";
 
-type MethodologyView = "digital" | "printed" | "harmonized";
+type MethodologyView = "digital" | "printed";
 
 const digitalSteps: readonly ProcessStep[] = [
   {
     number: "01",
-    badge: "Curated",
-    phase: "Selection",
-    title: "Explore Curated Designs",
+    badge: "Pilihan",
+    phase: "Pemilihan",
+    title: "Jelajahi Desain Pilihan",
     description:
-      "Browse an editorial archive shaped for modern celebrations, then choose the typography, pacing, and atmosphere that feels most like your story.",
+      "Jelajahi koleksi editorial untuk perayaan modern, lalu pilih tipografi, susunan, dan suasana yang paling mewakili kisah Anda.",
     image: {
       src: "/images/marketing/digital-invitation-phone.png",
       alt: "Digital wedding invitation displayed on a phone",
@@ -34,83 +27,83 @@ const digitalSteps: readonly ProcessStep[] = [
   },
   {
     number: "02",
-    badge: "Interactive",
-    phase: "Simulation",
-    title: "Realtime Interactive Preview",
+    badge: "Interaktif",
+    phase: "Pratinjau",
+    title: "Pratinjau Interaktif Langsung",
     description:
-      "Test the guest experience directly in your browser across screen sizes, including motion, music, schedules, and sample RSVP interactions.",
-    detail: "Ambient soundtrack preview",
-    detailEnd: "Live test",
+      "Coba pengalaman tamu langsung di browser pada berbagai ukuran layar, termasuk animasi, musik, jadwal, dan contoh interaksi RSVP.",
+    detail: "Pratinjau musik latar",
+    detailEnd: "Coba langsung",
   },
   {
     number: "03",
-    badge: "Private",
-    phase: "Onboarding",
-    title: "Seamless Studio Registration",
+    badge: "Privat",
+    phase: "Pendaftaran",
+    title: "Buat Akun Moment Kita",
     description:
-      "Create your Moment Kita account and enter a private workspace where invitation content, guests, and publishing state stay together.",
-    detail: "Protected invitation workspace",
-    detailEnd: "Secure",
+      "Buat akun Moment Kita dan masuk ke ruang privat tempat konten undangan, tamu, dan status publikasi dikelola bersama.",
+    detail: "Ruang undangan terlindungi",
+    detailEnd: "Aman",
   },
   {
     number: "04",
-    badge: "Live Synced",
-    phase: "Editorial Studio",
-    title: "Customize Your Celebration",
+    badge: "Tersinkron",
+    phase: "Personalisasi",
+    title: "Sesuaikan Perayaan Anda",
     description:
-      "Compose event schedules, imagery, color, gifts, RSVP questions, and the words that make the invitation distinctly yours.",
-    detail: "Edits move with your live preview",
-    detailEnd: "Synced",
+      "Susun jadwal, gambar, warna, hadiah, pertanyaan RSVP, dan kata-kata yang membuat undangan terasa personal.",
+    detail: "Perubahan tampil pada pratinjau",
+    detailEnd: "Tersinkron",
   },
   {
     number: "05",
-    badge: "Personal URL",
-    phase: "Address",
-    title: "Reserve Your Bespoke URL",
+    badge: "URL Personal",
+    phase: "Alamat",
+    title: "Pilih Alamat Undangan",
     description:
-      "Choose a memorable Moment Kita address for your celebration. The selected slug stays with the invitation once it is finalized.",
+      "Pilih alamat Moment Kita yang mudah diingat. Alamat tersebut tetap digunakan setelah undangan difinalisasi.",
     detail: "momentkita.com/sophia-alex",
-    detailEnd: "Reserved",
+    detailEnd: "Tersimpan",
   },
   {
     number: "06",
-    badge: "Publish Ready",
-    phase: "Publishing",
-    title: "Instant Cloud Publishing",
+    badge: "Siap Terbit",
+    phase: "Publikasi",
+    title: "Publikasikan Undangan",
     description:
-      "Finalize with confidence, publish when you are ready, and give guests a responsive invitation designed to feel considered on every device.",
-    detail: "Invitation status: ready",
-    detailEnd: "Global",
+      "Finalisasi dengan tenang, publikasikan saat siap, dan bagikan undangan responsif yang terasa nyaman di setiap perangkat.",
+    detail: "Status undangan: siap",
+    detailEnd: "Online",
   },
   {
     number: "07",
-    badge: "Guest Ready",
-    phase: "Delivery",
-    title: "Seamless Guest Distribution",
+    badge: "Siap Dibagikan",
+    phase: "Berbagi",
+    title: "Bagikan kepada Tamu",
     description:
-      "Share your invitation through personal guest links, WhatsApp, messages, email, or a QR code prepared for printed announcements.",
+      "Bagikan undangan melalui tautan personal, WhatsApp, pesan, email, atau kode QR untuk kartu cetak.",
     icons: [MessageCircle, QrCode, Send, MailCheck],
   },
   {
     number: "08",
-    badge: "Live Responses",
-    phase: "Intelligence",
-    title: "Live RSVP & Dietary Matrix",
+    badge: "Respons Langsung",
+    phase: "Pengelolaan",
+    title: "Pantau RSVP & Pilihan Makanan",
     description:
-      "Follow attendance, meal choices, wishes, and guest updates from one calm workspace as replies arrive.",
-    detail: "RSVP responses gathered",
-    detailEnd: "Export",
+      "Pantau kehadiran, pilihan makanan, ucapan, dan pembaruan tamu dari satu ruang kerja saat respons masuk.",
+    detail: "Respons RSVP terkumpul",
+    detailEnd: "Ekspor",
   },
 ];
 
 const printedSteps: readonly ProcessStep[] = [
   {
     number: "01",
-    badge: "Archive",
-    phase: "Aesthetic Inception",
-    title: "Explore the Archival Collection",
+    badge: "Koleksi",
+    phase: "Pilihan Gaya",
+    title: "Jelajahi Koleksi Cetak",
     description:
-      "Discover physical stationery directions through paper, proportion, typography, botanical detail, and the quiet character of each suite.",
+      "Temukan arah stationery melalui pilihan kertas, proporsi, tipografi, detail botani, dan karakter setiap rangkaian.",
     image: {
       src: "/images/marketing/garden-stationery-suite.png",
       alt: "Artisan wedding stationery suite with wax seals and ribbon",
@@ -118,11 +111,11 @@ const printedSteps: readonly ProcessStep[] = [
   },
   {
     number: "02",
-    badge: "Materiality",
-    phase: "Substrates",
-    title: "Select Paper Stock & Finish Foundation",
+    badge: "Material",
+    phase: "Kertas",
+    title: "Pilih Kertas & Finishing",
     description:
-      "Compare substantial cotton papers, deckled edges, metallic foil tones, and the sculptural depth of blind deboss impressions.",
+      "Bandingkan kertas katun tebal, tepi deckle, warna foil metalik, dan kedalaman blind deboss.",
     image: {
       src: "/images/marketing/copper-monogram-paper.png",
       alt: "Textured cotton paper with a copper-foil monogram",
@@ -130,53 +123,53 @@ const printedSteps: readonly ProcessStep[] = [
   },
   {
     number: "03",
-    badge: "Concierge",
-    phase: "Human Guidance",
-    title: "Dedicated WhatsApp Dialogue",
+    badge: "Konsultasi",
+    phase: "Pendampingan",
+    title: "Diskusi Langsung via WhatsApp",
     description:
-      "Share quantity, venue, timing, and references directly with the studio so every early decision has thoughtful context.",
-    detail: "Direct studio conversation",
+      "Bagikan jumlah, lokasi, waktu, dan referensi kepada tim kami agar setiap keputusan memiliki konteks yang tepat.",
+    detail: "Percakapan langsung dengan tim",
     detailEnd: "WhatsApp",
   },
   {
     number: "04",
-    badge: "Artistry",
-    phase: "Typographic Proofs",
-    title: "Bespoke Monograms & Proofing",
+    badge: "Desain",
+    phase: "Proof Tipografi",
+    title: "Monogram & Proof Personal",
     description:
-      "Refine intertwined initials, suite hierarchy, wording, and press details through precise digital proofs before production begins.",
-    detail: "Scale-aware digital proofing",
-    detailEnd: "Refine",
+      "Sempurnakan inisial, susunan, pilihan kata, dan detail cetak melalui proof digital sebelum produksi dimulai.",
+    detail: "Proof digital berskala akurat",
+    detailEnd: "Perbaiki",
   },
   {
     number: "05",
-    badge: "Commitment",
-    phase: "Confirmation",
-    title: "Commission Confirmation & Deposit",
+    badge: "Persetujuan",
+    phase: "Konfirmasi",
+    title: "Konfirmasi Pesanan & Deposit",
     description:
-      "Approve the final specification and itemized studio proposal. Your confirmed deposit begins material preparation and production scheduling.",
-    detail: "Deposit begins the commission",
-    detailEnd: "Confirmed",
+      "Setujui spesifikasi akhir dan rincian penawaran. Deposit yang terkonfirmasi memulai persiapan material dan jadwal produksi.",
+    detail: "Deposit memulai pesanan",
+    detailEnd: "Terkonfirmasi",
   },
   {
     number: "06",
-    badge: "Craft",
-    phase: "Production",
-    title: "Artisan Letterpress & Foil Pressing",
+    badge: "Pengerjaan",
+    phase: "Produksi",
+    title: "Letterpress & Foil Pressing",
     description:
-      "Each suite is pressed, finished, and inspected in considered stages for impression, registration, paper edge, and tonal consistency.",
-    detail: "Press, finish, and inspection",
-    detailEnd: "Atelier",
+      "Setiap set dicetak, diselesaikan, dan diperiksa bertahap untuk memastikan tekanan, presisi, tepi kertas, dan warna tetap konsisten.",
+    detail: "Cetak, finishing, dan pemeriksaan",
+    detailEnd: "Moment Kita",
   },
   {
     number: "07",
-    badge: "Presentation",
-    phase: "Delivery",
-    title: "White-Glove Heirloom Delivery",
+    badge: "Penyajian",
+    phase: "Pengiriman",
+    title: "Pengiriman dengan Perlindungan",
     description:
-      "Finished stationery is assembled with archival care, protected for transit, and sent with tracked delivery so it arrives ready to become part of your celebration.",
-    detail: "Tracked transit",
-    detailEnd: "Carefully packed for arrival",
+      "Stationery dirakit dengan teliti, dilindungi selama perjalanan, dan dikirim dengan pelacakan agar tiba siap menjadi bagian dari perayaan Anda.",
+    detail: "Pengiriman terlacak",
+    detailEnd: "Dikemas dengan teliti",
     icons: [Truck],
     featured: true,
   },
@@ -189,15 +182,14 @@ const viewOptions: readonly {
 }[] = [
   {
     id: "digital",
-    label: "Digital Invitation Suite",
-    note: "Cloud & realtime",
+    label: "Undangan Digital",
+    note: "Online & real-time",
   },
   {
     id: "printed",
-    label: "Artisan Printed Atelier",
-    note: "Handcrafted paper",
+    label: "Stationery Cetak",
+    note: "Kertas buatan tangan",
   },
-  { id: "harmonized", label: "View Harmonized" },
 ];
 
 function ProcessHeader({
@@ -284,9 +276,7 @@ function SectionCta({
 }
 
 export function MethodologyExperience() {
-  const [selectedView, setSelectedView] = useState<MethodologyView | null>(
-    null,
-  );
+  const [selectedView, setSelectedView] = useState<MethodologyView>("digital");
   const showDigital = selectedView !== "printed";
   const showPrinted = selectedView !== "digital";
 
@@ -297,27 +287,24 @@ export function MethodologyExperience() {
           <div className="inline-flex items-center gap-2 rounded-full bg-surface-container px-4 py-2 shadow-sm">
             <span className="size-1.5 rounded-full bg-secondary" />
             <span className="text-[9px] font-semibold tracking-[0.18em] text-secondary uppercase sm:text-[10px]">
-              05 — The Moment Kita methodology
+              Cara Kerja Moment Kita
             </span>
           </div>
           <h1 className="mt-6 font-serif text-[44px] leading-[1.08] tracking-[-0.025em] text-primary sm:text-6xl lg:text-[84px]">
-            From idea to{" "}
-            <em className="font-normal text-secondary">invitation.</em>
+            Dari gagasan menjadi{" "}
+            <em className="font-normal text-secondary">undangan.</em>
           </h1>
           <p className="mt-6 max-w-3xl text-sm leading-7 text-on-surface-variant sm:text-base sm:leading-8 lg:text-lg">
-            Two elevated paths to announcing your celebration. Choose a
-            considered digital guest journey, a tactile stationery commission,
-            or let both expressions move together.
+            Dua cara untuk mengawali perayaan Anda: undangan digital yang mudah
+            dibagikan atau stationery cetak yang dikerjakan secara personal.
           </p>
           <div
             className="mt-10 flex w-full max-w-3xl flex-col gap-1.5 rounded-[28px] bg-surface-container p-1.5 shadow-sm sm:w-auto sm:flex-row sm:rounded-full"
             role="tablist"
-            aria-label="Invitation methodology"
+            aria-label="Pilih alur undangan"
           >
             {viewOptions.map((option) => {
-              const isSelected =
-                selectedView === option.id ||
-                (selectedView === null && option.id === "digital");
+              const isSelected = selectedView === option.id;
               return (
                 <button
                   key={option.id}
@@ -339,13 +326,9 @@ export function MethodologyExperience() {
                       </span>
                     ) : null}
                   </span>
-                  {option.id === "harmonized" ? (
-                    <RefreshCw aria-hidden size={14} />
-                  ) : (
-                    <span
-                      className={`size-2 rounded-full ${isSelected ? "bg-terracotta-soft" : "bg-transparent"}`}
-                    />
-                  )}
+                  <span
+                    className={`size-2 rounded-full ${isSelected ? "bg-terracotta-soft" : "bg-transparent"}`}
+                  />
                 </button>
               );
             })}
@@ -357,9 +340,9 @@ export function MethodologyExperience() {
         <section className="pb-24 lg:pb-32" id="digital-process">
           <Container>
             <ProcessHeader
-              kicker="Discipline 01 / Cloud architecture"
-              title="Effortless elegance, deployed in minutes."
-              description="A calm browser workflow for contemporary couples, from first template to responsive guest experience, live replies, and a shareable celebration address."
+              kicker="Pilihan 01 / Undangan digital"
+              title="Elegan, mudah, dan siap dibagikan."
+              description="Alur browser yang tenang untuk pasangan modern, dari memilih template hingga pengalaman tamu responsif, respons langsung, dan alamat undangan yang mudah dibagikan."
             />
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
               {digitalSteps.map((step) => (
@@ -367,19 +350,19 @@ export function MethodologyExperience() {
               ))}
             </div>
             <SectionCta
-              kicker="Zero setup anxiety"
-              title="Ready to begin your digital invitation?"
-              description="Shape the complete guest experience at your own pace, with the visual direction resolved before you publish."
+              kicker="Pengaturan yang mudah"
+              title="Siap memulai undangan digital Anda?"
+              description="Susun pengalaman tamu sesuai ritme Anda dan pastikan arah visualnya matang sebelum dipublikasikan."
               features={[
-                "One considered workspace",
-                "Responsive guest preview",
-                "Studio-ready templates",
+                "Satu ruang kerja yang tertata",
+                "Pratinjau tamu responsif",
+                "Template siap dipersonalisasi",
               ]}
               primary={{
                 href: "/templates",
-                label: "Explore digital templates",
+                label: "Jelajahi template digital",
               }}
-              secondary={{ href: "/register", label: "Create your invitation" }}
+              secondary={{ href: "/register", label: "Buat undangan Anda" }}
             />
           </Container>
         </section>
@@ -389,9 +372,9 @@ export function MethodologyExperience() {
         <section className="pb-24 lg:pb-32" id="printed-process">
           <Container>
             <ProcessHeader
-              kicker="Discipline 02 / Tactile letterpress"
-              title="Bespoke tactile craftsmanship, guided by human dialogue."
-              description="Substantial cotton papers, considered proofing, and artisan finishing come together through a consultation-led studio commission."
+              kicker="Pilihan 02 / Letterpress bertekstur"
+              title="Karya personal yang dipandu melalui percakapan."
+              description="Kertas katun tebal, proof yang teliti, dan finishing manual dipadukan melalui proses konsultasi bersama tim kami."
             />
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
               {printedSteps.map((step) => (
@@ -399,18 +382,18 @@ export function MethodologyExperience() {
               ))}
             </div>
             <SectionCta
-              kicker="Bespoke production"
-              title="Commission your heirloom stationery."
-              description="Speak with the studio about paper, quantities, timing, and the tactile direction you imagine for your celebration."
+              kicker="Produksi personal"
+              title="Wujudkan stationery yang layak disimpan."
+              description="Diskusikan pilihan kertas, jumlah, waktu, dan nuansa material yang Anda bayangkan untuk perayaan."
               features={[
-                "Consultation-led proofing",
-                "Archival cotton stocks",
-                "Tracked studio delivery",
+                "Proof melalui konsultasi",
+                "Pilihan kertas katun",
+                "Pengiriman terlacak",
               ]}
-              primary={{ href: "/contact", label: "Consult with the studio" }}
+              primary={{ href: "/contact", label: "Konsultasi dengan kami" }}
               secondary={{
                 href: "/printed",
-                label: "Explore printed stationery",
+                label: "Jelajahi stationery cetak",
               }}
             />
           </Container>

@@ -12,7 +12,7 @@ type PreviewStyle =
 const presentation = [
   {
     style: "minimal" as const,
-    label: "Minimal · Monolith",
+    label: "Minimal · Monolit",
     mood: "Editorial",
     names: "Julian & Clara",
     venue: "Château de Courcelles",
@@ -20,40 +20,40 @@ const presentation = [
   },
   {
     style: "warm" as const,
-    label: "Warm Ochre · Rustic Luxe",
-    mood: "Sunlit",
+    label: "Oker Hangat · Rustic Luxe",
+    mood: "Hangat",
     names: "Matteo & Elena",
     venue: "Villa Medicea di Lilliano",
     date: "06.21.26",
   },
   {
     style: "nocturne" as const,
-    label: "Dark Mode · Haute Couture",
-    mood: "Evening",
+    label: "Mode Gelap · Haute Couture",
+    mood: "Malam",
     names: "Victoria & Sean",
     venue: "The Glasshouse Manhattan",
     date: "11.08.26",
   },
   {
     style: "architectural" as const,
-    label: "Architectural · Typography",
-    mood: "Nordic",
+    label: "Modern · Tipografi",
+    mood: "Nordik",
     names: "Henrik + Signe",
     venue: "Louisiana Museum of Modern Art",
     date: "08.14.26",
   },
   {
     style: "floral" as const,
-    label: "Delicate Floral · Botanical",
-    mood: "Organic",
+    label: "Floral Lembut · Botani",
+    mood: "Organik",
     names: "Amélie & Luc",
     venue: "Provence Countryside Estate",
     date: "Spring 2026",
   },
   {
     style: "illustrated" as const,
-    label: "Illustrated · Fine Line Art",
-    mood: "Artistic",
+    label: "Ilustratif · Seni Garis",
+    mood: "Artistik",
     names: "Kenji & Yuna",
     venue: "Gion Garden Pavilion",
     date: "10.04.26",
@@ -64,7 +64,7 @@ const extras = [
   {
     key: "ethereal-botanique",
     name: "Ethereal Botanique",
-    description: "Soft botanical detail and open editorial pacing.",
+    description: "Detail botani lembut dengan susunan editorial yang lapang.",
     category: "Digital",
     rendererKey: "marketing-only",
     thumbnailUrl: "",
@@ -73,7 +73,7 @@ const extras = [
   {
     key: "kyoto-whisper",
     name: "Kyoto Whisper",
-    description: "Fine-line illustration with quiet modern restraint.",
+    description: "Ilustrasi garis halus dengan nuansa modern yang tenang.",
     category: "Digital",
     rendererKey: "marketing-only",
     thumbnailUrl: "",
@@ -105,7 +105,7 @@ function Preview({ style, names, venue, date }: PreviewProps) {
       <span
         className={`text-[7px] font-semibold tracking-widest uppercase ${dark ? "text-champagne" : "text-secondary"}`}
       >
-        {style === "illustrated" ? "Atelier Fine Line" : "The Union Of"}
+        {style === "illustrated" ? "Ilustrasi Garis Halus" : "Kisah Bersama"}
       </span>
       {style === "floral" ? (
         <Flower2 aria-hidden size={20} className="mx-auto text-secondary" />
@@ -159,15 +159,15 @@ export function DigitalTemplateShowcase({
         <div className="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div>
             <p className="text-[10px] font-semibold tracking-[0.2em] text-secondary uppercase sm:text-[11px]">
-              Gallery Showcase
+              03 — Galeri Template
             </p>
             <h2 className="mt-2 font-serif text-[2rem] leading-[1.12] tracking-[-0.015em] sm:text-[40px] sm:leading-[1.2]">
-              Curated Template Collections
+              Koleksi Template Pilihan
             </h2>
           </div>
           <p className="max-w-md text-sm leading-6 text-on-surface-variant sm:text-[15px]">
-            Explore distinct visual directions designed around the same clear
-            invitation structure.
+            Temukan beragam gaya visual dengan struktur undangan yang tetap
+            jelas dan mudah digunakan.
           </p>
         </div>
 
@@ -190,7 +190,7 @@ export function DigitalTemplateShowcase({
               aria-pressed={filter === value}
               className={`whitespace-nowrap px-5 py-2.5 text-[10px] font-semibold tracking-wider uppercase transition-colors ${filter === value ? "bg-primary text-white" : "bg-white text-on-surface-variant hover:text-primary"}`}
             >
-              {value === "all" ? `All Styles (${cards.length})` : value}
+              {value === "all" ? `Semua Gaya (${cards.length})` : value}
             </button>
           ))}
         </div>
@@ -231,7 +231,7 @@ export function DigitalTemplateShowcase({
                       href="/register"
                       className="flex-1 bg-primary py-3 text-center text-[10px] font-semibold tracking-wider text-white uppercase transition-colors hover:bg-secondary"
                     >
-                      Use Design
+                      Gunakan Desain
                     </Link>
                     <Link
                       href={
@@ -241,7 +241,7 @@ export function DigitalTemplateShowcase({
                       }
                       className="bg-surface-container px-4 py-3 text-[10px] font-semibold tracking-wider uppercase transition-colors hover:bg-surface-high"
                     >
-                      Preview
+                      Pratinjau
                     </Link>
                   </div>
                 </div>

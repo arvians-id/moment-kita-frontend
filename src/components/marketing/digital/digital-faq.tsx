@@ -5,34 +5,34 @@ import { useState } from "react";
 
 const questions = [
   {
-    question: "Can I change our wedding information after publishing?",
+    question: "Bisakah informasi pernikahan diubah setelah dipublikasikan?",
     answer:
-      "Yes. Supported invitation content can be updated after finalization while the selected template and invitation address remain intentionally stable.",
+      "Bisa. Konten undangan yang didukung dapat diperbarui setelah finalisasi, sementara template dan alamat undangan tetap sama.",
   },
   {
-    question: "Can I use a personal custom domain name?",
+    question: "Bisakah saya menggunakan nama domain sendiri?",
     answer:
-      "Custom domains are not part of the current Moment Kita MVP. Invitations use the supported public invitation address shown during setup.",
+      "Domain khusus belum tersedia saat ini. Undangan menggunakan alamat publik Moment Kita yang ditampilkan saat pengaturan.",
   },
   {
-    question: "Can I switch templates after entering my details?",
+    question: "Bisakah template diganti setelah detail undangan diisi?",
     answer:
-      "The selected template becomes fixed at finalization so the published invitation remains compatible with its saved renderer version. Preview designs before making that choice.",
+      "Template akan ditetapkan saat finalisasi agar undangan yang dipublikasikan tetap konsisten. Gunakan pratinjau sebelum menentukan pilihan.",
   },
   {
-    question: "How long does our wedding invitation remain online?",
+    question: "Berapa lama undangan pernikahan kami tetap aktif?",
     answer:
-      "Availability follows the duration and lifecycle rules of the selected package. Moment Kita does not make an unsupported lifetime-hosting promise.",
+      "Masa aktif mengikuti durasi paket yang dipilih. Detailnya akan terlihat pada ketentuan setiap paket.",
   },
   {
-    question: "What guest responses can the invitation collect?",
+    question: "Respons tamu apa saja yang dapat dikumpulkan?",
     answer:
-      "Supported templates and packages can collect attendance, party details, dietary information, wishes, and other enabled guest fields.",
+      "Template dan paket yang mendukung dapat mengumpulkan konfirmasi kehadiran, jumlah rombongan, informasi makanan, ucapan, dan detail tamu lainnya.",
   },
   {
-    question: "Can we include gifting details?",
+    question: "Bisakah kami menyertakan informasi hadiah?",
     answer:
-      "Yes. Supported invitation sections can present the couple’s chosen gift or bank information with the same restraint as the rest of the guest experience.",
+      "Bisa. Bagian undangan yang didukung dapat menampilkan informasi hadiah atau rekening pilihan pasangan dengan tampilan yang tetap elegan.",
   },
 ] as const;
 
@@ -44,10 +44,10 @@ export function DigitalFaq() {
       <div className="mx-auto max-w-3xl px-5 sm:px-8">
         <div className="mb-14 text-center">
           <p className="text-[10px] font-semibold tracking-[0.2em] text-secondary uppercase sm:text-[11px]">
-            Curator Knowledge
+            Informasi Penting
           </p>
           <h2 className="mt-3 font-serif text-[2rem] leading-[1.12] tracking-[-0.015em] sm:text-[40px] sm:leading-[1.2]">
-            Frequently Answered
+            Pertanyaan yang Sering Diajukan
           </h2>
         </div>
         <div className="space-y-4">

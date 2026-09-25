@@ -1,9 +1,9 @@
 import { FeaturesPage } from "@/components/marketing/pages/features-page";
 
 export const metadata = {
-  title: "Features",
+  title: "Fitur",
   description:
-    "Explore the digital invitation features designed for a graceful guest journey.",
+    "Jelajahi fitur undangan digital yang dirancang untuk pengalaman tamu yang nyaman dan berkesan.",
 };
 
 export default function Page() {

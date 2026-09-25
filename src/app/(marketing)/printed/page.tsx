@@ -5,9 +5,9 @@ import {
 } from "@/services/public/printed-service";
 
 export const metadata = {
-  title: "Printed & Fine Stationery",
+  title: "Undangan Cetak & Fine Stationery",
   description:
-    "Heirloom letterpress wedding invitations, archival cotton papers, and bespoke finishing—commissioned through a direct studio consultation.",
+    "Undangan pernikahan letterpress di atas kertas katun pilihan dengan finishing khusus dan konsultasi langsung bersama Moment Kita.",
 };
 
 export default async function Page() {

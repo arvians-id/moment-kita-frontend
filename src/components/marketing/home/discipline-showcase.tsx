@@ -8,50 +8,50 @@ import { Container } from "@/components/shared/container";
 const disciplines = [
   {
     id: "digital-suite",
-    label: "Discipline A",
-    title: "Interactive Digital Suite",
-    badge: "Instant setup",
+    label: "Pilihan A",
+    title: "Undangan Digital Interaktif",
+    badge: "Siap dengan cepat",
     image: "/images/marketing/digital-invitation-phone.png",
     imageAlt:
-      "A smartphone displaying an editorial digital wedding invitation on natural linen.",
+      "Ponsel yang menampilkan undangan pernikahan digital di atas kain linen alami.",
     description:
-      "For couples who want effortless guest coordination, immediate sharing, and a layered digital story without losing visual reverence.",
+      "Untuk pasangan yang menginginkan koordinasi tamu yang mudah, berbagi dengan cepat, dan kisah digital berlapis tanpa kehilangan keindahannya.",
     features: [
-      "RSVP response tracking",
-      "Personal guest links",
-      "Love-story chapters",
-      "Map and event details",
-      "Gallery and wishes",
-      "Mobile-first experience",
+      "Pemantauan respons RSVP",
+      "Tautan personal untuk tamu",
+      "Bab perjalanan cinta",
+      "Peta dan detail acara",
+      "Galeri dan ucapan",
+      "Nyaman di perangkat seluler",
     ],
-    meta: "Self-guided platform",
-    price: "From Rp299K",
+    meta: "Atur secara mandiri",
+    price: "Mulai Rp299 ribu",
     href: "/templates",
-    action: "Browse templates",
+    action: "Lihat template",
     accent: false,
   },
   {
     id: "print-atelier",
-    label: "Discipline B",
-    title: "Tactile Artisan Fine Print",
-    badge: "Made to order",
+    label: "Pilihan B",
+    title: "Stationery Cetak Bertekstur",
+    badge: "Dibuat sesuai pesanan",
     image: "/images/marketing/embossed-cotton-invitation.png",
     imageAlt:
-      "Embossed cotton wedding invitation with copper calligraphy and a botanical monogram.",
+      "Undangan pernikahan berbahan katun dengan emboss, kaligrafi tembaga, dan monogram botani.",
     description:
-      "For couples drawn to tactile permanence. Every suite is discussed directly, pairing considered typography with papers and finishes chosen by hand.",
+      "Untuk pasangan yang menyukai kesan nyata dan tahan lama. Setiap rangkaian dibahas langsung, memadukan tipografi, kertas, dan finishing pilihan.",
     features: [
-      "Heavy cotton paper",
-      "Blind deboss and foil",
-      "Custom monograms",
-      "Silk and vellum layers",
-      "Wax-seal finishing",
-      "Personal consultation",
+      "Kertas katun tebal",
+      "Blind deboss dan foil",
+      "Monogram khusus",
+      "Lapisan sutra dan vellum",
+      "Finishing segel lilin",
+      "Konsultasi personal",
     ],
-    meta: "Artisan commission",
-    price: "Tailored quotation",
+    meta: "Pesanan khusus",
+    price: "Penawaran sesuai kebutuhan",
     href: "/contact",
-    action: "Consult the atelier",
+    action: "Konsultasi dengan kami",
     accent: true,
   },
 ] as const;
@@ -65,12 +65,12 @@ export function DisciplineShowcase() {
       <Container>
         <div className="mb-14 grid gap-6 md:grid-cols-2 md:items-end">
           <EditorialHeading
-            kicker="01 — The two disciplines"
-            title="Choose Your Medium or Harmonize Both"
+            kicker="01 — Dua pilihan undangan"
+            title="Pilih Digital, Cetak, atau Padukan Keduanya"
           />
           <p className="max-w-lg text-sm leading-6 text-on-surface-variant md:justify-self-end">
-            Whether you seek fluid guest logistics or irreplaceable paper
-            keepsakes, both expressions are shaped with the same editorial care.
+            Baik untuk kemudahan mengelola tamu maupun kenang-kenangan kertas,
+            keduanya dirancang dengan perhatian yang sama.
           </p>
         </div>
 
@@ -107,7 +107,7 @@ export function DisciplineShowcase() {
                   <span className="absolute bottom-4 left-4 bg-white/90 px-3 py-1.5 text-[10px] tracking-[0.08em] backdrop-blur">
                     {discipline.id === "digital-suite"
                       ? "momentkita.id/raka-ayu"
-                      : "Cotton · Emboss · Warm foil"}
+                      : "Katun · Emboss · Foil hangat"}
                   </span>
                 </div>
               </div>

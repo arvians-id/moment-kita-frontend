@@ -9,27 +9,24 @@ import { Container } from "@/components/shared/container";
 const questions = [
   {
     question:
-      "Can I switch templates after entering my guest list and wedding story?",
+      "Bisakah template diganti setelah daftar tamu dan kisah pernikahan diisi?",
     answer:
-      "Yes. Your guest list, schedule, dietary preferences, RSVP answers, and photo galleries live independently of your design theme, so the supported template can be changed while your content stays intact and the typography and colour styling adapt with it.",
+      "Bisa. Daftar tamu, jadwal, pilihan makanan, jawaban RSVP, dan galeri foto tersimpan terpisah dari tema desain. Template yang didukung dapat diganti tanpa menghilangkan konten Anda.",
   },
   {
-    question:
-      "Can we pair any digital design with an artisan printed counterpart?",
+    question: "Bisakah desain digital dipadukan dengan versi cetak?",
     answer:
-      "Every edition in our catalog has a printed counterpart engineered for 600gsm cotton paper. Printed suites can also carry a discreet blind-debossed micro QR seal so guests can open the synchronized digital experience on their phones.",
+      "Setiap edisi dalam koleksi kami memiliki pasangan cetak di atas kertas katun 600gsm. Versi cetak juga dapat memuat kode QR kecil agar tamu mudah membuka undangan digital.",
   },
   {
-    question:
-      "How do music and interactive maps integrate into digital suites?",
+    question: "Bagaimana musik dan peta interaktif hadir di undangan digital?",
     answer:
-      "Guests can open their digital envelope with gentle ambient audio, and venues feature direct interactive directions that open in their preferred maps application, complete with parking and arrival guidance.",
+      "Undangan dapat dibuka dengan musik latar yang lembut. Petunjuk arah lokasi akan terbuka di aplikasi peta pilihan tamu, lengkap dengan informasi parkir dan kedatangan.",
   },
   {
-    question:
-      "What is the turnaround time for physical printed proofs and production?",
+    question: "Berapa lama proses proof dan produksi undangan cetak?",
     answer:
-      "Digital proofing is completed within a few business days of your order. Once you approve proofs, the letterpress and foil stamping run takes roughly two to three weeks, after which orders are delivered by tracked courier.",
+      "Proof digital disiapkan dalam beberapa hari kerja. Setelah disetujui, proses letterpress dan foil stamping memerlukan sekitar dua hingga tiga minggu, lalu pesanan dikirim melalui kurir terlacak.",
   },
 ] as const;
 
@@ -42,21 +39,21 @@ export function TemplatesFaq() {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <span className="mb-2 block text-[11px] leading-4 font-semibold tracking-[0.2em] text-secondary uppercase">
-              Frequently Addressed
+              Pertanyaan Umum
             </span>
             <h2 className="mb-4 font-serif text-[28px] leading-[34px] tracking-tight md:text-[40px] md:leading-[48px]">
-              Guidance for Selecting Your Template
+              Panduan Memilih Template
             </h2>
             <p className="mb-6 text-[15px] leading-relaxed text-on-surface-variant">
-              Choosing an invitation suite sets the emotional tone for your
-              celebration. Here is how our digital architecture and fine
-              stationery blend seamlessly.
+              Pilihan undangan membangun suasana pertama untuk perayaan Anda.
+              Berikut cara undangan digital dan fine stationery berpadu dengan
+              selaras.
             </p>
             <Link
               href="/how-it-works"
               className="inline-flex items-center gap-2 text-[12px] leading-4 font-semibold tracking-[0.12em] text-secondary uppercase transition-colors hover:text-primary"
             >
-              <span>Read the full production process</span>
+              <span>Lihat proses lengkap</span>
               <ArrowRight aria-hidden size={16} />
             </Link>
           </div>

@@ -6,25 +6,25 @@ import { useState } from "react";
 const questions = [
   {
     question:
-      "Can guests view our invitation without downloading an app or creating an account?",
+      "Bisakah tamu melihat undangan tanpa mengunduh aplikasi atau membuat akun?",
     answer:
-      "Yes. Guests can open the invitation in a modern browser without installing an application or creating a separate account.",
+      "Bisa. Tamu dapat membuka undangan melalui browser modern tanpa memasang aplikasi atau membuat akun terpisah.",
   },
   {
-    question: "How does the digital envelope work?",
+    question: "Bagaimana cara kerja amplop digital?",
     answer:
-      "The invitation can present the couple’s chosen gifting instructions in a discreet chapter, keeping guests within the same considered experience.",
+      "Undangan dapat menampilkan petunjuk hadiah pilihan pasangan dalam bagian yang rapi, tanpa mengalihkan tamu ke pengalaman lain.",
   },
   {
     question:
-      "Can we update wedding details after the invitation has been distributed?",
+      "Bisakah detail pernikahan diperbarui setelah undangan dibagikan?",
     answer:
-      "Yes. Supported content can be revised after finalization while the chosen template and invitation address remain stable.",
+      "Bisa. Konten yang didukung dapat diperbarui setelah finalisasi, sementara template dan alamat undangan tetap sama.",
   },
   {
-    question: "Is our guest list and personal ceremony data kept confidential?",
+    question: "Apakah daftar tamu dan data acara kami tetap rahasia?",
     answer:
-      "Moment Kita is designed around private invitation access. We do not turn the guest journey into an advertising feed, and public views expose only the content intended for invitees.",
+      "Moment Kita dirancang untuk akses undangan yang privat. Tidak ada iklan, dan tampilan publik hanya memperlihatkan konten yang memang ditujukan untuk tamu.",
   },
 ] as const;
 
@@ -39,14 +39,14 @@ export function FeaturesFaq() {
       <div className="mx-auto flex max-w-3xl flex-col gap-4">
         <div className="pb-2 text-center">
           <p className="text-[10px] font-semibold tracking-[0.2em] text-secondary uppercase sm:text-[11px]">
-            06 — Clarity &amp; Support
+            05 — Informasi &amp; Dukungan
           </p>
           <h2 className="mt-2 font-serif text-[2rem] leading-[1.12] tracking-[-0.015em] sm:text-[40px] sm:leading-[1.2]">
-            Frequently answered inquiries.
+            Pertanyaan yang sering diajukan.
           </h2>
           <p className="mt-2 text-sm leading-6 text-on-surface-variant sm:text-[15px]">
-            The essentials about browser access, invitation updates, gifting,
-            and guest privacy.
+            Informasi penting tentang akses browser, pembaruan undangan, hadiah,
+            dan privasi tamu.
           </p>
         </div>
         <div className="space-y-3">

@@ -3,9 +3,9 @@ import { getPackages } from "@/services/public/package-service";
 import { getPrintedProducts } from "@/services/public/printed-service";
 
 export const metadata = {
-  title: "Pricing",
+  title: "Harga",
   description:
-    "Compare Moment Kita digital invitation packages and explore consultation-led printed stationery pricing.",
+    "Bandingkan paket undangan digital Moment Kita dan lihat kisaran harga stationery cetak dengan konsultasi personal.",
 };
 
 export default async function Page() {

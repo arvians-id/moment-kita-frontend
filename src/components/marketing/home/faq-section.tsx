@@ -8,30 +8,31 @@ import { Container } from "@/components/shared/container";
 
 const questions = [
   {
-    question: "Can we combine digital invitations with printed keepsake sets?",
+    question: "Bisakah undangan digital dipadukan dengan set cetak?",
     answer:
-      "Yes. A harmonized direction can pair a digital invitation for your wider guest list with a smaller print edition for family, close friends, or personal archives.",
+      "Tentu. Undangan digital dapat dibagikan kepada lebih banyak tamu, sementara edisi cetak disiapkan untuk keluarga, sahabat dekat, atau disimpan sebagai kenang-kenangan.",
   },
   {
     question:
-      "Why are printed orders discussed directly instead of through a cart?",
+      "Mengapa pesanan cetak dibahas langsung, bukan melalui keranjang?",
     answer:
-      "Paper weight, texture, finishing, quantity, and assembly all affect the final piece. A direct conversation lets the studio recommend a combination that fits your celebration and budget.",
+      "Berat dan tekstur kertas, finishing, jumlah, serta perakitan memengaruhi hasil akhir. Percakapan langsung membantu kami merekomendasikan pilihan yang sesuai dengan perayaan dan anggaran Anda.",
   },
   {
-    question: "How will digital guest responses be gathered?",
+    question: "Bagaimana respons tamu digital dikumpulkan?",
     answer:
-      "The final invitation experience will let invited guests respond through the published invitation. The customer management experience is intentionally outside this public-marketing phase.",
+      "Tamu dapat mengirim respons melalui undangan yang telah dipublikasikan. Pengelolaannya tersedia di area khusus pelanggan.",
   },
   {
-    question: "How quickly can we begin personalizing a digital invitation?",
+    question:
+      "Seberapa cepat kami bisa mulai mempersonalisasi undangan digital?",
     answer:
-      "You can explore the visual collection now. Account creation, editing, publishing, and other authenticated workflows will arrive in their dedicated implementation phases.",
+      "Anda dapat menjelajahi koleksi visual sekarang, lalu membuat akun untuk melanjutkan personalisasi undangan.",
   },
   {
-    question: "What print finishes and paper weights are available?",
+    question: "Pilihan finishing dan ketebalan kertas apa yang tersedia?",
     answer:
-      "The atelier direction includes substantial cotton papers, deckled options, blind debossing, metallic foil, vellum layers, ribbon, and wax-seal finishing. Exact availability is confirmed during consultation.",
+      "Pilihan kami mencakup kertas katun tebal, tepi deckle, blind deboss, foil metalik, lapisan vellum, pita, dan segel lilin. Ketersediaan pastinya dikonfirmasi saat konsultasi.",
   },
 ] as const;
 
@@ -42,8 +43,8 @@ export function FaqSection() {
     <section className="bg-surface-low py-20 lg:py-28">
       <Container className="max-w-[960px]">
         <EditorialHeading
-          kicker="08 — Questions answered"
-          title="Frequently Asked Inquiries"
+          kicker="06 — Jawaban untuk Anda"
+          title="Pertanyaan yang Sering Diajukan"
           align="center"
         />
         <div className="mt-12 space-y-3">

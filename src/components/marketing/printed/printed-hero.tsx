@@ -10,22 +10,22 @@ import { Container } from "@/components/shared/container";
 import { externalLinkProps, whatsappHref } from "@/lib/whatsapp";
 
 const assurances = [
-  { icon: BadgeCheck, label: "600–900gsm Pure Cotton" },
-  { icon: DraftingCompass, label: "1950s Heidelberg Letterpress" },
-  { icon: Truck, label: "Global White-Glove Care" },
+  { icon: BadgeCheck, label: "Katun Murni 600–900gsm" },
+  { icon: DraftingCompass, label: "Letterpress Heidelberg 1950-an" },
+  { icon: Truck, label: "Pengiriman dengan Perlindungan" },
 ] as const;
 
 const annotations = [
   {
-    label: "Paper: 600gsm Wild Cotton Deckle Edge",
+    label: "Kertas: Katun 600gsm dengan Tepi Deckle",
     position: "top-8 left-8 hidden sm:flex",
   },
   {
-    label: "Finishing: Heated Copper-Rose Foil",
+    label: "Finishing: Foil Copper-Rose",
     position: "bottom-16 right-8 hidden sm:flex",
   },
   {
-    label: "Detail: Hand-Poured Monogram Seal",
+    label: "Detail: Segel Monogram Buatan Tangan",
     position: "top-1/2 -left-4 -translate-y-1/2 hidden md:flex",
   },
 ] as const;
@@ -38,31 +38,30 @@ export function PrintedHero() {
           <div className="z-10 flex flex-col gap-4 lg:col-span-6">
             <p className="inline-flex items-center gap-2 text-[11px] leading-4 font-semibold tracking-[0.2em] text-secondary uppercase">
               <span className="size-2 shrink-0 rounded-full bg-secondary" />
-              02 — The Print Atelier · Heirloom Stationery &amp; Bespoke
-              Letterpress
+              02 — Undangan Cetak · Fine Stationery &amp; Letterpress Khusus
             </p>
             <h1 className="font-serif text-[36px] leading-[42px] tracking-[-0.01em] md:text-[56px] md:leading-[64px] md:tracking-[-0.02em]">
-              Made to be <em className="font-normal text-secondary">held</em>.
+              Dibuat untuk{" "}
+              <em className="font-normal text-secondary">disentuh</em>.
               <br />
-              Designed to be{" "}
-              <em className="font-normal text-secondary">remembered</em>.
+              Dirancang untuk{" "}
+              <em className="font-normal text-secondary">dikenang</em>.
             </h1>
             <p className="max-w-xl text-[18px] leading-[30px] tracking-[-0.01em] text-on-surface-variant">
-              Tactile wedding invitations hand-pressed on archival 600gsm cotton
-              papers, sculpted with blind deboss crests, and sealed with antique
-              wax. Each heirloom suite is tailored in intimate dialogue with our
-              master typographers.
+              Undangan pernikahan bertekstur yang dicetak di atas kertas katun
+              600gsm, diperkaya blind deboss, dan disempurnakan dengan segel
+              lilin. Setiap rangkaian dibuat melalui konsultasi personal.
             </p>
             <div className="flex flex-col items-stretch gap-4 pt-2 sm:flex-row sm:items-center">
               <a
                 href="#collection"
                 className="inline-flex items-center justify-center bg-primary px-8 py-4 text-[12px] leading-4 font-semibold tracking-[0.12em] text-primary-foreground uppercase shadow-md transition-colors hover:bg-secondary"
               >
-                Explore Collection
+                Jelajahi Koleksi
               </a>
               <a
                 href={whatsappHref(
-                  "Hello Moment Kita, I would like to consult about printed wedding stationery.",
+                  "Halo Moment Kita, saya ingin berkonsultasi tentang stationery pernikahan cetak.",
                 )}
                 {...externalLinkProps}
                 className="inline-flex items-center justify-center gap-2.5 rounded-full bg-surface-lowest px-6 py-4 text-[12px] leading-4 font-semibold tracking-[0.12em] uppercase shadow-sm transition-colors hover:bg-surface-container"
@@ -72,9 +71,9 @@ export function PrintedHero() {
                   size={18}
                   className="text-secondary"
                 />
-                <span>Consult via WhatsApp</span>
+                <span>Konsultasi via WhatsApp</span>
                 <span className="rounded-full bg-accent/60 px-2 py-0.5 text-[10px] font-normal tracking-normal text-secondary lowercase">
-                  avg 20m
+                  ±20 mnt
                 </span>
               </a>
             </div>
@@ -92,7 +91,7 @@ export function PrintedHero() {
             <div className="relative overflow-hidden rounded-[8px] bg-surface-low p-3 shadow-2xl md:p-5">
               <Image
                 src="/images/marketing/hero-stationery-suite.png"
-                alt="Heirloom wedding invitation suite arranged with silk ribbon, wax seal, and pressed florals"
+                alt="Rangkaian undangan pernikahan dengan pita sutra, segel lilin, dan bunga kering"
                 width={1376}
                 height={768}
                 priority

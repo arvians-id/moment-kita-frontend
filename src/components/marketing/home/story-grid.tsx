@@ -8,26 +8,26 @@ const stories = [
   {
     couple: "Alya & Raka",
     place: "Ubud, Bali",
-    suite: "Harmonized Suite",
+    suite: "Undangan Digital & Cetak",
     image: "/images/marketing/sunlit-stationery-table.png",
     quote:
-      "The digital suite made every guest detail feel effortless, while our closest family received paper keepsakes we will hold onto for years.",
+      "Undangan digital memudahkan setiap detail untuk tamu, sementara keluarga terdekat menerima undangan cetak yang akan kami simpan bertahun-tahun.",
   },
   {
     couple: "Nadia & Bima",
-    place: "Bandung, West Java",
-    suite: "Fine Print Atelier",
+    place: "Bandung, Jawa Barat",
+    suite: "Stationery Cetak",
     image: "/images/marketing/garden-stationery-suite.png",
     quote:
-      "The paper, typography, and warm finishing felt deeply personal—more like opening a treasured object than receiving an announcement.",
+      "Kertas, tipografi, dan finishing hangatnya terasa sangat personal—seperti membuka benda berharga, bukan sekadar menerima pengumuman.",
   },
   {
     couple: "Maya & Devon",
     place: "Jakarta",
-    suite: "Interactive Digital Suite",
+    suite: "Undangan Digital Interaktif",
     image: "/images/marketing/hero-stationery-suite.png",
     quote:
-      "Sharing one considered link kept our celebration clear for everyone without losing the feeling and ceremony we wanted.",
+      "Satu tautan yang tertata membuat informasi perayaan kami jelas bagi semua orang, tanpa mengurangi suasana yang kami inginkan.",
   },
 ] as const;
 
@@ -37,11 +37,11 @@ export function StoryGrid() {
       <Container>
         <div className="mb-14 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
           <EditorialHeading
-            kicker="05 — Curated celebrations"
-            title="Couples of Moment Kita"
+            kicker="03 — Kisah pilihan"
+            title="Pasangan Moment Kita"
           />
           <p className="text-xs text-on-surface-variant">
-            Stories shaped across paper, pixel, and place
+            Kisah yang hadir di kertas, layar, dan setiap tempat
           </p>
         </div>
 
@@ -54,7 +54,7 @@ export function StoryGrid() {
               <div className="relative h-64 overflow-hidden">
                 <Image
                   src={story.image}
-                  alt={`Wedding stationery created for ${story.couple}.`}
+                  alt={`Stationery pernikahan untuk ${story.couple}.`}
                   fill
                   sizes="(max-width: 1024px) 100vw, 33vw"
                   className="object-cover"

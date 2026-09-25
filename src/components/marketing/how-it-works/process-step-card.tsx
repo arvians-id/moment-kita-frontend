@@ -28,7 +28,7 @@ export function ProcessStepCard({ step }: { step: ProcessStep }) {
               {step.badge}
             </span>
             <span className="text-[10px] font-semibold tracking-[0.15em] text-secondary uppercase">
-              Step {step.number} — {step.phase}
+              Langkah {step.number} — {step.phase}
             </span>
           </div>
           <h3 className="font-serif text-3xl leading-tight text-primary">
@@ -72,7 +72,7 @@ export function ProcessStepCard({ step }: { step: ProcessStep }) {
           </span>
         </div>
         <p className="text-[10px] font-semibold tracking-[0.15em] text-secondary uppercase">
-          Step {step.number} — {step.phase}
+          Langkah {step.number} — {step.phase}
         </p>
         <h3 className="mt-2 font-serif text-[22px] leading-[1.35] text-primary">
           {step.title}

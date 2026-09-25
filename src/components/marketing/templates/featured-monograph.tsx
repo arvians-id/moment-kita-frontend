@@ -14,25 +14,25 @@ import { Container } from "@/components/shared/container";
 const highlights = [
   {
     icon: Music2,
-    title: "Curated Ambient Soundscape",
-    text: "Integrated lossless instrumental audio scoring the digital unboxing.",
+    title: "Musik Latar Pilihan",
+    text: "Audio instrumental terintegrasi untuk mengiringi pembukaan undangan digital.",
   },
   {
     icon: Mailbox,
-    title: "Multi-Event RSVP & Dietetics",
-    text: "Rehearsal dinner, welcome soiree, and main ceremony RSVP tiering with guest-list sync.",
+    title: "RSVP Beberapa Acara & Pilihan Menu",
+    text: "RSVP untuk acara penyambutan, jamuan, dan acara utama yang tersinkron dengan daftar tamu.",
   },
   {
     icon: ShieldCheck,
-    title: "Tactile Foil & Blind Deboss Print Set",
-    text: "Handcrafted in our print room with fine-milled envelopes and wax seals.",
+    title: "Set Cetak Foil & Blind Deboss",
+    text: "Dikerjakan dengan tangan, dilengkapi amplop pilihan dan segel lilin.",
   },
 ] as const;
 
 const specs = [
-  { label: "Paper Stock", value: "600 GSM Cotton" },
-  { label: "Specialty Finish", value: "Copper Foil & Deboss" },
-  { label: "Digital Architecture", value: "Personal Link + RSVP" },
+  { label: "Bahan Kertas", value: "Katun 600 GSM" },
+  { label: "Finishing Khusus", value: "Copper Foil & Deboss" },
+  { label: "Fitur Digital", value: "Tautan Personal + RSVP" },
 ] as const;
 
 export function FeaturedMonograph() {
@@ -49,16 +49,16 @@ export function FeaturedMonograph() {
               <div className="z-10 mb-8 flex flex-wrap items-center justify-between gap-3">
                 <div className="flex items-center gap-2">
                   <span className="rounded-full bg-surface-lowest px-3 py-1 text-[12px] leading-4 font-semibold tracking-[0.12em] text-secondary uppercase shadow-sm">
-                    Atelier Spotlight
+                    Pilihan Moment Kita
                   </span>
                   <span className="font-mono text-[13px] leading-5 text-on-surface-variant">
-                    Edition 01
+                    Edisi 01
                   </span>
                 </div>
                 <div className="flex items-center gap-1.5 text-secondary">
                   <BadgeCheck aria-hidden size={18} />
                   <span className="text-[12px] leading-4 font-semibold tracking-[0.12em] uppercase">
-                    Dual Synchronized
+                    Digital &amp; Cetak Selaras
                   </span>
                 </div>
               </div>
@@ -93,10 +93,10 @@ export function FeaturedMonograph() {
                     </div>
                     <div className="absolute right-3 bottom-3 left-3 rounded-[8px] bg-surface/90 p-2 text-center shadow-md backdrop-blur-md">
                       <span className="block text-[9px] font-semibold tracking-[0.2em] text-secondary uppercase">
-                        Cloud Guest RSVP
+                        RSVP Tamu Digital
                       </span>
                       <span className="text-[11px] font-semibold tracking-[0.12em] uppercase">
-                        Live Music • Audio On
+                        Musik • Audio Aktif
                       </span>
                     </div>
                   </div>
@@ -130,17 +130,16 @@ export function FeaturedMonograph() {
                     /
                   </span>
                   <span className="text-[13px] leading-5 text-on-surface-variant">
-                    Studio Original
+                    Kreasi Moment Kita
                   </span>
                 </div>
                 <h2 className="mb-4 font-serif text-[28px] leading-[34px] tracking-tight md:text-[40px] md:leading-[48px]">
                   Le Jardin Minimaliste
                 </h2>
                 <p className="mb-6 text-[15px] leading-relaxed text-on-surface-variant">
-                  An understated exploration of heirloom botanical engravings
-                  fused with razor-sharp editorial serifs. Includes our
-                  signature digital wax-seal opening ceremony and tactile deckle
-                  edge correspondence.
+                  Nuansa botani yang tenang berpadu dengan serif editorial yang
+                  tegas. Dilengkapi pembukaan segel lilin digital dan pasangan
+                  cetak dengan tepi deckle bertekstur.
                 </p>
 
                 <div className="mb-8 space-y-3.5">
@@ -166,7 +165,7 @@ export function FeaturedMonograph() {
                 <div className="mb-8 flex flex-wrap items-center justify-between gap-3 rounded-[12px] bg-surface-low p-4">
                   <div>
                     <span className="block text-[11px] leading-4 font-semibold tracking-[0.2em] text-secondary uppercase">
-                      Suite Investment
+                      Harga Rangkaian
                     </span>
                     <span className="font-serif text-[22px] leading-[30px] font-semibold">
                       Rp499.000{" "}
@@ -177,16 +176,16 @@ export function FeaturedMonograph() {
                         •
                       </span>
                       <span className="font-sans text-[13px] font-normal text-on-surface-variant">
-                        from
+                        mulai
                       </span>{" "}
                       Rp1.250.000{" "}
                       <span className="font-sans text-[13px] font-normal text-on-surface-variant">
-                        / print set
+                        / set cetak
                       </span>
                     </span>
                   </div>
                   <span className="inline-block rounded-[4px] bg-accent px-2.5 py-1 text-[11px] font-semibold tracking-[0.12em] text-accent-foreground uppercase">
-                    Ready to Personalize
+                    Siap Dipersonalisasi
                   </span>
                 </div>
               </div>
@@ -196,7 +195,7 @@ export function FeaturedMonograph() {
                   href="/register"
                   className="flex w-full items-center justify-center gap-2 rounded-[8px] bg-primary px-6 py-3.5 text-center text-[12px] leading-4 font-semibold tracking-[0.12em] text-primary-foreground uppercase shadow-sm transition-colors hover:bg-secondary sm:w-1/2"
                 >
-                  <span>Personalize Design</span>
+                  <span>Personalisasi Desain</span>
                   <PenLine aria-hidden size={16} />
                 </Link>
                 <Link
@@ -204,7 +203,7 @@ export function FeaturedMonograph() {
                   className="flex w-full items-center justify-center gap-2 rounded-[8px] bg-surface-container px-6 py-3.5 text-center text-[12px] leading-4 font-semibold tracking-[0.12em] uppercase transition-colors hover:bg-surface-highest sm:w-1/2"
                 >
                   <Eye aria-hidden size={16} />
-                  <span>Live Interactive Demo</span>
+                  <span>Demo Interaktif</span>
                 </Link>
               </div>
             </div>

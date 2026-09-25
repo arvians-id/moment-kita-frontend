@@ -51,12 +51,12 @@ export function TemplateGallery({
       <Container>
         <div className="mb-12 flex flex-col gap-7 md:flex-row md:items-end md:justify-between">
           <EditorialHeading
-            kicker="02 — Curated archives"
-            title="Aesthetic Signatures"
+            kicker="02 — Koleksi pilihan"
+            title="Gaya yang Berkarakter"
           />
           <div
             className="flex max-w-full gap-1 overflow-x-auto rounded-full bg-surface-container p-1.5"
-            aria-label="Filter templates"
+            aria-label="Filter template"
           >
             {filters.map((item) => (
               <button
@@ -70,7 +70,11 @@ export function TemplateGallery({
                     : "text-on-surface-variant hover:text-primary"
                 }`}
               >
-                {item === "All" ? "All curations" : item}
+                {item === "All"
+                  ? "Semua pilihan"
+                  : item === "Digital"
+                    ? "Digital"
+                    : "Cetak"}
               </button>
             ))}
           </div>
@@ -85,21 +89,21 @@ export function TemplateGallery({
               <div className="relative h-80 overflow-hidden bg-surface-container">
                 <Image
                   src={template.thumbnailUrl}
-                  alt={`${template.name} wedding invitation design.`}
+                  alt={`Desain undangan pernikahan ${template.name}.`}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-[1.025]"
                 />
                 <span className="absolute right-3 top-3 bg-white/90 px-2.5 py-1 text-[9px] font-semibold tracking-[0.12em] text-secondary uppercase backdrop-blur">
                   {template.category === "Digital"
-                    ? "Digital suite"
-                    : "Artisan print"}
+                    ? "Undangan digital"
+                    : "Undangan cetak"}
                 </span>
               </div>
               <div className="flex flex-1 flex-col justify-between p-6">
                 <div>
                   <p className="text-[9px] font-semibold tracking-[0.16em] text-on-surface-variant uppercase">
-                    Signature{" "}
+                    Pilihan{" "}
                     {String(
                       templates.findIndex(
                         (item) => item.rendererKey === template.rendererKey,
@@ -114,15 +118,15 @@ export function TemplateGallery({
                 <div className="mt-6 flex items-center justify-between">
                   <span className="text-[10px] font-semibold tracking-[0.08em] uppercase">
                     {template.category === "Digital"
-                      ? "From Rp299K"
-                      : "Made to order"}
+                      ? "Mulai Rp299 ribu"
+                      : "Dibuat sesuai pesanan"}
                   </span>
                   <button
                     type="button"
                     className="inline-flex items-center gap-1.5 text-[10px] font-semibold tracking-[0.12em] text-secondary uppercase hover:text-primary"
                     onClick={() => setSelectedTemplate(template)}
                   >
-                    Preview <Eye aria-hidden="true" size={14} />
+                    Pratinjau <Eye aria-hidden="true" size={14} />
                   </button>
                 </div>
               </div>
@@ -135,8 +139,7 @@ export function TemplateGallery({
             href="/templates"
             className="inline-flex items-center gap-2 border-b border-primary pb-1 text-[10px] font-semibold tracking-[0.13em] uppercase"
           >
-            Explore the full collection{" "}
-            <ArrowRight aria-hidden="true" size={14} />
+            Jelajahi koleksi lengkap <ArrowRight aria-hidden="true" size={14} />
           </Link>
         </div>
       </Container>
@@ -158,7 +161,7 @@ export function TemplateGallery({
             <div className="flex items-start justify-between gap-4 bg-surface-container p-5 sm:p-6">
               <div>
                 <p className="text-[9px] font-semibold tracking-[0.18em] text-secondary uppercase">
-                  Invitation preview
+                  Pratinjau undangan
                 </p>
                 <h2
                   id="template-preview-title"
@@ -170,7 +173,7 @@ export function TemplateGallery({
               <button
                 type="button"
                 autoFocus
-                aria-label="Close preview"
+                aria-label="Tutup pratinjau"
                 className="grid size-10 place-items-center hover:bg-surface-high"
                 onClick={() => setSelectedTemplate(null)}
               >
@@ -181,7 +184,7 @@ export function TemplateGallery({
               <div className="relative min-h-80 overflow-hidden bg-surface-container sm:min-h-[430px]">
                 <Image
                   src={selectedTemplate.thumbnailUrl}
-                  alt={`${selectedTemplate.name} enlarged invitation preview.`}
+                  alt={`Pratinjau besar undangan ${selectedTemplate.name}.`}
                   fill
                   sizes="(max-width: 640px) 100vw, 50vw"
                   className="object-cover"
@@ -192,7 +195,7 @@ export function TemplateGallery({
                   {selectedTemplate.category} · {selectedTemplate.rendererKey}
                 </p>
                 <h3 className="mt-4 font-serif text-4xl leading-tight">
-                  A quiet first chapter for your celebration.
+                  Awal yang hangat untuk perayaan Anda.
                 </h3>
                 <p className="mt-5 text-sm leading-6 text-on-surface-variant">
                   {selectedTemplate.description}
@@ -201,7 +204,7 @@ export function TemplateGallery({
                   href={`/templates/${selectedTemplate.key}`}
                   className="mt-8 inline-flex min-h-12 items-center justify-center gap-2 bg-primary px-6 text-[10px] font-semibold tracking-[0.14em] text-primary-foreground uppercase hover:bg-secondary"
                 >
-                  View template details{" "}
+                  Lihat detail template{" "}
                   <ArrowRight aria-hidden="true" size={15} />
                 </Link>
               </div>

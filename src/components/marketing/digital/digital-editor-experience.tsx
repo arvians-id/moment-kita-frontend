@@ -4,6 +4,12 @@ import { CheckCircle2, MonitorSmartphone, RotateCcw } from "lucide-react";
 import { useState } from "react";
 
 const tabs = ["Couple Details", "Schedule", "RSVP Logic", "Palette"] as const;
+const tabLabels: Record<(typeof tabs)[number], string> = {
+  "Couple Details": "Detail Pasangan",
+  Schedule: "Jadwal",
+  "RSVP Logic": "Pengaturan RSVP",
+  Palette: "Palet",
+};
 const palettes = [
   "#fcf9f3",
   "#efe9de",
@@ -39,16 +45,16 @@ export function DigitalEditorExperience() {
         <div className="min-w-0 space-y-8 lg:col-span-6">
           <div>
             <p className="text-[10px] font-semibold tracking-[0.2em] text-secondary uppercase sm:text-[11px]">
-              The Studio Interface
+              04 — Ruang Personalisasi
             </p>
             <h2 className="mt-3 font-serif text-[2rem] leading-[1.12] tracking-[-0.015em] sm:text-[40px] sm:leading-[1.2]">
-              Edit once,
+              Edit dengan mudah,
               <br />
-              <em className="font-normal">preview instantly.</em>
+              <em className="font-normal">lihat hasil seketika.</em>
             </h2>
             <p className="mt-3 max-w-xl text-base leading-7 text-on-surface-variant sm:text-lg sm:leading-8">
-              A calm, responsive workspace for composing details and previewing
-              the guest experience without touching code.
+              Ruang kerja yang tenang dan responsif untuk menyusun detail serta
+              melihat pengalaman tamu tanpa perlu memahami kode.
             </p>
           </div>
 
@@ -61,7 +67,7 @@ export function DigitalEditorExperience() {
                   onClick={() => setActiveTab(tab)}
                   className={`whitespace-nowrap pb-1 text-[9px] font-semibold tracking-wider uppercase ${activeTab === tab ? "border-b-2 border-primary text-primary" : "text-on-surface-variant"}`}
                 >
-                  0{index + 1} {tab}
+                  0{index + 1} {tabLabels[tab]}
                 </button>
               ))}
             </div>
@@ -69,7 +75,7 @@ export function DigitalEditorExperience() {
             {activeTab === "Couple Details" ? (
               <div className="grid gap-4 sm:grid-cols-2">
                 <label className="space-y-1 text-[9px] font-semibold tracking-wider text-on-surface-variant uppercase">
-                  Partner One Full Name
+                  Nama Lengkap Pasangan Pertama
                   <input
                     value={partnerOne}
                     onChange={(event) => setPartnerOne(event.target.value)}
@@ -77,7 +83,7 @@ export function DigitalEditorExperience() {
                   />
                 </label>
                 <label className="space-y-1 text-[9px] font-semibold tracking-wider text-on-surface-variant uppercase">
-                  Partner Two Full Name
+                  Nama Lengkap Pasangan Kedua
                   <input
                     value={partnerTwo}
                     onChange={(event) => setPartnerTwo(event.target.value)}
@@ -88,18 +94,18 @@ export function DigitalEditorExperience() {
             ) : (
               <div className="bg-white p-4">
                 <p className="text-[10px] font-semibold tracking-wider text-secondary uppercase">
-                  {activeTab} preview
+                  Pratinjau {tabLabels[activeTab]}
                 </p>
                 <p className="mt-2 text-sm leading-6 text-on-surface-variant">
-                  This marketing preview shows where supported{" "}
-                  {activeTab.toLowerCase()} controls live in the future customer
-                  workspace.
+                  Pratinjau ini menunjukkan bagaimana pengaturan{" "}
+                  {tabLabels[activeTab].toLowerCase()} akan tampil di ruang
+                  kerja Anda.
                 </p>
               </div>
             )}
 
             <label className="block space-y-1 text-[9px] font-semibold tracking-wider text-on-surface-variant uppercase">
-              Wedding Invitation Slug
+              Alamat Undangan
               <span className="flex items-center bg-white px-3 py-2">
                 <span className="text-xs font-normal tracking-normal text-on-surface-variant normal-case">
                   momentkita.com/
@@ -119,14 +125,14 @@ export function DigitalEditorExperience() {
 
             <fieldset className="space-y-2">
               <legend className="text-[9px] font-semibold tracking-wider text-on-surface-variant uppercase">
-                Editorial Mood Palette
+                Palet Warna
               </legend>
               <div className="flex items-center gap-3">
                 {palettes.map((color) => (
                   <button
                     key={color}
                     type="button"
-                    aria-label={`Select palette ${color}`}
+                    aria-label={`Pilih palet ${color}`}
                     aria-pressed={palette === color}
                     onClick={() => setPalette(color)}
                     className={`size-7 rounded-full ${palette === color ? "ring-2 ring-primary ring-offset-2" : ""}`}
@@ -139,7 +145,7 @@ export function DigitalEditorExperience() {
             <div className="flex items-center justify-between gap-4 pt-2 text-xs text-on-surface-variant">
               <span className="flex items-center gap-2">
                 <span className="size-2 animate-pulse rounded-full bg-green-600" />
-                Preview updated
+                Pratinjau diperbarui
               </span>
               <button
                 type="button"
@@ -147,7 +153,7 @@ export function DigitalEditorExperience() {
                 className="flex items-center gap-1 text-[9px] font-semibold tracking-wider text-primary uppercase hover:underline"
               >
                 <RotateCcw aria-hidden size={13} />
-                Reset to Default
+                Kembalikan
               </button>
             </div>
           </div>
@@ -161,34 +167,34 @@ export function DigitalEditorExperience() {
             >
               <div className="space-y-3 pt-4 text-center">
                 <span className="text-[8px] font-semibold tracking-widest text-secondary uppercase">
-                  Live Synchronized Preview
+                  Pratinjau Langsung
                 </span>
                 <h3 className="font-serif text-[22px] font-semibold">
                   {firstName} &amp; {secondName}
                 </h3>
                 <p className="text-[10px] italic text-on-surface-variant">
-                  Request the pleasure of your company
+                  Dengan bahagia mengundang kehadiran Anda
                 </p>
               </div>
               <div className="space-y-1 rounded-lg bg-white/90 p-3 shadow-sm">
                 <span className="text-[8px] font-semibold tracking-wider text-secondary uppercase">
-                  The Weekend Schedule
+                  Rangkaian Acara
                 </span>
                 <div className="flex justify-between text-[10px] font-semibold">
-                  <span>Welcome Cocktails</span>
+                  <span>Acara Penyambutan</span>
                   <span className="text-on-surface-variant">19:00</span>
                 </div>
                 <div className="flex justify-between text-[10px] font-semibold">
-                  <span>The Sacred Vows</span>
+                  <span>Akad Pernikahan</span>
                   <span className="text-on-surface-variant">16:00</span>
                 </div>
               </div>
               <div className="pb-2 text-center">
                 <span className="mb-2 block truncate text-[8px] font-semibold tracking-wider text-on-surface-variant">
-                  momentkita.com/{slug || "your-invitation"}
+                  momentkita.com/{slug || "undangan-anda"}
                 </span>
                 <span className="block w-full bg-primary py-2 text-[9px] font-semibold text-white uppercase">
-                  Guest RSVP Preview
+                  Pratinjau RSVP Tamu
                 </span>
               </div>
             </div>
@@ -200,7 +206,7 @@ export function DigitalEditorExperience() {
               className="text-secondary"
             />
             <span className="text-[9px] font-semibold tracking-wider uppercase">
-              Zero coding required · Responsive preview
+              Tanpa coding · Pratinjau responsif
             </span>
           </div>
         </div>
